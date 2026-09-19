@@ -4,7 +4,7 @@ What a family tells us, how it becomes a game, and what the game contains. The d
 
 ## 1. The questionnaire
 
-Ten minutes on a phone. Every field has a privacy rule, because this is children's data.
+Ten minutes on a phone. Every field has a privacy rule, because the hero is usually a child and this is often children's data.
 
 | Field | Example | Used for | Privacy rule |
 |---|---|---|---|

@@ -1,10 +1,10 @@
 # Happy Hero Games: business plan
 
-Written 19 September 2026. Every number is an assumption to test, not a forecast. The first version of this plan (two siblings, sold as a rivalry game) is in the Fionn vs Sean repo; this version makes one child the hero.
+Written 19 September 2026. Every number is an assumption to test, not a forecast. The first version of this plan (two siblings, sold as a rivalry game) is in the Fionn vs Sean repo; this version makes one person the hero. That person is usually a child, which is who the numbers below assume, but the product and the copy work for a grown-up too.
 
 ## 1. In one paragraph
 
-Parents and grandparents buy a personalised arcade game for a child's birthday or Christmas. The child is the hero and their own family are the opponents, with the dog as referee, and it ends with "HAPPY BIRTHDAY, AOIFE!" in lights. It plays on any phone. A free demo on the landing page builds their child in pixels in under a minute; the paid game (€69) is made in 48 hours and checked by a person. Revenue comes from the games, then add-ons, then a monthly Season Pass.
+People buy a personalised arcade game for someone special, usually a child, for a birthday or Christmas. That person is the hero and their own family are the opponents, with the dog as referee, and it ends with "HAPPY BIRTHDAY, AOIFE!" in lights. It plays on any phone. A free demo on the landing page builds the hero in pixels in under a minute; the paid game (€69) is made in 48 hours and checked by a person. Revenue comes from the games, then add-ons, then a monthly Season Pass.
 
 ## 2. The honest summary
 
@@ -12,7 +12,7 @@ Parents and grandparents buy a personalised arcade game for a child's birthday o
 - **One hero is a bigger market than two rivals.** Every child has a birthday. Birthdays happen all year, so this is less seasonal than a Christmas gift, and it suits the grandparent who buys one grandchild's present.
 - **"€50K MRR quickly" is still the wrong target.** Games are one-off purchases. On the model in section 8, **total monthly revenue passes €50K in November 2027 and stays above it every month from then on**, because birthdays keep sales steady after Christmas. **Recurring revenue alone** (the Season Pass) reaches about €31K by September 2028; €50K needs about 5,600 subscribers, which is 2029 on these numbers.
 - **The make-or-break number is human time per game.** At €69 an order earns about €26 after advertising if a person can check it in 30 minutes. At 90 minutes it earns about €1.
-- **The free demo is the sales engine.** It already works: a parent types a name, sees their child in pixels, and plays four duels against their own family. That's the moment that sells it, the same way Wonderbly's preview sold books.
+- **The free demo is the sales engine.** It already works: someone types a name, sees the hero in pixels, and plays four duels against their own family. That's the moment that sells it, the same way Wonderbly's preview sold books.
 
 ## 3. Customers
 
@@ -20,6 +20,7 @@ Parents and grandparents buy a personalised arcade game for a child's birthday o
 |---|---|---|
 | Parents of 5 to 12-year-olds | A birthday present nobody else will give, that the child plays with the family | Instagram and TikTok ads, parenting groups, school WhatsApps |
 | Grandparents, godparents, aunts and uncles | Something personal that isn't another toy, and easy to give from far away | Gift cards, Facebook, search at Christmas and birthdays |
+| Partners and grown-up children buying for an adult | A Father's Day, Mother's Day or big-birthday present with the whole family in it. Untested; the model below doesn't count it. | Search and gift guides around those days |
 | Families with two kids close in age | The sibling add-on turns it into a rivalry game (the Fionn vs Sean original) | Add-on at checkout |
 
 ## 4. What makes us different
@@ -34,7 +35,7 @@ Parents and grandparents buy a personalised arcade game for a child's birthday o
 | Ending | Game ends | The occasion: cake and "HAPPY BIRTHDAY" with the whole family |
 | Afterwards | One-off | Season Pass: a new duel every month |
 
-The pitch: **"Put your kid in their own arcade game."**
+The pitch: **"Put someone special in their own arcade game."** The site keeps mentions of children to a minimum so it reads as right for a grown-up hero too.
 
 ## 5. Pricing
 
@@ -126,7 +127,7 @@ Decide these before starting, and change course if they happen:
 
 ## 12. The next five steps
 
-1. Register happyherogames.com and search the trademark (EUIPO and USPTO).
+1. Search the trademark (EUIPO and USPTO). The domain is registered and hosted, with HTTPS and hello@ working (19 Sep 2026).
 2. Show the demo to ten parents outside the family. Watch; don't pitch. Ask what they'd pay.
 3. Connect the launch list to a form service and put the landing page live.
 4. Take 10 Christmas pre-orders at €39 and build them by hand. Time every one.

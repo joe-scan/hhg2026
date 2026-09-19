@@ -4,11 +4,12 @@ Read this first, every session. It says what we're building, the rules that don'
 
 ## What this is
 
-Happy Hero Games sells personalised arcade games for children. A parent (or grandparent) answers ten minutes of questions and gets back a private web game where their child is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and "HAPPY BIRTHDAY, AOIFE!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
+Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers ten minutes of questions and gets back a private web game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and "HAPPY BIRTHDAY, AOIFE!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
-- **Buyers:** parents, grandparents, godparents. **Players:** children, mostly 5 to 12.
+- **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
+- **One hero per game, not two people duelling.** The hero faces a different family member in each duel.
 - **Occasions:** birthdays all year, Christmas, "just because".
-- **Status (19 Sep 2026):** pre-launch. A working landing page, a live hero builder and a free four-duel demo exist in `site/`. No orders, no payments, no backend. The domain happyherogames.com was unregistered on 19 Sep 2026; Joe is registering it.
+- **Status (19 Sep 2026):** pre-launch. A working landing page, a live hero builder and a free four-duel demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
@@ -41,7 +42,7 @@ What we learnt from it, and why the product looks like this:
 
 **Tone.** Kid-safe teasing only: crisps, bedtime, football clubs, who does the dishes. Nothing about looks, weight, ability or anything that would sting. Grown-ups are allowed to be a bit silly ("I LET YOU WIN, YOU KNOW.").
 
-**Copy.** Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put your kid in their own arcade game", not "Unlock magical personalised experiences".
+**Copy.** Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
 
 **Claims.** Don't write anything on the site that isn't true yet: no invented reviews, customer counts, "most popular" badges, press logos or discounts Joe hasn't decided.
 
@@ -59,10 +60,12 @@ Following `docs/ai-website-organised.md`: the human sets the direction and the a
 ```
 CLAUDE.md                 this brief
 README.md                 short human intro and how to run it
+deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
 docs/product.md           questionnaire with privacy rules per field, config format, game format
 docs/ai-website-organised.md   the guide the page design follows
 site/index.html           landing page with the live hero builder
+site/.htaccess            https and www redirects, HSTS, caching, noindex on play.html
 site/builder.js           the builder: form to config, live preview, Play link
 site/play.html            the game page (reads the config from #g=)
 site/css/site.css         shared page styles and design tokens
@@ -79,15 +82,22 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 - **Run it:** `cd site && python3 -m http.server 8766`, then open http://localhost:8766. Or open `site/index.html` directly.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches `site/`.
-- **Commit and push everything, every time,** docs included, without asking. The GitHub repo still needs creating (see open decisions); until then, commit locally.
-- **Don't deploy anywhere** without Joe saying so. There's no hosting yet. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
+- **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
+- **Don't deploy** without Joe saying so. When he does, run `./deploy.sh`. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
 - **Look at what you build.** Screenshot the game and the pages at desktop and phone width before saying something works.
+
+## Hosting, domain and email (set up 19 Sep 2026)
+
+- **Domain:** happyherogames.com, registered at Namecheap. DNS is Namecheap's hosting nameservers (dns1/dns2.namecheaphosting.com), A record 162.0.217.226.
+- **Hosting:** an addon domain on Joe's Namecheap shared hosting (cPanel user `joescoaz`, main domain joescanlon.com, server premium269-4.web-hosting.com). Web root `~/happyherogames.com`. SSH with `ssh retroelf-host` (alias in `~/.ssh/config`, port 21098, key `joescanlon_deploy`).
+- **Deploy:** `./deploy.sh` rsyncs `site/` to the web root and prints the status of the main files. It deletes old site files but never `.well-known` or `cgi-bin`.
+- **HTTPS:** a free Namecheap certificate (SSL.com) covering happyherogames.com and www, valid to 5 Apr 2027, renewed by Namecheap as long as DNS points at the server. If a renewal lapses, switch to acme.sh on the server as was done for retroelf.com and violinfree.com. `site/.htaccess` sends http and www to https://happyherogames.com and sets HSTS (one year, no includeSubDomains).
+- **Email:** hello@happyherogames.com is a cPanel forwarder to jscan1@gmail.com. MX is Namecheap's (jellyfish.systems). There's no mailbox, so replies go from Gmail unless Joe adds hello@ as a "Send mail as" address.
+- **Repo:** github.com/joe-scan/hhg2026, private.
 
 ## Open decisions (Joe's)
 
-1. Register happyherogames.com, and run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
-2. Create a private GitHub repo `joe-scan/happyherogames` (or run `gh auth login` so Claude can), then push.
-3. Confirm or change the design direction above.
-4. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-5. Hosting for the landing page (Namecheap as a subfolder, or Netlify / Cloudflare Pages on the new domain).
-6. Prices on the site are the plan's proposals (€49 / €69 / €129, +€20 sibling). Confirm before anything goes public.
+1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
+2. Confirm or change the design direction above.
+3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
+4. Prices on the site are the plan's proposals (€49 / €69 / €129, +€20 sibling). Confirm before anything goes public.

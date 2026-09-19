@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Publish site/ to https://happyherogames.com (see README: Deploying).
+# Needs the retroelf-host entry in ~/.ssh/config (Namecheap, port 21098, key joescanlon_deploy).
+# The web root is ~/happyherogames.com. --delete removes old site files but the P filters protect
+# .well-known (Namecheap's SSL renewal checks it) and cgi-bin, which cPanel put there.
+set -euo pipefail
+cd "$(dirname "$0")"
+rsync -rtvz --delete --chmod=D755,F644 \
+  --filter='P .well-known/' --filter='P cgi-bin/' \
+  site/ retroelf-host:happyherogames.com/
+for p in '' play.html builder.js game/engine.js css/site.css img/finale.png; do
+  printf '%s  https://happyherogames.com/%s\n' "$(curl -s -o /dev/null -w '%{http_code}' "https://happyherogames.com/$p")" "$p"
+done
