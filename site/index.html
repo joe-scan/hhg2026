@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Hero Games</title>
+<meta name="description" content="A personalised arcade game starring your child, with the family as the opponents. Try the free demo in a minute, on any phone or laptop.">
+<meta name="theme-color" content="#12062b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* the builder: the form on the left, the live screen on the right (on top on a phone) */
+.make{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px 44px;padding-block:34px 44px;align-items:start}
+.lede h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,5.2vw,58px);line-height:1.02;margin:0 0 14px;text-wrap:balance}
+.lede h1 em{font-style:normal;color:var(--hot)}
+.lede p{margin:0 0 22px;max-width:46ch;color:var(--muted);font-size:18px}
+.view{position:sticky;top:16px;display:grid;gap:12px}
+.view .row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.view small{color:var(--muted);font-size:14px}
+form.hero{display:grid;gap:0}
+fieldset{border:0;border-top:1px solid var(--rule);margin:0;padding:14px 0 16px;display:grid;gap:12px}
+legend{font-family:var(--pixel);font-size:10px;letter-spacing:.05em;padding:0 8px 0 0}
+.field{display:grid;gap:6px}
+.field > span,.field > label{font-weight:700;font-size:15px}
+input[type=text],input:not([type]),select{background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:9px 10px;min-width:0;width:100%}
+input:focus,select:focus{border-color:var(--ink)}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0}
+.opts span{display:inline-block;border:1px solid var(--rule);padding:6px 11px;font-size:15px;border-radius:2px;cursor:pointer}
+.opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.sws{display:flex;flex-wrap:wrap;gap:6px}
+.sw{width:30px;height:30px;border-radius:2px;border:1px solid var(--rule);background:var(--c);cursor:pointer;padding:0}
+.sw[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.fam{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+@media (max-width:860px){.make{grid-template-columns:1fr}.view{position:static;order:-1}}
+@media (max-width:480px){.fam{grid-template-columns:1fr 1fr}.fam select:last-child{grid-column:1/-1}.two{grid-template-columns:1fr}}
+
+/* the rest of the page: rules and type, no cards */
+section.band{border-top:1px solid var(--rule);padding-block:40px}
+section.band h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,36px);line-height:1.1;margin:0 0 20px;text-wrap:balance}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--pixel);font-size:12px;color:var(--hot);display:block;margin-bottom:10px}
+.steps h3{margin:0 0 6px;font-size:19px}
+.steps p{margin:0;color:var(--muted)}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px 44px;align-items:center}
+.story p{margin:0 0 12px;max-width:58ch}
+.story figure{margin:0}
+.story figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.prices{display:grid;gap:0;max-width:820px}
+.price{display:grid;grid-template-columns:150px 90px 1fr;gap:6px 20px;padding-block:14px;border-top:1px solid var(--rule);align-items:baseline}
+.price b{font-size:19px}
+.price .amt{font-family:var(--display);font-size:22px}
+.price p{margin:0;color:var(--muted)}
+.extras{color:var(--muted);margin:16px 0 26px}
+.list{display:flex;gap:8px;flex-wrap:wrap;max-width:560px}
+.list input{flex:1 1 240px}
+#list-msg{margin:10px 0 0;font-weight:700}
+.promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
+.promises li{padding-left:18px;position:relative}
+.promises li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;background:var(--hot)}
+details{border-top:1px solid var(--rule);padding-block:12px;max-width:820px}
+details summary{cursor:pointer;font-weight:700;font-size:18px}
+details p{margin:8px 0 0;color:var(--muted);max-width:62ch}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.steps,.story,.promises{grid-template-columns:1fr}.price{grid-template-columns:1fr auto}.price p{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" href="#">Happy <span>Hero</span> Games</a>
+  <nav aria-label="Page sections"><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a></nav>
+</header>
+
+<main>
+<section class="make" id="make" aria-labelledby="make-h">
+  <div>
+    <div class="lede">
+      <h1 id="make-h">Put your kid in their <em>own arcade game.</em></h1>
+      <p>Type their name, pick their hair and add the family. Your child is the hero, and Mum, Dad, Granny and the dog turn up as the opponents. The free demo takes a minute to make.</p>
+    </div>
+    <form class="hero" onsubmit="return false" aria-label="Make your hero">
+      <fieldset>
+        <legend>THE HERO</legend>
+        <div class="two">
+          <div class="field"><label for="hero-name">Their name</label><input id="hero-name" maxlength="10" autocomplete="off" spellcheck="false"></div>
+          <div class="field"><span id="occ-l">It's for</span>
+            <div class="opts" role="radiogroup" aria-labelledby="occ-l">
+              <label><input type="radio" name="occasion" value="birthday"><span>A birthday</span></label>
+              <label><input type="radio" name="occasion" value="christmas"><span>Christmas</span></label>
+              <label><input type="radio" name="occasion" value="star"><span>Just because</span></label>
+            </div></div>
+        </div>
+        <div class="field"><span id="hair-l">Hair</span>
+          <div class="opts" role="radiogroup" aria-labelledby="hair-l">
+            <label><input type="radio" name="hair" value="short"><span>Short</span></label>
+            <label><input type="radio" name="hair" value="straight"><span>Straight</span></label>
+            <label><input type="radio" name="hair" value="curly"><span>Curly</span></label>
+            <label><input type="radio" name="hair" value="long"><span>Long</span></label>
+            <label><input type="radio" name="hair" value="ponytail"><span>Ponytail</span></label>
+          </div></div>
+        <div class="field"><span>Hair colour</span><div class="sws" id="hair-col"></div></div>
+        <div class="field"><span>Skin</span><div class="sws" id="skin"></div></div>
+        <div class="field"><span>Jersey</span><div class="sws" id="kit"></div></div>
+      </fieldset>
+      <fieldset>
+        <legend>THE FAMILY</legend>
+        <p class="note" style="margin:0;color:var(--muted);font-size:15px">Up to three. They take turns as the opponent in each duel.</p>
+        <div id="family" style="display:grid;gap:6px"></div>
+      </fieldset>
+      <fieldset>
+        <legend>THE DETAILS</legend>
+        <div class="two">
+          <div class="field"><label for="pet-name">The dog's name</label><input id="pet-name" maxlength="10" autocomplete="off" placeholder="Leave blank if no dog"></div>
+          <div class="field"><span>The dog's colour</span><div class="sws" id="pet-col"></div></div>
+          <div class="field"><label for="food">Favourite food</label><input id="food" maxlength="10" autocomplete="off"></div>
+          <div class="field"><label for="catch">Something they always say</label><input id="catch" maxlength="22" autocomplete="off" placeholder="No way!"></div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="view">
+    <div class="screen"><canvas id="game" width="480" height="270" aria-label="A live preview of your hero and their family, in pixels"></canvas></div>
+    <div class="row">
+      <a class="btn go" id="play" href="play.html"><span id="play-label">Play the free demo</span></a>
+      <small>Four duels and a boss, free. Nothing you type is sent to us.</small>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-h">
+  <h2 id="how-h">How the full game works</h2>
+  <ol class="steps">
+    <li><h3>Tell us about them</h3><p>Ten minutes of questions: their catchphrase, the family's running arguments, who's in charge of lunch, what they love doing. No photos needed.</p></li>
+    <li><h3>We build it</h3><p>Ten duels picked for what they love, with their jokes written into every screen. A real person plays it through before it goes out. Ready in 48 hours, or on the day you choose.</p></li>
+    <li><h3>They play it</h3><p>You get a private link and a card to print and wrap. It plays on any phone, tablet or laptop, with nothing to install.</p></li>
+  </ol>
+</section>
+
+<section class="band story" aria-labelledby="story-h">
+  <div>
+    <h2 id="story-h">It started with two brothers</h2>
+    <p>Happy Hero Games began as an arcade game one dad in Ireland made for his two sons. It was full of their catchphrases, their dog and their fights over the front seat, and it ended with the pair of them beating the bedtime clock together.</p>
+    <p>Every family has those details. We put them in a game.</p>
+  </div>
+  <figure>
+    <div class="screen"><img src="img/finale.png" alt="The end of a Happy Hero game: HAPPY BIRTHDAY, AOIFE! in lights, a birthday cake, and her family and dog cheering in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
+    <figcaption>The last screen of the demo. The family walks in, the dog jumps, and it says whatever the day is.</figcaption>
+  </figure>
+</section>
+
+<section class="band" id="prices" aria-labelledby="prices-h">
+  <h2 id="prices-h">Prices</h2>
+  <div class="prices">
+    <div class="price"><b>Starter</b><span class="amt">€49</span><p>Six duels, one boss, your child and one family member, plus the dog.</p></div>
+    <div class="price"><b>Family</b><span class="amt">€69</span><p>Ten duels, two bosses, up to six family members, and your own lines written in everywhere.</p></div>
+    <div class="price"><b>Deluxe</b><span class="amt">€129</span><p>The Family game plus your own voices (record the catchphrases on a phone), a printed gift box with the card inside, and one change after it arrives.</p></div>
+  </div>
+  <p class="extras">Add a brother or sister as a second hero for €20. Gift cards for any of these, so a grandparent can give it and a parent fills in the details.</p>
+  <form class="list" id="list-form" aria-label="Join the launch list">
+    <label class="sr" for="list-email">Your email</label>
+    <input id="list-email" type="email" required placeholder="Your email" autocomplete="email">
+    <button class="btn go" type="submit">Tell me when it opens</button>
+  </form>
+  <p id="list-msg" role="status"></p>
+</section>
+
+<section class="band" id="privacy" aria-labelledby="privacy-h">
+  <h2 id="privacy-h">Private by design</h2>
+  <ul class="promises">
+    <li>No photos. Your child is drawn in pixels from the choices you make.</li>
+    <li>No surnames, ages, schools or addresses on screen, ever.</li>
+    <li>Every game lives at its own private link that only your family has.</li>
+    <li>We delete your answers when you ask, and automatically after two years.</li>
+  </ul>
+</section>
+
+<section class="band" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Questions</h2>
+  <details><summary>What does it play on?</summary><p>Any phone, tablet or laptop with a web browser. Two people can play on one keyboard, or on a phone turned sideways with a set of buttons each.</p></details>
+  <details><summary>Can the grown-ups play too?</summary><p>Yes. In 2-player mode a grown-up takes the family's side, so Dad really is playing against them.</p></details>
+  <details><summary>We don't have a dog.</summary><p>Leave the dog out and someone else in the family referees.</p></details>
+  <details><summary>How long does it take to play?</summary><p>The demo takes about ten minutes. The full game is longer, and they'll want to go again.</p></details>
+  <details><summary>Can I change something after it arrives?</summary><p>Deluxe includes one change. For the others, tell us what's wrong and we'll fix it.</p></details>
+</section>
+</main>
+
+<footer><span>Happy Hero Games. Made in Ireland.</span><span>A preview site: orders aren't open yet.</span></footer>
+</div>
+
+<script src="game/engine.js"></script>
+<script src="builder.js"></script>
+</body>
+</html>
