@@ -185,6 +185,38 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | The first ten games are being built by hand. | Los diez primeros juegos se están creando a mano. |
 | Terms | Condiciones |
+| Can a whole party play? | ¿Puede jugar toda una fiesta? |
+| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Sí. Modo fiesta en la pantalla de título: eliges cuántos retadores y cada uno juega su turno contra el héroe mientras los demás miran. Termina con una tabla de resultados y un campeón. |
+| One game, free. Nothing you type is sent to us. Or just | Un juego, gratis. Nada de lo que escribes se nos envía. O simplemente |
+| put a name in lights | pon un nombre en luces |
+| Your name in lights \| HappyHeroGames | Tu nombre en luces \| HappyHeroGames |
+| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Escribe un nombre y míralo en luces en una pantalla arcade. Gratis, nada que instalar, nada se nos envía. |
+| Put your name in lights | Pon tu nombre en luces |
+| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Escribe un nombre y obtén una pantalla de título arcade con él. Gratis, y nada de lo que escribes se envía a ninguna parte. |
+| Build a game | Crear un juego |
+| Put a name in lights | Pon un nombre en luces |
+| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Escribe un nombre y aparece en una pantalla arcade. Gratis, nada que instalar, y nada de lo que escribes sale de tu navegador. |
+| A name | Un nombre |
+| What it's for | Para qué es |
+| Birthday | Cumpleaños |
+| An arcade title screen with the name you typed in lights | Una pantalla de título arcade con el nombre que escribiste en luces |
+| Save the picture | Guardar la imagen |
+| Share it | Compartir |
+| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | Esta es la pantalla inicial de un juego de verdad. En el resto, esa persona es el héroe, su familia y sus amigos son a quienes hay que ganar, y sus propios chistes están dentro. |
+| Build the whole game, free | Crea el juego entero, gratis |
+| Trick or Treat Dash \| HappyHeroGames | Truco o Trato \| HappyHeroGames |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Un juego de Halloween gratis con tu nombre. Atrapa los caramelos, deja las coles, sesenta segundos. Nada que instalar. |
+| Trick or Treat Dash | Truco o Trato |
+| A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts. | Un juego de Halloween gratis con tu nombre. Sesenta segundos, atrapa los caramelos, deja las coles. |
+| Name in lights | Nombre en luces |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser. | Un juego de Halloween gratis con tu nombre. Atrapa los caramelos, deja en paz las coles, sesenta segundos. Nada que instalar y nada de lo que escribes sale de tu navegador. |
+| Your name | Tu nombre |
+| Start | Empezar |
+| Trick or Treat Dash: catch the falling sweets in your bucket | Truco o Trato: atrapa los caramelos que caen en tu cubo |
+| Left and right arrow keys, or the buttons under the screen on a phone. | Flechas izquierda y derecha, o los botones debajo de la pantalla en el teléfono. |
+| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Este es gratis e igual para todos. Los juegos que hacemos son al revés: cinco juegos, tu propia familia y tus amigos como rivales, y sus chistes escritos en cada pantalla. |
+| Build one, free | Crea uno, gratis |
+| Halloween game | Juego de Halloween |
 
 ## What the game says: names, instructions and scores
 
@@ -229,6 +261,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | THE FAMILY QUIZ | EL CONCURSO FAMILIAR |
 | THE BOSS FIGHT | LA PELEA FINAL |
 | THE ENDING | EL FINAL |
+| 1 PLAYER | 1 JUGADOR |
+| THE COMPUTER PLAYS THE FAMILY | EL ORDENADOR LLEVA A LA FAMILIA |
+| 2 PLAYERS | 2 JUGADORES |
+| A GROWN-UP PLAYS THE FAMILY | UN ADULTO LLEVA A LA FAMILIA |
+| PARTY MODE | MODO FIESTA |
+| EVERYONE TAKES A TURN AGAINST THE HERO | TODOS JUEGAN UN TURNO CONTRA EL HEROE |
 | BIG HEAD MODE! | ¡MODO CABEZON! |
 | NORMAL HEADS | CABEZAS NORMALES |
 | SPAIN | ESPAÑA |
@@ -296,19 +334,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | TAP OR PRESS FIRE | TOCA O PULSA DISPARO |
 | PRESS FIRE | PULSA DISPARO |
 | AN ARCADE ADVENTURE | UNA AVENTURA ARCADE |
-|  EDITION |  EDICION |
-| 1 PLAYER | 1 JUGADOR |
-| 2 PLAYERS: A GROWN-UP PLAYS THE FAMILY | 2 JUGADORES: UN ADULTO LLEVA A LA FAMILIA |
 | TAP TO START | TOCA PARA EMPEZAR |
-| PRESS FIRE OR CLICK TO START | PULSA DISPARO O HAZ CLIC |
 | ROUND  | RONDA  |
 |  OF  |  DE  |
 | TOUCH: ARROW PAD TO MOVE, BIG BUTTON TO FIRE | TACTIL: FLECHAS PARA MOVER, BOTON PARA DISPARAR |
 | ARROW KEYS OR WASD.  FIRE: SPACE OR ENTER | FLECHAS O WASD.  DISPARO: ESPACIO O INTRO |
 | PRESS FIRE WHEN READY | PULSA DISPARO CUANDO QUIERAS |
 | REFEREE: | ARBITRO: |
-|  FAMILY |  FAMILIA |
-|  WINS! |  ¡GANA! |
 
 ## What the family says: taunts, cheers and jokes
 
@@ -342,6 +374,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Round  | Ronda  |
 | GO! | ¡YA! |
 |  wins! |  gana! |
+|  WINS! |  ¡GANA! |
+| Player  | Jugador  |
+| We have a champion! | ¡Tenemos campeón! |
+|  beat everybody! |  ganó a todos! |
+|  BEAT EVERYBODY! |  GANO A TODOS! |
 | That is the demo. | Esto es la demo. |
 | Oh no. It is bedtime.  | Oh no. Es la hora de dormir.  |
 |  and  |  y  |
@@ -395,10 +432,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 |  SCORES! |  ¡MARCA! |
 |  GETS IT! |  ¡ACIERTA! |
 | BRAINBOX! | ¡CEREBRITO! |
-| SMART! | ¡LISTO! |
-| GENIUS! | ¡GENIO! |
-| TOP MARKS! | ¡SOBRESALIENTE! |
-| WRONG! | ¡FALLO! |
 
 ## Everything else in the game, including the quiz
 
@@ -409,8 +442,24 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | VS | VS |
 | : WASD + SPACE     | : WASD + ESPACIO     |
 | : ARROWS + ENTER | : FLECHAS + INTRO |
+|  FAMILY |  FAMILIA |
 | THE FAMILY ARE IN TROUBLE NOW. | LA FAMILIA ESTA EN APUROS. |
 | NEXT ONE'S YOURS,  | LA PROXIMA ES TUYA,  |
+| EVERYONE TAKES A TURN AGAINST  | TODOS JUEGAN UN TURNO CONTRA  |
+| HOW MANY CHALLENGERS? | ¿CUANTOS RETADORES? |
+| UP AND DOWN TO CHANGE | ARRIBA Y ABAJO PARA CAMBIAR |
+| EACH ONE PLAYS ONE GAME. THE HERO PLAYS THEM ALL. | CADA UNO JUEGA UN JUEGO. EL HEROE LOS JUEGA TODOS. |
+| PLAYER  | JUGADOR  |
+| YOU ARE UP AGAINST  | TE ENFRENTAS A  |
+| CHALLENGER: THE LEFT PAD | RETADOR: EL MANDO IZQUIERDO |
+| CHALLENGER KEYS: WASD AND SPACE | TECLAS DEL RETADOR: WASD Y ESPACIO |
+| PARTY RESULTS | RESULTADOS DE LA FIESTA |
+| BEAT  | GANO A  |
+| LOST TO  | PERDIO CON  |
+| CHAMPION: PLAYER  | CAMPEON: JUGADOR  |
+| CHAMPIONS: PLAYER  | CAMPEONES: JUGADOR  |
+|  AND  |  Y  |
+| PRESS FIRE FOR THE MENU | PULSA DISPARO PARA EL MENU |
 | THAT'S THE DEMO | ESTO ES LA DEMO |
 | THE FULL GAME KEEPS GOING: | EL JUEGO COMPLETO SIGUE: |
 | AND  | Y  |
@@ -418,7 +467,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS FIRE TO PLAY THE DEMO AGAIN | PULSA DISPARO PARA JUGAR OTRA VEZ |
 | THE BEDTIME CLOCK | EL RELOJ DE DORMIR |
 | THE HOMEWORK MONSTER | EL MONSTRUO DE LOS DEBERES |
-|  AND  |  Y  |
 |  ON THE SAME TEAM. |  EN EL MISMO EQUIPO. |
 | HOLD FIRE TO SHOOT. FILL THE BLAST METER, | MANTEN DISPARO PARA TIRAR. LLENA LA BARRA, |
 | GRAB THE FOOD. THE  | COGE LA COMIDA. LOS PLATOS DE LA  |
@@ -654,6 +702,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | WRONG ANSWER? YOU'RE OUT FOR THAT QUESTION. | ¿FALLAS? FUERA DE ESA PREGUNTA. |
 | FIRST TO 3. | PRIMERO A 3. |
 | ANSWER: UP DOWN LEFT RIGHT | RESPONDE: FLECHAS |
+| SMART! | ¡LISTO! |
+| GENIUS! | ¡GENIO! |
+| TOP MARKS! | ¡SOBRESALIENTE! |
+| WRONG! | ¡FALLO! |
 | TIME UP! | ¡SE ACABO EL TIEMPO! |
 | NOBODY GOT IT! | ¡NADIE ACERTO! |
 | GET READY... | PREPARADOS... |
@@ -684,6 +736,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | DRENCHED! | ¡CALADO! |
 | 'S WATCHING. NO THROWING! |  MIRA. ¡NO TIREIS! |
 | READY... THROW! | PREPARADOS... ¡YA! |
+| TRICK OR TREAT DASH | TRUCO O TRATO |
+| SWEETS:  | CARAMELOS:  |
 | Black | Negro |
 | Dark brown | Castaño oscuro |
 | Brown | Castaño |

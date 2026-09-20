@@ -185,6 +185,38 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | The first ten games are being built by hand. | Les dix premiers jeux sont fabriqués à la main. |
 | Terms | Conditions |
+| Can a whole party play? | Est-ce qu'une fête entière peut jouer ? |
+| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Oui. Le mode fête sur l'écran-titre : vous choisissez le nombre de challengers, et chacun affronte le héros à son tour pendant que les autres regardent. Cela se termine par un tableau des résultats et un champion. |
+| One game, free. Nothing you type is sent to us. Or just | Un jeu, gratuit. Rien de ce que vous tapez ne nous est envoyé. Ou simplement |
+| put a name in lights | mettez un prénom en lumières |
+| Your name in lights \| HappyHeroGames | Votre prénom en lumières \| HappyHeroGames |
+| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Tapez un prénom et voyez-le en lumières sur un écran d'arcade. Gratuit, rien à installer, rien ne nous est envoyé. |
+| Put your name in lights | Mettez votre prénom en lumières |
+| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Tapez un prénom et obtenez un écran-titre d'arcade avec. Gratuit, et rien de ce que vous tapez n'est envoyé nulle part. |
+| Build a game | Créer un jeu |
+| Put a name in lights | Mettez un prénom en lumières |
+| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Tapez un prénom et il s'affiche sur un écran d'arcade. Gratuit, rien à installer, et rien ne quitte votre navigateur. |
+| A name | Un prénom |
+| What it's for | C'est pour quoi |
+| Birthday | Anniversaire |
+| An arcade title screen with the name you typed in lights | Un écran-titre d'arcade avec le prénom que vous avez tapé en lumières |
+| Save the picture | Enregistrer l'image |
+| Share it | Partager |
+| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | C'est l'écran d'ouverture d'un vrai jeu. Dans la suite, c'est lui le héros, sa famille et ses amis sont ceux à battre, et ses propres blagues sont dedans. |
+| Build the whole game, free | Créez le jeu entier, gratuitement |
+| Trick or Treat Dash \| HappyHeroGames | Course aux Bonbons \| HappyHeroGames |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Un jeu d'Halloween gratuit à votre nom. Attrapez les bonbons, laissez les choux, soixante secondes. Rien à installer. |
+| Trick or Treat Dash | Course aux Bonbons |
+| A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts. | Un jeu d'Halloween gratuit à votre nom. Soixante secondes, attrapez les bonbons, laissez les choux. |
+| Name in lights | Prénom en lumières |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser. | Un jeu d'Halloween gratuit à votre nom. Attrapez les bonbons, laissez les choux tranquilles, soixante secondes. Rien à installer et rien ne quitte votre navigateur. |
+| Your name | Votre prénom |
+| Start | Commencer |
+| Trick or Treat Dash: catch the falling sweets in your bucket | Course aux Bonbons : attrapez les bonbons qui tombent dans votre seau |
+| Left and right arrow keys, or the buttons under the screen on a phone. | Flèches gauche et droite, ou les boutons sous l'écran sur un téléphone. |
+| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Celui-ci est gratuit et le même pour tout le monde. Les jeux que nous faisons sont l'inverse : cinq jeux, votre propre famille et vos amis comme adversaires, et leurs blagues dans chaque écran. |
+| Build one, free | Créez-en un, gratuitement |
+| Halloween game | Jeu d'Halloween |
 
 ## What the game says: names, instructions and scores
 
@@ -229,6 +261,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | THE FAMILY QUIZ | LE QUIZ DE FAMILLE |
 | THE BOSS FIGHT | LE COMBAT DE BOSS |
 | THE ENDING | LA FIN |
+| 1 PLAYER | 1 JOUEUR |
+| THE COMPUTER PLAYS THE FAMILY | L'ORDINATEUR JOUE LA FAMILLE |
+| 2 PLAYERS | 2 JOUEURS |
+| A GROWN-UP PLAYS THE FAMILY | UN ADULTE JOUE LA FAMILLE |
+| PARTY MODE | MODE FETE |
+| EVERYONE TAKES A TURN AGAINST THE HERO | CHACUN JOUE UN TOUR CONTRE LE HEROS |
 | BIG HEAD MODE! | MODE GROSSE TETE ! |
 | NORMAL HEADS | TETES NORMALES |
 | SPAIN | ESPAGNE |
@@ -296,19 +334,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | TAP OR PRESS FIRE | TOUCHE OU APPUIE SUR TIR |
 | PRESS FIRE | APPUIE SUR TIR |
 | AN ARCADE ADVENTURE | UNE AVENTURE ARCADE |
-|  EDITION |  EDITION |
-| 1 PLAYER | 1 JOUEUR |
-| 2 PLAYERS: A GROWN-UP PLAYS THE FAMILY | 2 JOUEURS : UN ADULTE JOUE LA FAMILLE |
 | TAP TO START | TOUCHE POUR COMMENCER |
-| PRESS FIRE OR CLICK TO START | APPUIE SUR TIR OU CLIQUE |
 | ROUND  | MANCHE  |
 |  OF  |  SUR  |
 | TOUCH: ARROW PAD TO MOVE, BIG BUTTON TO FIRE | TACTILE : FLECHES POUR BOUGER, GROS BOUTON POUR TIRER |
 | ARROW KEYS OR WASD.  FIRE: SPACE OR ENTER | FLECHES OU WASD.  TIR : ESPACE OU ENTREE |
 | PRESS FIRE WHEN READY | APPUIE SUR TIR QUAND TU VEUX |
 | REFEREE: | ARBITRE : |
-|  FAMILY |  FAMILLE |
-|  WINS! |  GAGNE ! |
 
 ## What the family says: taunts, cheers and jokes
 
@@ -342,6 +374,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Round  | Manche  |
 | GO! | PARTEZ ! |
 |  wins! |  gagne ! |
+|  WINS! |  GAGNE ! |
+| Player  | Joueur  |
+| We have a champion! | Nous avons un champion ! |
+|  beat everybody! |  a battu tout le monde ! |
+|  BEAT EVERYBODY! |  A BATTU TOUT LE MONDE ! |
 | That is the demo. | Voilà la démo. |
 | Oh no. It is bedtime.  | Oh non. C'est l'heure de dormir.  |
 |  and  |  et  |
@@ -395,10 +432,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 |  SCORES! |  MARQUE ! |
 |  GETS IT! |  TROUVE ! |
 | BRAINBOX! | PETIT GENIE ! |
-| SMART! | MALIN ! |
-| GENIUS! | GENIE ! |
-| TOP MARKS! | VINGT SUR VINGT ! |
-| WRONG! | FAUX ! |
 
 ## Everything else in the game, including the quiz
 
@@ -409,8 +442,24 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | VS | VS |
 | : WASD + SPACE     | : WASD + ESPACE     |
 | : ARROWS + ENTER | : FLECHES + ENTREE |
+|  FAMILY |  FAMILLE |
 | THE FAMILY ARE IN TROUBLE NOW. | LA FAMILLE EST MAL PARTIE. |
 | NEXT ONE'S YOURS,  | LA PROCHAINE EST POUR TOI,  |
+| EVERYONE TAKES A TURN AGAINST  | CHACUN JOUE UN TOUR CONTRE  |
+| HOW MANY CHALLENGERS? | COMBIEN DE CHALLENGERS ? |
+| UP AND DOWN TO CHANGE | HAUT ET BAS POUR CHANGER |
+| EACH ONE PLAYS ONE GAME. THE HERO PLAYS THEM ALL. | CHACUN JOUE UN JEU. LE HEROS LES JOUE TOUS. |
+| PLAYER  | JOUEUR  |
+| YOU ARE UP AGAINST  | TU AFFRONTES  |
+| CHALLENGER: THE LEFT PAD | CHALLENGER : LE PAVE DE GAUCHE |
+| CHALLENGER KEYS: WASD AND SPACE | TOUCHES DU CHALLENGER : WASD ET ESPACE |
+| PARTY RESULTS | RESULTATS DE LA FETE |
+| BEAT  | A BATTU  |
+| LOST TO  | A PERDU CONTRE  |
+| CHAMPION: PLAYER  | CHAMPION : JOUEUR  |
+| CHAMPIONS: PLAYER  | CHAMPIONS : JOUEUR  |
+|  AND  |  ET  |
+| PRESS FIRE FOR THE MENU | APPUIE SUR TIR POUR LE MENU |
 | THAT'S THE DEMO | VOILA LA DEMO |
 | THE FULL GAME KEEPS GOING: | LE JEU COMPLET CONTINUE : |
 | AND  | ET  |
@@ -418,7 +467,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS FIRE TO PLAY THE DEMO AGAIN | APPUIE SUR TIR POUR REJOUER |
 | THE BEDTIME CLOCK | L'HORLOGE DU COUCHER |
 | THE HOMEWORK MONSTER | LE MONSTRE DES DEVOIRS |
-|  AND  |  ET  |
 |  ON THE SAME TEAM. |  DANS LA MEME EQUIPE. |
 | HOLD FIRE TO SHOOT. FILL THE BLAST METER, | MAINTIENS TIR POUR TIRER. REMPLIS LA JAUGE, |
 | GRAB THE FOOD. THE  | ATTRAPE LA NOURRITURE. LES ASSIETTES  |
@@ -654,6 +702,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | WRONG ANSWER? YOU'RE OUT FOR THAT QUESTION. | FAUX ? TU ES ELIMINE POUR CETTE QUESTION. |
 | FIRST TO 3. | PREMIER A 3. |
 | ANSWER: UP DOWN LEFT RIGHT | REPONDS : LES FLECHES |
+| SMART! | MALIN ! |
+| GENIUS! | GENIE ! |
+| TOP MARKS! | VINGT SUR VINGT ! |
+| WRONG! | FAUX ! |
 | TIME UP! | TEMPS ECOULE ! |
 | NOBODY GOT IT! | PERSONNE N'A TROUVE ! |
 | GET READY... | PREPAREZ-VOUS... |
@@ -684,6 +736,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | DRENCHED! | DOUCHE ! |
 | 'S WATCHING. NO THROWING! |  REGARDE. NE LANCEZ PAS ! |
 | READY... THROW! | PRET... LANCE ! |
+| TRICK OR TREAT DASH | COURSE AUX BONBONS |
+| SWEETS:  | BONBONS :  |
 | Black | Noir |
 | Dark brown | Châtain foncé |
 | Brown | Châtain |

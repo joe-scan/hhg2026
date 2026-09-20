@@ -185,6 +185,38 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | The first ten games are being built by hand. | Tá an chéad deich gcluiche á dtógáil de láimh. |
 | Terms | Téarmaí |
+| Can a whole party play? | An féidir le cóisir iomlán imirt? |
+| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Is féidir. Mód cóirme ar an scáileán teidil: roghnaíonn tú cé mhéad dúshlánóir, agus faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag féachaint. Críochnaíonn sé le clár torthaí agus curadh. |
+| One game, free. Nothing you type is sent to us. Or just | Cluiche amháin, saor in aisce. Ní sheoltar aon rud a chlóscríobhann tú chugainn. Nó díreach |
+| put a name in lights | cuir ainm i soilse |
+| Your name in lights \| HappyHeroGames | D'ainm i soilse \| HappyHeroGames |
+| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Clóscríobh ainm agus feic i soilse é ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, gan aon rud á sheoladh chugainn. |
+| Put your name in lights | Cuir d'ainm i soilse |
+| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Clóscríobh ainm agus faigh scáileán teidil arcade leis. Saor in aisce, agus ní sheoltar aon rud a chlóscríobhann tú áit ar bith. |
+| Build a game | Tóg cluiche |
+| Put a name in lights | Cuir ainm i soilse |
+| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Clóscríobh ainm agus téann sé suas ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, agus ní fhágann aon rud do bhrabhsálaí. |
+| A name | Ainm |
+| What it's for | Cad chuige é |
+| Birthday | Lá breithe |
+| An arcade title screen with the name you typed in lights | Scáileán teidil arcade leis an ainm a chlóscríobh tú i soilse |
+| Save the picture | Sábháil an pictiúr |
+| Share it | Roinn é |
+| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | Seo an chéad scáileán de chluiche ceart. Sa chuid eile is iad an laoch, is iad a muintir agus a gcairde na daoine le bualadh, agus tá a gcuid scéalta grinn féin ann. |
+| Build the whole game, free | Tóg an cluiche iomlán, saor in aisce |
+| Trick or Treat Dash \| HappyHeroGames | Rás na Milseán \| HappyHeroGames |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Cluiche Oíche Shamhna saor in aisce le d'ainm air. Beir ar na milseáin, fág na bachlóga, seasca soicind. Gan aon rud le suiteáil. |
+| Trick or Treat Dash | Rás na Milseán |
+| A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts. | Cluiche Oíche Shamhna saor in aisce le d'ainm air. Seasca soicind, beir ar na milseáin, fág na bachlóga. |
+| Name in lights | Ainm i soilse |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser. | Cluiche Oíche Shamhna saor in aisce le d'ainm air. Beir ar na milseáin, fág na bachlóga, seasca soicind. Gan aon rud le suiteáil agus ní fhágann aon rud do bhrabhsálaí. |
+| Your name | D'ainm |
+| Start | Tosaigh |
+| Trick or Treat Dash: catch the falling sweets in your bucket | Rás na Milseán: beir ar na milseáin a thiteann i do bhuicéad |
+| Left and right arrow keys, or the buttons under the screen on a phone. | Saigheada clé agus deas, nó na cnaipí faoin scáileán ar fhón. |
+| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do gach duine. Tá na cluichí a dhéanaimid bunoscionn leis: cúig cinn, do mhuintir agus do chairde féin mar chéilí comhraic, agus a gcuid scéalta grinn i ngach scáileán. |
+| Build one, free | Tóg ceann, saor in aisce |
+| Halloween game | Cluiche Oíche Shamhna |
 
 ## What the game says: names, instructions and scores
 
@@ -229,6 +261,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | THE FAMILY QUIZ | TRÁTH NA GCEIST |
 | THE BOSS FIGHT | AN CATH CEANNASAI |
 | THE ENDING | AN DEIREADH |
+| 1 PLAYER | 1 IMREOIR |
+| THE COMPUTER PLAYS THE FAMILY | IMRIONN AN RIOMHAIRE AN TEAGHLACH |
+| 2 PLAYERS | 2 IMREOIR |
+| A GROWN-UP PLAYS THE FAMILY | IMRIONN DUINE FASTA AN TEAGHLACH |
+| PARTY MODE | MOD COIRME |
+| EVERYONE TAKES A TURN AGAINST THE HERO | IMRIONN GACH DUINE SEAL IN AGHAIDH AN LAOICH |
 | BIG HEAD MODE! | MOD AN CHINN MHOIR! |
 | NORMAL HEADS | CINN GHNATHA |
 | SPAIN | AN SPAINN |
@@ -296,19 +334,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | TAP OR PRESS FIRE | TAPAIL NO BRUIGH LAMHACH |
 | PRESS FIRE | BRUIGH LAMHACH |
 | AN ARCADE ADVENTURE | EACHTRA ARCADE |
-|  EDITION |  EDITION |
-| 1 PLAYER | 1 IMREOIR |
-| 2 PLAYERS: A GROWN-UP PLAYS THE FAMILY | 2 IMREOIR: IMRIONN DUINE FASTA AN TEAGHLACH |
 | TAP TO START | TAPAIL CHUN TOSU |
-| PRESS FIRE OR CLICK TO START | BRUIGH LAMHACH NO CLICEAIL |
 | ROUND  | BABHTA  |
 |  OF  |  AS  |
 | TOUCH: ARROW PAD TO MOVE, BIG BUTTON TO FIRE | TADHALL: SAIGHEADA CHUN BOGADH, CNAIPE MOR CHUN LAMHACH |
 | ARROW KEYS OR WASD.  FIRE: SPACE OR ENTER | SAIGHEADA NO WASD.  LAMHACH: SPASBHARRA NO ENTER |
 | PRESS FIRE WHEN READY | BRUIGH LAMHACH NUAIR ATA TU REIDH |
 | REFEREE: | REITEOIR: |
-|  FAMILY |  TEAGHLACH |
-|  WINS! |  A BHUAIGH! |
 
 ## What the family says: taunts, cheers and jokes
 
@@ -342,6 +374,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Round  | Babhta  |
 | GO! | AR AGHAIDH! |
 |  wins! |  a bhuaigh! |
+|  WINS! |  A BHUAIGH! |
+| Player  | Imreoir  |
+| We have a champion! | Tá curadh againn! |
+|  beat everybody! |  a bhuaigh ar chách! |
+|  BEAT EVERYBODY! |  A BHUAIGH AR CHACH! |
 | That is the demo. | Sin é an taispeántas. |
 | Oh no. It is bedtime.  | Ó no. Tá sé in am codlata.  |
 |  and  |  agus  |
@@ -395,10 +432,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 |  SCORES! |  A SCORAIL! |
 |  GETS IT! |  A FHUAIR E! |
 | BRAINBOX! | CEANN CLISTE! |
-| SMART! | CLISTE! |
-| GENIUS! | GINIAS! |
-| TOP MARKS! | LAN MARCANNA! |
-| WRONG! | MICHEART! |
 
 ## Everything else in the game, including the quiz
 
@@ -409,8 +442,24 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | VS | VS |
 | : WASD + SPACE     | : WASD + SPASBHARRA     |
 | : ARROWS + ENTER | : SAIGHEADA + ENTER |
+|  FAMILY |  TEAGHLACH |
 | THE FAMILY ARE IN TROUBLE NOW. | TA AN TEAGHLACH I dTRIOBLOID ANOIS. |
 | NEXT ONE'S YOURS,  | IS LEATSA AN CHEAD CHEANN EILE,  |
+| EVERYONE TAKES A TURN AGAINST  | IMRIONN GACH DUINE SEAL IN AGHAIDH  |
+| HOW MANY CHALLENGERS? | CE MHEAD DUSHLANOIR? |
+| UP AND DOWN TO CHANGE | SUAS AGUS SIOS CHUN ATHRU |
+| EACH ONE PLAYS ONE GAME. THE HERO PLAYS THEM ALL. | IMRIONN GACH DUINE CLUICHE AMHAIN. IMRIONN AN LAOCH GACH CEANN. |
+| PLAYER  | IMREOIR  |
+| YOU ARE UP AGAINST  | TA TU IN AGHAIDH  |
+| CHALLENGER: THE LEFT PAD | DUSHLANOIR: AN CEAPA CLE |
+| CHALLENGER KEYS: WASD AND SPACE | EOCHRACHA AN DUSHLANOIRA: WASD AGUS SPASBHARRA |
+| PARTY RESULTS | TORTHAI NA COIRME |
+| BEAT  | BHUAIGH AR  |
+| LOST TO  | CHAILL LE  |
+| CHAMPION: PLAYER  | CURADH: IMREOIR  |
+| CHAMPIONS: PLAYER  | CURAIDH: IMREOIR  |
+|  AND  |  AGUS  |
+| PRESS FIRE FOR THE MENU | BRUIGH LAMHACH DON ROGHCHLAR |
 | THAT'S THE DEMO | SIN E AN TAISPEANTAS |
 | THE FULL GAME KEEPS GOING: | LEANANN AN CLUICHE IOMLAN: |
 | AND  | AGUS  |
@@ -418,7 +467,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS FIRE TO PLAY THE DEMO AGAIN | BRUIGH LAMHACH CHUN IMIRT ARIS |
 | THE BEDTIME CLOCK | CLOG AM CODLATA |
 | THE HOMEWORK MONSTER | ARRACHT NA hOBAIRBHAILE |
-|  AND  |  AGUS  |
 |  ON THE SAME TEAM. |  AR AN bhFOIREANN CHEANNA. |
 | HOLD FIRE TO SHOOT. FILL THE BLAST METER, | COINNIGH LAMHACH CHUN SCAOILEADH. LION AN BARRA, |
 | GRAB THE FOOD. THE  | FAIGH AN BIA. IS LEATSA NA PLATAI  |
@@ -654,6 +702,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | WRONG ANSWER? YOU'RE OUT FOR THAT QUESTION. | FREAGRA MICHEART? TA TU AMUIGH DON CHEIST SIN. |
 | FIRST TO 3. | AN CHEAD DUINE GO 3. |
 | ANSWER: UP DOWN LEFT RIGHT | FREAGAIR: NA SAIGHEADA |
+| SMART! | CLISTE! |
+| GENIUS! | GINIAS! |
+| TOP MARKS! | LAN MARCANNA! |
+| WRONG! | MICHEART! |
 | TIME UP! | TA AN T-AM ISTIGH! |
 | NOBODY GOT IT! | NI BHFUAIR AON DUINE E! |
 | GET READY... | BIGI REIDH... |
@@ -684,6 +736,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | DRENCHED! | AR MAOS! |
 | 'S WATCHING. NO THROWING! |  AG FEACHAINT. NA CAITHIGI! |
 | READY... THROW! | REIDH... CAITH! |
+| TRICK OR TREAT DASH | RAS NA MILSEAN |
+| SWEETS:  | MILSEAIN:  |
 | Black | Dubh |
 | Dark brown | Donn dorcha |
 | Brown | Donn |

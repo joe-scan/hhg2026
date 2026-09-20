@@ -185,6 +185,38 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | The first ten games are being built by hand. | Die ersten zehn Spiele entstehen von Hand. |
 | Terms | Bedingungen |
+| Can a whole party play? | Kann eine ganze Party spielen? |
+| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Ja. Party-Modus auf dem Titelbildschirm: Du wählst, wie viele Herausforderer mitspielen, und jeder kommt gegen den Helden dran, während die anderen zuschauen. Am Ende gibt es eine Ergebnistafel und einen Champion. |
+| One game, free. Nothing you type is sent to us. Or just | Ein Spiel, kostenlos. Nichts, was du eingibst, wird an uns gesendet. Oder einfach |
+| put a name in lights | einen Namen in Lichter setzen |
+| Your name in lights \| HappyHeroGames | Dein Name in Lichtern \| HappyHeroGames |
+| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Tippe einen Namen und sieh ihn in Lichtern auf einem Arcade-Bildschirm. Kostenlos, nichts zu installieren, nichts wird gesendet. |
+| Put your name in lights | Setz deinen Namen in Lichter |
+| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Tippe einen Namen und bekomme einen Arcade-Titelbildschirm damit. Kostenlos, und nichts davon wird irgendwohin gesendet. |
+| Build a game | Ein Spiel bauen |
+| Put a name in lights | Einen Namen in Lichter setzen |
+| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Tippe einen Namen und er erscheint auf einem Arcade-Bildschirm. Kostenlos, nichts zu installieren, und nichts verlässt deinen Browser. |
+| A name | Ein Name |
+| What it's for | Wofür es ist |
+| Birthday | Geburtstag |
+| An arcade title screen with the name you typed in lights | Ein Arcade-Titelbildschirm mit dem getippten Namen in Lichtern |
+| Save the picture | Bild speichern |
+| Share it | Teilen |
+| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | Das ist der Startbildschirm eines echten Spiels. Im Rest davon sind sie der Held, Familie und Freunde sind die Gegner, und ihre eigenen Witze stecken darin. |
+| Build the whole game, free | Das ganze Spiel bauen, kostenlos |
+| Trick or Treat Dash \| HappyHeroGames | Süßes oder Saures \| HappyHeroGames |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Ein kostenloses Halloween-Spiel mit deinem Namen. Fang die Süßigkeiten, lass den Rosenkohl, sechzig Sekunden. Nichts zu installieren. |
+| Trick or Treat Dash | Süßes oder Saures |
+| A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts. | Ein kostenloses Halloween-Spiel mit deinem Namen. Sechzig Sekunden, fang die Süßigkeiten, lass den Rosenkohl. |
+| Name in lights | Name in Lichtern |
+| A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser. | Ein kostenloses Halloween-Spiel mit deinem Namen. Fang die Süßigkeiten, lass den Rosenkohl in Ruhe, sechzig Sekunden. Nichts zu installieren, und nichts verlässt deinen Browser. |
+| Your name | Dein Name |
+| Start | Start |
+| Trick or Treat Dash: catch the falling sweets in your bucket | Süßes oder Saures: fang die fallenden Süßigkeiten in deinem Eimer |
+| Left and right arrow keys, or the buttons under the screen on a phone. | Pfeiltasten links und rechts, oder die Tasten unter dem Bildschirm auf dem Handy. |
+| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Dieses hier ist kostenlos und für alle gleich. Die Spiele, die wir machen, sind andersherum: fünf davon, die eigene Familie und Freunde als Gegner, und ihre Witze auf jedem Bildschirm. |
+| Build one, free | Eins bauen, kostenlos |
+| Halloween game | Halloween-Spiel |
 
 ## What the game says: names, instructions and scores
 
@@ -229,6 +261,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | THE FAMILY QUIZ | DAS FAMILIENQUIZ |
 | THE BOSS FIGHT | DER ENDGEGNER |
 | THE ENDING | DAS ENDE |
+| 1 PLAYER | 1 SPIELER |
+| THE COMPUTER PLAYS THE FAMILY | DER COMPUTER SPIELT DIE FAMILIE |
+| 2 PLAYERS | 2 SPIELER |
+| A GROWN-UP PLAYS THE FAMILY | EIN ERWACHSENER SPIELT DIE FAMILIE |
+| PARTY MODE | PARTY-MODUS |
+| EVERYONE TAKES A TURN AGAINST THE HERO | JEDER SPIELT EINE RUNDE GEGEN DEN HELDEN |
 | BIG HEAD MODE! | GROSSKOPF-MODUS! |
 | NORMAL HEADS | NORMALE KOEPFE |
 | SPAIN | SPANIEN |
@@ -296,19 +334,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | TAP OR PRESS FIRE | TIPPEN ODER FEUER DRUECKEN |
 | PRESS FIRE | FEUER DRUECKEN |
 | AN ARCADE ADVENTURE | EIN ARCADE-ABENTEUER |
-|  EDITION |  EDITION |
-| 1 PLAYER | 1 SPIELER |
-| 2 PLAYERS: A GROWN-UP PLAYS THE FAMILY | 2 SPIELER: EIN ERWACHSENER SPIELT DIE FAMILIE |
 | TAP TO START | TIPPEN ZUM START |
-| PRESS FIRE OR CLICK TO START | FEUER DRUECKEN ODER KLICKEN |
 | ROUND  | RUNDE  |
 |  OF  |  VON  |
 | TOUCH: ARROW PAD TO MOVE, BIG BUTTON TO FIRE | TOUCH: PFEILE BEWEGEN, GROSSE TASTE FEUERT |
 | ARROW KEYS OR WASD.  FIRE: SPACE OR ENTER | PFEILE ODER WASD.  FEUER: LEERTASTE ODER ENTER |
 | PRESS FIRE WHEN READY | FEUER DRUECKEN, WENN BEREIT |
 | REFEREE: | SCHIEDSRICHTER: |
-|  FAMILY |  FAMILIE |
-|  WINS! |  GEWINNT! |
 
 ## What the family says: taunts, cheers and jokes
 
@@ -342,6 +374,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Round  | Runde  |
 | GO! | LOS! |
 |  wins! |  gewinnt! |
+|  WINS! |  GEWINNT! |
+| Player  | Spieler  |
+| We have a champion! | Wir haben einen Champion! |
+|  beat everybody! |  hat alle geschlagen! |
+|  BEAT EVERYBODY! |  HAT ALLE GESCHLAGEN! |
 | That is the demo. | Das war die Demo. |
 | Oh no. It is bedtime.  | Oh nein. Es ist Schlafenszeit.  |
 |  and  |  und  |
@@ -395,10 +432,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 |  SCORES! |  TRIFFT! |
 |  GETS IT! |  HAT ES! |
 | BRAINBOX! | SCHLAUKOPF! |
-| SMART! | KLUG! |
-| GENIUS! | GENIE! |
-| TOP MARKS! | BESTNOTE! |
-| WRONG! | FALSCH! |
 
 ## Everything else in the game, including the quiz
 
@@ -409,8 +442,24 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | VS | VS |
 | : WASD + SPACE     | : WASD + LEERTASTE     |
 | : ARROWS + ENTER | : PFEILE + ENTER |
+|  FAMILY |  FAMILIE |
 | THE FAMILY ARE IN TROUBLE NOW. | JETZT WIRD ES ENG FUER DIE FAMILIE. |
 | NEXT ONE'S YOURS,  | DIE NAECHSTE GEHOERT DIR,  |
+| EVERYONE TAKES A TURN AGAINST  | JEDER SPIELT EINE RUNDE GEGEN  |
+| HOW MANY CHALLENGERS? | WIE VIELE HERAUSFORDERER? |
+| UP AND DOWN TO CHANGE | HOCH UND RUNTER ZUM AENDERN |
+| EACH ONE PLAYS ONE GAME. THE HERO PLAYS THEM ALL. | JEDER SPIELT EIN SPIEL. DER HELD SPIELT ALLE. |
+| PLAYER  | SPIELER  |
+| YOU ARE UP AGAINST  | DU SPIELST GEGEN  |
+| CHALLENGER: THE LEFT PAD | HERAUSFORDERER: DAS LINKE FELD |
+| CHALLENGER KEYS: WASD AND SPACE | TASTEN DES HERAUSFORDERERS: WASD UND LEERTASTE |
+| PARTY RESULTS | PARTY-ERGEBNISSE |
+| BEAT  | SCHLUG  |
+| LOST TO  | VERLOR GEGEN  |
+| CHAMPION: PLAYER  | CHAMPION: SPIELER  |
+| CHAMPIONS: PLAYER  | CHAMPIONS: SPIELER  |
+|  AND  |  UND  |
+| PRESS FIRE FOR THE MENU | FEUER DRUECKEN FUER DAS MENUE |
 | THAT'S THE DEMO | DAS WAR DIE DEMO |
 | THE FULL GAME KEEPS GOING: | DAS VOLLE SPIEL GEHT WEITER: |
 | AND  | UND  |
@@ -418,7 +467,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS FIRE TO PLAY THE DEMO AGAIN | FEUER DRUECKEN FUER NOCH EINE RUNDE |
 | THE BEDTIME CLOCK | DIE SCHLAFENSZEIT-UHR |
 | THE HOMEWORK MONSTER | DAS HAUSAUFGABENMONSTER |
-|  AND  |  UND  |
 |  ON THE SAME TEAM. |  IM SELBEN TEAM. |
 | HOLD FIRE TO SHOOT. FILL THE BLAST METER, | FEUER HALTEN ZUM SCHIESSEN. LADE DIE LEISTE, |
 | GRAB THE FOOD. THE  | SCHNAPP DIR DAS ESSEN. DIE  |
@@ -654,6 +702,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | WRONG ANSWER? YOU'RE OUT FOR THAT QUESTION. | FALSCH? DANN RAUS AUS DIESER FRAGE. |
 | FIRST TO 3. | WER ZUERST 3 HAT. |
 | ANSWER: UP DOWN LEFT RIGHT | ANTWORT: PFEILTASTEN |
+| SMART! | KLUG! |
+| GENIUS! | GENIE! |
+| TOP MARKS! | BESTNOTE! |
+| WRONG! | FALSCH! |
 | TIME UP! | ZEIT UM! |
 | NOBODY GOT IT! | KEINER WUSSTE ES! |
 | GET READY... | BEREIT MACHEN... |
@@ -684,6 +736,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | DRENCHED! | KLATSCHNASS! |
 | 'S WATCHING. NO THROWING! |  SCHAUT. NICHT WERFEN! |
 | READY... THROW! | FERTIG... WURF! |
+| TRICK OR TREAT DASH | SUESSES ODER SAURES |
+| SWEETS:  | SUESSIGKEITEN:  |
 | Black | Schwarz |
 | Dark brown | Dunkelbraun |
 | Brown | Braun |

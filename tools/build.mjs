@@ -112,7 +112,10 @@ function siblings(pagePath, lang) {
 
 function hreflangs(pagePath, lang) {
   const href = siblings(pagePath, lang);
-  const tags = ['en', ...LANGS].map(l => `<link rel="alternate" hreflang="${l}" href="${href(l)}">`);
+  // An English-only page has no translated versions, so it must not advertise any: a browser
+  // that follows one gets a 404.
+  const langs = ENGLISH_ONLY.includes(pagePath) ? ['en'] : ['en', ...LANGS];
+  const tags = langs.map(l => `<link rel="alternate" hreflang="${l}" href="${href(l)}">`);
   tags.push(`<link rel="alternate" hreflang="x-default" href="${href('en')}">`);
   return tags.join('\n');
 }
@@ -120,6 +123,7 @@ function hreflangs(pagePath, lang) {
 // The picker: one small control showing the language you are in, in its own words, which opens
 // the short list. No flags (a language is not a country) and no JavaScript.
 function picker(pagePath, lang) {
+  if (ENGLISH_ONLY.includes(pagePath)) return '';   // nothing to pick between
   const href = siblings(pagePath, lang);
   const others = ['en', ...LANGS].filter(l => l !== lang)
     .map(l => `<a href="${href(l)}" hreflang="${l}" lang="${l}">${LANGNAMES[l]}</a>`).join('');
