@@ -83,7 +83,7 @@
   function changed() {
     const c = current(); applyConfig(c);
     $('play').href = 'g/demo/#g=' + encodeCfg(c);
-    $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s game';
+    $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s first game, free';
     try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }
   changed();

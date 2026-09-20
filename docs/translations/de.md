@@ -239,6 +239,18 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Want the next one when it lands? | Willst du das nächste, sobald es da ist? |
 | Send us your email | Schick uns deine E-Mail-Adresse |
 | and we'll tell you. Nothing else, ever. | und wir sagen Bescheid. Sonst nichts, nie. |
+| They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Sie sind der Held. Mama, Papa, Oma, die beste Freundin und der Hund müssen geschlagen werden. Läuft auf jedem Handy. Nichts zu installieren. |
+| Play the first game, free | Spiel das erste Spiel, gratis |
+| Nothing you type is sent to us. Or just | Nichts, was du tippst, geht an uns. Oder einfach |
+| One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Sean still won't talk about the quiz. Every family has those details. We put them in a game. | Ein Vater baute ein Arcadespiel für seine zwei Söhne, voller Sprüche, ihrem Hund und ihren Streits um den Beifahrersitz. Über das Quiz redet Sean bis heute nicht. So etwas hat jede Familie. Wir bauen es ins Spiel. |
+| Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Weil sich ein Link schlecht einpacken lässt. Das Spiel, ein Poster mit ihrem Namen in Leuchtschrift per Post und ein kurzer Trailer für den Familienchat. |
+| Tell us the date. If we can't make it, we'll say so before taking any money. | Sag uns den Termin. Wenn wir ihn nicht schaffen, sagen wir es, bevor wir Geld nehmen. |
+| Date not fixed yet? A gift card works. | Termin noch offen? Dann geht auch ein Gutschein. |
+| Tell us about them | Erzähl uns von ihnen |
+| Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Alle anderen wollen ein Foto deines Kindes. Wir nicht. Der Held wird in Pixeln gezeichnet. |
+| How long does it last? | Wie lange dauert es? |
+| About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Beim ersten Mal etwa zwanzig Minuten. Dann spielen sie es noch mal und geben es weiter an alle im Raum. |
+| Build the real one | Bau das richtige |
 
 ## What the game says: names, instructions and scores
 
@@ -816,4 +828,5 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS START TO PLAY AGAIN | START DRUECKEN FUER NOCHMAL |
 | Saved. | Gespeichert. |
 | Not shared. | Nicht geteilt. |
+| 's first game, free | : erstes Spiel, gratis |
 

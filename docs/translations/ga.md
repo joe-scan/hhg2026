@@ -239,6 +239,18 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Want the next one when it lands? | An bhfuil an chéad cheann eile uait chomh luath is a thagann sé? |
 | Send us your email | Seol do sheoladh ríomhphoist chugainn |
 | and we'll tell you. Nothing else, ever. | agus inseoidh muid duit. Faic eile, riamh. |
+| They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Is iadsan an laoch. Mam, Daid, Mamó, a gcara is fearr agus an madra na daoine le sárú. Oibríonn sé ar aon fhón. Faic le suiteáil. |
+| Play the first game, free | Imir an chéad chluiche, saor in aisce |
+| Nothing you type is sent to us. Or just | Ní sheoltar chugainn aon rud a chlóscríobhann tú. Nó díreach |
+| One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Sean still won't talk about the quiz. Every family has those details. We put them in a game. | Rinne daid amháin cluiche arcade dá bheirt mhac, lán lena gcuid nathanna, a madra agus a gcuid argóintí faoin suíochán tosaigh. Ní labhraíonn Seán faoin tráth na gceist fós. Tá na sonraí sin ag gach teaghlach. Cuirimid i gcluiche iad. |
+| Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Mar tá nasc deacair a fhilleadh. An cluiche, póstaer lena n-ainm i soilse sa phost, agus trailer gairid don chomhrá teaghlaigh. |
+| Tell us the date. If we can't make it, we'll say so before taking any money. | Inis dúinn an dáta. Mura féidir linn é a bhaint amach, déarfaimid é sula dtógaimid aon airgead. |
+| Date not fixed yet? A gift card works. | Gan dáta socraithe fós? Déanann cárta bronntanais an gnó. |
+| Tell us about them | Inis dúinn fúthu |
+| Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Tá grianghraf de do pháiste ag teastáil ó chách eile. Ní uainne. Tarraingítear an laoch i bpicteilíní. |
+| How long does it last? | Cá fhad a mhaireann sé? |
+| About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Timpeall fiche nóiméad an chéad uair. Ansin imríonn siad arís é agus tugann siad do dhuine ar bith sa seomra é. |
+| Build the real one | Tóg an ceann ceart |
 
 ## What the game says: names, instructions and scores
 
@@ -816,4 +828,5 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | PRESS START TO PLAY AGAIN | BRUIGH START CHUN IMIRT ARIS |
 | Saved. | Sábháilte. |
 | Not shared. | Níor roinneadh é. |
+| 's first game, free | : an chéad cheann, saor in aisce |
 
