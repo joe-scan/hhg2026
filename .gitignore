@@ -3,3 +3,8 @@ node_modules/
 
 # site/ is generated: run `node tools/build.mjs`
 site/
+
+# tools/assets/render.mjs regenerates these every run, so they churn in every commit that
+# touches the game's look. The poster template reads them; nothing else does.
+tools/assets/title.png
+tools/assets/frames/
