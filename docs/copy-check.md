@@ -27,12 +27,12 @@ The target for the landing page and the free games is **everything at 5 or under
 | The poster and the trailer, made from one demo family. | 5 | A sentence with no verb, and *demo family* is jargon. | This poster and trailer are for a made-up family. | 2 |
 | The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | 8 | 29 words. It was on all three free pages, so the worst sentence on the site appeared three times. | The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | 4 |
 | The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | 7 | Three "has" clauses in a row. | In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | 4 |
-| The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | 8 | 29 words, and it advertised how the games get made, which is nobody's business but ours. | Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | 5 |
+| The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | 8 | 29 words, and "built by hand" was a claim about how the work gets done rather than what the buyer gets. The promise that survives is the one we keep: a person plays every game before it goes out. | Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | 5 |
 | They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. | 8 | Two unrelated facts joined by "and". | Split into two sentences. | 5 |
 
 ## Where it stands now
 
-The landing page averages **7.4 words a sentence** across 64 sentences, and nothing on it scores above 5. The longest line left is the origin story, at 23 words: "One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat." It stays, because it reads aloud in one breath and it is the only place on the page telling a story rather than stating a fact.
+The landing page averages **7.4 words a sentence** across 72 sentences, and nothing on it scores above 5. The longest line left is the origin story, at 23 words: "One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat." It stays, because it reads aloud in one breath and it is the only place on the page telling a story rather than stating a fact.
 
 ## What is deliberately left complex
 

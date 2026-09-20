@@ -66,7 +66,7 @@ A parent with $99 and a birthday in two weeks is not comparing personalised game
 
 1. **Nobody sells a personalised demo.** Ready Player U has a demo, but it is their generic game. Muksun and Gift Games show screenshots and a form. We let someone type a name and play their own hero in under a minute, before paying. That is our single biggest advantage and the whole page should be built around it. It already is.
 2. **Muksun cannot run on an iPhone.** Every piece of our marketing should say "works on any phone, nothing to install", because their $99 customer finds that out after paying.
-3. **Rush delivery is proven money.** +$49 for three days, offered exactly when the buyer types a date that is too close. We deliver in 48 hours as standard, so ours is "tomorrow, +$39", and it sells itself on panic.
+3. **Rush delivery is proven money.** +$49 for three days, offered exactly when the buyer types a date that is too close. We deliver in two working days as standard, so ours is "tomorrow, +$39", and it sells itself on panic.
 4. **Something to unwrap, instantly.** Muksun's free printable certificate and Gift Games' DIY edition both solve the same problem: digital gifts are terrible to hand over. We should give every order a printable card the moment they pay, free.
 5. **Prints are the upsell, not the product.** Ready Player U proves people buy a framed version of the art with a QR code on it. Our $179 poster is the same bet at a higher price, and it should be sold as a framed option too.
 6. **Reviews are the currency and we have none.** They have 1,873 and 61. Collecting the first fifty, with the reaction videos, matters more than any feature on the roadmap.
@@ -82,7 +82,7 @@ A parent with $99 and a birthday in two weeks is not comparing personalised game
 | Try before buying | Your own child, playing, in a minute | A generic demo, or screenshots |
 | Devices | Any browser | Android and Windows (Muksun) |
 | Who is in it | Up to eight family and friends, plus the pet | Up to five (Muksun), two (most) |
-| Speed | 48 hours | Instant (templates), 3 days rush (Muksun) |
+| Speed | Two working days | Instant (templates), 3 days rush (Muksun) |
 | Made by a person | Every game read and played before it ships | Muksun and Bday Game yes, the rest no |
 | Price | $99 | $30.89 to $99 to $450 |
 | Proof | None yet | 1,873 reviews (Ready Player U) |

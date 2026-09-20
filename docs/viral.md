@@ -73,7 +73,7 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## 6. Content that keeps working after it is made
 
-41. **The making-of** (S). How a game gets built in 48 hours, start to finish, one video.
+41. **The making-of** (S). How a game gets built in two days, start to finish, one video.
 42. **The dad origin story** (S). Fionn vs Sean is the real story. Tell it once, properly.
 43. **Before and after** (S). A questionnaire answer and the screen it became.
 44. **Time-lapse of the pixel art** (S).
@@ -89,4 +89,4 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## What I would actually do first
 
-Party mode, the name in lights generator and Trick or Treat Dash are all built. Next: put the Halloween game in front of people in the first week of October, and see whether anybody sends it on. If they do, build the next seasonal one. If they do not, the rest of this list is guesswork and the effort belongs in the paid product instead.
+Party mode, the name in lights generator, Trick or Treat Dash and Sleigh Dash are all built, and they live together at `/free/`. Next: put the Halloween game in front of people in the first week of October and the Christmas one in late November, then see whether anybody sends them on. If they do, build Easter. If they do not, the rest of this list is guesswork and the effort belongs in the paid product instead.

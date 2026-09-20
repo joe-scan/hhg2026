@@ -76,7 +76,6 @@ Last updated 20 September 2026.
 - [ ] Get each language read by a native speaker. All five are Claude's work: good enough to ship, not good enough to be proud of. The jokes and the taunts are what matter, not the privacy policy.
 - [ ] Irish: Joe's wife teaches Irish and is checking that one.
 - [ ] Note for whoever checks: in-game text is written without É, Í, Ó and Ç because the pixel font cannot draw them as capitals. Á, Ñ and Ü are fine. If a phrase needs one of the missing ones, reword it rather than dropping the accent silently.
-- [ ] Decide whether a Spanish visitor should land on /es/ automatically, or be offered it. Automatic redirects annoy people who want English.
 
 ## From the competitor research
 
@@ -94,7 +93,7 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 
 - [ ] First paid social budget, to find the real cost of winning a customer. The plan assumes $38.
 - [ ] Referral: a code on every finished game, so a family can pass it on.
-- [ ] A second seasonal game after Halloween, if the first one gets passed around. Christmas is the obvious one.
+- [ ] Easter Egg Hunt, in February, but only if Halloween or Christmas actually gets passed around.
 
 ## Done
 
@@ -113,6 +112,17 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] docs/viral.md: fifty ways to spread it (20 Sep 2026).
 - [x] Party mode: two to six challengers take turns against the hero, results board, champion (20 Sep 2026).
 - [x] Name in lights generator at /name/, free and shareable (20 Sep 2026).
-- [x] Trick or Treat Dash at /halloween/, free, sixty seconds, shareable score (20 Sep 2026).
+- [x] Trick or Treat Dash, free, sixty seconds, shareable score (20 Sep 2026).
 - [x] Pixel HHG logo beside the wordmark, matching favicon (20 Sep 2026).
 - [x] In-game text resized for phones: title, versus, how-to, results and the locked card (20 Sep 2026).
+- [x] Sleigh Dash, the free Christmas game: one button, sixty seconds, a present down every chimney (20 Sep 2026).
+- [x] The free games moved to /free/, with a list page and a Free games menu. The old addresses 301 (20 Sep 2026).
+- [x] arcade/free.js: one harness for every free game, so the next season is a game file and a page (20 Sep 2026).
+- [x] The game's look chosen from ten rendered on the real game: Poster Bold, and all five games redrawn with proper scenery (20 Sep 2026).
+- [x] Bungee dropped for Bowlby One, which has a lowercase, so the wordmark reads HappyHeroGames (20 Sep 2026).
+- [x] Occasion scenes on the name page: cake and balloons, tree and snow, flowers, trophy (20 Sep 2026).
+- [x] Every page shares one header and footer, and the marketing pictures are rendered from the game itself (20 Sep 2026).
+- [x] Copy check: every sentence scored, twelve rewritten, docs/copy-check.md and tools/copy.mjs (20 Sep 2026).
+- [x] Ten copy changes for the sale itself: the phone promise, the photo line, a reason for the box, how long it lasts (20 Sep 2026).
+- [x] A language is offered, never forced: one dismissible line for a Spanish browser (20 Sep 2026).
+- [x] The free games ask for an email at the end, at the one moment somebody is pleased (20 Sep 2026).

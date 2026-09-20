@@ -9,6 +9,6 @@ node tools/build.mjs
 rsync -rtvz --delete --chmod=D755,F644 \
   --filter='P .well-known/' --filter='P cgi-bin/' \
   site/ retroelf-host:happyherogames.com/
-for p in '' name/ halloween/ privacy/ terms/ g/demo/ es/ ga/halloween/ builder.js arcade/engine.js css/site.css img/og.png img/logo.svg; do
+for p in '' free/ free/christmas/ free/halloween/ name/ privacy/ terms/ g/demo/ es/ ga/free/halloween/ builder.js arcade/engine.js arcade/free.js css/site.css img/og.png img/logo.svg; do
   printf '%s  https://happyherogames.com/%s\n' "$(curl -s -o /dev/null -w '%{http_code}' "https://happyherogames.com/$p")" "$p"
 done

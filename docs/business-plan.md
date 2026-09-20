@@ -8,7 +8,7 @@ The doc keeps British spelling. The site uses US spelling, because the buyers ar
 
 HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Two days later they get a private link to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
 
-There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in 48 hours and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
+There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in two working days and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
 
 ## 2. The honest summary
 
@@ -26,13 +26,13 @@ Two prices, in US dollars, shown in dollars to everyone.
 
 | Product | Price | What's in it |
 |---|---|---|
-| The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready in 48 hours, checked by a person. |
+| The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready in two working days, checked by a person. |
 | The gift box | $179 | The same game, plus a printed arcade poster of their title screen and a twenty-second trailer of their own game. |
 | Gift cards | $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
 
-**Everything except the physical extras is identical between the two.** Same five games, same boss, same eight people, same lines, same 48 hours. The only choice a buyer makes is whether they want something printed. That is the whole point: one variable. A pricing page with one variable on it can be understood in five seconds, and a gift buyer decides in about that long.
+**Everything except the physical extras is identical between the two.** Same five games, same boss, same eight people, same lines, same two working days. The only choice a buyer makes is whether they want something printed. That is the whole point: one variable. A pricing page with one variable on it can be understood in five seconds, and a gift buyer decides in about that long.
 
 ### Why the $49 Starter is gone
 
@@ -100,7 +100,7 @@ Seven competitors were read in detail on 20 September 2026. The full analysis is
 | Plays on | Browser | Android and Windows PC | Windows | Any browser |
 | Try before you buy | A generic demo | No | No | Their own hero, playing, in a minute |
 | Built from | Photos and three quiz answers | Photos and locations | Weeks of conversation | A questionnaire. No photos. |
-| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | 48 hours |
+| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | Two working days |
 | Who is in it | Two | Up to five | Whoever you discuss | Up to eight, plus the pet |
 | Proof | 1,873 reviews at 4.8 | 61 reviews at 4.77 | A handful of references | None yet |
 
@@ -210,7 +210,7 @@ Money columns are in thousands of dollars.
 
 ## 9. Operations
 
-The paid game follows `docs/product.md`: questionnaire, generator, a person checks it, delivery in 48 hours or on the chosen date. The demo already proves the generator's first half, config to sprites and games. What is missing: the questionnaire, payments, order storage with consent and deletion, the AI drafting step, a checking tool, and the rest of the game library.
+The paid game follows `docs/product.md`: questionnaire, generator, a person checks it, delivery in two working days or on the chosen date. The demo already proves the generator's first half, config to sprites and games. What is missing: the questionnaire, payments, order storage with consent and deletion, the AI drafting step, a checking tool, and the rest of the game library.
 
 Five games per order rather than ten is the decision that makes the checking time work, and it also means a smaller library to build before launch.
 

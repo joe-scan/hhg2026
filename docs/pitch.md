@@ -15,7 +15,7 @@ One product, two prices, in US dollars.
 | | Price | What they get |
 |---|---|---|
 | Free demo | $0 | One game, built in the browser in about a minute, from a name and a few choices |
-| The game | $99 | Five games and a boss, up to eight people in it, their own catchphrases and jokes, ready in 48 hours, theirs to keep |
+| The game | $99 | Five games and a boss, up to eight people in it, their own catchphrases and jokes, ready in two working days, theirs to keep |
 | The gift box | $179 | The same game, plus a printed poster of their title screen and a short trailer of their own game for the family chat |
 
 Everything about the game itself is identical between the two prices. The only choice is whether the buyer wants something printed. There is no subscription and no list of add-ons, because every extra option is another decision standing between someone and their credit card.
@@ -64,10 +64,10 @@ At the $1M run rate that is four to six people, most of them in Ireland, selling
 
 ## Status
 
-- Live at happyherogames.com: the landing page, the hero builder and a free playable demo.
+- Live at happyherogames.com: the landing page, the hero builder, a free playable demo, party mode for a room full of children, and three free games that ask for nothing (`/free/christmas/`, `/free/halloween/`, `/name/`).
 - The game engine works, with five games, the boss and the ending all built, in English, Spanish, German, French, Italian and Irish.
 - Privacy rules are written and enforced in the product: no photos, no voice recordings, no surnames, ages, schools or addresses, and every game on its own unguessable link.
-- Orders for the first ten games are open, taken by email and built by hand, so the real build time can be measured.
+- Orders for the first ten games are open, taken by email, so the real build time can be measured.
 - Not yet: automatic payments, the questionnaire form, the generator and the print partner.
 
 ## What funding would be spent on

@@ -71,9 +71,9 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 - The pixel game screen is the only loud thing. The page around it is quiet: warm cream ground (`#fdf5ec`, dark `#0f0c18`), ink text, thin rules, square corners.
 - **The game's own look is Poster Bold**, picked on 20 Sep 2026 from ten rendered on the real game: sky blue, pitch green, black ink, one red and one yellow, flat colour and hard edges, because that reads on a phone at arm's length. `COL` in `engine.js` is the whole palette and `bgSynth()` is the sky and the grass. `CHROME=... node tools/game-skins.mjs` re-renders the ten if the choice is ever reopened; a look is a font, a few colours and one background function.
 - **Each game draws its own scenery, and that is what people actually look at.** Ten palettes changed nothing below the top bar until the games themselves were redrawn. A new game needs a place, not just a mechanic: a crowd, a fence, a window, something with depth.
-- **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
+- **No** cards, pills, drop shadows, gradients, glow or emoji in the page. The game screen is the exception to nothing: it is flat colour too, just brighter.
 - Type: **Bowlby One** for headlines, the wordmark and the big lettering inside the game; **Atkinson Hyperlegible** for everything else on the page; **Press Start 2P** for the game's own small text, never in page copy. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came out as one wall of capitals.
-- One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode and in the game.
+- One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode. The game has its own palette (see Poster Bold above) and does not use either.
 - **Two looks, decided 20 Sep 2026:** Sunset, warm cream and burnt orange, is the site. Dark is for a dark room or a phone set that way. One small button in the header switches them and the choice is kept in the visitor's own browser; with no choice made the device decides. They are colour only: same type, same layout, same pixel screen. No third option, and no row of choices eating the header. The eight other skins tried are in `tools/skins.js`.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
 
@@ -117,7 +117,7 @@ Written by hand
   tests/smoke.mjs         the headless test. What it covers is under How to work here
   tests/look.mjs          screenshots of the pages that break quietly: nothing asserted, look
 
-Generated, and not in git at all (`site/` is in .gitignore)
+Generated (only `site/` is gitignored; the translation files are generated but kept in git)
   site/                     the whole deployable site: the static files copied in, every page
                             rendered, and a translated copy of the game code per language.
                             Run `node tools/build.mjs` after a fresh clone, or just `./deploy.sh`
@@ -146,7 +146,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 - **Everything you edit lives in `site-src/`.** Pages in `site-src/pages/`, words in `site-src/words/`, the game code and assets in `site-src/static/`. `site/` is generated in full by `node tools/build.mjs` and is not in git: anything typed into it is gone on the next build. `deploy.sh` builds before it uploads.
 - **Run it:** `node tools/build.mjs`, then `cd site && python3 -m http.server 8766` and open http://localhost:8766.
-- **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. It covers the builder, every pet kind, the demo stopping at the locked card and never showing the boss or the ending, a full five-game assembly played to the ending, a four-challenger party to the results board, both free pages, all five translated languages, the language picker in both directions, and the landing page at phone width. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
+- **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. What it covers is written once, in README under Test. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
 - **Deploy every time,** without asking (Joe, 20 Sep 2026). Build, run the smoke test and `node tools/links.mjs`, then `./deploy.sh`, then run the smoke test again against `https://happyherogames.com/`. A failing test is the one reason not to: fix it or say what's broken. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
 - **Look at what you build.** Screenshot the game and the pages at desktop and phone width before saying something works.

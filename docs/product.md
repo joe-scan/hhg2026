@@ -73,7 +73,7 @@ The builder and the game share one config object. In the demo it travels in the 
 1. The questionnaire saves a config (plus the extra fields) against an order.
 2. A generator builds the game: the config drives sprites, games and text, and an AI model drafts taunts, forfeits and quiz questions from the answers.
 3. A person plays it through and reads every line. The budget is 18 minutes for a game and 25 for a gift box, which is what the model in `docs/business-plan.md` is built on. If a real order takes 30, the margin goes with it.
-4. The family gets a private link and a printable card. Delivered in 48 hours, or on the chosen date.
+4. The family gets a private link and a printable card. Delivered in two working days, or on the chosen date.
 
 ## 5. One domain
 
@@ -104,9 +104,11 @@ No server code, no database, no build step at runtime.
 ```
 /index.html            the landing page and builder
 /css/site.css          every page, shared
-/arcade/engine.js        sprites, audio, input, drawing
-/arcade/games/*.js       one file per game
+/arcade/engine.js        sprites, audio, input, drawing, the palette
+/arcade/scenes.js        the occasion decorations and the places games happen
+/arcade/games/*.js       one file per game, paid and free
 /arcade/flow.js          the run: title, games, boss, finale, share
+/arcade/free.js          the harness the free games at /free/ run on
 /g/<id>/index.html     one small page per game: the config, plus <script> tags
 ```
 
@@ -154,8 +156,6 @@ The pixel art is hand-placed, pixel by pixel, in code: every sprite is a grid of
 
 The prices themselves live in `docs/business-plan.md`, so they are written down once. What belongs here is the shape:
 
-**One variable, and only one.** Everything about the game is identical at $99 and $179: same five games, same eight people, same 48 hours. The only decision a buyer makes is whether they want something printed. That is what makes it sayable in one breath, and it is the rule to defend when someone suggests another tier.
+**One variable, and only one.** The two prices differ by one thing: whether something gets printed and posted. Everything about the game is the same at both. That is what makes it sayable in one breath, and it is the rule to defend when someone suggests another tier. Why the $49 Starter was dropped, with the numbers, is in `docs/business-plan.md`.
 
-The $49 Starter was dropped on 20 September 2026 for two reasons. Its own numbers had it losing about $2.55 an order after advertising, and three tiers turned the page into a comparison exercise. People told Joe the concept was easy and the pricing was confusing, which is the wrong way round.
-
-Voice recordings were dropped the same day and are not coming back: audio of a child is the worst thing this business could hold, for a feature nobody asked for.
+Voice recordings were dropped the same day. The rule and the reason are in `CLAUDE.md`.
