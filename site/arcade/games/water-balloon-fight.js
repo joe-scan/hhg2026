@@ -45,7 +45,7 @@ function gBalloons() {
     }
     for (const b of balls) {
       b.x += b.vx; b.k++;
-      if (PET && Math.abs(b.x - 240) < 12 && Math.abs(b.y - (dog.y - 10)) < 12) { b.gone = true; splash(b.x, b.y, 14, b.c); sfx.woof(); dog.bark = 30; floatText(pick([PET.name + ' SAVES IT!', 'NICE SAVE, ' + PET.name + '!', 'WOOF!']), 240, dog.y - 34, '#fff'); continue; }
+      if (petRuns() && Math.abs(b.x - 240) < 12 && Math.abs(b.y - (dog.y - 10)) < 12) { b.gone = true; splash(b.x, b.y, 14, b.c); sfx.woof(); dog.bark = 30; floatText(pick([PET.name + ' SAVES IT!', 'NICE SAVE, ' + PET.name + '!', 'WOOF!']), 240, dog.y - 34, '#fff'); continue; }
       const you = p[1 - b.who];
       // the hit box is the sprite, so the shorter brother is a smaller target
       const tall = specH(CHAR[1 - b.who], 2) - 4;
@@ -77,7 +77,8 @@ function gBalloons() {
       if (me.wet > 0) { for (let k = 0; k < 4; k++) rect(me.x - 8 + k * 5, me.y - 30 + ((t + k * 7) % 20), 2, 3, '#9ec5ff'); }
       if (me.cd <= 0) { g.fillStyle = COLS[i + 1]; g.beginPath(); g.arc(me.x + (i === 0 ? 12 : -12), me.y - 20, 4, 0, Math.PI * 2); g.fill(); }
     } }));
-    ents.push({ y: dog.y, f: () => { shadow(240, dog.y, 9); ted(240, dog.y + 2, 2, dog.vy > 0, Math.floor(t / 5)); if (dog.bark && t % 12 < 8) txt('!', 250, dog.y - 34, 8, '#fff'); } });
+    // a dog, cat, rabbit or hamster patrols the middle and swats balloons. A fish stays out of it.
+    if (petRuns()) ents.push({ y: dog.y, f: () => { shadow(240, dog.y, 9); pet(240, dog.y + 2, 2, dog.vy > 0, Math.floor(t / 5)); if (dog.bark && t % 12 < 8) txt('!', 250, dog.y - 34, 8, '#fff'); } });
     ents.sort((a, b) => a.y - b.y).forEach(e => e.f());
     for (const b of balls) { const y = b.y + Math.sin(b.k / 4) * 1.5; g.fillStyle = b.c; g.beginPath(); g.arc(b.x, y, 4.5, 0, Math.PI * 2); g.fill(); rect(b.x - 1, y - 3, 2, 2, '#fff'); }
     for (const d of drops) rect(d.x, d.y, 2, 2, d.c);
@@ -86,4 +87,4 @@ function gBalloons() {
   };
   return s;
 }
-addDuel('WATER BALLOON FIGHT', gBalloons);
+addGame('WATER BALLOON FIGHT', gBalloons);

@@ -1,6 +1,6 @@
 'use strict';
 // Happy Hero Games engine. Forked from Fionn vs Sean (~/Documents/fs/js/core.js) on 19 Sep 2026.
-// Plain <script> files share one global scope, so everything here is visible to the duels and flow.js.
+// Plain <script> files share one global scope, so everything here is visible to the games and flow.js.
 // The big change from Fionn vs Sean: every person in the game comes from one family config (see THE FAMILY).
 
 // ===================== SETUP =====================
@@ -23,7 +23,7 @@ const COL = { bg: '#12062b', ink: '#0a0416', hot: '#ff2bd6', cyan: '#22e6ff', go
 // Everything personal comes from one config object. The builder writes it into the link (#g=...),
 // so nothing is sent to a server. With no link, the game plays the demo family below.
 // Player slot 1 is always the hero (the birthday child) and slot 0 is whichever family member they're facing.
-// The duels were written with small hidden advantages for slot 1, so the hero gets them.
+// The games were written with small hidden advantages for slot 1, so the hero gets them.
 const DEMO = {
   hero: { name: 'AVA', hair: 'ponytail', hairCol: '#6b3f1d', skin: '#f3c6a0', kit: '#1f7ae0' },
   occasion: 'birthday', catchphrase: 'NO WAY!', food: 'PIZZA',
@@ -40,7 +40,12 @@ const ROLES = {
   auntie: { label: 'Auntie', us: 'Aunt', adult: 'f', kit: '#7a3cff', lose: 'OH, YOU\'RE GOOD!', food: 'PASTA' },
   uncle: { label: 'Uncle', adult: 'm', kit: '#1e7a34', lose: 'BEGINNER\'S LUCK!', food: 'BURGER' },
   brother: { label: 'Brother', kid: 'straight', kit: '#ff6b1a', lose: 'THAT DOESN\'T COUNT!', food: 'FRIES' },
-  sister: { label: 'Sister', kid: 'ponytail', kit: '#22b573', lose: 'I WASN\'T READY!', food: 'NOODLES' }
+  sister: { label: 'Sister', kid: 'ponytail', kit: '#22b573', lose: 'I WASN\'T READY!', food: 'NOODLES' },
+  friend: { label: 'Friend', kid: 'short', kit: '#00a2b3', lose: 'REMATCH TOMORROW!', food: 'PIZZA' },
+  bestfriend: { label: 'Best friend', kid: 'curly', kit: '#ffd23f', lose: 'STILL BEST FRIENDS?', food: 'ICE CREAM' },
+  cousin: { label: 'Cousin', kid: 'long', kit: '#b34bd8', lose: 'WAIT TILL THE SUMMER!', food: 'HOT DOGS' },
+  teacher: { label: 'Teacher', adult: 'f', kit: '#3a6f5c', lose: 'SEE ME AFTER CLASS!', food: 'COFFEE' },
+  coach: { label: 'Coach', adult: 'm', kit: '#c2410c', lose: 'TWENTY LAPS, ALL OF YOU!', food: 'ORANGES' }
 };
 // North American English unless the browser says otherwise. A game can pin it with CFG.dialect.
 let DIALECT = 'us';
@@ -51,7 +56,7 @@ const SKINS = ['#f6d1b4', '#f3c6a0', '#d9a577', '#b87a4b', '#8a5634', '#5e3a22']
 const KITCOLS = ['#1f7ae0', '#e0102a', '#1e9e4a', '#ffd23f', '#7a3cff', '#ff6b1a', '#ff2bd6', '#ffffff', '#141018'];
 const PETCOLS = ['#ffffff', '#e8c9a0', '#c98a4b', '#6b3f1d', '#2a2230', '#9a96a6'];
 const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', fathers: 'HAPPY FATHER\'S DAY', mothers: 'HAPPY MOTHER\'S DAY', star: 'YOU\'RE A STAR' };
-// Optional question and joke packs for a family who want them (see the quiz duel). Off by default.
+// Optional question and joke packs for a family who want them (see the quiz). Off by default.
 const PACKS = ['ie', 'uk'];
 
 // names: capitals, no accents (the pixel font has none), letters, spaces, hyphens and apostrophes only
@@ -65,7 +70,7 @@ function sanitise(c) {
     packs: (Array.isArray(c.packs) ? c.packs : []).filter(k => PACKS.includes(k)).slice(0, 3),
     catchphrase: cleanName(c.catchphrase, 22), food: cleanName(c.food, 10).replace(/[!?.,']/g, '') || 'PIZZA',
     family: (Array.isArray(c.family) ? c.family : []).slice(0, 3).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || roleLabel(m.role).toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
-    pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
+    pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), kind: oneOf(c.pet && c.pet.kind, Object.keys(PETKINDS), 'dog'), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
   };
   if (!out.family.length) out.family.push({ role: 'dad', name: 'DAD', hairCol: HAIRCOLS[0] });
   return out;
@@ -83,9 +88,9 @@ const lum = h => { const [r, g2, b] = hexRgb(h); return (0.299 * r + 0.587 * g2 
 // a version of a kit colour that reads as text on the dark game screen
 const uiCol = h => lum(h) < .35 ? mix(h, '#ffffff', .55) : h;
 
-// every file in duels/ registers itself here, in the order the page loads them
+// every file in games/ registers itself here, in the order the page loads them
 const GAMES = [];
-function addDuel(name, make) { GAMES.push({ name, make }); }
+function addGame(name, make) { GAMES.push({ name, make }); }
 
 // ===================== SPRITES =====================
 // kids: one of five heads on a body. Heroes get the taller body, younger siblings the shorter one.
@@ -163,7 +168,7 @@ function drawSpec(sp, cx, fy, sc, flip, frame) {
 // how tall a character is at a given scale, for hit boxes and plates
 const specH = (sp, sc) => sp.rows.length * (sp.kind === 'adult' && sc >= 5 ? sc - 1 : sc);
 
-// the family, built from the config. CHAR[1] is the hero; CHAR[0] is set per duel with setOpponent().
+// the family, built from the config. CHAR[1] is the hero; CHAR[0] is set per game with setOpponent().
 let CFG = null, HERO = null, FAM = [], PET = null, OPP = 0;
 const CHAR = [null, null];
 const PL = [{ name: '', col: COL.cyan }, { name: '', col: COL.gold }];
@@ -177,7 +182,7 @@ function applyConfig(c) {
     const sp = R0.kid ? kidSpec(m.name, R0.kid, m.hairCol, h.skin, R0.kit, true) : adultSpec(m.name, m.role, m.hairCol, h.skin);
     return Object.assign(sp, { role: m.role, lose: R0.lose, food: R0.food });
   });
-  PET = CFG.pet ? Object.assign({}, CFG.pet, { letter: initial(CFG.pet.name) }) : null;
+  PET = CFG.pet ? Object.assign({ kind: 'dog' }, CFG.pet, { letter: initial(CFG.pet.name) }) : null;
   CHAR[1] = HERO; PL[1].name = HERO.name; PL[1].col = HERO.col;
   SAYNAME[1] = titleCase(h.name); CATCH[1] = CFG.catchphrase || 'NO WAY!'; SAYCATCH[1] = titleCase(CATCH[1]);
   setOpponent(0);
@@ -191,22 +196,50 @@ function setOpponent(k) {
 }
 // a grown-up who isn't the current opponent, for cameo jobs like calling people in for lunch
 function helper() { return FAM.find((m, k) => k !== OPP && m.kind === 'adult') || FAM.find(m => m.kind === 'adult') || null; }
-// the duels call boy(i) for the two players and ted() for the pet
+// the games call boy(i) for the two players and pet() for the pet
 function boy(i, cx, fy, sc, flip, frame) { drawSpec(CHAR[i], cx, fy, sc, flip, frame); }
 function person(sp, cx, fy, sc, flip, frame) { drawSpec(sp, cx, fy, sc, flip, frame); }
 
-const TED = ['.WWW..........', 'WWWWW.......W.', 'WEWWWw.....WW.', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '...WW....WW...', '...WW....WW...'];
-const TED_B = ['.WWW..........', 'WWWWW......W..', 'WEWWWw.....WW.', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '....WW..WW....', '....WW..WW....'];
-function ted(cx, fy, sc, faceRight, frame) {
+// ---- pets. Five kinds, two frames each: the same 14 by 9 grid, so every game can draw any of them.
+// W is the pet's colour, w its shade, E the eye, N the nose. B and b are the fish's bowl and water.
+const PETART = {
+  dog: [
+    ['.WWW..........', 'WWWWW.......W.', 'WEWWWw.....WW.', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '...WW....WW...', '...WW....WW...'],
+    ['.WWW..........', 'WWWWW......W..', 'WEWWWw.....WW.', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '....WW..WW....', '....WW..WW....']
+  ],
+  cat: [
+    ['.W...W.....WW.', '.WWWWW.....W..', 'WEWWWw.....W..', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '...WW....WW...', '...WW....WW...'],
+    ['.W...W.....W..', '.WWWWW....WW..', 'WEWWWw....W...', 'NWWWWwWWWWWW..', '.WWWwwWWWWWWW.', '..wwWWWWWWWWW.', '...WWWWWWWWW..', '....WW..WW....', '....WW..WW....']
+  ],
+  rabbit: [
+    ['.W..W.........', '.W..W.........', '.WWWW.........', 'WEWWWwWWWWW...', 'NWWWWwWWWWWWw.', '.wwWWWWWWWWWW.', '...WWWWWWWWW..', '...WW....WW...', '...WW....WW...'],
+    ['.W..W.........', '.W..W.........', '.WWWW.........', 'WEWWWwWWWWW...', 'NWWWWwWWWWWWw.', '.wwWWWWWWWWWW.', '...WWWWWWWWW..', '....WW..WW....', '....WW..WW....']
+  ],
+  hamster: [
+    ['..............', '..............', '...WW....WW...', '..WWWWWWWWWW..', '.WEWWWWWWWWWw.', '.NWWWwwWWWWWw.', '..WWWWWWWWWW..', '...WW....WW...', '...WW....WW...'],
+    ['..............', '..............', '...WW....WW...', '..WWWWWWWWWW..', '.WEWWWWWWWWWw.', '.NWWWwwWWWWWw.', '..WWWWWWWWWW..', '....WW..WW....', '....WW..WW....']
+  ],
+  fish: [
+    ['..............', '...BbbbbbbB...', '..BbbbbbbbbB..', '..BbWWWwbbbB..', '..BWEWWWWWwB..', '..BbWWWwbbbB..', '..BbbbbbbbbB..', '...BBBBBBBB...', '....BBBBBB....'],
+    ['..............', '...BbbbbbbB...', '..BbbbbbbbbB..', '..BbbWWWwbbB..', '..BbWEWWWWWB..', '..BbbWWWwbbB..', '..BbbbbbbbbB..', '...BBBBBBBB...', '....BBBBBB....']
+  ]
+};
+// A fish stays in its bowl, so it never referees, fetches or blocks a balloon. Everyone else runs.
+const PETKINDS = { dog: { label: 'Dog', mobile: true }, cat: { label: 'Cat', mobile: true }, rabbit: { label: 'Rabbit', mobile: true }, hamster: { label: 'Hamster', mobile: true }, fish: { label: 'Fish', mobile: false } };
+function pet(cx, fy, sc, faceRight, frame) {
   if (!PET) return;
-  const rows = (frame & 1) ? TED_B : TED, x = cx - 7 * sc, y = fy - rows.length * sc;
-  const pal = { W: PET.col, w: mix(PET.col, lum(PET.col) > .5 ? '#6b5aa8' : '#ffffff', .25), E: '#1a1020', N: '#1a1020' };
+  const art = PETART[PET.kind] || PETART.dog, rows = art[frame & 1], x = cx - 7 * sc, y = fy - rows.length * sc;
+  const pal = { W: PET.col, w: mix(PET.col, lum(PET.col) > .5 ? '#6b5aa8' : '#ffffff', .25), E: '#1a1020', N: '#1a1020', B: '#9fd8ea', b: 'rgba(90,190,225,.45)' };
   drawMap(rows, pal, x, y, sc, faceRight);
+  if (PET.kind === 'fish') return;
+  // the collar and name tag
   const kx = Math.round(x + (faceRight ? 8 : 5) * sc), ky = Math.round(y + 3 * sc), mid2 = kx + sc / 2, top = ky + 3 * sc - 1;
   rect(kx, ky, sc, 3 * sc, '#e0102a');
   if (sc >= 3) { const tx = Math.round(mid2 - 3.5); rect(tx + 1, top, 5, 9, '#ffd23f'); rect(tx, top + 1, 7, 7, '#ffd23f'); glyph(PET.letter, tx + 2, top + 2, 1, '#a3001f'); }
   else rect(Math.round(mid2 - 1.5), top, 3, 3, '#ffd23f');
 }
+// true when the pet can leave its spot: everything except the fish
+const petRuns = () => !!PET && PET.kind !== 'fish';
 
 // ===================== SAVED STATS =====================
 let stats = { w: [0, 0], boss: 0, best: 0 };
@@ -279,7 +312,7 @@ function say(t) {
 const mus = { mode: 'off', step: 0, t: 0, fast: false };
 const SONGS = {
   title: { tempo: 9, bass: [110, 110, 87.31, 87.31, 130.81, 130.81, 98, 98], arp: [[220, 261.63, 329.63], [220, 261.63, 329.63], [174.61, 220, 261.63], [174.61, 220, 261.63], [261.63, 329.63, 392], [261.63, 329.63, 392], [196, 246.94, 293.66], [196, 246.94, 293.66]] },
-  duel: { tempo: 7, bass: [146.83, 146.83, 110, 110, 123.47, 123.47, 98, 110], arp: [[293.66, 369.99, 440], [293.66, 369.99, 440], [220, 277.18, 329.63], [220, 277.18, 329.63], [246.94, 293.66, 369.99], [246.94, 293.66, 369.99], [196, 246.94, 293.66], [220, 277.18, 329.63]] },
+  match: { tempo: 7, bass: [146.83, 146.83, 110, 110, 123.47, 123.47, 98, 110], arp: [[293.66, 369.99, 440], [293.66, 369.99, 440], [220, 277.18, 329.63], [220, 277.18, 329.63], [246.94, 293.66, 369.99], [246.94, 293.66, 369.99], [196, 246.94, 293.66], [220, 277.18, 329.63]] },
   boss: { tempo: 6, bass: [82.41, 82.41, 87.31, 82.41, 98, 87.31, 82.41, 73.42], arp: [[164.81, 196, 246.94], [164.81, 196, 246.94], [174.61, 207.65, 261.63], [164.81, 196, 246.94], [196, 233.08, 293.66], [174.61, 207.65, 261.63], [164.81, 196, 246.94], [146.83, 174.61, 220]] }
 };
 function musicTick() {
@@ -329,7 +362,7 @@ function syncButtons() {
   if (b) { b.setAttribute('aria-pressed', muted ? 'true' : 'false'); b.textContent = muted ? 'Sound: off' : 'Sound: on'; }
 }
 function toggleMute() { muted = !muted; if (muted) { try { speechSynthesis.cancel(); } catch (x) {} } syncButtons(); }
-// back to the title from anywhere: abandons the match or duel in progress
+// back to the title from anywhere: abandons the match in progress
 function goHome() { shake = 0; try { speechSynthesis.cancel(); } catch (e) {} go('title'); }
 for (const [id, fn] of [['btn-home', goHome], ['btn-home-pad', goHome], ['btn-mute', toggleMute]]) {
   const b = document.getElementById(id); if (b) b.addEventListener('click', () => { audioInit(); fn(); try { cv.focus(); } catch (e) {} });
@@ -469,7 +502,7 @@ function fxDraw() {
 }
 
 // ===================== CHEERS =====================
-// encouraging call-outs when someone scores. Streaks reset at the start of each duel.
+// encouraging call-outs when someone scores. Streaks reset at the start of each game.
 const CHEER = {
   nice: ['NICE ONE!', 'AWESOME!', 'GREAT SHOT!', 'SWEET!', 'NAILED IT!', 'WAY TO GO!'],
   hot: ['YOU\'RE ON FIRE!', 'UNSTOPPABLE!', 'ON A ROLL!', 'RED HOT!'],
@@ -480,7 +513,7 @@ let streak = [0, 0];
 let freeze = 0, flashT = 0, flashC = '#fff';
 function punch(col) { freeze = 5; flashT = CALM ? 3 : 9; flashC = col; }
 function cheerReset() { streak = [0, 0]; }
-// call after pts[i] has gone up. words: the duel's own lines for an ordinary score
+// call after pts[i] has gone up. words: the game's own lines for an ordinary score
 function cheer(i, x, y, pts, words) {
   streak[i]++; streak[1 - i] = 0;
   const s = streak[i] >= 2 ? pick(CHEER.hot) : (pts && pts[i] === pts[1 - i]) ? pick(CHEER.back) : pick(words || CHEER.nice);

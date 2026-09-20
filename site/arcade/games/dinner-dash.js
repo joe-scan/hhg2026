@@ -87,4 +87,4 @@ function gDinner() {
   };
   return s;
 }
-addDuel('DINNER DASH', gDinner);
+addGame('DINNER DASH', gDinner);

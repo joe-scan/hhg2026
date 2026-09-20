@@ -59,7 +59,10 @@
     famRows.push({ role, name, hair });
   }
   // the dog, and the details that end up in the quiz and the finale
-  cfg.pet = cfg.pet || { name: '', col: PETCOLS[0] };
+  cfg.pet = cfg.pet || { name: '', kind: 'dog', col: PETCOLS[0] };
+  $('pet-kind').innerHTML = Object.keys(PETKINDS).map(k => `<option value="${k}">${PETKINDS[k].label}</option>`).join('');
+  $('pet-kind').value = cfg.pet.kind || 'dog';
+  $('pet-kind').addEventListener('change', () => { cfg.pet.kind = $('pet-kind').value; changed(); });
   text('pet-name', () => cfg.pet.name ? titleCase(cfg.pet.name) : '', v => { cfg.pet.name = v; });
   swatches($('pet-col'), PETCOLS, PETNAMES, () => cfg.pet.col, v => { cfg.pet.col = v; });
   text('food', () => cfg.food ? titleCase(cfg.food) : '', v => { cfg.food = v; });
@@ -77,30 +80,6 @@
   }
   changed();
 
-  // Prices are set by hand per currency, never converted, so nobody sees $74.31. The tag on the page
-  // holds the dollar price; this swaps it for the reader's own currency where we sell in one.
-  const PRICES = {
-    game:     { USD: '$79', GBP: '\u00a369', EUR: '\u20ac79', CAD: 'C$109', AUD: 'A$119' },
-    club:     { USD: '$8 a month', GBP: '\u00a37 a month', EUR: '\u20ac8 a month', CAD: 'C$11 a month', AUD: 'A$12 a month' },
-    clubYear: { USD: '$69 a year', GBP: '\u00a359 a year', EUR: '\u20ac69 a year', CAD: 'C$95 a year', AUD: 'A$105 a year' },
-    box:      { USD: '$149', GBP: '\u00a3129', EUR: '\u20ac145', CAD: 'C$199', AUD: 'A$225' },
-    sibling:  { USD: '$25', GBP: '\u00a320', EUR: '\u20ac25', CAD: 'C$35', AUD: 'A$39' }
-  };
-  const EURO = ['IE', 'DE', 'FR', 'ES', 'IT', 'NL', 'BE', 'AT', 'PT', 'FI', 'GR', 'LU', 'SK', 'SI', 'EE', 'LV', 'LT', 'CY', 'MT', 'HR'];
-  function currency() {
-    let r = '';
-    try { r = (new Intl.Locale(navigator.language || 'en-US').region || '').toUpperCase(); } catch (e) {}
-    if (r === 'GB') return 'GBP';
-    if (r === 'CA') return 'CAD';
-    if (r === 'AU' || r === 'NZ') return 'AUD';
-    return EURO.includes(r) ? 'EUR' : 'USD';
-  }
-  const cur = currency();
-  document.querySelectorAll('[data-price]').forEach(el => {
-    const row = PRICES[el.dataset.price];
-    if (row && row[cur]) el.textContent = row[cur];
-  });
-
   // the live preview: the hero's name in lights with the whole cast on the horizon
   let t = 0;
   function frame() {
@@ -113,7 +92,8 @@
     rect(W / 2 - occ.length * 4 - 6, 68, occ.length * 8 + 12, 15, 'rgba(10,4,22,.85)'); txt(occ, W / 2, 72, 8, COL.gold, 'center');
     const cast = [HERO].concat(FAM), gap = 70, x0 = W / 2 - (cast.length - 1) * gap / 2;
     cast.forEach((sp, k) => { shadow(x0 + k * gap, 236, 14); drawSpec(sp, x0 + k * gap, 236, k ? 3 : 4, false, Math.floor(t / 22 + k)); });
-    if (PET) { const c = t % 900; ted((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
+    if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
+    else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
   }
   requestAnimationFrame(frame);
   if (location.hash.includes('g=')) setTimeout(() => $('make').scrollIntoView(), 50);

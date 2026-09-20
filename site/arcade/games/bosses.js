@@ -78,7 +78,7 @@ function gBoss(kind) {
     }
     foods = foods.filter(f => f.rest > 0);
     if (BED) { if (dark > 0) dark--; else if (--nextDark <= 0) { dark = 260; nextDark = rint(460, 640); sfx.buzz(); floatText('LIGHTS OUT!', W / 2, 120, '#fff', 16); } }
-    if (PET && !dog && hearts < 6 && --nextDog <= 0) { dog = { x: -20 }; sfx.woof(); }
+    if (petRuns() && !dog && hearts < 6 && --nextDog <= 0) { dog = { x: -20 }; sfx.woof(); }
     if (dog) {
       dog.x += 1.5;
       for (let i = 0; i < 2 && dog; i++) if (Math.abs(p[i].x - dog.x) < 16 && p[i].y > 228) { hearts++; sfx.power(); floatText(PET.name + '! +1 HEART', dog.x, 214, COL.green); dog = null; nextDog = 480; }
@@ -138,7 +138,7 @@ function gBoss(kind) {
       for (let i = 0; i < 2; i++) { const me = p[i]; g.strokeStyle = cols[(t + i) % 4]; g.lineWidth = 8 + (t % 3) * 2; g.shadowColor = '#fff'; g.shadowBlur = 14; g.beginPath(); g.moveTo(me.x, me.y - 36); g.lineTo(bx, by + 10); g.stroke(); g.strokeStyle = '#fff'; g.lineWidth = 3; g.stroke(); g.shadowBlur = 0; }
       txt('FAMILY BLAST!', W / 2, 130, 24, cols[t % 4], 'center', true);
     }
-    if (dog) { ted(dog.x, 262, 2, true, Math.floor(t / 5)); heart(dog.x - 4, 232 + Math.sin(t / 6) * 2, COL.red); }
+    if (dog) { pet(dog.x, 262, 2, true, Math.floor(t / 5)); heart(dog.x - 4, 232 + Math.sin(t / 6) * 2, COL.red); }
     for (let i = 0; i < 2; i++) { const me = p[i]; if (me.inv > 0 && t % 6 < 3) continue; shadow(me.x, me.y, 9); if (me.power > 0 || me.rapid > 0) { g.fillStyle = me.power > 0 ? (i === 1 ? 'rgba(255,138,30,.4)' : 'rgba(255,210,63,.4)') : 'rgba(255,255,255,.3)'; g.beginPath(); g.ellipse(me.x, me.y - 16, 15 + (t % 8 < 4 ? 2 : 0), 24, 0, 0, Math.PI * 2); g.fill(); } boy(i, me.x, me.y + 2, 2, false, Math.floor(me.w / 6)); }
     if (dark > 0 && dead === 0) {
       darkness(Math.min(1, dark / 30, (260 - dark) / 30) * .94, p); g.shadowColor = '#ff2e4d'; g.shadowBlur = 8; rect(bx - 15, by - 11, 5, 5, '#ff2e4d'); rect(bx + 13, by - 11, 5, 5, '#ff2e4d'); g.shadowBlur = 0;

@@ -6,16 +6,16 @@ Read this first, every session. It says what we're building, the rules that don'
 
 Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers ten minutes of questions and gets back a private web game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and "HAPPY BIRTHDAY, AOIFE!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
-- **Market:** the US first, then the UK, Ireland, Canada and Australia. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/game/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
+- **Market:** the US first, then the UK, Ireland, Canada and Australia. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
-- **One hero per game, not two people duelling.** The hero faces a different family member in each duel.
+- **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
 - **Occasions:** birthdays all year, Christmas, "just because".
-- **Status (19 Sep 2026):** pre-launch. A working landing page, a live hero builder and a free four-duel demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
+- **Status (20 Sep 2026):** pre-launch, live at happyherogames.com. A landing page, a live hero builder and a free two-game demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
 
-The prototype is **Fionn vs Sean**, a two-player arcade game Joe made for his sons, at `~/Documents/fs` (live at joescanlon.com/fs, repo github.com/joe-scan/fs). Its engine was copied into `site/game/` on 19 Sep 2026. **Never edit `~/Documents/fs` from this project.** It's the boys' game; changes there are a separate job.
+The prototype is **Fionn vs Sean**, a two-player arcade game Joe made for his sons, at `~/Documents/fs` (live at joescanlon.com/fs, repo github.com/joe-scan/fs). Its engine was copied into `site/arcade/` on 19 Sep 2026. **Never edit `~/Documents/fs` from this project.** It's the boys' game; changes there are a separate job.
 
 What we learnt from it, and why the product looks like this:
 - Families respond to their own details (catchphrases, the dog, who's in charge of lunch), not to the game mechanics.
@@ -24,11 +24,12 @@ What we learnt from it, and why the product looks like this:
 
 ## The product
 
-- **One hero per game.** The child is player slot 1. Each duel is against a different family member in slot 0, played by the computer, or by a real grown-up in 2-player mode.
-- **The hero is meant to win more often than not.** The duels came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
-- **Structure:** title (STARRING [NAME]), then for each duel: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
-- **Demo vs full game:** the free demo is 4 duels and 1 boss, built in the browser from the builder and played at `/g/demo/`. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
-- **Add-ons:** a sibling as a second hero (turns it into a Fionn vs Sean-style rivalry), the family's recorded voices, a printed gift box, gift cards.
+- **One hero per game.** The hero is player slot 1. Each game is against a different family member or friend in slot 0, played by the computer, or by a real grown-up in 2-player mode.
+- **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
+- **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
+- **Demo vs full game:** the free demo is 2 games and 1 boss, built in the browser from the builder and played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
+- **Add-ons:** the family's recorded voices, a printed gift box, gift cards. No sibling add-on and no subscription: three prices, nothing else.
+- **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
 - Prices, model and plan: `docs/business-plan.md`. Questionnaire, config and game format: `docs/product.md`.
 
 ## Rules that don't bend
@@ -41,7 +42,7 @@ What we learnt from it, and why the product looks like this:
 
 **Brands and people.** Club names and car makes as text only. Never crests, logos or recognisable designs. No real celebrities.
 
-**Tone.** Kid-safe teasing only: crisps, bedtime, football clubs, who does the dishes. Nothing about looks, weight, ability or anything that would sting. Grown-ups are allowed to be a bit silly ("I LET YOU WIN, YOU KNOW.").
+**Tone.** Kid-safe teasing only: snacks, bedtime, sports teams, who does the dishes. Nothing about looks, weight, ability or anything that would sting. Grown-ups are allowed to be a bit silly ("I LET YOU WIN, YOU KNOW.").
 
 **Copy.** Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
 
@@ -73,9 +74,9 @@ site/builder.js           the builder: form to config, live preview, Play link
 site/g/demo/index.html    the free demo's game page (reads the config from #g=)
 site/css/site.css         shared page styles and design tokens
 site/img/finale.png       the demo's last screen, used on the landing page
-site/game/engine.js       engine: family config, sprites, audio, input, drawing, cheers
-site/game/duels/*.js      one file per duel, plus bosses.js
-site/game/flow.js         the hero's run: title, rounds, boss, finale, share
+site/arcade/engine.js       engine: family config, sprites, audio, input, drawing, cheers
+site/arcade/games/*.js      one file per game, plus bosses.js
+site/arcade/flow.js         the hero's run: title, rounds, boss, finale, share
 tests/smoke.mjs           headless test: plays the demo to the end and checks the builder
 ```
 
@@ -103,5 +104,6 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
 3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-4. Prices on the site are in US dollars ($79 game, $8 a month or $69 a year club, $149 gift box, +$25 sibling), per `docs/architecture.md`. Confirm before taking money.
+4. Prices on the site are in US dollars: Starter $49, Family and Friends $99, Gift Box $179. No subscription. Confirm before taking money.
+5. The business plan says Starter loses about $2.55 an order at a $38 acquisition cost, so it only works as the cheap option that makes $99 look right. Decide whether to keep it, raise it, or hide it from cold traffic.
 5. A logo beyond the pixel H in `site/img/icon.svg`, and a pixel artist for the sprites.

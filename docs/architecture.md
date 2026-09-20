@@ -4,7 +4,7 @@ Written 20 September 2026. The rule behind every decision here: the server does 
 
 ## 1. One domain
 
-Everything lives at happyherogames.com. Games are at `/g/<id>/`, the site is at `/`, shared code is at `/game/` and `/css/`.
+Everything lives at happyherogames.com. Games are at `/g/<id>/`, the site is at `/`, shared code is at `/arcade/` and `/css/`.
 
 Joe asked whether to spread a few hundred games over hhg001.com to hhg010.com, sharing code from hhg000.com. Don't. The reasons:
 
@@ -31,9 +31,9 @@ No server code, no database, no build step at runtime.
 ```
 /index.html            the landing page and builder
 /css/site.css          every page, shared
-/game/engine.js        sprites, audio, input, drawing
-/game/duels/*.js       one file per duel
-/game/flow.js          the run: title, duels, boss, finale, share
+/arcade/engine.js        sprites, audio, input, drawing
+/arcade/games/*.js       one file per game
+/arcade/flow.js          the run: title, games, boss, finale, share
 /g/<id>/index.html     one small page per game: the config, plus <script> tags
 ```
 
@@ -65,7 +65,7 @@ The plan, for when it's needed: a nightly cron on the host that copies the SQLit
 
 Everything animated is drawn by the engine on the same pixel canvas, or is CSS. No video files, no animation libraries.
 
-- Three intro styles and three outro styles, picked per duel so the game doesn't feel repetitive.
+- Three intro styles and three outro styles, picked per game so the game doesn't feel repetitive.
 - Five to ten seconds, and any key or tap skips them. Nothing waits for a player twice.
 - An instruction screen is one sentence of concept, at most three rules, then a try-it round that can't be lost before the real thing starts.
 
@@ -77,22 +77,21 @@ A flat page on paper-coloured ground, one accent colour, square corners, no drop
 
 ## 8. Pricing
 
-Prices are in US dollars, because the US is the main market. The page shows pounds, euro, Canadian and Australian dollars to readers in those places, from a hand-set table in `site/builder.js`. Never convert at the day's rate: nobody should see $74.31.
+Three prices, in US dollars everywhere. No currency switching: a card handles the conversion, and one set of numbers is one less thing to be wrong.
 
 | | Price | What |
 |---|---|---|
-| The demo | Free | Four duels and a boss, built in the browser in a minute |
-| The game | $79 | Ten duels, two bosses, up to six family members, custom lines, ready in 48 hours, theirs forever |
-| The club | $8 a month or $69 a year | On top of a game they own: a new duel every month, seasonal games at Halloween and Christmas. First month free with every game |
-| The gift box | $149 | The game, plus recorded family voices, a printed box and card to wrap, tracked delivery, one change after it arrives |
-| Sibling add-on | +$25 | A second hero |
+| The demo | Free | Two games and a boss, built in the browser in a minute |
+| Starter | $49 | Three games and a boss, the hero plus three people, and the pet |
+| Family and Friends | $99 | Five games and a boss, up to eight people, everyone's own lines written in, checked by a person, ready in 48 hours |
+| Gift Box | $179 | Everything above, plus recorded voices, a printed box and card, tracked delivery, one change after it arrives |
 
-Two rules hold this together.
+The shape is deliberate. Starter is thin on purpose so the middle one is the obvious buy, and the top one is a physical present rather than a longer list of features, which is easier to want and harder to compare. Nothing else is sold: no subscription, no sibling add-on, no per-item extras. Every option on the page is one more decision standing between someone and their credit card.
 
-**The club never includes the game.** An earlier draft bundled it, which meant $8 bought the $79 product and nobody who read carefully would pay full price. The club only ever adds to something already bought.
+Two things follow. The paid game is five games, not ten: more than five is more than a family plays in a sitting, and more than a person can check in eighteen minutes. And the demo is two games, so there is a real difference between free and paid.
 
-**Nothing anybody bought ever stops working.** Cancel the club and every game and duel already delivered keeps playing, forever. That is easy to honour because the games are static files sitting in their own folder, and it is the only honest way to sell a subscription attached to a present.
+The plan flags that Starter loses about $2.55 an order once advertising is counted, so it earns its place only as the cheap option that makes $99 look sensible. If it ever takes more than a quarter of orders, raise it or stop showing it to cold traffic.
 
-The €49 Starter was dropped on 20 September 2026: three tiers turned the page into a comparison exercise. The gift box earns its price with a physical thing rather than a feature list, which is easier to sell and harder to compare. Tracked delivery from Ireland runs $20 to $30, and the buyer can be charged customs on arrival, so the box is UK, Ireland and EU only until there is a US fulfilment partner.
+The Gift Box ships from Ireland, $20 to $30 tracked, and the buyer can be charged customs. Until there is a US fulfilment partner it is UK, Ireland and EU only, and the US sees it as coming soon rather than as a broken promise.
 
 `docs/business-plan.md` has the model behind these numbers.

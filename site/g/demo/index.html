@@ -74,17 +74,16 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 <p class="keys wide">Click the screen to start. Move with the arrow keys or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, fire with <kbd>Space</kbd> or <kbd>Enter</kbd>. In 2-player mode the grown-up uses <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>Space</kbd>. <kbd>Esc</kbd> goes back to the start.</p>
 
 <section class="demo wide" aria-label="About this demo">
-  <p><strong>This is the free demo.</strong> Four duels and one boss, built in your browser from what you typed. The full game has ten duels chosen for your family's interests, your own jokes and catchphrases written in, and a real person checking every line before it arrives.</p>
+  <p><strong>This is the free demo.</strong> Two games and one boss, built in your browser from what you typed. The full game has five games chosen for what they love, your own jokes and catchphrases written in, and a real person checking every line before it arrives.</p>
   <a class="btn go" href="../../index.html#prices">Get the full game</a>
 </section>
 
-<script src="../../game/engine.js"></script>
-<script src="../../game/duels/paddle-battle.js"></script>
-<script src="../../game/duels/water-balloon-fight.js"></script>
-<script src="../../game/duels/dinner-dash.js"></script>
-<script src="../../game/duels/table-quiz.js"></script>
-<script src="../../game/duels/bosses.js"></script>
-<script src="../../game/flow.js"></script>
+<script src="../../arcade/engine.js"></script>
+<!-- the demo is two games and one boss: the balloon fight to play, the quiz to show what personal means -->
+<script src="../../arcade/games/water-balloon-fight.js"></script>
+<script src="../../arcade/games/table-quiz.js"></script>
+<script src="../../arcade/games/bosses.js"></script>
+<script src="../../arcade/flow.js"></script>
 <script>
 startGame(cfgFromLink());
 document.getElementById('hero-pad').textContent = HERO.name;

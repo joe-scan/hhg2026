@@ -13,6 +13,14 @@ await page.fill('#hero-name', 'Siobhán');
 await page.click('label:has(input[value="curly"])'); await page.click('#kit .sw:nth-child(2)');
 await page.selectOption('#fam-role-2', 'granny'); await page.fill('#fam-name-2', 'Nana Kay');
 await page.fill('#pet-name', ''); await page.fill('#food', 'Tacos'); await page.fill('#catch', 'Ah here!');
+// 1b. every pet kind draws without an error, including the fish that stays in its bowl
+for (const kind of ['dog', 'cat', 'rabbit', 'hamster', 'fish']) {
+  await page.selectOption('#pet-kind', kind); await page.fill('#pet-name', 'Biscuit'); await page.waitForTimeout(120);
+  const got = await page.evaluate(() => [CFG.pet && CFG.pet.kind, PET && PET.name, petRuns()].join('/'));
+  if (got !== `${kind}/BISCUIT/${kind !== 'fish'}`) errors.push('pet ' + kind + ' came out as ' + got);
+}
+await page.fill('#pet-name', ''); await page.waitForTimeout(120);
+
 await page.click('#play'); await page.waitForTimeout(700);
 const got = await page.evaluate(() => [HERO.name, FAM.map(f => f.name).join(','), !!PET, CFG.food, CFG.catchphrase].join(' | '));
 console.log('builder -> game:', got);

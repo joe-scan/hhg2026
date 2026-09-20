@@ -1,6 +1,6 @@
 'use strict';
 // ===================== THE HERO'S RUN =====================
-// title > (vs > howto > count > play > result) for every duel > bossIntro > boss > finale
+// title > (vs > howto > count > play > result) for every game > bossIntro > boss > finale
 // The hero is player slot 1. Slot 0 is the family member they're facing, played by the computer,
 // or by a real grown-up on WASD / Space / the left touch pad in 2-player mode.
 const TAUNT = {
@@ -11,7 +11,12 @@ const TAUNT = {
   auntie: ['YOUR FAVORITE AUNT IS BACK!', 'NO MERCY TODAY.', 'I\'M BETTER THAN YOUR UNCLE.'],
   uncle: ['I\'LL LET YOU HAVE A HEAD START.', 'WATCH AND LEARN.', 'TELL YOUR DAD I SAID HELLO.'],
   brother: ['YOU\'RE GOING DOWN!', 'NOT EVEN YOUR BIRTHDAY WILL SAVE YOU.', 'I\'M TELLING ON YOU IF YOU CHEAT.'],
-  sister: ['READY TO LOSE?', 'I\'M THE CHAMPION IN THIS HOUSE.', 'NO CRYING WHEN YOU LOSE.']
+  sister: ['READY TO LOSE?', 'I\'M THE CHAMPION IN THIS HOUSE.', 'NO CRYING WHEN YOU LOSE.'],
+  friend: ['WE BOTH KNOW WHO WINS THIS.', 'NO TAKING IT BACK AFTER.', 'LOSER CARRIES THE BAGS.'],
+  bestfriend: ['BEST FRIENDS UNTIL THE WHISTLE.', 'I KNOW ALL YOUR TRICKS.', 'YOU TAUGHT ME THIS ONE.'],
+  cousin: ['FAMILY HONOUR IS ON THE LINE.', 'I\'VE BEEN WAITING ALL YEAR.', 'MY SIDE OF THE FAMILY WINS.'],
+  teacher: ['THIS IS NOT ON THE TEST.', 'SHOW YOUR WORKING.', 'I MARK HARD.'],
+  coach: ['DID YOU WARM UP?', 'NO EXCUSES OUT THERE.', 'I\'VE SEEN YOUR TRAINING.']
 };
 const CHEERS_END = { birthday: 'HAPPY BIRTHDAY!', christmas: 'HAPPY CHRISTMAS!', fathers: 'HAPPY FATHER\'S DAY!', mothers: 'HAPPY MOTHER\'S DAY!', star: 'WELL DONE!' };
 let S = { name: 'title', t: 0 }, game = null, round = 0, won = [0, 0], two = false, bossTime = 0;
@@ -28,8 +33,8 @@ function hud(title, sub) {
 function pressFire(y, label) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TAP OR PRESS FIRE' : 'PRESS FIRE'), W / 2, y, 8, '#fff', 'center', COL.hot); }
 function whistle() { tone(2100, .35, 'square', .12); tone(2250, .35, 'square', .08, 0, .02); }
 // the referee: the dog if there is one, otherwise a spare grown-up
-function referee(cx, fy, sc) { if (PET) ted(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
-const refName = () => PET ? PET.name : helper() ? helper().name : '';
+function referee(cx, fy, sc) { if (petRuns()) pet(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
+const refName = () => petRuns() ? PET.name : helper() ? helper().name : '';
 function cake(cx, by, t) {
   rect(cx - 40, by - 30, 80, 30, '#ff8fb0'); rect(cx - 40, by - 30, 80, 6, '#fff'); for (let x = cx - 38; x < cx + 38; x += 8) rect(x, by - 25, 4, 4 + (x % 3), '#fff');
   rect(cx - 30, by - 52, 60, 22, '#ffd23f'); rect(cx - 30, by - 52, 60, 5, '#fff'); rect(cx - 48, by, 96, 4, '#cfc8e6');
@@ -61,7 +66,9 @@ const ST = {
       // the whole cast lined up along the horizon
       const cast = [HERO].concat(FAM), gap = 64, x0 = W / 2 - (cast.length - 1) * gap / 2;
       cast.forEach((sp, k) => { shadow(x0 + k * gap, 164, 12); drawSpec(sp, x0 + k * gap, 164, 3, false, Math.floor(t / 20 + k)); });
-      if (PET) { const c = t % 900; ted((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
+      // the pet crosses the screen, or sits on the left in its bowl
+      if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
+      else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
       ['1 PLAYER', '2 PLAYERS: A GROWN-UP PLAYS THE FAMILY'].forEach((o, k) => {
         const on = S.sel === k, y = 186 + k * 16;
         if (on) arrow('r', W / 2 - o.length * 4 - 14, y + 4, 5, COL.hot);
@@ -74,7 +81,7 @@ const ST = {
     enter() {
       round++; setOpponent(round - 1); game = GAMES[round - 1].make();
       S.taunt = pick(TAUNT[CHAR[0].role] || ['GAME ON!']);
-      say(SAYNAME[1] + ', versus, ' + SAYNAME[0] + '!'); mus.mode = 'duel'; mus.fast = round === GAMES.length;
+      say(SAYNAME[1] + ', versus, ' + SAYNAME[0] + '!'); mus.mode = 'match'; mus.fast = round === GAMES.length;
     },
     update() { if ((S.t > 80 && (anyIn().aP || clicked)) || S.t > 480) go('howto'); },
     draw() {
@@ -186,9 +193,9 @@ const ST = {
       const k = clamp(t / 60, 0, 1), hop = t > 60 ? Math.abs(Math.sin(t / 9)) * 14 : 0;
       drawSpec(HERO, W / 2 - 90 + (1 - k) * -120, 252 - hop, 4, false, t < 60 ? Math.floor(t / 6) : 0);
       FAM.forEach((m, i) => { const f = clamp((t - 90 - i * 30) / 50, 0, 1), x = W + 40 - f * (170 - i * 52); if (f > 0) drawSpec(m, x, 252, 4, true, Math.floor(t / 16)); if (t > 170 + i * 50 && i < 2) bubble(S.lines[i], x, 88 + i * 30, 14); });
-      if (PET && t > 60) ted(W / 2 + 70, 262 - Math.abs(Math.sin(t / 7)) * 14, 3, false, Math.floor(t / 6));
+      if (PET && t > 60) pet(W / 2 + 70, 262 - (petRuns() ? Math.abs(Math.sin(t / 7)) * 14 : 0), 3, false, Math.floor(t / (petRuns() ? 6 : 22)));
       if (t > 150) bubble(CATCH[1], W / 2 - 90, 96, 14);
-      if (t > 240) txt('WON ' + won[1] + ' OF ' + GAMES.length + ' DUELS. BEAT THE BOSS IN ' + bossTime + 'S.', W / 2, 74, 8, '#fff', 'center', '#0a0416');
+      if (t > 240) txt('WON ' + won[1] + ' OF ' + GAMES.length + ' GAMES. BEAT THE BOSS IN ' + bossTime + 'S.', W / 2, 74, 8, '#fff', 'center', '#0a0416');
       if (t > 360) pressFire(258, 'PRESS SHARE TO SEND IT TO THE FAMILY');
     }
   }

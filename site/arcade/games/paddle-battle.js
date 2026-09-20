@@ -47,4 +47,4 @@ function gPaddle() {
   };
   return s;
 }
-addDuel('PADDLE BATTLE', gPaddle);
+addGame('PADDLE BATTLE', gPaddle);

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Happy Hero Games</title>
-<meta name="description" content="A personalized arcade game starring someone special, with their family as the opponents. Try the free demo in a minute, on any phone or laptop.">
+<meta name="description" content="A personalized arcade game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop.">
 <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +59,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .price b{font-size:19px}
 .price .amt{font-weight:700;font-size:20px}
 .price p{margin:0;color:var(--muted)}
+.price.best b::after{content:"Our recommendation";display:block;font-weight:400;font-size:13px;color:var(--hot);margin-top:4px}
 .extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
@@ -82,7 +83,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <div>
     <div class="lede">
       <h1 id="make-h">Put someone special in their <em>own arcade game.</em></h1>
-      <p>Type their name, pick their hair and add the family. They're the hero, and <span data-int="Mum">Mom</span>, Dad, <span data-int="Granny">Grandma</span> and the dog turn up as the opponents. The free demo takes a minute to make.</p>
+      <p>Type their name, pick their hair and add the family. They're the hero, and <span data-int="Mum">Mom</span>, Dad, <span data-int="Granny">Grandma</span>, their best friend and the dog turn up as the opponents. The free demo takes a minute to make.</p>
     </div>
     <form class="hero" onsubmit="return false" aria-label="Make your hero">
       <fieldset>
@@ -111,26 +112,32 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
         <div class="field"><span>Shirt</span><div class="sws" id="kit"></div></div>
       </fieldset>
       <fieldset>
-        <legend>THE FAMILY</legend>
-        <p class="note" style="margin:0;color:var(--muted);font-size:15px">Up to three. They take turns as the opponent in each duel.</p>
+        <legend>Family and friends</legend>
+        <p class="note" style="margin:0;color:var(--muted);font-size:15px">Up to three here. They take turns as the opponent in each game.</p>
         <div id="family" style="display:grid;gap:6px"></div>
       </fieldset>
       <fieldset>
-        <legend>THE DETAILS</legend>
+        <legend>About them</legend>
         <div class="two">
-          <div class="field"><label for="pet-name">The dog's name</label><input id="pet-name" maxlength="10" autocomplete="off" placeholder="Leave blank if no dog"></div>
-          <div class="field"><span>The dog's color</span><div class="sws" id="pet-col"></div></div>
           <div class="field"><label for="food">Favorite food</label><input id="food" maxlength="10" autocomplete="off"></div>
           <div class="field"><label for="catch">Something they always say</label><input id="catch" maxlength="22" autocomplete="off" placeholder="No way!"></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>The pet</legend>
+        <div class="two">
+          <div class="field"><label for="pet-kind">Which pet</label><select id="pet-kind"></select></div>
+          <div class="field"><label for="pet-name">Its name</label><input id="pet-name" maxlength="10" autocomplete="off" placeholder="Leave blank if no pet"></div>
+          <div class="field"><span>Its color</span><div class="sws" id="pet-col"></div></div>
         </div>
       </fieldset>
     </form>
   </div>
   <div class="view">
-    <div class="screen"><canvas id="game" width="480" height="270" aria-label="A live preview of your hero and their family, in pixels"></canvas></div>
+    <div class="screen"><canvas id="game" width="480" height="270" aria-label="A live preview of the hero, their family and friends, in pixels"></canvas></div>
     <div class="row">
       <a class="btn go" id="play" href="g/demo/"><span id="play-label">Play the free demo</span></a>
-      <small>Four duels and a boss, free. Nothing you type is sent to us.</small>
+      <small>Two games and a boss, free. Nothing you type is sent to us.</small>
     </div>
   </div>
 </section>
@@ -138,8 +145,8 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <section class="band" id="how" aria-labelledby="how-h">
   <h2 id="how-h">How the full game works</h2>
   <ol class="steps">
-    <li><h3>Tell us about them</h3><p>Ten minutes of questions: their catchphrase, the family's running arguments, who's in charge of lunch, what they love doing. No photos needed.</p></li>
-    <li><h3>We build it</h3><p>Ten duels picked for what they love, with their jokes written into every screen. A real person plays it through before it goes out. Ready in 48 hours, or on the day you choose.</p></li>
+    <li><h3>Tell us about them</h3><p>Some short questions: their catchphrase, the running arguments, who's in charge of lunch, what they love doing. No photos needed.</p></li>
+    <li><h3>We build it</h3><p>Five games picked for what they love, with their jokes written into every screen. A real person plays it through before it goes out. Ready in 48 hours, or on the day you choose.</p></li>
     <li><h3>They play it</h3><p>You get a private link and a card to print and wrap. It plays on any phone, tablet or laptop, with nothing to install.</p></li>
   </ol>
 </section>
@@ -152,19 +159,18 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   </div>
   <figure>
     <div class="screen"><img src="img/finale.png" alt="The end of a Happy Hero game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
-    <figcaption>The last screen of the demo. The family walks in, the dog jumps, and it says whatever the day is.</figcaption>
+    <figcaption>The last screen of the demo. Everyone walks in, the pet jumps, and it says whatever the day is.</figcaption>
   </figure>
 </section>
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Prices</h2>
   <div class="prices">
-    <div class="price"><b>The demo</b><span class="amt" data-price="demo">Free</span><p>Four duels and a boss, built here in a minute. Nothing to install, nothing sent to us.</p></div>
-    <div class="price"><b>The game</b><span class="amt" data-price="game">$79</span><p>Ten duels, two bosses, up to six family members, and your own lines written in everywhere. Ready in 48 hours, or on the day you choose. Theirs to keep, forever.</p></div>
-    <div class="price"><b>The club</b><span class="amt" data-price="club">$8 a month</span><p>On top of a game you own, a new duel arrives every month, with seasonal games at Halloween and Christmas. <span data-price="clubYear">$69 a year</span> if you pay yearly, and the first month comes free with every game. Cancel whenever you like: everything they already have keeps working.</p></div>
-    <div class="price"><b>The gift box</b><span class="amt" data-price="box">$149</span><p>The game, plus your own voices recorded on a phone, a printed box and card to wrap, tracked delivery, and one change after it arrives.</p></div>
+    <div class="price"><b>Starter</b><span class="amt">$49</span><p>Three games and a boss. The hero plus three people, and the pet.</p></div>
+    <div class="price best"><b>Family and friends</b><span class="amt">$99</span><p>Five games and a boss. Up to eight people, everyone's own catchphrases and jokes written into the screens, the pet, and a real person checking it. Ready in 48 hours, or on the day you choose.</p></div>
+    <div class="price"><b>Gift box</b><span class="amt">$179</span><p>Everything above, plus their own voices recorded on a phone, a printed box and card to wrap, tracked delivery, and one change after it arrives.</p></div>
   </div>
-  <p class="extras">Add a brother or sister as a second hero for <span data-price="sibling">$25</span>. Gift cards too, including twelve months of the club, so a grandparent can give it and a parent fills in the details.</p>
+  <p class="extras">Gift cards too, so a grandparent can give it and a parent fills in the details.</p>
   <p class="extras">Orders aren't open yet. Email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> and we'll tell you the day they are.</p>
 </section>
 
@@ -181,8 +187,8 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <section class="band" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Questions</h2>
   <details><summary>What does it play on?</summary><p>Any phone, tablet or laptop with a web browser. Two people can play on one keyboard, or on a phone turned sideways with a set of buttons each.</p></details>
-  <details><summary>Can the grown-ups play too?</summary><p>Yes. In 2-player mode a grown-up takes the family's side, so Dad really is playing against them.</p></details>
-  <details><summary>We don't have a dog.</summary><p>Leave the dog out and someone else in the family referees.</p></details>
+  <details><summary>Can the grown-ups play too?</summary><p>Yes. In 2-player mode a grown-up takes the other side, so Dad really is playing against them.</p></details>
+  <details><summary>We don't have a pet.</summary><p>Leave it out and someone else in the family referees. You can also pick a cat, a rabbit, a hamster or a fish instead of a dog. The fish stays in its bowl and cheers.</p></details>
   <details><summary>How long does it take to play?</summary><p>The demo takes about ten minutes. The full game is longer, and they'll want to go again.</p></details>
   <details><summary>Can I change something after it arrives?</summary><p>Deluxe includes one change. For the others, tell us what's wrong and we'll fix it.</p></details>
 </section>
@@ -191,7 +197,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <footer><span>Happy Hero Games.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span>A preview site: orders aren't open yet.</span></footer>
 </div>
 
-<script src="game/engine.js"></script>
+<script src="arcade/engine.js"></script>
 <script src="builder.js"></script>
 </body>
 </html>

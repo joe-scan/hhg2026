@@ -74,7 +74,7 @@ function wrongs(right, pool) { return shuffle(pool.filter(x => x !== right)).sli
 function familyQuestions() {
   const q = [], h = HERO.name;
   q.push(['WHAT IS ' + h + '\'S FAVORITE FOOD?', CFG.food].concat(wrongs(CFG.food, ['PIZZA', 'FRIES', 'CURRY', 'PASTA', 'SUSHI', 'SOUP', 'BURGERS', 'TACOS', 'NOODLES'])));
-  if (PET) q.push(['WHAT IS THE DOG CALLED?', PET.name].concat(wrongs(PET.name, ['REX', 'BELLA', 'MAX', 'LUNA', 'BUSTER', 'DAISY', 'MILO'])));
+  if (PET) q.push(['WHAT IS THE PET CALLED?', PET.name].concat(wrongs(PET.name, ['REX', 'BELLA', 'MAX', 'LUNA', 'BUSTER', 'DAISY', 'MILO'])));
   if (CFG.catchphrase) q.push(['WHO SAYS "' + CFG.catchphrase + '"?', h].concat(wrongs(h, FAM.map(m => m.name).concat(['THE MAILMAN', 'THE TEACHER', 'SANTA']))));
   q.push(['WHAT COLOR IS ' + h + '\'S SHIRT IN THIS GAME?', KITNAMES[CFG.hero.kit]].concat(wrongs(KITNAMES[CFG.hero.kit], Object.values(KITNAMES))));
   return shuffle(q);
@@ -148,4 +148,4 @@ function gQuiz() {
   };
   return s;
 }
-addDuel('THE FAMILY QUIZ', gQuiz);
+addGame('THE FAMILY QUIZ', gQuiz);
