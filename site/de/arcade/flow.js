@@ -33,7 +33,7 @@ function hud(title, sub) {
   txt(title, W / 2, 4, 8, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 15, 8, '#fff', 'center');
   for (let k = 0; k < GAMES.length; k++) rect(W - 6 - (GAMES.length - k) * 10, 15, 7, 7, k < round - 1 ? COL.green : k === round - 1 ? '#fff' : COL.off);
 }
-function pressFire(y, label) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TIPPEN ODER FEUER DRUECKEN' : 'FEUER DRUECKEN'), W / 2, y, 8, '#fff', 'center', COL.hot); }
+function pressFire(y, label, size) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TIPPEN ODER FEUER DRUECKEN' : 'FEUER DRUECKEN'), W / 2, y, size || 8, '#fff', 'center', COL.hot); }
 function whistle() { tone(2100, .35, 'square', .12); tone(2250, .35, 'square', .08, 0, .02); }
 // the referee: the dog if there is one, otherwise a spare grown-up
 function referee(cx, fy, sc) { if (petRuns()) pet(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
@@ -66,29 +66,31 @@ const ST = {
     },
     draw() {
       const t = S.t; bgSynth(t);
-      // The three lines that sell the whole thing, so they are the biggest text on the screen.
-      txt('STARRING', W / 2, 12, 16, COL.cyan, 'center', true);
-      const n = HERO.name, size = n.length > 9 ? 24 : n.length > 7 ? 28 : 32;
+      // Sized to be read on a phone, where this canvas is about 350 pixels wide. Everything here
+      // is at least 16px in the game's own 480-wide space, which is 12 on the glass.
+      txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+      const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
       // a dark plate behind the name, so it reads against the sun rather than sitting in it
-      rect(W / 2 - (n.length * size) / 2 - 10, 30, n.length * size + 20, size + 10, 'rgba(10,4,22,.55)');
-      logo(n, W / 2, 34, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
-      const occ = CFG.occasion === 'star' ? 'EIN ARCADE-ABENTEUER' : OCCASIONS[CFG.occasion] + ' EDITION';
-      const ow = occ.length * 12, oh = 22;
-      rect(W / 2 - ow / 2 - 8, 74, ow + 16, oh, 'rgba(10,4,22,.9)');
-      rect(W / 2 - ow / 2 - 8, 74, ow + 16, 2, COL.gold);
-      txt(occ, W / 2, 79, 12, COL.gold, 'center');
+      rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
+      logo(n, W / 2, 32, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+      const occ = CFG.occasion === 'star' ? 'EIN ARCADE-ABENTEUER' : OCCASIONS[CFG.occasion];
+      const ow = occ.length * 16;
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, 'rgba(10,4,22,.92)');
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+      txt(occ, W / 2, 87, 16, COL.gold, 'center');
       // the whole cast lined up along the horizon
       const cast = [HERO].concat(FAM), gap = 64, x0 = W / 2 - (cast.length - 1) * gap / 2;
-      cast.forEach((sp, k) => { shadow(x0 + k * gap, 172, 12); drawSpec(sp, x0 + k * gap, 172, 3, false, Math.floor(t / 20 + k)); });
+      cast.forEach((sp, k) => { shadow(x0 + k * gap, 158, 12); drawSpec(sp, x0 + k * gap, 158, 3, false, Math.floor(t / 20 + k)); });
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
-      MENU.forEach((o, k) => {
-        const on = S.sel === k, y = 190 + k * 15;
-        if (on) arrow('r', W / 2 - o.length * 4 - 14, y + 4, 5, COL.hot);
-        txt(o, W / 2, y, 8, on ? '#fff' : COL.dim, 'center');
+      MENU.forEach(([o], k) => {
+        const on = S.sel === k, y = 166 + k * 22;
+        if (on) arrow('r', W / 2 - o.length * 8 - 16, y + 4, 6, COL.hot);
+        txt(o, W / 2, y, 16, on ? '#fff' : COL.dim, 'center', on);
       });
-      pressFire(240, touchMode ? 'TIPPEN ZUM START' : 'FEUER DRUECKEN ODER KLICKEN');
+      txt(MENU[S.sel][1], W / 2, 234, 8, COL.cyan, 'center');
+      pressFire(250, touchMode ? 'TIPPEN ZUM START' : 'FEUER DRUECKEN', 12);
     }
   },
   vs: {

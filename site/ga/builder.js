@@ -93,13 +93,19 @@
   function frame() {
     requestAnimationFrame(frame); t++;
     bgSynth(t);
-    txt('STARRING', W / 2, 16, 8, COL.cyan, 'center');
-    const n = HERO.name;
-    logo(n, W / 2, 30, n.length > 7 ? 24 : 32, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
-    const occ = OCCASIONS[CFG.occasion] === 'IS REALTA THU' ? 'EACHTRA ARCADE' : OCCASIONS[CFG.occasion] + ' EDITION';
-    rect(W / 2 - occ.length * 4 - 6, 68, occ.length * 8 + 12, 15, 'rgba(10,4,22,.85)'); txt(occ, W / 2, 72, 8, COL.gold, 'center');
+    // The same sizes as the game's title screen, because this is the picture people judge the
+    // whole thing on, and on a phone this canvas is about 350 pixels wide.
+    txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+    const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
+    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
+    logo(n, W / 2, 32, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+    const occ = OCCASIONS[CFG.occasion] === 'IS REALTA THU' ? 'EACHTRA ARCADE' : OCCASIONS[CFG.occasion];
+    const ow = occ.length * 16;
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, 'rgba(10,4,22,.92)');
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+    txt(occ, W / 2, 87, 16, COL.gold, 'center');
     const cast = [HERO].concat(FAM), gap = 70, x0 = W / 2 - (cast.length - 1) * gap / 2;
-    cast.forEach((sp, k) => { shadow(x0 + k * gap, 236, 14); drawSpec(sp, x0 + k * gap, 236, k ? 3 : 4, false, Math.floor(t / 22 + k)); });
+    cast.forEach((sp, k) => { shadow(x0 + k * gap, 240, 14); drawSpec(sp, x0 + k * gap, 240, k ? 3 : 4, false, Math.floor(t / 22 + k)); });
     if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
     else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
   }

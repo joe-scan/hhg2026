@@ -95,7 +95,12 @@ const lum = h => { const [r, g2, b] = hexRgb(h); return (0.299 * r + 0.587 * g2 
 const uiCol = h => lum(h) < .35 ? mix(h, '#ffffff', .55) : h;
 
 // the title screen menu
-const MENU = ['1 PLAYER', '2 PLAYERS: A GROWN-UP PLAYS THE FAMILY', 'PARTY MODE: EVERYONE TAKES A TURN'];
+// Each line is a short label people can read on a phone, plus the sentence that explains it.
+const MENU = [
+  ['1 PLAYER', 'THE COMPUTER PLAYS THE FAMILY'],
+  ['2 PLAYERS', 'A GROWN-UP PLAYS THE FAMILY'],
+  ['PARTY MODE', 'EVERYONE TAKES A TURN AGAINST THE HERO']
+];
 
 // every file in games/ registers itself here, in the order the page loads them
 const GAMES = [];
