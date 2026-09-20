@@ -40,7 +40,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Skin | Haut |
 | Shirt | Shirt |
 | Family and friends | Familie und Freunde |
-| One opponent in the demo. The full game takes up to eight people, so the whole cast turns up. | Ein Gegner in der Demo. Im vollen Spiel sind bis zu acht Personen dabei, also kommen alle vor. |
 | About them | Über die Person |
 | Favorite food | Lieblingsessen |
 | Something they always say | Was sie immer sagen |
@@ -66,14 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The private link, and it's theirs forever. | Der private Link, und er gehört ihnen für immer. |
 | The gift box | Die Geschenkbox |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Der Trailer: Avas Titelbildschirm, die Versus-Karte gegen Papa, etwas Spiel und das Geburtstagsende |
-| The poster and the trailer, made from one demo family. Yours has your own names in it. | Poster und Trailer, gemacht mit einer Beispielfamilie. Deins trägt eure eigenen Namen. |
+| hello@happyherogames.com | hello@happyherogames.com |
+| Private by design | Privat von Anfang an |
 
 ## The rest of the site, including the privacy policy
 
 | English | Deutsch |
 |---|---|
-| hello@happyherogames.com | hello@happyherogames.com |
-| Private by design | Privat von Anfang an |
 | No photos, no recordings. The hero is drawn in pixels. | Keine Fotos, keine Aufnahmen. Der Held wird in Pixeln gezeichnet. |
 | No surnames, ages, schools or addresses on screen, ever. | Nie Nachnamen, Alter, Schulen oder Adressen auf dem Bildschirm. |
 | Every game has its own private link. | Jedes Spiel hat seinen eigenen privaten Link. |
@@ -82,13 +80,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | What does it play on? | Worauf läuft es? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Auf jedem Handy, Tablet oder Laptop mit Browser. Nichts zu installieren. Zwei Personen können an einer Tastatur spielen oder sich ein quer gehaltenes Handy teilen. |
 | Who can be in it? | Wer kann mitspielen? |
-| Up to eight people: family, friends, a teacher, a coach. And the pet, which can be a dog, cat, rabbit, hamster or fish. | Bis zu acht Personen: Familie, Freunde, eine Lehrerin, ein Trainer. Und das Haustier: Hund, Katze, Kaninchen, Hamster oder Fisch. |
 | Can I change something after it arrives? | Kann ich später noch etwas ändern? |
 | Tell us what's wrong and we'll fix it. | Sag uns, was nicht stimmt, und wir bringen es in Ordnung. |
 | Web Analytics Made Easy - Statcounter | Web-Analyse leicht gemacht - Statcounter |
 | and we'll answer in plain English. | und wir antworten in klarem Deutsch. |
 | The free demo sends us nothing | Die kostenlose Demo sendet uns nichts |
-| The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Name, Haare, Farben, Familienmitglied und Haustier, die du auf der Startseite wählst, verlassen deinen Browser nie. Sie reisen in der Webadresse selbst zum Spiel, und eine Kopie liegt auf deinem Gerät, damit deine Arbeit noch da ist, wenn du zurückkommst. An uns wird nichts gesendet, und es gibt kein Konto. |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Um diese Kopie zu löschen, lösche die Websitedaten für happyherogames.com in deinem Browser. |
 | What we'll collect when you order | Was wir bei einer Bestellung erheben |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Vornamen, oder wie jemand zu Hause genannt wird: Mama, Oma, Trainer. |
@@ -158,7 +154,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | Sie sind der Held. Familie und Freunde müssen geschlagen werden. Hier bauen und sofort spielen. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Ein Pixel-Arcade-Titelbildschirm: STARRING AVA, HAPPY BIRTHDAY EDITION, mit der Familie in einer Reihe |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | Das Ende eines HappyHeroGames-Spiels: HAPPY BIRTHDAY, AVA! in Lichtern, eine Geburtstagstorte und die jubelnde Familie mit Hund in Pixel-Art |
-| The game, a printed poster of their name in lights, posted to you, and a short trailer of their own game for the family chat. | Das Spiel, ein gedrucktes Poster mit ihrem Namen in Lichtern, per Post, und ein kurzer Trailer ihres eigenen Spiels für den Familienchat. |
 | Privacy \| HappyHeroGames | Datenschutz \| HappyHeroGames |
 | What HappyHeroGames collects, what it never collects, and how to have it deleted. | Was HappyHeroGames erhebt, was nie, und wie man es löschen lässt. |
 | HappyHeroGames makes a game about a child, so the rule we work to is simple: collect as little as possible, show less, and delete it when you ask. This page says exactly what that means. If anything here is unclear, email | HappyHeroGames macht ein Spiel über ein Kind, deshalb ist die Regel einfach: so wenig wie möglich erheben, noch weniger zeigen und es löschen, sobald du es verlangst. Diese Seite sagt genau, was das heißt. Wenn etwas unklar ist, schreib an |
@@ -176,7 +171,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | Terms | Bedingungen |
 | Can a whole party play? | Kann eine ganze Party spielen? |
-| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Ja. Party-Modus auf dem Titelbildschirm: Du wählst, wie viele Herausforderer mitspielen, und jeder kommt gegen den Helden dran, während die anderen zuschauen. Am Ende gibt es eine Ergebnistafel und einen Champion. |
 | One game, free. Nothing you type is sent to us. Or just | Ein Spiel, kostenlos. Nichts, was du eingibst, wird an uns gesendet. Oder einfach |
 | put a name in lights | einen Namen in Lichter setzen |
 | Your name in lights \| HappyHeroGames | Dein Name in Lichtern \| HappyHeroGames |
@@ -192,7 +186,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | An arcade title screen with the name you typed in lights | Ein Arcade-Titelbildschirm mit dem getippten Namen in Lichtern |
 | Save the picture | Bild speichern |
 | Share it | Teilen |
-| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | Das ist der Startbildschirm eines echten Spiels. Im Rest davon sind sie der Held, Familie und Freunde sind die Gegner, und ihre eigenen Witze stecken darin. |
 | Build the whole game, free | Das ganze Spiel bauen, kostenlos |
 | Trick or Treat Dash \| HappyHeroGames | Süßes oder Saures \| HappyHeroGames |
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Ein kostenloses Halloween-Spiel mit deinem Namen. Fang die Süßigkeiten, lass den Rosenkohl, sechzig Sekunden. Nichts zu installieren. |
@@ -203,11 +196,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Start | Start |
 | Trick or Treat Dash: catch the falling sweets in your bucket | Süßes oder Saures: fang die fallenden Süßigkeiten in deinem Eimer |
 | Left and right arrow keys, or the buttons under the screen on a phone. | Pfeiltasten links und rechts, oder die Tasten unter dem Bildschirm auf dem Handy. |
-| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Dieses hier ist kostenlos und für alle gleich. Die Spiele, die wir machen, sind andersherum: fünf davon, die eigene Familie und Freunde als Gegner, und ihre Witze auf jedem Bildschirm. |
 | Build one, free | Eins bauen, kostenlos |
-| Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Zuletzt geändert am 20. September 2026. Die ersten zehn Spiele werden per E-Mail bestellt und von Hand gebaut, deshalb steht hier beides: wie die kostenlose Demo funktioniert, die uns nichts sendet, und was eine Bestellung bedeutet. |
 | For an order we ask for what the game needs and nothing else: | Für eine Bestellung fragen wir nach dem, was das Spiel braucht, und nach nichts anderem: |
-| Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Jedes Spiel ist gleich: fünf Spiele und ein Endgegner, alle Lieblingsmenschen mit dabei, bis zu acht Personen, in 48 Stunden fertig. Und wenn du magst: ein Poster des Spiels, gedruckt und zugeschickt, für die Wand. |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | Das gedruckte Poster: der Titelbildschirm mit AVA in Leuchtschrift, darunter ALLES GUTE ZUM GEBURTSTAG, AVA, unten drei ihrer Spiele und im Abspann Papa, Mama, Jack und Hund Biscuit |
 | Order one | Jetzt bestellen |
 | Free games | Gratis-Spiele |
@@ -226,7 +216,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Any day. Type a name and it goes up on an arcade screen, dressed for the occasion. Save the picture. | Jeder Tag. Tipp einen Namen ein, und er steht auf einem Arcade-Bildschirm, passend geschmückt. Bild speichern. |
 | Next | Als Nächstes |
 | Easter, the first day back at school, and a penalty shoot-out for whatever final is on. One a season. | Ostern, der erste Schultag und ein Elfmeterschießen zum jeweiligen Finale. Eines pro Saison. |
-| These are the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Diese hier sind für alle gleich. Die Spiele, die wir bauen, sind andersherum: fünf davon, die eigene Familie und die eigenen Freunde als Gegner, und ihre Witze auf jedem Bildschirm. |
 | Sleigh Dash \| HappyHeroGames | Schlitten-Sprint \| HappyHeroGames |
 | A free Christmas game with your name on it. Run the rooftops, jump the chimneys, sixty seconds. Nothing to install. | Ein gratis Weihnachtsspiel mit deinem Namen. Über die Dächer, über die Schornsteine, sechzig Sekunden. Nichts zu installieren. |
 | A free Christmas game with your name on it. Sixty seconds on the rooftops, one present down every chimney you clear. | Ein gratis Weihnachtsspiel mit deinem Namen. Sechzig Sekunden auf den Dächern, ein Geschenk für jeden Schornstein, den du schaffst. |
@@ -234,8 +223,19 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Schlitten-Sprint: über die Dächer und über die Schornsteine |
 | JUMP | SPRING |
 | One button: space, the up arrow, or a tap on the screen. | Ein Knopf: Leertaste, Pfeil nach oben oder ein Tippen auf den Bildschirm. |
-| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz, each against a different person. Then a boss fight with someone on their side, and the ending with their name in lights. | Was gespielt wird: Paddle Battle, Wasserbomben-Schlacht, Rücksitz-Schlacht, Dinner Dash und das Familienquiz, jedes gegen eine andere Person. Dann ein Endgegner mit jemandem an ihrer Seite und das Finale mit ihrem Namen in Leuchtschrift. |
 | Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Sag uns, für wen es ist und wann du es brauchst. Wir schicken dir einen Zahlungslink zurück und sagen dir, wann es fertig ist. |
+| One opponent in the demo. The full game fits eight people, so everyone turns up. | Ein Gegner in der Demo. Ins volle Spiel passen acht Personen, also sind alle dabei. |
+| Everyone gets the same thing: five games and a boss fight, up to eight people in it, ready in two days. You can add a poster of their game, printed and posted, for the wall. | Alle bekommen dasselbe: fünf Spiele und einen Endgegner, bis zu acht Personen darin, fertig in zwei Tagen. Dazu gibt es auf Wunsch ein Poster des Spiels, gedruckt und zugeschickt, für die Wand. |
+| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz. Each one is against a different person. Then the boss fight, with someone on their side. Then their name in lights. | Was gespielt wird: Paddle Battle, Wasserbomben-Schlacht, Rücksitz-Schlacht, Dinner Dash und das Familienquiz. Jedes geht gegen eine andere Person. Dann der Endgegner, mit jemandem an ihrer Seite. Und zum Schluss ihr Name in Leuchtschrift. |
+| The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Das Spiel, ein Poster mit ihrem Namen in Leuchtschrift per Post und ein kurzer Trailer für den Familienchat. |
+| This poster and trailer are for a made-up family. Yours has your own names in it. | Dieses Poster und dieser Trailer sind für eine erfundene Familie. Deins bekommt eure eigenen Namen. |
+| Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Bis zu acht Personen: Familie, Freunde, eine Lehrerin, ein Trainer. Das Haustier auch: Hund, Katze, Kaninchen, Hamster oder Fisch. |
+| Yes. Party mode is on the title screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Ja. Der Partymodus steht im Titelbildschirm. Wähl aus, wie viele mitspielen. Jede und jeder tritt der Reihe nach gegen den Helden an, die anderen schauen zu. Am Ende steht eine Ergebnistafel mit einem Sieger. |
+| This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Das ist der erste Bildschirm eines echten Spiels. Im Rest sind sie der Held. Ihre Familie und ihre Freunde muss man schlagen, und die Witze sind ihre eigenen. |
+| These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Diese hier sind für alle gleich. Die Spiele, die wir bauen, sind anders. Fünf Spiele, mit der eigenen Familie und den eigenen Freunden als Gegner, und ihren Witzen auf jedem Bildschirm. |
+| This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Dieses hier ist gratis und für alle gleich. Die Spiele, die wir bauen, sind anders. Fünf Spiele, mit der eigenen Familie und den eigenen Freunden als Gegner, und ihren Witzen auf jedem Bildschirm. |
+| Last changed 20 September 2026. Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | Zuletzt geändert am 20. September 2026. Bestellungen laufen vorerst per E-Mail. Das hier gilt für die kostenlose Demo, die uns nichts schickt, und dafür, was eine Bestellung bedeutet. |
+| The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself. A copy is saved on your own device, so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Name, Haare, Farben, Familienmitglied und Haustier, die du auf der Startseite wählst, verlassen deinen Browser nie. Sie reisen in der Webadresse selbst zum Spiel. Eine Kopie wird auf deinem eigenen Gerät gespeichert, damit deine Arbeit noch da ist, wenn du zurückkommst. An uns wird nichts geschickt, und ein Konto braucht es nicht. |
 
 ## What the game says: names, instructions and scores
 

@@ -60,7 +60,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 
 **Tone.** Kid-safe teasing only: snacks, bedtime, sports teams, who does the dishes. Nothing about looks, weight, ability or anything that would sting. Grown-ups are allowed to be a bit silly ("I LET YOU WIN, YOU KNOW.").
 
-**Copy.** Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
+**Copy.** One idea per sentence, and read it aloud before shipping it: if you run out of breath, split it. `node tools/copy.mjs` prints every visible sentence with its length, and `docs/copy-check.md` has the scale, what was cut and why. Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
 
 **Claims.** Don't write anything on the site that isn't true yet: no invented reviews, customer counts, "most popular" badges, press logos or discounts Joe hasn't decided.
 
@@ -88,6 +88,7 @@ Written by hand
                           one domain, /g/ URLs, scores, backups
   docs/competitors.md     who else sells this, what to take from them, where we win
   docs/viral.md           fifty ways this could spread, ranked by effort
+  docs/copy-check.md      every sentence on the site, rated for how hard it is to read
   docs/todo.md            Joe's list: everything outside the code, and what is done
   docs/research/          raw captures behind the research, kept so claims can be checked
   site-src/pages/*.html     the source pages, one per page. The free games are under
@@ -134,6 +135,7 @@ Tools, none of them deployed
                           a real game headless. Run it after any change to the game's look, or
                           the marketing starts describing a product that no longer exists
   tools/links.mjs         every local link on every built page, checked against the files
+  tools/copy.mjs          every visible sentence with its word count and reading grade
 ```
 
 Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `pet()` for the pet (`petRuns()` is false for a fish, which stays in its bowl). Games call `boy(i)` for the two players and `person(spec)` for cameo grown-ups; `helper()` returns a spare grown-up, or null when the only other person is the opponent. `docs/product.md` has the config format.

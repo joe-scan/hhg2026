@@ -40,7 +40,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Skin | Craiceann |
 | Shirt | Geansaí |
 | Family and friends | Muintir agus cairde |
-| One opponent in the demo. The full game takes up to eight people, so the whole cast turns up. | Céile comhraic amháin sa taispeántas. Tá suas le hochtar sa chluiche iomlán, mar sin bíonn gach duine ann. |
 | About them | Fúthu |
 | Favorite food | An bia is fearr leo |
 | Something they always say | Rud a deir siad i gcónaí |
@@ -66,14 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The private link, and it's theirs forever. | An nasc príobháideach, agus is leo go deo é. |
 | The gift box | An bosca bronntanais |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | An leantóir: scáileán teidil Ava, an cárta in aghaidh Daidí, píosa imeartha agus deireadh an lae bhreithe |
-| The poster and the trailer, made from one demo family. Yours has your own names in it. | An póstaer agus an leantóir, déanta le teaghlach samplach. Beidh bhur n-ainmneacha féin ar do cheannsa. |
+| hello@happyherogames.com | hello@happyherogames.com |
+| Private by design | Príobháideach ó thús |
 
 ## The rest of the site, including the privacy policy
 
 | English | Gaeilge |
 |---|---|
-| hello@happyherogames.com | hello@happyherogames.com |
-| Private by design | Príobháideach ó thús |
 | No photos, no recordings. The hero is drawn in pixels. | Gan grianghraif, gan taifeadtaí. Tarraingítear an laoch i bpicteilíní. |
 | No surnames, ages, schools or addresses on screen, ever. | Ní bhíonn sloinnte, aois, scoileanna ná seoltaí ar an scáileán riamh. |
 | Every game has its own private link. | Tá a nasc príobháideach féin ag gach cluiche. |
@@ -82,13 +80,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | What does it play on? | Cá n-imrítear é? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Ar aon fhón, táibléad nó ríomhaire glúine le brabhsálaí. Gan aon rud le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a chasadh ar a thaobh agus é a roinnt. |
 | Who can be in it? | Cé atá in ann a bheith ann? |
-| Up to eight people: family, friends, a teacher, a coach. And the pet, which can be a dog, cat, rabbit, hamster or fish. | Suas le hochtar: muintir, cairde, múinteoir, traenálaí. Agus an peata: madra, cat, coinín, hamstar nó iasc. |
 | Can I change something after it arrives? | An féidir liom rud éigin a athrú ina dhiaidh? |
 | Tell us what's wrong and we'll fix it. | Inis dúinn cad atá mícheart agus socróimid é. |
 | Web Analytics Made Easy - Statcounter | Anailís gréasáin éasca - Statcounter |
 | and we'll answer in plain English. | agus freagróimid i nGaeilge shimplí. |
 | The free demo sends us nothing | Ní sheolann an taispeántas saor in aisce aon rud chugainn |
-| The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Ní fhágann an t-ainm, an ghruaig, na dathanna, an duine muinteartha ná an peata a roghnaíonn tú ar an gcéad leathanach do bhrabhsálaí riamh. Taistealaíonn siad chuig an gcluiche sa seoladh gréasáin féin, agus fanann cóip ar do ghléas féin le go mbeidh do chuid oibre ann fós má thagann tú ar ais. Ní sheoltar aon rud chugainn, agus níl cuntas ar bith le cruthú. |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Chun an chóip sin a ghlanadh, glan sonraí an tsuímh happyherogames.com i do bhrabhsálaí. |
 | What we'll collect when you order | Cad a bhaileoimid nuair a ordaíonn tú |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Céadainmneacha, nó an rud a thugtar orthu sa bhaile: Mamaí, Mamó, Traenálaí. |
@@ -158,7 +154,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | Is iad an laoch. A muintir agus a gcairde na daoine a chaithfidh siad a bhualadh. Tóg anseo é agus imir anois. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Scáileán teidil arcade i bpicteilíní: STARRING AVA, HAPPY BIRTHDAY EDITION, leis an teaghlach i líne |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | Deireadh cluiche HappyHeroGames: HAPPY BIRTHDAY, AVA! i soilse, císte lá breithe, agus an teaghlach agus an madra ag ceiliúradh in ealaín phicteilíní |
-| The game, a printed poster of their name in lights, posted to you, and a short trailer of their own game for the family chat. | An cluiche, póstaer clóite lena n-ainm i soilse, seolta chugat sa phost, agus leantóir gearr dá gcluiche féin don chomhrá teaghlaigh. |
 | Privacy \| HappyHeroGames | Príobháideacht \| HappyHeroGames |
 | What HappyHeroGames collects, what it never collects, and how to have it deleted. | Cad a bhailíonn HappyHeroGames, cad nach mbailíonn sé riamh, agus conas é a scriosadh. |
 | HappyHeroGames makes a game about a child, so the rule we work to is simple: collect as little as possible, show less, and delete it when you ask. This page says exactly what that means. If anything here is unclear, email | Déanann HappyHeroGames cluiche faoi pháiste, mar sin tá an riail simplí: bailigh chomh beag agus is féidir, taispeáin níos lú fós, agus scrios é nuair a iarrtar orainn. Deir an leathanach seo go díreach cad is brí leis sin. Mura bhfuil rud éigin soiléir, seol ríomhphost chuig |
@@ -176,7 +171,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | &middot; | &middot; |
 | Terms | Téarmaí |
 | Can a whole party play? | An féidir le cóisir iomlán imirt? |
-| Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Is féidir. Mód cóirme ar an scáileán teidil: roghnaíonn tú cé mhéad dúshlánóir, agus faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag féachaint. Críochnaíonn sé le clár torthaí agus curadh. |
 | One game, free. Nothing you type is sent to us. Or just | Cluiche amháin, saor in aisce. Ní sheoltar aon rud a chlóscríobhann tú chugainn. Nó díreach |
 | put a name in lights | cuir ainm i soilse |
 | Your name in lights \| HappyHeroGames | D'ainm i soilse \| HappyHeroGames |
@@ -192,7 +186,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | An arcade title screen with the name you typed in lights | Scáileán teidil arcade leis an ainm a chlóscríobh tú i soilse |
 | Save the picture | Sábháil an pictiúr |
 | Share it | Roinn é |
-| This is the opening screen of a real game. The rest of it has them as the hero, their family and friends as the ones to beat, and their own jokes in it. | Seo an chéad scáileán de chluiche ceart. Sa chuid eile is iad an laoch, is iad a muintir agus a gcairde na daoine le bualadh, agus tá a gcuid scéalta grinn féin ann. |
 | Build the whole game, free | Tóg an cluiche iomlán, saor in aisce |
 | Trick or Treat Dash \| HappyHeroGames | Rás na Milseán \| HappyHeroGames |
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Cluiche Oíche Shamhna saor in aisce le d'ainm air. Beir ar na milseáin, fág na bachlóga, seasca soicind. Gan aon rud le suiteáil. |
@@ -203,11 +196,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Start | Tosaigh |
 | Trick or Treat Dash: catch the falling sweets in your bucket | Rás na Milseán: beir ar na milseáin a thiteann i do bhuicéad |
 | Left and right arrow keys, or the buttons under the screen on a phone. | Saigheada clé agus deas, nó na cnaipí faoin scáileán ar fhón. |
-| This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do gach duine. Tá na cluichí a dhéanaimid bunoscionn leis: cúig cinn, do mhuintir agus do chairde féin mar chéilí comhraic, agus a gcuid scéalta grinn i ngach scáileán. |
 | Build one, free | Tóg ceann, saor in aisce |
-| Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Athraithe go deireanach ar an 20 Meán Fómhair 2026. Ordaítear an chéad deich gcluiche trí ríomhphost agus tógtar de láimh iad, mar sin clúdaíonn sé seo an taispeántas saor in aisce, nach seolann aon rud chugainn, agus a bhfuil i gceist le hordú. |
 | For an order we ask for what the game needs and nothing else: | Le haghaidh ordú iarraimid an rud atá ag teastáil ón gcluiche agus faic eile: |
-| Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Tá gach cluiche mar a chéile: cúig chluiche agus boss, gach duine a bhfuil grá acu dóibh istigh ann, suas le hochtar, réidh laistigh de 48 uair an chloig. Agus más mian leat: póstaer dá gcluiche, clóite agus seolta sa phost, le crochadh ar an mballa. |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | An póstaer clóite: an scáileán teidil le AVA i soilse, LÁ BREITHE SONA, AVA faoi, trí cinn dá cuid cluichí feadh an bhun, agus an fhoireann luaite mar Dhaid, Mam, Jack agus Biscuit an madra |
 | Order one | Cuir ordú isteach |
 | Free games | Cluichí saor in aisce |
@@ -226,7 +216,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Any day. Type a name and it goes up on an arcade screen, dressed for the occasion. Save the picture. | Lá ar bith. Clóscríobh ainm agus téann sé suas ar scáileán arcade, maisithe don ócáid. Sábháil an pictiúr. |
 | Next | Ar aghaidh |
 | Easter, the first day back at school, and a penalty shoot-out for whatever final is on. One a season. | An Cháisc, an chéad lá ar scoil, agus comórtas cicanna éirice don chluiche ceannais atá ann. Ceann in aghaidh an tséasúir. |
-| These are the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Tá na cinn seo mar an gcéanna do chách. Tá na cluichí a dhéanaimid bunoscionn leis sin: cúig cinn, do mhuintir féin agus do chairde mar na daoine le sárú, agus a gcuid jócanna scríofa i ngach scáileán. |
 | Sleigh Dash \| HappyHeroGames | Rás na Nollag \| HappyHeroGames |
 | A free Christmas game with your name on it. Run the rooftops, jump the chimneys, sixty seconds. Nothing to install. | Cluiche Nollag saor in aisce le d'ainm air. Rith na díonta, léim na simléir, seasca soicind. Faic le suiteáil. |
 | A free Christmas game with your name on it. Sixty seconds on the rooftops, one present down every chimney you clear. | Cluiche Nollag saor in aisce le d'ainm air. Seasca soicind ar na díonta, bronntanas síos gach simléar a ghlanann tú. |
@@ -234,8 +223,19 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Rás na Nollag: rith na díonta agus léim na simléir |
 | JUMP | LÉIM |
 | One button: space, the up arrow, or a tap on the screen. | Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán. |
-| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz, each against a different person. Then a boss fight with someone on their side, and the ending with their name in lights. | Na cluichí féin: Paddle Battle, Cath na mBalún Uisce, Cath an tSuíocháin Chúil, Dinner Dash agus Tráth na gCeist Teaghlaigh, gach ceann acu in aghaidh duine difriúil. Ansin troid boss le duine ar a dtaobh, agus an deireadh lena n-ainm i soilse. |
 | Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Inis dúinn cé dó é agus cathain atá sé uait. Seolfaimid nasc íocaíochta ar ais chugat agus inseoidh muid duit cathain a bheidh sé réidh. |
+| One opponent in the demo. The full game fits eight people, so everyone turns up. | Céile comhraic amháin sa taispeántas. Tá spás san iomlán d'ochtar, mar sin bíonn gach duine ann. |
+| Everyone gets the same thing: five games and a boss fight, up to eight people in it, ready in two days. You can add a poster of their game, printed and posted, for the wall. | Faigheann gach duine an rud céanna: cúig chluiche agus troid boss, suas le hochtar istigh ann, réidh i gceann dhá lá. Is féidir póstaer den chluiche a chur leis, clóite agus seolta sa phost, don bhalla. |
+| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz. Each one is against a different person. Then the boss fight, with someone on their side. Then their name in lights. | Na cluichí féin: Paddle Battle, Cath na mBalún Uisce, Cath an tSuíocháin Chúil, Dinner Dash agus Tráth na gCeist Teaghlaigh. Bíonn gach ceann in aghaidh duine difriúil. Ansin an boss, le duine ar a dtaobh. Agus ansin a n-ainm i soilse. |
+| The game, a poster of their name in lights in the post, and a short trailer for the family chat. | An cluiche, póstaer lena n-ainm i soilse sa phost, agus trailer gairid don chomhrá teaghlaigh. |
+| This poster and trailer are for a made-up family. Yours has your own names in it. | Teaghlach cumtha atá sa phóstaer agus sa trailer seo. Beidh bhur n-ainmneacha féin ar do cheannsa. |
+| Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Suas le hochtar: an teaghlach, cairde, múinteoir, traenálaí. An peata freisin: madra, cat, coinín, hamstar nó iasc. |
+| Yes. Party mode is on the title screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Tá. Tá an mód cóisire ar an scáileán teidil. Roghnaigh cé mhéad atá ag imirt. Faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag breathnú. Críochnaíonn sé le clár torthaí agus curadh. |
+| This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Seo an chéad scáileán de chluiche ceart. Sa chuid eile, is iadsan an laoch. Is iad a muintir agus a gcairde na daoine le sárú, agus is leo féin na jócanna. |
+| These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá na cinn seo mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
+| This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
+| Last changed 20 September 2026. Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | Athraithe go deireanach: 20 Meán Fómhair 2026. Glactar orduithe trí ríomhphost faoi láthair. Clúdaíonn sé seo an taispeántas saor in aisce, nach seolann faic chugainn, agus a bhfuil i gceist le hordú. |
+| The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself. A copy is saved on your own device, so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Ní fhágann an t-ainm, an ghruaig, na dathanna, an duine muinteartha ná an peata a roghnaíonn tú ar an gcéad leathanach do bhrabhsálaí riamh. Taistealaíonn siad chuig an gcluiche laistigh den seoladh gréasáin féin. Sábháiltear cóip ar do ghléas féin, mar sin bíonn do chuid oibre ann fós má thagann tú ar ais. Ní sheoltar faic chugainn agus níl aon chuntas le déanamh. |
 
 ## What the game says: names, instructions and scores
 
