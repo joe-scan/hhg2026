@@ -67,6 +67,7 @@ README.md                 short human intro and how to run it
 deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
 docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
+docs/todo.md              Joe's list: trademark, company setup, grants, what's needed before taking money
 docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
 site/index.html           landing page with the live hero builder
 site/.htaccess            https and www redirects, HSTS, caching
@@ -107,6 +108,8 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 - **Repo:** github.com/joe-scan/hhg2026, private.
 
 ## Open decisions (Joe's)
+
+The full list, including everything outside the code, is `docs/todo.md`. Keep it current: when a decision here is made or a job is done, move it to the Done section there rather than leaving both versions alive.
 
 1. Trademark neighbours to watch when searching: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
