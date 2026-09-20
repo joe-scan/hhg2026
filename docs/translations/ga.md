@@ -51,35 +51,27 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We build the game | Tógaimid an cluiche |
 | Two days, and a person plays it through before it goes anywhere. | Dhá lá, agus imríonn duine tríd é sula dtéann sé áit ar bith. |
 | They play it | Imríonn siad é |
-| A private link that works on any phone, tablet or laptop. | Nasc príobháideach a oibríonn ar aon fhón, táibléad nó ríomhaire glúine. |
 | How every game ends. | Mar sin a chríochnaíonn gach cluiche. |
 | Price | Praghas |
 | The game | An cluiche |
-| The private link, and it's theirs forever. | An nasc príobháideach, agus is leo go deo é. |
 | The gift box | An bosca bronntanais |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | An leantóir: scáileán teidil Ava, an cárta in aghaidh Daidí, píosa imeartha agus deireadh an lae bhreithe |
 | hello@happyherogames.com | hello@happyherogames.com |
 | Private by design | Príobháideach ó thús |
 | No surnames, ages, schools or addresses on screen, ever. | Ní bhíonn sloinnte, aois, scoileanna ná seoltaí ar an scáileán riamh. |
-| Every game has its own private link. | Tá a nasc príobháideach féin ag gach cluiche. |
 | We delete your answers when you ask. | Scriosaimid do fhreagraí nuair a iarrann tú orainn. |
 | The whole policy | An polasaí iomlán |
-| What does it play on? | Cá n-imrítear é? |
-| Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Ar aon fhón, táibléad nó ríomhaire glúine le brabhsálaí. Gan aon rud le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a chasadh ar a thaobh agus é a roinnt. |
-| Who can be in it? | Cé atá in ann a bheith ann? |
-
-## The rest of the site, including the privacy policy
-
-| English | Gaeilge |
-|---|---|
-| Can I change something after it arrives? | An féidir liom rud éigin a athrú ina dhiaidh? |
-| Tell us what's wrong and we'll fix it. | Inis dúinn cad atá mícheart agus socróimid é. |
 | Web Analytics Made Easy - Statcounter | Anailís gréasáin éasca - Statcounter |
 | and we'll answer in plain English. | agus freagróimid i nGaeilge shimplí. |
 | The free demo sends us nothing | Ní sheolann an taispeántas saor in aisce aon rud chugainn |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Chun an chóip sin a ghlanadh, glan sonraí an tsuímh happyherogames.com i do bhrabhsálaí. |
 | What we'll collect when you order | Cad a bhaileoimid nuair a ordaíonn tú |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Céadainmneacha, nó an rud a thugtar orthu sa bhaile: Mamaí, Mamó, Traenálaí. |
+
+## The rest of the site, including the privacy policy
+
+| English | Gaeilge |
+|---|---|
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Na rudaí is breá leis an laoch a dhéanamh, nathanna cainte agus scéalta grinn an teaghlaigh, na bianna is fearr leo. |
 | The pet's name, kind and color. | Ainm, cineál agus dath an pheata. |
 | The occasion, and the date you need it by. | An ócáid, agus an dáta a bhfuil sé uait. |
@@ -120,13 +112,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Hero's controls | Rialtáin an laoich |
 | HERO | LAOCH |
 | Turn your phone sideways for a bigger screen. | Cas do fhón ar a thaobh le haghaidh scáileán níos mó. |
-| Click the screen to start. Move with the arrow keys or | Cliceáil ar an scáileán chun tosú. Bog leis na saigheada nó |
-| , fire with | , lámhach le |
 | Space | Spásbharra |
-| or | nó |
-| Enter | Enter |
-| . In 2-player mode the grown-up uses | . I mód beirt imreoirí úsáideann an duine fásta |
-| and | agus |
 | Esc | Esc |
 | goes back to the start. | ar ais go dtí an tús. |
 | About this demo | Faoin taispeántas seo |
@@ -152,11 +138,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A HappyHeroGames game: I am the hero and my family are the ones I have to beat. | Cluiche HappyHeroGames: is mise an laoch agus caithfidh mé mo mhuintir a bhualadh. |
 | A pixel arcade title screen with the hero's name in lights | Scáileán teidil arcade i bpicteilíní leis an ainm i soilse |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Do chluiche HappyHeroGames. Imir leis an méarchlár, le rialtán nó leis na cnaipí ar an scáileán. |
-| Or email | Nó seol ríomhphost chuig |
 | Terms and refunds | Téarmaí agus aisíocaíochtaí |
 | &middot; | &middot; |
 | Terms | Téarmaí |
-| Can a whole party play? | An féidir le cóisir iomlán imirt? |
 | put a name in lights | cuir ainm i soilse |
 | Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Clóscríobh ainm agus feic i soilse é ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, gan aon rud á sheoladh chugainn. |
 | Put your name in lights | Cuir d'ainm i soilse |
@@ -206,9 +190,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One button: space, the up arrow, or a tap on the screen. | Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán. |
 | Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Inis dúinn cé dó é agus cathain atá sé uait. Seolfaimid nasc íocaíochta ar ais chugat agus inseoidh muid duit cathain a bheidh sé réidh. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Céile comhraic amháin sa taispeántas. Tá spás san iomlán d'ochtar, mar sin bíonn gach duine ann. |
-| This poster and trailer are for a made-up family. Yours has your own names in it. | Teaghlach cumtha atá sa phóstaer agus sa trailer seo. Beidh bhur n-ainmneacha féin ar do cheannsa. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Suas le hochtar: an teaghlach, cairde, múinteoir, traenálaí. An peata freisin: madra, cat, coinín, hamstar nó iasc. |
-| Yes. Party mode is on the title screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Tá. Tá an mód cóisire ar an scáileán teidil. Roghnaigh cé mhéad atá ag imirt. Faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag breathnú. Críochnaíonn sé le clár torthaí agus curadh. |
 | This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Seo an chéad scáileán de chluiche ceart. Sa chuid eile, is iadsan an laoch. Is iad a muintir agus a gcairde na daoine le sárú, agus is leo féin na jócanna. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá na cinn seo mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
@@ -220,9 +202,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Is iadsan an laoch. Mam, Daid, Mamó, a gcara is fearr agus an madra na daoine le sárú. Oibríonn sé ar aon fhón. Faic le suiteáil. |
 | Play the first game, free | Imir an chéad chluiche, saor in aisce |
 | Nothing you type is sent to us. Or just | Ní sheoltar chugainn aon rud a chlóscríobhann tú. Nó díreach |
-| Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Mar tá nasc deacair a fhilleadh. An cluiche, póstaer lena n-ainm i soilse sa phost, agus trailer gairid don chomhrá teaghlaigh. |
 | Tell us about them | Inis dúinn fúthu |
-| How long does it last? | Cá fhad a mhaireann sé? |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Timpeall fiche nóiméad an chéad uair. Ansin imríonn siad arís é agus tugann siad do dhuine ar bith sa seomra é. |
 | Build the real one | Tóg an ceann ceart |
 | You get five games and a boss fight, up to eight people in it, ready in two working days. You can add a poster of the game, printed and posted, for the wall. | Faigheann tú cúig chluiche agus troid boss, suas le hochtar istigh ann, réidh i gceann dhá lá oibre. Is féidir póstaer den chluiche a chur leis, clóite agus seolta sa phost, don bhalla. |
@@ -243,6 +223,28 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Your game | Do chluiche |
 | Their name, who's in it, what they love, what they always say. You pick how they look. | A n-ainm, cé atá ann, na rudaí is breá leo, an rud a deir siad i gcónaí. Roghnaíonn tusa an chuma atá orthu. |
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Níl grianghraif ag teastáil. Roghnaíonn tú an ghruaig, an craiceann agus an léine, agus tarraingítear an laoch i bpicteilíní. |
+| We email you a web address. Tap it and the game opens. Nothing to install. | Seolaimid seoladh gréasáin chugat ar ríomhphost. Tapáil é agus osclaíonn an cluiche. Faic le suiteáil. |
+| This opens an email. Or write to | Osclaíonn sé seo ríomhphost. Nó scríobh tú féin chuig |
+| What device do I need? | Cén gléas atá uaim? |
+| Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin. Níl aon rud le híoslódáil ná le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a roinnt agus é casta ar a thaobh. |
+| How do I give it to them? | Conas a thugaim dóibh é? |
+| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. The gift box also has a printed poster, which arrives in the post so there is something to wrap. | Seolaimid seoladh gréasáin chugat ar ríomhphost nach leo ach iadsan. Seol ar an lá é le teachtaireacht nó ríomhphost, nó scríobh isteach i gcárta é. Tá póstaer clóite sa bhosca bronntanais freisin, a thagann sa phost, ionas go mbeidh rud éigin ann le filleadh. |
+| Do I need to be good with computers? | An gá dom a bheith go maith le ríomhairí? |
+| No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | Ní gá. Freagraíonn tú cúpla ceist ar fhoirm, mar a líonfá isteach seoladh. Déanaimid an cluiche agus seolaimid an nasc chugat. |
+| Who can be in the game? | Cé atá in ann a bheith sa chluiche? |
+| How long does it take to play? | Cá fhad a thógann sé le himirt? |
+| Can a few children play together? | An féidir le roinnt páistí imirt le chéile? |
+| Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Is féidir. Tá an mód cóisire ar an gcéad scáileán. Roghnaigh cé mhéad atá ag imirt. Faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag breathnú. Críochnaíonn sé le clár torthaí agus curadh. |
+| What if something is wrong when it arrives? | Cad a tharlaíonn má tá rud éigin mícheart nuair a thagann sé? |
+| Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Inis dúinn cad atá mícheart agus deisímid é agus seolaimid nasc nua. Níl aon táille air sin. |
+| The game at its own web address, theirs to keep. | An cluiche ag a sheoladh gréasáin féin, acu go deo. |
+| Because a link is hard to wrap. The game, a printed poster of their name in lights that arrives in the post, and a short video of their game you can send to the family. | Mar tá nasc deacair a fhilleadh. An cluiche, póstaer clóite lena n-ainm i soilse a thagann sa phost, agus físeán gairid den chluiche is féidir leat a sheoladh chuig an teaghlach. |
+| This poster and video are for a made-up family. Yours has your own names in it. | Teaghlach cumtha atá sa phóstaer agus san fhíseán seo. Beidh bhur n-ainmneacha féin ar do cheannsa. |
+| Every game has its own web address, which cannot be guessed. | Tá a sheoladh gréasáin féin ag gach cluiche, nach féidir a thomhas. |
+| Click the screen to start. Move with the arrow keys, and press | Cliceáil ar an scáileán chun tosú. Bog leis na saigheada, agus brúigh |
+| to fire. If two of you play on one keyboard, the second player uses | chun lámhach. Má imríonn beirt agaibh ar mhéarchlár amháin, úsáideann an dara himreoir |
+| to move and | chun bogadh agus |
+| to fire. | chun lámhach. |
 
 ## What the game says: names, instructions and scores
 

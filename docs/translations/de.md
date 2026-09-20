@@ -51,35 +51,27 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We build the game | Wir bauen das Spiel |
 | Two days, and a person plays it through before it goes anywhere. | Zwei Tage, und ein Mensch spielt es durch, bevor es rausgeht. |
 | They play it | Sie spielen es |
-| A private link that works on any phone, tablet or laptop. | Ein privater Link, der auf jedem Handy, Tablet oder Laptop funktioniert. |
 | How every game ends. | So endet jedes Spiel. |
 | Price | Preis |
 | The game | Das Spiel |
-| The private link, and it's theirs forever. | Der private Link, und er gehört ihnen für immer. |
 | The gift box | Die Geschenkbox |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Der Trailer: Avas Titelbildschirm, die Versus-Karte gegen Papa, etwas Spiel und das Geburtstagsende |
 | hello@happyherogames.com | hello@happyherogames.com |
 | Private by design | Privat von Anfang an |
 | No surnames, ages, schools or addresses on screen, ever. | Nie Nachnamen, Alter, Schulen oder Adressen auf dem Bildschirm. |
-| Every game has its own private link. | Jedes Spiel hat seinen eigenen privaten Link. |
 | We delete your answers when you ask. | Wir löschen deine Angaben, sobald du es sagst. |
 | The whole policy | Die ganze Richtlinie |
-| What does it play on? | Worauf läuft es? |
-| Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Auf jedem Handy, Tablet oder Laptop mit Browser. Nichts zu installieren. Zwei Personen können an einer Tastatur spielen oder sich ein quer gehaltenes Handy teilen. |
-| Who can be in it? | Wer kann mitspielen? |
-
-## The rest of the site, including the privacy policy
-
-| English | Deutsch |
-|---|---|
-| Can I change something after it arrives? | Kann ich später noch etwas ändern? |
-| Tell us what's wrong and we'll fix it. | Sag uns, was nicht stimmt, und wir bringen es in Ordnung. |
 | Web Analytics Made Easy - Statcounter | Web-Analyse leicht gemacht - Statcounter |
 | and we'll answer in plain English. | und wir antworten in klarem Deutsch. |
 | The free demo sends us nothing | Die kostenlose Demo sendet uns nichts |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Um diese Kopie zu löschen, lösche die Websitedaten für happyherogames.com in deinem Browser. |
 | What we'll collect when you order | Was wir bei einer Bestellung erheben |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Vornamen, oder wie jemand zu Hause genannt wird: Mama, Oma, Trainer. |
+
+## The rest of the site, including the privacy policy
+
+| English | Deutsch |
+|---|---|
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Was der Held gern macht, die Sprüche und Running Gags der Familie, Lieblingsessen. |
 | The pet's name, kind and color. | Name, Art und Farbe des Haustiers. |
 | The occasion, and the date you need it by. | Der Anlass und das Datum, zu dem du es brauchst. |
@@ -120,13 +112,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Hero's controls | Steuerung des Helden |
 | HERO | HELD |
 | Turn your phone sideways for a bigger screen. | Dreh dein Handy quer für einen größeren Bildschirm. |
-| Click the screen to start. Move with the arrow keys or | Klicke auf den Bildschirm zum Start. Bewege dich mit den Pfeiltasten oder |
-| , fire with | , schieße mit |
 | Space | Leertaste |
-| or | oder |
-| Enter | Enter |
-| . In 2-player mode the grown-up uses | . Im 2-Spieler-Modus nutzt der Erwachsene |
-| and | und |
 | Esc | Esc |
 | goes back to the start. | bringt dich zurück zum Anfang. |
 | About this demo | Über diese Demo |
@@ -152,11 +138,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A HappyHeroGames game: I am the hero and my family are the ones I have to beat. | Ein HappyHeroGames-Spiel: Ich bin der Held und meine Familie muss ich schlagen. |
 | A pixel arcade title screen with the hero's name in lights | Ein Pixel-Arcade-Titelbildschirm mit dem Namen des Helden in Lichtern |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Dein HappyHeroGames-Spiel. Spiele mit Tastatur, Gamepad oder den Tasten auf dem Bildschirm. |
-| Or email | Oder schreib an |
 | Terms and refunds | Bedingungen und Rückgabe |
 | &middot; | &middot; |
 | Terms | Bedingungen |
-| Can a whole party play? | Kann eine ganze Party spielen? |
 | put a name in lights | einen Namen in Lichter setzen |
 | Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Tippe einen Namen und sieh ihn in Lichtern auf einem Arcade-Bildschirm. Kostenlos, nichts zu installieren, nichts wird gesendet. |
 | Put your name in lights | Setz deinen Namen in Lichter |
@@ -206,9 +190,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One button: space, the up arrow, or a tap on the screen. | Ein Knopf: Leertaste, Pfeil nach oben oder ein Tippen auf den Bildschirm. |
 | Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Sag uns, für wen es ist und wann du es brauchst. Wir schicken dir einen Zahlungslink zurück und sagen dir, wann es fertig ist. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Ein Gegner in der Demo. Ins volle Spiel passen acht Personen, also sind alle dabei. |
-| This poster and trailer are for a made-up family. Yours has your own names in it. | Dieses Poster und dieser Trailer sind für eine erfundene Familie. Deins bekommt eure eigenen Namen. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Bis zu acht Personen: Familie, Freunde, eine Lehrerin, ein Trainer. Das Haustier auch: Hund, Katze, Kaninchen, Hamster oder Fisch. |
-| Yes. Party mode is on the title screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Ja. Der Partymodus steht im Titelbildschirm. Wähl aus, wie viele mitspielen. Jede und jeder tritt der Reihe nach gegen den Helden an, die anderen schauen zu. Am Ende steht eine Ergebnistafel mit einem Sieger. |
 | This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Das ist der erste Bildschirm eines echten Spiels. Im Rest sind sie der Held. Ihre Familie und ihre Freunde muss man schlagen, und die Witze sind ihre eigenen. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Diese hier sind für alle gleich. Die Spiele, die wir bauen, sind anders. Fünf Spiele, mit der eigenen Familie und den eigenen Freunden als Gegner, und ihren Witzen auf jedem Bildschirm. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Dieses hier ist gratis und für alle gleich. Die Spiele, die wir bauen, sind anders. Fünf Spiele, mit der eigenen Familie und den eigenen Freunden als Gegner, und ihren Witzen auf jedem Bildschirm. |
@@ -220,9 +202,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Sie sind der Held. Mama, Papa, Oma, die beste Freundin und der Hund müssen geschlagen werden. Läuft auf jedem Handy. Nichts zu installieren. |
 | Play the first game, free | Spiel das erste Spiel, gratis |
 | Nothing you type is sent to us. Or just | Nichts, was du tippst, geht an uns. Oder einfach |
-| Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Weil sich ein Link schlecht einpacken lässt. Das Spiel, ein Poster mit ihrem Namen in Leuchtschrift per Post und ein kurzer Trailer für den Familienchat. |
 | Tell us about them | Erzähl uns von ihnen |
-| How long does it last? | Wie lange dauert es? |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Beim ersten Mal etwa zwanzig Minuten. Dann spielen sie es noch mal und geben es weiter an alle im Raum. |
 | Build the real one | Bau das richtige |
 | You get five games and a boss fight, up to eight people in it, ready in two working days. You can add a poster of the game, printed and posted, for the wall. | Du bekommst fünf Spiele und einen Endgegner, bis zu acht Personen darin, fertig in zwei Werktagen. Dazu gibt es auf Wunsch ein Poster des Spiels, gedruckt und zugeschickt, für die Wand. |
@@ -243,6 +223,28 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Your game | Dein Spiel |
 | Their name, who's in it, what they love, what they always say. You pick how they look. | Ihr Name, wer mitspielt, was sie lieben, was sie immer sagen. Das Aussehen wählst du. |
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Fotos braucht es nicht. Du wählst Haare, Haut und Shirt, und der Held wird in Pixeln gezeichnet. |
+| We email you a web address. Tap it and the game opens. Nothing to install. | Wir schicken dir per E-Mail eine Webadresse. Antippen, und das Spiel geht auf. Nichts zu installieren. |
+| This opens an email. Or write to | Das öffnet eine E-Mail. Oder schreib selbst an |
+| What device do I need? | Welches Gerät brauche ich? |
+| Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Jedes Handy, Tablet, Notebook oder jeder Computer mit einem Webbrowser. Es gibt nichts herunterzuladen und nichts zu installieren. Zwei Personen können an einer Tastatur spielen oder sich ein quer gehaltenes Handy teilen. |
+| How do I give it to them? | Wie verschenke ich es? |
+| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. The gift box also has a printed poster, which arrives in the post so there is something to wrap. | Wir schicken dir per E-Mail eine Webadresse, die nur ihnen gehört. Schick sie am Tag selbst per Nachricht oder E-Mail, oder schreib sie in eine Karte. In der Geschenkbox ist außerdem ein gedrucktes Poster, das mit der Post kommt, damit es etwas zum Einpacken gibt. |
+| Do I need to be good with computers? | Muss ich mich mit Computern auskennen? |
+| No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | Nein. Du beantwortest ein paar Fragen in einem Formular, so wie man eine Adresse einträgt. Wir bauen das Spiel und schicken dir den Link. |
+| Who can be in the game? | Wer kann im Spiel vorkommen? |
+| How long does it take to play? | Wie lange dauert es zu spielen? |
+| Can a few children play together? | Können mehrere Kinder zusammen spielen? |
+| Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Ja. Der Partymodus steht auf dem ersten Bildschirm. Wähl aus, wie viele mitspielen. Jede und jeder tritt der Reihe nach gegen den Helden an, die anderen schauen zu. Am Ende steht eine Ergebnistafel mit einem Sieger. |
+| What if something is wrong when it arrives? | Und wenn etwas nicht stimmt, wenn es ankommt? |
+| Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Sag uns, was nicht stimmt, wir bringen es in Ordnung und schicken einen neuen Link. Das kostet nichts. |
+| The game at its own web address, theirs to keep. | Das Spiel unter seiner eigenen Webadresse, zum Behalten. |
+| Because a link is hard to wrap. The game, a printed poster of their name in lights that arrives in the post, and a short video of their game you can send to the family. | Weil sich ein Link schlecht einpacken lässt. Das Spiel, ein gedrucktes Poster mit ihrem Namen in Leuchtschrift, das mit der Post kommt, und ein kurzes Video vom Spiel, das du der Familie schicken kannst. |
+| This poster and video are for a made-up family. Yours has your own names in it. | Dieses Poster und dieses Video sind für eine erfundene Familie. Deins bekommt eure eigenen Namen. |
+| Every game has its own web address, which cannot be guessed. | Jedes Spiel hat seine eigene Webadresse, die nicht zu erraten ist. |
+| Click the screen to start. Move with the arrow keys, and press | Klick auf den Bildschirm, um zu starten. Bewegen mit den Pfeiltasten, schießen mit |
+| to fire. If two of you play on one keyboard, the second player uses | . Wenn ihr zu zweit an einer Tastatur spielt, bewegt sich die zweite Person mit |
+| to move and | und schießt mit |
+| to fire. | . |
 
 ## What the game says: names, instructions and scores
 
