@@ -21,6 +21,13 @@
 .look button:hover{color:var(--ink);border-color:var(--rule)}
 .look button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink);font-weight:700}
 
+/* the language picker, same shape as the skin picker */
+.langs{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.langs a{color:var(--muted);text-decoration:none}
+.langs a:hover{color:var(--ink);text-decoration:underline}
+.langs b{color:var(--ink)}
+footer .langs{justify-content:flex-end}
+
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:0 40px;touch-action:manipulation}

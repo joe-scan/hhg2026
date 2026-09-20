@@ -34,6 +34,14 @@ What we learnt from it, and why the product looks like this:
 - **Two prices: $99 the game, $179 the gift box.** Decided 20 Sep 2026, on the site, and in the plan. Model and numbers: `docs/business-plan.md`. Questionnaire, config, game format and how the site is served: `docs/product.md`.
 - **No cheap tier, no monthly club, no sibling add-on.** All three were tried on paper and dropped. Every extra option is another decision between someone and their credit card.
 
+## Languages
+
+English is the source. Spanish is live at `/es/`. A language is two files: `site-src/words/<lang>.json` for the pages and `site-src/words/game-<lang>.json` for the game code, both keyed by the exact English string. `node tools/build.mjs` renders the pages, writes a translated copy of the game code into `site/<lang>/arcade/`, and adds the hreflang tags and the language picker. An identity dictionary reproduces the English files byte for byte, which is the test that the machinery is safe.
+
+- **Never ship a half-translated language.** A Spanish page leading to an English game is worse than no Spanish page. `LANGS` in `tools/build.mjs` lists only what is finished.
+- **In-game text avoids accented capitals** except Ñ and Ü. Press Start 2P draws É, Á and Ö as lowercase shapes, which looks broken in an all-caps arcade screen. Page text keeps its accents.
+- Order to add them: Spanish (done), German, French, then Italian.
+
 ## Rules that don't bend
 
 **Privacy (children's data).** Collect as little as possible and show less.
@@ -72,7 +80,11 @@ docs/todo.md              Joe's list: trademark, company setup, grants, what's n
 docs/competitors.md       who else sells this, what to take from them, where we win
 docs/research/            raw captures behind the research, kept so claims can be checked
 docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
-site/index.html           landing page with the live hero builder
+site-src/pages/*.html     **the source pages. Edit these, never site/*.html**
+site-src/words/*.json     one file per language: English text -> translated text
+tools/build.mjs           renders the pages into site/, English and every translated language
+tools/strings.mjs         pulls the player-facing strings out of the game code
+site/index.html           generated: landing page with the live hero builder
 site/.htaccess            https and www redirects, HSTS, caching
 site/g/.htaccess          keeps every game out of search engines
 site/builder.js           the builder: form to config, live preview, Play link
@@ -95,6 +107,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 ## How to work here
 
+- **Edit pages in `site-src/pages/`, then run `node tools/build.mjs`.** Everything in `site/*.html`, `site/es/` and the translated copies of the game code is generated. Editing `site/index.html` by hand means losing it on the next build. `deploy.sh` builds before it uploads.
 - **Run it:** `cd site && python3 -m http.server 8766`, then open http://localhost:8766. Or open `site/index.html` directly.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches `site/`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).

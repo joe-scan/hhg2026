@@ -72,6 +72,19 @@ if (!prem.url().includes('/premiere/')) errors.push('the premiere followed an of
 await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=/g/demo/`); await prem.waitForTimeout(3200);
 if (!prem.url().includes('/g/demo/')) errors.push('the premiere did not open the game at zero');
 
+// 2d. the Spanish build: the page is translated, the game is translated, and it still stops at
+// the locked card
+const es = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(es);
+await es.goto(BASE + 'es/'); await es.waitForTimeout(600);
+if (await es.evaluate(() => document.documentElement.lang) !== 'es') errors.push('the Spanish page is not marked lang="es"');
+if (!(await es.title()).includes('Happy Hero Games')) errors.push('the Spanish page lost its title');
+await es.goto(BASE + 'es/g/demo/'); await es.waitForTimeout(700);
+const esGame = await es.evaluate(() => [__hhg.games()[0], ROLES.dad.label].join(' | '));
+if (esGame !== 'GUERRA DE GLOBOS | Papá') errors.push('the Spanish game reads: ' + esGame);
+const esSeen = await run(es, 'locked');
+console.log('spanish demo:', esSeen.join(' > '));
+if (esSeen[esSeen.length - 1] !== 'locked') errors.push('the Spanish demo did not stop at the locked card');
+
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);
 console.log('default hero:', await p2.evaluate(() => HERO.name));

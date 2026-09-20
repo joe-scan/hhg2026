@@ -3,10 +3,10 @@
 // and the Play button opens the game page (g/demo/) with the config in the link. Nothing is sent to a server.
 (() => {
   const $ = id => document.getElementById(id);
-  const HAIRNAMES = ['Black', 'Dark brown', 'Brown', 'Light brown', 'Auburn', 'Ginger', 'Blonde', 'Grey'];
-  const SKINNAMES = ['Lightest', 'Light', 'Light medium', 'Medium', 'Medium dark', 'Dark'];
-  const KITNAMES = ['Blue', 'Red', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'White', 'Black'];
-  const PETNAMES = ['White', 'Cream', 'Tan', 'Brown', 'Black', 'Grey'];
+  const HAIRNAMES = ['Negro', 'Castaño oscuro', 'Castaño', 'Castaño claro', 'Cobrizo', 'Pelirrojo', 'Rubio', 'Gris'];
+  const SKINNAMES = ['Lightest', 'Claro', 'Claro medio', 'Medio', 'Medio oscuro', 'Oscuro'];
+  const KITNAMES = ['Azul', 'Rojo', 'Verde', 'Amarillo', 'Morado', 'Naranja', 'Rosa', 'Blanco', 'Negro'];
+  const PETNAMES = ['Blanco', 'Crema', 'Beige', 'Castaño', 'Negro', 'Gris'];
 
   // start from the link (coming back from the game), then a saved draft, then the demo family
   let cfg = null;
@@ -83,7 +83,7 @@
   function changed() {
     const c = current(); applyConfig(c);
     $('play').href = 'g/demo/#g=' + encodeCfg(c);
-    $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s game';
+    $('play-label').textContent = 'Juega al juego de ' + titleCase(c.hero.name) + '';
     try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }
   changed();
@@ -96,7 +96,7 @@
     txt('STARRING', W / 2, 16, 8, COL.cyan, 'center');
     const n = HERO.name;
     logo(n, W / 2, 30, n.length > 7 ? 24 : 32, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
-    const occ = OCCASIONS[CFG.occasion] === 'YOU\'RE A STAR' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion] + ' EDITION';
+    const occ = OCCASIONS[CFG.occasion] === 'ERES UNA ESTRELLA' ? 'UNA AVENTURA ARCADE' : OCCASIONS[CFG.occasion] + ' EDICION';
     rect(W / 2 - occ.length * 4 - 6, 68, occ.length * 8 + 12, 15, 'rgba(10,4,22,.85)'); txt(occ, W / 2, 72, 8, COL.gold, 'center');
     const cast = [HERO].concat(FAM), gap = 70, x0 = W / 2 - (cast.length - 1) * gap / 2;
     cast.forEach((sp, k) => { shadow(x0 + k * gap, 236, 14); drawSpec(sp, x0 + k * gap, 236, k ? 3 : 4, false, Math.floor(t / 22 + k)); });

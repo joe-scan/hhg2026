@@ -72,6 +72,12 @@ Last updated 20 September 2026.
 - [ ] Measure the share rate: how many families press Share at the end.
 - [ ] Ask every buyer for a ten-second clip of the moment the child sees their name. Those clips are the advertising.
 
+## Languages
+
+- [ ] Read the Spanish once, or have someone read it: it is Claude's translation, not a native speaker's. The jokes are the part worth checking.
+- [ ] German next, then French, then Italian. Each is two word files in `site-src/words/`.
+- [ ] Decide whether a Spanish visitor should land on /es/ automatically, or be offered it. Automatic redirects annoy people who want English.
+
 ## From the competitor research
 
 See `docs/competitors.md`. These are the cheap, proven moves.
@@ -100,3 +106,4 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Business plan, one-page pitch and product spec written (20 Sep 2026).
 - [x] Competitor research done and written up (20 Sep 2026).
 - [x] Three skins live with a picker in the header: Paper, Dark, Sunset (20 Sep 2026).
+- [x] Translation machinery built, and Spanish live at /es/, page and game (20 Sep 2026).

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Play | Happy Hero Games</title>
+<title>Jugar | Happy Hero Games</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <link rel="alternate" hreflang="de" href="../../de/g/demo/">
 <link rel="alternate" hreflang="fr" href="../../fr/g/demo/">
 <link rel="alternate" hreflang="x-default" href="../../g/demo/">
-<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../../css/site.css">
 <script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
 
 <style>
@@ -62,40 +62,40 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </head>
 <body data-game="on">
 <div class="bar wide">
-  <div class="left"><a class="btn small" href="../../index.html">Home</a> <button type="button" class="btn small" id="btn-share">Share</button> <a class="btn small" id="edit" href="../../index.html#make">Edit your hero</a></div>
-  <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Sound: on</button>
+  <div class="left"><a class="btn small" href="../../../index.html">Inicio</a> <button type="button" class="btn small" id="btn-share">Compartir</button> <a class="btn small" id="edit" href="../../../index.html#make">Edita tu héroe</a></div>
+  <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Sonido: activado</button>
 </div>
 
 <main class="stage wide">
-  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Your Happy Hero game. Play with the keyboard, a gamepad or the on-screen pads."></canvas></div>
-  <div class="tpad p0" aria-label="Family player's controls">
-    <button type="button" id="btn-home-pad" class="home">Title</button>
-    <span class="who">FAMILY</span>
-    <div class="dpad"><button data-p="0" data-k="u" aria-label="Up">▲</button><button data-p="0" data-k="l" aria-label="Left">◀</button><button data-p="0" data-k="r" aria-label="Right">▶</button><button data-p="0" data-k="d" aria-label="Down">▼</button></div>
-    <button class="fire" data-p="0" data-k="a">FIRE</button>
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Tu juego Happy Hero. Juega con el teclado, un mando o los botones en pantalla."></canvas></div>
+  <div class="tpad p0" aria-label="Controles del jugador de la familia">
+    <button type="button" id="btn-home-pad" class="home">Título</button>
+    <span class="who">FAMILIA</span>
+    <div class="dpad"><button data-p="0" data-k="u" aria-label="Arriba">▲</button><button data-p="0" data-k="l" aria-label="Izquierda">◀</button><button data-p="0" data-k="r" aria-label="Derecha">▶</button><button data-p="0" data-k="d" aria-label="Abajo">▼</button></div>
+    <button class="fire" data-p="0" data-k="a">DISPARO</button>
   </div>
-  <div class="tpad p1" aria-label="Hero's controls">
-    <span class="who" id="hero-pad">HERO</span>
-    <div class="dpad"><button data-p="1" data-k="u" aria-label="Up">▲</button><button data-p="1" data-k="l" aria-label="Left">◀</button><button data-p="1" data-k="r" aria-label="Right">▶</button><button data-p="1" data-k="d" aria-label="Down">▼</button></div>
-    <button class="fire" data-p="1" data-k="a">FIRE</button>
+  <div class="tpad p1" aria-label="Controles del héroe">
+    <span class="who" id="hero-pad">HÉROE</span>
+    <div class="dpad"><button data-p="1" data-k="u" aria-label="Arriba">▲</button><button data-p="1" data-k="l" aria-label="Izquierda">◀</button><button data-p="1" data-k="r" aria-label="Derecha">▶</button><button data-p="1" data-k="d" aria-label="Abajo">▼</button></div>
+    <button class="fire" data-p="1" data-k="a">DISPARO</button>
   </div>
 </main>
-<div class="langs"><b>English</b> <a href="../../es/g/demo/" hreflang="es">Español</a> <a href="../../de/g/demo/" hreflang="de">Deutsch</a> <a href="../../fr/g/demo/" hreflang="fr">Français</a></div><p class="tip">Turn your phone sideways for a bigger screen.</p>
-<p class="keys wide">Click the screen to start. Move with the arrow keys or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, fire with <kbd>Space</kbd> or <kbd>Enter</kbd>. In 2-player mode the grown-up uses <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>Space</kbd>. <kbd>Esc</kbd> goes back to the start.</p>
+<div class="langs"><a href="../../g/demo/" hreflang="en">English</a> <b>Español</b> <a href="../../de/g/demo/" hreflang="de">Deutsch</a> <a href="../../fr/g/demo/" hreflang="fr">Français</a></div><p class="tip">Gira el teléfono en horizontal para tener una pantalla más grande.</p>
+<p class="keys wide">Haz clic en la pantalla para empezar. Muévete con las flechas o <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, dispara con <kbd>Espacio</kbd> o <kbd>Intro</kbd>. En modo de dos jugadores, la persona adulta usa <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> y <kbd>Espacio</kbd>. <kbd>Esc</kbd> vuelve al inicio.</p>
 
-<section class="demo wide" aria-label="About this demo">
+<section class="demo wide" aria-label="Sobre esta demo">
   <div>
-    <p><strong>This is the free demo.</strong> One game, built in your browser from what you typed. The full game has five games picked for what they love, the boss fight, up to eight people, and the ending with their name up in lights.</p>
+    <p><strong>Esta es la demo gratuita.</strong> Un juego, creado en tu navegador con lo que escribiste. El juego completo tiene cinco juegos elegidos según lo que le encanta, la pelea contra el jefe, hasta ocho personas y el final con su nombre en luces.</p>
     <ul class="locked" id="locked-list">
-      <li>Paddle Battle</li>
-      <li>Dinner Dash</li>
-      <li>Back Seat Battle</li>
-      <li>The Family Quiz</li>
-      <li>The boss fight</li>
-      <li>The ending</li>
+      <li>Batalla de Palas</li>
+      <li>Carrera de la Cena</li>
+      <li>Guerra en el Asiento Trasero</li>
+      <li>El Concurso Familiar</li>
+      <li>La pelea contra el jefe</li>
+      <li>El final</li>
     </ul>
   </div>
-  <a class="btn go" href="../../index.html#prices">Get the full game</a>
+  <a class="btn go" href="../../../index.html#prices">Consigue el juego completo</a>
 </section>
 
 <!-- The teaser loads one game and nothing else, so there is nothing in the page to unlock by

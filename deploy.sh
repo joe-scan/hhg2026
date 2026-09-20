@@ -5,6 +5,7 @@
 # .well-known (Namecheap's SSL renewal checks it) and cgi-bin, which cPanel put there.
 set -euo pipefail
 cd "$(dirname "$0")"
+node tools/build.mjs
 rsync -rtvz --delete --chmod=D755,F644 \
   --filter='P .well-known/' --filter='P cgi-bin/' \
   site/ retroelf-host:happyherogames.com/

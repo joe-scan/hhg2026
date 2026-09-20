@@ -6,6 +6,10 @@ Site: https://happyherogames.com. Email: hello@happyherogames.com (forwards to J
 
 Pre-launch. Nothing here takes orders or stores anyone's details yet.
 
+## Languages
+
+English is the source and lives in `site-src/pages/`. Spanish is at `/es/`. Edit the source pages, run `node tools/build.mjs`, and every language is regenerated. Never edit `site/*.html` by hand.
+
 ## Try it
 
 ```sh

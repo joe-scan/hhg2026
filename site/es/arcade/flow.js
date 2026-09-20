@@ -4,21 +4,21 @@
 // The hero is player slot 1. Slot 0 is the family member they're facing, played by the computer,
 // or by a real grown-up on WASD / Space / the left touch pad in 2-player mode.
 const TAUNT = {
-  dad: ['I TAUGHT YOU EVERYTHING YOU KNOW.', 'GO EASY ON ME, MY KNEES.', 'I WAS A BIG DEAL BACK IN THE DAY.'],
-  mum: ['I DON\'T LOSE. ASK YOUR DAD.', 'LOSER DOES THE DISHES.', 'I\'VE BEEN PRACTICING.'],
-  granny: ['I\'VE BEEN PLAYING THIS FOR YEARS.', 'DON\'T LET THE CARDIGAN FOOL YOU.', 'WINNER GETS A COOKIE.'],
-  grandad: ['IN MY DAY WE HAD ONE BUTTON.', 'I\'M ONLY WARMING UP.', 'NOBODY BEATS GRANDAD.'],
-  auntie: ['YOUR FAVORITE AUNT IS BACK!', 'NO MERCY TODAY.', 'I\'M BETTER THAN YOUR UNCLE.'],
-  uncle: ['I\'LL LET YOU HAVE A HEAD START.', 'WATCH AND LEARN.', 'TELL YOUR DAD I SAID HELLO.'],
-  brother: ['YOU\'RE GOING DOWN!', 'NOT EVEN YOUR BIRTHDAY WILL SAVE YOU.', 'I\'M TELLING ON YOU IF YOU CHEAT.'],
-  sister: ['READY TO LOSE?', 'I\'M THE CHAMPION IN THIS HOUSE.', 'NO CRYING WHEN YOU LOSE.'],
-  friend: ['WE BOTH KNOW WHO WINS THIS.', 'NO TAKING IT BACK AFTER.', 'LOSER CARRIES THE BAGS.'],
-  bestfriend: ['BEST FRIENDS UNTIL THE WHISTLE.', 'I KNOW ALL YOUR TRICKS.', 'YOU TAUGHT ME THIS ONE.'],
-  cousin: ['FAMILY HONOUR IS ON THE LINE.', 'I\'VE BEEN WAITING ALL YEAR.', 'MY SIDE OF THE FAMILY WINS.'],
-  teacher: ['THIS IS NOT ON THE TEST.', 'SHOW YOUR WORKING.', 'I MARK HARD.'],
-  coach: ['DID YOU WARM UP?', 'NO EXCUSES OUT THERE.', 'I\'VE SEEN YOUR TRAINING.']
+  dad: ['YO TE ENSEÑE TODO LO QUE SABES.', 'TEN PIEDAD, MIS RODILLAS.', 'EN MIS TIEMPOS YO ERA BUENISIMO.'],
+  mum: ['YO NO PIERDO. PREGUNTA A TU PADRE.', 'EL QUE PIERDE FRIEGA LOS PLATOS.', 'HE ESTADO PRACTICANDO.'],
+  granny: ['LLEVO AÑOS JUGANDO A ESTO.', 'QUE LA CHAQUETA NO TE ENGAÑE.', 'EL QUE GANE SE LLEVA UNA GALLETA.'],
+  grandad: ['EN MIS TIEMPOS HABIA UN BOTON.', 'SOLO ESTOY CALENTANDO.', 'NADIE GANA AL ABUELO.'],
+  auntie: ['¡VUELVE TU TIA FAVORITA!', 'HOY NO HAY PIEDAD.', 'SOY MEJOR QUE TU TIO.'],
+  uncle: ['TE DOY VENTAJA.', 'MIRA Y APRENDE.', 'DILE HOLA A TU PADRE.'],
+  brother: ['¡VAS A CAER!', 'NI TU CUMPLEAÑOS TE SALVA.', 'SI HACES TRAMPA, LO CUENTO.'],
+  sister: ['¿LISTO PARA PERDER?', 'SOY LA CAMPEONA DE ESTA CASA.', 'NADA DE LLORAR AL PERDER.'],
+  friend: ['LOS DOS SABEMOS QUIEN GANA.', 'LUEGO NO VALE ECHARSE ATRAS.', 'EL QUE PIERDE LLEVA LAS BOLSAS.'],
+  bestfriend: ['AMIGOS HASTA EL PITIDO.', 'ME SE TODOS TUS TRUCOS.', 'ESTE ME LO ENSEÑASTE TU.'],
+  cousin: ['ESTA EN JUEGO EL HONOR FAMILIAR.', 'LLEVO TODO EL AÑO ESPERANDO.', 'GANA MI PARTE DE LA FAMILIA.'],
+  teacher: ['ESTO NO ENTRA EN EL EXAMEN.', 'ENSEÑA LAS OPERACIONES.', 'CORRIJO MUY DURO.'],
+  coach: ['¿HAS CALENTADO?', 'AHI FUERA NO HAY EXCUSAS.', 'HE VISTO TUS ENTRENAMIENTOS.']
 };
-const CHEERS_END = { birthday: 'HAPPY BIRTHDAY!', christmas: 'HAPPY CHRISTMAS!', fathers: 'HAPPY FATHER\'S DAY!', mothers: 'HAPPY MOTHER\'S DAY!', star: 'WELL DONE!' };
+const CHEERS_END = { birthday: '¡FELIZ CUMPLEAÑOS!', christmas: '¡FELIZ NAVIDAD!', fathers: '¡FELIZ DIA DEL PADRE!', mothers: '¡FELIZ DIA DE LA MADRE!', star: '¡MUY BIEN!' };
 let S = { name: 'title', t: 0 }, game = null, round = 0, won = [0, 0], two = false, bossTime = 0;
 function go(name, data) {
   S = Object.assign({ name, t: 0 }, data || {}); parts = []; floats = [];
@@ -30,7 +30,7 @@ function hud(title, sub) {
   txt(title, W / 2, 4, 8, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 15, 8, '#fff', 'center');
   for (let k = 0; k < GAMES.length; k++) rect(W - 6 - (GAMES.length - k) * 10, 15, 7, 7, k < round - 1 ? COL.green : k === round - 1 ? '#fff' : COL.off);
 }
-function pressFire(y, label) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TAP OR PRESS FIRE' : 'PRESS FIRE'), W / 2, y, 8, '#fff', 'center', COL.hot); }
+function pressFire(y, label) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TOCA O PULSA DISPARO' : 'PULSA DISPARO'), W / 2, y, 8, '#fff', 'center', COL.hot); }
 function whistle() { tone(2100, .35, 'square', .12); tone(2250, .35, 'square', .08, 0, .02); }
 // the referee: the dog if there is one, otherwise a spare grown-up
 function referee(cx, fy, sc) { if (petRuns()) pet(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
@@ -61,7 +61,7 @@ const ST = {
       txt('STARRING', W / 2, 16, 8, COL.cyan, 'center');
       const n = HERO.name, size = n.length > 7 ? 24 : 32;
       logo(n, W / 2, 30, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
-      const occ = CFG.occasion === 'star' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion] + ' EDITION';
+      const occ = CFG.occasion === 'star' ? 'UNA AVENTURA ARCADE' : OCCASIONS[CFG.occasion] + ' EDICION';
       rect(W / 2 - occ.length * 4 - 6, 68, occ.length * 8 + 12, 15, 'rgba(10,4,22,.85)'); txt(occ, W / 2, 72, 8, COL.gold, 'center');
       // the whole cast lined up along the horizon
       const cast = [HERO].concat(FAM), gap = 64, x0 = W / 2 - (cast.length - 1) * gap / 2;
@@ -69,19 +69,19 @@ const ST = {
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
-      ['1 PLAYER', '2 PLAYERS: A GROWN-UP PLAYS THE FAMILY'].forEach((o, k) => {
+      ['1 JUGADOR', '2 JUGADORES: UN ADULTO LLEVA A LA FAMILIA'].forEach((o, k) => {
         const on = S.sel === k, y = 186 + k * 16;
         if (on) arrow('r', W / 2 - o.length * 4 - 14, y + 4, 5, COL.hot);
         txt(o, W / 2, y, 8, on ? '#fff' : COL.dim, 'center');
       });
-      pressFire(226, touchMode ? 'TAP TO START' : 'PRESS FIRE OR CLICK TO START');
+      pressFire(226, touchMode ? 'TOCA PARA EMPEZAR' : 'PULSA DISPARO O HAZ CLIC');
     }
   },
   vs: {
     enter() {
       round++; setOpponent(round - 1); game = GAMES[round - 1].make();
-      S.taunt = pick(TAUNT[CHAR[0].role] || ['GAME ON!']);
-      say(SAYNAME[1] + ', versus, ' + SAYNAME[0] + '!'); mus.mode = 'match'; mus.fast = round === GAMES.length;
+      S.taunt = pick(TAUNT[CHAR[0].role] || ['¡ESTO SE ANIMA!']);
+      say(SAYNAME[1] + ', contra, ' + SAYNAME[0] + '!'); mus.mode = 'match'; mus.fast = round === GAMES.length;
     },
     update() { if ((S.t > 80 && (anyIn().aP || clicked)) || S.t > 480) go('howto'); },
     draw() {
@@ -91,7 +91,7 @@ const ST = {
       const slide = Math.max(0, 30 - t) * 8;
       boy(0, 100 - slide, 176, 6, false, 0); boy(1, 380 + slide, 176, 6, true, 0);
       txt(PL[0].name, 100, 184, 16, PL[0].col, 'center', true); txt(PL[1].name, 380, 184, 16, PL[1].col, 'center', true);
-      txt('ROUND ' + round + ' OF ' + GAMES.length, W / 2, 14, 8, COL.dim, 'center');
+      txt('RONDA ' + round + ' DE ' + GAMES.length, W / 2, 14, 8, COL.dim, 'center');
       if (t > 20) logo('VS', W / 2, 30, 32, '#fff', COL.hot, '#7a0a66');
       txt(game.name, W / 2, 76, 8, COL.gold, 'center');
       if (t > 50) bubble(S.taunt, 150, 100, 18);
@@ -102,22 +102,22 @@ const ST = {
     enter() { game.init(); cheerReset(); },
     update() { if ((S.t > 45 && (anyIn().aP || clicked)) || S.t > 540) go('count'); },
     draw() {
-      game.draw(); rect(0, 0, W, H, 'rgba(10,4,22,.86)'); hud('ROUND ' + round, '');
+      game.draw(); rect(0, 0, W, H, 'rgba(10,4,22,.86)'); hud('RONDA ' + round, '');
       txt(game.name, W / 2, 46, 16, COL.gold, 'center', true);
       game.how.forEach((l, k) => txt(l, W / 2, 78 + k * 15, 8, '#fff', 'center'));
       rect(60, 146, 360, 1, COL.hot); txt(game.ctl, W / 2, 156, 8, COL.cyan, 'center');
-      txt(touchMode ? 'TOUCH: ARROW PAD TO MOVE, BIG BUTTON TO FIRE' : two ? PL[0].name + ': WASD + SPACE    ' + PL[1].name + ': ARROWS + ENTER' : 'ARROW KEYS OR WASD.  FIRE: SPACE OR ENTER', W / 2, 176, 8, COL.dim, 'center');
-      if (S.t > 45) pressFire(212, 'PRESS FIRE WHEN READY');
+      txt(touchMode ? 'TACTIL: FLECHAS PARA MOVER, BOTON PARA DISPARAR' : two ? PL[0].name + ': WASD + ESPACIO    ' + PL[1].name + ': FLECHAS + INTRO' : 'FLECHAS O WASD.  DISPARO: ESPACIO O INTRO', W / 2, 176, 8, COL.dim, 'center');
+      if (S.t > 45) pressFire(212, 'PULSA DISPARO CUANDO QUIERAS');
     }
   },
   count: {
-    enter() { say('Round ' + round + '. Go!'); },
+    enter() { say('Ronda ' + round + '. Go!'); },
     update() { if (S.t % 40 === 1 && S.t < 120) sfx.count(); if (S.t === 121) whistle(); if (S.t > 150) go('play'); },
     draw() {
       game.draw(); hud(game.name, game.sub ? game.sub() : '');
-      const n = S.t < 120 ? String(3 - Math.floor(S.t / 40)) : 'GO!';
+      const n = S.t < 120 ? String(3 - Math.floor(S.t / 40)) : '¡YA!';
       rect(0, 106, W, 58, 'rgba(10,4,22,.72)'); txt(n, W / 2, 120, 32, S.t < 120 ? '#fff' : COL.green, 'center', true);
-      if (refName()) { referee(110, 162, 3); txt('REFEREE:', 356, 122, 8, COL.dim, 'center'); txt(refName(), 356, 136, 16, COL.purple, 'center', '#fff'); }
+      if (refName()) { referee(110, 162, 3); txt('ARBITRO:', 356, 122, 8, COL.dim, 'center'); txt(refName(), 356, 136, 16, COL.purple, 'center', '#fff'); }
     }
   },
   play: {
@@ -129,26 +129,26 @@ const ST = {
     draw() { game.draw(); hud(game.name, game.sub ? game.sub() : ''); }
   },
   result: {
-    enter() { sfx.score(); whistle(); burst(W / 2, 120, 50, [PL[S.w].col, '#fff'], 5); if (S.w === 1) say(SAYNAME[1] + ' wins!'); },
+    enter() { sfx.score(); whistle(); burst(W / 2, 120, 50, [PL[S.w].col, '#fff'], 5); if (S.w === 1) say(SAYNAME[1] + ' gana!'); },
     update() { if ((S.t > 90 && (anyIn().aP || clicked)) || S.t > 330) go(round < GAMES.length ? 'vs' : TEASER ? 'locked' : 'bossIntro'); },
     draw() {
-      rect(0, 0, W, H, '#12062b'); stars(S.t, H); hud('ROUND ' + round, PL[1].name + ' ' + won[1] + ' - ' + won[0] + ' FAMILY');
+      rect(0, 0, W, H, '#12062b'); stars(S.t, H); hud('RONDA ' + round, PL[1].name + ' ' + won[1] + ' - ' + won[0] + ' FAMILIA');
       const hop = Math.abs(Math.sin(S.t / 8)) * 16, L = 1 - S.w;
       boy(S.w, W / 2, 176 - hop, 6, false, 0);
       boy(L, 400, 176, 4, true, 0); if (S.t > 30) bubble(CATCH[L], 400, 60, 14);
-      txt(PL[S.w].name + ' WINS!', W / 2, 196, 16, PL[S.w].col, 'center', true);
-      txt(S.w === 1 ? 'THE FAMILY ARE IN TROUBLE NOW.' : 'NEXT ONE\'S YOURS, ' + PL[1].name + '!', W / 2, 220, 8, '#fff', 'center');
+      txt(PL[S.w].name + ' ¡GANA!', W / 2, 196, 16, PL[S.w].col, 'center', true);
+      txt(S.w === 1 ? 'LA FAMILIA ESTA EN APUROS.' : 'LA PROXIMA ES TUYA, ' + PL[1].name + '!', W / 2, 220, 8, '#fff', 'center');
       if (S.t > 90) pressFire(246);
     }
   },
   // the end of the teaser: what they just played, against what the full game has
   locked: {
-    enter() { mus.mode = 'title'; mus.fast = false; say('That is the demo.'); },
+    enter() { mus.mode = 'title'; mus.fast = false; say('Esto es la demo.'); },
     update() { if (S.t > 60 && (anyIn().aP || clicked)) go('title'); },
     draw() {
       bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.82)');
-      txt('THAT\'S THE DEMO', W / 2, 26, 16, COL.gold, 'center', true);
-      txt('THE FULL GAME KEEPS GOING:', W / 2, 54, 8, '#fff', 'center');
+      txt('ESTO ES LA DEMO', W / 2, 26, 16, COL.gold, 'center', true);
+      txt('EL JUEGO COMPLETO SIGUE:', W / 2, 54, 8, '#fff', 'center');
       // the list sizes itself, so adding a game to LOCKED never pushes the last line off screen
       const rows = LOCKED.length, gap = Math.min(24, Math.floor(120 / rows)), h = gap - 4, top = 70;
       LOCKED.forEach((name, k) => {
@@ -158,25 +158,25 @@ const ST = {
         // a padlock, drawn small enough to read as one at this size
         const lx = 352, ly = y + Math.round((h - 12) / 2); rect(lx, ly + 4, 10, 8, COL.dim); rect(lx + 2, ly, 6, 2, COL.dim); rect(lx + 2, ly + 2, 2, 3, COL.dim); rect(lx + 6, ly + 2, 2, 3, COL.dim);
       });
-      txt('AND ' + HERO.name + '\'S NAME UP IN LIGHTS AT THE END.', W / 2, top + rows * gap + 8, 8, COL.cyan, 'center');
-      if (S.t > 60) pressFire(top + rows * gap + 30, 'PRESS FIRE TO PLAY THE DEMO AGAIN');
+      txt('Y ' + HERO.name + ' VE SU NOMBRE EN LUCES AL FINAL.', W / 2, top + rows * gap + 8, 8, COL.cyan, 'center');
+      if (S.t > 60) pressFire(top + rows * gap + 30, 'PULSA DISPARO PARA JUGAR OTRA VEZ');
     }
   },
   bossIntro: {
     enter() {
       setOpponent(0); S.bed = CFG.occasion === 'birthday' || CFG.occasion === 'christmas'; game = gBoss(S.bed ? 1 : 0); mus.mode = 'boss'; mus.step = 0; mus.fast = false;
-      say(S.bed ? 'Oh no. It is bedtime. ' + SAYNAME[1] + ' and ' + SAYNAME[0] + ', team up!' : 'The homework monster! ' + SAYNAME[1] + ' and ' + SAYNAME[0] + ', team up!');
+      say(S.bed ? 'Oh no. Es la hora de dormir. ' + SAYNAME[1] + ' y ' + SAYNAME[0] + ', ¡en equipo!' : '¡El monstruo de los deberes! ' + SAYNAME[1] + ' y ' + SAYNAME[0] + ', ¡en equipo!');
     },
     update() { if ((S.t > 120 && (anyIn().aP || clicked)) || S.t > 480) go('boss', { bed: S.bed }); },
     draw() {
       game.draw(); rect(0, 110, W, 142, 'rgba(10,4,22,.88)');
-      txt('ONE LAST CHALLENGE. TEAM UP!', W / 2, 116, 8, COL.red, 'center');
-      txt(S.bed ? 'THE BEDTIME CLOCK' : 'THE HOMEWORK MONSTER', W / 2, 132, 16, '#fff', 'center', true);
-      txt(S.bed ? (CFG.occasion === 'christmas' ? 'SANTA WON\'T COME TILL YOU\'RE ASLEEP!' : 'ON YOUR BIRTHDAY? NOT A CHANCE!') : 'IT WANTS YOUR WHOLE WEEKEND!', W / 2, 154, 8, COL.gold, 'center');
-      txt(PL[1].name + ' AND ' + PL[0].name + ' ON THE SAME TEAM.', W / 2, 170, 8, COL.cyan, 'center');
-      txt('HOLD FIRE TO SHOOT. FILL THE BLAST METER,', W / 2, 186, 8, '#fff', 'center');
-      txt(two ? 'THEN BOTH TAP FIRE AT THE SAME TIME!' : 'THEN TAP FIRE FOR A FAMILY BLAST!', W / 2, 198, 8, '#fff', 'center');
-      txt('GRAB THE FOOD. THE ' + CHAR[1].letter + ' AND ' + CHAR[0].letter + ' PLATES ARE YOURS.', W / 2, 214, 8, COL.green, 'center');
+      txt('UN ULTIMO RETO. ¡EN EQUIPO!', W / 2, 116, 8, COL.red, 'center');
+      txt(S.bed ? 'EL RELOJ DE DORMIR' : 'EL MONSTRUO DE LOS DEBERES', W / 2, 132, 16, '#fff', 'center', true);
+      txt(S.bed ? (CFG.occasion === 'christmas' ? '¡PAPA NOEL NO VIENE HASTA QUE DUERMAS!' : '¿EN TU CUMPLEAÑOS? ¡NI HABLAR!') : '¡QUIERE TODO TU FIN DE SEMANA!', W / 2, 154, 8, COL.gold, 'center');
+      txt(PL[1].name + ' Y ' + PL[0].name + ' EN EL MISMO EQUIPO.', W / 2, 170, 8, COL.cyan, 'center');
+      txt('MANTEN DISPARO PARA TIRAR. LLENA LA BARRA,', W / 2, 186, 8, '#fff', 'center');
+      txt(two ? '¡Y PULSAD DISPARO A LA VEZ!' : '¡Y PULSA DISPARO PARA EL ATAQUE FAMILIAR!', W / 2, 198, 8, '#fff', 'center');
+      txt('COGE LA COMIDA. LOS PLATOS DE LA ' + CHAR[1].letter + ' Y ' + CHAR[0].letter + ' SON TUYOS.', W / 2, 214, 8, COL.green, 'center');
       if (S.t > 120) pressFire(234);
     }
   },
@@ -194,13 +194,13 @@ const ST = {
     update() { if (S.t > 30 && (anyIn().aP || clicked)) { sfx.coin(); game = null; go('boss', { bed: S.bed }); } else if (S.t % 60 === 0 && S.t <= 540) sfx.count(); else if (S.t > 600) { game = null; go('boss', { bed: S.bed }); } },
     draw() {
       rect(0, 0, W, H, '#0a0416'); boy(1, 200, 200, 4, false, 0); boy(0, 280, 200, 4, true, 0);
-      txt('SO CLOSE!', W / 2, 40, 24, '#fff', 'center', true); txt('TRY AGAIN?', W / 2, 80, 16, COL.gold, 'center');
-      pressFire(226, 'PRESS FIRE: ONE MORE GO!');
+      txt('¡POR POCO!', W / 2, 40, 24, '#fff', 'center', true); txt('¿OTRA VEZ?', W / 2, 80, 16, COL.gold, 'center');
+      pressFire(226, 'PULSA DISPARO: ¡OTRA VEZ!');
     }
   },
   // ---- the gift moment
   finale: {
-    enter() { mus.mode = 'title'; mus.fast = true; S.lines = FAM.map(m => pick([CHEERS_END[CFG.occasion], 'WELL DONE, ' + HERO.name + '!', 'YOU\'RE THE BEST!'])); },
+    enter() { mus.mode = 'title'; mus.fast = true; S.lines = FAM.map(m => pick([CHEERS_END[CFG.occasion], 'MUY BIEN, ' + HERO.name + '!', '¡ERES EL MEJOR!'])); },
     update() {
       if (S.t === 60) { sfx.clap(); sfx.power(); burst(W / 2, 150, 60, ['#fff', COL.gold, PL[1].col], 5); shake = 6; say(titleCase(OCCASIONS[CFG.occasion].toLowerCase()) + ', ' + SAYNAME[1] + '!'); }
       if (S.t > 60 && S.t % 60 === 0) confetti(50, ['#fff', COL.gold, COL.hot, COL.cyan, PL[1].col]);
@@ -216,8 +216,8 @@ const ST = {
       FAM.forEach((m, i) => { const f = clamp((t - 90 - i * 30) / 50, 0, 1), x = W + 40 - f * (170 - i * 52); if (f > 0) drawSpec(m, x, 252, 4, true, Math.floor(t / 16)); if (t > 170 + i * 50 && i < 2) bubble(S.lines[i], x, 88 + i * 30, 14); });
       if (PET && t > 60) pet(W / 2 + 70, 262 - (petRuns() ? Math.abs(Math.sin(t / 7)) * 14 : 0), 3, false, Math.floor(t / (petRuns() ? 6 : 22)));
       if (t > 150) bubble(CATCH[1], W / 2 - 90, 96, 14);
-      if (t > 240) txt('WON ' + won[1] + ' OF ' + GAMES.length + ' GAMES. BEAT THE BOSS IN ' + bossTime + 'S.', W / 2, 74, 8, '#fff', 'center', '#0a0416');
-      if (t > 360) pressFire(258, 'PRESS SHARE TO SEND IT TO THE FAMILY');
+      if (t > 240) txt('GANO ' + won[1] + ' DE ' + GAMES.length + ' JUEGOS. JEFE VENCIDO EN ' + bossTime + 'S.', W / 2, 74, 8, '#fff', 'center', '#0a0416');
+      if (t > 360) pressFire(258, 'PULSA COMPARTIR PARA ENVIARLO');
     }
   }
 };
@@ -236,7 +236,7 @@ function render() {
   ST[S.name].draw(); fxDraw();
   if (flashT > 0) { g.globalAlpha = flashT / 9 * .3; rect(0, 0, W, H, flashC); g.globalAlpha = 1; }
   g.restore();
-  if (muted) txt('MUTE', W - 4, H - 10, 8, COL.dim, 'right');
+  if (muted) txt('SILENCIO', W - 4, H - 10, 8, COL.dim, 'right');
 }
 function frame(ts) {
   requestAnimationFrame(frame);
@@ -249,7 +249,7 @@ function startGame(cfg) { applyConfig(cfg); go('title'); requestAnimationFrame(f
 
 // ---- share: a picture of the screen plus this game's link
 async function shareGame(btn) {
-  const text = S.name === 'finale' ? HERO.name.charAt(0) + HERO.name.slice(1).toLowerCase() + ' beat the whole family. Come and play their game:' : 'Come and play ' + titleCase(HERO.name) + '\'s arcade game:';
+  const text = S.name === 'finale' ? HERO.name.charAt(0) + HERO.name.slice(1).toLowerCase() + ' gano a toda la familia. Ven a jugar su juego:' : 'Ven a jugar el juego arcade de ' + titleCase(HERO.name) + ':';
   const url = location.href;
   try {
     const big = document.createElement('canvas'); big.width = W * 3; big.height = H * 3;
@@ -258,7 +258,7 @@ async function shareGame(btn) {
     const file = blob && new File([blob], 'happy-hero-games.png', { type: 'image/png' });
     if (file && navigator.canShare && navigator.canShare({ files: [file] })) await navigator.share({ files: [file], text: text + ' ' + url });
     else if (navigator.share) await navigator.share({ title: 'Happy Hero Games', text, url });
-    else { await navigator.clipboard.writeText(text + ' ' + url); btn.textContent = 'Link copied'; setTimeout(() => { btn.textContent = 'Share'; }, 2000); }
+    else { await navigator.clipboard.writeText(text + ' ' + url); btn.textContent = 'Enlace copiado'; setTimeout(() => { btn.textContent = 'Compartir'; }, 2000); }
   } catch (e) {}
 }
 window.__hhg = { go, state: () => S, game: () => game, setCpu: v => { cpu = v; }, setDemo: v => { demo = v; }, tick, render, games: () => GAMES.map(x => x.name), won: () => won };
