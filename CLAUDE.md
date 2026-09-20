@@ -26,6 +26,7 @@ What we learnt from it, and why the product looks like this:
 
 - **One hero per game.** The hero is player slot 1. Each game is against a different family member or friend in slot 0, played by the computer, or by a real grown-up in 2-player mode.
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
+- **Free games are the share engine.** `/name/` and `/halloween/` ask for nothing, store nothing and end on a picture with somebody's name on it. They exist to be sent to people, and every one of them points at the builder. `docs/viral.md` has the rest of the list.
 - **Party mode.** A third option on the title screen: pick two to six challengers, each takes a turn against the hero on the same screen, and it ends on a results board with a champion. Built for birthday parties, where one gift is seen by six families. No typing: challengers are PLAYER 1 to PLAYER 6, because a name box on a canvas is a misery.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence.
@@ -96,6 +97,10 @@ site/builder.js           the builder: form to config, live preview, Play link
 site/g/demo/index.html    the free demo's game page (reads the config from #g=)
 site/privacy/index.html   the privacy policy. Keep it true: it is a promise, not a form
 site/terms/index.html     terms and refunds, English only until a solicitor has read them
+site/name/index.html      free: type a name, get the title screen as a picture
+site/halloween/index.html free: Trick or Treat Dash, sixty seconds, one shareable score
+site/arcade/games/trick-or-treat.js  the Halloween game. Never calls addGame(), so it stays out of the paid five
+site/img/logo.svg         the pixel HHG mark beside the wordmark
 site/img/og.png           the link preview: a shared link shows the game's title screen
 tools/build.mjs           renders every page and every language
 tools/review-files.mjs    writes docs/translations/<lang>.md for a human checker

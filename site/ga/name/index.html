@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ga">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>D'ainm i soilse | HappyHeroGames</title>
+<meta name="description" content="Clóscríobh ainm agus feic i soilse é ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, gan aon rud á sheoladh chugainn.">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<meta property="og:title" content="Cuir d'ainm i soilse">
+<meta property="og:description" content="Clóscríobh ainm agus faigh scáileán teidil arcade leis. Saor in aisce, agus ní sheoltar aon rud a chlóscríobhann tú áit ar bith.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="../../name/">
+<link rel="alternate" hreflang="es" href="../../es/name/">
+<link rel="alternate" hreflang="de" href="../../de/name/">
+<link rel="alternate" hreflang="fr" href="../../fr/name/">
+<link rel="alternate" hreflang="it" href="../../it/name/">
+<link rel="alternate" hreflang="ga" href="../../ga/name/">
+<link rel="alternate" hreflang="x-default" href="../../name/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+<style>
+.lights{max-width:760px;margin-inline:auto;padding-block:26px 50px}
+.lights h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0 0 10px;text-wrap:balance}
+.lights .sub{color:var(--muted);margin:0 0 20px;font-size:17px;max-width:52ch}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.row input{flex:1 1 240px;background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:12px 12px;font-size:19px;min-width:0}
+.row input:focus{border-color:var(--ink)}
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;width:0}
+.opts span{display:inline-block;border:1px solid var(--rule);border-radius:2px;padding:7px 12px;font-size:15px}
+.opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 0}
+.acts small{color:var(--muted);font-size:14px}
+.after{border-top:1px solid var(--rule);margin-top:34px;padding-top:22px}
+.after p{max-width:56ch;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" translate="no" href="../../index.html"><img class="logomark" src="../../img/logo.svg" alt="" width="40" height="20">Happy<span>Hero</span>Games</a>
+  <nav aria-label="Codanna den leathanach"><a href="../../index.html#make">Tóg cluiche</a><a href="../../index.html#prices">Praghas</a><a href="../../index.html#faq">Ceisteanna</a></nav>
+  <div class="look"><details class="langs"><summary title="Language" lang="ga">Gaeilge</summary><div><a href="../../name/" hreflang="en" lang="en">English</a><a href="../../es/name/" hreflang="es" lang="es">Español</a><a href="../../de/name/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/name/" hreflang="fr" lang="fr">Français</a><a href="../../it/name/" hreflang="it" lang="it">Italiano</a></div></details></div>
+</header>
+
+<main class="lights">
+  <h1>Cuir ainm i soilse</h1>
+  <p class="sub">Clóscríobh ainm agus téann sé suas ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, agus ní fhágann aon rud do bhrabhsálaí.</p>
+
+  <div class="row">
+    <label class="sr" for="who">Ainm</label>
+    <input id="who" maxlength="12" autocomplete="off" spellcheck="false" placeholder="Ainm">
+  </div>
+  <div class="opts" role="radiogroup" aria-label="Cad chuige é">
+    <label><input type="radio" name="occ" value="birthday" checked><span>Lá breithe</span></label>
+    <label><input type="radio" name="occ" value="christmas"><span>Nollaig</span></label>
+    <label><input type="radio" name="occ" value="fathers"><span>Lá na nAithreacha</span></label>
+    <label><input type="radio" name="occ" value="mothers"><span>Lá na Máithreacha</span></label>
+    <label><input type="radio" name="occ" value="star"><span>Gan chúis ar bith</span></label>
+  </div>
+
+  <div class="screen"><canvas id="game" width="480" height="270" aria-label="Scáileán teidil arcade leis an ainm a chlóscríobh tú i soilse"></canvas></div>
+
+  <div class="acts">
+    <button class="btn go" type="button" id="save">Sábháil an pictiúr</button>
+    <button class="btn" type="button" id="share" hidden>Roinn é</button>
+    <small id="msg" role="status"></small>
+  </div>
+
+  <div class="after">
+    <p>Seo an chéad scáileán de chluiche ceart. Sa chuid eile is iad an laoch, is iad a muintir agus a gcairde na daoine le bualadh, agus tá a gcuid scéalta grinn féin ann.</p>
+    <p><a class="btn go" href="../../index.html#make">Tóg an cluiche iomlán, saor in aisce</a></p>
+  </div>
+</main>
+
+<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../../privacy/">Príobháideacht</a></span></footer>
+</div>
+
+<script src="../arcade/engine.js"></script>
+<script>
+// The whole page: type a name, watch it go up in lights, save the picture. No game files, no
+// server, nothing stored. It draws the same title screen the game opens with.
+(() => {
+  const $ = id => document.getElementById(id);
+  const input = $('who'), msg = $('msg');
+  let occ = 'birthday', t = 0;
+
+  const draw = () => {
+    t++;
+    bgSynth(t);
+    txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+    const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
+    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
+    logo(n, W / 2, 32, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+    const line = OCCASIONS[occ] === "YOU'RE A STAR" ? 'AN ARCADE ADVENTURE' : OCCASIONS[occ];
+    const ow = line.length * 16;
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, 'rgba(10,4,22,.92)');
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+    txt(line, W / 2, 87, 16, COL.gold, 'center');
+    shadow(W / 2, 236, 16); drawSpec(HERO, W / 2, 236, 4, false, Math.floor(t / 22));
+    if (PET) pet(70, 258, 2, true, Math.floor(t / 6));
+    requestAnimationFrame(draw);
+  };
+
+  const apply = () => {
+    applyConfig(Object.assign({}, DEMO, {
+      hero: Object.assign({}, DEMO.hero, { name: input.value || 'YOUR NAME' }),
+      occasion: occ
+    }));
+  };
+
+  input.addEventListener('input', apply);
+  document.querySelectorAll('input[name="occ"]').forEach(r => r.addEventListener('change', () => {
+    if (r.checked) { occ = r.value; apply(); }
+  }));
+
+  const picture = () => new Promise(res => document.getElementById('game').toBlob(res, 'image/png'));
+  const fileName = () => (input.value || 'name').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-in-lights.png';
+
+  $('save').addEventListener('click', async () => {
+    const blob = await picture();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = fileName(); a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    msg.textContent = 'Saved.';
+  });
+
+  if (navigator.canShare && navigator.canShare({ files: [new File([''], 'x.png', { type: 'image/png' })] })) {
+    $('share').hidden = false;
+    $('share').addEventListener('click', async () => {
+      try {
+        const file = new File([await picture()], fileName(), { type: 'image/png' });
+        await navigator.share({ files: [file], text: (input.value || 'A name') + ' in lights, from happyherogames.com' });
+      } catch (e) { msg.textContent = 'Not shared.'; }
+    });
+  }
+
+  apply();
+  draw();
+})();
+</script>
+</body>
+</html>

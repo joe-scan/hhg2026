@@ -16,7 +16,7 @@ The topical idea still works, though. Take the *situation*, not the person: an e
 
 The five to build first. Each is a small free game on the site, playable in a minute, ending on one image with the player's name on it and a "make one for your family" link.
 
-1. **Trick or Treat Dash** (Halloween, S). Fill the bucket, dodge the bin lids. The share image is their haul with their name on it.
+1. **Trick or Treat Dash** (built 20 Sep 2026, at `/halloween/`). Catch the sweets, leave the sprouts, sixty seconds. It ends on their name in lights with their score, ready to send.
 2. **Santa's Bedtime Clock** (December, S). The existing boss reskinned: stay asleep, Santa comes. Reuses code we already have.
 3. **Egg Hunt** (Easter, S). Twenty eggs, sixty seconds, a family scoreboard.
 4. **Sports Final Free-Taker** (whenever a big final is on, S). Penalties against a goalkeeper with your own name on the jersey. No club, no crest, no player.
@@ -39,7 +39,7 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## 3. Free tools that cost us nothing and get passed around
 
-16. **Name in lights generator** (S). Type a name, get the arcade title screen as a picture. No game, no email, no signup. The cheapest viral thing on this list.
+16. **Name in lights generator** (built 20 Sep 2026, at `/name/`). Type a name, get the arcade title screen as a picture. No game, no email, no signup.
 17. **Pixel-me avatar maker** (M). The builder, minus the game, as a downloadable avatar.
 18. **Birthday countdown page** (S). A free page counting down to the day, with their name on it.
 19. **Class photo generator** (M). A teacher types thirty first names and gets a pixel class portrait. Teachers share with teachers.
@@ -89,4 +89,4 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## What I would actually do first
 
-Party mode is built. Next, in this order: the name in lights generator (a day, no data, endlessly shareable) and Halloween's Trick or Treat Dash before the end of October. Everything else on this list waits until one of those works.
+Party mode, the name in lights generator and Trick or Treat Dash are all built. Next: put the Halloween game in front of people in the first week of October, and see whether anybody sends it on. If they do, build the next seasonal one. If they do not, the rest of this list is guesswork and the effort belongs in the paid product instead.

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Course aux Bonbons | HappyHeroGames</title>
+<meta name="description" content="Un jeu d'Halloween gratuit à votre nom. Attrapez les bonbons, laissez les choux, soixante secondes. Rien à installer.">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<meta property="og:title" content="Course aux Bonbons">
+<meta property="og:description" content="Un jeu d'Halloween gratuit à votre nom. Soixante secondes, attrapez les bonbons, laissez les choux.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="../../halloween/">
+<link rel="alternate" hreflang="es" href="../../es/halloween/">
+<link rel="alternate" hreflang="de" href="../../de/halloween/">
+<link rel="alternate" hreflang="fr" href="../../fr/halloween/">
+<link rel="alternate" hreflang="it" href="../../it/halloween/">
+<link rel="alternate" hreflang="ga" href="../../ga/halloween/">
+<link rel="alternate" hreflang="x-default" href="../../halloween/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+<style>
+.hw{max-width:820px;margin-inline:auto;padding-block:24px 50px}
+.hw h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0 0 10px}
+.hw .sub{color:var(--muted);margin:0 0 20px;font-size:17px;max-width:54ch}
+.start{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px;align-items:center}
+.start input{flex:1 1 220px;background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:12px;font-size:19px;min-width:0}
+.acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 0}
+.acts small{color:var(--muted);font-size:14px}
+.keys{color:var(--muted);font-size:15px;margin:14px 0 0}
+.after{border-top:1px solid var(--rule);margin-top:32px;padding-top:22px}
+.after p{max-width:56ch;color:var(--muted)}
+.pads{display:none;justify-content:center;gap:40px;margin:14px 0 0}
+.touch .pads{display:flex}
+.pads button{font-size:22px;border:0;border-radius:6px;background:#2a1a4a;color:#fff;width:84px;height:64px;touch-action:none}
+.pads button.on{background:#ff2bd6}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" translate="no" href="../../index.html"><img class="logomark" src="../../img/logo.svg" alt="" width="40" height="20">Happy<span>Hero</span>Games</a>
+  <nav aria-label="Sections de la page"><a href="../../index.html#make">Créer un jeu</a><a href="../../name/">Prénom en lumières</a><a href="../../index.html#prices">Prix</a></nav>
+  <div class="look"><details class="langs"><summary title="Language" lang="fr">Français</summary><div><a href="../../halloween/" hreflang="en" lang="en">English</a><a href="../../es/halloween/" hreflang="es" lang="es">Español</a><a href="../../de/halloween/" hreflang="de" lang="de">Deutsch</a><a href="../../it/halloween/" hreflang="it" lang="it">Italiano</a><a href="../../ga/halloween/" hreflang="ga" lang="ga">Gaeilge</a></div></details></div>
+</header>
+
+<main class="hw">
+  <h1>Course aux Bonbons</h1>
+  <p class="sub">Un jeu d'Halloween gratuit à votre nom. Attrapez les bonbons, laissez les choux tranquilles, soixante secondes. Rien à installer et rien ne quitte votre navigateur.</p>
+
+  <div class="start">
+    <label class="sr" for="who">Votre prénom</label>
+    <input id="who" maxlength="12" autocomplete="off" spellcheck="false" placeholder="Votre prénom">
+    <button class="btn go" type="button" id="play">Commencer</button>
+  </div>
+
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Course aux Bonbons : attrapez les bonbons qui tombent dans votre seau"></canvas></div>
+
+  <div class="pads" aria-hidden="true">
+    <button type="button" data-p="1" data-k="l">&#9664;</button>
+    <button type="button" data-p="1" data-k="r">&#9654;</button>
+  </div>
+
+  <p class="keys">Flèches gauche et droite, ou les boutons sous l'écran sur un téléphone.</p>
+
+  <div class="acts">
+    <button class="btn" type="button" id="save" hidden>Enregistrer l'image</button>
+    <button class="btn" type="button" id="share" hidden>Partager</button>
+    <small id="msg" role="status"></small>
+  </div>
+
+  <div class="after">
+    <p>Celui-ci est gratuit et le même pour tout le monde. Les jeux que nous faisons sont l'inverse : cinq jeux, votre propre famille et vos amis comme adversaires, et leurs blagues dans chaque écran.</p>
+    <p><a class="btn go" href="../../index.html#make">Créez-en un, gratuitement</a></p>
+  </div>
+</main>
+
+<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../../privacy/">Confidentialité</a></span></footer>
+</div>
+
+<script src="../arcade/engine.js"></script>
+<script src="../arcade/games/trick-or-treat.js"></script>
+<script>
+// The page runs the game itself: no title screen, no rounds, no boss. Start, sixty seconds,
+// a result screen with the name in lights and a picture worth sending.
+(() => {
+  const $ = id => document.getElementById(id);
+  const input = $('who'), msg = $('msg');
+  let game = null, t = 0, ending = 0;
+
+  const hero = () => applyConfig(Object.assign({}, DEMO, {
+    hero: Object.assign({}, DEMO.hero, { name: input.value || 'YOU' }), occasion: 'star'
+  }));
+
+  const waiting = () => {
+    hwNight(t);
+    rect(0, 0, W, H, 'rgba(10,4,22,.62)');
+    txt('TRICK OR TREAT DASH', W / 2, 40, 20, COL.gold, 'center', true);
+    txt('CATCH THE SWEETS IN YOUR BUCKET.', W / 2, 96, 10, '#fff', 'center');
+    txt('LEAVE THE SPROUTS ALONE.', W / 2, 118, 10, '#fff', 'center');
+    txt('SIXTY SECONDS.', W / 2, 140, 10, '#fff', 'center');
+    if (t % 50 < 34) txt(touchMode ? 'TAP START' : 'PRESS START', W / 2, 190, 16, COL.hot, 'center', true);
+  };
+
+  const ended = () => {
+    hwNight(t);
+    rect(0, 0, W, H, 'rgba(10,4,22,.7)');
+    const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
+    txt('HAPPY HALLOWEEN', W / 2, 14, 16, COL.gold, 'center', true);
+    rect(W / 2 - (n.length * size) / 2 - 10, 40, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
+    logo(n, W / 2, 44, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+    txt('CAUGHT ' + game.score + (game.score === 1 ? ' SWEET' : ' SWEETS'), W / 2, 110, 20, COL.cyan, 'center', true);
+    if (game.missed) txt('AND ' + game.missed + ' SPROUTS. UNLUCKY.', W / 2, 140, 10, COL.dim, 'center');
+    drawSpec(HERO, 402, 240, 4, false, Math.floor(t / 10));
+    hwPumpkin(64, 240, 1.4);
+    txt('HAPPYHEROGAMES.COM', W / 2, 252, 8, COL.dim, 'center');
+    if (t % 50 < 34) txt(touchMode ? 'TAP TO PLAY AGAIN' : 'PRESS START TO PLAY AGAIN', W / 2, 182, 10, '#fff', 'center');
+  };
+
+  function frame() {
+    requestAnimationFrame(frame); t++;
+    if (!game) { waiting(); fxTick(); fxDraw(); return; }
+    game.update();
+    game.draw();
+    fxTick(); fxDraw();
+    if (game.over) {
+      if (!ending) { ending = t; confetti(40, ['#ff6b1a', '#ffd23f', '#ff2bd6', '#fff']); $('save').hidden = false; }
+      if (t - ending > 40) ended();
+    }
+    clearLatches();
+  }
+
+  const start = () => {
+    audioInit(); hero();
+    $('save').hidden = true; $('share').hidden = true; msg.textContent = '';
+    ending = 0; game = gTrickOrTreat(60); game.init();
+    try { document.getElementById('game').focus(); } catch (e) {}
+  };
+
+  $('play').addEventListener('click', start);
+  document.getElementById('game').addEventListener('click', () => { if (!game || game.over) start(); });
+  window.addEventListener('keydown', e => {
+    if ((e.code === 'Space' || e.code === 'Enter') && (!game || game.over)) { e.preventDefault(); start(); }
+  });
+
+  const picture = () => new Promise(res => document.getElementById('game').toBlob(res, 'image/png'));
+  const fileName = () => 'trick-or-treat-' + (input.value || 'dash').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.png';
+  $('save').addEventListener('click', async () => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(await picture()); a.download = fileName(); a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000); msg.textContent = 'Saved.';
+  });
+  if (navigator.canShare && navigator.canShare({ files: [new File([''], 'x.png', { type: 'image/png' })] })) {
+    $('share').hidden = false;
+    $('share').addEventListener('click', async () => {
+      try {
+        const file = new File([await picture()], fileName(), { type: 'image/png' });
+        await navigator.share({ files: [file], text: (input.value || 'I') + ' caught ' + (game ? game.score : 0) + ' sweets at happyherogames.com' });
+      } catch (e) { msg.textContent = 'Not shared.'; }
+    });
+  }
+
+  hero();
+  frame();
+  window.__hw = { start, game: () => game, tick: () => { if (game) { game.update(); game.draw(); } } };
+})();
+</script>
+</body>
+</html>

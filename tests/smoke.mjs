@@ -121,6 +121,23 @@ if (turns !== 4) errors.push('party mode played ' + turns + ' turns, wanted 4');
 if (pmSeen[pmSeen.length - 1] !== 'partyEnd') errors.push('party mode did not reach the results board');
 await pm.close();
 
+// 2f. the two free pages: a name in lights, and the Halloween game
+const lights = await browser.newPage(); watch(lights);
+await lights.goto(BASE + 'name/'); await lights.waitForTimeout(700);
+await lights.fill('#who', 'Saoirse'); await lights.waitForTimeout(400);
+if (await lights.evaluate(() => HERO.name) !== 'SAOIRSE') errors.push('the name in lights page did not take the name');
+await lights.close();
+
+const hw = await browser.newPage(); watch(hw);
+await hw.goto(BASE + 'halloween/'); await hw.waitForTimeout(700);
+await hw.fill('#who', 'Fionn'); await hw.click('#play'); await hw.waitForTimeout(900);
+await hw.evaluate(() => { const gm = __hw.game(); for (let i = 0; i < 3700; i++) gm.update(); });
+await hw.waitForTimeout(800);
+const hwOver = await hw.evaluate(() => __hw.game().over);
+console.log('halloween:', hwOver ? 'ran a full minute and ended' : 'DID NOT END');
+if (!hwOver) errors.push('the Halloween game did not finish');
+await hw.close();
+
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);
 console.log('default hero:', await p2.evaluate(() => HERO.name));

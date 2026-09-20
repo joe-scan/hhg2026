@@ -29,8 +29,8 @@ function go(name, data) {
 }
 function hud(title, sub) {
   rect(0, 0, W, AY - 2, '#0a0416'); rect(0, AY - 2, W, 2, COL.hot);
-  txt(PL[0].name, 6, 4, 8, PL[0].col); txt(PL[1].name, W - 6, 4, 8, PL[1].col, 'right');
-  txt(title, W / 2, 4, 8, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 15, 8, '#fff', 'center');
+  txt(PL[0].name, 6, 3, 10, PL[0].col); txt(PL[1].name, W - 6, 3, 10, PL[1].col, 'right');
+  txt(title, W / 2, 3, 10, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 16, 8, '#fff', 'center');
   for (let k = 0; k < GAMES.length; k++) rect(W - 6 - (GAMES.length - k) * 10, 15, 7, 7, k < round - 1 ? COL.green : k === round - 1 ? '#fff' : COL.off);
 }
 function pressFire(y, label, size) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TAPAIL NO BRUIGH LAMHACH' : 'BRUIGH LAMHACH'), W / 2, y, size || 8, '#fff', 'center', COL.hot); }
@@ -107,9 +107,10 @@ const ST = {
       const slide = Math.max(0, 30 - t) * 8;
       boy(0, 100 - slide, 176, 6, false, 0); boy(1, 380 + slide, 176, 6, true, 0);
       txt(PL[0].name, 100, 184, 16, PL[0].col, 'center', true); txt(PL[1].name, 380, 184, 16, PL[1].col, 'center', true);
-      txt('BABHTA ' + round + ' AS ' + GAMES.length, W / 2, 14, 8, COL.dim, 'center');
+      txt('BABHTA ' + round + ' AS ' + GAMES.length, W / 2, 12, 12, COL.dim, 'center');
       if (t > 20) logo('VS', W / 2, 30, 32, '#fff', COL.hot, '#7a0a66');
-      txt(game.name, W / 2, 76, 8, COL.gold, 'center');
+      rect(0, 142, W, 26, 'rgba(10,4,22,.75)');
+      txt(game.name, W / 2, 148, 16, COL.gold, 'center', true);
       if (t > 50) bubble(S.taunt, 150, 100, 18);
       if (t > 80) pressFire(246);
     }
@@ -119,11 +120,11 @@ const ST = {
     update() { if ((S.t > 45 && (anyIn().aP || clicked)) || S.t > 540) go('count'); },
     draw() {
       game.draw(); rect(0, 0, W, H, 'rgba(10,4,22,.86)'); hud('BABHTA ' + round, '');
-      txt(game.name, W / 2, 46, 16, COL.gold, 'center', true);
+      txt(game.name, W / 2, 40, 20, COL.gold, 'center', true);
       game.how.forEach((l, k) => txt(l, W / 2, 78 + k * 15, 8, '#fff', 'center'));
-      rect(60, 146, 360, 1, COL.hot); txt(game.ctl, W / 2, 156, 8, COL.cyan, 'center');
+      rect(60, 146, 360, 1, COL.hot); txt(game.ctl, W / 2, 154, 10, COL.cyan, 'center');
       txt(touchMode ? 'TADHALL: SAIGHEADA CHUN BOGADH, CNAIPE MOR CHUN LAMHACH' : two ? PL[0].name + ': WASD + SPASBHARRA    ' + PL[1].name + ': SAIGHEADA + ENTER' : 'SAIGHEADA NO WASD.  LAMHACH: SPASBHARRA NO ENTER', W / 2, 176, 8, COL.dim, 'center');
-      if (S.t > 45) pressFire(212, 'BRUIGH LAMHACH NUAIR ATA TU REIDH');
+      if (S.t > 45) pressFire(210, 'BRUIGH LAMHACH NUAIR ATA TU REIDH', 12);
     }
   },
   count: {
@@ -133,7 +134,7 @@ const ST = {
       game.draw(); hud(game.name, game.sub ? game.sub() : '');
       const n = S.t < 120 ? String(3 - Math.floor(S.t / 40)) : 'AR AGHAIDH!';
       rect(0, 106, W, 58, 'rgba(10,4,22,.72)'); txt(n, W / 2, 120, 32, S.t < 120 ? '#fff' : COL.green, 'center', true);
-      if (refName()) { referee(110, 162, 3); txt('REITEOIR:', 356, 122, 8, COL.dim, 'center'); txt(refName(), 356, 136, 16, COL.purple, 'center', '#fff'); }
+      if (refName()) { referee(110, 162, 3); txt('REITEOIR:', 356, 120, 10, COL.dim, 'center'); txt(refName(), 356, 136, 16, COL.purple, 'center', '#fff'); }
     }
   },
   play: {
@@ -152,8 +153,8 @@ const ST = {
       const hop = Math.abs(Math.sin(S.t / 8)) * 16, L = 1 - S.w;
       boy(S.w, W / 2, 176 - hop, 6, false, 0);
       boy(L, 400, 176, 4, true, 0); if (S.t > 30) bubble(CATCH[L], 400, 60, 14);
-      txt(PL[S.w].name + ' A BHUAIGH!', W / 2, 196, 16, PL[S.w].col, 'center', true);
-      txt(S.w === 1 ? 'TA AN TEAGHLACH I dTRIOBLOID ANOIS.' : 'IS LEATSA AN CHEAD CHEANN EILE, ' + PL[1].name + '!', W / 2, 220, 8, '#fff', 'center');
+      txt(PL[S.w].name + ' A BHUAIGH!', W / 2, 192, 24, PL[S.w].col, 'center', true);
+      txt(S.w === 1 ? 'TA AN TEAGHLACH I dTRIOBLOID ANOIS.' : 'IS LEATSA AN CHEAD CHEANN EILE, ' + PL[1].name + '!', W / 2, 224, 10, '#fff', 'center');
       if (S.t > 90) pressFire(246);
     }
   },
@@ -190,6 +191,9 @@ const ST = {
     enter() {
       round++; setOpponent(round - 1);
       PL[0].name = 'IMREOIR ' + party.i;
+      // the on-screen pad is labelled FAMILY on a phone, which is wrong in a party
+      const pad = document.getElementById('family-pad');
+      if (pad) pad.textContent = PL[0].name;
       game = GAMES[(party.i - 1) % GAMES.length].make();
       mus.mode = 'match'; mus.fast = false;
       say('Imreoir ' + party.i + ', in aghaidh, ' + SAYNAME[1] + '!');
@@ -200,10 +204,11 @@ const ST = {
       txt('MOD COIRME', W / 2, 12, 8, COL.dim, 'center');
       logo('IMREOIR ' + party.i, W / 2, 28, 24, '#ffffff', PL[0].col, mix(PL[0].col, '#000000', .35));
       txt('TA TU IN AGHAIDH ' + HERO.name + '.', W / 2, 64, 8, '#fff', 'center');
-      boy(0, 120, 190, 6, false, 0); boy(1, 360, 190, 6, true, 0);
-      txt(game.name, W / 2, 96, 16, COL.gold, 'center', true);
-      txt('EOCHRACHA AN DUINE FASTA: WASD AGUS SPASBHARRA', W / 2, 206, 8, COL.dim, 'center');
-      if (S.t > 60) pressFire(232);
+      boy(0, 120, 186, 6, false, 0); boy(1, 360, 186, 6, true, 0);
+      rect(0, 192, W, 26, 'rgba(10,4,22,.75)');
+      txt(game.name, W / 2, 198, 16, COL.gold, 'center', true);
+      txt(touchMode ? 'DUSHLANOIR: AN CEAPA CLE' : 'EOCHRACHA AN DUSHLANOIRA: WASD AGUS SPASBHARRA', W / 2, 226, 8, COL.dim, 'center');
+      if (S.t > 60) pressFire(246, null, 10);
     }
   },
   partyNext: {
@@ -217,6 +222,8 @@ const ST = {
   },
   partyEnd: {
     enter() {
+      const pad = document.getElementById('family-pad');
+      if (pad) pad.textContent = 'TEAGHLACH';
       mus.mode = 'title'; mus.fast = true; sfx.clap();
       confetti(60, [COL.gold, COL.hot, COL.cyan, '#fff']);
       const best = Math.max(...party.wins);
@@ -250,18 +257,18 @@ const ST = {
     draw() {
       bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.82)');
       txt('SIN E AN TAISPEANTAS', W / 2, 26, 16, COL.gold, 'center', true);
-      txt('LEANANN AN CLUICHE IOMLAN:', W / 2, 54, 8, '#fff', 'center');
+      txt('LEANANN AN CLUICHE IOMLAN:', W / 2, 50, 12, '#fff', 'center');
       // the list sizes itself, so adding a game to LOCKED never pushes the last line off screen
       const rows = LOCKED.length, gap = Math.min(24, Math.floor(120 / rows)), h = gap - 4, top = 70;
       LOCKED.forEach((name, k) => {
         const y = top + k * gap;
         rect(96, y, 288, h, 'rgba(255,255,255,.07)'); rect(96, y, 2, h, COL.off);
-        txt(name, 116, y + Math.round((h - 8) / 2), 8, COL.dim);
+        txt(name, 116, y + Math.round((h - 10) / 2), 10, COL.dim);
         // a padlock, drawn small enough to read as one at this size
         const lx = 352, ly = y + Math.round((h - 12) / 2); rect(lx, ly + 4, 10, 8, COL.dim); rect(lx + 2, ly, 6, 2, COL.dim); rect(lx + 2, ly + 2, 2, 3, COL.dim); rect(lx + 6, ly + 2, 2, 3, COL.dim);
       });
-      txt('AGUS ' + HERO.name + ' AINM I SOILSE AG AN DEIREADH.', W / 2, top + rows * gap + 8, 8, COL.cyan, 'center');
-      if (S.t > 60) pressFire(top + rows * gap + 30, 'BRUIGH LAMHACH CHUN IMIRT ARIS');
+      txt('AGUS ' + HERO.name + ' AINM I SOILSE AG AN DEIREADH.', W / 2, top + rows * gap + 8, 10, COL.cyan, 'center');
+      if (S.t > 60) pressFire(top + rows * gap + 32, 'BRUIGH LAMHACH CHUN IMIRT ARIS', 10);
     }
   },
   bossIntro: {
@@ -318,7 +325,7 @@ const ST = {
       FAM.forEach((m, i) => { const f = clamp((t - 90 - i * 30) / 50, 0, 1), x = W + 40 - f * (170 - i * 52); if (f > 0) drawSpec(m, x, 252, 4, true, Math.floor(t / 16)); if (t > 170 + i * 50 && i < 2) bubble(S.lines[i], x, 88 + i * 30, 14); });
       if (PET && t > 60) pet(W / 2 + 70, 262 - (petRuns() ? Math.abs(Math.sin(t / 7)) * 14 : 0), 3, false, Math.floor(t / (petRuns() ? 6 : 22)));
       if (t > 150) bubble(CATCH[1], W / 2 - 90, 96, 14);
-      if (t > 240) txt('BHUAIGH ' + won[1] + ' AS ' + GAMES.length + ' CLUICHE. CEANNASAI BUAILTE I ' + bossTime + 'S.', W / 2, 74, 8, '#fff', 'center', '#0a0416');
+      if (t > 240) txt('BHUAIGH ' + won[1] + ' AS ' + GAMES.length + ' CLUICHE. CEANNASAI BUAILTE I ' + bossTime + 'S.', W / 2, 74, 10, '#fff', 'center', '#0a0416');
       if (t > 360) pressFire(258, 'BRUIGH ROINN CHUN E A SHEOLADH');
     }
   }

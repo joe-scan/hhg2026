@@ -41,7 +41,8 @@ button,input,select{font:inherit;color:inherit}
 
 /* top line */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
-.mark{font-family:var(--display);font-size:22px;letter-spacing:.02em;text-decoration:none;line-height:1}
+.mark{font-family:var(--display);font-size:22px;letter-spacing:.02em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px}
+.logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
 .mark span{color:var(--hot)}
 .top nav{display:flex;gap:18px;flex-wrap:wrap}
 .top nav a{text-decoration:none;font-weight:700;font-size:15px}

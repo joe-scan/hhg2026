@@ -116,3 +116,7 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Terms and refunds drafted, orders open for the first ten by email (20 Sep 2026).
 - [x] docs/viral.md: fifty ways to spread it (20 Sep 2026).
 - [x] Party mode: two to six challengers take turns against the hero, results board, champion (20 Sep 2026).
+- [x] Name in lights generator at /name/, free and shareable (20 Sep 2026).
+- [x] Trick or Treat Dash at /halloween/, free, sixty seconds, shareable score (20 Sep 2026).
+- [x] Pixel HHG logo beside the wordmark, matching favicon (20 Sep 2026).
+- [x] In-game text resized for phones: title, versus, how-to, results and the locked card (20 Sep 2026).
