@@ -27,7 +27,7 @@ What we learnt from it, and why the product looks like this:
 - **One hero per game.** The hero is player slot 1. Each game is against a different family member or friend in slot 0, played by the computer, or by a real grown-up in 2-player mode.
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
-- **Demo vs full game:** the free demo is 2 games and 1 boss, built in the browser from the builder and played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
+- **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
 - **The Gift Box ($179):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland), a premiere (a countdown link everyone opens together, built at `site/premiere/`), and a twenty-second trailer of their own game. Plus gift cards. No sibling add-on and no subscription: three prices, nothing else.
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
@@ -66,6 +66,7 @@ README.md                 short human intro and how to run it
 deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
 docs/architecture.md      one domain, /g/ URLs, scores, backups, why not ten domains
+docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
 docs/product.md           questionnaire with privacy rules per field, config format, game format
 docs/ai-website-organised.md   the guide the page design follows
 site/index.html           landing page with the live hero builder
@@ -106,6 +107,6 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
 3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-4. Prices on the site are in US dollars: Starter $49, Family and Friends $99, Gift Box $179. No subscription. Confirm before taking money.
-5. The business plan says Starter loses about $2.55 an order at a $38 acquisition cost, so it only works as the cheap option that makes $99 look right. Decide whether to keep it, raise it, or hide it from cold traffic.
+4. Prices on the site are $99 for the game and $179 for the gift box. Confirm before taking money.
+5. Apply for Irish grant funding: Local Enterprise Office first (Trading Online Voucher, Priming, feasibility), then Enterprise Ireland (New Frontiers, High Potential Start-Up). `docs/pitch.md` is the one page to send. Check current amounts with the LEO; they change.
 5. A logo beyond the pixel H in `site/img/icon.svg`, and a pixel artist for the sprites.

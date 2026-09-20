@@ -59,7 +59,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .price b{font-size:19px}
 .price .amt{font-weight:700;font-size:20px}
 .price p{margin:0;color:var(--muted)}
-.price.best b::after{content:"Our recommendation";display:block;font-weight:400;font-size:13px;color:var(--hot);margin-top:4px}
+.onep{margin:0 0 18px;max-width:58ch;font-size:18px}
 .extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
@@ -83,7 +83,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <div>
     <div class="lede">
       <h1 id="make-h">Put someone special in their <em>own arcade game.</em></h1>
-      <p>Type their name, pick their hair and add the family. They're the hero, and <span data-int="Mum">Mom</span>, Dad, <span data-int="Granny">Grandma</span>, their best friend and the dog turn up as the opponents. The free demo takes a minute to make.</p>
+      <p>They're the hero. <span data-int="Mum">Mom</span>, Dad, <span data-int="Granny">Grandma</span>, their best friend and the dog are the ones they have to beat. Build them here and play it now.</p>
     </div>
     <form class="hero" onsubmit="return false" aria-label="Make your hero">
       <fieldset>
@@ -143,55 +143,51 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 </section>
 
 <section class="band" id="how" aria-labelledby="how-h">
-  <h2 id="how-h">How the full game works</h2>
+  <h2 id="how-h">How it works</h2>
   <ol class="steps">
-    <li><h3>Tell us about them</h3><p>Some short questions: their catchphrase, the running arguments, who's in charge of lunch, what they love doing. No photos needed.</p></li>
-    <li><h3>We build it</h3><p>Five games picked for what they love, with their jokes written into every screen. A real person plays it through before it goes out. Ready in 48 hours, or on the day you choose.</p></li>
-    <li><h3>They play it</h3><p>You get a private link and a card to print and wrap. It plays on any phone, tablet or laptop, with nothing to install.</p></li>
+    <li><h3>Answer a few questions</h3><p>Their name, who's in it, what they love, what they always say. No photos.</p></li>
+    <li><h3>We build the game</h3><p>Two days, and a person plays it through before it goes anywhere.</p></li>
+    <li><h3>They play it</h3><p>A private link that works on any phone, tablet or laptop.</p></li>
   </ol>
 </section>
 
 <section class="band story" aria-labelledby="story-h">
   <div>
     <h2 id="story-h">It started with two brothers</h2>
-    <p>Happy Hero Games began as an arcade game one dad made for his two sons. It was full of their catchphrases, their dog and their fights over the front seat, and it ended with the pair of them beating the bedtime clock together.</p>
-    <p>Every family has those details. We put them in a game.</p>
+    <p>One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Every family has those details. We put them in a game.</p>
   </div>
   <figure>
     <div class="screen"><img src="img/finale.png" alt="The end of a Happy Hero game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
-    <figcaption>The last screen of the full game. Everyone walks in, the pet jumps, and it says whatever the day is.</figcaption>
+    <figcaption>How every game ends.</figcaption>
   </figure>
 </section>
 
 <section class="band" id="prices" aria-labelledby="prices-h">
-  <h2 id="prices-h">Prices</h2>
+  <h2 id="prices-h">Price</h2>
+  <p class="onep">Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. The only question is whether you want something printed.</p>
   <div class="prices">
-    <div class="price"><b>Starter</b><span class="amt">$49</span><p>Three games and a boss. The hero plus three people, and the pet.</p></div>
-    <div class="price best"><b>Family and friends</b><span class="amt">$99</span><p>Five games and a boss. Up to eight people, everyone's own catchphrases and jokes written into the screens, the pet, and a real person checking it. Ready in 48 hours, or on the day you choose.</p></div>
-    <div class="price"><b>Gift box</b><span class="amt">$179</span><p>Everything above, plus a printed poster of their title screen with their name in lights, a premiere (pick a time, everyone gets a countdown link that opens the game at that moment), and a twenty-second trailer of their own game for the family chat.</p></div>
+    <div class="price"><b>The game</b><span class="amt">$99</span><p>The private link, and it's theirs forever.</p></div>
+    <div class="price"><b>The gift box</b><span class="amt">$179</span><p>The game, a printed poster of their name in lights, a premiere everyone opens together, and a trailer for the family chat.</p></div>
   </div>
-  <p class="extras">Gift cards too, so a grandparent can give it and a parent fills in the details.</p>
-  <p class="extras">Orders aren't open yet. Email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> and we'll tell you the day they are.</p>
+  <p class="extras">Gift cards too. Orders aren't open yet: email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> and we'll tell you the day they are.</p>
 </section>
 
 <section class="band" id="privacy" aria-labelledby="privacy-h">
   <h2 id="privacy-h">Private by design</h2>
   <ul class="promises">
-    <li>No photos. Your hero is drawn in pixels from the choices you make.</li>
+    <li>No photos, no recordings. The hero is drawn in pixels.</li>
     <li>No surnames, ages, schools or addresses on screen, ever.</li>
-    <li>Every game lives at its own private link that only your family has.</li>
-    <li>We delete your answers when you ask, and automatically after two years.</li>
+    <li>Every game has its own private link.</li>
+    <li>We delete your answers when you ask.</li>
   </ul>
 </section>
 
 <section class="band" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Questions</h2>
-  <details><summary>What does it play on?</summary><p>Any phone, tablet or laptop with a web browser. Two people can play on one keyboard, or on a phone turned sideways with a set of buttons each.</p></details>
-  <details><summary>Can the grown-ups play too?</summary><p>Yes. In 2-player mode a grown-up takes the other side, so Dad really is playing against them.</p></details>
-  <details><summary>We don't have a pet.</summary><p>Leave it out and someone else in the family referees. You can also pick a cat, a rabbit, a hamster or a fish instead of a dog. The fish stays in its bowl and cheers.</p></details>
-  <details><summary>How long does it take to play?</summary><p>The demo is one game, about two minutes. The full game runs about half an hour, and they'll want to go again.</p></details>
-  <details><summary>What is the premiere?</summary><p>You pick a day and a time. Everyone you send the link to sees a countdown with their name on it, and when it hits zero the game opens, wherever they are. Grandparents on the other side of the world watch the same title screen at the same moment.</p></details>
-  <details><summary>Can I change something after it arrives?</summary><p>Deluxe includes one change. For the others, tell us what's wrong and we'll fix it.</p></details>
+  <details><summary>What does it play on?</summary><p>Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways.</p></details>
+  <details><summary>Who can be in it?</summary><p>Up to eight people: family, friends, a teacher, a coach. And the pet, which can be a dog, cat, rabbit, hamster or fish.</p></details>
+  <details><summary>What is the premiere?</summary><p>You pick a day and a time. Everyone you send the link to sees a countdown, and when it hits zero the game opens, wherever they are.</p></details>
+  <details><summary>Can I change something after it arrives?</summary><p>Tell us what's wrong and we'll fix it.</p></details>
 </section>
 </main>
 

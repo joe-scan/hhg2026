@@ -19,6 +19,7 @@ Open http://localhost:8766, change the name, hair and family, and press Play. Yo
 - `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), and the premiere countdown at `/premiere/`.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/architecture.md`: how the site and the games are put together, and why it's one domain.
+- `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/product.md`: the questionnaire, the privacy rule for each field, the config format and the game format.
 - `CLAUDE.md`: the brief for AI assistants working on this. Read it before changing anything.
 

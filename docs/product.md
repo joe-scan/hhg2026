@@ -57,7 +57,7 @@ The builder and the game share one config object. In the demo it travels in the 
 | Part | Demo | Full game |
 |---|---|---|
 | Title | STARRING [NAME], occasion line, cast on the horizon, 1 or 2 players | Same, plus the family's own tagline |
-| Games | Water Balloon Fight, The Family Quiz | 5 from the library, picked by interests (3 on Starter) |
+| Games | Water Balloon Fight (the demo is one game) | 5 from the library, picked by interests |
 | Opponents | Family members in turn | Same, with the family's own taunts |
 | Referee | The pet, or a spare grown-up | Same |
 | Boss | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate | One boss from the family's real battles |

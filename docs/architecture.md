@@ -77,20 +77,17 @@ A flat page on paper-coloured ground, one accent colour, square corners, no drop
 
 ## 8. Pricing
 
-Three prices, in US dollars everywhere. No currency switching: a card handles the conversion, and one set of numbers is one less thing to be wrong.
+Two prices, in US dollars everywhere. No currency switching: a card handles the conversion.
 
 | | Price | What |
 |---|---|---|
-| The demo | Free | Two games and a boss, built in the browser in a minute |
-| Starter | $49 | Three games and a boss, the hero plus three people, and the pet |
-| Family and Friends | $99 | Five games and a boss, up to eight people, everyone's own lines written in, checked by a person, ready in 48 hours |
-| Gift Box | $179 | Everything above, plus a printed arcade poster of their title screen, a premiere countdown everyone opens together, and a twenty-second trailer of their own game |
+| The demo | Free | One game, then a locked card. Built in the browser in a minute |
+| The game | $99 | Five games and a boss, up to eight people, their own lines, ready in 48 hours, theirs forever |
+| The gift box | $179 | The same game, plus a printed poster of their title screen, a premiere everyone opens together, and a trailer for the family chat |
 
-The shape is deliberate. Starter is thin on purpose so the middle one is the obvious buy, and the top one is a physical present rather than a longer list of features, which is easier to want and harder to compare. Nothing else is sold: no subscription, no sibling add-on, no per-item extras. Every option on the page is one more decision standing between someone and their credit card.
+**One variable, and only one.** Everything about the game itself is identical between the two: same five games, same eight people, same 48 hours. The only decision a buyer makes is whether they want something printed. That is what makes it sayable in one breath, and it is the rule to defend when someone suggests another tier.
 
-Two things follow. The paid game is five games, not ten: more than five is more than a family plays in a sitting, and more than a person can check in eighteen minutes. And the demo is two games, so there is a real difference between free and paid.
-
-The plan flags that Starter loses about $2.55 an order once advertising is counted, so it earns its place only as the cheap option that makes $99 look sensible. If it ever takes more than a quarter of orders, raise it or stop showing it to cold traffic.
+The $49 Starter was dropped on 20 September 2026 for two reasons. Its own numbers had it losing about $2.55 an order after advertising, and three tiers turned the page into a comparison exercise. People told Joe the concept was easy and the pricing was confusing, which is the wrong way round.
 
 The Gift Box used to mean a parcel posted from Ireland, which cost $20 to $30, took a week and could land the buyer with customs. It is now three things that mostly are not parcels:
 
