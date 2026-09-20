@@ -245,6 +245,46 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | to fire. If two of you play on one keyboard, the second player uses | per sparare. Se giocate in due sulla stessa tastiera, il secondo giocatore usa |
 | to move and | per muoversi e |
 | to fire. | per sparare. |
+| Fill in a short form about the person it's for. We'll email you back with a payment link and the date it will be ready. | Compila un breve modulo sulla persona a cui è destinato. Ti rispondiamo via email con un link di pagamento e la data in cui sarà pronto. |
+| A short form, and no payment on it. Or write to | Un modulo breve, senza alcun pagamento. Oppure scrivi a |
+| An order starts with | Un ordine comincia dal |
+| the order form | modulo d'ordine |
+| . It runs on our own server, stores nothing, and turns what you write into one email to us. For an order we ask for what the game needs and nothing else: | . Gira sul nostro server, non salva niente e trasforma quello che scrivi in una sola email per noi. Per un ordine chiediamo quello che serve al gioco e nient'altro: |
+| Order a game \| HappyHeroGames | Ordina un gioco \| HappyHeroGames |
+| Tell us who the game is for. We email you back with a payment link and the date it will be ready. No account, and nothing is taken from you here. | Dicci per chi è il gioco. Ti rispondiamo via email con un link di pagamento e la data in cui sarà pronto. Nessun account e qui non paghi niente. |
+| Order a game | Ordina un gioco |
+| Tell us who it's for. We email you back with a payment link and a date. | Dicci per chi è. Ti rispondiamo via email con un link di pagamento e una data. |
+| Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make. | Dicci per chi è. Leggiamo ogni richiesta di persona e rispondiamo, di solito lo stesso giorno, con un link di pagamento e la data in cui sarà pronto. Qui non paghi niente e non c'è nessun account da creare. |
+| That did not send. Please email | Non è partito. Scrivi a |
+| instead and we will sort it out. | e sistemiamo tutto. |
+| Who is the game for? | Per chi è il gioco? |
+| Their first name is enough. It goes up in lights on the title screen. | Basta il nome. Compare a luci nella schermata del titolo. |
+| What is the occasion? | Qual è l'occasione? |
+| When do you need it? | Per quando ti serve? |
+| Leave this empty if there is no particular day. | Lascia vuoto se non c'è un giorno preciso. |
+| Which one would you like? | Quale preferisci? |
+| The game, $99 | Il gioco, $99 |
+| The gift box, $179 | La confezione regalo, $179 |
+| Not sure yet | Non lo so ancora |
+| Who else should be in it? | Chi altro dovrebbe esserci? |
+| Up to eight people, and the pet. First names or what they are called at home: Mum, Grandad, Coach, Biscuit the dog. | Fino a otto persone, e l'animale. Nomi o come li chiamate in casa: mamma, nonno, allenatore, Biscuit il cane. |
+| Anything we should know about them? | C'è qualcosa che dovremmo sapere su di lei? |
+| What they love, what they always say, the family joke. This is what makes the game theirs. | Cosa ama, cosa dice sempre, la battuta di famiglia. È questo che rende il gioco suo. |
+| Your email | La tua email |
+| This is where we send the game. | È qui che ti mandiamo il gioco. |
+| Leave this empty | Lascia vuoto |
+| Send this to us | Mandacelo |
+| We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Chiediamo solo quello che serve al gioco. Niente cognomi, niente età, niente scuole, niente foto. |
+| What we do with it | Cosa ne facciamo |
+| Would rather just write to us? | Preferisci scriverci e basta? |
+| Thank you \| HappyHeroGames | Grazie \| HappyHeroGames |
+| Your order is with us. We'll email you back with a payment link and the date it will be ready. | Il tuo ordine è arrivato. Ti risponderemo via email con un link di pagamento e la data in cui sarà pronto. |
+| Thank you | Grazie |
+| That is with us. We read every one ourselves, so the reply comes from a person, usually the same day. | È arrivato. Leggiamo ogni richiesta di persona, quindi la risposta arriva da una persona, di solito lo stesso giorno. |
+| It will have a payment link and the date the game will be ready. If you told us a date you need it by and we cannot make it, we will say so then, before you pay anything. | Avrà un link di pagamento e la data in cui il gioco sarà pronto. Se ci hai detto una data e non ce la facciamo, te lo diciamo allora, prima che tu paghi qualcosa. |
+| Nothing else happens until you reply. If you do not hear from us within a day, write to | Non succede altro finché non rispondi. Se non senti niente entro un giorno, scrivi a |
+| , because something went wrong at our end. | , perché qualcosa è andato storto da parte nostra. |
+| Back to the front page | Torna alla prima pagina |
 
 ## What the game says: names, instructions and scores
 

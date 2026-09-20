@@ -245,6 +245,46 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | to fire. If two of you play on one keyboard, the second player uses | chun lámhach. Má imríonn beirt agaibh ar mhéarchlár amháin, úsáideann an dara himreoir |
 | to move and | chun bogadh agus |
 | to fire. | chun lámhach. |
+| Fill in a short form about the person it's for. We'll email you back with a payment link and the date it will be ready. | Líon isteach foirm ghairid faoin duine a bhfuil sé dó. Seolfaimid ríomhphost ar ais chugat le nasc íocaíochta agus an dáta a mbeidh sé réidh. |
+| A short form, and no payment on it. Or write to | Foirm ghairid, gan aon íocaíocht uirthi. Nó scríobh chuig |
+| An order starts with | Tosaíonn ordú leis |
+| the order form | an fhoirm ordaithe |
+| . It runs on our own server, stores nothing, and turns what you write into one email to us. For an order we ask for what the game needs and nothing else: | . Ritheann sí ar ár bhfreastalaí féin, ní shábhálann sí faic, agus déanann sí ríomhphost amháin chugainn as a scríobhann tú. Le haghaidh ordú iarraimid an méid a theastaíonn ón gcluiche agus faic eile: |
+| Order a game \| HappyHeroGames | Ordaigh cluiche \| HappyHeroGames |
+| Tell us who the game is for. We email you back with a payment link and the date it will be ready. No account, and nothing is taken from you here. | Inis dúinn cé dó an cluiche. Seolaimid ríomhphost ar ais chugat le nasc íocaíochta agus an dáta a mbeidh sé réidh. Gan chuntas, agus ní thógtar aon rud uait anseo. |
+| Order a game | Ordaigh cluiche |
+| Tell us who it's for. We email you back with a payment link and a date. | Inis dúinn cé dó é. Seolaimid ríomhphost ar ais chugat le nasc íocaíochta agus dáta. |
+| Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make. | Inis dúinn cé dó é. Léimid gach ceann acu sinn féin agus seolaimid ríomhphost ar ais chugat, an lá céanna de ghnáth, le nasc íocaíochta agus an dáta a mbeidh sé réidh. Níl tú ag íoc faic anseo agus níl aon chuntas le déanamh. |
+| That did not send. Please email | Níor seoladh é sin. Seol ríomhphost chuig |
+| instead and we will sort it out. | agus réiteoimid é. |
+| Who is the game for? | Cé dó an cluiche? |
+| Their first name is enough. It goes up in lights on the title screen. | Is leor an chéad ainm. Téann sé suas i soilse ar an scáileán teidil. |
+| What is the occasion? | Cén ócáid atá ann? |
+| When do you need it? | Cathain atá sé uait? |
+| Leave this empty if there is no particular day. | Fág folamh é mura bhfuil lá ar leith i gceist. |
+| Which one would you like? | Cé acu ba mhaith leat? |
+| The game, $99 | An cluiche, $99 |
+| The gift box, $179 | An bosca bronntanais, $179 |
+| Not sure yet | Níl mé cinnte fós |
+| Who else should be in it? | Cé eile ba cheart a bheith ann? |
+| Up to eight people, and the pet. First names or what they are called at home: Mum, Grandad, Coach, Biscuit the dog. | Suas le hochtar, agus an peata. Céadainmneacha nó na hainmneacha a thugtar orthu sa bhaile: Mam, Daideo, an traenálaí, Biscuit an madra. |
+| Anything we should know about them? | An bhfuil aon rud ba cheart dúinn a bheith ar eolas fúthu? |
+| What they love, what they always say, the family joke. This is what makes the game theirs. | Na rudaí is breá leo, an rud a deir siad i gcónaí, jóc an teaghlaigh. Sin a fhágann gur leo féin an cluiche. |
+| Your email | Do sheoladh ríomhphoist |
+| This is where we send the game. | Is chuige sin a sheolaimid an cluiche. |
+| Leave this empty | Fág seo folamh |
+| Send this to us | Seol chugainn é |
+| We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Ní iarraimid ach an méid a theastaíonn ón gcluiche. Gan sloinnte, gan aois, gan scoileanna, gan grianghraif. |
+| What we do with it | Cad a dhéanaimid leis |
+| Would rather just write to us? | Ar mhaith leat scríobh chugainn ina ionad sin? |
+| Thank you \| HappyHeroGames | Go raibh maith agat \| HappyHeroGames |
+| Your order is with us. We'll email you back with a payment link and the date it will be ready. | Tá d'ordú againn. Seolfaimid ríomhphost ar ais chugat le nasc íocaíochta agus an dáta a mbeidh sé réidh. |
+| Thank you | Go raibh maith agat |
+| That is with us. We read every one ourselves, so the reply comes from a person, usually the same day. | Tá sé sin againn. Léimid gach ceann acu sinn féin, mar sin is ó dhuine a thagann an freagra, an lá céanna de ghnáth. |
+| It will have a payment link and the date the game will be ready. If you told us a date you need it by and we cannot make it, we will say so then, before you pay anything. | Beidh nasc íocaíochta ann agus an dáta a mbeidh an cluiche réidh. Má d'inis tú dáta dúinn agus mura féidir linn é a bhaint amach, déarfaimid ansin é, sula n-íocfaidh tú aon rud. |
+| Nothing else happens until you reply. If you do not hear from us within a day, write to | Ní tharlaíonn aon rud eile go dtí go bhfreagraíonn tú. Mura gcloiseann tú uainn laistigh de lá, scríobh chuig |
+| , because something went wrong at our end. | , mar chuaigh rud éigin mícheart ar ár dtaobhna. |
+| Back to the front page | Ar ais go dtí an chéad leathanach |
 
 ## What the game says: names, instructions and scores
 

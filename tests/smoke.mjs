@@ -175,6 +175,31 @@ for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
 }
 console.log('language offer: shown in Spanish, quiet in English, no redirects');
 
+// the order form: the fields that matter are required, the honeypot is out of sight, and the
+// form carries the language so the thank-you comes back in it
+for (const [page, want] of [['order/', 'en'], ['de/order/', 'de']]) {
+  const of = await browser.newPage(); watch(of);
+  await of.goto(BASE + page); await of.waitForTimeout(300);
+  const form = await of.evaluate(() => {
+    const f = document.querySelector('form[action="/order.php"]');
+    if (!f) return null;
+    const trap = f.querySelector('[name="website"]');
+    return {
+      lang: f.querySelector('[name="lang"]').value,
+      required: [...f.querySelectorAll('[required]')].map(e => e.name).sort().join(','),
+      trapShown: trap.getBoundingClientRect().left > -1000,
+      method: f.method
+    };
+  });
+  if (!form) { errors.push('/' + page + ' has no order form'); continue; }
+  if (form.lang !== want) errors.push('/' + page + ' form says lang=' + form.lang);
+  if (form.required !== 'email,hero') errors.push('/' + page + ' asks for the wrong required fields: ' + form.required);
+  if (form.trapShown) errors.push('/' + page + ' shows the honeypot field to people');
+  if (form.method !== 'post') errors.push('/' + page + ' form is not a POST');
+  await of.close();
+}
+console.log('order form: present, required fields right, honeypot hidden, language carried');
+
 // the 404: one file, served for a missing page at any depth, with its links still working
 if (BASE.startsWith('https://')) {
   for (const miss of ['nope/', 'free/nope/', 'g/nope/deeper/']) {

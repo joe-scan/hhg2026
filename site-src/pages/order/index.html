@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Order a game | HappyHeroGames</title>
+<meta name="description" content="Tell us who the game is for. We email you back with a payment link and the date it will be ready. No account, and nothing is taken from you here.">
+<link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fdf5ec">
+<meta property="og:title" content="Order a game">
+<meta property="og:description" content="Tell us who it's for. We email you back with a payment link and a date.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:type" content="website">
+<!--hreflang-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+<style>
+.order-page{max-width:660px;margin-inline:auto;padding-block:26px 56px}
+.order-page h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,42px);line-height:1.05;margin:0 0 12px}
+.order-page .sub{color:var(--muted);margin:0 0 26px;font-size:17px}
+.order-page label > span{display:block;font-weight:700;margin:0 0 6px}
+.order-page .hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin:2px 0 6px}
+.order-page label{display:block;margin:0 0 20px}
+.order-page input[type=text],.order-page input[type=email],.order-page input[type=date],.order-page select,.order-page textarea{
+  width:100%;background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:11px 12px;font:inherit;font-size:17px}
+.order-page textarea{min-height:96px;resize:vertical}
+.order-page input:focus,.order-page select:focus,.order-page textarea:focus{border-color:var(--ink)}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.sorry{border:1px solid var(--hot);color:var(--hot);border-radius:2px;padding:12px 14px;margin:0 0 22px}
+.after-form{color:var(--muted);font-size:15px;margin:18px 0 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!--header-->
+
+<main class="order-page">
+  <h1>Order a game</h1>
+  <p class="sub">Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make.</p>
+
+  <p class="sorry" id="sorry" hidden>That did not send. Please email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> instead and we will sort it out.</p>
+
+  <form method="post" action="/order.php">
+    <input type="hidden" name="lang" value="<!--lang-->">
+    <label>
+      <span>Who is the game for?</span>
+      <span class="hint">Their first name is enough. It goes up in lights on the title screen.</span>
+      <input type="text" name="hero" maxlength="40" required autocomplete="off">
+    </label>
+
+    <label>
+      <span>What is the occasion?</span>
+      <select name="occasion">
+        <option>A birthday</option>
+        <option>Christmas</option>
+        <option>Father's Day</option>
+        <option>Mother's Day</option>
+        <option>Just because</option>
+      </select>
+    </label>
+
+    <label>
+      <span>When do you need it?</span>
+      <span class="hint">Leave this empty if there is no particular day.</span>
+      <input type="date" name="date">
+    </label>
+
+    <label>
+      <span>Which one would you like?</span>
+      <select name="pick">
+        <option>The game, $99</option>
+        <option>The gift box, $179</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Who else should be in it?</span>
+      <span class="hint">Up to eight people, and the pet. First names or what they are called at home: Mum, Grandad, Coach, Biscuit the dog.</span>
+      <textarea name="cast" maxlength="2000"></textarea>
+    </label>
+
+    <label>
+      <span>Anything we should know about them?</span>
+      <span class="hint">What they love, what they always say, the family joke. This is what makes the game theirs.</span>
+      <textarea name="about" maxlength="2000"></textarea>
+    </label>
+
+    <label>
+      <span>Your name</span>
+      <input type="text" name="from" maxlength="60" autocomplete="name">
+    </label>
+
+    <label>
+      <span>Your email</span>
+      <span class="hint">This is where we send the game.</span>
+      <input type="email" name="email" maxlength="120" required autocomplete="email">
+    </label>
+
+    <label class="trap" aria-hidden="true"><span>Leave this empty</span><input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+
+    <p><button class="btn go" type="submit">Send this to us</button></p>
+  </form>
+
+  <p class="after-form">We only ask for what the game needs. No surnames, no ages, no schools, no photos. <a href="../privacy/">What we do with it</a> &middot; <a href="/terms/" hreflang="en">Terms and refunds</a></p>
+  <p class="after-form">Would rather just write to us? <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</p>
+</main>
+
+<!--footer-->
+</div>
+<script>
+// The handler sends people back here with ?sorry=1 if the mail did not go out.
+if (location.search.indexOf('sorry=1') > -1) {
+  var s = document.getElementById('sorry');
+  if (s) { s.hidden = false; s.scrollIntoView({ block: 'center' }); }
+}
+</script>
+</body>
+</html>
