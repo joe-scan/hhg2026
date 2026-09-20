@@ -4,9 +4,10 @@
    reading face rather than Press Start 2P, and the magenta accent appears once per screen.
    Around it: a cool paper ground, ink type, thin rules, square corners. No cards, pills, gradients,
    glow or emoji in the page. Bungee (arcade marquee lettering) for the few big headlines only,
-   Atkinson Hyperlegible for reading, Press Start 2P for tiny labels. */
+   Atkinson Hyperlegible for reading, Press Start 2P for tiny labels. The wordmark is Bowlby One,
+   because Bungee has no lowercase at all and HappyHeroGames has to read as three words. */
 :root{--paper:#fdf5ec;--ink:#2a1a12;--muted:#6b5546;--rule:#e6d6c3;--hot:#c2410c;--hotfill:#f2711c;--gold:#ffd23f;--screen:#12062b;--focus:#c2410c;--field:#fffaf4;--on-hot:#ffffff;
-  --display:"Bungee","Arial Black",Impact,sans-serif;--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
+  --display:"Bungee","Arial Black",Impact,sans-serif;--mark:"Bowlby One","Arial Black",Impact,sans-serif;--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
 
 /* Two looks, warm by default and dark for a dark room or a phone set that way. A visitor's choice
    is kept in their own browser and written to <html data-skin>; with no choice made the device
@@ -42,7 +43,7 @@ button,input,select{font:inherit;color:inherit}
 
 /* top line */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
-.mark{font-family:var(--body);font-weight:700;font-size:23px;letter-spacing:-.01em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
+.mark{font-family:var(--mark);font-weight:400;font-size:21px;letter-spacing:-.005em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
 .logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
 .mark .word{white-space:nowrap}
 .mark .word i{font-style:normal;color:var(--hot)}
