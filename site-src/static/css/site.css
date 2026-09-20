@@ -66,6 +66,8 @@ button,input,select{font:inherit;color:inherit}
 footer{border-top:1px solid var(--rule);margin-top:10px;padding-block:18px 26px;color:var(--muted);font-size:14px;
   display:flex;align-items:center;justify-content:space-between;gap:10px 26px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+.foot-mark{font-family:var(--mark);font-size:15px;color:var(--ink)!important;text-decoration:none}
+.foot-mark:hover{text-decoration:underline}
 footer a:hover{color:var(--ink)}
 footer .langs{margin-left:auto}
 
