@@ -180,12 +180,14 @@ console.log('language offer: shown in Spanish, quiet in English, no redirects');
     await g.goto(BASE + 'gifts/' + href); await g.waitForTimeout(700);
     const who = await g.evaluate(() => HERO.name + '/' + FAM.map(f => f.name).join(','));
     const h1 = await g.evaluate(() => document.querySelector('h1').textContent.trim());
+    const words = await g.evaluate(() => document.querySelector('main').innerText.split(/\s+/).filter(Boolean).length);
+    if (words < 500) errors.push('gift page ' + href + ' is thin: ' + words + ' words');
     if (seen.has(who)) errors.push('two gift pages draw the same family: ' + who);
     if (seen.has(h1)) errors.push('two gift pages share a heading');
     seen.add(who); seen.add(h1);
     await g.close();
   }
-  console.log('gift pages:', links.length, 'listed,', seen.size / 2, 'checked, each with its own family');
+  console.log('gift pages:', links.length, 'listed,', seen.size / 2, 'checked: own family, own heading, 500+ words');
   await hub.close();
 }
 

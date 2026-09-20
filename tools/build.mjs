@@ -252,7 +252,27 @@ function landings(header, footer) {
     };
     const others = LANDINGS.filter(o => o.slug !== g.slug).slice(0, 3)
       .map(o => `<a href="/gifts/${o.slug}/">${o.title.replace(/^A /, '')}</a>`).join(', ');
+    // this page's own questions, and where it sits, in the form a search engine reads
+    const schema = '<script type="application/ld+json">' + JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        { '@type': 'BreadcrumbList', itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'HappyHeroGames', item: SITE_URL + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Gift ideas', item: SITE_URL + '/gifts/' },
+          { '@type': 'ListItem', position: 3, name: g.title, item: SITE_URL + '/gifts/' + g.slug + '/' }
+        ] },
+        { '@type': 'FAQPage', mainEntity: g.faq.map(([q, a]) => ({ '@type': 'Question', name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a } })) }
+      ]
+    }) + '<\/script>';
     let html = tpl
+      .replace(/\{\{schema\}\}/g, schema)
+      .replace(/\{\{playsIntro\}\}/g, g.playsIntro)
+      .replace(/\{\{plays\}\}/g, g.plays.map(x => `\n    <li>${x}</li>`).join('') + '\n  ')
+      .replace(/\{\{dayTitle\}\}/g, g.dayTitle).replace(/\{\{day\}\}/g, g.day)
+      .replace(/\{\{askTitle\}\}/g, g.askTitle).replace(/\{\{ask\}\}/g, g.ask)
+      .replace(/\{\{suitsTitle\}\}/g, g.suitsTitle).replace(/\{\{suits\}\}/g, g.suits)
+      .replace(/\{\{faq\}\}/g, g.faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('\n  '))
       .replace(/\{\{title\}\}/g, g.title)
       .replace(/\{\{description\}\}/g, g.description)
       .replace(/\{\{slug\}\}/g, g.slug)

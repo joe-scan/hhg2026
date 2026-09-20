@@ -67,8 +67,8 @@ At the $1M run rate that is four to six people, most of them in Ireland, selling
 - Live at happyherogames.com: the landing page, the hero builder, a free playable demo, party mode for a room full of children, and two free games that ask for nothing (`/free/christmas/`, `/free/halloween/`).
 - The game engine works, with five games, the boss and the ending all built, in English, Spanish, German, French, Italian and Irish.
 - Privacy rules are written and enforced in the product: no photos, no voice recordings, no surnames, ages, schools or addresses, and every game on its own unguessable link.
-- Orders for the first ten games are open, taken by email, so the real build time can be measured.
-- Not yet: automatic payments, the questionnaire form, the generator and the print partner.
+- Orders for the first ten games are open, through a form on the site that posts to our own server, so the real build time can be measured.
+- Not yet: automatic payments, the questionnaire that follows the payment link, the generator that turns answers into a finished game, and the print partner.
 
 ## What funding would be spent on
 

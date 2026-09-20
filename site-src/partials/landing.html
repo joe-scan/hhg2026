@@ -12,6 +12,7 @@
 <meta property="og:image" content="https://happyherogames.com/img/og.png">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://happyherogames.com/gifts/{{slug}}/">
+{{schema}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bowlby+One&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
@@ -24,6 +25,15 @@
 .gift p{max-width:56ch;margin:0 0 16px;color:var(--muted)}
 .gift .shot{margin:26px 0}
 .gift .angle{font-weight:700;color:var(--ink);font-size:18px;margin:0 0 6px}
+.gift h2{font-weight:700;font-size:21px;margin:30px 0 10px}
+.gift .cap{color:var(--muted);font-size:14px;margin:8px 0 0}
+.gift .games{list-style:none;padding:0;margin:0 0 16px;max-width:56ch;display:grid;gap:8px}
+.gift .games li{padding-left:18px;position:relative;color:var(--muted)}
+.gift .games li b{color:var(--ink)}
+.gift .games li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;background:var(--hotfill)}
+.gift details{border-top:1px solid var(--rule);padding-block:12px;max-width:56ch}
+.gift details summary{cursor:pointer;font-weight:700}
+.gift details p{margin:8px 0 0}
 .gift .cta{margin:26px 0 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .gift .cta small{color:var(--muted);font-size:15px}
 .gift .also{border-top:1px solid var(--rule);margin-top:34px;padding-top:20px;font-size:15px;color:var(--muted)}
@@ -38,14 +48,34 @@
   <h1>{{h1}}</h1>
   <p class="lede">{{lede}}</p>
 
-  <div class="shot"><div class="screen"><canvas id="game" width="480" height="270" aria-label="{{alt}}"></canvas></div></div>
+  <div class="shot"><div class="screen"><canvas id="game" width="480" height="270" aria-label="{{alt}}"></canvas></div>
+    <p class="cap">An example. Yours has your own names in it.</p></div>
 
   <p class="angle">{{angle}}</p>
   {{body}}
 
-  <p class="cta"><a class="btn go" href="/#make">Build one, free</a> <small>Type a name and play it in about a minute. $99 when you order one for real.</small></p>
+  <h2>What they actually play</h2>
+  <p>{{playsIntro}}</p>
+  <ul class="games">{{plays}}</ul>
 
-  <p class="also">More ideas: <!--siblings--> &middot; <a href="/#prices">what it costs</a> &middot; <a href="/#faq">questions</a></p>
+  <h2>{{dayTitle}}</h2>
+  <p>{{day}}</p>
+
+  <h2>{{askTitle}}</h2>
+  <p>{{ask}}</p>
+
+  <h2>{{suitsTitle}}</h2>
+  <p>{{suits}}</p>
+
+  <h2>What it costs</h2>
+  <p>$99 for the game: five games, up to eight people in it, ready within five working days. When you order you can add the printed poster and a short video for $80, a 48-hour turnaround for $39, or a second game for a brother or sister for $69. Nothing is paid on the order form itself.</p>
+
+  <h2>Questions</h2>
+  {{faq}}
+
+  <p class="cta"><a class="btn go" href="/#make">Build one, free</a> <small>Type a name and play it in about a minute, before you decide anything.</small></p>
+
+  <p class="also">More ideas: <!--siblings--> &middot; <a href="/#prices">what it costs</a> &middot; <a href="/#faq">all the questions</a></p>
 </main>
 
 <!--footer-->
