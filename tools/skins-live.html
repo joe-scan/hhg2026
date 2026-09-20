@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Skins, live | Happy Hero Games</title>
+<style>
+  body{margin:0;font:15px/1.5 system-ui,sans-serif;background:#1b1726;color:#efedf6;display:flex;flex-direction:column;height:100vh}
+  header{padding:10px 14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #3a3350}
+  button{font:inherit;padding:6px 12px;border-radius:3px;border:1px solid #4b4370;background:#241f36;color:inherit;cursor:pointer}
+  button[aria-pressed="true"]{background:#efedf6;color:#1b1726;border-color:#efedf6}
+  iframe{flex:1;width:100%;border:0;background:#fff}
+</style></head><body>
+<header><strong>Skins</strong><span id="who"></span></header>
+<iframe id="page" src="../site/index.html"></iframe>
+<script type="module">
+  import { SKINS } from './skins.js';
+  const frame = document.getElementById('page'), head = document.querySelector('header');
+  let current = SKINS[0];
+  const apply = () => {
+    const d = frame.contentDocument; if (!d) return;
+    let tag = d.getElementById('skin-preview');
+    if (!tag) { tag = d.createElement('style'); tag.id = 'skin-preview'; d.head.appendChild(tag); }
+    tag.textContent = ':root{' + Object.entries(current.vars).map(([k, v]) => `--${k}:${v}`).join(';') + '}';
+    d.documentElement.dataset.theme = 'light';
+    document.getElementById('who').textContent = current.name;
+  };
+  SKINS.forEach(s => {
+    const b = document.createElement('button');
+    b.textContent = s.name; b.setAttribute('aria-pressed', String(s === current));
+    b.onclick = () => { current = s; head.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); apply(); };
+    head.appendChild(b);
+  });
+  frame.addEventListener('load', apply);
+</script>
+</body></html>
