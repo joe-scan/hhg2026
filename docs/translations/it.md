@@ -236,6 +236,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Questo è gratis e uguale per tutti. I giochi che facciamo sono diversi. Cinque giochi, con la tua famiglia e i tuoi amici da battere e le loro battute in ogni schermata. |
 | Last changed 20 September 2026. Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | Ultima modifica: 20 settembre 2026. Per ora gli ordini si fanno via email. Questo riguarda la demo gratuita, che non ci manda niente, e cosa comporta un ordine. |
 | The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself. A copy is saved on your own device, so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Il nome, i capelli, i colori, il familiare e l'animale che scegli in prima pagina non escono mai dal tuo browser. Viaggiano fino al gioco dentro l'indirizzo web stesso. Una copia resta salvata sul tuo dispositivo, così il tuo lavoro è ancora lì se torni. A noi non arriva niente e non c'è nessun account da creare. |
+| Want the next one when it lands? | Vuoi il prossimo appena esce? |
+| Send us your email | Mandaci la tua email |
+| and we'll tell you. Nothing else, ever. | e te lo diciamo. Nient'altro, mai. |
 
 ## What the game says: names, instructions and scores
 

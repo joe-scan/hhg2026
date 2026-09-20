@@ -30,6 +30,11 @@ export const ENGLISH_ONLY = ['terms/index.html'];
 // language must never ship: a Spanish page leading to an English game is worse than no page.
 export const LANGS = ['es', 'de', 'fr', 'it', 'ga'];
 export const LANGNAMES = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', ga: 'Gaeilge' };
+// What the offer says, in the language being offered. Never in English: the person it is for
+// may not read English, and the person who does read English should be able to ignore it.
+export const OFFERS = { es: 'Ver en español', de: 'Auf Deutsch ansehen', fr: 'Voir en français',
+  it: 'Vedi in italiano', ga: 'Féach as Gaeilge' };
+export const DISMISS = { es: 'No, gracias', de: 'Nein, danke', fr: 'Non merci', it: 'No, grazie', ga: 'Níl, go raibh maith agat' };
 
 const read = p => fs.readFileSync(p, 'utf8');
 const write = (p, s) => { fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, s); };
@@ -139,6 +144,22 @@ function picker(pagePath, lang) {
   return `<details class="langs"><summary title="Language" lang="${lang}">${globe}<span>${LANGNAMES[lang]}</span></summary><div>${others}</div></details>`;
 }
 
+// A visitor whose browser is set to Spanish is offered Spanish, once, and can say no. Nobody is
+// redirected: an English speaker in Madrid has a Spanish browser and wants the page they asked for.
+function offer(pagePath, lang) {
+  if (lang !== 'en' || ENGLISH_ONLY.includes(pagePath)) return '';
+  const href = siblings(pagePath, lang);
+  const alts = Object.fromEntries(LANGS.map(l => [l, { u: href(l), t: OFFERS[l], n: DISMISS[l] }]));
+  return `<div id="lang-offer" hidden data-alt='${JSON.stringify(alts)}'></div>
+<script>(function(){var el=document.getElementById('lang-offer');if(!el)return;
+try{if(localStorage.getItem('hhg-lang-offer')==='no')return;}catch(e){}
+var alt=JSON.parse(el.dataset.alt),code=(navigator.language||'').slice(0,2).toLowerCase(),o=alt[code];if(!o)return;
+var a=document.createElement('a');a.href=o.u;a.lang=code;a.textContent=o.t;
+var b=document.createElement('button');b.type='button';b.lang=code;b.textContent=o.n;
+b.onclick=function(){el.hidden=true;try{localStorage.setItem('hhg-lang-offer','no');}catch(e){}};
+el.append(a,b);el.hidden=false;})();<\/script>`;
+}
+
 function build(lang) {
   const dict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, lang + '.json')));
   const gameDict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, `game-${lang}.json`)));
@@ -161,6 +182,7 @@ function build(lang) {
     }
     html = html.replace('<!--hreflang-->', hreflangs(page, lang));
     html = html.replaceAll('<!--langs-->', picker(page, lang));
+    html = html.replace('<!--offer-->', offer(page, lang));
     const out = lang === 'en' ? path.join(SITE, page) : path.join(SITE, lang, page);
     write(out, html);
   }

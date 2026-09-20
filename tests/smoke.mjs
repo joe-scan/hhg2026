@@ -137,11 +137,27 @@ for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'S
   await fp.waitForTimeout(900);
   const over = await fp.evaluate(() => __free.game().over);
   const shown = await fp.evaluate(() => !document.getElementById('save').hidden);
+  const asked = await fp.evaluate(() => !document.getElementById('next').hidden);
+  if (!asked) errors.push(theme + ' never asked about the next game');
   console.log(theme, over ? 'ran to the end' : 'DID NOT END', shown ? 'and offered the picture' : 'WITH NO PICTURE');
   if (!over) errors.push(theme + ' did not finish');
   if (!shown) errors.push(theme + ' never offered the picture');
   await fp.close();
 }
+
+// the language offer: a Spanish browser is offered Spanish, an English one is left alone, and
+// nobody is redirected anywhere
+for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
+  const ctx2 = await browser.newContext({ locale });
+  const pg = await ctx2.newPage(); watch(pg);
+  await pg.goto(BASE); await pg.waitForTimeout(400);
+  const got = await pg.evaluate(() => { const e = document.getElementById('lang-offer'); return !!(e && !e.hidden); });
+  const url = pg.url();
+  if (got !== want) errors.push('the language offer was ' + (got ? 'shown' : 'missing') + ' for ' + locale);
+  if (!url.endsWith('/') || /\/(es|de|fr|it|ga)\//.test(url)) errors.push('a browser language redirected the page to ' + url);
+  await ctx2.close();
+}
+console.log('language offer: shown in Spanish, quiet in English, no redirects');
 
 // the old Halloween address was shared before the games moved under /free/
 if (BASE.startsWith('https://')) {

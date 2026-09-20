@@ -58,7 +58,11 @@ function freePage(make, opt) {
     game.draw();
     fxTick(); fxDraw();
     if (game.over) {
-      if (!ending) { ending = t; confetti(40, game.cols); $('save').hidden = false; }
+      if (!ending) {
+        ending = t; confetti(40, game.cols); $('save').hidden = false;
+        // the one moment somebody is pleased with us is the only moment worth asking anything
+        if ($('next')) $('next').hidden = false;
+      }
       if (t - ending > 40) ended();
     }
     clearLatches();
@@ -69,7 +73,7 @@ function freePage(make, opt) {
   const done = () => game.over && t - ending > 60;
   const start = () => {
     audioInit(); hero();
-    $('save').hidden = true; if (msg) msg.textContent = '';
+    $('save').hidden = true; if ($('next')) $('next').hidden = true; if (msg) msg.textContent = '';
     ending = 0; game = make(opt.seconds || 60); game.init(); live = true;
     try { cv.focus(); } catch (e) {}
   };

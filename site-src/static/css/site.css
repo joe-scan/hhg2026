@@ -43,6 +43,11 @@ button,input,select{font:inherit;color:inherit}
 .pixel{font-family:var(--pixel);font-size:10px;letter-spacing:.04em;line-height:1.9}
 
 /* top line */
+/* the language offer: one line, dismissible, never a redirect */
+#lang-offer{display:flex;align-items:center;gap:14px;padding:8px 0 0;font-size:14px}
+#lang-offer a{color:var(--ink)}
+#lang-offer button{border:0;background:none;padding:0;color:var(--muted);font-size:14px;cursor:pointer;font-family:inherit}
+#lang-offer button:hover{color:var(--ink);text-decoration:underline}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
 .mark{font-family:var(--mark);font-weight:400;font-size:21px;letter-spacing:-.005em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
 .logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
@@ -94,6 +99,7 @@ canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated
 .acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 0}
 .acts small{color:var(--muted);font-size:14px}
 .keys{color:var(--muted);font-size:15px;margin:14px 0 0}
+.next{margin:18px 0 0;padding:12px 14px;border:1px solid var(--rule);border-radius:2px;font-size:15px;max-width:54ch}
 .after{border-top:1px solid var(--rule);margin-top:32px;padding-top:22px}
 .after p{max-width:56ch;color:var(--muted)}
 .pads{display:none;justify-content:center;gap:40px;margin:14px 0 0}
