@@ -47,37 +47,78 @@
 <script src="/arcade/engine.js"></script>
 <script src="/arcade/scenes.js"></script>
 <script>
-// The hero wanders the empty screen looking for the page. Tap and he jumps, because a dead end
-// is the one place on a website where a small joke costs nothing.
+// A dead end is the one place on a website where a small game costs nothing. The missing pages
+// blow past on the wind; jump and grab three of them. One button, no instructions needed, and
+// the links underneath are the real point of the page.
 (() => {
   const cv = document.getElementById('game');
-  let t = 0, x = 150, dir = 1, jump = 0, vy = 0;
+  const GROUND = 232, GRAV = .52, JUMP = -8.0;
+  let t = 0, y = GROUND, vy = 0, air = false, facing = 1;
+  let pages = [], spawn = 40, found = 0, best = 0, msg = 0;
   applyConfig(Object.assign({}, DEMO, { hero: Object.assign({}, DEMO.hero, { name: '404' }), occasion: 'star' }));
+  try { best = Math.max(0, parseInt(localStorage.getItem('hhg-404') || '0', 10) || 0); } catch (e) {}
 
-  const hop = () => { if (!jump) { jump = 1; vy = -7.4; sfx.kick(); } };
+  const hop = () => { if (!air) { air = true; vy = JUMP; sfx.kick(); } };
   cv.addEventListener('click', hop);
-  window.addEventListener('keydown', e => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); hop(); } });
+  cv.addEventListener('touchstart', e => { e.preventDefault(); hop(); }, { passive: false });
+  window.addEventListener('keydown', e => {
+    if (e.code === 'Space' || e.code === 'Enter' || e.code === 'ArrowUp') { e.preventDefault(); hop(); }
+  });
+
+  // a sheet of paper: tumbling, drifting left, at a height worth jumping for
+  const addPage = () => {
+    const high = R() < .55;
+    pages.push({ x: W + 20, y: high ? rnd(150, 178) : rnd(196, 214), v: rnd(1.5, 2.6), s: R() * 6, got: 0 });
+  };
 
   const draw = () => {
     t++;
     bgSynth(t);
-    // the sign, in lights, with the plate the title screen uses
-    namePlate('404', W / 2, 30, 56);
-    nameLogo('404', W / 2, 26, 56);
+    // the sign
+    namePlate('404', W / 2, 26, 52);
+    nameLogo('404', W / 2, 22, 52);
     const band = 'PAGE NOT FOUND', bw = band.length * 12;
-    rect(W / 2 - bw / 2 - 10, 98, bw + 20, 26, BAND());
-    rect(W / 2 - bw / 2 - 10, 98, bw + 20, 3, COL.gold);
-    txt(band, W / 2, 104, 12, COL.gold, 'center');
+    rect(W / 2 - bw / 2 - 10, 84, bw + 20, 26, BAND());
+    rect(W / 2 - bw / 2 - 10, 84, bw + 20, 3, COL.gold);
+    txt(band, W / 2, 90, 12, COL.gold, 'center');
 
-    if (jump) { vy += .5; jump += vy; if (jump >= 0) { jump = 0; vy = 0; } }
-    else { x += dir * .7; if (x > W - 90 || x < 90) dir = -dir; }
-    const y = 232 + (jump || 0);
-    shadow(x, 234, 13);
-    drawSpec(HERO, x, y, 4, dir < 0, Math.floor(t / 7));
-    if (PET) pet(x - dir * 54, 250, 2, dir > 0, Math.floor(t / 6));
-    // a question mark over his head, on and off
-    if (t % 120 < 70) txt('?', x + 18, y - 62, 16, COL.ink, 'center');
-    txt(touchMode ? 'TAP HIM' : 'PRESS SPACE', W / 2, 250, 8, COL.ink, 'center');
+    if (--spawn <= 0) { addPage(); spawn = rint(55, 100); }
+    for (const p of pages) {
+      p.x -= p.v; p.s += .12;
+      p.wob = Math.sin(p.s) * 7;
+    }
+    pages = pages.filter(p => p.x > -30 && !p.gone);
+
+    // the hero, jumping for them
+    if (air) { vy += GRAV; y += vy; if (y >= GROUND) { y = GROUND; air = false; vy = 0; } }
+    const hx = 150;
+    for (const p of pages) {
+      const py = p.y + p.wob;
+      if (!p.got && Math.abs(p.x - hx) < 26 && Math.abs(py - (y - 34)) < 30) {
+        p.got = 1; p.gone = true; found++; msg = t;
+        sfx.blip(); burst(p.x, py, 10, ['#ffffff', COL.gold], 2);
+        if (found > best) { best = found; try { localStorage.setItem('hhg-404', String(best)); } catch (e) {} }
+      }
+    }
+
+    for (const p of pages) {
+      const py = p.y + p.wob, lean = Math.sin(p.s) > 0 ? 1 : 0;
+      rect(p.x - 9, py - 11, 18, 22, '#ffffff');
+      rect(p.x - 9, py - 11, 18, 3, '#e6d6c3');
+      for (let k = 0; k < 4; k++) rect(p.x - 6 + lean, py - 5 + k * 5, 12 - k * 2, 2, '#bfb3a3');
+    }
+
+    shadow(hx, GROUND + 2, air ? 8 : 13);
+    drawSpec(HERO, hx, y, 4, facing < 0, air ? 0 : Math.floor(t / 7));
+    if (PET) pet(74, 250, 2, true, Math.floor(t / 6));
+
+    // the score, and a word when you catch one
+    txt('FOUND: ' + found, 8, 124, 10, COL.ink);
+    if (best) txt('BEST: ' + best, W - 8, 124, 10, COL.ink, 'right');
+    if (msg && t - msg < 70) txt(found >= 3 ? 'THAT IS PLENTY. GO HOME.' : 'GOT ONE!', W / 2, 150, 12, COL.ink, 'center');
+    else if (!found && t % 140 < 90) txt(touchMode ? 'TAP TO JUMP FOR THE PAGES' : 'PRESS SPACE TO JUMP FOR THE PAGES', W / 2, 150, 10, COL.ink, 'center');
+
+    fxTick(); fxDraw(); clearLatches();
     requestAnimationFrame(draw);
   };
   draw();
