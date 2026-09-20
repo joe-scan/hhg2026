@@ -49,10 +49,8 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .steps li::before{content:counter(s);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:10px}
 .steps h3{margin:0 0 6px;font-size:19px}
 .steps p{margin:0;color:var(--muted)}
-.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px 44px;align-items:center}
-.story p{margin:0 0 12px;max-width:58ch}
-.story figure{margin:0}
-.story figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.ending{margin:30px 0 0;max-width:760px}
+.ending figcaption{color:var(--muted);font-size:14px;margin-top:8px}
 .prices{display:grid;gap:0;max-width:820px}
 .price{display:grid;grid-template-columns:150px 130px 1fr;gap:6px 20px;padding-block:18px;border-top:1px solid var(--rule);align-items:baseline}
 .price b{font-size:19px}
@@ -85,7 +83,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 #faq details{border-top:1px solid var(--rule);padding-block:12px;max-width:820px}
 #faq details summary{cursor:pointer;font-weight:700;font-size:18px}
 #faq details p{margin:8px 0 0;color:var(--muted);max-width:62ch}
-@media (max-width:760px){.steps,.story,.promises{grid-template-columns:1fr}.price{grid-template-columns:1fr auto}.price p{grid-column:1/-1}}
+@media (max-width:760px){.steps,.promises{grid-template-columns:1fr}.price{grid-template-columns:1fr auto}.price p{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -163,18 +161,12 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
     <li><h3>We build the game</h3><p>Two days, and a person plays it through before it goes anywhere.</p></li>
     <li><h3>They play it</h3><p>A private link that works on any phone, tablet or laptop.</p></li>
   </ol>
-</section>
-
-<section class="band story" aria-labelledby="story-h">
-  <div>
-    <h2 id="story-h">It started with two brothers</h2>
-    <p>One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Sean still won't talk about the quiz. Every family has those details. We put them in a game.</p>
-  </div>
-  <figure>
+  <figure class="ending">
     <div class="screen"><img src="img/finale.png" alt="The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art" width="1920" height="1080" style="display:block;width:100%;height:auto"></div>
     <figcaption>How every game ends.</figcaption>
   </figure>
 </section>
+
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Price</h2>
@@ -198,7 +190,6 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
     <img src="img/trailer.gif" alt="The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending" loading="lazy" width="480" height="270">
     <figcaption>This poster and trailer are for a made-up family. Yours has your own names in it.</figcaption>
   </figure>
-  <p class="extras">Date not fixed yet? A gift card works.</p>
   <div class="order" id="order">
     <h3>Order one</h3>
     <p>Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready.</p>

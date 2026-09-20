@@ -53,7 +53,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Two days, and a person plays it through before it goes anywhere. | Dos días, y una persona lo juega entero antes de que salga. |
 | They play it | Lo juegan |
 | A private link that works on any phone, tablet or laptop. | Un enlace privado que funciona en cualquier teléfono, tablet o portátil. |
-| It started with two brothers | Empezó con dos hermanos |
 | How every game ends. | Así termina cada juego. |
 | Price | Precio |
 | The game | El juego |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We delete your answers when you ask. | Borramos tus respuestas cuando lo pidas. |
 | The whole policy | La política completa |
 | What does it play on? | ¿Dónde se juega? |
+| Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | En cualquier teléfono, tablet o portátil con navegador. Nada que instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Español |
 |---|---|
-| Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | En cualquier teléfono, tablet o portátil con navegador. Nada que instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal. |
 | Who can be in it? | ¿Quién puede salir? |
 | Can I change something after it arrives? | ¿Puedo cambiar algo cuando llegue? |
 | Tell us what's wrong and we'll fix it. | Dinos qué está mal y lo arreglamos. |
@@ -142,7 +141,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The ending | El final |
 | Dark mode | Modo oscuro |
 | Light mode | Modo claro |
-| HappyHeroGames | HappyHeroGames |
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | Ellos son el héroe. Su familia y sus amigos son a quienes tienen que ganar. Créalo aquí y juega ahora. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Una pantalla de título arcade en píxeles: STARRING AVA, HAPPY BIRTHDAY EDITION, con la familia en fila |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | El final de un juego de HappyHeroGames: HAPPY BIRTHDAY, AVA! en luces, una tarta de cumpleaños, y la familia y el perro celebrando en pixel art |
@@ -223,9 +221,7 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Ellos son el héroe. Mamá, papá, la abuela, su mejor amigo y el perro son a quienes tienen que ganar. Funciona en cualquier teléfono. Nada que instalar. |
 | Play the first game, free | Juega el primer juego, gratis |
 | Nothing you type is sent to us. Or just | Nada de lo que escribes se nos envía. O simplemente |
-| One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Sean still won't talk about the quiz. Every family has those details. We put them in a game. | Un padre creó un juego arcade para sus dos hijos, lleno de sus frases, su perro y sus peleas por el asiento delantero. Sean todavía no quiere hablar del concurso. Todas las familias tienen esos detalles. Nosotros los ponemos en un juego. |
 | Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Porque un enlace es difícil de envolver. El juego, un póster con su nombre en luces por correo y un tráiler corto para el chat familiar. |
-| Date not fixed yet? A gift card works. | ¿Aún no tienes fecha? Una tarjeta regalo también vale. |
 | Tell us about them | Cuéntanos cómo es |
 | Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Todos los demás quieren una foto de tu hijo. Nosotros no. El héroe se dibuja en píxeles. |
 | How long does it last? | ¿Cuánto dura? |
