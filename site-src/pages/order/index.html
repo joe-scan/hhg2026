@@ -73,15 +73,8 @@ label.one > span{display:block;font-weight:400;margin:0}
       </select>
     </label>
 
-    <label>
-      <span>When do you need it?</span>
-      <span class="hint">Leave this empty if there is no particular day.</span>
-      <input type="date" name="date">
-    </label>
-
     <fieldset class="speed">
       <legend>How soon do you need it?</legend>
-      <p class="soon" id="soon" hidden>That date is close. Five working days may not make it.</p>
       <label class="one"><input type="radio" name="speed" value="Standard, within five working days" checked><span>Within five working days. Included.</span></label>
       <label class="one"><input type="radio" name="speed" value="Rush, 48 hours, $39"><span>In 48 hours. $39 more.</span></label>
     </fieldset>
@@ -166,18 +159,6 @@ label.one > span{display:block;font-weight:400;margin:0}
 })();
 </script>
 <script>
-// If the date they give is close, say so beside the speed choice. It does not tick anything for
-// them: choosing the paid option on somebody's behalf is a trick, and this is a gift, not a trap.
-(() => {
-  const date = document.querySelector('input[name="date"]'), soon = document.getElementById('soon');
-  if (!date || !soon) return;
-  const check = () => {
-    const d = Date.parse(date.value);
-    const days = isNaN(d) ? 99 : Math.round((d - Date.now()) / 86400000);
-    soon.hidden = !(days >= 0 && days <= 7);
-  };
-  date.addEventListener('change', check); date.addEventListener('input', check);
-})();
 // The handler sends people back here with ?sorry=1 if the mail did not go out.
 if (location.search.indexOf('sorry=1') > -1) {
   var s = document.getElementById('sorry');

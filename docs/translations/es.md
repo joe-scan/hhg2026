@@ -136,7 +136,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms and refunds | Condiciones y reembolsos |
 | &middot; | &middot; |
 | Terms | Condiciones |
-| Build a game | Crear un juego |
 | Save the picture | Guardar la imagen |
 | Share it | Compartir |
 | Trick or Treat Dash \| HappyHeroGames | Truco o Trato \| HappyHeroGames |
@@ -152,10 +151,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | El póster impreso: la pantalla de título con AVA en luces, FELIZ CUMPLEAÑOS, AVA debajo, tres de sus juegos en la parte de abajo y el reparto acreditado como papá, mamá, Jack y Biscuit el perro |
 | Order one | Haz un pedido |
 | Free games | Juegos gratis |
-| Sleigh Dash: Christmas | Carrera en trineo: Navidad |
-| Trick or Treat Dash: Halloween | Truco o trato: Halloween |
-| All of them | Todos |
-| A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Un minuto cada uno, en cualquier navegador, con tu nombre en la pantalla final. Nada que instalar, sin registro y nada de lo que escribes se nos envía. Hechos para compartir. |
 | Sleigh Dash | Carrera en trineo |
 | Christmas. Run the rooftops and jump: a present goes down every chimney you clear. One button. | Navidad. Corre por los tejados y salta: cae un regalo por cada chimenea que superas. Un solo botón. |
 | Halloween. Catch the sweets in your bucket and leave the sprouts alone. Left and right. | Halloween. Atrapa los caramelos en tu cubo y deja las coles en paz. Izquierda y derecha. |
@@ -224,8 +219,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Who is the game for? | ¿Para quién es el juego? |
 | Their first name is enough. It goes up in lights on the title screen. | Con su nombre de pila basta. Aparece en luces en la pantalla de título. |
 | What is the occasion? | ¿Cuál es la ocasión? |
-| When do you need it? | ¿Para cuándo lo necesitas? |
-| Leave this empty if there is no particular day. | Déjalo vacío si no hay un día concreto. |
 | Your email | Tu correo electrónico |
 | This is where we send the game. | Aquí es donde te enviamos el juego. |
 | Leave this empty | Deja esto vacío |
@@ -242,7 +235,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Back to the front page | Volver a la portada |
 | How quickly can I get it? | ¿Cuánto tarda en llegar? |
 | How soon do you need it? | ¿Para cuándo lo necesitas? |
-| That date is close. Five working days may not make it. | Esa fecha está cerca. Puede que cinco días laborables no lleguen. |
 | Within five working days. Included. | En cinco días laborables. Incluido. |
 | In 48 hours. $39 more. | En 48 horas. 39 $ más. |
 | One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Algo que conviene saber: si hay un hermano o una hermana que también querría uno, el segundo juego cuesta 69 $ en vez de 99 $. Dínoslo al responder y lo ponemos en el mismo enlace de pago. |
@@ -265,6 +257,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Anything to add? | ¿Quieres añadir algo? |
 | Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make. | Dinos para quién es. Lo leemos nosotros mismos y te respondemos el mismo día, con un enlace de pago y una fecha. Aquí no se paga nada y no hay que crear ninguna cuenta. |
 | Next: a payment link, and a few questions about what they love and who else is in it. We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Después: un enlace de pago y unas preguntas sobre qué le encanta y quién más sale. Solo pedimos lo que el juego necesita. Sin apellidos, sin edades, sin colegios, sin fotos. |
+| Christmas game | Juego de Navidad |
+| Halloween game | Juego de Halloween |
+| Two games, a minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Dos juegos, un minuto cada uno, en cualquier navegador, con tu nombre en la pantalla final. Nada que instalar, sin registro y nada de lo que escribes se nos envía. Hechos para compartir. |
 
 ## What the game says: names, instructions and scores
 

@@ -7,7 +7,7 @@
   // start from the link (coming back from the game), then a saved draft, then the demo family
   let cfg = null;
   const fromLink = location.hash.includes('g=');
-  if (fromLink) cfg = cfgFromLink();
+  if (fromLink) cfg = cfgFromLink() || DEMO;
   if (!cfg) { try { const d = localStorage.getItem('hhg-draft'); if (d) cfg = JSON.parse(d); } catch (e) {} }
   cfg = sanitise(cfg || DEMO);
   // The hero's name and family travel in the hash. Once they are read, take them out of the address
@@ -83,7 +83,7 @@
   }
   function changed() {
     const c = current(); applyConfig(c);
-    $('play').href = 'g/demo/#g=' + encodeCfg(c);
+    $('play').href = 'g/demo/';
     $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s first game, free';
     try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }

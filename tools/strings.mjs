@@ -26,6 +26,7 @@ export function isText(s) {
   if (SPRITE.test(s) && !/ /.test(s)) return false;         // sprite rows
   if (/^(source-over|destination-out|center|right|left|NFD|use strict)$/.test(s)) return false;
   if (/^[a-z-]+\.(png|js|json)$/.test(s)) return false;
+  if (/^[a-z0-9-]+\/[a-z0-9\/-]*$/.test(s)) return false;   // paths like g/demo/
   if (/^rgba?\(|^\(|^\.|[<>{}\[\];=]|\)\.|\/g,/.test(s)) return false;   // css, selectors, code fragments
   if (/^(image\/png|text\/|utf-8)/.test(s)) return false;
   if (s.includes('"')) return false;

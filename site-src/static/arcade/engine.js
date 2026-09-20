@@ -98,7 +98,8 @@ function sanitise(c) {
 // the config travels in the link as base64url JSON
 function encodeCfg(c) { return btoa(unescape(encodeURIComponent(JSON.stringify(c)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
 function decodeCfg(s) { s = s.replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '='; return JSON.parse(decodeURIComponent(escape(atob(s)))); }
-function cfgFromLink() { try { const m = location.hash.match(/[#&]g=([A-Za-z0-9_-]+)/); if (m) return decodeCfg(m[1]); } catch (e) {} return DEMO; }
+// null when the address carries no family, so a caller can fall back to a draft or to DEMO
+function cfgFromLink() { try { const m = location.hash.match(/[#&]g=([A-Za-z0-9_-]+)/); if (m) return decodeCfg(m[1]); } catch (e) {} return null; }
 
 // colour helpers for building palettes
 const hexRgb = h => { if (h.length === 4) h = '#' + h[1] + h[1] + h[2] + h[2] + h[3] + h[3]; return [1, 3, 5].map(k => parseInt(h.slice(k, k + 2), 16)); };

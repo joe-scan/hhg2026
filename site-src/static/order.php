@@ -39,7 +39,6 @@ $email    = field('email', 120);
 $from     = field('from', 80);
 $hero     = field('hero', 60);
 $occasion = field('occasion', 40);
-$date     = field('date', 40);
 $speed    = field('speed', 60);
 $sibling  = field('sibling', 10) === 'yes' ? 'YES, a second game at $69' : 'no';
 // the game itself is $99; everything else is what they ticked
@@ -54,7 +53,6 @@ if (!$valid) { header('Location: ' . $here . 'order/?sorry=1'); exit; }
 $lines = [
     'Hero:      ' . $hero,
     'Occasion:  ' . ($occasion ?: '(not said)'),
-    'Needed by: ' . ($date ?: '(not said)'),
     'Speed:     ' . ($speed ?: '(not said)'),
     'Sibling:   ' . $sibling,
     'Gift box:  ' . $box,

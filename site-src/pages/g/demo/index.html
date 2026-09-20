@@ -114,7 +114,11 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 <script src="../../arcade/games/water-balloon-fight.js"></script>
 <script src="../../arcade/flow.js"></script>
 <script>
-startGame(cfgFromLink());
+// A link with #g= wins (that is a game somebody was sent). Otherwise this is the visitor's own
+// draft from the builder, kept in their browser, so the address stays short enough to read out.
+startGame(cfgFromLink() || (function () {
+  try { return JSON.parse(localStorage.getItem('hhg-draft') || 'null'); } catch (e) { return null; }
+})() || DEMO);
 document.getElementById('hero-pad').textContent = HERO.name;
 // the builder reads the same #g= link, so the family's choices come back filled in
 document.getElementById('edit').href = '../../index.html' + (location.hash.includes('g=') ? location.hash : '#make');

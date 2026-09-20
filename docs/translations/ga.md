@@ -136,7 +136,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms and refunds | Téarmaí agus aisíocaíochtaí |
 | &middot; | &middot; |
 | Terms | Téarmaí |
-| Build a game | Tóg cluiche |
 | Save the picture | Sábháil an pictiúr |
 | Share it | Roinn é |
 | Trick or Treat Dash \| HappyHeroGames | Rás na Milseán \| HappyHeroGames |
@@ -152,10 +151,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | An póstaer clóite: an scáileán teidil le AVA i soilse, LÁ BREITHE SONA, AVA faoi, trí cinn dá cuid cluichí feadh an bhun, agus an fhoireann luaite mar Dhaid, Mam, Jack agus Biscuit an madra |
 | Order one | Cuir ordú isteach |
 | Free games | Cluichí saor in aisce |
-| Sleigh Dash: Christmas | Rás na Nollag: an Nollaig |
-| Trick or Treat Dash: Halloween | Rás na milseán: Oíche Shamhna |
-| All of them | Iad ar fad |
-| A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Nóiméad an ceann, i mbrabhsálaí ar bith, le d'ainm ar an scáileán deiridh. Faic le suiteáil, gan chlárú, agus ní sheoltar chugainn aon rud a chlóscríobhann tú. Déanta le roinnt. |
 | Sleigh Dash | Rás na Nollag |
 | Christmas. Run the rooftops and jump: a present goes down every chimney you clear. One button. | An Nollaig. Rith na díonta agus léim: titeann bronntanas síos gach simléar a ghlanann tú. Cnaipe amháin. |
 | Halloween. Catch the sweets in your bucket and leave the sprouts alone. Left and right. | Oíche Shamhna. Beir ar na milseáin sa bhuicéad agus fág na bachlóga. Clé agus deas. |
@@ -224,8 +219,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Who is the game for? | Cé dó an cluiche? |
 | Their first name is enough. It goes up in lights on the title screen. | Is leor an chéad ainm. Téann sé suas i soilse ar an scáileán teidil. |
 | What is the occasion? | Cén ócáid atá ann? |
-| When do you need it? | Cathain atá sé uait? |
-| Leave this empty if there is no particular day. | Fág folamh é mura bhfuil lá ar leith i gceist. |
 | Your email | Do sheoladh ríomhphoist |
 | This is where we send the game. | Is chuige sin a sheolaimid an cluiche. |
 | Leave this empty | Fág seo folamh |
@@ -242,7 +235,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Back to the front page | Ar ais go dtí an chéad leathanach |
 | How quickly can I get it? | Cé chomh tapa is a gheobhaidh mé é? |
 | How soon do you need it? | Cathain atá sé uait? |
-| That date is close. Five working days may not make it. | Tá an dáta sin gar. B'fhéidir nach mbainfidh cúig lá oibre amach é. |
 | Within five working days. Included. | I gceann cúig lá oibre. San áireamh. |
 | In 48 hours. $39 more. | I gceann 48 uair an chloig. $39 sa bhreis. |
 | One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Rud amháin is fiú a rá: má tá deartháir nó deirfiúr ann a bheadh ceann uathu freisin, cosnaíonn an dara cluiche $69 seachas $99. Abair é sin i do fhreagra agus cuirfimid ar an nasc íocaíochta céanna é. |
@@ -265,6 +257,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Anything to add? | Ar mhaith leat rud éigin a chur leis? |
 | Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make. | Inis dúinn cé dó é. Léimid gach ceann acu sinn féin agus seolaimid ríomhphost ar ais chugat an lá céanna, le nasc íocaíochta agus dáta. Ní íoctar faic anseo agus níl aon chuntas le déanamh. |
 | Next: a payment link, and a few questions about what they love and who else is in it. We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Ina dhiaidh sin: nasc íocaíochta, agus cúpla ceist faoi na rudaí is breá leo agus cé eile atá istigh ann. Ní iarraimid ach an méid a theastaíonn ón gcluiche. Gan sloinnte, gan aois, gan scoileanna, gan grianghraif. |
+| Christmas game | Cluiche Nollag |
+| Halloween game | Cluiche Oíche Shamhna |
+| Two games, a minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Dhá chluiche, nóiméad an ceann, i mbrabhsálaí ar bith, le d'ainm ar an scáileán deiridh. Faic le suiteáil, gan chlárú, agus ní sheoltar chugainn aon rud a chlóscríobhann tú. Déanta le roinnt. |
 
 ## What the game says: names, instructions and scores
 
