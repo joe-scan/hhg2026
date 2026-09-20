@@ -56,6 +56,11 @@ const SKINS = ['#f6d1b4', '#f3c6a0', '#d9a577', '#b87a4b', '#8a5634', '#5e3a22']
 const KITCOLS = ['#1f7ae0', '#e0102a', '#1e9e4a', '#ffd23f', '#7a3cff', '#ff6b1a', '#ff2bd6', '#ffffff', '#141018'];
 const PETCOLS = ['#ffffff', '#e8c9a0', '#c98a4b', '#6b3f1d', '#2a2230', '#9a96a6'];
 const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', fathers: 'HAPPY FATHER\'S DAY', mothers: 'HAPPY MOTHER\'S DAY', star: 'YOU\'RE A STAR' };
+// The teaser demo: one game, then a locked card instead of the boss and the ending. The demo page
+// sets window.HHG_TEASER; a paid game never does.
+const TEASER = (() => { try { return !!window.HHG_TEASER; } catch (e) { return false; } })();
+// The other games and the ending, named on the locked card so people see what they are not getting.
+const LOCKED = ['PADDLE BATTLE', 'DINNER DASH', 'THE FAMILY QUIZ', 'THE BOSS FIGHT', 'THE ENDING'];
 // Optional question and joke packs for a family who want them (see the quiz). Off by default.
 const PACKS = ['ie', 'uk'];
 
@@ -69,7 +74,7 @@ function sanitise(c) {
     occasion: oneOf(c.occasion, Object.keys(OCCASIONS), 'birthday'),
     packs: (Array.isArray(c.packs) ? c.packs : []).filter(k => PACKS.includes(k)).slice(0, 3),
     catchphrase: cleanName(c.catchphrase, 22), food: cleanName(c.food, 10).replace(/[!?.,']/g, '') || 'PIZZA',
-    family: (Array.isArray(c.family) ? c.family : []).slice(0, 3).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || roleLabel(m.role).toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
+    family: (Array.isArray(c.family) ? c.family : []).slice(0, 8).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || roleLabel(m.role).toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
     pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), kind: oneOf(c.pet && c.pet.kind, Object.keys(PETKINDS), 'dog'), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
   };
   if (!out.family.length) out.family.push({ role: 'dad', name: 'DAD', hairCol: HAIRCOLS[0] });

@@ -130,7 +130,7 @@ const ST = {
   },
   result: {
     enter() { sfx.score(); whistle(); burst(W / 2, 120, 50, [PL[S.w].col, '#fff'], 5); if (S.w === 1) say(SAYNAME[1] + ' wins!'); },
-    update() { if ((S.t > 90 && (anyIn().aP || clicked)) || S.t > 330) go(round < GAMES.length ? 'vs' : 'bossIntro'); },
+    update() { if ((S.t > 90 && (anyIn().aP || clicked)) || S.t > 330) go(round < GAMES.length ? 'vs' : TEASER ? 'locked' : 'bossIntro'); },
     draw() {
       rect(0, 0, W, H, '#12062b'); stars(S.t, H); hud('ROUND ' + round, PL[1].name + ' ' + won[1] + ' - ' + won[0] + ' FAMILY');
       const hop = Math.abs(Math.sin(S.t / 8)) * 16, L = 1 - S.w;
@@ -139,6 +139,25 @@ const ST = {
       txt(PL[S.w].name + ' WINS!', W / 2, 196, 16, PL[S.w].col, 'center', true);
       txt(S.w === 1 ? 'THE FAMILY ARE IN TROUBLE NOW.' : 'NEXT ONE\'S YOURS, ' + PL[1].name + '!', W / 2, 220, 8, '#fff', 'center');
       if (S.t > 90) pressFire(246);
+    }
+  },
+  // the end of the teaser: what they just played, against what the full game has
+  locked: {
+    enter() { mus.mode = 'title'; mus.fast = false; say('That is the demo.'); },
+    update() { if (S.t > 60 && (anyIn().aP || clicked)) go('title'); },
+    draw() {
+      bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.82)');
+      txt('THAT\'S THE DEMO', W / 2, 26, 16, COL.gold, 'center', true);
+      txt('THE FULL GAME KEEPS GOING:', W / 2, 54, 8, '#fff', 'center');
+      LOCKED.forEach((name, k) => {
+        const y = 74 + k * 26;
+        rect(96, y, 288, 22, 'rgba(255,255,255,.07)'); rect(96, y, 2, 22, COL.off);
+        txt(name, 116, y + 7, 8, COL.dim);
+        // a padlock, drawn small enough to read as one at this size
+        const lx = 352, ly = y + 6; rect(lx, ly + 4, 10, 8, COL.dim); rect(lx + 2, ly, 6, 2, COL.dim); rect(lx + 2, ly + 2, 2, 3, COL.dim); rect(lx + 6, ly + 2, 2, 3, COL.dim);
+      });
+      txt('AND ' + HERO.name + '\'S NAME UP IN LIGHTS AT THE END.', W / 2, 212, 8, COL.cyan, 'center');
+      if (S.t > 60) pressFire(238, 'PRESS FIRE TO PLAY THE DEMO AGAIN');
     }
   },
   bossIntro: {

@@ -11,7 +11,7 @@ const page = await browser.newPage({ viewport: { width: 1360, height: 900 } }); 
 await page.goto(BASE + 'index.html'); await page.waitForTimeout(600);
 await page.fill('#hero-name', 'Siobhán');
 await page.click('label:has(input[value="curly"])'); await page.click('#kit .sw:nth-child(2)');
-await page.selectOption('#fam-role-2', 'granny'); await page.fill('#fam-name-2', 'Nana Kay');
+await page.selectOption('#fam-role-0', 'granny'); await page.fill('#fam-name-0', 'Nana Kay');
 await page.fill('#pet-name', ''); await page.fill('#food', 'Tacos'); await page.fill('#catch', 'Ah here!');
 // 1b. every pet kind draws without an error, including the fish that stays in its bowl
 for (const kind of ['dog', 'cat', 'rabbit', 'hamster', 'fish']) {
@@ -24,21 +24,39 @@ await page.fill('#pet-name', ''); await page.waitForTimeout(120);
 await page.click('#play'); await page.waitForTimeout(700);
 const got = await page.evaluate(() => [HERO.name, FAM.map(f => f.name).join(','), !!PET, CFG.food, CFG.catchphrase].join(' | '));
 console.log('builder -> game:', got);
-if (got !== 'SIOBHAN | DAD,MUM,NANA KAY | false | TACOS | AH HERE!') errors.push('builder did not carry the family into the game');
+if (got !== 'SIOBHAN | NANA KAY | false | TACOS | AH HERE!') errors.push('builder did not carry the family into the game');
 
-// 2. the demo, computer on both sides, title to finale
-await page.evaluate(() => __hhg.setDemo(true));
-const seen = [];
-for (let n = 0; n < 3000; n++) {
-  const st = await page.evaluate(() => __hhg.state().name);
-  if (seen[seen.length - 1] !== st) seen.push(st);
-  if (st === 'finale') break;
-  if (['title', 'vs', 'howto', 'result', 'bossIntro', 'cont'].includes(st) && n % 3 === 0) await page.keyboard.press('Space');
-  await page.evaluate(() => { for (let i = 0; i < 20; i++) __hhg.tick(); __hhg.render(); });
-}
+// 2. the teaser demo, computer on both sides: one game, then the locked card
+const run = async (pg, stop) => {
+  await pg.evaluate(() => __hhg.setDemo(true));
+  const seen = [];
+  for (let n = 0; n < 4000; n++) {
+    const st = await pg.evaluate(() => __hhg.state().name);
+    if (seen[seen.length - 1] !== st) seen.push(st);
+    if (st === stop) break;
+    if (['title', 'vs', 'howto', 'result', 'bossIntro', 'cont'].includes(st) && n % 3 === 0) await pg.keyboard.press('Space');
+    await pg.evaluate(() => { for (let i = 0; i < 20; i++) __hhg.tick(); __hhg.render(); });
+  }
+  await pg.evaluate(() => { for (let i = 0; i < 300; i++) __hhg.tick(); __hhg.render(); });
+  return seen;
+};
+const seen = await run(page, 'locked');
 console.log('demo:', seen.join(' > '));
-if (seen[seen.length - 1] !== 'finale') errors.push('demo did not reach the finale');
-await page.evaluate(() => { for (let i = 0; i < 400; i++) __hhg.tick(); __hhg.render(); });
+if (seen[seen.length - 1] !== 'locked') errors.push('the demo did not stop at the locked card');
+if (seen.includes('boss') || seen.includes('finale')) errors.push('the demo gave away the boss or the ending');
+
+// 2b. the full game: every game, the boss and the ending, assembled the way a paid game is
+const full = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(full);
+const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
+await full.setContent('<canvas id="game" width="480" height="270"></canvas>' +
+  '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') +
+  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
+  '<script>startGame(DEMO);<\/script>',
+  { waitUntil: 'load' });
+await full.waitForTimeout(600);
+const seenFull = await run(full, 'finale');
+console.log('full game:', (await full.evaluate(() => __hhg.games().length)) + ' games >', seenFull.join(' > '));
+if (seenFull[seenFull.length - 1] !== 'finale') errors.push('the full game did not reach the ending');
 
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);

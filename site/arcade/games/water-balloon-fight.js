@@ -24,7 +24,7 @@ function gBalloons() {
     for (const d of drops) { d.x += d.vx; d.y += d.vy; d.vy += .15; d.life--; }
     drops = drops.filter(d => d.life > 0);
     if (pause > 0) { pause--; return; }
-    // Nuala checks on them from the back door. Throwing while she's looking costs a point.
+    // A grown-up checks on them from the back door. Throwing while they're looking costs a point.
     if (nu.who && --nu.T <= 0) {
       if (nu.ph === 'away') { nu.ph = 'door'; nu.T = 45; nu.line = 'LADS...'; sfx.blip(); }
       else if (nu.ph === 'door') { nu.ph = 'look'; nu.T = 110; nu.line = pick(NULINES); }
@@ -66,7 +66,7 @@ function gBalloons() {
     g.strokeStyle = '#ddd'; g.lineWidth = 1; g.beginPath(); g.moveTo(20, 40); g.quadraticCurveTo(240, 52, 460, 40); g.stroke();
     [['#e0102a', 90], ['#fff', 130], ['#ffd23f', 330], ['#22e6ff', 380]].forEach(([c, x]) => rect(x, 43 + Math.sin(x) * 2, 18, 14, c));
     rect(236, Y0, 8, Y1 - Y0, 'rgba(255,255,255,.12)');
-    // the back door, and Nuala in it
+    // the back door, with a grown-up in it
     rect(224, AY, 32, 26, '#3b2412'); rect(227, AY + 2, 26, 24, nu.ph === 'away' ? '#6b4220' : '#1a0f08');
     if (nu.ph === 'away') rect(248, AY + 13, 2, 2, '#ffd23f');
     else { person(nu.who, 240, 76, 2, false, 0); bubble(nu.line, 336, 30, 18); }

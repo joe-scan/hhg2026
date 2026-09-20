@@ -46,7 +46,8 @@
   const roleOpts = '<option value="">Nobody</option>' + Object.keys(ROLES).map(r => `<option value="${r}">${roleLabel(r)}</option>`).join('');
   const hairOpts = HAIRCOLS.map((c, k) => `<option value="${c}">${HAIRNAMES[k]} hair</option>`).join('');
   const famRows = [];
-  for (let k = 0; k < 3; k++) {
+  // the demo builds one opponent. The full game takes up to eight people.
+  for (let k = 0; k < 1; k++) {
     const m = cfg.family[k] || { role: '', name: '', hairCol: HAIRCOLS[1] };
     const row = document.createElement('div'); row.className = 'fam';
     row.innerHTML = `<label class="sr" for="fam-role-${k}">Family member ${k + 1}</label><select id="fam-role-${k}">${roleOpts}</select>` +
