@@ -31,7 +31,7 @@
   <div class="screen"><canvas id="game" width="480" height="270" aria-label="A pixel hero looking around an empty arcade screen with 404 in lights"></canvas></div>
 
   <h1>That page isn't here</h1>
-  <p class="sub">The link might be old, or we might have moved it. Nothing is broken and nobody is in trouble. Here's where everything lives:</p>
+  <p class="sub">The link might be old, or we might have moved it. Nothing is broken and nobody is in trouble. There's a game up there while you decide where to go: run with the arrows, jump with space, and catch the pages before the wind does. Here's where everything lives:</p>
 
   <ul class="go-list">
     <li><a href="/">Build a game, free</a> &mdash; your hero, in pixels, in about a minute.</li>
@@ -47,76 +47,104 @@
 <script src="/arcade/engine.js"></script>
 <script src="/arcade/scenes.js"></script>
 <script>
-// A dead end is the one place on a website where a small game costs nothing. The missing pages
-// blow past on the wind; jump and grab three of them. One button, no instructions needed, and
-// the links underneath are the real point of the page.
+// THE LOST PAGES. A proper little game, not a decoration: run left and right, jump, and catch
+// the pages blowing about before the wind takes them. Thirty seconds. Everything the player
+// needs to read sits in the black bar at the top, never on the sky where sprites cross it.
 (() => {
   const cv = document.getElementById('game');
-  const GROUND = 232, GRAV = .52, JUMP = -8.0;
-  let t = 0, y = GROUND, vy = 0, air = false, facing = 1;
-  let pages = [], spawn = 40, found = 0, best = 0, msg = 0;
+  const FLOOR = 238, LEFT = 30, RIGHT = 450, GRAV = .5, JUMP = -8.2, TOP = 30;
+  let t = 0, x = 240, vx = 0, y = FLOOR, vy = 0, air = false, face = 1;
+  let sheets = [], spawn = 30, score = 0, missed = 0, best = 0, time = 30 * 60, over = false, say = 0, sayT = 0;
   applyConfig(Object.assign({}, DEMO, { hero: Object.assign({}, DEMO.hero, { name: '404' }), occasion: 'star' }));
-  try { best = Math.max(0, parseInt(localStorage.getItem('hhg-404') || '0', 10) || 0); } catch (e) {}
+  try { best = parseInt(localStorage.getItem('hhg-404') || '0', 10) || 0; } catch (e) {}
 
-  const hop = () => { if (!air) { air = true; vy = JUMP; sfx.kick(); } };
-  cv.addEventListener('click', hop);
-  cv.addEventListener('touchstart', e => { e.preventDefault(); hop(); }, { passive: false });
+  const reset = () => { sheets = []; score = 0; time = 30 * 60; over = false; x = 240; y = FLOOR; vy = 0; air = false; };
+  const jump = () => { if (!air && !over) { air = true; vy = JUMP; sfx.kick(); } };
+  const start = () => { if (over) { reset(); audioInit(); } else jump(); };
+
+  // keyboard: arrows or WASD to run, space or up to jump
   window.addEventListener('keydown', e => {
-    if (e.code === 'Space' || e.code === 'Enter' || e.code === 'ArrowUp') { e.preventDefault(); hop(); }
+    if (['ArrowUp', 'Space', 'Enter', 'KeyW'].includes(e.code)) { e.preventDefault(); start(); }
   });
+  // touch: the left third runs left, the right third runs right, the middle jumps
+  let touch = 0;
+  const where = e => {
+    const r = cv.getBoundingClientRect(), px = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) / r.width;
+    return px < .33 ? -1 : px > .67 ? 1 : 0;
+  };
+  cv.addEventListener('touchstart', e => { e.preventDefault(); showTouch(); touch = where(e); if (!touch) start(); }, { passive: false });
+  cv.addEventListener('touchmove', e => { e.preventDefault(); touch = where(e); }, { passive: false });
+  cv.addEventListener('touchend', e => { e.preventDefault(); touch = 0; }, { passive: false });
+  cv.addEventListener('click', start);
 
-  // a sheet of paper: tumbling, drifting left, at a height worth jumping for
-  const addPage = () => {
-    const high = R() < .55;
-    pages.push({ x: W + 20, y: high ? rnd(150, 178) : rnd(196, 214), v: rnd(1.5, 2.6), s: R() * 6, got: 0 });
+  // a sheet blows in from one side and crosses the screen; the wind is never gentle
+  const add = () => {
+    const fromLeft = R() < .5, speed = rnd(1.2, 1.9);
+    sheets.push({ x: fromLeft ? -16 : W + 16, y: rnd(150, 206), v: fromLeft ? speed : -speed, w: R() * 6, dip: rnd(.15, .45) });
   };
 
   const draw = () => {
     t++;
     bgSynth(t);
-    // the sign
-    namePlate('404', W / 2, 26, 52);
-    nameLogo('404', W / 2, 22, 52);
-    const band = 'PAGE NOT FOUND', bw = band.length * 12;
-    rect(W / 2 - bw / 2 - 10, 84, bw + 20, 26, BAND());
-    rect(W / 2 - bw / 2 - 10, 84, bw + 20, 3, COL.gold);
-    txt(band, W / 2, 90, 12, COL.gold, 'center');
 
-    if (--spawn <= 0) { addPage(); spawn = rint(55, 100); }
-    for (const p of pages) {
-      p.x -= p.v; p.s += .12;
-      p.wob = Math.sin(p.s) * 7;
-    }
-    pages = pages.filter(p => p.x > -30 && !p.gone);
-
-    // the hero, jumping for them
-    if (air) { vy += GRAV; y += vy; if (y >= GROUND) { y = GROUND; air = false; vy = 0; } }
-    const hx = 150;
-    for (const p of pages) {
-      const py = p.y + p.wob;
-      if (!p.got && Math.abs(p.x - hx) < 26 && Math.abs(py - (y - 34)) < 30) {
-        p.got = 1; p.gone = true; found++; msg = t;
-        sfx.blip(); burst(p.x, py, 10, ['#ffffff', COL.gold], 2);
-        if (found > best) { best = found; try { localStorage.setItem('hhg-404', String(best)); } catch (e) {} }
+    if (!over) {
+      if (--time <= 0) {
+        over = true; sfx.score();
+        if (score > best) { best = score; try { localStorage.setItem('hhg-404', String(best)); } catch (e) {} }
       }
+      const I = anyIn();
+      const left = I.l || touch < 0, right = I.r || touch > 0;
+      vx = (right ? 1 : 0) - (left ? 1 : 0);
+      if (vx) face = vx;
+      x = clamp(x + vx * 3.1, LEFT, RIGHT);
+      if ((I.aP || I.uP) && !air) jump();
+      if (air) { vy += GRAV; y += vy; if (y >= FLOOR) { y = FLOOR; air = false; vy = 0; } }
+
+      if (--spawn <= 0) { add(); spawn = Math.max(26, 70 - Math.floor((30 * 60 - time) / 22)); }
+      for (const p of sheets) {
+        p.x += p.v; p.w += .1; p.y += Math.sin(p.w) * p.dip;
+        const py = p.y;
+        if (!p.got && Math.abs(p.x - x) < 24 && py > y - 58 && py < y - 4) {
+          p.got = 1; score++; say = 1; sayT = t; sfx.blip();
+          burst(p.x, py, 12, ['#ffffff', COL.gold], 2.2);
+        }
+      }
+      sheets = sheets.filter(p => !p.got && p.x > -40 && p.x < W + 40);
     }
 
-    for (const p of pages) {
-      const py = p.y + p.wob, lean = Math.sin(p.s) > 0 ? 1 : 0;
-      rect(p.x - 9, py - 11, 18, 22, '#ffffff');
-      rect(p.x - 9, py - 11, 18, 3, '#e6d6c3');
-      for (let k = 0; k < 4; k++) rect(p.x - 6 + lean, py - 5 + k * 5, 12 - k * 2, 2, '#bfb3a3');
+    // the sheets
+    for (const p of sheets) {
+      const tilt = Math.sin(p.w) > 0 ? 1 : 0;
+      rect(p.x - 9, p.y - 11, 18, 22, '#ffffff');
+      rect(p.x - 9, p.y - 11, 18, 3, '#e6d6c3');
+      for (let k = 0; k < 4; k++) rect(p.x - 6 + tilt, p.y - 5 + k * 5, 12 - k * 2, 2, '#bfb3a3');
     }
 
-    shadow(hx, GROUND + 2, air ? 8 : 13);
-    drawSpec(HERO, hx, y, 4, facing < 0, air ? 0 : Math.floor(t / 7));
-    if (PET) pet(74, 250, 2, true, Math.floor(t / 6));
+    // the hero
+    shadow(x, FLOOR + 2, air ? 9 : 13);
+    drawSpec(HERO, x, y, 4, face < 0, air ? 0 : (vx ? Math.floor(t / 5) : Math.floor(t / 14)));
+    if (PET) pet(clamp(x - face * 60, 20, W - 20), 252, 2, face > 0, Math.floor(t / 6));
 
-    // the score, and a word when you catch one
-    txt('FOUND: ' + found, 8, 124, 10, COL.ink);
-    if (best) txt('BEST: ' + best, W - 8, 124, 10, COL.ink, 'right');
-    if (msg && t - msg < 70) txt(found >= 3 ? 'THAT IS PLENTY. GO HOME.' : 'GOT ONE!', W / 2, 150, 12, COL.ink, 'center');
-    else if (!found && t % 140 < 90) txt(touchMode ? 'TAP TO JUMP FOR THE PAGES' : 'PRESS SPACE TO JUMP FOR THE PAGES', W / 2, 150, 10, COL.ink, 'center');
+    // the bar: everything readable lives here, above the play area, on black
+    rect(0, 0, W, TOP - 2, COL.ink); rect(0, TOP - 2, W, 2, COL.gold);
+    txt('404', 8, 9, 12, COL.gold);
+    txt('PAGES: ' + score, 74, 9, 12, '#fff');
+    txt('BEST: ' + best, W / 2 + 40, 9, 12, COL.dim);
+    txt(Math.ceil(time / 60) + 'S', W - 8, 9, 12, time < 300 ? COL.hot : '#fff', 'right');
+
+    if (over) {
+      rect(0, 96, W, 80, BAND());
+      rect(0, 96, W, 3, COL.gold); rect(0, 173, W, 3, COL.gold);
+      txt('PAGE NOT FOUND', W / 2, 106, 16, COL.gold, 'center');
+      txt(score ? 'YOU ROUNDED UP ' + score + (score === 1 ? ' PAGE' : ' PAGES') : 'THE WIND TOOK THEM ALL', W / 2, 132, 10, '#fff', 'center');
+      if (t % 50 < 34) txt(touchMode ? 'TAP TO PLAY AGAIN' : 'PRESS SPACE TO PLAY AGAIN', W / 2, 152, 10, COL.cyan, 'center');
+    } else if (t < 300 && !score) {
+      // the hint sits right under the bar, in the same black, so nothing is ever lost on the sky
+      rect(0, TOP, W, 22, BAND());
+      txt(touchMode ? 'TAP THE SIDES TO RUN, THE MIDDLE TO JUMP' : 'ARROWS TO RUN, SPACE TO JUMP', W / 2, TOP + 6, 10, '#fff', 'center');
+    } else if (say && t - sayT < 40) {
+      txt('GOT ONE', x, y - 74, 10, COL.ink, 'center');
+    }
 
     fxTick(); fxDraw(); clearLatches();
     requestAnimationFrame(draw);

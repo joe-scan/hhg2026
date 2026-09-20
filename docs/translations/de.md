@@ -12,13 +12,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 
 | English | Deutsch |
 |---|---|
-| A personalized arcade game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Ein personalisiertes Arcade-Spiel mit jemandem Besonderen in der Hauptrolle und der Familie als Gegnern. Probiere die kostenlose Demo in einer Minute, auf jedem Handy oder Laptop. |
 | Page sections | Seitenbereiche |
 | How it works | So funktioniert es |
 | Privacy | Datenschutz |
 | Questions | Fragen |
 | Put someone special in their | Bring jemanden Besonderen in sein |
-| own arcade game. | eigenes Arcade-Spiel. |
 | They're the hero. Mum, Dad, Granny, their best friend and the dog are the ones they have to beat. Build them here and play it now. | Sie sind der Held. Mama, Papa, Oma, die beste Freundin und der Hund müssen geschlagen werden. Hier bauen und sofort spielen. |
 | Make your hero | Bau deinen Helden |
 | THE HERO | DER HELD |
@@ -67,13 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | No surnames, ages, schools or addresses on screen, ever. | Nie Nachnamen, Alter, Schulen oder Adressen auf dem Bildschirm. |
 | Every game has its own private link. | Jedes Spiel hat seinen eigenen privaten Link. |
 | We delete your answers when you ask. | Wir löschen deine Angaben, sobald du es sagst. |
+| The whole policy | Die ganze Richtlinie |
+| What does it play on? | Worauf läuft es? |
 
 ## The rest of the site, including the privacy policy
 
 | English | Deutsch |
 |---|---|
-| The whole policy | Die ganze Richtlinie |
-| What does it play on? | Worauf läuft es? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Auf jedem Handy, Tablet oder Laptop mit Browser. Nichts zu installieren. Zwei Personen können an einer Tastatur spielen oder sich ein quer gehaltenes Handy teilen. |
 | Who can be in it? | Wer kann mitspielen? |
 | Can I change something after it arrives? | Kann ich später noch etwas ändern? |
@@ -145,7 +143,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Dark mode | Dunkelmodus |
 | Light mode | Hellmodus |
 | HappyHeroGames | HappyHeroGames |
-| Put someone special in their own arcade game | Bring jemanden Besonderen in sein eigenes Arcade-Spiel |
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | Sie sind der Held. Familie und Freunde müssen geschlagen werden. Hier bauen und sofort spielen. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Ein Pixel-Arcade-Titelbildschirm: STARRING AVA, HAPPY BIRTHDAY EDITION, mit der Familie in einer Reihe |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | Das Ende eines HappyHeroGames-Spiels: HAPPY BIRTHDAY, AVA! in Lichtern, eine Geburtstagstorte und die jubelnde Familie mit Hund in Pixel-Art |
@@ -155,7 +152,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The front page counts visits using Statcounter, which sets a cookie and records the page, the browser and a rough location. It's on the front page only. The game pages have no analytics at all, because their web addresses contain a family's details and those are nobody else's business. | Die Startseite zählt Besuche mit Statcounter, das ein Cookie setzt und Seite, Browser und ungefähren Ort speichert. Nur auf der Startseite. Die Spielseiten haben gar keine Analyse, weil ihre Adressen Familiendaten enthalten und das niemanden sonst etwas angeht. |
 | HappyHeroGames is run by Joe Scanlon in Ireland. Email | HappyHeroGames wird von Joe Scanlon in Irland betrieben. Schreib an |
 | Play \| HappyHeroGames | Spielen \| HappyHeroGames |
-| Come and play my arcade game | Komm, spiel mein Arcade-Spiel |
 | A HappyHeroGames game: I am the hero and my family are the ones I have to beat. | Ein HappyHeroGames-Spiel: Ich bin der Held und meine Familie muss ich schlagen. |
 | A pixel arcade title screen with the hero's name in lights | Ein Pixel-Arcade-Titelbildschirm mit dem Namen des Helden in Lichtern |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Dein HappyHeroGames-Spiel. Spiele mit Tastatur, Gamepad oder den Tasten auf dem Bildschirm. |
@@ -165,7 +161,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms | Bedingungen |
 | Can a whole party play? | Kann eine ganze Party spielen? |
 | put a name in lights | einen Namen in Lichter setzen |
-| Your name in lights \| HappyHeroGames | Dein Name in Lichtern \| HappyHeroGames |
 | Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Tippe einen Namen und sieh ihn in Lichtern auf einem Arcade-Bildschirm. Kostenlos, nichts zu installieren, nichts wird gesendet. |
 | Put your name in lights | Setz deinen Namen in Lichter |
 | Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Tippe einen Namen und bekomme einen Arcade-Titelbildschirm damit. Kostenlos, und nichts davon wird irgendwohin gesendet. |
@@ -197,9 +192,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Trick or Treat Dash: Halloween | Süßes oder Saures: Halloween |
 | Your name in lights | Dein Name in Leuchtschrift |
 | All of them | Alle |
-| Free games \| HappyHeroGames | Gratis-Spiele \| HappyHeroGames |
-| Free arcade games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Gratis-Arcadespiele für Weihnachten, Halloween und jeden anderen Tag. Dein Name auf dem Endbildschirm, nichts zu installieren, nichts wird an uns geschickt. |
-| Free arcade games with your name on them | Gratis-Arcadespiele mit deinem Namen |
 | A minute each, in any browser. Christmas, Halloween, or just your name in lights. | Je eine Minute, in jedem Browser. Weihnachten, Halloween oder einfach dein Name in Leuchtschrift. |
 | A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Je eine Minute, in jedem Browser, mit deinem Namen auf dem Endbildschirm. Nichts zu installieren, keine Anmeldung, und nichts, was du tippst, geht an uns. Zum Weiterschicken gemacht. |
 | Sleigh Dash | Schlitten-Sprint |
@@ -244,6 +236,15 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Water Balloon Fight | Wasserbomben-Schlacht |
 | The boss fight, with someone on their side | Der Endgegner, mit jemandem an ihrer Seite |
 | The ending, with their name in lights | Das Finale, mit ihrem Namen in Leuchtschrift |
+| Personalized video games, made for one person \| HappyHeroGames | Personalisierte Videospiele, für eine Person gemacht \| HappyHeroGames |
+| A personalized video game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Ein personalisiertes Videospiel mit jemandem Besonderen in der Hauptrolle und der eigenen Familie und den eigenen Freunden als Gegner. Probier die Demo in einer Minute aus, auf jedem Handy oder Laptop. |
+| Put someone special in their own video game | Mach jemanden Besonderen zum Helden im eigenen Videospiel |
+| own video game. | eigenen Videospiel. |
+| Put a name in lights, free \| HappyHeroGames | Einen Namen in Leuchtschrift setzen, gratis \| HappyHeroGames |
+| Free video games with your name on them \| HappyHeroGames | Gratis-Videospiele mit deinem Namen \| HappyHeroGames |
+| Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Gratis-Videospiele für Weihnachten, Halloween und jeden anderen Tag. Dein Name auf dem Endbildschirm, nichts zu installieren, nichts wird an uns geschickt. |
+| Free video games with your name on them | Gratis-Videospiele mit deinem Namen |
+| Come and play my video game | Komm und spiel mein Videospiel |
 
 ## What the game says: names, instructions and scores
 

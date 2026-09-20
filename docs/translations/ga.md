@@ -12,13 +12,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 
 | English | Gaeilge |
 |---|---|
-| A personalized arcade game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Cluiche arcade pearsantaithe le duine speisialta sa phríomhpháirt, agus a muintir agus a gcairde mar chéilí comhraic. Bain triail as an taispeántas saor in aisce i nóiméad, ar aon fhón nó ríomhaire glúine. |
 | Page sections | Codanna den leathanach |
 | How it works | Conas a oibríonn sé |
 | Privacy | Príobháideacht |
 | Questions | Ceisteanna |
 | Put someone special in their | Cuir duine speisialta ina |
-| own arcade game. | chluiche arcade féin. |
 | They're the hero. Mum, Dad, Granny, their best friend and the dog are the ones they have to beat. Build them here and play it now. | Is iad an laoch. Mamaí, Daidí, Mamó, an cara is fearr agus an madra na daoine a chaithfidh siad a bhualadh. Tóg anseo é agus imir anois. |
 | Make your hero | Tóg do laoch |
 | THE HERO | AN LAOCH |
@@ -67,13 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | No surnames, ages, schools or addresses on screen, ever. | Ní bhíonn sloinnte, aois, scoileanna ná seoltaí ar an scáileán riamh. |
 | Every game has its own private link. | Tá a nasc príobháideach féin ag gach cluiche. |
 | We delete your answers when you ask. | Scriosaimid do fhreagraí nuair a iarrann tú orainn. |
+| The whole policy | An polasaí iomlán |
+| What does it play on? | Cá n-imrítear é? |
 
 ## The rest of the site, including the privacy policy
 
 | English | Gaeilge |
 |---|---|
-| The whole policy | An polasaí iomlán |
-| What does it play on? | Cá n-imrítear é? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Ar aon fhón, táibléad nó ríomhaire glúine le brabhsálaí. Gan aon rud le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a chasadh ar a thaobh agus é a roinnt. |
 | Who can be in it? | Cé atá in ann a bheith ann? |
 | Can I change something after it arrives? | An féidir liom rud éigin a athrú ina dhiaidh? |
@@ -145,7 +143,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Dark mode | Mód dorcha |
 | Light mode | Mód geal |
 | HappyHeroGames | HappyHeroGames |
-| Put someone special in their own arcade game | Cuir duine speisialta ina chluiche arcade féin |
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | Is iad an laoch. A muintir agus a gcairde na daoine a chaithfidh siad a bhualadh. Tóg anseo é agus imir anois. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Scáileán teidil arcade i bpicteilíní: STARRING AVA, HAPPY BIRTHDAY EDITION, leis an teaghlach i líne |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | Deireadh cluiche HappyHeroGames: HAPPY BIRTHDAY, AVA! i soilse, císte lá breithe, agus an teaghlach agus an madra ag ceiliúradh in ealaín phicteilíní |
@@ -155,7 +152,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The front page counts visits using Statcounter, which sets a cookie and records the page, the browser and a rough location. It's on the front page only. The game pages have no analytics at all, because their web addresses contain a family's details and those are nobody else's business. | Comhaireann an chéad leathanach cuairteanna le Statcounter, a chuireann fianán agus a thaifeadann an leathanach, an brabhsálaí agus suíomh garbh. Ar an gcéad leathanach amháin. Níl anailís ar bith ar leathanaigh na gcluichí, mar go bhfuil sonraí teaghlaigh ina seoltaí. |
 | HappyHeroGames is run by Joe Scanlon in Ireland. Email | Is é Joe Scanlon in Éirinn a ritheann HappyHeroGames. Seol ríomhphost chuig |
 | Play \| HappyHeroGames | Imir \| HappyHeroGames |
-| Come and play my arcade game | Tar agus imir mo chluiche arcade |
 | A HappyHeroGames game: I am the hero and my family are the ones I have to beat. | Cluiche HappyHeroGames: is mise an laoch agus caithfidh mé mo mhuintir a bhualadh. |
 | A pixel arcade title screen with the hero's name in lights | Scáileán teidil arcade i bpicteilíní leis an ainm i soilse |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Do chluiche HappyHeroGames. Imir leis an méarchlár, le rialtán nó leis na cnaipí ar an scáileán. |
@@ -165,7 +161,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms | Téarmaí |
 | Can a whole party play? | An féidir le cóisir iomlán imirt? |
 | put a name in lights | cuir ainm i soilse |
-| Your name in lights \| HappyHeroGames | D'ainm i soilse \| HappyHeroGames |
 | Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Clóscríobh ainm agus feic i soilse é ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, gan aon rud á sheoladh chugainn. |
 | Put your name in lights | Cuir d'ainm i soilse |
 | Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Clóscríobh ainm agus faigh scáileán teidil arcade leis. Saor in aisce, agus ní sheoltar aon rud a chlóscríobhann tú áit ar bith. |
@@ -197,9 +192,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Trick or Treat Dash: Halloween | Rás na milseán: Oíche Shamhna |
 | Your name in lights | D'ainm i soilse |
 | All of them | Iad ar fad |
-| Free games \| HappyHeroGames | Cluichí saor in aisce \| HappyHeroGames |
-| Free arcade games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Cluichí arcade saor in aisce don Nollaig, d'Oíche Shamhna agus do lá ar bith eile. D'ainm ar an scáileán deiridh, faic le suiteáil, faic á sheoladh chugainn. |
-| Free arcade games with your name on them | Cluichí arcade saor in aisce le d'ainm orthu |
 | A minute each, in any browser. Christmas, Halloween, or just your name in lights. | Nóiméad an ceann, i mbrabhsálaí ar bith. An Nollaig, Oíche Shamhna, nó d'ainm i soilse. |
 | A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Nóiméad an ceann, i mbrabhsálaí ar bith, le d'ainm ar an scáileán deiridh. Faic le suiteáil, gan chlárú, agus ní sheoltar chugainn aon rud a chlóscríobhann tú. Déanta le roinnt. |
 | Sleigh Dash | Rás na Nollag |
@@ -244,6 +236,15 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Water Balloon Fight | Cath na mBalún Uisce |
 | The boss fight, with someone on their side | An troid boss, le duine ar a dtaobh |
 | The ending, with their name in lights | An deireadh, lena n-ainm i soilse |
+| Personalized video games, made for one person \| HappyHeroGames | Físchluichí pearsantaithe, déanta do dhuine amháin \| HappyHeroGames |
+| A personalized video game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Físchluiche pearsantaithe le duine speisialta sa phríomhról, agus a mhuintir agus a chairde mar chéilí comhraic. Bain triail as an taispeántas saor in aisce i nóiméad, ar aon fhón nó ríomhaire glúine. |
+| Put someone special in their own video game | Cuir duine speisialta ina fhíschluiche féin |
+| own video game. | a fhíschluiche féin. |
+| Put a name in lights, free \| HappyHeroGames | Cuir ainm i soilse, saor in aisce \| HappyHeroGames |
+| Free video games with your name on them \| HappyHeroGames | Físchluichí saor in aisce le d'ainm orthu \| HappyHeroGames |
+| Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Físchluichí saor in aisce don Nollaig, d'Oíche Shamhna agus do lá ar bith eile. D'ainm ar an scáileán deiridh, faic le suiteáil, faic á sheoladh chugainn. |
+| Free video games with your name on them | Físchluichí saor in aisce le d'ainm orthu |
+| Come and play my video game | Tar agus imir mo fhíschluiche |
 
 ## What the game says: names, instructions and scores
 

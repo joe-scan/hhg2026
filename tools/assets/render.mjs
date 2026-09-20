@@ -72,17 +72,19 @@ await card.fill('#who', 'AVA');
 await card.waitForTimeout(800);
 await card.locator('#game').screenshot({ path: path.join(ASSETS, 'title.png') });
 
-// The trailer. Two things it must not do: rush, and cut. Every card is held for two seconds or
-// so, and -morph cross-fades between them, which on pixel art reads as a slow dissolve. The
-// halving to 960 happens before the morph so the pixels stay square.
-// Frame numbering after -morph 4: the real frames land on 0, 5, 10, 15, 20, 25, 30.
+// The trailer. It must not rush and it must not smear. Each card is held for three seconds or
+// so; -morph 3 dissolves between them; -dither None keeps the flat colours flat, which is what
+// made the first cut look like a photocopy. The halving to 960 happens before the morph, so
+// every pixel stays a square, and the page shows it at exactly 480, which is a clean 2:1.
+// After -morph 3 the real frames land on 0, 4, 8, 12, 16, 20, 24.
 const shots = ['t-title.png', 't-vs.png', 't-play0.png', 't-play1.png', 't-play2.png', 't-play3.png', 't-end.png']
   .map(f => path.join(TMP, f));
 execFileSync('convert', [...shots,
   '-filter', 'point', '-resize', '50%',
-  '-morph', '4',
-  '-set', 'delay', '%[fx:(t==0)?230:(t==5)?190:(t==30)?320:((t%5)==0?95:4)]',
-  '-loop', '0', '-layers', 'optimize', path.join(IMG, 'trailer.gif')], { stdio: 'inherit' });
+  '-morph', '3',
+  '-set', 'delay', '%[fx:(t==0)?320:(t==4)?280:(t==24)?420:((t%4)==0?150:5)]',
+  '-loop', '0', '-dither', 'None', '-colors', '128', '-layers', 'optimize',
+  path.join(IMG, 'trailer.gif')], { stdio: 'inherit' });
 
 // The link preview: the title screen at a clean 2x, letterboxed to 1200x630 on the game's sky.
 execFileSync('convert', [path.join(ASSETS, 'title.png'), '-filter', 'point', '-resize', '50%',
