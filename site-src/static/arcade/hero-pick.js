@@ -19,7 +19,14 @@ function heroLook() {
   return out;
 }
 
-function heroPick(into, look, onChange) {
+// The free pages get the short list. Eight hair colours and nine shirts is a decision to make
+// before somebody has been given anything, which is too much work for free. The skin row is the
+// exception and keeps all six: that row is about a child seeing themselves, and cutting it to
+// three leaves people out.
+const FEW_HAIR = ['#141018', '#6b3f1d', '#c8641e', '#e0b64a'];
+const FEW_KITS = ['#1f7ae0', '#e0102a', '#1e9e4a', '#ffd23f'];
+
+function heroPick(into, look, onChange, brief) {
   if (!into) return;
   const save = () => { try { localStorage.setItem(LOOK_KEY, JSON.stringify(look)); } catch (e) {} onChange(); };
 
@@ -30,10 +37,12 @@ function heroPick(into, look, onChange) {
     into.appendChild(d);
     return d;
   };
-  const swatches = (label, list, names, key) => {
+  const swatches = (label, all, names, key, few) => {
+    const list = brief && few ? few : all;
     const d = row(label), box = document.createElement('div');
     box.className = 'sws';
-    list.forEach((c, k) => {
+    list.forEach((c0, k0) => {
+      const c = c0, k = all.indexOf(c0);
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'sw'; b.style.setProperty('--c', c);
       b.title = names[k]; b.setAttribute('aria-label', names[k]);
@@ -59,7 +68,7 @@ function heroPick(into, look, onChange) {
   });
   d.appendChild(opts);
 
-  swatches('Hair color', HAIRCOLS, HAIR_LABELS, 'hairCol');
+  swatches('Hair color', HAIRCOLS, HAIR_LABELS, 'hairCol', FEW_HAIR);
   swatches('Skin', SKINS, SKIN_LABELS, 'skin');
-  swatches('Shirt', KITCOLS, KIT_LABELS, 'kit');
+  swatches('Shirt', KITCOLS, KIT_LABELS, 'kit', FEW_KITS);
 }

@@ -46,8 +46,6 @@
   <div class="opts" role="radiogroup" aria-label="What it's for" style="margin:0 0 18px">
     <label><input type="radio" name="occ" value="birthday" checked><span>Birthday</span></label>
     <label><input type="radio" name="occ" value="christmas"><span>Christmas</span></label>
-    <label><input type="radio" name="occ" value="fathers"><span>Father's Day</span></label>
-    <label><input type="radio" name="occ" value="mothers"><span>Mother's Day</span></label>
     <label><input type="radio" name="occ" value="star"><span>Just because</span></label>
   </div>
 
@@ -135,7 +133,7 @@
     });
   }
 
-  heroPick($('look'), look, apply);
+  heroPick($('look'), look, apply, true);
   apply();
   draw();
 })();

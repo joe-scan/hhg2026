@@ -43,6 +43,8 @@ $date     = field('date', 40);
 $pick     = field('pick', 40);
 $speed    = field('speed', 60);
 $sibling  = field('sibling', 10) === 'yes' ? 'YES, a second game at $69' : 'no';
+$box      = field('box', 10) === 'yes' ? 'YES, poster and video at $80' : 'no';
+$look     = field('look', 120);
 $cast     = block('cast');
 $about    = block('about');
 
@@ -56,6 +58,8 @@ $lines = [
     'Wants:     ' . ($pick ?: '(not said)'),
     'Speed:     ' . ($speed ?: '(not said)'),
     'Sibling:   ' . $sibling,
+    'Gift box:  ' . $box,
+    'Look:      ' . ($look ?: '(not set)') . '   [hair, hair colour, skin, shirt]',
     'From:      ' . ($from ?: '(no name given)') . ' <' . $email . '>',
     '',
     'Who else is in it:',

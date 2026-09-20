@@ -48,10 +48,14 @@ label.one > span{display:block;font-weight:400;margin:0}
   <h1>Order a game</h1>
   <p class="sub">Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make.</p>
 
+  <div class="screen"><canvas id="game" width="480" height="270" aria-label="A preview of the title screen, with the name and the look you have chosen"></canvas></div>
+  <div class="look-pick" id="look"></div>
+
   <p class="sorry" id="sorry" hidden>That did not send. Please email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> instead and we will sort it out.</p>
 
   <form method="post" action="/order.php">
     <input type="hidden" name="lang" value="<!--lang-->">
+    <input type="hidden" name="look" id="look-field" value="">
     <label>
       <span>Who is the game for?</span>
       <span class="hint">Their first name is enough. It goes up in lights on the title screen.</span>
@@ -92,20 +96,6 @@ label.one > span{display:block;font-weight:400;margin:0}
     </label>
 
     <label>
-      <span>Who else should be in it?</span>
-      <span class="hint">Up to eight people, and the pet. First names or what they are called at home: Mum, Grandad, Coach, Biscuit the dog.</span>
-      <textarea name="cast" maxlength="2000"></textarea>
-    </label>
-
-    <label>
-      <span>Anything we should know about them?</span>
-      <span class="hint">What they love, what they always say, the family joke. This is what makes the game theirs.</span>
-      <textarea name="about" maxlength="2000"></textarea>
-    </label>
-
-    <label class="one extra"><input type="checkbox" name="sibling" value="yes"><span>There's a brother or sister who would want one too. A second game is $69 instead of $99, because we already know the family.</span></label>
-
-    <label>
       <span>Your name</span>
       <input type="text" name="from" maxlength="60" autocomplete="name">
     </label>
@@ -121,12 +111,63 @@ label.one > span{display:block;font-weight:400;margin:0}
     <p><button class="btn go" type="submit">Send this to us</button></p>
   </form>
 
-  <p class="after-form">We only ask for what the game needs. No surnames, no ages, no schools, no photos. <a href="../privacy/">What we do with it</a> &middot; <a href="/terms/" hreflang="en">Terms and refunds</a></p>
+  <p class="after-form">Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos. <a href="../privacy/">What we do with it</a> &middot; <a href="/terms/" hreflang="en">Terms and refunds</a></p>
   <p class="after-form">Would rather just write to us? <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</p>
 </main>
 
 <!--footer-->
 </div>
+<script src="../arcade/engine.js"></script>
+<script src="../arcade/scenes.js"></script>
+<script src="../arcade/hero-pick.js"></script>
+<script>
+// The hero they built on the front page comes with them, and keeps up with what they type here.
+// Seeing the child while ordering is the whole point of the page; the questions can wait until
+// after the money, which is also when people are most willing to answer them.
+(() => {
+  const $ = id => document.getElementById(id);
+  const name = document.querySelector('input[name="hero"]');
+  const occ = document.querySelector('select[name="occasion"]');
+  const look = heroLook();
+  const OCCS = ['birthday', 'christmas', 'fathers', 'mothers', 'star'];
+  let draft = null;
+  try { draft = JSON.parse(localStorage.getItem('hhg-draft') || 'null'); } catch (e) {}
+  if (draft && draft.hero && draft.hero.name && !name.value) name.value = titleCase(draft.hero.name);
+  if (draft && draft.occasion && OCCS.indexOf(draft.occasion) > -1) occ.selectedIndex = OCCS.indexOf(draft.occasion);
+
+  const apply = () => {
+    applyConfig(Object.assign({}, DEMO, {
+      hero: Object.assign({}, DEMO.hero, look, { name: name.value || 'YOUR HERO' }),
+      occasion: OCCS[occ.selectedIndex] || 'birthday'
+    }));
+    $('look-field').value = [look.hair, look.hairCol, look.skin, look.kit].join(' ');
+  };
+  name.addEventListener('input', apply);
+  occ.addEventListener('change', apply);
+  heroPick($('look'), look, apply);
+  apply();
+
+  let t = 0;
+  const draw = () => {
+    t++;
+    bgSynth(t);
+    scene(OCCS[occ.selectedIndex] || 'birthday', t, false);
+    txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
+    const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
+    namePlate(n, W / 2, 32, size);
+    nameLogo(n, W / 2, 28, size);
+    const line = OCCASIONS[OCCS[occ.selectedIndex]] === "YOU'RE A STAR" ? 'AN ARCADE ADVENTURE' : OCCASIONS[OCCS[occ.selectedIndex] || 'birthday'];
+    const ow = line.length * 16;
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+    txt(line, W / 2, 87, 16, COL.gold, 'center');
+    shadow(W / 2, 236, 16); drawSpec(HERO, W / 2, 236, 4, false, Math.floor(t / 22));
+    scene(OCCS[occ.selectedIndex] || 'birthday', t, true);
+    requestAnimationFrame(draw);
+  };
+  draw();
+})();
+</script>
 <script>
 // If the date they give is close, say so beside the speed choice. It does not tick anything for
 // them: choosing the paid option on somebody's behalf is a trick, and this is a gift, not a trap.

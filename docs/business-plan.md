@@ -24,15 +24,27 @@ There are two prices. The game is $99: five games and a boss, up to eight people
 
 Two prices, in US dollars, shown in dollars to everyone.
 
-| Product | Price | What's in it |
+**One price on the page, since 20 September 2026: $99.** Everything else is an add-on chosen on
+the order form, after somebody has decided, which is the same money in a simpler shape.
+
+| What | Price | What's in it |
 |---|---|---|
 | The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready within five working days, checked by a person. |
-| The gift box | $179 | The same game, plus a printed arcade poster of their title screen and a twenty-second trailer of their own game. |
-| Gift cards | $99 or $179 | The giver pays, the parent fills in the questionnaire. |
+| + The poster and video | $80 | A printed arcade poster of their title screen and a twenty-second video of their own game. This was the $179 gift box, and it is the same $179 when both are bought. |
+| + Rush | $39 | Ready in 48 hours instead of five working days. |
+| + A second game | $69 | For a brother or sister, instead of $99. |
+
+### Why there is no $49 tier
+
+Asked again on 20 September 2026: one game and one character for $49. The answer is still no, and
+now there are two reasons. The maths: $49 leaves $40.15 before advertising, and at the plan's $38
+to win a customer that is **$2.15**. It takes twenty of them to equal one $99 sale after
+advertising. The product reason is worse: one game against one person is exactly what the free
+demo already gives away, so a $49 tier would charge for the advert.
 
 The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
 
-**Everything except the physical extras is identical between the two.** Same five games, same boss, same eight people, same lines, same five working days. The only choice a buyer makes is whether they want something printed. That is the whole point: one variable. A pricing page with one variable on it can be understood in five seconds, and a gift buyer decides in about that long.
+**The pricing page now has no variable on it at all.** One number, one product, and a list of things that can be added when ordering. A gift buyer understands one price in the time it takes to read it, and every add-on is asked for at the moment it makes sense: the poster when they are thinking about wrapping it, the rush when they type a date that is close, the second game when they are already thinking about the family.
 
 ### Why the $49 Starter is gone
 

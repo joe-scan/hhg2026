@@ -51,12 +51,12 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .steps p{margin:0;color:var(--muted)}
 .ending{margin:30px 0 0;max-width:760px}
 .ending figcaption{color:var(--muted);font-size:14px;margin-top:8px}
-.prices{display:grid;gap:0;max-width:820px}
-.price{display:grid;grid-template-columns:150px 130px 1fr;gap:6px 20px;padding-block:18px;border-top:1px solid var(--rule);align-items:baseline}
-.price b{font-size:19px}
-.price .amt{font-weight:700;font-size:20px}
-.price p{margin:0;color:var(--muted)}
-.onep{margin:0 0 18px;max-width:58ch;font-size:18px}
+.one-price{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin:0 0 6px;max-width:640px}
+.one-price b{font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,56px);line-height:1}
+.one-price span{font-size:18px;max-width:34ch}
+.adds li{color:var(--ink)}
+.adds li b{font-weight:700;margin-right:6px}
+.adds li::before{background:var(--hotfill)}
 .box-look{margin:26px 0 0;display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px 24px;align-items:start;max-width:820px}
 .box-look img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
 .box-look img:last-of-type{width:480px;max-width:100%;background:#00a3ff;image-rendering:pixelated}
@@ -170,8 +170,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Price</h2>
-  <p class="onep">You get five games and a boss fight, up to eight people in it, ready within five working days. You can add a poster of the game, printed and posted, for the wall.</p>
-  <p class="extras">In a hurry? We can have it ready in 48 hours for $39. You choose that on the order form.</p>
+  <p class="one-price"><b>$99</b><span>Five games and a boss fight. Up to eight people in it. Ready within five working days.</span></p>
   <p class="plays-h">What they play, each against a different person:</p>
   <ul class="plays">
     <li>Paddle Battle</li>
@@ -182,10 +181,14 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
     <li>The boss fight, with someone on their side</li>
     <li>The ending, with their name in lights</li>
   </ul>
-  <div class="prices">
-    <div class="price"><b>The game</b><span class="amt">$99</span><p>The game at its own web address, theirs to keep.</p></div>
-    <div class="price"><b>The gift box</b><span class="amt">$179</span><p>Because a link is hard to wrap. The game, a printed poster of their name in lights that arrives in the post, and a short video of their game you can send to the family.</p></div>
-  </div>
+
+  <p class="plays-h">Add anything you like when you order. Nothing is decided here:</p>
+  <ul class="plays adds">
+    <li><b>+$80</b> The printed poster and a short video of their game, because a link is hard to wrap.</li>
+    <li><b>+$39</b> Ready in 48 hours instead of five days.</li>
+    <li><b>+$69</b> A second game for a brother or sister, instead of $99.</li>
+  </ul>
+
   <figure class="box-look">
     <img src="img/poster.png" alt="The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog" loading="lazy" width="900" height="1350">
     <img src="img/trailer.gif" alt="The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending" loading="lazy" width="480" height="270">

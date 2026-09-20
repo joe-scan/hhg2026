@@ -53,8 +53,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They play it | Sie spielen es |
 | How every game ends. | So endet jedes Spiel. |
 | Price | Preis |
-| The game | Das Spiel |
-| The gift box | Die Geschenkbox |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Der Trailer: Avas Titelbildschirm, die Versus-Karte gegen Papa, etwas Spiel und das Geburtstagsende |
 | hello@happyherogames.com | hello@happyherogames.com |
 | Private by design | Privat von Anfang an |
@@ -67,13 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | To clear that copy, clear your browser's site data for happyherogames.com. | Um diese Kopie zu löschen, lösche die Websitedaten für happyherogames.com in deinem Browser. |
 | What we'll collect when you order | Was wir bei einer Bestellung erheben |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Vornamen, oder wie jemand zu Hause genannt wird: Mama, Oma, Trainer. |
+| What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Was der Held gern macht, die Sprüche und Running Gags der Familie, Lieblingsessen. |
+| The pet's name, kind and color. | Name, Art und Farbe des Haustiers. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Deutsch |
 |---|---|
-| What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Was der Held gern macht, die Sprüche und Running Gags der Familie, Lieblingsessen. |
-| The pet's name, kind and color. | Name, Art und Farbe des Haustiers. |
 | The occasion, and the date you need it by. | Der Anlass und das Datum, zu dem du es brauchst. |
 | Your own email address and payment details, so we can send the game and take the money. | Deine E-Mail-Adresse und Zahlungsdaten, damit wir das Spiel schicken und abrechnen können. |
 | What we never collect | Was wir nie erheben |
@@ -233,8 +231,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Ja. Der Partymodus steht auf dem ersten Bildschirm. Wähl aus, wie viele mitspielen. Jede und jeder tritt der Reihe nach gegen den Helden an, die anderen schauen zu. Am Ende steht eine Ergebnistafel mit einem Sieger. |
 | What if something is wrong when it arrives? | Und wenn etwas nicht stimmt, wenn es ankommt? |
 | Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Sag uns, was nicht stimmt, wir bringen es in Ordnung und schicken einen neuen Link. Das kostet nichts. |
-| The game at its own web address, theirs to keep. | Das Spiel unter seiner eigenen Webadresse, zum Behalten. |
-| Because a link is hard to wrap. The game, a printed poster of their name in lights that arrives in the post, and a short video of their game you can send to the family. | Weil sich ein Link schlecht einpacken lässt. Das Spiel, ein gedrucktes Poster mit ihrem Namen in Leuchtschrift, das mit der Post kommt, und ein kurzes Video vom Spiel, das du der Familie schicken kannst. |
 | This poster and video are for a made-up family. Yours has your own names in it. | Dieses Poster und dieses Video sind für eine erfundene Familie. Deins bekommt eure eigenen Namen. |
 | Every game has its own web address, which cannot be guessed. | Jedes Spiel hat seine eigene Webadresse, die nicht zu erraten ist. |
 | Click the screen to start. Move with the arrow keys, and press | Klick auf den Bildschirm, um zu starten. Bewegen mit den Pfeiltasten, schießen mit |
@@ -262,15 +258,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The game, $99 | Das Spiel, $99 |
 | The gift box, $179 | Die Geschenkbox, $179 |
 | Not sure yet | Noch nicht sicher |
-| Who else should be in it? | Wer soll sonst noch vorkommen? |
-| Up to eight people, and the pet. First names or what they are called at home: Mum, Grandad, Coach, Biscuit the dog. | Bis zu acht Personen, und das Haustier. Vornamen oder wie sie zu Hause heißen: Mama, Opa, Trainer, Hund Biscuit. |
-| Anything we should know about them? | Gibt es etwas, das wir über sie wissen sollten? |
-| What they love, what they always say, the family joke. This is what makes the game theirs. | Was sie lieben, was sie immer sagen, der Familienwitz. Genau das macht das Spiel zu ihrem. |
 | Your email | Deine E-Mail-Adresse |
 | This is where we send the game. | Dorthin schicken wir das Spiel. |
 | Leave this empty | Lass das leer |
 | Send this to us | Schick es uns |
-| We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Wir fragen nur, was das Spiel braucht. Keine Nachnamen, kein Alter, keine Schulen, keine Fotos. |
 | What we do with it | Was wir damit machen |
 | Would rather just write to us? | Lieber einfach schreiben? |
 | Thank you \| HappyHeroGames | Danke \| HappyHeroGames |
@@ -281,16 +272,20 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing else happens until you reply. If you do not hear from us within a day, write to | Bis du antwortest, passiert nichts weiter. Wenn du innerhalb eines Tages nichts hörst, schreib an |
 | , because something went wrong at our end. | , denn dann ist bei uns etwas schiefgegangen. |
 | Back to the front page | Zurück zur Startseite |
-| You get five games and a boss fight, up to eight people in it, ready within five working days. You can add a poster of the game, printed and posted, for the wall. | Du bekommst fünf Spiele und einen Endgegner, bis zu acht Personen darin, fertig in fünf Werktagen. Dazu gibt es auf Wunsch ein Poster des Spiels, gedruckt und zugeschickt, für die Wand. |
-| In a hurry? We can have it ready in 48 hours for $39. You choose that on the order form. | Eilig? Wir können es in 48 Stunden fertig haben, für 39 $. Das wählst du im Bestellformular. |
 | How quickly can I get it? | Wie schnell bekomme ich es? |
 | Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Fünf Werktage als Standard, gerechnet ab dem Moment, in dem wir deine Antworten haben. Wenn es schneller gehen muss, schaffen wir es in 48 Stunden, für 39 $. Nenn uns den Termin im Bestellformular, und wir sagen ja oder nein, bevor du etwas bezahlst. |
 | How soon do you need it? | Wie schnell brauchst du es? |
 | That date is close. Five working days may not make it. | Dieser Termin ist knapp. Fünf Werktage reichen vielleicht nicht. |
 | Within five working days. Included. | In fünf Werktagen. Inbegriffen. |
 | In 48 hours. $39 more. | In 48 Stunden. 39 $ mehr. |
-| There's a brother or sister who would want one too. A second game is $69 instead of $99, because we already know the family. | Es gibt einen Bruder oder eine Schwester, die auch eins wollen würden. Ein zweites Spiel kostet 69 $ statt 99 $, weil wir die Familie schon kennen. |
 | One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Eins noch: Wenn es einen Bruder oder eine Schwester gibt, die auch eins wollen würden, kostet ein zweites Spiel 69 $ statt 99 $. Sag es in deiner Antwort, dann kommt es auf denselben Zahlungslink. |
+| Five games and a boss fight. Up to eight people in it. Ready within five working days. | Fünf Spiele und ein Endgegner. Bis zu acht Personen darin. Fertig in fünf Werktagen. |
+| Add anything you like when you order. Nothing is decided here: | Beim Bestellen kannst du dazunehmen, was du magst. Hier wird nichts entschieden: |
+| The printed poster and a short video of their game, because a link is hard to wrap. | Das gedruckte Poster und ein kurzes Video vom Spiel, weil sich ein Link schlecht einpacken lässt. |
+| Ready in 48 hours instead of five days. | Fertig in 48 Stunden statt in fünf Tagen. |
+| A second game for a brother or sister, instead of $99. | Ein zweites Spiel für einen Bruder oder eine Schwester, statt 99 $. |
+| A preview of the title screen, with the name and the look you have chosen | Eine Vorschau des Titelbildschirms, mit dem Namen und dem Aussehen, das du gewählt hast |
+| Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Danach: Wir schicken dir per E-Mail einen Zahlungslink und ein paar Fragen dazu, was sie lieben, wer sonst noch mitspielt und welche Witze in der Familie laufen. Wir fragen nur, was das Spiel braucht. Keine Nachnamen, kein Alter, keine Schulen, keine Fotos. |
 
 ## What the game says: names, instructions and scores
 

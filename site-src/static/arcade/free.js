@@ -104,7 +104,7 @@ function freePage(make, opt) {
   }
 
   input.addEventListener('input', hero);
-  heroPick($('look'), look, hero);
+  heroPick($('look'), look, hero, true);
   hero();
   frame();
   // the smoke test drives the page through this
