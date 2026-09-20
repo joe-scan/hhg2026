@@ -48,7 +48,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Its color | Sa couleur |
 | A live preview of the hero, their family and friends, in pixels | Un aperçu en pixels du héros, de sa famille et de ses amis |
 | Answer a few questions | Répondez à quelques questions |
-| Their name, who's in it, what they love, what they always say. No photos. | Son prénom, qui apparaît, ce qu'il adore, ce qu'il dit toujours. Aucune photo. |
 | We build the game | Nous créons le jeu |
 | Two days, and a person plays it through before it goes anywhere. | Deux jours, et une personne y joue en entier avant l'envoi. |
 | They play it | Il y joue |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The whole policy | La politique complète |
 | What does it play on? | Sur quoi ça se joue ? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Sur n'importe quel téléphone, tablette ou ordinateur avec un navigateur. Rien à installer. Deux personnes peuvent jouer sur un clavier, ou partager un téléphone tenu à l'horizontale. |
+| Who can be in it? | Qui peut y figurer ? |
 
 ## The rest of the site, including the privacy policy
 
 | English | Français |
 |---|---|
-| Who can be in it? | Qui peut y figurer ? |
 | Can I change something after it arrives? | Puis-je changer quelque chose après ? |
 | Tell us what's wrong and we'll fix it. | Dites-nous ce qui ne va pas et nous le corrigeons. |
 | Web Analytics Made Easy - Statcounter | Analyse web simplifiée - Statcounter |
@@ -223,7 +222,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing you type is sent to us. Or just | Rien de ce que vous tapez ne nous est envoyé. Ou alors |
 | Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Parce qu'un lien, ça s'emballe mal. Le jeu, une affiche de leur nom en lettres lumineuses envoyée par la poste, et un court teaser pour le groupe familial. |
 | Tell us about them | Parlez-nous d'eux |
-| Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Tous les autres veulent une photo de votre enfant. Pas nous. Le héros est dessiné en pixels. |
 | How long does it last? | Ça dure combien de temps ? |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Une vingtaine de minutes la première fois. Ensuite ils y rejouent, et le passent à qui se trouve dans la pièce. |
 | Build the real one | Créez le vrai |
@@ -243,6 +241,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Come and play my video game | Viens jouer à mon jeu vidéo |
 | The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us. | La démo gratuite : un jeu contre quelqu'un de votre famille, créé dans votre navigateur à partir de ce que vous avez tapé. Rien ne nous est envoyé. |
 | Your game | Votre jeu |
+| Their name, who's in it, what they love, what they always say. You pick how they look. | Son prénom, qui est dedans, ce qu'il aime, ce qu'il répète tout le temps. C'est vous qui choisissez son allure. |
+| No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Pas besoin de photo. Vous choisissez les cheveux, la peau et le maillot, et le héros est dessiné en pixels. |
 
 ## What the game says: names, instructions and scores
 

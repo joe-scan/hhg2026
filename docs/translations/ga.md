@@ -48,7 +48,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Its color | A dhath |
 | A live preview of the hero, their family and friends, in pixels | Réamhamharc picteilíní ar an laoch, a muintir agus a gcairde |
 | Answer a few questions | Freagair cúpla ceist |
-| Their name, who's in it, what they love, what they always say. No photos. | A n-ainm, cé atá ann, na rudaí is breá leo, an rud a deir siad i gcónaí. Gan grianghraif. |
 | We build the game | Tógaimid an cluiche |
 | Two days, and a person plays it through before it goes anywhere. | Dhá lá, agus imríonn duine tríd é sula dtéann sé áit ar bith. |
 | They play it | Imríonn siad é |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The whole policy | An polasaí iomlán |
 | What does it play on? | Cá n-imrítear é? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | Ar aon fhón, táibléad nó ríomhaire glúine le brabhsálaí. Gan aon rud le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a chasadh ar a thaobh agus é a roinnt. |
+| Who can be in it? | Cé atá in ann a bheith ann? |
 
 ## The rest of the site, including the privacy policy
 
 | English | Gaeilge |
 |---|---|
-| Who can be in it? | Cé atá in ann a bheith ann? |
 | Can I change something after it arrives? | An féidir liom rud éigin a athrú ina dhiaidh? |
 | Tell us what's wrong and we'll fix it. | Inis dúinn cad atá mícheart agus socróimid é. |
 | Web Analytics Made Easy - Statcounter | Anailís gréasáin éasca - Statcounter |
@@ -223,7 +222,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing you type is sent to us. Or just | Ní sheoltar chugainn aon rud a chlóscríobhann tú. Nó díreach |
 | Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Mar tá nasc deacair a fhilleadh. An cluiche, póstaer lena n-ainm i soilse sa phost, agus trailer gairid don chomhrá teaghlaigh. |
 | Tell us about them | Inis dúinn fúthu |
-| Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Tá grianghraf de do pháiste ag teastáil ó chách eile. Ní uainne. Tarraingítear an laoch i bpicteilíní. |
 | How long does it last? | Cá fhad a mhaireann sé? |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Timpeall fiche nóiméad an chéad uair. Ansin imríonn siad arís é agus tugann siad do dhuine ar bith sa seomra é. |
 | Build the real one | Tóg an ceann ceart |
@@ -243,6 +241,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Come and play my video game | Tar agus imir mo fhíschluiche |
 | The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us. | An taispeántas saor in aisce: cluiche amháin in aghaidh duine de do mhuintir, tógtha i do bhrabhsálaí as an méid a chlóscríobh tú. Ní sheoltar faic chugainn. |
 | Your game | Do chluiche |
+| Their name, who's in it, what they love, what they always say. You pick how they look. | A n-ainm, cé atá ann, na rudaí is breá leo, an rud a deir siad i gcónaí. Roghnaíonn tusa an chuma atá orthu. |
+| No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Níl grianghraif ag teastáil. Roghnaíonn tú an ghruaig, an craiceann agus an léine, agus tarraingítear an laoch i bpicteilíní. |
 
 ## What the game says: names, instructions and scores
 
