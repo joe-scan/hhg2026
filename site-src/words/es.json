@@ -6,10 +6,6 @@
  "Prices": "Precio",
  "Privacy": "Privacidad",
  "Questions": "Preguntas",
- "Look": "Estilo",
- "Paper": "Papel",
- "Dark": "Oscuro",
- "Sunset": "Atardecer",
  "Put someone special in their": "Pon a alguien especial en su",
  "own arcade game.": "propio juego arcade.",
  "They're the hero. Mum, Dad, Granny, their best friend and the dog are the ones they have to beat. Build them here and play it now.": "Ellos son el héroe. Mamá, papá, la abuela, su mejor amigo y el perro son a quienes tienen que ganar. Créalo aquí y juega ahora.",
@@ -169,5 +165,7 @@
  "SEC": "SEG",
  "Start the game": "Empezar el juego",
  "Keep this link. Everyone who has it sees the same countdown, wherever they are.": "Guarda este enlace. Todos los que lo tengan ven la misma cuenta atrás, estén donde estén.",
- "happyherogames.com": "happyherogames.com"
+ "happyherogames.com": "happyherogames.com",
+ "Dark mode": "Modo oscuro",
+ "Light mode": "Modo claro"
 }

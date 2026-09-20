@@ -10,11 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-<link rel="alternate" hreflang="en" href="">
-<link rel="alternate" hreflang="es" href="es/">
-<link rel="alternate" hreflang="de" href="de/">
-<link rel="alternate" hreflang="fr" href="fr/">
-<link rel="alternate" hreflang="x-default" href="">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="x-default" href="../">
 <link rel="stylesheet" href="../css/site.css">
 <script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
 
@@ -88,12 +86,8 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <header class="top">
   <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
   <nav aria-label="Secciones de la página"><a href="#how">Cómo funciona</a><a href="#prices">Precio</a><a href="#privacy">Privacidad</a><a href="#faq">Preguntas</a></nav>
-  <div class="look"><span>Estilo</span>
-    <button type="button" data-skin="paper">Papel</button>
-    <button type="button" data-skin="cabinet">Oscuro</button>
-    <button type="button" data-skin="sunset">Atardecer</button>
-  </div>
-  <div class="langs"><a href="" hreflang="en">English</a> <b>Español</b> <a href="de/" hreflang="de">Deutsch</a> <a href="fr/" hreflang="fr">Français</a></div>
+  <div class="look"><button type="button" id="skin-toggle" data-dark="Modo oscuro" data-light="Modo claro">Modo oscuro</button></div>
+  <div class="langs"><a href="../" hreflang="en">English</a> <b>Español</b></div>
 </header>
 
 <main>
@@ -231,14 +225,16 @@ var sc_security="076798fb";
 // The skin picker. The choice is this visitor's, kept in their own browser, and it applies to every
 // page on the site. With no choice made, a device set to dark mode gets Cabinet (see site.css).
 (() => {
-  const root = document.documentElement, btns = document.querySelectorAll('.look button');
-  const mark = () => btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.skin === (root.dataset.skin || 'paper'))));
-  btns.forEach(b => b.addEventListener('click', () => {
-    root.dataset.skin = b.dataset.skin;
-    try { localStorage.setItem('hhg-skin', b.dataset.skin); } catch (e) {}
-    mark();
-  }));
-  mark();
+  const root = document.documentElement, btn = document.getElementById('skin-toggle');
+  const dark = () => root.dataset.skin ? root.dataset.skin === 'dark'
+    : matchMedia('(prefers-color-scheme: dark)').matches;
+  const label = () => { btn.textContent = dark() ? btn.dataset.light : btn.dataset.dark; };
+  btn.addEventListener('click', () => {
+    root.dataset.skin = dark() ? 'light' : 'dark';
+    try { localStorage.setItem('hhg-skin', root.dataset.skin); } catch (e) {}
+    label();
+  });
+  label();
 })();
 </script>
 

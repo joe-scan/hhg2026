@@ -84,11 +84,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <header class="top">
   <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
   <nav aria-label="Page sections"><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a></nav>
-  <div class="look"><span>Look</span>
-    <button type="button" data-skin="paper">Paper</button>
-    <button type="button" data-skin="cabinet">Dark</button>
-    <button type="button" data-skin="sunset">Sunset</button>
-  </div>
+  <div class="look"><button type="button" id="skin-toggle" data-dark="Dark mode" data-light="Light mode">Dark mode</button></div>
   <!--langs-->
 </header>
 
@@ -227,14 +223,16 @@ var sc_security="076798fb";
 // The skin picker. The choice is this visitor's, kept in their own browser, and it applies to every
 // page on the site. With no choice made, a device set to dark mode gets Cabinet (see site.css).
 (() => {
-  const root = document.documentElement, btns = document.querySelectorAll('.look button');
-  const mark = () => btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.skin === (root.dataset.skin || 'paper'))));
-  btns.forEach(b => b.addEventListener('click', () => {
-    root.dataset.skin = b.dataset.skin;
-    try { localStorage.setItem('hhg-skin', b.dataset.skin); } catch (e) {}
-    mark();
-  }));
-  mark();
+  const root = document.documentElement, btn = document.getElementById('skin-toggle');
+  const dark = () => root.dataset.skin ? root.dataset.skin === 'dark'
+    : matchMedia('(prefers-color-scheme: dark)').matches;
+  const label = () => { btn.textContent = dark() ? btn.dataset.light : btn.dataset.dark; };
+  btn.addEventListener('click', () => {
+    root.dataset.skin = dark() ? 'light' : 'dark';
+    try { localStorage.setItem('hhg-skin', root.dataset.skin); } catch (e) {}
+    label();
+  });
+  label();
 })();
 </script>
 

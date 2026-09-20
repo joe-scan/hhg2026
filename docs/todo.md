@@ -75,7 +75,8 @@ Last updated 20 September 2026.
 ## Languages
 
 - [ ] Read the Spanish once, or have someone read it: it is Claude's translation, not a native speaker's. The jokes are the part worth checking.
-- [ ] German next, then French, then Italian. Each is two word files in `site-src/words/`.
+- [ ] German next, then French, then Italian, then Irish. Each is two word files in `site-src/words/`.
+- [ ] Irish: Claude drafts it, Joe's wife checks it before it goes live.
 - [ ] Decide whether a Spanish visitor should land on /es/ automatically, or be offered it. Automatic redirects annoy people who want English.
 
 ## From the competitor research
@@ -105,5 +106,5 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Privacy policy written and published (20 Sep 2026).
 - [x] Business plan, one-page pitch and product spec written (20 Sep 2026).
 - [x] Competitor research done and written up (20 Sep 2026).
-- [x] Three skins live with a picker in the header: Paper, Dark, Sunset (20 Sep 2026).
+- [x] Sunset is the site, with a one-button dark mode. Paper dropped (20 Sep 2026).
 - [x] Translation machinery built, and Spanish live at /es/, page and game (20 Sep 2026).

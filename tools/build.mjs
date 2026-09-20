@@ -34,7 +34,7 @@ const write = (p, s) => { fs.mkdirSync(path.dirname(p), { recursive: true }); fs
 // are never rewritten by accident. A string with no translation is left in English and counted.
 // Attributes people actually read. `content` is handled separately, because the viewport and
 // theme-colour tags are not English.
-const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-int'];
+const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-int', 'data-dark', 'data-light'];
 const META_CONTENT = /<meta\s+(?:name="description"|property="og:(?:title|description|image:alt)")/i;
 const SKIP_TAGS = /^(script|style)$/i;
 
@@ -99,9 +99,16 @@ function reroot(html, up) {
   });
 }
 
+// Where this page's other languages live, as seen from where this page sits. A translated page
+// is one folder deeper than the English one, which is the step that was missing.
+function siblings(pagePath, lang) {
+  const depth = pagePath.split('/').length - 1 + (lang === 'en' ? 0 : 1);
+  const up = '../'.repeat(depth) || './';
+  return l => (l === 'en' ? `${up}${pagePath}` : `${up}${l}/${pagePath}`).replace(/index\.html$/, '');
+}
+
 function hreflangs(pagePath, lang) {
-  const up = '../'.repeat(pagePath.split('/').length - 1);
-  const href = l => (l === 'en' ? `${up}${pagePath}` : `${up}${l}/${pagePath}`).replace(/index\.html$/, '');
+  const href = siblings(pagePath, lang);
   const tags = ['en', ...LANGS].map(l => `<link rel="alternate" hreflang="${l}" href="${href(l)}">`);
   tags.push(`<link rel="alternate" hreflang="x-default" href="${href('en')}">`);
   return tags.join('\n');
@@ -109,8 +116,7 @@ function hreflangs(pagePath, lang) {
 
 // The picker that appears on every page. English pages link out, translated pages link back.
 function picker(pagePath, lang) {
-  const up = '../'.repeat(pagePath.split('/').length - 1);
-  const href = l => (l === 'en' ? `${up}${pagePath}` : `${up}${l}/${pagePath}`).replace(/index\.html$/, '');
+  const href = siblings(pagePath, lang);
   return '<div class="langs">' + ['en', ...LANGS].map(l =>
     l === lang ? `<b>${LANGNAMES[l]}</b>` : `<a href="${href(l)}" hreflang="${l}">${LANGNAMES[l]}</a>`
   ).join(' ') + '</div>';

@@ -40,7 +40,7 @@ English is the source. Spanish is live at `/es/`. A language is two files: `site
 
 - **Never ship a half-translated language.** A Spanish page leading to an English game is worse than no Spanish page. `LANGS` in `tools/build.mjs` lists only what is finished.
 - **In-game text avoids accented capitals** except Ñ and Ü. Press Start 2P draws É, Á and Ö as lowercase shapes, which looks broken in an all-caps arcade screen. Page text keeps its accents.
-- Order to add them: Spanish (done), German, French, then Italian.
+- Order to add them: Spanish (done), German, French, Italian, then Irish. Joe's wife teaches Irish and will check that one; the rest need a native read before they can be called finished.
 
 ## Rules that don't bend
 
@@ -64,8 +64,8 @@ English is the source. Spanish is live at `/es/`. A language is two files: `site
 - The pixel game screen is the only loud thing. The page around it is quiet: a cool paper ground (`#f7f6fb`, dark `#0f0c18`), ink text, thin rules, square corners.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
 - Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas and the premiere clock, never in page copy.
-- One accent, arcade magenta: `#ff2bd6` for fills and the main button, `#c4107f` for text on light.
-- **Three skins, chosen 20 Sep 2026:** Paper (default), Cabinet (dark) and Sunset (warm). They are colour only: same type, same layout, same pixel screen. The picker is in the header, the choice is kept in the visitor's own browser, and a device set to dark mode gets Cabinet without asking. The other seven are in `tools/skins.js` if one is ever wanted.
+- One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode and in the game.
+- **Two looks, decided 20 Sep 2026:** Sunset, warm cream and burnt orange, is the site. Dark is for a dark room or a phone set that way. One small button in the header switches them and the choice is kept in the visitor's own browser; with no choice made the device decides. They are colour only: same type, same layout, same pixel screen. No third option, and no row of choices eating the header. The eight other skins tried are in `tools/skins.js`.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
 
 ## Repo layout

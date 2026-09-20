@@ -81,6 +81,17 @@ if (!(await es.title()).includes('Happy Hero Games')) errors.push('the Spanish p
 await es.goto(BASE + 'es/g/demo/'); await es.waitForTimeout(700);
 const esGame = await es.evaluate(() => [__hhg.games()[0], ROLES.dad.label].join(' | '));
 if (esGame !== 'GUERRA DE GLOBOS | Papá') errors.push('the Spanish game reads: ' + esGame);
+// the picker has to get you back: every page, both directions
+for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['es/privacy/', 'English', '/privacy/'],
+                                      ['es/g/demo/', 'English', '/g/demo/'], ['', 'Español', '/es/']]) {
+  const t = await browser.newPage(); watch(t);
+  await t.goto(BASE + from); await t.waitForTimeout(500);
+  await t.click(`.langs a:text-is("${click}")`); await t.waitForTimeout(600);
+  const path = new URL(t.url()).pathname;
+  if (!path.endsWith(wantEnd)) errors.push(`${click} from /${from} landed on ${path}, wanted ${wantEnd}`);
+  await t.close();
+}
+
 const esSeen = await run(es, 'locked');
 console.log('spanish demo:', esSeen.join(' > '));
 if (esSeen[esSeen.length - 1] !== 'locked') errors.push('the Spanish demo did not stop at the locked card');
