@@ -4,7 +4,7 @@ Put someone special in their own arcade game. They're the hero, and their own fa
 
 Site: https://happyherogames.com. Email: hello@happyherogames.com (forwards to Joe's Gmail).
 
-Pre-launch. Nothing here takes orders or stores anyone's details yet.
+The first ten games are open, taken by email and built by hand. No automatic payments and no database yet: an order is an email, a payment link and a person doing the work.
 
 ## Languages
 
@@ -20,7 +20,7 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 
 ## What's in here
 
-- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), the privacy policy and the terms.
+- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), two free games at `/name/` and `/halloween/`, the privacy policy and the terms. Generated into six languages.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/todo.md`: everything outside the code that Joe has to do, and what's done.
@@ -46,6 +46,6 @@ cd site && python3 -m http.server 8766 &
 CHROME=/path/to/chrome node tests/smoke.mjs
 ```
 
-It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending. It exits with an error code if anything fails.
+It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, plays a four-challenger party through to the results board, runs both free pages, plays the demo in all five translated languages, clicks the language picker in both directions, and checks the landing page at phone width. It exits with an error code if anything fails.
 
 The game engine started life as [Fionn vs Sean](https://joescanlon.com/fs/), a game one dad made for his two sons.

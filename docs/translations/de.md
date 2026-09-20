@@ -53,7 +53,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Its color | Seine Farbe |
 | A live preview of the hero, their family and friends, in pixels | Eine Vorschau in Pixeln: der Held, die Familie und die Freunde |
 | Play the free demo | Kostenlose Demo spielen |
-| One game, free. Nothing you type is sent to us. | Ein Spiel, kostenlos. Nichts, was du eingibst, wird an uns gesendet. |
 | Answer a few questions | Ein paar kurze Fragen |
 | Their name, who's in it, what they love, what they always say. No photos. | Der Name, wer mitspielt, was sie lieben, was sie immer sagen. Keine Fotos. |
 | We build the game | Wir bauen das Spiel |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The game | Das Spiel |
 | The private link, and it's theirs forever. | Der private Link, und er gehört ihnen für immer. |
 | The gift box | Die Geschenkbox |
+| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog | Das gedruckte Poster: der Titelbildschirm mit AVA in Lichtern, darunter HAPPY BIRTHDAY, AVA, unten drei ihrer Spiele und die Besetzung: Papa und Biscuit, der Hund |
 
 ## The rest of the site, including the privacy policy
 
 | English | Deutsch |
 |---|---|
-| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog | Das gedruckte Poster: der Titelbildschirm mit AVA in Lichtern, darunter HAPPY BIRTHDAY, AVA, unten drei ihrer Spiele und die Besetzung: Papa und Biscuit, der Hund |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Der Trailer: Avas Titelbildschirm, die Versus-Karte gegen Papa, etwas Spiel und das Geburtstagsende |
 | The poster and the trailer, made from one demo family. Yours has your own names in it. | Poster und Trailer, gemacht mit einer Beispielfamilie. Deins trägt eure eigenen Namen. |
 | hello@happyherogames.com | hello@happyherogames.com |
@@ -89,13 +88,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Can I change something after it arrives? | Kann ich später noch etwas ändern? |
 | Tell us what's wrong and we'll fix it. | Sag uns, was nicht stimmt, und wir bringen es in Ordnung. |
 | Web Analytics Made Easy - Statcounter | Web-Analyse leicht gemacht - Statcounter |
-| Last changed 20 September 2026. Orders aren't open yet, so most of this describes how the free demo works today and how orders will work when they open. | Zuletzt geändert am 20. September 2026. Bestellungen sind noch nicht offen, deshalb beschreibt das meiste hier, wie die kostenlose Demo heute funktioniert und wie Bestellungen später funktionieren. |
 | and we'll answer in plain English. | und wir antworten in klarem Deutsch. |
 | The free demo sends us nothing | Die kostenlose Demo sendet uns nichts |
 | The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Name, Haare, Farben, Familienmitglied und Haustier, die du auf der Startseite wählst, verlassen deinen Browser nie. Sie reisen in der Webadresse selbst zum Spiel, und eine Kopie liegt auf deinem Gerät, damit deine Arbeit noch da ist, wenn du zurückkommst. An uns wird nichts gesendet, und es gibt kein Konto. |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Um diese Kopie zu löschen, lösche die Websitedaten für happyherogames.com in deinem Browser. |
 | What we'll collect when you order | Was wir bei einer Bestellung erheben |
-| When ordering opens, we'll ask for what the game needs and nothing else: | Wenn Bestellungen öffnen, fragen wir nach dem, was das Spiel braucht, und nach nichts anderem: |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Vornamen, oder wie jemand zu Hause genannt wird: Mama, Oma, Trainer. |
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Was der Held gern macht, die Sprüche und Running Gags der Familie, Lieblingsessen. |
 | The pet's name, kind and color. | Name, Art und Farbe des Haustiers. |
@@ -217,6 +214,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Dieses hier ist kostenlos und für alle gleich. Die Spiele, die wir machen, sind andersherum: fünf davon, die eigene Familie und Freunde als Gegner, und ihre Witze auf jedem Bildschirm. |
 | Build one, free | Eins bauen, kostenlos |
 | Halloween game | Halloween-Spiel |
+| Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Zuletzt geändert am 20. September 2026. Die ersten zehn Spiele werden per E-Mail bestellt und von Hand gebaut, deshalb steht hier beides: wie die kostenlose Demo funktioniert, die uns nichts sendet, und was eine Bestellung bedeutet. |
+| For an order we ask for what the game needs and nothing else: | Für eine Bestellung fragen wir nach dem, was das Spiel braucht, und nach nichts anderem: |
 
 ## What the game says: names, instructions and scores
 

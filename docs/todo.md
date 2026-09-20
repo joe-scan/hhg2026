@@ -11,7 +11,6 @@ Last updated 20 September 2026.
 - [ ] Search the trademark (see Trademark below). Two hours, and it decides whether the name is safe to spend on.
 - [ ] Book the Local Enterprise Office meeting at County Hall, Cork. Bring `docs/pitch.md`.
 - [ ] Show the demo to ten parents outside the family, at least three American. Watch, don't pitch. Write down what they do, not what they say.
-- [ ] Decide the three skins for the site (previews in `tools/skin-previews/`).
 - [ ] Set up a Tally form so the site can collect emails instead of asking people to write one.
 
 ## Trademark
@@ -62,8 +61,6 @@ Last updated 20 September 2026.
 ## Product decisions waiting on Joe
 
 - [ ] Print partner: order one A2 poster from Prodigi and one from Printful, to your own address, and compare them in your hands. Left aside on 20 Sep 2026.
-- [ ] When orders open. Not decided.
-- [ ] A logo beyond the pixel H favicon.
 - [ ] Confirm the design direction in `CLAUDE.md`, or change it.
 
 ## Proving it works
@@ -97,8 +94,7 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 
 - [ ] First paid social budget, to find the real cost of winning a customer. The plan assumes $38.
 - [ ] Referral: a code on every finished game, so a family can pass it on.
-- [ ] Link previews: make a shared game link show that family's own title screen. Cheap, and it turns every share into an advert.
-- [ ] Seasonal free drop (a Halloween game for everyone who has bought) as loyalty that costs one game to build.
+- [ ] A second seasonal game after Halloween, if the first one gets passed around. Christmas is the obvious one.
 
 ## Done
 

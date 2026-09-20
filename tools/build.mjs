@@ -1,5 +1,5 @@
-// Builds the translated pages. The English pages in site/ are the source of truth: write them
-// normally, run this, and every language is regenerated. A language is one file of
+// Builds every page. The English pages in site-src/pages are the source of truth: write them
+// normally, run this, and site/ is regenerated in every language. A language is one file of
 // English -> translated pairs in site-src/words/<lang>.json, so nothing is duplicated by hand.
 //
 //   node tools/build.mjs            build every language in LANGS

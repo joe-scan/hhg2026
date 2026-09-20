@@ -53,7 +53,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Its color | A dhath |
 | A live preview of the hero, their family and friends, in pixels | Réamhamharc picteilíní ar an laoch, a muintir agus a gcairde |
 | Play the free demo | Imir an taispeántas saor in aisce |
-| One game, free. Nothing you type is sent to us. | Cluiche amháin, saor in aisce. Ní sheoltar aon rud a chlóscríobhann tú chugainn. |
 | Answer a few questions | Freagair cúpla ceist |
 | Their name, who's in it, what they love, what they always say. No photos. | A n-ainm, cé atá ann, na rudaí is breá leo, an rud a deir siad i gcónaí. Gan grianghraif. |
 | We build the game | Tógaimid an cluiche |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The game | An cluiche |
 | The private link, and it's theirs forever. | An nasc príobháideach, agus is leo go deo é. |
 | The gift box | An bosca bronntanais |
+| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog | An póstaer clóite: an scáileán teidil le AVA i soilse, HAPPY BIRTHDAY, AVA thíos, trí cinn dá cluichí ag an mbun agus an fhoireann: Daidí agus Biscuit an madra |
 
 ## The rest of the site, including the privacy policy
 
 | English | Gaeilge |
 |---|---|
-| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog | An póstaer clóite: an scáileán teidil le AVA i soilse, HAPPY BIRTHDAY, AVA thíos, trí cinn dá cluichí ag an mbun agus an fhoireann: Daidí agus Biscuit an madra |
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | An leantóir: scáileán teidil Ava, an cárta in aghaidh Daidí, píosa imeartha agus deireadh an lae bhreithe |
 | The poster and the trailer, made from one demo family. Yours has your own names in it. | An póstaer agus an leantóir, déanta le teaghlach samplach. Beidh bhur n-ainmneacha féin ar do cheannsa. |
 | hello@happyherogames.com | hello@happyherogames.com |
@@ -89,13 +88,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Can I change something after it arrives? | An féidir liom rud éigin a athrú ina dhiaidh? |
 | Tell us what's wrong and we'll fix it. | Inis dúinn cad atá mícheart agus socróimid é. |
 | Web Analytics Made Easy - Statcounter | Anailís gréasáin éasca - Statcounter |
-| Last changed 20 September 2026. Orders aren't open yet, so most of this describes how the free demo works today and how orders will work when they open. | Athraithe go deireanach ar an 20 Meán Fómhair 2026. Níl orduithe ar oscailt fós, mar sin baineann formhór an leathanaigh seo leis an gcaoi a n-oibríonn an taispeántas saor in aisce inniu agus leis an gcaoi a n-oibreoidh orduithe amach anseo. |
 | and we'll answer in plain English. | agus freagróimid i nGaeilge shimplí. |
 | The free demo sends us nothing | Ní sheolann an taispeántas saor in aisce aon rud chugainn |
 | The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. Nothing is sent to us, and there is no account to make. | Ní fhágann an t-ainm, an ghruaig, na dathanna, an duine muinteartha ná an peata a roghnaíonn tú ar an gcéad leathanach do bhrabhsálaí riamh. Taistealaíonn siad chuig an gcluiche sa seoladh gréasáin féin, agus fanann cóip ar do ghléas féin le go mbeidh do chuid oibre ann fós má thagann tú ar ais. Ní sheoltar aon rud chugainn, agus níl cuntas ar bith le cruthú. |
 | To clear that copy, clear your browser's site data for happyherogames.com. | Chun an chóip sin a ghlanadh, glan sonraí an tsuímh happyherogames.com i do bhrabhsálaí. |
 | What we'll collect when you order | Cad a bhaileoimid nuair a ordaíonn tú |
-| When ordering opens, we'll ask for what the game needs and nothing else: | Nuair a osclóidh orduithe, iarrfaimid an rud atá ag teastáil ón gcluiche agus faic eile: |
 | First names, or what people are called at home: Mom, Grandma, Coach. | Céadainmneacha, nó an rud a thugtar orthu sa bhaile: Mamaí, Mamó, Traenálaí. |
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Na rudaí is breá leis an laoch a dhéanamh, nathanna cainte agus scéalta grinn an teaghlaigh, na bianna is fearr leo. |
 | The pet's name, kind and color. | Ainm, cineál agus dath an pheata. |
@@ -217,6 +214,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do gach duine. Tá na cluichí a dhéanaimid bunoscionn leis: cúig cinn, do mhuintir agus do chairde féin mar chéilí comhraic, agus a gcuid scéalta grinn i ngach scáileán. |
 | Build one, free | Tóg ceann, saor in aisce |
 | Halloween game | Cluiche Oíche Shamhna |
+| Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Athraithe go deireanach ar an 20 Meán Fómhair 2026. Ordaítear an chéad deich gcluiche trí ríomhphost agus tógtar de láimh iad, mar sin clúdaíonn sé seo an taispeántas saor in aisce, nach seolann aon rud chugainn, agus a bhfuil i gceist le hordú. |
+| For an order we ask for what the game needs and nothing else: | Le haghaidh ordú iarraimid an rud atá ag teastáil ón gcluiche agus faic eile: |
 
 ## What the game says: names, instructions and scores
 

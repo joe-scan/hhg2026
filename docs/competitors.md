@@ -72,7 +72,7 @@ A parent with $99 and a birthday in two weeks is not comparing personalised game
 6. **Reviews are the currency and we have none.** They have 1,873 and 61. Collecting the first fifty, with the reaction videos, matters more than any feature on the roadmap.
 7. **Take the money before the form.** Muksun's "pay now, tell us about your heroes after" removes the biggest drop-off in the funnel. Our questionnaire should come after payment, not before.
 8. **Nobody owns children and families.** Gift Games is gamers and couples, Ready Player U is couples and dads, Minigamegift is romance, Bday Game is whoever emails him. Muksun is the only one aimed at the same place as us, and they are aimed at everyone. "Their birthday, their family, their jokes" is a gap.
-9. **Languages are cheap reach.** A Polish two-person shop sells in three languages. Our text is in config and code; Spanish and German are a weekend each, and they open markets that the US giants ignore.
+9. **Languages are cheap reach, and this one is done.** A Polish two-person shop sells in three languages. Done on 20 September 2026: Spanish, German, French, Italian and Irish, pages and game alike, built from one file of words per language.
 10. **Be explicit about delivery.** The one bad review in the whole capture is a delivery misunderstanding. A clear "here is your link, here is where it lives, here is what to do if you cannot see it" email prevents the only kind of one-star we are likely to get.
 
 ## Where we win, and where we do not
@@ -90,11 +90,8 @@ A parent with $99 and a birthday in two weeks is not comparing personalised game
 
 That last line is the one to think hardest about. Every competitor turns a photograph into the hero, and "that's literally my face" is a strong moment. We refuse photos on purpose, because holding pictures of children is a risk we do not want and a promise we can sell. It is the right call for a children's product, but it costs us a wow that our competitors get for free, so the pixel hero has to be good enough to stand in for it. That is an argument for making the builder better, not for changing the rule.
 
-## Actions
+## What to do about it
 
-1. Add rush delivery, a free printable gift card, and a deadline-aware checkout. All three are proven, and all three are cheap.
-2. Move the questionnaire after payment.
-3. Put "works on any phone, nothing to install" in the first screenful, as a direct hit on Muksun.
-4. Get the first fifty reviews and ten reaction clips. Nothing else moves the needle at this stage.
-5. Decide whether to list on Etsy for discovery, at a price that suits that market, without lowering the price here.
-6. Revisit in three months. Muksun changed its pricing and its whole page between captures, so this document goes stale quickly.
+The actions from this analysis live in `docs/todo.md`, under "From the competitor research", so there is one list rather than two. Two of them need saying carefully: rush delivery and a framed poster are both proven sellers elsewhere, and both add a purchase decision, which `CLAUDE.md` forbids ("two prices, and only one variable between them"). If either is ever added, it replaces something rather than joining it.
+
+Revisit this document in three months. Muksun changed its pricing and its whole page between captures, so it goes stale quickly.

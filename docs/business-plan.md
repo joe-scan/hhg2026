@@ -8,7 +8,7 @@ The doc keeps British spelling. The site uses US spelling, because the buyers ar
 
 HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Two days later they get a private link to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
 
-There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in 48 hours and checked by a person. The gift box is $179: exactly the same game, plus three physical or event extras, a printed arcade poster of the hero's own title screen. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
+There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in 48 hours and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
 
 ## 2. The honest summary
 
@@ -27,7 +27,7 @@ Two prices, in US dollars, shown in dollars to everyone.
 | Product | Price | What's in it |
 |---|---|---|
 | The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready in 48 hours, checked by a person. |
-| The gift box | $179 | The same game, plus a printed arcade poster of their title screen. |
+| The gift box | $179 | The same game, plus a printed arcade poster of their title screen and a twenty-second trailer of their own game. |
 | Gift cards | $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
@@ -40,8 +40,10 @@ It was in the plan until 20 September 2026 and it is now dropped. Its own number
 
 ### What the gift box actually is
 
-- **The poster.** Their own title screen, STARRING AOIFE, their name in lights, printed and ready to frame. Made by a print-on-demand partner, Prodigi or Printful, that prints in the buyer's own country. A US order prints in the US and arrives in about three days. No customs, nothing posted from Ireland, nobody here touching it. About $15 to $20 delivered.
-- **Link previews.** A shared game link shows that family's own title screen in WhatsApp or a message, so every share carries an advert. Built 20 September 2026; the premiere countdown that used to sit here was built and removed the same day, because it cost more work than it returned.
+- **The poster.** Their own title screen, their name in lights, printed and ready to frame. Made by a print-on-demand partner, Prodigi or Printful, that prints in the buyer's own country. A US order prints in the US and arrives in about three days. No customs, nothing posted from Ireland, nobody here touching it. About $15 to $20 delivered.
+- **The trailer.** Twenty seconds of their own game, rendered from the same pixels, for the family chat. No new data collected, and every share carries the site.
+
+Link previews, which make a shared game link show that family's own title screen, were built the same day but are not a gift box extra: every game gets them, free one included. The premiere countdown was built and removed on 20 September 2026, because it cost more work than it returned.
 
 ### What is not sold
 
@@ -53,7 +55,7 @@ Prices on the site and prices in this plan have to be the same figures. If one m
 
 ## 4. Unit economics
 
-Fees are 5% plus $0.50 on every order, through a merchant of record. Human checking is $28 an hour: 18 minutes on the game, 25 minutes on the gift box, the extra seven minutes being the poster artwork check. AI drafting is $3. Hosting is about $0.20 an order. The poster is $15 to $20 delivered; the table takes the worse end, $20. The trailer render rounds to $0.10 and the premiere to nothing.
+Fees are 5% plus $0.50 on every order, through a merchant of record. Human checking is $28 an hour: 18 minutes on the game, 25 minutes on the gift box, the extra seven minutes being the poster artwork check. AI drafting is $3. Hosting is about $0.20 an order. The poster is $15 to $20 delivered; the table takes the worse end, $20. The trailer render rounds to $0.10.
 
 | Per order | The game $99 | The gift box $179 |
 |---|---|---|
@@ -294,4 +296,4 @@ Decide these now, and change course if they happen.
 2. Time a real $99 order end to end, start to delivered, and see whether 18 minutes of checking is honest. Sections 4, 6 and 7 all rest on it.
 3. Show the demo to ten parents outside the family, at least three of them American. Watch, do not pitch. Ask whether they would pay $99, and whether the poster is worth $80 to them.
 4. Open a Paddle or Lemon Squeezy account and read what they require from an Irish business before building anything around it.
-5. Book the LEO meeting, and order test posters from both Prodigi and Printful to an Irish address and a US one. Then take ten Christmas pre-orders and build them by hand, at least three of them gift boxes, so the poster, the premiere and the trailer are all tested before anyone pays $179.
+5. Book the LEO meeting, and order test posters from both Prodigi and Printful to an Irish address and a US one. Then take ten Christmas pre-orders and build them by hand, at least three of them gift boxes, so the poster and the trailer are both tested before anyone pays $179.

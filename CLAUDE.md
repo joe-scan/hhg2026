@@ -10,7 +10,7 @@ HappyHeroGames puts someone special in their own arcade game. Usually that's a c
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
 - **Occasions:** birthdays all year, Christmas, Father's Day, Mother's Day, "just because".
-- **Status (20 Sep 2026):** pre-launch, live at happyherogames.com. A landing page, a live hero builder and a free one-game demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
+- **Status (20 Sep 2026):** live at happyherogames.com in six languages: landing page, hero builder, a free one-game demo, party mode, two free games (`/name/`, `/halloween/`), privacy policy and draft terms. **Orders for the first ten games are open**, taken by email and built by hand. No automatic payments, no questionnaire form, no database, and no solicitor has read the terms yet.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
@@ -65,7 +65,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 
 ## Design direction (proposed by Claude, 19 Sep 2026; Joe to confirm)
 
-- The pixel game screen is the only loud thing. The page around it is quiet: a cool paper ground (`#f7f6fb`, dark `#0f0c18`), ink text, thin rules, square corners.
+- The pixel game screen is the only loud thing. The page around it is quiet: warm cream ground (`#fdf5ec`, dark `#0f0c18`), ink text, thin rules, square corners.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
 - Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas, never in page copy.
 - One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode and in the game.
@@ -75,48 +75,44 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 ## Repo layout
 
 ```
-CLAUDE.md                 this brief
-README.md                 short human intro and how to run it
-deploy.sh                 publishes site/ to happyherogames.com
-docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
-docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
-docs/todo.md              Joe's list: trademark, company setup, grants, what's needed before taking money
-docs/competitors.md       who else sells this, what to take from them, where we win
-docs/viral.md             fifty ways this could spread, ranked by effort
-docs/translations/*.md    one file per language for a native speaker to correct
-docs/research/            raw captures behind the research, kept so claims can be checked
-docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
-site-src/pages/*.html     **the source pages. Edit these, never site/*.html**
-site-src/words/*.json     one file per language: English text -> translated text
-tools/build.mjs           renders the pages into site/, English and every translated language
-tools/strings.mjs         pulls the player-facing strings out of the game code
-site/index.html           generated: landing page with the live hero builder
-site/.htaccess            https and www redirects, HSTS, caching
-site/g/.htaccess          keeps every game out of search engines
-site/builder.js           the builder: form to config, live preview, Play link
-site/g/demo/index.html    the free demo's game page (reads the config from #g=)
-site/privacy/index.html   the privacy policy. Keep it true: it is a promise, not a form
-site/terms/index.html     terms and refunds, English only until a solicitor has read them
-site/name/index.html      free: type a name, get the title screen as a picture
-site/halloween/index.html free: Trick or Treat Dash, sixty seconds, one shareable score
-site/arcade/games/trick-or-treat.js  the Halloween game. Never calls addGame(), so it stays out of the paid five
-site/img/logo.svg         the pixel HHG mark beside the wordmark
-site/img/og.png           the link preview: a shared link shows the game's title screen
-tools/build.mjs           renders every page and every language
-tools/review-files.mjs    writes docs/translations/<lang>.md for a human checker
-tools/review-load.mjs     reads a checked file back into the word files
-tools/prune-words.mjs     drops translations for English text that no longer exists
-tools/assets/             the poster template and the stills it uses
-site/css/site.css         shared page styles and design tokens
-site/img/finale.png       the full game's last screen, used on the landing page
-site/img/poster.png       the gift box poster, rendered from the engine
-site/img/trailer.gif      the gift box trailer, rendered from the engine
-site/img/icon.svg         the pixel H favicon
-site/arcade/engine.js       engine: family config, sprites, audio, input, drawing, cheers
-site/arcade/games/*.js      one file per game, plus bosses.js
-site/arcade/flow.js         the hero's run: title, rounds, boss, finale, share
-tests/smoke.mjs           headless test: the builder, every pet, the demo stopping at the locked card,
-                          a full five-game assembly played to the ending, and every language
+Written by hand
+  CLAUDE.md               this brief
+  README.md               short human intro and how to run it
+  deploy.sh               builds, uploads site/ to happyherogames.com, checks the URLs
+  docs/business-plan.md   the business: market, competitors, pricing, model, plan, risks
+  docs/pitch.md           the one page for grants and anyone who needs it in two minutes
+  docs/product.md         the product and how it's built: questionnaire, config, game format,
+                          one domain, /g/ URLs, scores, backups
+  docs/competitors.md     who else sells this, what to take from them, where we win
+  docs/viral.md           fifty ways this could spread, ranked by effort
+  docs/todo.md            Joe's list: everything outside the code, and what is done
+  docs/research/          raw captures behind the research, kept so claims can be checked
+  site-src/pages/*.html   the source pages. Never edit site/*.html: it is generated
+  site-src/words/*.json   one file per language: English text -> translated text
+  site/arcade/engine.js   engine: family config, sprites, audio, input, drawing, cheers
+  site/arcade/flow.js     the hero's run: title, games, party mode, boss, finale, share
+  site/arcade/games/*.js  one file per game, plus bosses.js and the free trick-or-treat.js
+  site/builder.js         the builder: form to config, live preview, Play link
+  site/css/site.css       shared page styles, the two looks, design tokens
+  site/img/               logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
+  site/.htaccess          https and www redirects, HSTS, caching
+  site/g/.htaccess        keeps every game out of search engines
+  tests/smoke.mjs         the headless test. What it covers is under How to work here
+
+Generated, never edited by hand
+  site/index.html, site/name/, site/halloween/, site/privacy/, site/terms/, site/g/demo/
+  site/<lang>/**          every page and a translated copy of the game code, per language
+  docs/translations/*.md  one file per language for a native speaker to correct
+
+Tools, none of them deployed
+  tools/build.mjs         renders every page and every language into site/
+  tools/strings.mjs       pulls the player-facing strings out of the game code
+  tools/review-files.mjs  writes docs/translations/<lang>.md for a human checker
+  tools/review-load.mjs   reads a checked file back into the word files
+  tools/prune-words.mjs   drops translations for English text that no longer exists
+  tools/skins.js          the ten skins tried on 20 Sep 2026; two of them shipped
+  tools/preview-skins.mjs re-renders those skins as pictures, if the choice is revisited
+  tools/assets/           the poster template and the stills it uses
 ```
 
 Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `pet()` for the pet (`petRuns()` is false for a fish, which stays in its bowl). Games call `boy(i)` for the two players and `person(spec)` for cameo grown-ups; `helper()` returns a spare grown-up, or null when the only other person is the opponent. `docs/product.md` has the config format.
@@ -125,10 +121,21 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 - **Edit pages in `site-src/pages/`, then run `node tools/build.mjs`.** Everything in `site/*.html`, `site/es/` and the translated copies of the game code is generated. Editing `site/index.html` by hand means losing it on the next build. `deploy.sh` builds before it uploads.
 - **Run it:** `cd site && python3 -m http.server 8766`, then open http://localhost:8766. Or open `site/index.html` directly.
-- **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches `site/`.
+- **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. It covers the builder, every pet kind, the demo stopping at the locked card and never showing the boss or the ending, a full five-game assembly played to the ending, a four-challenger party to the results board, both free pages, all five translated languages, the language picker in both directions, and the landing page at phone width. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
 - **Don't deploy** without Joe saying so. When he does, run `./deploy.sh`. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
 - **Look at what you build.** Screenshot the game and the pages at desktop and phone width before saying something works.
+
+## The tools
+
+None of them are deployed. `deploy.sh` only copies `site/`.
+
+- `node tools/build.mjs` renders every page and language. `deploy.sh` runs it first, so the live site can't go stale. `node tools/build.mjs es` does one language.
+- `node tools/strings.mjs` rewrites `site-src/words/game-en.json` from the game code, which is how a new string becomes translatable.
+- `node tools/review-files.mjs` writes `docs/translations/<lang>.md` for a native speaker. **Run it whenever copy changes**, or the file you send someone is stale. `node tools/review-load.mjs docs/translations/ga.md` reads their corrections back.
+- `node tools/prune-words.mjs` drops translations of English text that no longer exists.
+- `tools/skins.js` holds the ten looks tried on 20 Sep 2026. `CHROME=/path/to/chrome node tools/preview-skins.mjs http://127.0.0.1:8766/ /tmp/skins` re-renders them if the decision is ever reopened.
+- `tools/assets/poster.html` is the gift box poster. Screenshot it at 800x1200, twice the scale, and resize to 900 wide.
 
 ## Hosting, domain and email (set up 19 Sep 2026)
 
@@ -141,12 +148,6 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 ## Open decisions (Joe's)
 
-The full list, including everything outside the code, is `docs/todo.md`. Keep it current: when a decision here is made or a job is done, move it to the Done section there rather than leaving both versions alive.
+They all live in `docs/todo.md`, which is the single list. When something here is decided or done, move it there rather than leaving both versions alive.
 
-1. Trademark neighbours to watch when searching: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
-2. Confirm or change the design direction above.
-3. Set up a Tally form for the launch list. There is no form on the site at the moment: the price block says to email hello@ instead, which is honest but collects nothing.
-4. Pick the print partner for the poster: order an A2 from Prodigi and from Printful and compare them in your hands. Left for later on 20 Sep 2026.
-5. Grant funding: first stop is the Local Enterprise Office at County Hall, Cork. Take `docs/pitch.md`. Then Enterprise Ireland (New Frontiers, High Potential Start-Up). Check current amounts with the LEO; they change.
-6. Trademark: search EUIPO and USPTO for HAPPYHEROGAMES before any more brand spend. Known neighbours are in decision 1.
-7. A logo beyond the pixel H in `site/img/icon.svg`.
+Two are repeated here because they shape the code: the trademark search for HAPPYHEROGAMES (neighbours: Hero Games in Beijing, Hero Games in the US, a mobile game called Happy Hero), and a solicitor reading `site/terms/` before any money changes hands.

@@ -40,7 +40,6 @@
  "Its color": "Il suo colore",
  "A live preview of the hero, their family and friends, in pixels": "Un'anteprima in pixel dell'eroe, della famiglia e degli amici",
  "Play the free demo": "Gioca alla demo gratuita",
- "One game, free. Nothing you type is sent to us.": "Un gioco, gratis. Niente di ciò che scrivi ci viene inviato.",
  "Answer a few questions": "Rispondi a poche domande",
  "Their name, who's in it, what they love, what they always say. No photos.": "Il nome, chi c'è dentro, cosa adora, cosa dice sempre. Niente foto.",
  "We build the game": "Creiamo il gioco",
@@ -71,13 +70,11 @@
  "Can I change something after it arrives?": "Posso cambiare qualcosa dopo?",
  "Tell us what's wrong and we'll fix it.": "Dicci cosa non va e lo sistemiamo.",
  "Web Analytics Made Easy - Statcounter": "Analisi web semplice - Statcounter",
- "Last changed 20 September 2026. Orders aren't open yet, so most of this describes how the free demo works today and how orders will work when they open.": "Ultima modifica: 20 settembre 2026. Gli ordini non sono ancora aperti, quindi quasi tutto qui descrive come funziona oggi la demo gratuita e come funzioneranno gli ordini.",
  "and we'll answer in plain English.": "e rispondiamo in parole semplici.",
  "The free demo sends us nothing": "La demo gratuita non ci invia niente",
  "The name, hair, colors, family member and pet you choose on the front page never leave your browser. They travel to the game inside the web address itself, and a copy is saved on your own device so your work is still there if you come back. Nothing is sent to us, and there is no account to make.": "Il nome, i capelli, i colori, il familiare e l'animale che scegli in prima pagina non escono mai dal tuo browser. Viaggiano fino al gioco dentro l'indirizzo web stesso, e una copia resta sul tuo dispositivo perché il lavoro sia ancora lì se torni. A noi non arriva niente, e non c'è nessun account da creare.",
  "To clear that copy, clear your browser's site data for happyherogames.com.": "Per cancellare quella copia, cancella i dati del sito happyherogames.com nel browser.",
  "What we'll collect when you order": "Cosa raccogliamo quando ordini",
- "When ordering opens, we'll ask for what the game needs and nothing else:": "Quando apriranno gli ordini, chiederemo quello che serve al gioco e nient'altro:",
  "First names, or what people are called at home: Mom, Grandma, Coach.": "Nomi di battesimo, o come si chiamano in casa: mamma, nonna, allenatore.",
  "What the hero loves doing, the family's catchphrases and running jokes, favorite foods.": "Cosa ama fare l'eroe, le frasi e le battute della famiglia, i cibi preferiti.",
  "The pet's name, kind and color.": "Nome, tipo e colore dell'animale.",
@@ -198,5 +195,7 @@
  "Left and right arrow keys, or the buttons under the screen on a phone.": "Frecce sinistra e destra, o i tasti sotto lo schermo sul telefono.",
  "This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen.": "Questo è gratis e uguale per tutti. I giochi che facciamo sono il contrario: cinque giochi, la tua famiglia e i tuoi amici come avversari, e le loro battute in ogni schermata.",
  "Build one, free": "Creane uno, gratis",
- "Halloween game": "Gioco di Halloween"
+ "Halloween game": "Gioco di Halloween",
+ "Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves.": "Ultima modifica: 20 settembre 2026. I primi dieci giochi si ordinano per e-mail e si fanno a mano, quindi qui c'è sia come funziona la demo gratuita, che non ci invia niente, sia cosa comporta un ordine.",
+ "For an order we ask for what the game needs and nothing else:": "Per un ordine chiediamo quello che serve al gioco e nient'altro:"
 }

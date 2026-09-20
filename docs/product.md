@@ -59,14 +59,14 @@ The builder and the game share one config object. In the demo it travels in the 
 | Games | Water Balloon Fight (the demo is one game, then the locked card) | 5 from the library, picked by interests |
 | Opponents | Family members in turn | Same, with the family's own taunts |
 | Referee | The pet, or a spare grown-up | Same |
-| Boss | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate | One boss from the family's real battles |
-| Finale | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, family walks in, share prompt | Same, with the family's own lines |
+| Boss | Locked. The demo stops at the locked card, and the test fails if it ever appears | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate |
+| Finale | Locked, same as the boss | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, everyone walks in, share prompt, with the family's own lines |
 | Sharing | Share button: a picture of the screen plus the game's link | Same, plus a "make one for your family" referral link |
 | Party mode | Two to six challengers take turns against the hero, then a results board | Same |
 
-**Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Back Seat Battle (ported), Neon Racers, Garden Five-a-Side, Back Seat Battle, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz (ported as The Family Quiz), Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Five are ported and live: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and The Family Quiz. Each of the rest needs its Fionn and Sean text swapped for the config (as the five built ones were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano or instrument game that isn't tied to the concertina.
+**Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Back Seat Battle (ported), Neon Racers, Garden Five-a-Side, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz (ported as The Family Quiz), Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Five are ported and live: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and The Family Quiz. Each of the rest needs its Fionn and Sean text swapped for the config (as the five built ones were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano or instrument game that isn't tied to the concertina.
 
-**Porting a game from Fionn vs Sean:** copy it into `site/arcade/games/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site/g/demo/index.html` and run the smoke test.
+**Porting a game from Fionn vs Sean:** copy it into `site/arcade/games/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site-src/pages/g/demo/index.html` (never the generated copy in `site/`), run `node tools/build.mjs` and run the smoke test.
 
 ## 4. Making a paid order (the plan)
 
@@ -112,7 +112,7 @@ No server code, no database, no build step at runtime.
 
 Each game page is a few hundred bytes of config and a list of script tags pointing at the shared files. Every game after the first loads from the browser cache, so a new game costs almost nothing to open.
 
-**Not built yet:** when paid games exist, shared headers, footers and script lists should come from one template that a deploy script renders into each game folder, so a change to the header changes every game on the next deploy and the server still runs no code. Today `deploy.sh` is an rsync and the one game page is written by hand.
+`tools/build.mjs` already renders the pages from `site-src/pages` into `site/`, in every language, and `deploy.sh` runs it before uploading. **Not built yet:** the same treatment for paid games, so that one template renders into every `/g/<id>/` folder and a change to the header changes every game on the next deploy.
 
 Caching: HTML is `no-cache`, so a deploy shows up straight away. When the engine grows, give it a content hash in the filename (`engine.a1b2c3.js`) and cache it for a year; until then `no-cache` on JS is fine and keeps deploys simple.
 
