@@ -12,15 +12,14 @@ Pre-launch. Nothing here takes orders or stores anyone's details yet.
 cd site && python3 -m http.server 8766
 ```
 
-Open http://localhost:8766, change the name, hair and family, and press Play. You can also open `site/index.html` straight from the folder.
+Open http://localhost:8766, change the name, hair, the person they're up against and the pet, and press Play. You can also open `site/index.html` straight from the folder.
 
 ## What's in here
 
 - `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), and the premiere countdown at `/premiere/`.
 - `docs/business-plan.md`: the business, the numbers and the plan.
-- `docs/architecture.md`: how the site and the games are put together, and why it's one domain.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
-- `docs/product.md`: the questionnaire, the privacy rule for each field, the config format and the game format.
+- `docs/product.md`: the product and how it's built. The questionnaire, the privacy rule for each field, the config format, the game format, and why it's all on one domain.
 - `CLAUDE.md`: the brief for AI assistants working on this. Read it before changing anything.
 
 ## Deploying
@@ -39,6 +38,6 @@ cd site && python3 -m http.server 8766 &
 CHROME=/path/to/chrome node tests/smoke.mjs
 ```
 
-It plays the demo through to the finale with the computer on both sides, drives the builder into the game, and exits with an error code if anything fails.
+It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, and checks the premiere countdown. It exits with an error code if anything fails.
 
 The game engine started life as [Fionn vs Sean](https://joescanlon.com/fs/), a game one dad made for his two sons.

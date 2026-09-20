@@ -4,13 +4,13 @@ Read this first, every session. It says what we're building, the rules that don'
 
 ## What this is
 
-Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers ten minutes of questions and gets back a private web game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and "HAPPY BIRTHDAY, AOIFE!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
+Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers a few short questions and gets back a private web game where that person is the hero and their own family and friends are the opponents: Dad in the back seat, Granny in the quiz, the dog as referee. It ends with everyone cheering and "HAPPY BIRTHDAY, AVA!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
-- **Market:** the US first, then the UK, Ireland, Canada and Australia. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
+- **Market:** sold worldwide in US dollars from day one. The US is the biggest slice of the spend, then the UK, Canada and Australia. Ireland is where Joe is, not a target market. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
-- **Occasions:** birthdays all year, Christmas, "just because".
-- **Status (20 Sep 2026):** pre-launch, live at happyherogames.com. A landing page, a live hero builder and a free two-game demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
+- **Occasions:** birthdays all year, Christmas, Father's Day, Mother's Day, "just because".
+- **Status (20 Sep 2026):** pre-launch, live at happyherogames.com. A landing page, a live hero builder and a free one-game demo exist in `site/`. No orders, no payments, no backend. happyherogames.com is registered and hosted; see Hosting, domain and email.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
@@ -27,16 +27,17 @@ What we learnt from it, and why the product looks like this:
 - **One hero per game.** The hero is player slot 1. Each game is against a different family member or friend in slot 0, played by the computer, or by a real grown-up in 2-player mode.
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
-- **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
+- **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence.
 - **The Gift Box ($179):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland), a premiere (a countdown link everyone opens together, built at `site/premiere/`), and a twenty-second trailer of their own game. Plus gift cards. No sibling add-on and no subscription: **two prices, and only one variable between them.** Everything about the game is the same at $99 and $179; the money buys something printed. Defend that when the next tier gets suggested.
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
-- Prices, model and plan: `docs/business-plan.md`. Questionnaire, config and game format: `docs/product.md`.
+- **Two prices: $99 the game, $179 the gift box.** Decided 20 Sep 2026, on the site, and in the plan. Model and numbers: `docs/business-plan.md`. Questionnaire, config, game format and how the site is served: `docs/product.md`.
+- **No cheap tier, no monthly club, no sibling add-on.** All three were tried on paper and dropped. Every extra option is another decision between someone and their credit card.
 
 ## Rules that don't bend
 
 **Privacy (children's data).** Collect as little as possible and show less.
-- Never on screen or in any public file: surnames, ages or birthdays, schools, clubs they play for, towns or addresses, travel plans, pets' breeds (security-question answers), photos, voice recordings (unless the family ordered voices, and then only in their private game).
+- Never on screen or in any public file: surnames, ages or birthdays, schools, clubs they play for, towns or addresses, travel plans, pets' breeds (security-question answers), photos. Voice recordings are not collected at all, anywhere.
 - First names and roles ("Dad", "Granny") are fine.
 - **Analytics go on the public landing page only.** Statcounter is in `site/index.html`. Never add it to `/g/` or `/premiere/`: those URLs carry a family's details, and handing them to a third party's logs would undo the rest of this. The builder strips `#g=` out of the address bar as soon as it has read it.
 - Games live at private, unguessable links with `noindex`. The demo keeps everything in the browser: the config travels in the link (`#g=`) and a local draft; nothing is sent to a server. Keep it that way until there's a proper backend with consent and deletion.
@@ -52,10 +53,9 @@ What we learnt from it, and why the product looks like this:
 
 ## Design direction (proposed by Claude, 19 Sep 2026; Joe to confirm)
 
-Following `docs/ai-website-organised.md`: the human sets the direction and the agent follows it.
 - The pixel game screen is the only loud thing. The page around it is quiet: a cool paper ground (`#f7f6fb`, dark `#0f0c18`), ink text, thin rules, square corners.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
-- Type: **Bungee** (arcade marquee lettering) for a few big headlines only; **Atkinson Hyperlegible** for reading (built for legibility); **Press Start 2P** for tiny labels.
+- Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas and the premiere clock, never in page copy.
 - One accent, arcade magenta: `#ff2bd6` for fills and the main button, `#c4107f` for text on light.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
 
@@ -66,25 +66,28 @@ CLAUDE.md                 this brief
 README.md                 short human intro and how to run it
 deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
-docs/architecture.md      one domain, /g/ URLs, scores, backups, why not ten domains
 docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
-docs/product.md           questionnaire with privacy rules per field, config format, game format
-docs/ai-website-organised.md   the guide the page design follows
+docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
 site/index.html           landing page with the live hero builder
 site/.htaccess            https and www redirects, HSTS, caching
 site/g/.htaccess          keeps every game out of search engines
 site/builder.js           the builder: form to config, live preview, Play link
 site/g/demo/index.html    the free demo's game page (reads the config from #g=)
 site/premiere/index.html  the premiere countdown: ?n=NAME&at=WHEN&to=/g/<id>/
+site/privacy/index.html   the privacy policy. Keep it true: it is a promise, not a form
 site/css/site.css         shared page styles and design tokens
-site/img/finale.png       the demo's last screen, used on the landing page
+site/img/finale.png       the full game's last screen, used on the landing page
+site/img/poster.png       the gift box poster, rendered from the engine
+site/img/trailer.gif      the gift box trailer, rendered from the engine
+site/img/icon.svg         the pixel H favicon
 site/arcade/engine.js       engine: family config, sprites, audio, input, drawing, cheers
 site/arcade/games/*.js      one file per game, plus bosses.js
 site/arcade/flow.js         the hero's run: title, rounds, boss, finale, share
-tests/smoke.mjs           headless test: plays the demo to the end and checks the builder
+tests/smoke.mjs           headless test: the builder, every pet, the demo stopping at the locked card,
+                          a full five-game assembly played to the ending, and the premiere countdown
 ```
 
-Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `ted()` for the dog. Duels call `boy(i)` for the two players and `person(spec)` for cameo grown-ups (`helper()` returns a spare one). `docs/product.md` has the config format.
+Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `pet()` for the pet (`petRuns()` is false for a fish, which stays in its bowl). Games call `boy(i)` for the two players and `person(spec)` for cameo grown-ups; `helper()` returns a spare grown-up, or null when the only other person is the opponent. `docs/product.md` has the config format.
 
 ## How to work here
 
@@ -105,9 +108,10 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 ## Open decisions (Joe's)
 
-1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
+1. Trademark neighbours to watch when searching: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
-3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-4. Prices on the site are $99 for the game and $179 for the gift box. Confirm before taking money.
-5. Apply for Irish grant funding: Local Enterprise Office first (Trading Online Voucher, Priming, feasibility), then Enterprise Ireland (New Frontiers, High Potential Start-Up). `docs/pitch.md` is the one page to send. Check current amounts with the LEO; they change.
-5. A logo beyond the pixel H in `site/img/icon.svg`, and a pixel artist for the sprites.
+3. Set up a Tally form for the launch list. There is no form on the site at the moment: the price block says to email hello@ instead, which is honest but collects nothing.
+4. Pick the print partner for the poster: order an A2 from Prodigi and from Printful and compare them in your hands. Left for later on 20 Sep 2026.
+5. Grant funding: first stop is the Local Enterprise Office at County Hall, Cork. Take `docs/pitch.md`. Then Enterprise Ireland (New Frontiers, High Potential Start-Up). Check current amounts with the LEO; they change.
+6. Trademark: search EUIPO and USPTO for HAPPY HERO GAMES before any more brand spend. Known neighbours are in decision 1.
+7. A logo beyond the pixel H in `site/img/icon.svg`.

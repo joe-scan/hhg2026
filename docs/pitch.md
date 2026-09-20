@@ -1,6 +1,6 @@
 # Happy Hero Games: one page
 
-Written 20 September 2026. For grant applications, investors and anyone who needs the business in two minutes. The detail behind every number is in `docs/business-plan.md`.
+Written 20 September 2026. For grant applications, investors and anyone who needs the business in two minutes. The detail behind every number is in `docs/business-plan.md`, which is where the figures are maintained. If the two ever disagree, the plan is right and this page is stale.
 
 ## What it is
 
@@ -30,7 +30,7 @@ Three more differences: it runs in a browser, so a grandparent can send it anywh
 
 ## Market and customers
 
-Buyers are parents, grandparents, godparents and partners in the English-speaking world, with the United States first, then the United Kingdom, Ireland, Canada and Australia. Children aged five to twelve are the main heroes, though the product works for an adult and sells for Father's Day and Mother's Day as well.
+It is sold worldwide, in US dollars, from day one. Buyers are parents, grandparents, godparents and partners across the English-speaking world: the United States is the biggest slice of the spend, then the United Kingdom, Canada and Australia. Ireland is where the company is, not where the market is. Children aged five to twelve are the main heroes, though the product works for an adult and sells for Father's Day and Mother's Day as well.
 
 Birthdays happen all year, which matters: this is less seasonal than a pure Christmas gift, so revenue does not collapse in January.
 
@@ -39,13 +39,13 @@ Birthdays happen all year, which matters: this is less seasonal than a pure Chri
 At an average order of about $115, with a fifth of buyers taking the gift box:
 
 - Card and merchant-of-record fees: about 5% plus $0.50.
-- Human checking: 18 minutes an order at $28 an hour.
+- Human checking: 18 minutes for a game and 25 for a gift box, at $28 an hour.
 - Printing, on gift box orders only: $15 to $20, printed on demand in the buyer's own country.
 - Customer acquisition: $38 blended, mostly paid social.
 
-That leaves roughly $50 an order after advertising.
+That leaves $54.48 an order after advertising.
 
-**The target is $1M of annual sales.** At $115 an order that is about 8,700 games a year: 725 a month, or 25 a day. At that volume the business earns roughly $430,000 a year to cover salaries and everything else, and the checking work alone is about 2,600 hours, which is one and a half full-time people.
+**The target is $1M of annual sales.** At $115 an order that is about 8,700 games a year: 725 a month, or 24 a day. At that volume the business earns about $473,500 a year to cover salaries and everything else, and the checking work alone is about 2,810 hours, which is 1.65 full-time people.
 
 Every figure here is an assumption to be tested against real orders, not a forecast. The month-by-month model, and what would break it, are in `docs/business-plan.md`.
 
@@ -58,7 +58,7 @@ Hiring is driven by order volume, not by dates, and nobody is hired before the o
 | 150 | First part-time game checker |
 | 400 | Second checker, plus someone running paid social properly |
 | 800 | Operations lead, so the founder is not the bottleneck |
-| Throughout | Contract developer and a pixel artist, paid per piece |
+| Throughout | Contract developer, paid per piece |
 
 At the $1M run rate that is four to six people, most of them in Ireland, selling almost entirely into export markets.
 
@@ -72,7 +72,7 @@ At the $1M run rate that is four to six people, most of them in Ireland, selling
 ## What funding would be spent on
 
 1. A contract developer to build the questionnaire, payments and the generator that turns answers into a finished game.
-2. A pixel artist, so the art is drawn by a person and looks like nothing else.
+2. Art: more games, more characters and the printed poster artwork.
 3. Legal and privacy review before any child's details are stored, covering GDPR and the UK Children's Code.
 4. A first paid advertising budget, spent to find the real cost of winning a customer.
 5. Trademark searches and filing for the name.

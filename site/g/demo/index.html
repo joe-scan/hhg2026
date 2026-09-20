@@ -50,11 +50,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 .demo strong{font-family:var(--display);font-weight:400;font-size:18px;display:block}
 .locked{list-style:none;margin:10px 0 0;padding:0;display:flex;gap:6px 14px;flex-wrap:wrap;color:var(--muted);font-size:14px}
 .locked li::before{content:"";display:inline-block;width:7px;height:9px;margin-right:6px;border:1px solid currentColor;border-radius:1px;vertical-align:-1px}
-.unlock{margin:12px 0 0;max-width:460px}
-.unlock label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
-.unlock .row2{display:flex;gap:8px}
-.unlock input{flex:1 1 auto;background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:7px 9px;min-width:0}
-#unlock-msg{margin:6px 0 0;font-size:14px}
+
 </style>
 </head>
 <body data-game="on">
@@ -86,53 +82,21 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
     <ul class="locked" id="locked-list">
       <li>Paddle Battle</li>
       <li>Dinner Dash</li>
+      <li>Back Seat Battle</li>
       <li>The Family Quiz</li>
       <li>The boss fight</li>
       <li>The ending</li>
     </ul>
-    <form class="unlock" id="unlock" hidden>
-      <label for="unlock-email">Your email, and we'll add the quiz and the boss fight to this demo</label>
-      <div class="row2"><input id="unlock-email" type="email" required placeholder="you@example.com" autocomplete="email"><button class="btn small" type="submit">Unlock</button></div>
-      <p id="unlock-msg" role="status"></p>
-    </form>
   </div>
   <a class="btn go" href="../../index.html#prices">Get the full game</a>
 </section>
 
 <!-- The teaser loads one game and nothing else, so there is nothing in the page to unlock by
-     poking at it. Giving an email address loads the rest on the next run. The flag has to be set
-     before the engine reads it. -->
-<script>
-  const UNLOCKED = (() => { try { return localStorage.getItem('hhg-unlock') === '1'; } catch (e) { return false; } })();
-  window.HHG_TEASER = !UNLOCKED;
-</script>
+     poking at it. The flag has to be set before the engine reads it. -->
+<script>window.HHG_TEASER = true;</script>
 <script src="../../arcade/engine.js"></script>
-<script>
-  document.write('<scr' + 'ipt src="../../arcade/games/water-balloon-fight.js"><\/scr' + 'ipt>');
-  if (UNLOCKED) document.write('<scr' + 'ipt src="../../arcade/games/table-quiz.js"><\/scr' + 'ipt><scr' + 'ipt src="../../arcade/games/bosses.js"><\/scr' + 'ipt>');
-</script>
+<script src="../../arcade/games/water-balloon-fight.js"></script>
 <script src="../../arcade/flow.js"></script>
-<script>
-  // The launch-list service is not picked yet (CLAUDE.md, open decisions). With no endpoint the
-  // form stays hidden, because asking for an email we cannot store would be a lie.
-  const LIST_ENDPOINT = '';
-  (() => {
-    const f = document.getElementById('unlock');
-    if (!f || !LIST_ENDPOINT || UNLOCKED) { if (UNLOCKED) document.getElementById('locked-list').hidden = true; return; }
-    f.hidden = false;
-    f.addEventListener('submit', async e => {
-      e.preventDefault();
-      const msg = document.getElementById('unlock-msg');
-      msg.textContent = 'Sending...';
-      try {
-        await fetch(LIST_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: document.getElementById('unlock-email').value }) });
-        try { localStorage.setItem('hhg-unlock', '1'); } catch (e2) {}
-        msg.textContent = 'Unlocked. Reloading with the quiz and the boss fight.';
-        setTimeout(() => location.reload(), 900);
-      } catch (e3) { msg.textContent = 'That did not send. Try again, or email hello@happyherogames.com.'; }
-    });
-  })();
-</script>
 <script>
 startGame(cfgFromLink());
 document.getElementById('hero-pad').textContent = HERO.name;

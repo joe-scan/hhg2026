@@ -120,11 +120,11 @@ The whole plan is built around one number: $1M of sales in a year.
 | AI drafting | $26,100 |
 | Posters (1,740 at $20) | $34,800 |
 | Hosting and trailer renders | $1,900 |
-| **Contribution before advertising** | **$804,600** |
+| **Contribution before advertising** | **$804,100** |
 | Advertising (8,700 at $38) | $330,600 |
-| **Contribution after advertising** | **$474,000** |
+| **Contribution after advertising** | **$473,500** |
 
-**What that $474K has to cover.** Everything that is not per-order: Joe's own pay, an operations lead, someone running paid social, a contract developer, a pixel artist, tools and hosting overhead, accounting, legal and privacy review, insurance, refunds and reprints beyond the budgeted $1 an order, and tax. A rough sketch of that is $280K to $320K, which would leave somewhere around $150K to $190K before tax. It is a sketch, not a budget. Get real quotes before quoting it anywhere, and in particular before quoting it in a grant application.
+**What that $473K has to cover.** Everything that is not per-order: Joe's own pay, an operations lead, someone running paid social, a contract developer, art work, tools and hosting overhead, accounting, legal and privacy review, insurance, refunds and reprints beyond the budgeted $1 an order, and tax. A rough sketch of that is $280K to $320K, which would leave somewhere around $150K to $190K before tax. It is a sketch, not a budget. Get real quotes before quoting it anywhere, and in particular before quoting it in a grant application.
 
 **Where it breaks.** At $45 blended acquisition instead of $38, contribution falls to $47.48 an order and $413K a year, and the fixed costs above eat most of it. At $30 it rises to $62.48 and $543K. Nothing else in the model moves the answer as much.
 
@@ -284,7 +284,7 @@ Decide these now, and change course if they happen.
 
 ## 15. The next five steps
 
-1. Put $99 and $179 on the site, remove the $49 Starter and every mention of a monthly club, a sibling add-on and voice recordings, and keep the site and section 3 on the same figures. If one moves, both move in the same commit.
+1. Done on 20 Sep 2026: $99 and $179 are on the site, with no Starter, club, sibling add-on or voice recordings anywhere. Next: keep the two sets of figures in step, and keep the site and section 3 on the same figures. If one moves, both move in the same commit.
 2. Time a real $99 order end to end, start to delivered, and see whether 18 minutes of checking is honest. Sections 4, 6 and 7 all rest on it.
 3. Show the demo to ten parents outside the family, at least three of them American. Watch, do not pitch. Ask whether they would pay $99, and whether the poster is worth $80 to them.
 4. Open a Paddle or Lemon Squeezy account and read what they require from an Irish business before building anything around it.

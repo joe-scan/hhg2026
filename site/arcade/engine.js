@@ -60,7 +60,7 @@ const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', fa
 // sets window.HHG_TEASER; a paid game never does.
 const TEASER = (() => { try { return !!window.HHG_TEASER; } catch (e) { return false; } })();
 // The other games and the ending, named on the locked card so people see what they are not getting.
-const LOCKED = ['PADDLE BATTLE', 'DINNER DASH', 'THE FAMILY QUIZ', 'THE BOSS FIGHT', 'THE ENDING'];
+const LOCKED = ['PADDLE BATTLE', 'DINNER DASH', 'BACK SEAT BATTLE', 'THE FAMILY QUIZ', 'THE BOSS FIGHT', 'THE ENDING'];
 // Optional question and joke packs for a family who want them (see the quiz). Off by default.
 const PACKS = ['ie', 'uk'];
 

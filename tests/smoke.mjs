@@ -50,12 +50,14 @@ const full = await browser.newPage({ viewport: { width: 1360, height: 900 } }); 
 const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
 await full.setContent('<canvas id="game" width="480" height="270"></canvas>' +
   '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') +
-  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
+  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
   '<script>startGame(DEMO);<\/script>',
   { waitUntil: 'load' });
 await full.waitForTimeout(600);
 const seenFull = await run(full, 'finale');
-console.log('full game:', (await full.evaluate(() => __hhg.games().length)) + ' games >', seenFull.join(' > '));
+const nGames = await full.evaluate(() => __hhg.games().length);
+console.log('full game:', nGames + ' games >', seenFull.join(' > '));
+if (nGames !== 5) errors.push('the full game has ' + nGames + ' games, and everything we sell says five');
 if (seenFull[seenFull.length - 1] !== 'finale') errors.push('the full game did not reach the ending');
 
 // 2c. the premiere page: it counts down, it opens the game at zero, and it refuses to send
