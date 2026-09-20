@@ -12,7 +12,7 @@ Last updated 20 September 2026.
 - [ ] Book the Local Enterprise Office meeting at County Hall, Cork. Bring `docs/pitch.md`.
 - [ ] Show the demo to ten parents outside the family, at least three American. Watch, don't pitch. Write down what they do, not what they say.
 - [ ] Set up a Tally form so the site can collect emails instead of asking people to write one. The free games already ask; today the link opens an email.
-- [ ] Google Search Console: the verification tag is live on the front page since 20 Sep 2026 (`site-src/pages/index.html`), so press Verify. If you picked the DNS method instead, add the TXT record at Namecheap. Then submit https://happyherogames.com/sitemap.xml and check Coverage a week later. Bing Webmaster Tools takes the Google verification.
+- [ ] Google Search Console: the TXT record is live in DNS since 20 Sep 2026 and answers on both Namecheap nameservers and on Google, Cloudflare and Quad9, so press Verify. The HTML tag is on the front page too, for a URL-prefix property. Then submit https://happyherogames.com/sitemap.xml and check Coverage in a week. Bing Webmaster Tools takes the Google verification.
 
 ## Trademark
 
