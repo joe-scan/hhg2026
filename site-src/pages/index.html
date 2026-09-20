@@ -3,13 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Hero Games</title>
+<title>HappyHeroGames</title>
 <meta name="description" content="A personalized arcade game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop.">
 <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="Put someone special in their own arcade game">
+<meta property="og:description" content="They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up">
+<meta property="og:url" content="https://happyherogames.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <!--hreflang-->
 <link rel="stylesheet" href="css/site.css">
 <script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
@@ -69,6 +76,11 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .box-look figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
 @media (max-width:620px){.box-look{grid-template-columns:1fr}}
 .extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
+.order{margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--rule);max-width:60ch}
+.order h3{margin:0 0 8px;font-size:20px}
+.order p{margin:0 0 14px;color:var(--muted)}
+.order small{display:inline-block;margin-left:10px;font-size:14px}
+.order .fine{font-size:14px;margin:0}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
 .promises li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--rule)}
@@ -82,10 +94,10 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
+  <a class="mark" translate="no" href="#make">Happy<span>Hero</span>Games</a>
   <nav aria-label="Page sections"><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a></nav>
   <div class="look"><button type="button" id="skin-toggle" data-dark="Dark mode" data-light="Light mode">Dark mode</button></div>
-  <!--langs-->
+  <div class="look"><!--langs--></div>
 </header>
 
 <main>
@@ -167,24 +179,30 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
     <p>One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Every family has those details. We put them in a game.</p>
   </div>
   <figure>
-    <div class="screen"><img src="img/finale.png" alt="The end of a Happy Hero game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
+    <div class="screen"><img src="img/finale.png" alt="The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
     <figcaption>How every game ends.</figcaption>
   </figure>
 </section>
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Price</h2>
-  <p class="onep">Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. The only question is whether you want something printed.</p>
+  <p class="onep">Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. Or a poster of their game, printed and posted, to keep on the wall.</p>
   <div class="prices">
     <div class="price"><b>The game</b><span class="amt">$99</span><p>The private link, and it's theirs forever.</p></div>
-    <div class="price"><b>The gift box</b><span class="amt">$179</span><p>The game, a printed poster of their name in lights, a premiere everyone opens together, and a trailer for the family chat.</p></div>
+    <div class="price"><b>The gift box</b><span class="amt">$179</span><p>The game, a printed poster of their name in lights, posted to you, and a short trailer of their own game for the family chat.</p></div>
   </div>
   <figure class="box-look">
     <img src="img/poster.png" alt="The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog" loading="lazy" width="900" height="1350">
     <img src="img/trailer.gif" alt="The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending" loading="lazy" width="480" height="270">
     <figcaption>The poster and the trailer, made from one demo family. Yours has your own names in it.</figcaption>
   </figure>
-  <p class="extras">Gift cards too. Orders aren't open yet: email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> and we'll tell you the day they are.</p>
+  <p class="extras">Gift cards too.</p>
+  <div class="order" id="order">
+    <h3>The first ten games</h3>
+    <p>We're building the first ten by hand, for families who don't mind being first. Tell us who it's for and we'll send a payment link and a date. If we can't make your date, we'll say so instead of taking the money.</p>
+    <p><a class="btn go" id="order-btn" href="mailto:hello@happyherogames.com?subject=A%20game%20for%20someone%20special">Start an order</a> <small>Or email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</small></p>
+    <p class="fine"><a href="terms/">Terms and refunds</a> &middot; <a href="privacy/">Privacy</a></p>
+  </div>
 </section>
 
 <section class="band" id="privacy" aria-labelledby="privacy-h">
@@ -201,16 +219,15 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <h2 id="faq-h">Questions</h2>
   <details><summary>What does it play on?</summary><p>Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways.</p></details>
   <details><summary>Who can be in it?</summary><p>Up to eight people: family, friends, a teacher, a coach. And the pet, which can be a dog, cat, rabbit, hamster or fish.</p></details>
-  <details><summary>What is the premiere?</summary><p>You pick a day and a time. Everyone you send the link to sees a countdown, and when it hits zero the game opens, wherever they are.</p></details>
   <details><summary>Can I change something after it arrives?</summary><p>Tell us what's wrong and we'll fix it.</p></details>
 </section>
 </main>
 
-<footer><span>Happy Hero Games.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="privacy/">Privacy</a></span><span>A preview site: orders aren't open yet.</span></footer>
+<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="privacy/">Privacy</a></span><span>The first ten games are being built by hand.</span></footer>
 </div>
 
-<!-- Statcounter. The landing page only: a game's link at /g/ and a premiere link both carry a
-     family's details, and those never go to anyone else's server. -->
+<!-- Statcounter. The landing page only: a game's link at /g/ carries a family's details, and
+     those never go to anyone else's server. -->
 <script>
 var sc_project=13355921;
 var sc_invisible=1;

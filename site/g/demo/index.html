@@ -3,13 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Play | Happy Hero Games</title>
+<title>Play | HappyHeroGames</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<!-- A shared game link shows that family's own title screen. The demo uses the demo family's;
+     a paid game gets its own picture rendered when the game is built. -->
+<meta property="og:title" content="Come and play my arcade game">
+<meta property="og:description" content="A HappyHeroGames game: I am the hero and my family are the ones I have to beat.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="A pixel arcade title screen with the hero's name in lights">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="../../g/demo/">
 <link rel="alternate" hreflang="es" href="../../es/g/demo/">
 <link rel="alternate" hreflang="de" href="../../de/g/demo/">
@@ -69,7 +77,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </div>
 
 <main class="stage wide">
-  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Your Happy Hero game. Play with the keyboard, a gamepad or the on-screen pads."></canvas></div>
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads."></canvas></div>
   <div class="tpad p0" aria-label="Family player's controls">
     <button type="button" id="btn-home-pad" class="home">Title</button>
     <span class="who">FAMILY</span>
@@ -82,7 +90,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
     <button class="fire" data-p="1" data-k="a">FIRE</button>
   </div>
 </main>
-<div class="langs"><b>English</b> <a href="../../es/g/demo/" hreflang="es">Español</a> <a href="../../de/g/demo/" hreflang="de">Deutsch</a> <a href="../../fr/g/demo/" hreflang="fr">Français</a> <a href="../../it/g/demo/" hreflang="it">Italiano</a> <a href="../../ga/g/demo/" hreflang="ga">Gaeilge</a></div><p class="tip">Turn your phone sideways for a bigger screen.</p>
+<details class="langs"><summary title="Language" lang="en">English</summary><div><a href="../../es/g/demo/" hreflang="es" lang="es">Español</a><a href="../../de/g/demo/" hreflang="de" lang="de">Deutsch</a><a href="../../fr/g/demo/" hreflang="fr" lang="fr">Français</a><a href="../../it/g/demo/" hreflang="it" lang="it">Italiano</a><a href="../../ga/g/demo/" hreflang="ga" lang="ga">Gaeilge</a></div></details><p class="tip">Turn your phone sideways for a bigger screen.</p>
 <p class="keys wide">Click the screen to start. Move with the arrow keys or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, fire with <kbd>Space</kbd> or <kbd>Enter</kbd>. In 2-player mode the grown-up uses <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>Space</kbd>. <kbd>Esc</kbd> goes back to the start.</p>
 
 <section class="demo wide" aria-label="About this demo">

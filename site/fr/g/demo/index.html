@@ -3,13 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jouer | Happy Hero Games</title>
+<title>Jouer | HappyHeroGames</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="../../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<!-- A shared game link shows that family's own title screen. The demo uses the demo family's;
+     a paid game gets its own picture rendered when the game is built. -->
+<meta property="og:title" content="Viens jouer à mon jeu d'arcade">
+<meta property="og:description" content="Un jeu HappyHeroGames : je suis le héros et ma famille est celle que je dois battre.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="Un écran-titre arcade en pixels avec le nom du héros en lumières">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="../../../g/demo/">
 <link rel="alternate" hreflang="es" href="../../../es/g/demo/">
 <link rel="alternate" hreflang="de" href="../../../de/g/demo/">
@@ -69,7 +77,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </div>
 
 <main class="stage wide">
-  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Votre jeu Happy Hero. Jouez au clavier, à la manette ou avec les boutons à l'écran."></canvas></div>
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Votre jeu HappyHeroGames. Jouez au clavier, à la manette ou avec les boutons à l'écran."></canvas></div>
   <div class="tpad p0" aria-label="Commandes du joueur famille">
     <button type="button" id="btn-home-pad" class="home">Titre</button>
     <span class="who">FAMILLE</span>
@@ -82,7 +90,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
     <button class="fire" data-p="1" data-k="a">TIR</button>
   </div>
 </main>
-<div class="langs"><a href="../../../g/demo/" hreflang="en">English</a> <a href="../../../es/g/demo/" hreflang="es">Español</a> <a href="../../../de/g/demo/" hreflang="de">Deutsch</a> <b>Français</b> <a href="../../../it/g/demo/" hreflang="it">Italiano</a> <a href="../../../ga/g/demo/" hreflang="ga">Gaeilge</a></div><p class="tip">Tournez votre téléphone à l'horizontale pour un écran plus grand.</p>
+<details class="langs"><summary title="Language" lang="fr">Français</summary><div><a href="../../../g/demo/" hreflang="en" lang="en">English</a><a href="../../../es/g/demo/" hreflang="es" lang="es">Español</a><a href="../../../de/g/demo/" hreflang="de" lang="de">Deutsch</a><a href="../../../it/g/demo/" hreflang="it" lang="it">Italiano</a><a href="../../../ga/g/demo/" hreflang="ga" lang="ga">Gaeilge</a></div></details><p class="tip">Tournez votre téléphone à l'horizontale pour un écran plus grand.</p>
 <p class="keys wide">Cliquez sur l'écran pour commencer. Déplacez-vous avec les flèches ou <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, tirez avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd>. En mode deux joueurs, l'adulte utilise <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> et <kbd>Espace</kbd>. <kbd>Échap</kbd> revient au début.</p>
 
 <section class="demo wide" aria-label="À propos de cette démo">

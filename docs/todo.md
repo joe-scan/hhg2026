@@ -50,6 +50,8 @@ Last updated 20 September 2026.
 
 ## Before you can take money
 
+- [ ] **A solicitor reads `site/terms/`.** It is written and live, marked as a draft, and no money should change hands until someone qualified has read it.
+
 - [ ] Payments: open a Paddle account (merchant of record, so US sales tax, EU VAT and UK VAT are theirs, not yours). Lemon Squeezy is the alternative.
 - [ ] Terms of sale: what people are buying, delivery time, what happens if they're not happy. Needs a look from a solicitor, not just a template.
 - [ ] Refund policy: decide it before the first complaint, not during it. Digital goods have their own consumer-rights rules in the EU and UK.
@@ -108,4 +110,8 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Competitor research done and written up (20 Sep 2026).
 - [x] Sunset is the site, with a one-button dark mode. Paper dropped (20 Sep 2026).
 - [x] Translation machinery built (20 Sep 2026).
-- [x] Spanish, German, French, Italian and Irish live, pages and game, 169 page strings and about 415 game strings each (20 Sep 2026).
+- [x] Spanish, German, French, Italian and Irish live, pages and game (20 Sep 2026).
+- [x] Title screen made readable, poster and trailer regenerated, link previews added (20 Sep 2026).
+- [x] Premiere removed: too much work for the return (20 Sep 2026).
+- [x] Terms and refunds drafted, orders open for the first ten by email (20 Sep 2026).
+- [x] docs/viral.md: fifty ways to spread it (20 Sep 2026).

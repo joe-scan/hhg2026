@@ -3,13 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Hero Games</title>
+<title>HappyHeroGames</title>
 <meta name="description" content="Cluiche arcade pearsantaithe le duine speisialta sa phríomhpháirt, agus a muintir agus a gcairde mar chéilí comhraic. Bain triail as an taispeántas saor in aisce i nóiméad, ar aon fhón nó ríomhaire glúine.">
 <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="Cuir duine speisialta ina chluiche arcade féin">
+<meta property="og:description" content="Is iad an laoch. A muintir agus a gcairde na daoine a chaithfidh siad a bhualadh. Tóg anseo é agus imir anois.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="Scáileán teidil arcade i bpicteilíní: STARRING AVA, HAPPY BIRTHDAY EDITION, leis an teaghlach i líne">
+<meta property="og:url" content="https://happyherogames.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="../">
 <link rel="alternate" hreflang="es" href="../es/">
 <link rel="alternate" hreflang="de" href="../de/">
@@ -75,6 +82,11 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .box-look figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
 @media (max-width:620px){.box-look{grid-template-columns:1fr}}
 .extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
+.order{margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--rule);max-width:60ch}
+.order h3{margin:0 0 8px;font-size:20px}
+.order p{margin:0 0 14px;color:var(--muted)}
+.order small{display:inline-block;margin-left:10px;font-size:14px}
+.order .fine{font-size:14px;margin:0}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
 .promises li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--rule)}
@@ -88,10 +100,10 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
+  <a class="mark" translate="no" href="#make">Happy<span>Hero</span>Games</a>
   <nav aria-label="Codanna den leathanach"><a href="#how">Conas a oibríonn sé</a><a href="#prices">Praghas</a><a href="#privacy">Príobháideacht</a><a href="#faq">Ceisteanna</a></nav>
   <div class="look"><button type="button" id="skin-toggle" data-dark="Mód dorcha" data-light="Mód geal">Mód dorcha</button></div>
-  <div class="langs"><a href="../" hreflang="en">English</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../fr/" hreflang="fr">Français</a> <a href="../it/" hreflang="it">Italiano</a> <b>Gaeilge</b></div>
+  <div class="look"><details class="langs"><summary title="Language" lang="ga">Gaeilge</summary><div><a href="../" hreflang="en" lang="en">English</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../de/" hreflang="de" lang="de">Deutsch</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../it/" hreflang="it" lang="it">Italiano</a></div></details></div>
 </header>
 
 <main>
@@ -173,24 +185,30 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
     <p>Rinne daid amháin cluiche arcade dá bheirt mhac, lán lena nathanna cainte, a madra agus na hargóintí faoin suíochán tosaigh. Tá na sonraí sin ag gach teaghlach. Cuirimid i gcluiche iad.</p>
   </div>
   <figure>
-    <div class="screen"><img src="../img/finale.png" alt="Deireadh cluiche Happy Hero: HAPPY BIRTHDAY, AVA! i soilse, císte lá breithe, agus an teaghlach agus an madra ag ceiliúradh in ealaín phicteilíní" style="display:block;width:100%;image-rendering:pixelated"></div>
+    <div class="screen"><img src="../img/finale.png" alt="Deireadh cluiche HappyHeroGames: HAPPY BIRTHDAY, AVA! i soilse, císte lá breithe, agus an teaghlach agus an madra ag ceiliúradh in ealaín phicteilíní" style="display:block;width:100%;image-rendering:pixelated"></div>
     <figcaption>Mar sin a chríochnaíonn gach cluiche.</figcaption>
   </figure>
 </section>
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Praghas</h2>
-  <p class="onep">Tá gach cluiche mar an gcéanna: cúig chluiche agus ceannasaí, gach duine a bhfuil grá acu dóibh ann, suas le hochtar, réidh i 48 uair. Is í an t-aon cheist ná an bhfuil rud éigin clóite uait.</p>
+  <p class="onep">Tá gach cluiche mar an gcéanna: cúig chluiche agus ceannasaí, gach duine a bhfuil grá acu dóibh ann, suas le hochtar, réidh i 48 uair. Nó póstaer dá gcluiche, clóite agus seolta chugat, le crochadh ar an mballa.</p>
   <div class="prices">
     <div class="price"><b>An cluiche</b><span class="amt">$99</span><p>An nasc príobháideach, agus is leo go deo é.</p></div>
-    <div class="price"><b>An bosca bronntanais</b><span class="amt">$179</span><p>An cluiche, póstaer clóite lena n-ainm i soilse, céadtaispeántas a osclaíonn gach duine le chéile, agus leantóir don chomhrá teaghlaigh.</p></div>
+    <div class="price"><b>An bosca bronntanais</b><span class="amt">$179</span><p>An cluiche, póstaer clóite lena n-ainm i soilse, seolta chugat sa phost, agus leantóir gearr dá gcluiche féin don chomhrá teaghlaigh.</p></div>
   </div>
   <figure class="box-look">
     <img src="../img/poster.png" alt="An póstaer clóite: an scáileán teidil le AVA i soilse, HAPPY BIRTHDAY, AVA thíos, trí cinn dá cluichí ag an mbun agus an fhoireann: Daidí agus Biscuit an madra" loading="lazy" width="900" height="1350">
     <img src="../img/trailer.gif" alt="An leantóir: scáileán teidil Ava, an cárta in aghaidh Daidí, píosa imeartha agus deireadh an lae bhreithe" loading="lazy" width="480" height="270">
     <figcaption>An póstaer agus an leantóir, déanta le teaghlach samplach. Beidh bhur n-ainmneacha féin ar do cheannsa.</figcaption>
   </figure>
-  <p class="extras">Cártaí bronntanais freisin. Níl orduithe ar oscailt fós: seol ríomhphost chuig <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> agus inseoimid duit an lá a osclóidh siad.</p>
+  <p class="extras">Cártaí bronntanais freisin.</p>
+  <div class="order" id="order">
+    <h3>An chéad deich gcluiche</h3>
+    <p>Táimid ag tógáil an chéad deich gcinn de láimh, do theaghlaigh nach miste leo a bheith ar dtús. Inis dúinn cé dó é agus seolfaimid nasc íocaíochta agus dáta. Mura féidir linn do dháta a bhaint amach, déarfaimid é sin in ionad airgead a thógáil.</p>
+    <p><a class="btn go" id="order-btn" href="mailto:hello@happyherogames.com?subject=A%20game%20for%20someone%20special">Tosaigh ordú</a> <small>Nó seol ríomhphost chuig <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</small></p>
+    <p class="fine"><a href="../terms/">Téarmaí agus aisíocaíochtaí</a> &middot; <a href="../privacy/">Príobháideacht</a></p>
+  </div>
 </section>
 
 <section class="band" id="privacy" aria-labelledby="privacy-h">
@@ -207,16 +225,15 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <h2 id="faq-h">Ceisteanna</h2>
   <details><summary>Cá n-imrítear é?</summary><p>Ar aon fhón, táibléad nó ríomhaire glúine le brabhsálaí. Gan aon rud le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a chasadh ar a thaobh agus é a roinnt.</p></details>
   <details><summary>Cé atá in ann a bheith ann?</summary><p>Suas le hochtar: muintir, cairde, múinteoir, traenálaí. Agus an peata: madra, cat, coinín, hamstar nó iasc.</p></details>
-  <details><summary>Cad é an céadtaispeántas?</summary><p>Roghnaíonn tú lá agus am. Feiceann gach duine a bhfaigheann an nasc comhaireamh síos, agus nuair a shroicheann sé náid osclaíonn an cluiche, cibé áit a bhfuil siad.</p></details>
   <details><summary>An féidir liom rud éigin a athrú ina dhiaidh?</summary><p>Inis dúinn cad atá mícheart agus socróimid é.</p></details>
 </section>
 </main>
 
-<footer><span>Happy Hero Games.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Príobháideacht</a></span><span>Suíomh réamhamhairc: níl orduithe ar oscailt fós.</span></footer>
+<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Príobháideacht</a></span><span>Tá an chéad deich gcluiche á dtógáil de láimh.</span></footer>
 </div>
 
-<!-- Statcounter. The landing page only: a game's link at /g/ and a premiere link both carry a
-     family's details, and those never go to anyone else's server. -->
+<!-- Statcounter. The landing page only: a game's link at /g/ carries a family's details, and
+     those never go to anyone else's server. -->
 <script>
 var sc_project=13355921;
 var sc_invisible=1;

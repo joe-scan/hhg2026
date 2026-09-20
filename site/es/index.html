@@ -3,13 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Hero Games</title>
+<title>HappyHeroGames</title>
 <meta name="description" content="Un juego arcade personalizado protagonizado por alguien especial, con su familia y sus amigos como rivales. Prueba la demo gratis en un minuto, en cualquier teléfono o portátil.">
 <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="Pon a alguien especial en su propio juego arcade">
+<meta property="og:description" content="Ellos son el héroe. Su familia y sus amigos son a quienes tienen que ganar. Créalo aquí y juega ahora.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="Una pantalla de título arcade en píxeles: STARRING AVA, HAPPY BIRTHDAY EDITION, con la familia en fila">
+<meta property="og:url" content="https://happyherogames.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="../">
 <link rel="alternate" hreflang="es" href="../es/">
 <link rel="alternate" hreflang="de" href="../de/">
@@ -75,6 +82,11 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .box-look figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
 @media (max-width:620px){.box-look{grid-template-columns:1fr}}
 .extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
+.order{margin:30px 0 0;padding:22px 0 0;border-top:1px solid var(--rule);max-width:60ch}
+.order h3{margin:0 0 8px;font-size:20px}
+.order p{margin:0 0 14px;color:var(--muted)}
+.order small{display:inline-block;margin-left:10px;font-size:14px}
+.order .fine{font-size:14px;margin:0}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
 .promises li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--rule)}
@@ -88,10 +100,10 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
+  <a class="mark" translate="no" href="#make">Happy<span>Hero</span>Games</a>
   <nav aria-label="Secciones de la página"><a href="#how">Cómo funciona</a><a href="#prices">Precio</a><a href="#privacy">Privacidad</a><a href="#faq">Preguntas</a></nav>
   <div class="look"><button type="button" id="skin-toggle" data-dark="Modo oscuro" data-light="Modo claro">Modo oscuro</button></div>
-  <div class="langs"><a href="../" hreflang="en">English</a> <b>Español</b> <a href="../de/" hreflang="de">Deutsch</a> <a href="../fr/" hreflang="fr">Français</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../ga/" hreflang="ga">Gaeilge</a></div>
+  <div class="look"><details class="langs"><summary title="Language" lang="es">Español</summary><div><a href="../" hreflang="en" lang="en">English</a><a href="../de/" hreflang="de" lang="de">Deutsch</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../it/" hreflang="it" lang="it">Italiano</a><a href="../ga/" hreflang="ga" lang="ga">Gaeilge</a></div></details></div>
 </header>
 
 <main>
@@ -173,24 +185,30 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
     <p>Un padre creó un juego arcade para sus dos hijos, lleno de sus frases, su perro y sus peleas por el asiento delantero. Todas las familias tienen esos detalles. Nosotros los ponemos en un juego.</p>
   </div>
   <figure>
-    <div class="screen"><img src="../img/finale.png" alt="El final de un juego Happy Hero: HAPPY BIRTHDAY, AVA! en luces, una tarta de cumpleaños, y la familia y el perro celebrando en pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
+    <div class="screen"><img src="../img/finale.png" alt="El final de un juego de HappyHeroGames: HAPPY BIRTHDAY, AVA! en luces, una tarta de cumpleaños, y la familia y el perro celebrando en pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
     <figcaption>Así termina cada juego.</figcaption>
   </figure>
 </section>
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Precio</h2>
-  <p class="onep">Todos los juegos son iguales: cinco juegos y un jefe final, con todos sus seres queridos dentro, hasta ocho personas, listo en 48 horas. La única pregunta es si quieres algo impreso.</p>
+  <p class="onep">Todos los juegos son iguales: cinco juegos y un jefe final, con todos sus seres queridos dentro, hasta ocho personas, listo en 48 horas. O un póster de su juego, impreso y enviado por correo, para colgar en la pared.</p>
   <div class="prices">
     <div class="price"><b>El juego</b><span class="amt">$99</span><p>El enlace privado, y es suyo para siempre.</p></div>
-    <div class="price"><b>La caja regalo</b><span class="amt">$179</span><p>El juego, un póster impreso con su nombre en luces, un estreno que todos abren a la vez y un tráiler para el chat familiar.</p></div>
+    <div class="price"><b>La caja regalo</b><span class="amt">$179</span><p>El juego, un póster impreso con su nombre en luces, enviado por correo, y un tráiler corto de su propio juego para el chat familiar.</p></div>
   </div>
   <figure class="box-look">
     <img src="../img/poster.png" alt="El póster impreso: la pantalla de título con AVA en luces, HAPPY BIRTHDAY, AVA debajo, tres de sus juegos en la parte inferior y el reparto: papá y Biscuit, el perro" loading="lazy" width="900" height="1350">
     <img src="../img/trailer.gif" alt="El tráiler: la pantalla de título de Ava, la tarjeta de versus contra papá, un poco de juego y el final de cumpleaños" loading="lazy" width="480" height="270">
     <figcaption>El póster y el tráiler, hechos con una familia de ejemplo. El tuyo llevará vuestros nombres.</figcaption>
   </figure>
-  <p class="extras">También hay tarjetas regalo. Los pedidos aún no están abiertos: escribe a <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> y te avisamos el día que abran.</p>
+  <p class="extras">También hay tarjetas regalo.</p>
+  <div class="order" id="order">
+    <h3>Los diez primeros juegos</h3>
+    <p>Estamos creando los diez primeros a mano, para familias a las que no les importa ser las primeras. Dinos para quién es y te enviaremos un enlace de pago y una fecha. Si no podemos cumplir tu fecha, te lo diremos en lugar de cobrarte.</p>
+    <p><a class="btn go" id="order-btn" href="mailto:hello@happyherogames.com?subject=A%20game%20for%20someone%20special">Empezar un pedido</a> <small>O escribe a <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</small></p>
+    <p class="fine"><a href="../terms/">Condiciones y reembolsos</a> &middot; <a href="../privacy/">Privacidad</a></p>
+  </div>
 </section>
 
 <section class="band" id="privacy" aria-labelledby="privacy-h">
@@ -207,16 +225,15 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <h2 id="faq-h">Preguntas</h2>
   <details><summary>¿Dónde se juega?</summary><p>En cualquier teléfono, tablet o portátil con navegador. Nada que instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal.</p></details>
   <details><summary>¿Quién puede salir?</summary><p>Hasta ocho personas: familia, amigos, un profesor, un entrenador. Y la mascota, que puede ser perro, gato, conejo, hámster o pez.</p></details>
-  <details><summary>¿Qué es el estreno?</summary><p>Eliges un día y una hora. Todos los que reciban el enlace ven una cuenta atrás y, cuando llega a cero, el juego se abre, estén donde estén.</p></details>
   <details><summary>¿Puedo cambiar algo cuando llegue?</summary><p>Dinos qué está mal y lo arreglamos.</p></details>
 </section>
 </main>
 
-<footer><span>Happy Hero Games.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Privacidad</a></span><span>Sitio de avance: los pedidos aún no están abiertos.</span></footer>
+<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Privacidad</a></span><span>Los diez primeros juegos se están creando a mano.</span></footer>
 </div>
 
-<!-- Statcounter. The landing page only: a game's link at /g/ and a premiere link both carry a
-     family's details, and those never go to anyone else's server. -->
+<!-- Statcounter. The landing page only: a game's link at /g/ carries a family's details, and
+     those never go to anyone else's server. -->
 <script>
 var sc_project=13355921;
 var sc_invisible=1;

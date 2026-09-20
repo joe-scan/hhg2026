@@ -1,10 +1,10 @@
-# Happy Hero Games: brief for AI assistants
+# HappyHeroGames: brief for AI assistants
 
 Read this first, every session. It says what we're building, the rules that don't bend, and how to work in this repo. Joe's global `~/.claude/CLAUDE.md` (voice, formatting, banned words) also applies to everything here.
 
 ## What this is
 
-Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers a few short questions and gets back a private web game where that person is the hero and their own family and friends are the opponents: Dad in the back seat, Granny in the quiz, the dog as referee. It ends with everyone cheering and "HAPPY BIRTHDAY, AVA!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
+HappyHeroGames puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers a few short questions and gets back a private web game where that person is the hero and their own family and friends are the opponents: Dad in the back seat, Granny in the quiz, the dog as referee. It ends with everyone cheering and "HAPPY BIRTHDAY, AVA!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
 - **Market:** sold worldwide in US dollars from day one. The US is the biggest slice of the spend, then the UK, Canada and Australia. Ireland is where Joe is, not a target market. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
@@ -28,7 +28,7 @@ What we learnt from it, and why the product looks like this:
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence.
-- **The Gift Box ($179):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland), a premiere (a countdown link everyone opens together, built at `site/premiere/`), and a twenty-second trailer of their own game. Plus gift cards. No sibling add-on and no subscription: **two prices, and only one variable between them.** Everything about the game is the same at $99 and $179; the money buys something printed. Defend that when the next tier gets suggested.
+- **The Gift Box ($179):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland) and a twenty-second trailer of their own game. The premiere countdown was built on 20 Sep 2026 and removed the same day: too much work for what it returned. Link previews do the sharing job instead. Plus gift cards. No sibling add-on and no subscription: **two prices, and only one variable between them.** Everything about the game is the same at $99 and $179; the money buys something printed. Defend that when the next tier gets suggested.
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
 - **Two prices: $99 the game, $179 the gift box.** Decided 20 Sep 2026, on the site, and in the plan. Model and numbers: `docs/business-plan.md`. Questionnaire, config, game format and how the site is served: `docs/product.md`.
@@ -47,9 +47,11 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 **Privacy (children's data).** Collect as little as possible and show less.
 - Never on screen or in any public file: surnames, ages or birthdays, schools, clubs they play for, towns or addresses, travel plans, pets' breeds (security-question answers), photos. Voice recordings are not collected at all, anywhere.
 - First names and roles ("Dad", "Granny") are fine.
-- **Analytics go on the public landing page only.** Statcounter is in `site/index.html`. Never add it to `/g/` or `/premiere/`: those URLs carry a family's details, and handing them to a third party's logs would undo the rest of this. The builder strips `#g=` out of the address bar as soon as it has read it.
+- **Analytics go on the public landing page only.** Statcounter is in `site/index.html`. Never add it to `/g/`: those URLs carry a family's details, and handing them to a third party's logs would undo the rest of this. The builder strips `#g=` out of the address bar as soon as it has read it.
 - Games live at private, unguessable links with `noindex`. The demo keeps everything in the browser: the config travels in the link (`#g=`) and a local draft; nothing is sent to a server. Keep it that way until there's a proper backend with consent and deletion.
 - Anything that stores personal data needs Joe's sign-off first, and GDPR / UK Children's Code review before launch.
+
+**Real people.** Nobody real goes in a game: no politicians, no footballers, no pop stars. Topical is fine, people are not. Take the situation, never the person. `docs/viral.md` explains why.
 
 **Brands and people.** Club names and car makes as text only. Never crests, logos or recognisable designs. No real celebrities.
 
@@ -63,7 +65,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 
 - The pixel game screen is the only loud thing. The page around it is quiet: a cool paper ground (`#f7f6fb`, dark `#0f0c18`), ink text, thin rules, square corners.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
-- Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas and the premiere clock, never in page copy.
+- Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas, never in page copy.
 - One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode and in the game.
 - **Two looks, decided 20 Sep 2026:** Sunset, warm cream and burnt orange, is the site. Dark is for a dark room or a phone set that way. One small button in the header switches them and the choice is kept in the visitor's own browser; with no choice made the device decides. They are colour only: same type, same layout, same pixel screen. No third option, and no row of choices eating the header. The eight other skins tried are in `tools/skins.js`.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
@@ -78,6 +80,8 @@ docs/business-plan.md     the business: market, competitors, pricing, model, pla
 docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
 docs/todo.md              Joe's list: trademark, company setup, grants, what's needed before taking money
 docs/competitors.md       who else sells this, what to take from them, where we win
+docs/viral.md             fifty ways this could spread, ranked by effort
+docs/translations/*.md    one file per language for a native speaker to correct
 docs/research/            raw captures behind the research, kept so claims can be checked
 docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
 site-src/pages/*.html     **the source pages. Edit these, never site/*.html**
@@ -89,8 +93,14 @@ site/.htaccess            https and www redirects, HSTS, caching
 site/g/.htaccess          keeps every game out of search engines
 site/builder.js           the builder: form to config, live preview, Play link
 site/g/demo/index.html    the free demo's game page (reads the config from #g=)
-site/premiere/index.html  the premiere countdown: ?n=NAME&at=WHEN&to=/g/<id>/
 site/privacy/index.html   the privacy policy. Keep it true: it is a promise, not a form
+site/terms/index.html     terms and refunds, English only until a solicitor has read them
+site/img/og.png           the link preview: a shared link shows the game's title screen
+tools/build.mjs           renders every page and every language
+tools/review-files.mjs    writes docs/translations/<lang>.md for a human checker
+tools/review-load.mjs     reads a checked file back into the word files
+tools/prune-words.mjs     drops translations for English text that no longer exists
+tools/assets/             the poster template and the stills it uses
 site/css/site.css         shared page styles and design tokens
 site/img/finale.png       the full game's last screen, used on the landing page
 site/img/poster.png       the gift box poster, rendered from the engine
@@ -100,7 +110,7 @@ site/arcade/engine.js       engine: family config, sprites, audio, input, drawin
 site/arcade/games/*.js      one file per game, plus bosses.js
 site/arcade/flow.js         the hero's run: title, rounds, boss, finale, share
 tests/smoke.mjs           headless test: the builder, every pet, the demo stopping at the locked card,
-                          a full five-game assembly played to the ending, and the premiere countdown
+                          a full five-game assembly played to the ending, and every language
 ```
 
 Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `pet()` for the pet (`petRuns()` is false for a fish, which stays in its bowl). Games call `boy(i)` for the two players and `person(spec)` for cameo grown-ups; `helper()` returns a spare grown-up, or null when the only other person is the opponent. `docs/product.md` has the config format.
@@ -132,5 +142,5 @@ The full list, including everything outside the code, is `docs/todo.md`. Keep it
 3. Set up a Tally form for the launch list. There is no form on the site at the moment: the price block says to email hello@ instead, which is honest but collects nothing.
 4. Pick the print partner for the poster: order an A2 from Prodigi and from Printful and compare them in your hands. Left for later on 20 Sep 2026.
 5. Grant funding: first stop is the Local Enterprise Office at County Hall, Cork. Take `docs/pitch.md`. Then Enterprise Ireland (New Frontiers, High Potential Start-Up). Check current amounts with the LEO; they change.
-6. Trademark: search EUIPO and USPTO for HAPPY HERO GAMES before any more brand spend. Known neighbours are in decision 1.
+6. Trademark: search EUIPO and USPTO for HAPPYHEROGAMES before any more brand spend. Known neighbours are in decision 1.
 7. A logo beyond the pixel H in `site/img/icon.svg`.

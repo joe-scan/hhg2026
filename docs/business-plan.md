@@ -1,4 +1,4 @@
-# Happy Hero Games: business plan
+# HappyHeroGames: business plan
 
 Written 19 September 2026. Rewritten 20 September 2026 for a US-first launch in US dollars, then again the same day around two prices and a single target: $1M of annual sales. Every number here is an assumption to test, not a forecast. Where something does not add up, it is said out loud rather than smoothed over.
 
@@ -6,9 +6,9 @@ The doc keeps British spelling. The site uses US spelling, because the buyers ar
 
 ## 1. The business in two paragraphs
 
-Happy Hero Games sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Two days later they get a private link to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
+HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Two days later they get a private link to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
 
-There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in 48 hours and checked by a person. The gift box is $179: exactly the same game, plus three physical or event extras, a printed arcade poster of the hero's own title screen, a premiere link everyone opens at the same moment, and a twenty-second trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
+There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in 48 hours and checked by a person. The gift box is $179: exactly the same game, plus three physical or event extras, a printed arcade poster of the hero's own title screen. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
 
 ## 2. The honest summary
 
@@ -27,7 +27,7 @@ Two prices, in US dollars, shown in dollars to everyone.
 | Product | Price | What's in it |
 |---|---|---|
 | The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready in 48 hours, checked by a person. |
-| The gift box | $179 | The same game, plus a printed arcade poster of their title screen, a premiere, and a twenty-second trailer. |
+| The gift box | $179 | The same game, plus a printed arcade poster of their title screen. |
 | Gift cards | $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
@@ -41,8 +41,7 @@ It was in the plan until 20 September 2026 and it is now dropped. Its own number
 ### What the gift box actually is
 
 - **The poster.** Their own title screen, STARRING AOIFE, their name in lights, printed and ready to frame. Made by a print-on-demand partner, Prodigi or Printful, that prints in the buyer's own country. A US order prints in the US and arrives in about three days. No customs, nothing posted from Ireland, nobody here touching it. About $15 to $20 delivered.
-- **The premiere.** The buyer picks a date and time. Everyone gets a countdown link that opens the game at that moment, wherever they are, so a grandparent in Florida and a cousin in Cork see it together. This is already built and live at `site/premiere/`. It costs nothing per order.
-- **The trailer.** A twenty-second video of their own game, rendered from the same pixels, for the family chat. No new data is collected.
+- **Link previews.** A shared game link shows that family's own title screen in WhatsApp or a message, so every share carries an advert. Built 20 September 2026; the premiere countdown that used to sit here was built and removed the same day, because it cost more work than it returned.
 
 ### What is not sold
 
@@ -93,7 +92,7 @@ What the US costs us: a merchant of record for sales tax in about 45 states, US 
 
 Seven competitors were read in detail on 20 September 2026. The full analysis is in `docs/competitors.md`; the short version is that the market splits into cheap templates, made-for-you games and commissions, and nobody has won it.
 
-| | Ready Player U | Muksun Games | Bday Game | Happy Hero Games |
+| | Ready Player U | Muksun Games | Bday Game | HappyHeroGames |
 |---|---|---|---|---|
 | Price | $30.89 | $99, or $399 from scratch | $250 to $450 | $99 or $179 |
 | Plays on | Browser | Android and Windows PC | Windows | Any browser |
@@ -158,7 +157,7 @@ Nobody gets hired before the orders exist. Every trigger below is a number of or
 Assumptions, all to test:
 
 - Hand-built orders from October 2026, mostly to Joe's own network in Ireland, then a generator from spring 2027.
-- Both prices fully live from February 2027. Before that the average order is $99 to $105, because the first families get hand-built games while the poster, premiere and trailer are still being proven.
+- Both prices fully live from February 2027. Before that the average order is $99 to $105, because the first families get hand-built games while the poster and the trailer are still being proven.
 - Mix of 80% game and 20% gift box from February 2027, giving an average order of $115.
 - Blended acquisition $38 an order. Spend is lower in the first three months, because those orders come from Joe's own network.
 - Contribution is revenue minus fees, checking, drafting, hosting, poster and advertising: $54.48 an order at the full mix.
@@ -236,7 +235,7 @@ The gift box needs no warehouse and no packing table. The poster file goes to th
 |---|---|---|---|
 | 0. Prove it | Now to Dec 2026 | Landing page and demo live. Launch list. Hand-build 50 to 100 paid orders for Christmas, mostly through Joe's network in Ireland. | 50 paid orders, time per order written down, share rate measured |
 | 1. Generator and US launch | Jan to Mar 2027 | Questionnaire, merchant of record, private links, two-price checkout, enough games in the library for a five-game order, AI drafting, checking tool, US copy and support hours, first paid US ads | Under 25 minutes of human time per order, blended acquisition under $45 |
-| 2. The gift box and referrals | Apr to Jun 2027 | Print-on-demand poster through Prodigi or Printful, premiere (already built), trailer render, referral codes, gift cards | Gift box at 20% of orders, under 25 minutes of handling each, reprint rate under 5% |
+| 2. The gift box and referrals | Apr to Jun 2027 | Print-on-demand poster through Prodigi or Printful, trailer render, link previews, referral codes, gift cards | Gift box at 20% of orders, under 25 minutes of handling each, reprint rate under 5% |
 | 3. Scale | Jul to Dec 2027 | Reaction-video ads at volume, UK and Ireland launch, seasonal checking team, first permanent checker and paid social hire | Profitable after ads through Christmas |
 | 4. To $1M | 2028 | Canada and Australia, second print partner, operations lead, checking time down before the second Christmas | Trailing twelve months past $1M |
 
@@ -261,7 +260,7 @@ The company is Irish, trading from Ireland, selling almost entirely into export 
 - **High Potential Start-Up (HPSU) status** is Enterprise Ireland's designation for start-ups that are export-oriented, based in a knowledge or technology sector, and capable of reaching roughly $1M in export sales and around ten jobs within three years. That is the reason this plan is built around $1M rather than a monthly revenue figure: section 6 sets out the $1M explicitly, section 7 sets out the headcount and what drives it, and section 8 shows the month it lands. Whether this business meets the technology test is Enterprise Ireland's call, not ours, and it should be asked plainly rather than assumed.
 - A company must normally be a limited company to be considered, so the sole trader question has to be settled before any of this is pursued.
 
-**What an assessor should be told straight.** The business has no revenue yet. The landing page, the hero builder and the free demo are built and live at happyherogames.com. The premiere is built. The generator, the questionnaire and payments are not. The numbers in sections 4, 6 and 8 are assumptions with their sources stated, not results, and the two that matter most, the cost of a customer and the minutes of human checking per order, are both scheduled to be measured in phase 1 before any scaling spend.
+**What an assessor should be told straight.** The business has no revenue yet. The landing page, the hero builder and the free demo are built and live at happyherogames.com in six languages, and orders for the first ten games are open by email. The generator, the questionnaire and payments are not. The numbers in sections 4, 6 and 8 are assumptions with their sources stated, not results, and the two that matter most, the cost of a customer and the minutes of human checking per order, are both scheduled to be measured in phase 1 before any scaling spend.
 
 **Next step on funding:** book the LEO meeting, ask which of the three grants this business is actually eligible for as it stands, and get the current rates in writing. Nothing above goes into an application until that has happened.
 

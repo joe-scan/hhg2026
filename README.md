@@ -1,4 +1,4 @@
-# Happy Hero Games
+# HappyHeroGames
 
 Put someone special in their own arcade game. They're the hero, and their own family turn up as the opponents. You build them in pixels, play a free demo in the browser, and order the full game for a birthday or Christmas.
 
@@ -20,11 +20,13 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 
 ## What's in here
 
-- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), and the premiere countdown at `/premiere/`.
+- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), the privacy policy and the terms.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/todo.md`: everything outside the code that Joe has to do, and what's done.
 - `docs/competitors.md`: the seven companies selling something like this, and what to take from each.
+- `docs/viral.md`: fifty ways this could spread, ranked by effort against reach.
+- `docs/translations/`: one file per language, English beside the translation, for a native speaker to correct.
 - `docs/product.md`: the product and how it's built. The questionnaire, the privacy rule for each field, the config format, the game format, and why it's all on one domain.
 - `CLAUDE.md`: the brief for AI assistants working on this. Read it before changing anything.
 
@@ -44,6 +46,6 @@ cd site && python3 -m http.server 8766 &
 CHROME=/path/to/chrome node tests/smoke.mjs
 ```
 
-It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, and checks the premiere countdown. It exits with an error code if anything fails.
+It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending. It exits with an error code if anything fails.
 
 The game engine started life as [Fionn vs Sean](https://joescanlon.com/fs/), a game one dad made for his two sons.

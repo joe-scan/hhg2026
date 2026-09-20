@@ -58,23 +58,29 @@ const ST = {
     },
     draw() {
       const t = S.t; bgSynth(t);
-      txt('STARRING', W / 2, 16, 8, COL.cyan, 'center');
-      const n = HERO.name, size = n.length > 7 ? 24 : 32;
-      logo(n, W / 2, 30, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+      // The three lines that sell the whole thing, so they are the biggest text on the screen.
+      txt('STARRING', W / 2, 12, 16, COL.cyan, 'center', true);
+      const n = HERO.name, size = n.length > 9 ? 24 : n.length > 7 ? 28 : 32;
+      // a dark plate behind the name, so it reads against the sun rather than sitting in it
+      rect(W / 2 - (n.length * size) / 2 - 10, 30, n.length * size + 20, size + 10, 'rgba(10,4,22,.55)');
+      logo(n, W / 2, 34, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
       const occ = CFG.occasion === 'star' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion] + ' EDITION';
-      rect(W / 2 - occ.length * 4 - 6, 68, occ.length * 8 + 12, 15, 'rgba(10,4,22,.85)'); txt(occ, W / 2, 72, 8, COL.gold, 'center');
+      const ow = occ.length * 12, oh = 22;
+      rect(W / 2 - ow / 2 - 8, 74, ow + 16, oh, 'rgba(10,4,22,.9)');
+      rect(W / 2 - ow / 2 - 8, 74, ow + 16, 2, COL.gold);
+      txt(occ, W / 2, 79, 12, COL.gold, 'center');
       // the whole cast lined up along the horizon
       const cast = [HERO].concat(FAM), gap = 64, x0 = W / 2 - (cast.length - 1) * gap / 2;
-      cast.forEach((sp, k) => { shadow(x0 + k * gap, 164, 12); drawSpec(sp, x0 + k * gap, 164, 3, false, Math.floor(t / 20 + k)); });
+      cast.forEach((sp, k) => { shadow(x0 + k * gap, 172, 12); drawSpec(sp, x0 + k * gap, 172, 3, false, Math.floor(t / 20 + k)); });
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
       ['1 PLAYER', '2 PLAYERS: A GROWN-UP PLAYS THE FAMILY'].forEach((o, k) => {
-        const on = S.sel === k, y = 186 + k * 16;
+        const on = S.sel === k, y = 196 + k * 16;
         if (on) arrow('r', W / 2 - o.length * 4 - 14, y + 4, 5, COL.hot);
         txt(o, W / 2, y, 8, on ? '#fff' : COL.dim, 'center');
       });
-      pressFire(226, touchMode ? 'TAP TO START' : 'PRESS FIRE OR CLICK TO START');
+      pressFire(234, touchMode ? 'TAP TO START' : 'PRESS FIRE OR CLICK TO START');
     }
   },
   vs: {

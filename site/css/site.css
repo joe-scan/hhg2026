@@ -18,6 +18,18 @@
 .look button{font:inherit;font-size:14px;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:2px;padding:4px 10px;cursor:pointer}
 .look button:hover{color:var(--ink);border-color:var(--ink)}
 
+/* the language picker: one control showing the language you are in, opening a short list */
+.langs{position:relative;font-size:14px}
+.langs summary{list-style:none;cursor:pointer;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 10px}
+.langs summary::-webkit-details-marker{display:none}
+.langs summary::after{content:" \25be"}
+.langs summary:hover,.langs[open] summary{color:var(--ink);border-color:var(--ink)}
+.langs div{position:absolute;right:0;top:calc(100% + 4px);z-index:5;display:grid;min-width:150px;
+  background:var(--paper);border:1px solid var(--ink);border-radius:2px;padding:4px}
+.langs a{display:block;padding:6px 10px;color:var(--ink);text-decoration:none}
+.langs a:hover{background:var(--ink);color:var(--paper)}
+footer .langs div{right:auto;left:0;top:auto;bottom:calc(100% + 4px)}
+
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:0 40px;touch-action:manipulation}

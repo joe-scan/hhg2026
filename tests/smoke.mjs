@@ -60,18 +60,6 @@ console.log('full game:', nGames + ' games >', seenFull.join(' > '));
 if (nGames !== 5) errors.push('the full game has ' + nGames + ' games, and everything we sell says five');
 if (seenFull[seenFull.length - 1] !== 'finale') errors.push('the full game did not reach the ending');
 
-// 2c. the premiere page: it counts down, it opens the game at zero, and it refuses to send
-// anyone off this site
-const prem = await browser.newPage(); watch(prem);
-const soon = new Date(Date.now() + 36e5).toISOString();
-await prem.goto(`${BASE}premiere/?n=Ava&at=${encodeURIComponent(soon)}&to=/g/demo/`); await prem.waitForTimeout(500);
-const clock = await prem.textContent('#clock');
-if (!/^00:00:59:\d\d$/.test(clock)) errors.push('the premiere clock read ' + clock);
-await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=https://example.com/evil`); await prem.waitForTimeout(3200);
-if (!prem.url().includes('/premiere/')) errors.push('the premiere followed an off-site link');
-await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=/g/demo/`); await prem.waitForTimeout(3200);
-if (!prem.url().includes('/g/demo/')) errors.push('the premiere did not open the game at zero');
-
 // 2d. every translated language: the page is translated, the game is translated, the demo still
 // stops at the locked card, and the picker gets you back to English and out again.
 const LANGS = [
@@ -100,6 +88,7 @@ for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['de/privacy/', '
                                       ['', 'Gaeilge', '/ga/']]) {
   const t = await browser.newPage(); watch(t);
   await t.goto(BASE + from); await t.waitForTimeout(500);
+  await t.click('.langs summary');                       // the picker opens on click
   await t.click(`.langs a:text-is("${click}")`); await t.waitForTimeout(600);
   const path = new URL(t.url()).pathname;
   if (!path.endsWith(wantEnd)) errors.push(`${click} from /${from} landed on ${path}, wanted ${wantEnd}`);

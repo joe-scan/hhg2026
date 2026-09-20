@@ -3,13 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Imir | Happy Hero Games</title>
+<title>Imir | HappyHeroGames</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="../../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<!-- A shared game link shows that family's own title screen. The demo uses the demo family's;
+     a paid game gets its own picture rendered when the game is built. -->
+<meta property="og:title" content="Tar agus imir mo chluiche arcade">
+<meta property="og:description" content="Cluiche HappyHeroGames: is mise an laoch agus caithfidh mé mo mhuintir a bhualadh.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:image:alt" content="Scáileán teidil arcade i bpicteilíní leis an ainm i soilse">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="en" href="../../../g/demo/">
 <link rel="alternate" hreflang="es" href="../../../es/g/demo/">
 <link rel="alternate" hreflang="de" href="../../../de/g/demo/">
@@ -69,7 +77,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </div>
 
 <main class="stage wide">
-  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Do chluiche Happy Hero. Imir leis an méarchlár, le rialtán nó leis na cnaipí ar an scáileán."></canvas></div>
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Do chluiche HappyHeroGames. Imir leis an méarchlár, le rialtán nó leis na cnaipí ar an scáileán."></canvas></div>
   <div class="tpad p0" aria-label="Rialtáin imreoir an teaghlaigh">
     <button type="button" id="btn-home-pad" class="home">Teideal</button>
     <span class="who">TEAGHLACH</span>
@@ -82,7 +90,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
     <button class="fire" data-p="1" data-k="a">LÁMHACH</button>
   </div>
 </main>
-<div class="langs"><a href="../../../g/demo/" hreflang="en">English</a> <a href="../../../es/g/demo/" hreflang="es">Español</a> <a href="../../../de/g/demo/" hreflang="de">Deutsch</a> <a href="../../../fr/g/demo/" hreflang="fr">Français</a> <a href="../../../it/g/demo/" hreflang="it">Italiano</a> <b>Gaeilge</b></div><p class="tip">Cas do fhón ar a thaobh le haghaidh scáileán níos mó.</p>
+<details class="langs"><summary title="Language" lang="ga">Gaeilge</summary><div><a href="../../../g/demo/" hreflang="en" lang="en">English</a><a href="../../../es/g/demo/" hreflang="es" lang="es">Español</a><a href="../../../de/g/demo/" hreflang="de" lang="de">Deutsch</a><a href="../../../fr/g/demo/" hreflang="fr" lang="fr">Français</a><a href="../../../it/g/demo/" hreflang="it" lang="it">Italiano</a></div></details><p class="tip">Cas do fhón ar a thaobh le haghaidh scáileán níos mó.</p>
 <p class="keys wide">Cliceáil ar an scáileán chun tosú. Bog leis na saigheada nó <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, lámhach le <kbd>Spásbharra</kbd> nó <kbd>Enter</kbd>. I mód beirt imreoirí úsáideann an duine fásta <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> agus <kbd>Spásbharra</kbd>. <kbd>Esc</kbd> ar ais go dtí an tús.</p>
 
 <section class="demo wide" aria-label="Faoin taispeántas seo">

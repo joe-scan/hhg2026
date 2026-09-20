@@ -22,7 +22,6 @@ Some short questions on a phone. Every field has a privacy rule, because the her
 | Family jokes and lines, optional | "Are you sure now boy?" | Trash talk, forfeits, cheers | A person reads every line before it ships. |
 | Places they've been, optional | Portugal, Spain | A World Tour game | Past trips only. Never upcoming travel. |
 | ~~Voices~~ | Dropped 20 Sep 2026 | Was: phone recordings replacing the announcer | Never again: audio of a child is the worst thing we could hold, for a feature nobody asked for. |
-| Premiere day and time, Gift Box | 25 Dec, 9am | The countdown link at `/premiere/` | A date and a time, nothing else. It sits in the link, not in a database. |
 
 Consent: a parent or guardian ticks that they may share these details about the child and the family members named. When the hero is an adult, the person buying confirms the same thing.
 

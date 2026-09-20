@@ -1,10 +1,10 @@
-# Happy Hero Games: one page
+# HappyHeroGames: one page
 
 Written 20 September 2026. For grant applications, investors and anyone who needs the business in two minutes. The detail behind every number is in `docs/business-plan.md`, which is where the figures are maintained. If the two ever disagree, the plan is right and this page is stale.
 
 ## What it is
 
-Happy Hero Games puts someone you love into their own arcade game. They are the hero, and their own family and friends are the opponents: Dad at the dinner table, Granny in the quiz, the dog as referee. It ends with their name up in lights for a birthday or Christmas. It plays in any web browser on any phone, tablet or laptop, with nothing to install.
+HappyHeroGames puts someone you love into their own arcade game. They are the hero, and their own family and friends are the opponents: Dad at the dinner table, Granny in the quiz, the dog as referee. It ends with their name up in lights for a birthday or Christmas. It plays in any web browser on any phone, tablet or laptop, with nothing to install.
 
 A parent, grandparent or godparent answers a few short questions. Two days later they get a private link to a game made for that one child, checked by a person before it goes out.
 
@@ -16,7 +16,7 @@ One product, two prices, in US dollars.
 |---|---|---|
 | Free demo | $0 | One game, built in the browser in about a minute, from a name and a few choices |
 | The game | $99 | Five games and a boss, up to eight people in it, their own catchphrases and jokes, ready in 48 hours, theirs to keep |
-| The gift box | $179 | The same game, plus a printed poster of their title screen, a premiere countdown everyone opens together, and a short trailer of their own game |
+| The gift box | $179 | The same game, plus a printed poster of their title screen and a short trailer of their own game for the family chat |
 
 Everything about the game itself is identical between the two prices. The only choice is whether the buyer wants something printed. There is no subscription and no list of add-ons, because every extra option is another decision standing between someone and their credit card.
 
@@ -65,9 +65,10 @@ At the $1M run rate that is four to six people, most of them in Ireland, selling
 ## Status
 
 - Live at happyherogames.com: the landing page, the hero builder and a free playable demo.
-- The game engine works, with the games, the boss, the ending and the premiere countdown all built.
+- The game engine works, with five games, the boss and the ending all built, in English, Spanish, German, French, Italian and Irish.
 - Privacy rules are written and enforced in the product: no photos, no voice recordings, no surnames, ages, schools or addresses, and every game on its own unguessable link.
-- Not yet: payments, the questionnaire, the ordering system and the print partner. No money has been taken.
+- Orders for the first ten games are open, taken by email and built by hand, so the real build time can be measured.
+- Not yet: automatic payments, the questionnaire form, the generator and the print partner.
 
 ## What funding would be spent on
 

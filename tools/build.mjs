@@ -19,7 +19,10 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'privacy/index.html', 'g/demo/index.html', 'premiere/index.html'];
+export const PAGES = ['index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html'];
+// Pages that stay in English for now. The terms are a legal document and a bad translation of one
+// is worse than none; every language links to the English copy until a lawyer has seen it.
+export const ENGLISH_ONLY = ['terms/index.html'];
 // Only languages that are actually translated. Adding one: write site-src/words/<lang>.json and
 // game-<lang>.json (start from game-en.json), add it here, run the build. A half-translated
 // language must never ship: a Spanish page leading to an English game is worse than no page.
@@ -114,12 +117,13 @@ function hreflangs(pagePath, lang) {
   return tags.join('\n');
 }
 
-// The picker that appears on every page. English pages link out, translated pages link back.
+// The picker: one small control showing the language you are in, in its own words, which opens
+// the short list. No flags (a language is not a country) and no JavaScript.
 function picker(pagePath, lang) {
   const href = siblings(pagePath, lang);
-  return '<div class="langs">' + ['en', ...LANGS].map(l =>
-    l === lang ? `<b>${LANGNAMES[l]}</b>` : `<a href="${href(l)}" hreflang="${l}">${LANGNAMES[l]}</a>`
-  ).join(' ') + '</div>';
+  const others = ['en', ...LANGS].filter(l => l !== lang)
+    .map(l => `<a href="${href(l)}" hreflang="${l}" lang="${l}">${LANGNAMES[l]}</a>`).join('');
+  return `<details class="langs"><summary title="Language" lang="${lang}">${LANGNAMES[lang]}</summary><div>${others}</div></details>`;
 }
 
 function build(lang) {
@@ -127,6 +131,7 @@ function build(lang) {
   const gameDict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, `game-${lang}.json`)));
   const missing = new Set(), missingGame = new Set();
   for (const page of PAGES) {
+    if (lang !== 'en' && ENGLISH_ONLY.includes(page)) continue;
     let html = read(path.join(SRC, page));
     if (lang !== 'en') {
       html = translate(html, dict, missing);
