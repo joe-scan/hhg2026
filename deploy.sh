@@ -8,6 +8,6 @@ cd "$(dirname "$0")"
 rsync -rtvz --delete --chmod=D755,F644 \
   --filter='P .well-known/' --filter='P cgi-bin/' \
   site/ retroelf-host:happyherogames.com/
-for p in '' g/demo/ builder.js arcade/engine.js css/site.css img/finale.png; do
+for p in '' g/demo/ premiere/ builder.js arcade/engine.js css/site.css img/finale.png; do
   printf '%s  https://happyherogames.com/%s\n' "$(curl -s -o /dev/null -w '%{http_code}' "https://happyherogames.com/$p")" "$p"
 done

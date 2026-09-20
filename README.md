@@ -16,7 +16,7 @@ Open http://localhost:8766, change the name, hair and family, and press Play. Yo
 
 ## What's in here
 
-- `site/`: the landing page with the live hero builder, and the playable demo at `/g/demo/` (two games, a boss and a birthday finale).
+- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), and the premiere countdown at `/premiere/`.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/architecture.md`: how the site and the games are put together, and why it's one domain.
 - `docs/product.md`: the questionnaire, the privacy rule for each field, the config format and the game format.

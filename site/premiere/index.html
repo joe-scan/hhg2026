@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The premiere | Happy Hero Games</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+/* One screen, nothing else on it. Everyone opens the same link and waits together. */
+body{min-height:100vh;display:grid;place-items:center;background:var(--screen);color:#fff;padding:24px 16px}
+.house{width:min(100%,760px);text-align:center}
+.marquee{font-family:var(--display);font-weight:400;line-height:1.05;font-size:clamp(28px,7vw,64px);margin:0 0 6px;text-wrap:balance}
+.starring{font-family:var(--pixel);font-size:10px;letter-spacing:.22em;color:#22e6ff;margin:0 0 18px}
+.clock{font-family:var(--pixel);font-size:clamp(20px,6.4vw,44px);letter-spacing:.06em;margin:22px 0 8px;color:#ffd23f}
+.units{font-family:var(--pixel);font-size:9px;letter-spacing:.2em;color:#b9aee0;display:flex;gap:clamp(18px,7vw,58px);justify-content:center;margin:0 0 26px}
+.when{color:#b9aee0;margin:0 0 26px;font-size:15px}
+.lights{display:flex;gap:10px;justify-content:center;margin:0 0 26px}
+.lights i{width:10px;height:10px;background:#3a2d5e;border-radius:50%;animation:bulb 1.6s infinite}
+.lights i:nth-child(2){animation-delay:.2s}.lights i:nth-child(3){animation-delay:.4s}
+.lights i:nth-child(4){animation-delay:.6s}.lights i:nth-child(5){animation-delay:.8s}
+@keyframes bulb{0%,100%{background:#3a2d5e}50%{background:#ff2bd6}}
+.go{display:none}
+.go.on{display:inline-block}
+.note{color:#9186b8;font-size:14px;margin:26px 0 0}
+.note a{color:#9186b8}
+@media (prefers-reduced-motion:reduce){.lights i{animation:none;background:#6b5aa8}}
+</style>
+</head>
+<body>
+<main class="house">
+  <p class="starring" id="starring">A Happy Hero Games premiere</p>
+  <h1 class="marquee" id="title">The premiere</h1>
+  <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <p class="clock" id="clock" role="timer">--:--:--</p>
+  <p class="units" id="units"><span>DAYS</span><span>HRS</span><span>MIN</span><span>SEC</span></p>
+  <p class="when" id="when"></p>
+  <a class="btn go" id="go" href="#">Start the game</a>
+  <p class="note">Keep this link. Everyone who has it sees the same countdown, wherever they are. <a href="../index.html">happyherogames.com</a></p>
+</main>
+<script>
+// A premiere link looks like:
+//   /premiere/?n=Ava&at=2026-12-25T09:00&to=/g/otter-lamp-914/
+// n  the hero's first name, at  when it opens (the viewer's own clock), to  the game to open.
+// `to` is only ever followed if it stays on this site, so a premiere link can never be turned into
+// a redirect to somewhere else.
+(() => {
+  const q = new URLSearchParams(location.search);
+  const name = (q.get('n') || '').replace(/[^\p{L}\p{M} '\-]/gu, '').trim().slice(0, 24);
+  const at = new Date(q.get('at') || '');
+  const raw = q.get('to') || '';
+  let to = '';
+  try { const u = new URL(raw, location.href); if (u.origin === location.origin) to = u.href; } catch (e) {}
+
+  const $ = id => document.getElementById(id);
+  const title = name ? name + "'s game" : 'The game';
+  document.title = title + ' | Happy Hero Games';
+  $('title').textContent = title;
+  if (name) $('starring').textContent = 'Starring ' + name;
+
+  if (isNaN(at)) {
+    $('clock').textContent = 'ANY MINUTE NOW';
+    $('units').hidden = true;
+    if (to) { $('go').href = to; $('go').classList.add('on'); }
+    return;
+  }
+  $('when').textContent = at.toLocaleString(undefined, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' });
+
+  const pad = n => String(n).padStart(2, '0');
+  function tick() {
+    const left = at - new Date();
+    if (left <= 0) {
+      $('clock').textContent = 'IT IS TIME';
+      $('units').hidden = true;
+      $('when').textContent = name ? 'Lights down. ' + name + ' is the hero.' : 'Lights down.';
+      if (to) {
+        $('go').href = to; $('go').classList.add('on');
+        // a beat to read the screen, then the game itself
+        setTimeout(() => { location.href = to; }, 2600);
+      }
+      return;
+    }
+    const s = Math.floor(left / 1000);
+    const d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60);
+    $('clock').textContent = [pad(d), pad(h), pad(m), pad(s % 60)].join(':');
+    setTimeout(tick, 250);
+  }
+  tick();
+})();
+</script>
+</body>
+</html>

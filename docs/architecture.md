@@ -84,7 +84,7 @@ Three prices, in US dollars everywhere. No currency switching: a card handles th
 | The demo | Free | Two games and a boss, built in the browser in a minute |
 | Starter | $49 | Three games and a boss, the hero plus three people, and the pet |
 | Family and Friends | $99 | Five games and a boss, up to eight people, everyone's own lines written in, checked by a person, ready in 48 hours |
-| Gift Box | $179 | Everything above, plus a printed box and card, tracked delivery, one change after it arrives. What else goes in it is being decided (20 Sep 2026) |
+| Gift Box | $179 | Everything above, plus a printed arcade poster of their title screen, a premiere countdown everyone opens together, and a twenty-second trailer of their own game |
 
 The shape is deliberate. Starter is thin on purpose so the middle one is the obvious buy, and the top one is a physical present rather than a longer list of features, which is easier to want and harder to compare. Nothing else is sold: no subscription, no sibling add-on, no per-item extras. Every option on the page is one more decision standing between someone and their credit card.
 
@@ -92,6 +92,12 @@ Two things follow. The paid game is five games, not ten: more than five is more 
 
 The plan flags that Starter loses about $2.55 an order once advertising is counted, so it earns its place only as the cheap option that makes $99 look sensible. If it ever takes more than a quarter of orders, raise it or stop showing it to cold traffic.
 
-The Gift Box ships from Ireland, $20 to $30 tracked, and the buyer can be charged customs. Until there is a US fulfilment partner it is UK, Ireland and EU only, and the US sees it as coming soon rather than as a broken promise.
+The Gift Box used to mean a parcel posted from Ireland, which cost $20 to $30, took a week and could land the buyer with customs. It is now three things that mostly are not parcels:
+
+- **The poster.** Their title screen, their name in lights, printed by a print-on-demand partner that prints in the buyer's own country. A US order prints in the US and arrives in about three days. Nobody here touches it, and it scales to any volume.
+- **The premiere.** `site/premiere/` is a static page: `/premiere/?n=Ava&at=2026-12-25T09:00&to=/g/otter-lamp-914/`. It counts down in the viewer's own clock, then opens the game. `to` is followed only when it stays on this site, so a premiere link can never be turned into a redirect somewhere else. Costs nothing per order and needs no server.
+- **The trailer.** Twenty seconds of their own game, rendered from the same canvas, for the family chat. No new data, and every share carries the site.
+
+Voice recordings were dropped on 20 September 2026 and are not coming back: audio of a child is the worst thing this business could hold, for a feature nobody asked for.
 
 `docs/business-plan.md` has the model behind these numbers.

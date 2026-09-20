@@ -58,6 +58,18 @@ const seenFull = await run(full, 'finale');
 console.log('full game:', (await full.evaluate(() => __hhg.games().length)) + ' games >', seenFull.join(' > '));
 if (seenFull[seenFull.length - 1] !== 'finale') errors.push('the full game did not reach the ending');
 
+// 2c. the premiere page: it counts down, it opens the game at zero, and it refuses to send
+// anyone off this site
+const prem = await browser.newPage(); watch(prem);
+const soon = new Date(Date.now() + 36e5).toISOString();
+await prem.goto(`${BASE}premiere/?n=Ava&at=${encodeURIComponent(soon)}&to=/g/demo/`); await prem.waitForTimeout(500);
+const clock = await prem.textContent('#clock');
+if (!/^00:00:59:\d\d$/.test(clock)) errors.push('the premiere clock read ' + clock);
+await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=https://example.com/evil`); await prem.waitForTimeout(3200);
+if (!prem.url().includes('/premiere/')) errors.push('the premiere followed an off-site link');
+await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=/g/demo/`); await prem.waitForTimeout(3200);
+if (!prem.url().includes('/g/demo/')) errors.push('the premiere did not open the game at zero');
+
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);
 console.log('default hero:', await p2.evaluate(() => HERO.name));

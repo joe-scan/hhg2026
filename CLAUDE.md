@@ -28,7 +28,7 @@ What we learnt from it, and why the product looks like this:
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is 2 games and 1 boss, built in the browser from the builder and played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
-- **Add-ons:** a printed gift box and gift cards. No sibling add-on and no subscription: three prices, nothing else.
+- **The Gift Box ($179):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland), a premiere (a countdown link everyone opens together, built at `site/premiere/`), and a twenty-second trailer of their own game. Plus gift cards. No sibling add-on and no subscription: three prices, nothing else.
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
 - Prices, model and plan: `docs/business-plan.md`. Questionnaire, config and game format: `docs/product.md`.
@@ -73,6 +73,7 @@ site/.htaccess            https and www redirects, HSTS, caching
 site/g/.htaccess          keeps every game out of search engines
 site/builder.js           the builder: form to config, live preview, Play link
 site/g/demo/index.html    the free demo's game page (reads the config from #g=)
+site/premiere/index.html  the premiere countdown: ?n=NAME&at=WHEN&to=/g/<id>/
 site/css/site.css         shared page styles and design tokens
 site/img/finale.png       the demo's last screen, used on the landing page
 site/arcade/engine.js       engine: family config, sprites, audio, input, drawing, cheers

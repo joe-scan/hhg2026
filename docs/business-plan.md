@@ -6,7 +6,7 @@ The doc keeps British spelling. The site uses US spelling, because the buyers ar
 
 ## 1. In one paragraph
 
-People buy a personalised arcade game for someone special, usually a child, for a birthday or Christmas. That person is the hero and their own family are the opponents, with the dog as referee, and it ends with "HAPPY BIRTHDAY, AOIFE!" in lights. It plays on any phone. A free demo on the landing page builds the hero in pixels in under a minute. There are three prices: Starter at $49, Family and Friends at $99, and the Gift Box at $179. Family and Friends is the main product and the one the page pushes: five games, one boss, up to eight people, their own catchphrases and lines written in, ready in 48 hours and checked by a person.
+People buy a personalised arcade game for someone special, usually a child, for a birthday or Christmas. That person is the hero and their own family are the opponents, with the dog as referee, and it ends with "HAPPY BIRTHDAY, AOIFE!" in lights. It plays on any phone. A free demo on the landing page builds the hero in pixels in under a minute. There are three prices: Starter at $49, Family and Friends at $99, and the Gift Box at $179. Family and Friends is the main product and the one the page pushes: five games, one boss, up to eight people, their own catchphrases and lines written in, ready in 48 hours and checked by a person. The Gift Box adds a printed arcade poster of the hero's own title screen, a premiere at a date and time the buyer picks, and a twenty-second trailer of their game for the family chat.
 
 ## 2. The honest summary
 
@@ -26,12 +26,12 @@ In order of how much we spend to reach them.
 |---|---|---|
 | US parents of 5 to 12-year-olds | A birthday present nobody else will give, that the child plays with the family | Instagram and TikTok ads, Facebook parent groups, class group chats |
 | US grandparents, godparents, aunts and uncles | Something personal that isn't another toy, and easy to give from far away | Gift cards, Facebook, search in November and December |
-| UK, Irish, Canadian and Australian parents | Same reason, same language, no translation work. Second wave, once the US ads are paying back. They are also the only market that can buy the Gift Box. | The same ads, run later, at lower budgets |
+| UK, Irish, Canadian and Australian parents | Same reason, same language, no translation work. Second wave, once the US ads are paying back. | The same ads, run later, at lower budgets |
 | Partners and grown-up children buying for an adult | A Father's Day, Mother's Day or milestone-birthday present with the whole family in it. Untested; the model below counts none of it. | Search and gift guides around those days |
 
 Why the US first and not Ireland. Ireland has about 60,000 births a year against roughly 3.6 million in the US, and Irish parents will not carry a paid-ads business. The old plan's argument was that a small, connected market gives fast word of mouth, and that is still true, which is why the first hand-built games come from Joe's own network in Ireland. But the first families are research, not a launch market. The money goes into US ads from the start.
 
-What the US costs us: a merchant of record for sales tax in about 45 states, US spelling and US date formats, support hours that overlap the east coast, and no physical box until there is a US fulfilment partner (section 11).
+What the US costs us: a merchant of record for sales tax in about 45 states, US spelling and US date formats, and support hours that overlap the east coast. The one physical thing in the range, the printed poster, is made by a print-on-demand partner in the buyer's own country, so it is not a reason to hold the US back (section 11).
 
 ## 4. What makes us different
 
@@ -54,7 +54,7 @@ Three prices, in US dollars, shown in dollars to everyone.
 |---|---|---|
 | Starter | $49 | Three games and one boss. The hero and up to three other people. |
 | Family and Friends | $99 | Five games and one boss. Up to eight people, their own catchphrases and lines written in. Ready in 48 hours. **The main product.** |
-| Gift Box | $179 | Everything in Family and Friends, plus a printed box and card to wrap, tracked delivery, and one change after it arrives. UK, Ireland and the EU only for now. |
+| Gift Box | $179 | Everything in Family and Friends, plus three things: a printed arcade poster of the hero's own title screen, a premiere at a date and time the buyer picks, and a twenty-second trailer of their game. Sold everywhere from day one. |
 | Gift cards | $49, $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is two games and one boss, built in the browser. It is not a price tier and it is never sold; it is the advert.
