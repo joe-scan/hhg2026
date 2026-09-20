@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+
+# site/ is generated: run `node tools/build.mjs`
+site/

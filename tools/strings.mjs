@@ -46,7 +46,7 @@ export function literals(src) {
 }
 
 export function stringsIn(file) {
-  return literals(fs.readFileSync(path.join(ROOT, 'site', file), 'utf8')).map(l => l.text);
+  return literals(fs.readFileSync(path.join(ROOT, 'site-src', 'static', file), 'utf8')).map(l => l.text);
 }
 
 if (process.argv[1] && process.argv[1].endsWith('strings.mjs')) {

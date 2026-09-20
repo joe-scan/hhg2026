@@ -6,7 +6,7 @@ Read this first, every session. It says what we're building, the rules that don'
 
 HappyHeroGames puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers a few short questions and gets back a private web game where that person is the hero and their own family and friends are the opponents: Dad in the back seat, Granny in the quiz, the dog as referee. It ends with everyone cheering and "HAPPY BIRTHDAY, AVA!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
-- **Market:** sold worldwide in US dollars from day one. The US is the biggest slice of the spend, then the UK, Canada and Australia. Ireland is where Joe is, not a target market. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
+- **Market:** sold worldwide in US dollars from day one. The US is the biggest slice of the spend, then the UK, Canada and Australia. Ireland is where Joe is, not a target market. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site-src/static/arcade/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
 - **Occasions:** birthdays all year, Christmas, Father's Day, Mother's Day, "just because".
@@ -15,7 +15,7 @@ HappyHeroGames puts someone special in their own arcade game. Usually that's a c
 
 ## Where it came from
 
-The prototype is **Fionn vs Sean**, a two-player arcade game Joe made for his sons, at `~/Documents/fs` (live at joescanlon.com/fs, repo github.com/joe-scan/fs). Its engine was copied into `site/arcade/` on 19 Sep 2026. **Never edit `~/Documents/fs` from this project.** It's the boys' game; changes there are a separate job.
+The prototype is **Fionn vs Sean**, a two-player arcade game Joe made for his sons, at `~/Documents/fs` (live at joescanlon.com/fs, repo github.com/joe-scan/fs). Its engine was copied into `site-src/static/arcade/` on 19 Sep 2026. **Never edit `~/Documents/fs` from this project.** It's the boys' game; changes there are a separate job.
 
 What we learnt from it, and why the product looks like this:
 - Families respond to their own details (catchphrases, the dog, who's in charge of lunch), not to the game mechanics.
@@ -87,22 +87,24 @@ Written by hand
   docs/viral.md           fifty ways this could spread, ranked by effort
   docs/todo.md            Joe's list: everything outside the code, and what is done
   docs/research/          raw captures behind the research, kept so claims can be checked
-  site-src/pages/*.html   the source pages. Never edit site/*.html: it is generated
-  site-src/words/*.json   one file per language: English text -> translated text
-  site/arcade/engine.js   engine: family config, sprites, audio, input, drawing, cheers
-  site/arcade/flow.js     the hero's run: title, games, party mode, boss, finale, share
-  site/arcade/games/*.js  one file per game, plus bosses.js and the free trick-or-treat.js
-  site/builder.js         the builder: form to config, live preview, Play link
-  site/css/site.css       shared page styles, the two looks, design tokens
-  site/img/               logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
-  site/.htaccess          https and www redirects, HSTS, caching
-  site/g/.htaccess        keeps every game out of search engines
+  site-src/pages/*.html     the source pages, one per page
+  site-src/words/*.json     one file per language: English text -> translated text
+  site-src/static/          everything copied into site/ untouched:
+    arcade/engine.js        engine: family config, sprites, audio, input, drawing, cheers
+    arcade/flow.js          the hero's run: title, games, party mode, boss, finale, share
+    arcade/games/*.js       one file per game, plus bosses.js and the free trick-or-treat.js
+    builder.js              the builder: form to config, live preview, Play link
+    css/site.css            shared page styles, the two looks, design tokens
+    img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
+    .htaccess               https and www redirects, HSTS, caching
+    g/.htaccess             keeps every game out of search engines
   tests/smoke.mjs         the headless test. What it covers is under How to work here
 
-Generated, never edited by hand
-  site/index.html, site/name/, site/halloween/, site/privacy/, site/terms/, site/g/demo/
-  site/<lang>/**          every page and a translated copy of the game code, per language
-  docs/translations/*.md  one file per language for a native speaker to correct
+Generated, and not in git at all (`site/` is in .gitignore)
+  site/                     the whole deployable site: the static files copied in, every page
+                            rendered, and a translated copy of the game code per language.
+                            Run `node tools/build.mjs` after a fresh clone, or just `./deploy.sh`
+  docs/translations/*.md    one file per language for a native speaker to correct (in git)
 
 Tools, none of them deployed
   tools/build.mjs         renders every page and every language into site/
@@ -119,8 +121,8 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 
 ## How to work here
 
-- **Edit pages in `site-src/pages/`, then run `node tools/build.mjs`.** Everything in `site/*.html`, `site/es/` and the translated copies of the game code is generated. Editing `site/index.html` by hand means losing it on the next build. `deploy.sh` builds before it uploads.
-- **Run it:** `cd site && python3 -m http.server 8766`, then open http://localhost:8766. Or open `site/index.html` directly.
+- **Everything you edit lives in `site-src/`.** Pages in `site-src/pages/`, words in `site-src/words/`, the game code and assets in `site-src/static/`. `site/` is generated in full by `node tools/build.mjs` and is not in git: anything typed into it is gone on the next build. `deploy.sh` builds before it uploads.
+- **Run it:** `node tools/build.mjs`, then `cd site && python3 -m http.server 8766` and open http://localhost:8766.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. It covers the builder, every pet kind, the demo stopping at the locked card and never showing the boss or the ending, a full five-game assembly played to the ending, a four-challenger party to the results board, both free pages, all five translated languages, the language picker in both directions, and the landing page at phone width. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
 - **Don't deploy** without Joe saying so. When he does, run `./deploy.sh`. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
@@ -142,7 +144,7 @@ None of them are deployed. `deploy.sh` only copies `site/`.
 - **Domain:** happyherogames.com, registered at Namecheap. DNS is Namecheap's hosting nameservers (dns1/dns2.namecheaphosting.com), A record 162.0.217.226.
 - **Hosting:** an addon domain on Joe's Namecheap shared hosting (cPanel user `joescoaz`, main domain joescanlon.com, server premium269-4.web-hosting.com). Web root `~/happyherogames.com`. SSH with `ssh retroelf-host` (alias in `~/.ssh/config`, port 21098, key `joescanlon_deploy`).
 - **Deploy:** `./deploy.sh` rsyncs `site/` to the web root and prints the status of the main files. It deletes old site files but never `.well-known` or `cgi-bin`.
-- **HTTPS:** a free Namecheap certificate (SSL.com) covering happyherogames.com and www, valid to 5 Apr 2027, renewed by Namecheap as long as DNS points at the server. If a renewal lapses, switch to acme.sh on the server as was done for retroelf.com and violinfree.com. `site/.htaccess` sends http and www to https://happyherogames.com and sets HSTS (one year, no includeSubDomains).
+- **HTTPS:** a free Namecheap certificate (SSL.com) covering happyherogames.com and www, valid to 5 Apr 2027, renewed by Namecheap as long as DNS points at the server. If a renewal lapses, switch to acme.sh on the server as was done for retroelf.com and violinfree.com. `site-src/static/.htaccess` sends http and www to https://happyherogames.com and sets HSTS (one year, no includeSubDomains).
 - **Email:** hello@happyherogames.com is a cPanel forwarder to jscan1@gmail.com. MX is Namecheap's (jellyfish.systems). There's no mailbox, so replies go from Gmail unless Joe adds hello@ as a "Send mail as" address.
 - **Repo:** github.com/joe-scan/hhg2026, private.
 

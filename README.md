@@ -8,11 +8,12 @@ The first ten games are open, taken by email and built by hand. No automatic pay
 
 ## Languages
 
-English is the source and lives in `site-src/pages/`. Spanish, German, French, Italian and Irish are at `/es/`, `/de/`, `/fr/`, `/it/` and `/ga/`, pages and game alike. Edit the source pages, run `node tools/build.mjs`, and every language is regenerated. Never edit `site/*.html` by hand.
+Everything you edit is in `site-src/`: the pages, one file of words per language, and the game code and assets under `site-src/static/`. `site/` is built from it and is not in git. Spanish, German, French, Italian and Irish are at `/es/`, `/de/`, `/fr/`, `/it/` and `/ga/`, pages and game alike. Edit the source pages, run `node tools/build.mjs`, and every language is regenerated. Never edit `site/*.html` by hand.
 
 ## Try it
 
 ```sh
+node tools/build.mjs
 cd site && python3 -m http.server 8766
 ```
 

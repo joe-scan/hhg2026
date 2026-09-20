@@ -27,7 +27,7 @@ Consent: a parent or guardian ticks that they may share these details about the 
 
 ## 2. The config
 
-The builder and the game share one config object. In the demo it travels in the link as base64url JSON after `#g=`, so nothing reaches a server. `sanitise()` in `site/arcade/engine.js` is the gatekeeper: it uppercases, strips accents and symbols, trims lengths, and only accepts colours and roles from fixed lists.
+The builder and the game share one config object. In the demo it travels in the link as base64url JSON after `#g=`, so nothing reaches a server. `sanitise()` in `site-src/static/arcade/engine.js` is the gatekeeper: it uppercases, strips accents and symbols, trims lengths, and only accepts colours and roles from fixed lists.
 
 ```json
 {
@@ -46,7 +46,7 @@ The builder and the game share one config object. In the demo it travels in the 
 ```
 
 - `hair`: short, straight, curly, long, ponytail. `occasion`: birthday, christmas, fathers, mothers, star.
-- `packs`: optional question and joke packs for one country, `ie` or `uk`. Empty by default, because the default game has to work for a family in Ohio. The quiz reads them in `site/arcade/games/table-quiz.js`.
+- `packs`: optional question and joke packs for one country, `ie` or `uk`. Empty by default, because the default game has to work for a family in Ohio. The quiz reads them in `site-src/static/arcade/games/table-quiz.js`.
 - `role`: dad, mum, granny, grandad, auntie, uncle, brother, sister, friend, bestfriend, cousin, teacher, coach. The key never changes, but the label shown does: Mom, Grandma, Grandpa and Aunt in North America, Mum, Granny, Grandad and Auntie elsewhere (`DIALECT` and `roleLabel()` in `engine.js`). Each role has a shirt colour, a losing line, a favourite food and a set of taunts (`ROLES` in `engine.js`, `TAUNT` in `flow.js`).
 - `pet` is optional, and `pet.kind` is dog, cat, rabbit, hamster or fish (`PETKINDS` and `PETART` in `engine.js`). Without a pet, or with a fish, a spare grown-up referees and nothing blocks the balloons (`petRuns()`).
 - The paid game will extend this with interests, arguments, custom lines and a game list. Keep the demo able to read older configs.
@@ -66,7 +66,7 @@ The builder and the game share one config object. In the demo it travels in the 
 
 **Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Back Seat Battle (ported), Neon Racers, Garden Five-a-Side, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz (ported as The Family Quiz), Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Five are ported and live: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and The Family Quiz. Each of the rest needs its Fionn and Sean text swapped for the config (as the five built ones were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano or instrument game that isn't tied to the concertina.
 
-**Porting a game from Fionn vs Sean:** copy it into `site/arcade/games/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site-src/pages/g/demo/index.html` (never the generated copy in `site/`), run `node tools/build.mjs` and run the smoke test.
+**Porting a game from Fionn vs Sean:** copy it into `site-src/static/arcade/games/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site-src/pages/g/demo/index.html` (never the generated copy in `site/`), run `node tools/build.mjs` and run the smoke test.
 
 ## 4. Making a paid order (the plan)
 
@@ -93,7 +93,7 @@ Buy happyherogames.com variants only to stop someone else using them, and redire
 
 `https://happyherogames.com/g/<id>/`, where `<id>` is random, never sequential. Sequential ids mean anyone can type `/g/1235` and read another family's names, catchphrase and dog, which breaks the privacy rules in `CLAUDE.md`.
 
-Use two words from a 1,500-word list plus two digits: `otter-lamp-914`. That is about 2^28 combinations, which is enough for an unlisted link and still readable down the phone. Three words takes it past 2^38 if guessing ever looks like a risk. Games are unlisted, not secret: the whole `/g/` folder is `noindex, nofollow` (`site/g/.htaccess`) with directory listing off.
+Use two words from a 1,500-word list plus two digits: `otter-lamp-914`. That is about 2^28 combinations, which is enough for an unlisted link and still readable down the phone. Three words takes it past 2^38 if guessing ever looks like a risk. Games are unlisted, not secret: the whole `/g/` folder is `noindex, nofollow` (`site-src/static/g/.htaccess`) with directory listing off.
 
 The free demo is a game like any other, at `/g/demo/`, with its config in the link fragment (`#g=...`) so nothing reaches the server.
 

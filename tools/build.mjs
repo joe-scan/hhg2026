@@ -13,6 +13,7 @@ import { JS_FILES, literals } from './strings.mjs';
 
 const ROOT = path.join(import.meta.dirname, '..');
 const SRC = path.join(ROOT, 'site-src', 'pages');
+const STATIC = path.join(ROOT, 'site-src', 'static');
 const SITE = path.join(ROOT, 'site');
 const WORDS = path.join(ROOT, 'site-src', 'words');
 
@@ -148,7 +149,7 @@ function build(lang) {
     write(out, html);
   }
   if (lang !== 'en') for (const f of JS_FILES) {
-    write(path.join(SITE, lang, f), translateJs(read(path.join(SITE, f)), gameDict, missingGame));
+    write(path.join(SITE, lang, f), translateJs(read(path.join(STATIC, f)), gameDict, missingGame));
   }
   if (missingGame.size) {
     console.log(`${lang}: ${missingGame.size} game strings with no translation`);
@@ -160,5 +161,14 @@ function build(lang) {
   } else console.log(`${lang}: complete`);
 }
 
+// Everything in site/ is generated, so the hand-written files (the game code, the builder, the
+// styles, the pictures and the .htaccess rules) are copied in first, and the language builds
+// write their translated copies on top.
+function copyStatic() {
+  fs.cpSync(STATIC, SITE, { recursive: true });
+  console.log('static: copied site-src/static into site/');
+}
+
 const only = process.argv[2];
+copyStatic();
 for (const lang of ['en', ...LANGS]) if (!only || only === lang) build(lang);
