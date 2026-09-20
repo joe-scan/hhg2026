@@ -67,8 +67,10 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 ## Design direction (proposed by Claude, 19 Sep 2026; Joe to confirm)
 
 - The pixel game screen is the only loud thing. The page around it is quiet: warm cream ground (`#fdf5ec`, dark `#0f0c18`), ink text, thin rules, square corners.
+- **The game's own look is Poster Bold**, picked on 20 Sep 2026 from ten rendered on the real game: sky blue, pitch green, black ink, one red and one yellow, flat colour and hard edges, because that reads on a phone at arm's length. `COL` in `engine.js` is the whole palette and `bgSynth()` is the sky and the grass. `CHROME=... node tools/game-skins.mjs` re-renders the ten if the choice is ever reopened; a look is a font, a few colours and one background function.
+- **Each game draws its own scenery, and that is what people actually look at.** Ten palettes changed nothing below the top bar until the games themselves were redrawn. A new game needs a place, not just a mechanic: a crowd, a fence, a window, something with depth.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
-- Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas, never in page copy.
+- Type: **Bowlby One** for headlines, the wordmark and the big lettering inside the game; **Atkinson Hyperlegible** for everything else on the page; **Press Start 2P** for the game's own small text, never in page copy. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came out as one wall of capitals.
 - One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode and in the game.
 - **Two looks, decided 20 Sep 2026:** Sunset, warm cream and burnt orange, is the site. Dark is for a dark room or a phone set that way. One small button in the header switches them and the choice is kept in the visitor's own browser; with no choice made the device decides. They are colour only: same type, same layout, same pixel screen. No third option, and no row of choices eating the header. The eight other skins tried are in `tools/skins.js`.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
@@ -124,7 +126,8 @@ Tools, none of them deployed
   tools/review-files.mjs  writes docs/translations/<lang>.md for a human checker
   tools/review-load.mjs   reads a checked file back into the word files
   tools/prune-words.mjs   drops translations for English text that no longer exists
-  tools/skins.js          the ten skins tried on 20 Sep 2026; two of them shipped
+  tools/skins.js          the ten page skins tried on 20 Sep 2026; two of them shipped
+  tools/game-skins.mjs    the ten game looks tried on 20 Sep 2026; Poster Bold shipped
   tools/preview-skins.mjs re-renders those skins as pictures, if the choice is revisited
   tools/assets/           the poster template and the stills it uses
   tools/assets/render.mjs re-renders finale.png, og.png, trailer.gif and poster.png by playing
