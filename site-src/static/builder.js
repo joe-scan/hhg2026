@@ -25,6 +25,11 @@
       el.appendChild(b);
     });
   }
+  function menu(id, get, set) {
+    const el = $(id);
+    el.value = get();
+    el.addEventListener('change', () => { set(el.value); changed(); });
+  }
   function choice(name, get, set) {
     document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
       r.checked = r.value === get();
@@ -39,7 +44,7 @@
   swatches($('hair-col'), HAIRCOLS, HAIR_LABELS, () => cfg.hero.hairCol, v => { cfg.hero.hairCol = v; });
   swatches($('skin'), SKINS, SKIN_LABELS, () => cfg.hero.skin, v => { cfg.hero.skin = v; });
   swatches($('kit'), KITCOLS, KIT_LABELS, () => cfg.hero.kit, v => { cfg.hero.kit = v; });
-  choice('occasion', () => cfg.occasion, v => { cfg.occasion = v; });
+  menu('occasion', () => cfg.occasion, v => { cfg.occasion = v; });
 
   // up to three family members: a role, a name, a hair color
   // words that change outside North America: Mum for Mom, Granny for Grandma (see DIALECT in engine.js)

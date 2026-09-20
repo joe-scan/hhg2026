@@ -100,14 +100,14 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
         <legend>THE HERO</legend>
         <div class="two">
           <div class="field"><label for="hero-name">Their name</label><input id="hero-name" maxlength="10" autocomplete="off" spellcheck="false"></div>
-          <div class="field"><span id="occ-l">It's for</span>
-            <div class="opts" role="radiogroup" aria-labelledby="occ-l">
-              <label><input type="radio" name="occasion" value="birthday"><span>A birthday</span></label>
-              <label><input type="radio" name="occasion" value="christmas"><span>Christmas</span></label>
-              <label><input type="radio" name="occasion" value="fathers"><span>Father's Day</span></label>
-              <label><input type="radio" name="occasion" value="mothers"><span>Mother's Day</span></label>
-              <label><input type="radio" name="occasion" value="star"><span>Just because</span></label>
-            </div></div>
+          <div class="field"><label for="occasion">It's for</label>
+            <select id="occasion" name="occasion">
+              <option value="birthday">A birthday</option>
+              <option value="christmas">Christmas</option>
+              <option value="fathers">Father's Day</option>
+              <option value="mothers">Mother's Day</option>
+              <option value="star">Just because</option>
+            </select></div>
         </div>
         <div class="field"><span id="hair-l">Hair</span>
           <div class="opts" role="radiogroup" aria-labelledby="hair-l">
