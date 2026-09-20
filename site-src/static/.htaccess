@@ -19,8 +19,10 @@ ErrorDocument 404 /404.html
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  # Pages and scripts are checked on every visit, so a deploy shows up straight away.
-  <FilesMatch "\.(html|js|css)$">
+  # Pages, scripts and pictures are checked on every visit, so a deploy shows up straight away.
+  # They still come back as a 304 when nothing changed, so this costs a request, not a download.
+  # Without it the mark changed on 20 Sep 2026 and browsers kept showing the old one for a week.
+  <FilesMatch "\.(html|js|css|svg|png|gif|webp|ico)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
