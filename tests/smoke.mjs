@@ -159,6 +159,18 @@ for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
 }
 console.log('language offer: shown in Spanish, quiet in English, no redirects');
 
+// the 404: one file, served for a missing page at any depth, with its links still working
+if (BASE.startsWith('https://')) {
+  for (const miss of ['nope/', 'free/nope/', 'g/nope/deeper/']) {
+    const r = await fetch(BASE + miss);
+    const body = await r.text();
+    if (r.status !== 404) errors.push('/' + miss + ' answered ' + r.status + ', not 404');
+    if (!body.includes("That page isn't here")) errors.push('/' + miss + ' did not serve the 404 page');
+    if (!body.includes('href="/css/site.css"')) errors.push('the 404 page used a relative stylesheet, which breaks in a subfolder');
+  }
+  console.log('404: served at every depth, with absolute links');
+}
+
 // the old Halloween address was shared before the games moved under /free/
 if (BASE.startsWith('https://')) {
   const moved = await fetch(BASE + 'halloween/', { redirect: 'manual' });

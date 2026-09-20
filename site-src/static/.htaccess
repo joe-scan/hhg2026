@@ -11,6 +11,9 @@ RewriteRule ^halloween/?$ /free/halloween/ [L,R=301]
 RewriteRule ^(es|de|fr|it|ga)/themes/(.*)$ /$1/free/$2 [L,R=301]
 RewriteRule ^themes/(.*)$ /free/$1 [L,R=301]
 
+# A missing page anywhere, at any depth, gets the same file. It links back with absolute paths.
+ErrorDocument 404 /404.html
+
 <IfModule mod_headers.c>
   # Browsers remember to use https for a year. No includeSubDomains, so a subdomain can still be added without a cert.
   Header always set Strict-Transport-Security "max-age=31536000"

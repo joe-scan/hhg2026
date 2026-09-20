@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found | HappyHeroGames</title>
+<meta name="description" content="That page isn't here. Play a free game instead, or put a name in lights.">
+<meta name="robots" content="noindex">
+<!-- Apache serves this file for a missing page anywhere on the site, at any depth, so every
+     link and every script below is absolute. A relative path would break on /free/anything/. -->
+<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00a3ff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bowlby+One&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+<style>
+.lost{max-width:820px;margin-inline:auto;padding-block:26px 50px}
+.lost h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,44px);line-height:1.05;margin:18px 0 10px}
+.lost .sub{color:var(--muted);margin:0 0 20px;font-size:17px;max-width:54ch}
+.lost .go-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;max-width:420px}
+.lost .go-list a{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!--header-->
+
+<main class="lost">
+  <div class="screen"><canvas id="game" width="480" height="270" aria-label="A pixel hero looking around an empty arcade screen with 404 in lights"></canvas></div>
+
+  <h1>That page isn't here</h1>
+  <p class="sub">The link might be old, or we might have moved it. Nothing is broken and nobody is in trouble. Here's where everything lives:</p>
+
+  <ul class="go-list">
+    <li><a href="/">Build a game, free</a> &mdash; your hero, in pixels, in about a minute.</li>
+    <li><a href="/free/">The free games</a> &mdash; Christmas, Halloween, and a name in lights.</li>
+    <li><a href="/#prices">What it costs</a> &mdash; two prices, one page.</li>
+    <li><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> &mdash; if you were sent a game link that doesn't work, mail us and we'll find it.</li>
+  </ul>
+</main>
+
+<!--footer-->
+</div>
+
+<script src="/arcade/engine.js"></script>
+<script src="/arcade/scenes.js"></script>
+<script>
+// The hero wanders the empty screen looking for the page. Tap and he jumps, because a dead end
+// is the one place on a website where a small joke costs nothing.
+(() => {
+  const cv = document.getElementById('game');
+  let t = 0, x = 150, dir = 1, jump = 0, vy = 0;
+  applyConfig(Object.assign({}, DEMO, { hero: Object.assign({}, DEMO.hero, { name: '404' }), occasion: 'star' }));
+
+  const hop = () => { if (!jump) { jump = 1; vy = -7.4; sfx.kick(); } };
+  cv.addEventListener('click', hop);
+  window.addEventListener('keydown', e => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); hop(); } });
+
+  const draw = () => {
+    t++;
+    bgSynth(t);
+    // the sign, in lights, with the plate the title screen uses
+    namePlate('404', W / 2, 30, 56);
+    nameLogo('404', W / 2, 26, 56);
+    const band = 'PAGE NOT FOUND', bw = band.length * 12;
+    rect(W / 2 - bw / 2 - 10, 98, bw + 20, 26, BAND());
+    rect(W / 2 - bw / 2 - 10, 98, bw + 20, 3, COL.gold);
+    txt(band, W / 2, 104, 12, COL.gold, 'center');
+
+    if (jump) { vy += .5; jump += vy; if (jump >= 0) { jump = 0; vy = 0; } }
+    else { x += dir * .7; if (x > W - 90 || x < 90) dir = -dir; }
+    const y = 232 + (jump || 0);
+    shadow(x, 234, 13);
+    drawSpec(HERO, x, y, 4, dir < 0, Math.floor(t / 7));
+    if (PET) pet(x - dir * 54, 250, 2, dir > 0, Math.floor(t / 6));
+    // a question mark over his head, on and off
+    if (t % 120 < 70) txt('?', x + 18, y - 62, 16, COL.ink, 'center');
+    txt(touchMode ? 'TAP HIM' : 'PRESS SPACE', W / 2, 250, 8, COL.ink, 'center');
+    requestAnimationFrame(draw);
+  };
+  draw();
+})();
+</script>
+</body>
+</html>

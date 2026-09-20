@@ -21,10 +21,12 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'name/index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html'];
+export const PAGES = ['index.html', 'name/index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', '404.html'];
 // Pages that stay in English for now. The terms are a legal document and a bad translation of one
 // is worse than none; every language links to the English copy until a lawyer has seen it.
-export const ENGLISH_ONLY = ['terms/index.html'];
+// Apache serves one file for a missing page anywhere on the site, so the 404 is English only,
+// like the terms. Both are left out of the language picker and the sitemap.
+export const ENGLISH_ONLY = ['terms/index.html', '404.html'];
 // Only languages that are actually translated. Adding one: write site-src/words/<lang>.json and
 // game-<lang>.json (start from game-en.json), add it here, run the build. A half-translated
 // language must never ship: a Spanish page leading to an English game is worse than no page.
@@ -170,7 +172,7 @@ function searchFiles() {
     '<urlset xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml">'.replace('xmlns="http://www.w3.org/1999/xhtml"', 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')];
   // Two pages stay out of it: the demo lives under /g/, which robots.txt disallows, and the
   // terms are marked noindex until a solicitor has read them.
-  const OUT = ['g/demo/index.html', 'terms/index.html'];
+  const OUT = ['g/demo/index.html', 'terms/index.html', '404.html'];
   for (const page of PAGES.filter(p2 => !OUT.includes(p2))) {
     const langs = ENGLISH_ONLY.includes(page) ? ['en'] : ['en', ...LANGS];
     for (const l of langs) {
