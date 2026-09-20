@@ -37,11 +37,7 @@
 </head>
 <body>
 <div class="wrap">
-<header class="top">
-  <a class="mark" translate="no" href="../index.html"><img class="logomark" src="../img/logo.svg" alt="" width="40" height="20">Happy<span>Hero</span>Games</a>
-  <nav aria-label="Page sections"><a href="../index.html#make">Build a game</a><a href="../name/">Name in lights</a><a href="../index.html#prices">Price</a></nav>
-  <div class="look"><!--langs--></div>
-</header>
+<!--header-->
 
 <main class="hw">
   <h1>Trick or Treat Dash</h1>
@@ -74,10 +70,11 @@
   </div>
 </main>
 
-<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Privacy</a></span></footer>
+<!--footer-->
 </div>
 
 <script src="../arcade/engine.js"></script>
+<script src="../arcade/scenes.js"></script>
 <script src="../arcade/games/trick-or-treat.js"></script>
 <script>
 // The page runs the game itself: no title screen, no rounds, no boss. Start, sixty seconds,
@@ -88,7 +85,7 @@
   let game = null, t = 0, ending = 0;
 
   const hero = () => applyConfig(Object.assign({}, DEMO, {
-    hero: Object.assign({}, DEMO.hero, { name: input.value || 'YOU' }), occasion: 'star'
+    hero: Object.assign({}, DEMO.hero, { name: input.value || input.placeholder }), occasion: 'star'
   }));
 
   const waiting = () => {

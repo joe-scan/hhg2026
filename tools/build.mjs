@@ -14,6 +14,7 @@ import { JS_FILES, literals } from './strings.mjs';
 const ROOT = path.join(import.meta.dirname, '..');
 const SRC = path.join(ROOT, 'site-src', 'pages');
 const STATIC = path.join(ROOT, 'site-src', 'static');
+const PARTS = path.join(ROOT, 'site-src', 'partials');
 const SITE = path.join(ROOT, 'site');
 const WORDS = path.join(ROOT, 'site-src', 'words');
 
@@ -128,23 +129,35 @@ function picker(pagePath, lang) {
   const href = siblings(pagePath, lang);
   const others = ['en', ...LANGS].filter(l => l !== lang)
     .map(l => `<a href="${href(l)}" hreflang="${l}" lang="${l}">${LANGNAMES[l]}</a>`).join('');
-  return `<details class="langs"><summary title="Language" lang="${lang}">${LANGNAMES[lang]}</summary><div>${others}</div></details>`;
+  const globe = '<svg class="globe" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">'
+    + '<circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
+    + '<ellipse cx="8" cy="8" rx="3" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
+    + '<path d="M1.8 6h12.4M1.8 10h12.4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
+  return `<details class="langs"><summary title="Language" lang="${lang}">${globe}<span>${LANGNAMES[lang]}</span></summary><div>${others}</div></details>`;
 }
 
 function build(lang) {
   const dict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, lang + '.json')));
   const gameDict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, `game-${lang}.json`)));
   const missing = new Set(), missingGame = new Set();
+  // one header and one footer for every page, with {{root}} pointing back at this language's
+  // front page, so every link is the same everywhere and nothing runs together
+  const header = read(path.join(PARTS, 'header.html'));
+  const footer = read(path.join(PARTS, 'footer.html'));
   for (const page of PAGES) {
     if (lang !== 'en' && ENGLISH_ONLY.includes(page)) continue;
     let html = read(path.join(SRC, page));
+    // absolute, so the wordmark always lands on the clean front page and reroot() leaves them be
+    const root = lang === 'en' ? '/' : `/${lang}/`;
+    html = html.replace('<!--header-->', header.replace(/\{\{root\}\}/g, root))
+               .replace('<!--footer-->', footer.replace(/\{\{root\}\}/g, root));
     if (lang !== 'en') {
       html = translate(html, dict, missing);
       html = reroot(html, '../');
       html = html.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
     }
     html = html.replace('<!--hreflang-->', hreflangs(page, lang));
-    html = html.replace('<!--langs-->', picker(page, lang));
+    html = html.replaceAll('<!--langs-->', picker(page, lang));
     const out = lang === 'en' ? path.join(SITE, page) : path.join(SITE, lang, page);
     write(out, html);
   }

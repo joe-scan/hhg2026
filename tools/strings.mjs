@@ -4,7 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 const ROOT = path.join(import.meta.dirname, '..');
-export const JS_FILES = ['arcade/engine.js', 'arcade/flow.js', 'arcade/games/bosses.js',
+export const JS_FILES = ['arcade/engine.js', 'arcade/scenes.js', 'arcade/flow.js', 'arcade/games/bosses.js',
   'arcade/games/back-seat-battle.js', 'arcade/games/dinner-dash.js', 'arcade/games/paddle-battle.js',
   'arcade/games/table-quiz.js', 'arcade/games/water-balloon-fight.js',
   'arcade/games/trick-or-treat.js', 'builder.js'];

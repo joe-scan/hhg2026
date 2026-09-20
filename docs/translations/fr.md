@@ -216,6 +216,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Halloween game | Jeu d'Halloween |
 | Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Dernière modification le 20 septembre 2026. Les dix premiers jeux se commandent par e-mail et se fabriquent à la main, donc ceci couvre à la fois la démo gratuite, qui ne nous envoie rien, et ce qu'implique une commande. |
 | For an order we ask for what the game needs and nothing else: | Pour une commande, nous demandons ce dont le jeu a besoin, et rien d'autre : |
+| Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Chaque jeu est identique : cinq jeux et un boss, tous ceux qu'ils aiment dedans, jusqu'à huit personnes, prêt en 48 heures. Et si vous voulez : une affiche de leur jeu, imprimée et envoyée par la poste, à accrocher au mur. |
+| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | L'affiche imprimée : l'écran-titre avec AVA en lettres lumineuses, JOYEUX ANNIVERSAIRE, AVA en dessous, trois de ses jeux en bas, et au générique papa, maman, Jack et Biscuit le chien |
+| Order one | Commander |
+| Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money. | Dites-nous pour qui c'est et pour quand. On vous renvoie un lien de paiement et une date, ou on vous dit qu'on ne peut pas tenir la date au lieu de prendre votre argent. |
 
 ## What the game says: names, instructions and scores
 

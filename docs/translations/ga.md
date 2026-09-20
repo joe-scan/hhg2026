@@ -216,6 +216,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Halloween game | Cluiche Oíche Shamhna |
 | Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Athraithe go deireanach ar an 20 Meán Fómhair 2026. Ordaítear an chéad deich gcluiche trí ríomhphost agus tógtar de láimh iad, mar sin clúdaíonn sé seo an taispeántas saor in aisce, nach seolann aon rud chugainn, agus a bhfuil i gceist le hordú. |
 | For an order we ask for what the game needs and nothing else: | Le haghaidh ordú iarraimid an rud atá ag teastáil ón gcluiche agus faic eile: |
+| Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Tá gach cluiche mar a chéile: cúig chluiche agus boss, gach duine a bhfuil grá acu dóibh istigh ann, suas le hochtar, réidh laistigh de 48 uair an chloig. Agus más mian leat: póstaer dá gcluiche, clóite agus seolta sa phost, le crochadh ar an mballa. |
+| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | An póstaer clóite: an scáileán teidil le AVA i soilse, LÁ BREITHE SONA, AVA faoi, trí cinn dá cuid cluichí feadh an bhun, agus an fhoireann luaite mar Dhaid, Mam, Jack agus Biscuit an madra |
+| Order one | Cuir ordú isteach |
+| Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money. | Inis dúinn cé dó é agus cathain atá sé uait. Seolfaimid nasc íocaíochta agus dáta ar ais chugat, nó déarfaimid leat nach féidir linn é a dhéanamh in ionad do chuid airgid a thógáil. |
 
 ## What the game says: names, instructions and scores
 

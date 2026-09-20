@@ -88,10 +88,17 @@ Written by hand
   docs/todo.md            Joe's list: everything outside the code, and what is done
   docs/research/          raw captures behind the research, kept so claims can be checked
   site-src/pages/*.html     the source pages, one per page
+  site-src/partials/        header.html and footer.html, dropped into every page by the build
+                            at the <!--header--> and <!--footer--> marks. {{root}} becomes / or
+                            /es/ and so on, so every link is absolute and the wordmark always
+                            lands on the clean front page
   site-src/words/*.json     one file per language: English text -> translated text
   site-src/static/          everything copied into site/ untouched:
     arcade/engine.js        engine: family config, sprites, audio, input, drawing, cheers
     arcade/flow.js          the hero's run: title, games, party mode, boss, finale, share
+    arcade/scenes.js        the occasion decorations: cake, balloons, tree, presents, flowers,
+                            trophy, medal, snow and confetti. scene(occasion, t, front) dresses
+                            a whole screen; the finale and the name page both use it
     arcade/games/*.js       one file per game, plus bosses.js and the free trick-or-treat.js
     builder.js              the builder: form to config, live preview, Play link
     css/site.css            shared page styles, the two looks, design tokens
@@ -99,6 +106,7 @@ Written by hand
     .htaccess               https and www redirects, HSTS, caching
     g/.htaccess             keeps every game out of search engines
   tests/smoke.mjs         the headless test. What it covers is under How to work here
+  tests/look.mjs          screenshots of the pages that break quietly: nothing asserted, look
 
 Generated, and not in git at all (`site/` is in .gitignore)
   site/                     the whole deployable site: the static files copied in, every page
@@ -115,6 +123,10 @@ Tools, none of them deployed
   tools/skins.js          the ten skins tried on 20 Sep 2026; two of them shipped
   tools/preview-skins.mjs re-renders those skins as pictures, if the choice is revisited
   tools/assets/           the poster template and the stills it uses
+  tools/assets/render.mjs re-renders finale.png, og.png, trailer.gif and poster.png by playing
+                          a real game headless. Run it after any change to the game's look, or
+                          the marketing starts describing a product that no longer exists
+  tools/links.mjs         every local link on every built page, checked against the files
 ```
 
 Plain `<script>` files share one global scope (no build step, works from `file://`). The engine's `THE FAMILY` section turns the config into sprites: `kidSpec` for the hero and siblings (five hair styles), `adultSpec` for grown-ups by role, `pet()` for the pet (`petRuns()` is false for a fish, which stays in its bowl). Games call `boy(i)` for the two players and `person(spec)` for cameo grown-ups; `helper()` returns a spare grown-up, or null when the only other person is the opponent. `docs/product.md` has the config format.
@@ -137,7 +149,8 @@ None of them are deployed. `deploy.sh` only copies `site/`.
 - `node tools/review-files.mjs` writes `docs/translations/<lang>.md` for a native speaker. **Run it whenever copy changes**, or the file you send someone is stale. `node tools/review-load.mjs docs/translations/ga.md` reads their corrections back.
 - `node tools/prune-words.mjs` drops translations of English text that no longer exists.
 - `tools/skins.js` holds the ten looks tried on 20 Sep 2026. `CHROME=/path/to/chrome node tools/preview-skins.mjs http://127.0.0.1:8766/ /tmp/skins` re-renders them if the decision is ever reopened.
-- `tools/assets/poster.html` is the gift box poster. Screenshot it at 800x1200, twice the scale, and resize to 900 wide.
+- `tools/assets/poster.html` is the gift box poster. `node tools/assets/render.mjs` screenshots it, along with everything else: it plays a whole game headless and writes `finale.png`, `og.png`, `trailer.gif` and `poster.png`. On 20 Sep 2026 the landing page was still showing "Won 2 of 4 duels" after the word had been taken out of the code, because the picture was made by hand once and never remade. **Run it whenever the game's look or wording changes.**
+- `node tools/links.mjs` checks every local link on every built page. The English-only terms page is the usual casualty: a `{{root}}terms/` in a partial gives five 404s.
 
 ## Hosting, domain and email (set up 19 Sep 2026)
 

@@ -93,6 +93,7 @@
   function frame() {
     requestAnimationFrame(frame); t++;
     bgSynth(t);
+    scene(CFG.occasion, t, false);
     // The same sizes as the game's title screen, because this is the picture people judge the
     // whole thing on, and on a phone this canvas is about 350 pixels wide.
     txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
@@ -108,6 +109,7 @@
     cast.forEach((sp, k) => { shadow(x0 + k * gap, 240, 14); drawSpec(sp, x0 + k * gap, 240, k ? 3 : 4, false, Math.floor(t / 22 + k)); });
     if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
     else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
+    scene(CFG.occasion, t, true);
   }
   requestAnimationFrame(frame);
   if (fromLink) setTimeout(() => $('make').scrollIntoView(), 50);

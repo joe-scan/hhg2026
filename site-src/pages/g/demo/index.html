@@ -65,6 +65,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </style>
 </head>
 <body data-game="on">
+<div class="wrap"><!--header--></div>
 <div class="bar wide">
   <div class="left"><a class="btn small" href="../../index.html">Home</a> <button type="button" class="btn small" id="btn-share">Share</button> <a class="btn small" id="edit" href="../../index.html#make">Edit your hero</a></div>
   <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Sound: on</button>
@@ -84,7 +85,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
     <button class="fire" data-p="1" data-k="a">FIRE</button>
   </div>
 </main>
-<!--langs--><p class="tip">Turn your phone sideways for a bigger screen.</p>
+<p class="tip">Turn your phone sideways for a bigger screen.</p>
 <p class="keys wide">Click the screen to start. Move with the arrow keys or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, fire with <kbd>Space</kbd> or <kbd>Enter</kbd>. In 2-player mode the grown-up uses <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>Space</kbd>. <kbd>Esc</kbd> goes back to the start.</p>
 
 <section class="demo wide" aria-label="About this demo">
@@ -102,10 +103,13 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
   <a class="btn go" href="../../index.html#prices">Get the full game</a>
 </section>
 
+<div class="wrap"><!--footer--></div>
+
 <!-- The teaser loads one game and nothing else, so there is nothing in the page to unlock by
      poking at it. The flag has to be set before the engine reads it. -->
 <script>window.HHG_TEASER = true;</script>
 <script src="../../arcade/engine.js"></script>
+<script src="../../arcade/scenes.js"></script>
 <script src="../../arcade/games/water-balloon-fight.js"></script>
 <script src="../../arcade/flow.js"></script>
 <script>

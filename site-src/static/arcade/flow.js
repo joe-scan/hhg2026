@@ -38,18 +38,7 @@ function whistle() { tone(2100, .35, 'square', .12); tone(2250, .35, 'square', .
 // the referee: the dog if there is one, otherwise a spare grown-up
 function referee(cx, fy, sc) { if (petRuns()) pet(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
 const refName = () => petRuns() ? PET.name : helper() ? helper().name : '';
-function cake(cx, by, t) {
-  rect(cx - 40, by - 30, 80, 30, '#ff8fb0'); rect(cx - 40, by - 30, 80, 6, '#fff'); for (let x = cx - 38; x < cx + 38; x += 8) rect(x, by - 25, 4, 4 + (x % 3), '#fff');
-  rect(cx - 30, by - 52, 60, 22, '#ffd23f'); rect(cx - 30, by - 52, 60, 5, '#fff'); rect(cx - 48, by, 96, 4, '#cfc8e6');
-  for (let k = 0; k < 5; k++) { const x = cx - 22 + k * 11; rect(x, by - 62, 3, 10, ['#22e6ff', '#ff2bd6', '#3dff8b', '#ff6b1a', '#7a3cff'][k]); rect(x, by - 67 - (t / 4 + k) % 2, 3, 4, t % 10 < 5 ? '#ffd23f' : '#ff6b1a'); }
-}
-function tree(cx, by, t) {
-  for (let k = 0; k < 4; k++) { const w = 70 - k * 16, y = by - 20 - k * 20; g.fillStyle = '#1e7a34'; g.beginPath(); g.moveTo(cx - w / 2, y); g.lineTo(cx + w / 2, y); g.lineTo(cx, y - 30); g.closePath(); g.fill(); }
-  rect(cx - 6, by - 20, 12, 20, '#6b3f1d');
-  for (let k = 0; k < 9; k++) rect(cx - 26 + (k * 37) % 52, by - 30 - (k * 23) % 70, 4, 4, ['#ff2e4d', '#ffd23f', '#22e6ff'][(k + Math.floor(t / 15)) % 3]);
-  rect(cx - 3, by - 110, 6, 6, '#ffd23f');
-}
-function trophy(cx, by) { rect(cx - 20, by - 50, 40, 26, '#ffd23f'); rect(cx - 28, by - 48, 8, 12, '#ffd23f'); rect(cx + 20, by - 48, 8, 12, '#ffd23f'); rect(cx - 5, by - 24, 10, 12, '#e0b64a'); rect(cx - 16, by - 12, 32, 12, '#6b3f1d'); rect(cx - 10, by - 44, 6, 14, '#fff2c2'); }
+// cake(), tree() and trophy() live in scenes.js, which every page loads before this file.
 
 const ST = {
   title: {
@@ -79,8 +68,9 @@ const ST = {
       rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
       txt(occ, W / 2, 87, 16, COL.gold, 'center');
       // the whole cast lined up along the horizon
-      const cast = [HERO].concat(FAM), gap = 64, x0 = W / 2 - (cast.length - 1) * gap / 2;
-      cast.forEach((sp, k) => { shadow(x0 + k * gap, 158, 12); drawSpec(sp, x0 + k * gap, 158, 3, false, Math.floor(t / 20 + k)); });
+      // small enough that eight of them still fit, and low enough to clear the occasion band
+      const cast = [HERO].concat(FAM), gap = Math.min(48, (W - 60) / Math.max(1, cast.length)), x0 = W / 2 - (cast.length - 1) * gap / 2;
+      cast.forEach((sp, k) => { shadow(x0 + k * gap, 152, 9); drawSpec(sp, x0 + k * gap, 152, 2, false, Math.floor(t / 20 + k)); });
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
@@ -309,7 +299,7 @@ const ST = {
   },
   // ---- the gift moment
   finale: {
-    enter() { mus.mode = 'title'; mus.fast = true; S.lines = FAM.map(m => pick([CHEERS_END[CFG.occasion], 'WELL DONE, ' + HERO.name + '!', 'YOU\'RE THE BEST!'])); },
+    enter() { mus.mode = 'title'; mus.fast = true; const say3 = [CHEERS_END[CFG.occasion], 'WELL DONE, ' + HERO.name + '!', 'YOU\'RE THE BEST!'], off = Math.floor(Math.random() * 3); S.lines = FAM.map((m, i) => say3[(i + off) % 3]); },
     update() {
       if (S.t === 60) { sfx.clap(); sfx.power(); burst(W / 2, 150, 60, ['#fff', COL.gold, PL[1].col], 5); shake = 6; say(titleCase(OCCASIONS[CFG.occasion].toLowerCase()) + ', ' + SAYNAME[1] + '!'); }
       if (S.t > 60 && S.t % 60 === 0) confetti(50, ['#fff', COL.gold, COL.hot, COL.cyan, PL[1].col]);

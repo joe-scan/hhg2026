@@ -20,7 +20,8 @@
 
 /* the language picker: one control showing the language you are in, opening a short list */
 .langs{position:relative;font-size:14px}
-.langs summary{list-style:none;cursor:pointer;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 10px}
+.langs summary{list-style:none;cursor:pointer;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 10px;display:flex;align-items:center;gap:7px}
+.langs .globe{flex:none;opacity:.85}
 .langs summary::-webkit-details-marker{display:none}
 .langs summary::after{content:" \25be"}
 .langs summary:hover,.langs[open] summary{color:var(--ink);border-color:var(--ink)}
@@ -41,14 +42,24 @@ button,input,select{font:inherit;color:inherit}
 
 /* top line */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
-.mark{font-family:var(--display);font-size:22px;letter-spacing:.02em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px}
+.mark{font-family:var(--body);font-weight:700;font-size:23px;letter-spacing:-.01em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
 .logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
-.mark span{color:var(--hot)}
+.mark .word{white-space:nowrap}
+.mark .word i{font-style:normal;color:var(--hot)}
 .top nav{display:flex;gap:18px;flex-wrap:wrap}
 .top nav a{text-decoration:none;font-weight:700;font-size:15px}
 .top nav a:hover{text-decoration:underline}
 
+/* the footer, the same on every page */
+footer{border-top:1px solid var(--rule);margin-top:10px;padding-block:18px 26px;color:var(--muted);font-size:14px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px 26px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--ink)}
+footer .langs{margin-left:auto}
+
 /* buttons: square, text only */
+/* .btn sets a display, so it would undo the hidden attribute without this */
+[hidden]{display:none!important}
 .btn{display:inline-block;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:none;padding:10px 18px;border-radius:2px}
 .btn:hover{background:var(--ink);color:var(--paper)}
 .btn.go{background:var(--hotfill);border-color:var(--hotfill);color:#16112b;font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.02em}

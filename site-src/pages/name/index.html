@@ -39,11 +39,7 @@
 </head>
 <body>
 <div class="wrap">
-<header class="top">
-  <a class="mark" translate="no" href="../index.html"><img class="logomark" src="../img/logo.svg" alt="" width="40" height="20">Happy<span>Hero</span>Games</a>
-  <nav aria-label="Page sections"><a href="../index.html#make">Build a game</a><a href="../index.html#prices">Price</a><a href="../index.html#faq">Questions</a></nav>
-  <div class="look"><!--langs--></div>
-</header>
+<!--header-->
 
 <main class="lights">
   <h1>Put a name in lights</h1>
@@ -75,10 +71,11 @@
   </div>
 </main>
 
-<footer><span translate="no">HappyHeroGames</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Privacy</a></span></footer>
+<!--footer-->
 </div>
 
 <script src="../arcade/engine.js"></script>
+<script src="../arcade/scenes.js"></script>
 <script>
 // The whole page: type a name, watch it go up in lights, save the picture. No game files, no
 // server, nothing stored. It draws the same title screen the game opens with.
@@ -90,6 +87,7 @@
   const draw = () => {
     t++;
     bgSynth(t);
+    scene(occ, t, false);
     txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
     rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
@@ -101,12 +99,14 @@
     txt(line, W / 2, 87, 16, COL.gold, 'center');
     shadow(W / 2, 236, 16); drawSpec(HERO, W / 2, 236, 4, false, Math.floor(t / 22));
     if (PET) pet(70, 258, 2, true, Math.floor(t / 6));
+    scene(occ, t, true);
     requestAnimationFrame(draw);
   };
 
   const apply = () => {
     applyConfig(Object.assign({}, DEMO, {
-      hero: Object.assign({}, DEMO.hero, { name: input.value || 'YOUR NAME' }),
+      // the placeholder is translated with the page, so the empty state is too
+      hero: Object.assign({}, DEMO.hero, { name: input.value || input.placeholder }),
       occasion: occ
     }));
   };

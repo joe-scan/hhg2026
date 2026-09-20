@@ -49,7 +49,7 @@ if (seen.includes('boss') || seen.includes('finale')) errors.push('the demo gave
 const full = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(full);
 const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
 await full.setContent('<canvas id="game" width="480" height="270"></canvas>' +
-  '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') +
+  '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') + tag('scenes.js') +
   ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
   '<script>startGame(DEMO);<\/script>',
   { waitUntil: 'load' });
