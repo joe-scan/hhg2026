@@ -21,7 +21,7 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 
 ## What's in here
 
-- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), three free games (`/free/christmas/`, `/free/halloween/` and `/name/`), the privacy policy and the terms. Generated into six languages.
+- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), two free games (`/free/christmas/` and `/free/halloween/`), the privacy policy and the terms. Generated into six languages.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/todo.md`: everything outside the code that Joe has to do, and what's done.

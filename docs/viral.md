@@ -39,7 +39,7 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## 3. Free tools that cost us nothing and get passed around
 
-16. **Name in lights generator** (built 20 Sep 2026, at `/name/`, and the scenes change with the occasion). Type a name, get the arcade title screen as a picture. No game, no email, no signup.
+16. **Name in lights generator** (built and retired the same day, 20 Sep 2026). It worked, but a third free thing made the free page harder to explain than the two games did. The code lives on as the preview on the order form.
 17. **Pixel-me avatar maker** (M). The builder, minus the game, as a downloadable avatar.
 18. **Birthday countdown page** (S). A free page counting down to the day, with their name on it.
 19. **Class photo generator** (M). A teacher types thirty first names and gets a pixel class portrait. Teachers share with teachers.
@@ -89,4 +89,4 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## What I would actually do first
 
-Party mode, the name in lights generator, Trick or Treat Dash and Sleigh Dash are all built, and they live together at `/free/`. Next: put the Halloween game in front of people in the first week of October and the Christmas one in late November, then see whether anybody sends them on. If they do, build Easter. If they do not, the rest of this list is guesswork and the effort belongs in the paid product instead.
+Party mode, Trick or Treat Dash and Sleigh Dash are all built, and the two games live together at `/free/`. Next: put the Halloween game in front of people in the first week of October and the Christmas one in late November, then see whether anybody sends them on. If they do, build Easter. If they do not, the rest of this list is guesswork and the effort belongs in the paid product instead.
