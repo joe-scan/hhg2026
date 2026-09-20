@@ -57,6 +57,7 @@ What we learnt from it, and why the product looks like this:
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. (The game screen keeps its neon; that's the subject.)
 - Type: **Bungee** (arcade marquee lettering) for the main headline and the wordmark only; **Atkinson Hyperlegible** for everything else on the page. **Press Start 2P** stays inside the game canvas and the premiere clock, never in page copy.
 - One accent, arcade magenta: `#ff2bd6` for fills and the main button, `#c4107f` for text on light.
+- **Three skins, chosen 20 Sep 2026:** Paper (default), Cabinet (dark) and Sunset (warm). They are colour only: same type, same layout, same pixel screen. The picker is in the header, the choice is kept in the visitor's own browser, and a device set to dark mode gets Cabinet without asking. The other seven are in `tools/skins.js` if one is ever wanted.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
 
 ## Repo layout

@@ -7,8 +7,20 @@
    Atkinson Hyperlegible for reading, Press Start 2P for tiny labels. */
 :root{--paper:#f7f6fb;--ink:#16112b;--muted:#5c5673;--rule:#d9d5e6;--hot:#c4107f;--hotfill:#ff2bd6;--gold:#ffd23f;--screen:#12062b;--focus:#7a3cff;--field:#ffffff;--on-hot:#ffffff;
   --display:"Bungee","Arial Black",Impact,sans-serif;--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0f0c18;--ink:#efedf6;--muted:#a39dbb;--rule:#2c2640;--hot:#ff5ad8;--field:#17122a;--focus:#22e6ff;--on-hot:#16112b}}
-:root[data-theme="dark"]{--paper:#0f0c18;--ink:#efedf6;--muted:#a39dbb;--rule:#2c2640;--hot:#ff5ad8;--field:#17122a;--focus:#22e6ff;--on-hot:#16112b}
+
+/* Three skins. Paper is the default, Cabinet is the dark one, Sunset is the warm one. A visitor's
+   choice is kept in their own browser and written to <html data-skin>. With no choice made, a
+   device set to dark gets Cabinet. */
+@media (prefers-color-scheme:dark){:root:not([data-skin]){--paper:#0f0c18;--ink:#efedf6;--muted:#a39dbb;--rule:#2c2640;--hot:#ff5ad8;--field:#17122a;--focus:#22e6ff;--on-hot:#16112b}}
+:root[data-skin="cabinet"]{--paper:#0f0c18;--ink:#efedf6;--muted:#a39dbb;--rule:#2c2640;--hot:#ff5ad8;--hotfill:#ff2bd6;--field:#17122a;--focus:#22e6ff;--on-hot:#16112b}
+:root[data-skin="sunset"]{--paper:#fdf5ec;--ink:#2a1a12;--muted:#6b5546;--rule:#e6d6c3;--hot:#c2410c;--hotfill:#f2711c;--field:#fffaf4;--focus:#c2410c;--on-hot:#ffffff}
+
+/* the skin picker: three words, no icons, no dropdown */
+.look{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.look button{font:inherit;color:var(--muted);background:none;border:1px solid transparent;border-radius:2px;padding:3px 8px;cursor:pointer}
+.look button:hover{color:var(--ink);border-color:var(--rule)}
+.look button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink);font-weight:700}
+
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:0 40px;touch-action:manipulation}

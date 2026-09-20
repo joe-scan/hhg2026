@@ -59,7 +59,6 @@ Last updated 20 September 2026.
 
 ## Product decisions waiting on Joe
 
-- [ ] Pick up to three skins from `tools/skin-previews/`. Claude's pick: Paper as the default, Cabinet for dark, Sunset for warmth.
 - [ ] Print partner: order one A2 poster from Prodigi and one from Printful, to your own address, and compare them in your hands. Left aside on 20 Sep 2026.
 - [ ] When orders open. Not decided.
 - [ ] A logo beyond the pixel H favicon.
@@ -99,3 +98,5 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Prices decided: $99 and $179, no cheap tier, no subscription (20 Sep 2026).
 - [x] Privacy policy written and published (20 Sep 2026).
 - [x] Business plan, one-page pitch and product spec written (20 Sep 2026).
+- [x] Competitor research done and written up (20 Sep 2026).
+- [x] Three skins live with a picker in the header: Paper, Dark, Sunset (20 Sep 2026).

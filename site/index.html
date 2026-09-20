@@ -11,6 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+
 <style>
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* the builder: the form on the left, the live screen on the right (on top on a phone) */
@@ -81,6 +83,11 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <header class="top">
   <a class="mark" href="#">Happy <span>Hero</span> Games</a>
   <nav aria-label="Page sections"><a href="#how">How it works</a><a href="#prices">Prices</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a></nav>
+  <div class="look"><span>Look</span>
+    <button type="button" data-skin="paper">Paper</button>
+    <button type="button" data-skin="cabinet">Dark</button>
+    <button type="button" data-skin="sunset">Sunset</button>
+  </div>
 </header>
 
 <main>
@@ -213,6 +220,21 @@ var sc_security="076798fb";
 </script>
 <script src="https://www.statcounter.com/counter/counter.js" async></script>
 <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13355921/0/076798fb/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+<script>
+// The skin picker. The choice is this visitor's, kept in their own browser, and it applies to every
+// page on the site. With no choice made, a device set to dark mode gets Cabinet (see site.css).
+(() => {
+  const root = document.documentElement, btns = document.querySelectorAll('.look button');
+  const mark = () => btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.skin === (root.dataset.skin || 'paper'))));
+  btns.forEach(b => b.addEventListener('click', () => {
+    root.dataset.skin = b.dataset.skin;
+    try { localStorage.setItem('hhg-skin', b.dataset.skin); } catch (e) {}
+    mark();
+  }));
+  mark();
+})();
+</script>
 
 <script src="arcade/engine.js"></script>
 <script src="builder.js"></script>
