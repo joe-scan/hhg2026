@@ -64,7 +64,8 @@ const LOCKED = ['BATALLA DE PALAS', 'CARRERA DE LA CENA', 'GUERRA EN EL ASIENTO'
 // Optional question and joke packs for a family who want them (see the quiz). Off by default.
 const PACKS = ['ie', 'uk'];
 
-// names: capitals, no accents (the pixel font has none), letters, spaces, hyphens and apostrophes only
+// names: capitals, accents stripped (the pixel font draws capital Í and Ó as lowercase shapes),
+// letters, spaces, hyphens and apostrophes only
 const cleanName = (s, n) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z '\-!?.,]/g, '').replace(/\s+/g, ' ').trim().slice(0, n);
 const oneOf = (v, list, d) => list.includes(v) ? v : d;
 function sanitise(c) {
@@ -74,7 +75,7 @@ function sanitise(c) {
     occasion: oneOf(c.occasion, Object.keys(OCCASIONS), 'birthday'),
     packs: (Array.isArray(c.packs) ? c.packs : []).filter(k => PACKS.includes(k)).slice(0, 3),
     catchphrase: cleanName(c.catchphrase, 22), food: cleanName(c.food, 10).replace(/[!?.,']/g, '') || 'PIZZA',
-    family: (Array.isArray(c.family) ? c.family : []).slice(0, 8).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || roleLabel(m.role).toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
+    family: (Array.isArray(c.family) ? c.family : []).slice(0, 8).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || cleanName(roleLabel(m.role), 10), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
     pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), kind: oneOf(c.pet && c.pet.kind, Object.keys(PETKINDS), 'dog'), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
   };
   if (!out.family.length) out.family.push({ role: 'dad', name: 'PAPA', hairCol: HAIRCOLS[0] });

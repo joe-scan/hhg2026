@@ -36,11 +36,11 @@ What we learnt from it, and why the product looks like this:
 
 ## Languages
 
-English is the source. Spanish is live at `/es/`. A language is two files: `site-src/words/<lang>.json` for the pages and `site-src/words/game-<lang>.json` for the game code, both keyed by the exact English string. `node tools/build.mjs` renders the pages, writes a translated copy of the game code into `site/<lang>/arcade/`, and adds the hreflang tags and the language picker. An identity dictionary reproduces the English files byte for byte, which is the test that the machinery is safe.
+English is the source. Spanish, German, French, Italian and Irish are live at `/es/`, `/de/`, `/fr/`, `/it/` and `/ga/`. A language is two files: `site-src/words/<lang>.json` for the pages and `site-src/words/game-<lang>.json` for the game code, both keyed by the exact English string. `node tools/build.mjs` renders the pages, writes a translated copy of the game code into `site/<lang>/arcade/`, and adds the hreflang tags and the language picker. An identity dictionary reproduces the English files byte for byte, which is the test that the machinery is safe.
 
 - **Never ship a half-translated language.** A Spanish page leading to an English game is worse than no Spanish page. `LANGS` in `tools/build.mjs` lists only what is finished.
-- **In-game text avoids accented capitals** except Ñ and Ü. Press Start 2P draws É, Á and Ö as lowercase shapes, which looks broken in an all-caps arcade screen. Page text keeps its accents.
-- Order to add them: Spanish (done), German, French, Italian, then Irish. Joe's wife teaches Irish and will check that one; the rest need a native read before they can be called finished.
+- **In-game text avoids the capitals the pixel font cannot draw.** Á, Ñ and Ü are fine. É, Í, Ó, Ö, À and Ç come out as lowercase shapes, so translated in-game strings are written without them: SCHOENEN in German, TREMPE in French, PIU in Italian, DAIDI in Irish. Page text keeps every accent. A person's name is stripped of accents for the canvas automatically (`cleanName`).
+- **Every language here is Claude's translation and none has been checked by a native speaker.** That is the open job in `docs/todo.md`. Joe's wife teaches Irish and will read the Irish one.
 
 ## Rules that don't bend
 

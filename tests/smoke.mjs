@@ -72,18 +72,32 @@ if (!prem.url().includes('/premiere/')) errors.push('the premiere followed an of
 await prem.goto(`${BASE}premiere/?n=Ava&at=2020-01-01T10:00&to=/g/demo/`); await prem.waitForTimeout(3200);
 if (!prem.url().includes('/g/demo/')) errors.push('the premiere did not open the game at zero');
 
-// 2d. the Spanish build: the page is translated, the game is translated, and it still stops at
-// the locked card
-const es = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(es);
-await es.goto(BASE + 'es/'); await es.waitForTimeout(600);
-if (await es.evaluate(() => document.documentElement.lang) !== 'es') errors.push('the Spanish page is not marked lang="es"');
-if (!(await es.title()).includes('Happy Hero Games')) errors.push('the Spanish page lost its title');
-await es.goto(BASE + 'es/g/demo/'); await es.waitForTimeout(700);
-const esGame = await es.evaluate(() => [__hhg.games()[0], ROLES.dad.label].join(' | '));
-if (esGame !== 'GUERRA DE GLOBOS | Papá') errors.push('the Spanish game reads: ' + esGame);
-// the picker has to get you back: every page, both directions
-for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['es/privacy/', 'English', '/privacy/'],
-                                      ['es/g/demo/', 'English', '/g/demo/'], ['', 'Español', '/es/']]) {
+// 2d. every translated language: the page is translated, the game is translated, the demo still
+// stops at the locked card, and the picker gets you back to English and out again.
+const LANGS = [
+  { code: 'es', name: 'Español', game: 'GUERRA DE GLOBOS', dad: 'Papá' },
+  { code: 'de', name: 'Deutsch', game: 'WASSERBOMBEN-SCHLACHT', dad: 'Papa' },
+  { code: 'fr', name: 'Français', game: "BATAILLE DE BALLONS D'EAU", dad: 'Papa' },
+  { code: 'it', name: 'Italiano', game: 'GUERRA DI GAVETTONI', dad: 'Papà' },
+  { code: 'ga', name: 'Gaeilge', game: 'CATH NA mBALUN UISCE', dad: 'Daidí' }
+];
+for (const L of LANGS) {
+  const pg = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(pg);
+  await pg.goto(`${BASE}${L.code}/`); await pg.waitForTimeout(500);
+  if (await pg.evaluate(() => document.documentElement.lang) !== L.code) errors.push(`${L.code}: page not marked lang="${L.code}"`);
+  await pg.goto(`${BASE}${L.code}/g/demo/`); await pg.waitForTimeout(700);
+  const got = await pg.evaluate(() => [__hhg.games()[0], ROLES.dad.label].join(' | '));
+  if (got !== `${L.game} | ${L.dad}`) errors.push(`${L.code}: game reads ${got}, wanted ${L.game} | ${L.dad}`);
+  const seenL = await run(pg, 'locked');
+  if (seenL[seenL.length - 1] !== 'locked') errors.push(`${L.code}: demo did not stop at the locked card`);
+  console.log(`${L.code}: ${L.game}, ${seenL.length} states, locked`);
+  await pg.close();
+}
+
+// the picker, both directions, on every page
+for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['de/privacy/', 'English', '/privacy/'],
+                                      ['ga/g/demo/', 'English', '/g/demo/'], ['', 'Italiano', '/it/'],
+                                      ['', 'Gaeilge', '/ga/']]) {
   const t = await browser.newPage(); watch(t);
   await t.goto(BASE + from); await t.waitForTimeout(500);
   await t.click(`.langs a:text-is("${click}")`); await t.waitForTimeout(600);
@@ -91,10 +105,6 @@ for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['es/privacy/', '
   if (!path.endsWith(wantEnd)) errors.push(`${click} from /${from} landed on ${path}, wanted ${wantEnd}`);
   await t.close();
 }
-
-const esSeen = await run(es, 'locked');
-console.log('spanish demo:', esSeen.join(' > '));
-if (esSeen[esSeen.length - 1] !== 'locked') errors.push('the Spanish demo did not stop at the locked card');
 
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);

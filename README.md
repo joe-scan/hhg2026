@@ -8,7 +8,7 @@ Pre-launch. Nothing here takes orders or stores anyone's details yet.
 
 ## Languages
 
-English is the source and lives in `site-src/pages/`. Spanish is at `/es/`. Edit the source pages, run `node tools/build.mjs`, and every language is regenerated. Never edit `site/*.html` by hand.
+English is the source and lives in `site-src/pages/`. Spanish, German, French, Italian and Irish are at `/es/`, `/de/`, `/fr/`, `/it/` and `/ga/`, pages and game alike. Edit the source pages, run `node tools/build.mjs`, and every language is regenerated. Never edit `site/*.html` by hand.
 
 ## Try it
 

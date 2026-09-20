@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gioca | Happy Hero Games</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="en" href="../../../g/demo/">
+<link rel="alternate" hreflang="es" href="../../../es/g/demo/">
+<link rel="alternate" hreflang="de" href="../../../de/g/demo/">
+<link rel="alternate" hreflang="fr" href="../../../fr/g/demo/">
+<link rel="alternate" hreflang="it" href="../../../it/g/demo/">
+<link rel="alternate" hreflang="ga" href="../../../ga/g/demo/">
+<link rel="alternate" hreflang="x-default" href="../../../g/demo/">
+<link rel="stylesheet" href="../../../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+
+<style>
+body{display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:10px}
+.wide{width:min(100%,calc((100vh - 150px) * 16 / 9),1180px);min-width:min(100%,300px)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.bar .left{display:flex;gap:8px;flex-wrap:wrap}
+.stage{display:grid;grid-template-areas:"cab";justify-items:center;gap:12px}
+.screen{grid-area:cab;width:100%}
+.tpad{display:none;flex-direction:column;align-items:center;gap:10px;padding-block:6px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;width:100%}
+.tpad.p0{grid-area:p0}.tpad.p1{grid-area:p1}
+.tpad .who{font-family:var(--pixel);font-size:9px;color:var(--muted)}
+.dpad{display:grid;grid-template-columns:repeat(3,44px);grid-template-rows:repeat(3,44px);gap:2px}
+.tpad button{font-size:16px;border:0;border-radius:4px;background:#2a1a4a;color:#fff;touch-action:none;padding:0}
+.tpad button.on{background:#ff2bd6}
+.dpad [data-k="u"]{grid-area:1/2}.dpad [data-k="l"]{grid-area:2/1}.dpad [data-k="r"]{grid-area:2/3}.dpad [data-k="d"]{grid-area:3/2}
+.tpad .fire{width:72px;height:72px;border-radius:50%;font-family:var(--pixel);font-size:9px;background:#c4107f}
+.tpad .fire.on{background:#ff2bd6}
+.tpad .home{display:none;font-size:14px;font-weight:700;background:none;color:var(--ink);border:1px solid var(--rule);border-radius:2px;padding:4px 10px}
+.touch .tpad{display:flex}
+.touch .stage{grid-template-areas:"cab cab" "p0 p1";grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.touch .keys{display:none}
+@media (max-width:420px){.dpad{grid-template-columns:repeat(3,38px);grid-template-rows:repeat(3,38px)}.tpad .fire{width:60px;height:60px}}
+@media (orientation:landscape) and (max-height:560px){
+  body.touch{padding-top:8px;gap:8px}
+  .touch .stage{grid-template-areas:"p0 cab p1";grid-template-columns:auto minmax(0,1fr) auto;align-items:center;width:100%}
+  .touch .wide{width:100%}
+  .touch .screen{width:min(100%,calc((100vh - 32px) * 16 / 9))}
+  .touch .tpad{width:auto}
+  .touch .tpad .home{display:block}
+  .touch .bar,.touch .demo{display:none}
+}
+.tip{display:none;color:var(--muted);margin:0}
+@media (orientation:portrait){.touch .tip{display:block}}
+.keys{color:var(--muted);margin:0;font-size:15px}
+kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);border-radius:2px;padding:1px 6px}
+.demo{border-top:1px solid var(--rule);padding-top:14px;display:flex;gap:16px 28px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.demo p{margin:0;max-width:60ch}
+.demo strong{font-family:var(--display);font-weight:400;font-size:18px;display:block}
+.locked{list-style:none;margin:10px 0 0;padding:0;display:flex;gap:6px 14px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.locked li::before{content:"";display:inline-block;width:7px;height:9px;margin-right:6px;border:1px solid currentColor;border-radius:1px;vertical-align:-1px}
+
+</style>
+</head>
+<body data-game="on">
+<div class="bar wide">
+  <div class="left"><a class="btn small" href="../../../index.html">Home</a> <button type="button" class="btn small" id="btn-share">Condividi</button> <a class="btn small" id="edit" href="../../../index.html#make">Modifica il tuo eroe</a></div>
+  <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Audio: acceso</button>
+</div>
+
+<main class="stage wide">
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Il tuo gioco Happy Hero. Gioca con la tastiera, un controller o i tasti sullo schermo."></canvas></div>
+  <div class="tpad p0" aria-label="Comandi del giocatore famiglia">
+    <button type="button" id="btn-home-pad" class="home">Titolo</button>
+    <span class="who">FAMIGLIA</span>
+    <div class="dpad"><button data-p="0" data-k="u" aria-label="Su">▲</button><button data-p="0" data-k="l" aria-label="Sinistra">◀</button><button data-p="0" data-k="r" aria-label="Destra">▶</button><button data-p="0" data-k="d" aria-label="Giù">▼</button></div>
+    <button class="fire" data-p="0" data-k="a">FUOCO</button>
+  </div>
+  <div class="tpad p1" aria-label="Comandi dell'eroe">
+    <span class="who" id="hero-pad">EROE</span>
+    <div class="dpad"><button data-p="1" data-k="u" aria-label="Su">▲</button><button data-p="1" data-k="l" aria-label="Sinistra">◀</button><button data-p="1" data-k="r" aria-label="Destra">▶</button><button data-p="1" data-k="d" aria-label="Giù">▼</button></div>
+    <button class="fire" data-p="1" data-k="a">FUOCO</button>
+  </div>
+</main>
+<div class="langs"><a href="../../../g/demo/" hreflang="en">English</a> <a href="../../../es/g/demo/" hreflang="es">Español</a> <a href="../../../de/g/demo/" hreflang="de">Deutsch</a> <a href="../../../fr/g/demo/" hreflang="fr">Français</a> <b>Italiano</b> <a href="../../../ga/g/demo/" hreflang="ga">Gaeilge</a></div><p class="tip">Gira il telefono in orizzontale per uno schermo più grande.</p>
+<p class="keys wide">Clicca sullo schermo per iniziare. Muoviti con le frecce o <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>, spara con <kbd>Spazio</kbd> o <kbd>Invio</kbd>. In modalità due giocatori l'adulto usa <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> e <kbd>Spazio</kbd>. <kbd>Esc</kbd> torna all'inizio.</p>
+
+<section class="demo wide" aria-label="Su questa demo">
+  <div>
+    <p><strong>Questa è la demo gratuita.</strong> Un gioco, creato nel tuo browser da quello che hai scritto. Il gioco completo ha cinque giochi scelti in base a quello che adora, il boss, fino a otto persone e il finale con il suo nome a luci.</p>
+    <ul class="locked" id="locked-list">
+      <li>Battaglia di racchette</li>
+      <li>La corsa della cena</li>
+      <li>Battaglia sul sedile</li>
+      <li>Il quiz di famiglia</li>
+      <li>La sfida al boss</li>
+      <li>Il finale</li>
+    </ul>
+  </div>
+  <a class="btn go" href="../../../index.html#prices">Prendi il gioco completo</a>
+</section>
+
+<!-- The teaser loads one game and nothing else, so there is nothing in the page to unlock by
+     poking at it. The flag has to be set before the engine reads it. -->
+<script>window.HHG_TEASER = true;</script>
+<script src="../../arcade/engine.js"></script>
+<script src="../../arcade/games/water-balloon-fight.js"></script>
+<script src="../../arcade/flow.js"></script>
+<script>
+startGame(cfgFromLink());
+document.getElementById('hero-pad').textContent = HERO.name;
+// the builder reads the same #g= link, so the family's choices come back filled in
+document.getElementById('edit').href = '../../index.html' + (location.hash.includes('g=') ? location.hash : '#make');
+for (const id of ['btn-share']) { const b = document.getElementById(id); b.addEventListener('click', () => shareGame(b)); }
+</script>
+</body>
+</html>

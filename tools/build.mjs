@@ -23,8 +23,8 @@ export const PAGES = ['index.html', 'privacy/index.html', 'g/demo/index.html', '
 // Only languages that are actually translated. Adding one: write site-src/words/<lang>.json and
 // game-<lang>.json (start from game-en.json), add it here, run the build. A half-translated
 // language must never ship: a Spanish page leading to an English game is worse than no page.
-export const LANGS = ['es'];
-export const LANGNAMES = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français' };
+export const LANGS = ['es', 'de', 'fr', 'it', 'ga'];
+export const LANGNAMES = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', ga: 'Gaeilge' };
 
 const read = p => fs.readFileSync(p, 'utf8');
 const write = (p, s) => { fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, s); };

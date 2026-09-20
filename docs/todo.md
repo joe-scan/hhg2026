@@ -74,9 +74,9 @@ Last updated 20 September 2026.
 
 ## Languages
 
-- [ ] Read the Spanish once, or have someone read it: it is Claude's translation, not a native speaker's. The jokes are the part worth checking.
-- [ ] German next, then French, then Italian, then Irish. Each is two word files in `site-src/words/`.
-- [ ] Irish: Claude drafts it, Joe's wife checks it before it goes live.
+- [ ] Get each language read by a native speaker. All five are Claude's work: good enough to ship, not good enough to be proud of. The jokes and the taunts are what matter, not the privacy policy.
+- [ ] Irish: Joe's wife teaches Irish and is checking that one.
+- [ ] Note for whoever checks: in-game text is written without É, Í, Ó and Ç because the pixel font cannot draw them as capitals. Á, Ñ and Ü are fine. If a phrase needs one of the missing ones, reword it rather than dropping the accent silently.
 - [ ] Decide whether a Spanish visitor should land on /es/ automatically, or be offered it. Automatic redirects annoy people who want English.
 
 ## From the competitor research
@@ -107,4 +107,5 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Business plan, one-page pitch and product spec written (20 Sep 2026).
 - [x] Competitor research done and written up (20 Sep 2026).
 - [x] Sunset is the site, with a one-button dark mode. Paper dropped (20 Sep 2026).
-- [x] Translation machinery built, and Spanish live at /es/, page and game (20 Sep 2026).
+- [x] Translation machinery built (20 Sep 2026).
+- [x] Spanish, German, French, Italian and Irish live, pages and game, 169 page strings and about 415 game strings each (20 Sep 2026).

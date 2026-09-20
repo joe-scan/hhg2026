@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Hero Games</title>
+<meta name="description" content="Un gioco arcade personalizzato con qualcuno di speciale come protagonista, e la sua famiglia e i suoi amici come avversari. Prova la demo gratuita in un minuto, su qualsiasi telefono o portatile.">
+<link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="it" href="../it/">
+<link rel="alternate" hreflang="ga" href="../ga/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="stylesheet" href="../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+
+<style>
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* the builder: the form on the left, the live screen on the right (on top on a phone) */
+.make{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px 44px;padding-block:34px 44px;align-items:start}
+.lede h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.2vw,46px);line-height:1.08;letter-spacing:-.005em;margin:0 0 16px;text-wrap:balance}
+.lede h1 em{font-style:normal;color:var(--ink)}
+.lede p{margin:0 0 22px;max-width:46ch;color:var(--muted);font-size:18px}
+.view{position:sticky;top:16px;display:grid;gap:12px}
+.view .row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.view small{color:var(--muted);font-size:14px}
+form.hero{display:grid;gap:0}
+fieldset{border:0;border-top:1px solid var(--rule);margin:0;padding:14px 0 16px;display:grid;gap:12px}
+legend{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 8px 0 0}
+.field{display:grid;gap:6px}
+.field > span,.field > label{font-weight:700;font-size:15px}
+input[type=text],input:not([type]),select{background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:9px 10px;min-width:0;width:100%}
+input:focus,select:focus{border-color:var(--ink)}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0}
+.opts span{display:inline-block;border:1px solid var(--rule);padding:6px 11px;font-size:15px;border-radius:2px;cursor:pointer}
+.opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.sws{display:flex;flex-wrap:wrap;gap:6px}
+.sw{width:30px;height:30px;border-radius:2px;border:1px solid var(--rule);background:var(--c);cursor:pointer;padding:0}
+.sw[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.fam{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+@media (max-width:860px){.make{grid-template-columns:1fr}.view{position:static;order:-1}}
+@media (max-width:480px){.fam{grid-template-columns:1fr 1fr}.fam select:last-child{grid-column:1/-1}.two{grid-template-columns:1fr}}
+
+/* the rest of the page: rules and type, no cards */
+section.band{border-top:1px solid var(--rule);padding-block:52px}
+section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;letter-spacing:-.01em;margin:0 0 20px;text-wrap:balance}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--muted);display:block;margin-bottom:10px}
+.steps h3{margin:0 0 6px;font-size:19px}
+.steps p{margin:0;color:var(--muted)}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px 44px;align-items:center}
+.story p{margin:0 0 12px;max-width:58ch}
+.story figure{margin:0}
+.story figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.prices{display:grid;gap:0;max-width:820px}
+.price{display:grid;grid-template-columns:150px 130px 1fr;gap:6px 20px;padding-block:18px;border-top:1px solid var(--rule);align-items:baseline}
+.price b{font-size:19px}
+.price .amt{font-weight:700;font-size:20px}
+.price p{margin:0;color:var(--muted)}
+.onep{margin:0 0 18px;max-width:58ch;font-size:18px}
+.box-look{margin:26px 0 0;display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px 24px;align-items:start;max-width:820px}
+.box-look img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+.box-look img:last-of-type{image-rendering:pixelated;background:#12062b}
+.box-look figcaption{grid-column:1/-1;color:var(--muted);font-size:14px}
+@media (max-width:620px){.box-look{grid-template-columns:1fr}}
+.extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
+.promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
+.promises li{padding-left:18px;position:relative}
+.promises li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--rule)}
+details{border-top:1px solid var(--rule);padding-block:12px;max-width:820px}
+details summary{cursor:pointer;font-weight:700;font-size:18px}
+details p{margin:8px 0 0;color:var(--muted);max-width:62ch}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.steps,.story,.promises{grid-template-columns:1fr}.price{grid-template-columns:1fr auto}.price p{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" translate="no" href="#">Happy <span>Hero</span> Games</a>
+  <nav aria-label="Sezioni della pagina"><a href="#how">Come funziona</a><a href="#prices">Prezzo</a><a href="#privacy">Privacy</a><a href="#faq">Domande</a></nav>
+  <div class="look"><button type="button" id="skin-toggle" data-dark="Modalità scura" data-light="Modalità chiara">Modalità scura</button></div>
+  <div class="langs"><a href="../" hreflang="en">English</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../fr/" hreflang="fr">Français</a> <b>Italiano</b> <a href="../ga/" hreflang="ga">Gaeilge</a></div>
+</header>
+
+<main>
+<section class="make" id="make" aria-labelledby="make-h">
+  <div>
+    <div class="lede">
+      <h1 id="make-h">Metti qualcuno di speciale nel suo <em>gioco arcade.</em></h1>
+      <p id="lede-p" data-int="L'eroe è lui. Mamma, papà, la nonna, il migliore amico e il cane sono quelli da battere. Crealo qui e gioca subito.">L'eroe è lui. Mamma, papà, la nonna, il migliore amico e il cane sono quelli da battere. Crealo qui e gioca subito.</p>
+    </div>
+    <form class="hero" onsubmit="return false" aria-label="Crea il tuo eroe">
+      <fieldset>
+        <legend>L'EROE</legend>
+        <div class="two">
+          <div class="field"><label for="hero-name">Il suo nome</label><input id="hero-name" maxlength="10" autocomplete="off" spellcheck="false"></div>
+          <div class="field"><span id="occ-l">È per</span>
+            <div class="opts" role="radiogroup" aria-labelledby="occ-l">
+              <label><input type="radio" name="occasion" value="birthday"><span>Un compleanno</span></label>
+              <label><input type="radio" name="occasion" value="christmas"><span>Natale</span></label>
+              <label><input type="radio" name="occasion" value="fathers"><span>La festa del papà</span></label>
+              <label><input type="radio" name="occasion" value="mothers"><span>La festa della mamma</span></label>
+              <label><input type="radio" name="occasion" value="star"><span>Così, senza motivo</span></label>
+            </div></div>
+        </div>
+        <div class="field"><span id="hair-l">Capelli</span>
+          <div class="opts" role="radiogroup" aria-labelledby="hair-l">
+            <label><input type="radio" name="hair" value="short"><span>Corti</span></label>
+            <label><input type="radio" name="hair" value="straight"><span>Lisci</span></label>
+            <label><input type="radio" name="hair" value="curly"><span>Ricci</span></label>
+            <label><input type="radio" name="hair" value="long"><span>Lunghi</span></label>
+            <label><input type="radio" name="hair" value="ponytail"><span>Coda</span></label>
+          </div></div>
+        <div class="field"><span>Colore dei capelli</span><div class="sws" id="hair-col"></div></div>
+        <div class="field"><span>Pelle</span><div class="sws" id="skin"></div></div>
+        <div class="field"><span>Maglia</span><div class="sws" id="kit"></div></div>
+      </fieldset>
+      <fieldset>
+        <legend>Famiglia e amici</legend>
+        <p class="note" style="margin:0;color:var(--muted);font-size:15px">Un avversario nella demo. Il gioco completo arriva a otto persone, quindi ci sono tutti.</p>
+        <div id="family" style="display:grid;gap:6px"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Su di lui</legend>
+        <div class="two">
+          <div class="field"><label for="food">Cibo preferito</label><input id="food" maxlength="10" autocomplete="off"></div>
+          <div class="field"><label for="catch">Una cosa che dice sempre</label><input id="catch" maxlength="22" autocomplete="off" placeholder="Ma dai!"></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>L'animale</legend>
+        <div class="two">
+          <div class="field"><label for="pet-kind">Quale animale</label><select id="pet-kind"></select></div>
+          <div class="field"><label for="pet-name">Il suo nome</label><input id="pet-name" maxlength="10" autocomplete="off" placeholder="Lascia vuoto se non c'è un animale"></div>
+          <div class="field"><span>Il suo colore</span><div class="sws" id="pet-col"></div></div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="view">
+    <div class="screen"><canvas id="game" width="480" height="270" aria-label="Un'anteprima in pixel dell'eroe, della famiglia e degli amici"></canvas></div>
+    <div class="row">
+      <a class="btn go" id="play" href="../g/demo/"><span id="play-label">Gioca alla demo gratuita</span></a>
+      <small>Un gioco, gratis. Niente di ciò che scrivi ci viene inviato.</small>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-h">
+  <h2 id="how-h">Come funziona</h2>
+  <ol class="steps">
+    <li><h3>Rispondi a poche domande</h3><p>Il nome, chi c'è dentro, cosa adora, cosa dice sempre. Niente foto.</p></li>
+    <li><h3>Creiamo il gioco</h3><p>Due giorni, e una persona lo gioca tutto prima che parta.</p></li>
+    <li><h3>Lo giocano</h3><p>Un link privato che funziona su qualsiasi telefono, tablet o portatile.</p></li>
+  </ol>
+</section>
+
+<section class="band story" aria-labelledby="story-h">
+  <div>
+    <h2 id="story-h">È cominciato con due fratelli</h2>
+    <p>Un papà ha creato un gioco arcade per i suoi due figli, pieno delle loro frasi, del loro cane e dei litigi per il sedile davanti. Ogni famiglia ha questi dettagli. Noi li mettiamo in un gioco.</p>
+  </div>
+  <figure>
+    <div class="screen"><img src="../img/finale.png" alt="La fine di un gioco Happy Hero: HAPPY BIRTHDAY, AVA! a luci, una torta di compleanno, e la famiglia con il cane che esultano in pixel art" style="display:block;width:100%;image-rendering:pixelated"></div>
+    <figcaption>Così finisce ogni gioco.</figcaption>
+  </figure>
+</section>
+
+<section class="band" id="prices" aria-labelledby="prices-h">
+  <h2 id="prices-h">Prezzo</h2>
+  <p class="onep">Ogni gioco è uguale: cinque giochi e un boss, tutte le persone a cui vuole bene, fino a otto, pronto in 48 ore. L'unica domanda è se vuoi qualcosa di stampato.</p>
+  <div class="prices">
+    <div class="price"><b>Il gioco</b><span class="amt">$99</span><p>Il link privato, ed è suo per sempre.</p></div>
+    <div class="price"><b>La confezione regalo</b><span class="amt">$179</span><p>Il gioco, un poster stampato con il suo nome a luci, un'anteprima che tutti aprono insieme e un trailer per la chat di famiglia.</p></div>
+  </div>
+  <figure class="box-look">
+    <img src="../img/poster.png" alt="Il poster stampato: la schermata del titolo con AVA a luci, HAPPY BIRTHDAY, AVA sotto, tre dei suoi giochi in fondo e il cast: papà e Biscuit, il cane" loading="lazy" width="900" height="1350">
+    <img src="../img/trailer.gif" alt="Il trailer: la schermata del titolo di Ava, la sfida contro papà, un po' di gioco e il finale di compleanno" loading="lazy" width="480" height="270">
+    <figcaption>Il poster e il trailer, fatti con una famiglia di esempio. Il tuo avrà i vostri nomi.</figcaption>
+  </figure>
+  <p class="extras">Ci sono anche le carte regalo. Gli ordini non sono ancora aperti: scrivi a <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> e ti diremo il giorno in cui apriranno.</p>
+</section>
+
+<section class="band" id="privacy" aria-labelledby="privacy-h">
+  <h2 id="privacy-h">Privato fin dall'inizio</h2>
+  <ul class="promises">
+    <li>Niente foto, niente registrazioni. L'eroe è disegnato in pixel.</li>
+    <li>Mai cognomi, età, scuole o indirizzi sullo schermo.</li>
+    <li>Ogni gioco ha il suo link privato.</li>
+    <li>Cancelliamo le tue risposte appena lo chiedi. <a href="../privacy/">L'informativa completa</a>.</li>
+  </ul>
+</section>
+
+<section class="band" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Domande</h2>
+  <details><summary>Dove si gioca?</summary><p>Su qualsiasi telefono, tablet o portatile con un browser. Niente da installare. In due si può giocare su una tastiera, o su un telefono girato in orizzontale.</p></details>
+  <details><summary>Chi può esserci dentro?</summary><p>Fino a otto persone: famiglia, amici, un insegnante, un allenatore. E l'animale: cane, gatto, coniglio, criceto o pesce.</p></details>
+  <details><summary>Cos'è l'anteprima?</summary><p>Scegli un giorno e un'ora. Tutti quelli a cui mandi il link vedono un conto alla rovescia e, quando arriva a zero, il gioco si apre, ovunque siano.</p></details>
+  <details><summary>Posso cambiare qualcosa dopo?</summary><p>Dicci cosa non va e lo sistemiamo.</p></details>
+</section>
+</main>
+
+<footer><span>Happy Hero Games.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span><a href="../privacy/">Privacy</a></span><span>Un sito di anteprima: gli ordini non sono ancora aperti.</span></footer>
+</div>
+
+<!-- Statcounter. The landing page only: a game's link at /g/ and a premiere link both carry a
+     family's details, and those never go to anyone else's server. -->
+<script>
+var sc_project=13355921;
+var sc_invisible=1;
+var sc_security="076798fb";
+</script>
+<script src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Analisi web semplice - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13355921/0/076798fb/1/" alt="Analisi web semplice - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+<script>
+// The skin picker. The choice is this visitor's, kept in their own browser, and it applies to every
+// page on the site. With no choice made, a device set to dark mode gets Cabinet (see site.css).
+(() => {
+  const root = document.documentElement, btn = document.getElementById('skin-toggle');
+  const dark = () => root.dataset.skin ? root.dataset.skin === 'dark'
+    : matchMedia('(prefers-color-scheme: dark)').matches;
+  const label = () => { btn.textContent = dark() ? btn.dataset.light : btn.dataset.dark; };
+  btn.addEventListener('click', () => {
+    root.dataset.skin = dark() ? 'light' : 'dark';
+    try { localStorage.setItem('hhg-skin', root.dataset.skin); } catch (e) {}
+    label();
+  });
+  label();
+})();
+</script>
+
+<script src="arcade/engine.js"></script>
+<script src="builder.js"></script>
+</body>
+</html>
