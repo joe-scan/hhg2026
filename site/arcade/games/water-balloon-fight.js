@@ -66,11 +66,13 @@ function gBalloons() {
     g.strokeStyle = '#ddd'; g.lineWidth = 1; g.beginPath(); g.moveTo(20, 40); g.quadraticCurveTo(240, 52, 460, 40); g.stroke();
     [['#e0102a', 90], ['#fff', 130], ['#ffd23f', 330], ['#22e6ff', 380]].forEach(([c, x]) => rect(x, 43 + Math.sin(x) * 2, 18, 14, c));
     rect(236, Y0, 8, Y1 - Y0, 'rgba(255,255,255,.12)');
-    // the back door, with a grown-up in it
-    rect(224, AY, 32, 26, '#3b2412'); rect(227, AY + 2, 26, 24, nu.ph === 'away' ? '#6b4220' : '#1a0f08');
-    if (nu.ph === 'away') rect(248, AY + 13, 2, 2, '#ffd23f');
+    // the back door. A spare grown-up looks out of it, if there is one: with only one other person
+    // in the game they are the opponent, and they cannot be in two places at once.
+    const shut = !nu.who || nu.ph === 'away';
+    rect(224, AY, 32, 26, '#3b2412'); rect(227, AY + 2, 26, 24, shut ? '#6b4220' : '#1a0f08');
+    if (shut) rect(248, AY + 13, 2, 2, '#ffd23f');
     else { person(nu.who, 240, 76, 2, false, 0); bubble(nu.line, 336, 30, 18); }
-    if (nu.ph === 'look') txt(nu.who.name + '\'S WATCHING. NO THROWING!', W / 2, 244, 8, COL.green, 'center', '#0a0416');
+    if (nu.who && nu.ph === 'look') txt(nu.who.name + '\'S WATCHING. NO THROWING!', W / 2, 244, 8, COL.green, 'center', '#0a0416');
     const ents = p.map((me, i) => ({ y: me.y, f: () => {
       shadow(me.x, me.y, 8);
       boy(i, me.x, me.y + 2, 2, i === 1, Math.floor(me.w / 6));

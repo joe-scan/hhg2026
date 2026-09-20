@@ -27,7 +27,7 @@ const COL = { bg: '#12062b', ink: '#0a0416', hot: '#ff2bd6', cyan: '#22e6ff', go
 const DEMO = {
   hero: { name: 'AVA', hair: 'ponytail', hairCol: '#6b3f1d', skin: '#f3c6a0', kit: '#1f7ae0' },
   occasion: 'birthday', catchphrase: 'NO WAY!', food: 'PIZZA',
-  family: [{ role: 'dad', name: '' }, { role: 'mum', name: '', hairCol: '#8a3a1a' }, { role: 'brother', name: 'JACK', hairCol: '#6b3f1d' }],
+  family: [{ role: 'dad', name: '' }],
   pet: { name: 'BISCUIT', col: '#e8c9a0' }
 };
 // A role's label changes with the reader: Mom and Grandma in North America, Mum and Granny elsewhere.
@@ -200,7 +200,7 @@ function setOpponent(k) {
   SAYNAME[0] = roleLabel(sp.role) || titleCase(sp.name); CATCH[0] = sp.lose; SAYCATCH[0] = titleCase(sp.lose);
 }
 // a grown-up who isn't the current opponent, for cameo jobs like calling people in for lunch
-function helper() { return FAM.find((m, k) => k !== OPP && m.kind === 'adult') || FAM.find(m => m.kind === 'adult') || null; }
+function helper() { return FAM.find((m, k) => k !== OPP && m.kind === 'adult') || null; }
 // the games call boy(i) for the two players and pet() for the pet
 function boy(i, cx, fy, sc, flip, frame) { drawSpec(CHAR[i], cx, fy, sc, flip, frame); }
 function person(sp, cx, fy, sc, flip, frame) { drawSpec(sp, cx, fy, sc, flip, frame); }
@@ -367,9 +367,9 @@ function syncButtons() {
   if (b) { b.setAttribute('aria-pressed', muted ? 'true' : 'false'); b.textContent = muted ? 'Sound: off' : 'Sound: on'; }
 }
 function toggleMute() { muted = !muted; if (muted) { try { speechSynthesis.cancel(); } catch (x) {} } syncButtons(); }
-// back to the title from anywhere: abandons the match in progress
+// back to the game's title screen from anywhere: abandons the match in progress
 function goHome() { shake = 0; try { speechSynthesis.cancel(); } catch (e) {} go('title'); }
-for (const [id, fn] of [['btn-home', goHome], ['btn-home-pad', goHome], ['btn-mute', toggleMute]]) {
+for (const [id, fn] of [['btn-home-pad', goHome], ['btn-mute', toggleMute]]) {
   const b = document.getElementById(id); if (b) b.addEventListener('click', () => { audioInit(); fn(); try { cv.focus(); } catch (e) {} });
 }
 
