@@ -128,15 +128,26 @@ await lights.fill('#who', 'Saoirse'); await lights.waitForTimeout(400);
 if (await lights.evaluate(() => HERO.name) !== 'SAOIRSE') errors.push('the name in lights page did not take the name');
 await lights.close();
 
-const hw = await browser.newPage(); watch(hw);
-await hw.goto(BASE + 'halloween/'); await hw.waitForTimeout(700);
-await hw.fill('#who', 'Fionn'); await hw.click('#play'); await hw.waitForTimeout(900);
-await hw.evaluate(() => { const gm = __hw.game(); for (let i = 0; i < 3700; i++) gm.update(); });
-await hw.waitForTimeout(800);
-const hwOver = await hw.evaluate(() => __hw.game().over);
-console.log('halloween:', hwOver ? 'ran a full minute and ended' : 'DID NOT END');
-if (!hwOver) errors.push('the Halloween game did not finish');
-await hw.close();
+// every free theme game: it starts, it runs a full minute, it ends, and the end card is drawn
+for (const [theme, who] of [['themes/halloween/', 'Fionn'], ['themes/christmas/', 'Sean']]) {
+  const fp = await browser.newPage(); watch(fp);
+  await fp.goto(BASE + theme); await fp.waitForTimeout(700);
+  await fp.fill('#who', who); await fp.click('#play'); await fp.waitForTimeout(900);
+  await fp.evaluate(() => { const gm = __free.game(); for (let i = 0; i < 3700; i++) gm.update(); });
+  await fp.waitForTimeout(900);
+  const over = await fp.evaluate(() => __free.game().over);
+  const shown = await fp.evaluate(() => !document.getElementById('save').hidden);
+  console.log(theme, over ? 'ran to the end' : 'DID NOT END', shown ? 'and offered the picture' : 'WITH NO PICTURE');
+  if (!over) errors.push(theme + ' did not finish');
+  if (!shown) errors.push(theme + ' never offered the picture');
+  await fp.close();
+}
+
+// the old Halloween address was shared before the games moved under /themes/
+if (BASE.startsWith('https://')) {
+  const moved = await fetch(BASE + 'halloween/', { redirect: 'manual' });
+  if (moved.status !== 301) errors.push('/halloween/ no longer redirects (' + moved.status + ')');
+}
 
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);

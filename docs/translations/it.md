@@ -15,7 +15,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A personalized arcade game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Un gioco arcade personalizzato con qualcuno di speciale come protagonista, e la sua famiglia e i suoi amici come avversari. Prova la demo gratuita in un minuto, su qualsiasi telefono o portatile. |
 | Page sections | Sezioni della pagina |
 | How it works | Come funziona |
-| Prices | Prezzo |
 | Privacy | Privacy |
 | Questions | Domande |
 | Put someone special in their | Metti qualcuno di speciale nel suo |
@@ -66,14 +65,13 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The game | Il gioco |
 | The private link, and it's theirs forever. | Il link privato, ed è suo per sempre. |
 | The gift box | La confezione regalo |
-| The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad and Biscuit the dog | Il poster stampato: la schermata del titolo con AVA a luci, HAPPY BIRTHDAY, AVA sotto, tre dei suoi giochi in fondo e il cast: papà e Biscuit, il cane |
+| The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Il trailer: la schermata del titolo di Ava, la sfida contro papà, un po' di gioco e il finale di compleanno |
+| The poster and the trailer, made from one demo family. Yours has your own names in it. | Il poster e il trailer, fatti con una famiglia di esempio. Il tuo avrà i vostri nomi. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Italiano |
 |---|---|
-| The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | Il trailer: la schermata del titolo di Ava, la sfida contro papà, un po' di gioco e il finale di compleanno |
-| The poster and the trailer, made from one demo family. Yours has your own names in it. | Il poster e il trailer, fatti con una famiglia di esempio. Il tuo avrà i vostri nomi. |
 | hello@happyherogames.com | hello@happyherogames.com |
 | Private by design | Privato fin dall'inizio |
 | No photos, no recordings. The hero is drawn in pixels. | Niente foto, niente registrazioni. L'eroe è disegnato in pixel. |
@@ -119,7 +117,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Children | Bambini |
 | The buyer is an adult: a parent, grandparent or friend of the family. We ask them to confirm they're allowed to share the details they're giving us about the child and everyone else in the game. Children don't have accounts here and can't give us anything themselves. | Chi compra è un adulto: un genitore, un nonno o un amico di famiglia. Gli chiediamo di confermare che può condividere questi dati sul bambino e su tutte le altre persone del gioco. I bambini qui non hanno un account e non possono darci niente da soli. |
 | Who we are | Chi siamo |
-| Back to the front page | Torna alla prima pagina |
 | Home | Home |
 | Share | Condividi |
 | Edit your hero | Modifica il tuo eroe |
@@ -161,7 +158,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They are the hero. Their family and friends are the ones they have to beat. Build them here and play it now. | L'eroe è lui. La famiglia e gli amici sono quelli da battere. Crealo qui e gioca subito. |
 | A pixel arcade title screen reading STARRING AVA, HAPPY BIRTHDAY EDITION, with the family lined up | Una schermata del titolo arcade in pixel: STARRING AVA, HAPPY BIRTHDAY EDITION, con la famiglia in fila |
 | The end of a HappyHeroGames game: HAPPY BIRTHDAY, AVA! in lights, a birthday cake, and the family and dog cheering in pixel art | La fine di un gioco HappyHeroGames: HAPPY BIRTHDAY, AVA! a luci, una torta di compleanno, e la famiglia con il cane che esultano in pixel art |
-| Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. Or a poster of their game, printed and posted, to keep on the wall. | Ogni gioco è uguale: cinque giochi e un boss, tutte le persone a cui vuole bene, fino a otto, pronto in 48 ore. Oppure un poster del suo gioco, stampato e spedito, da tenere al muro. |
 | The game, a printed poster of their name in lights, posted to you, and a short trailer of their own game for the family chat. | Il gioco, un poster stampato con il suo nome a luci, spedito per posta, e un breve trailer del suo gioco per la chat di famiglia. |
 | Privacy \| HappyHeroGames | Privacy \| HappyHeroGames |
 | What HappyHeroGames collects, what it never collects, and how to have it deleted. | Cosa raccoglie HappyHeroGames, cosa non raccoglie mai e come farlo cancellare. |
@@ -174,8 +170,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A pixel arcade title screen with the hero's name in lights | Una schermata del titolo arcade in pixel con il nome dell'eroe a luci |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Il tuo gioco HappyHeroGames. Gioca con la tastiera, un controller o i tasti sullo schermo. |
 | Gift cards too. | Ci sono anche le carte regalo. |
-| The first ten games | I primi dieci giochi |
-| We're building the first ten by hand, for families who don't mind being first. Tell us who it's for and we'll send a payment link and a date. If we can't make your date, we'll say so instead of taking the money. | Stiamo creando i primi dieci a mano, per famiglie a cui non dispiace essere le prime. Dicci per chi è e ti mandiamo un link di pagamento e una data. Se non riusciamo a rispettare la tua data, te lo diciamo invece di prendere i soldi. |
 | Start an order | Inizia un ordine |
 | Or email | Oppure scrivi a |
 | Terms and refunds | Condizioni e rimborsi |
@@ -205,7 +199,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Un gioco di Halloween gratis con il tuo nome. Prendi le caramelle, lascia i cavolini, sessanta secondi. Niente da installare. |
 | Trick or Treat Dash | Dolcetto o Scherzetto |
 | A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts. | Un gioco di Halloween gratis con il tuo nome. Sessanta secondi, prendi le caramelle, lascia i cavolini. |
-| Name in lights | Nome a luci |
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser. | Un gioco di Halloween gratis con il tuo nome. Prendi le caramelle, lascia stare i cavolini, sessanta secondi. Niente da installare e niente esce dal tuo browser. |
 | Your name | Il tuo nome |
 | Start | Inizia |
@@ -213,13 +206,36 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Left and right arrow keys, or the buttons under the screen on a phone. | Frecce sinistra e destra, o i tasti sotto lo schermo sul telefono. |
 | This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Questo è gratis e uguale per tutti. I giochi che facciamo sono il contrario: cinque giochi, la tua famiglia e i tuoi amici come avversari, e le loro battute in ogni schermata. |
 | Build one, free | Creane uno, gratis |
-| Halloween game | Gioco di Halloween |
 | Last changed 20 September 2026. The first ten games are being taken by email and built by hand, so this covers both the free demo, which sends us nothing, and what an order involves. | Ultima modifica: 20 settembre 2026. I primi dieci giochi si ordinano per e-mail e si fanno a mano, quindi qui c'è sia come funziona la demo gratuita, che non ci invia niente, sia cosa comporta un ordine. |
 | For an order we ask for what the game needs and nothing else: | Per un ordine chiediamo quello che serve al gioco e nient'altro: |
 | Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Ogni gioco è uguale: cinque giochi e un boss, tutte le persone a cui vogliono bene dentro, fino a otto persone, pronto in 48 ore. E se vuoi: un poster del loro gioco, stampato e spedito, da appendere al muro. |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | Il poster stampato: la schermata del titolo con AVA a luci, sotto BUON COMPLEANNO, AVA, in basso tre dei suoi giochi e nei titoli papà, mamma, Jack e il cane Biscuit |
 | Order one | Ordina |
 | Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money. | Dicci per chi è e per quando ti serve. Ti mandiamo un link di pagamento e una data, oppure ti diciamo che non ce la facciamo invece di prenderti i soldi. |
+| Free games | Giochi gratis |
+| Sleigh Dash: Christmas | Corsa della slitta: Natale |
+| Trick or Treat Dash: Halloween | Dolcetto o scherzetto: Halloween |
+| Your name in lights | Il tuo nome a luci |
+| All of them | Tutti |
+| Free games \| HappyHeroGames | Giochi gratis \| HappyHeroGames |
+| Free arcade games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Giochi arcade gratis per Natale, Halloween e qualsiasi altro giorno. Il tuo nome sulla schermata finale, niente da installare, niente che arrivi a noi. |
+| Free arcade games with your name on them | Giochi arcade gratis con il tuo nome |
+| A minute each, in any browser. Christmas, Halloween, or just your name in lights. | Un minuto ciascuno, in qualsiasi browser. Natale, Halloween o semplicemente il tuo nome a luci. |
+| A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Un minuto ciascuno, in qualsiasi browser, con il tuo nome sulla schermata finale. Niente da installare, nessuna registrazione e niente di ciò che scrivi arriva a noi. Fatti per essere mandati in giro. |
+| Sleigh Dash | Corsa della slitta |
+| Christmas. Run the rooftops and jump: a present goes down every chimney you clear. One button. | Natale. Corri sui tetti e salta: un regalo scende in ogni camino che superi. Un solo pulsante. |
+| Halloween. Catch the sweets in your bucket and leave the sprouts alone. Left and right. | Halloween. Prendi le caramelle nel secchiello e lascia stare i cavolini. Sinistra e destra. |
+| Any day. Type a name and it goes up on an arcade screen, dressed for the occasion. Save the picture. | Un giorno qualsiasi. Scrivi un nome e compare su una schermata arcade, addobbata per l'occasione. Salva l'immagine. |
+| Next | Prossimamente |
+| Easter, the first day back at school, and a penalty shoot-out for whatever final is on. One a season. | Pasqua, il primo giorno di scuola e i rigori per la finale di turno. Uno a stagione. |
+| These are the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen. | Questi sono uguali per tutti. I giochi che facciamo sono il contrario: cinque, con la tua famiglia e i tuoi amici da battere e le loro battute scritte in ogni schermata. |
+| Sleigh Dash \| HappyHeroGames | Corsa della slitta \| HappyHeroGames |
+| A free Christmas game with your name on it. Run the rooftops, jump the chimneys, sixty seconds. Nothing to install. | Un gioco di Natale gratis con il tuo nome. Corri sui tetti, salta i camini, sessanta secondi. Niente da installare. |
+| A free Christmas game with your name on it. Sixty seconds on the rooftops, one present down every chimney you clear. | Un gioco di Natale gratis con il tuo nome. Sessanta secondi sui tetti e un regalo in ogni camino che superi. |
+| A free Christmas game with your name on it. Run the rooftops, jump the chimneys, and a present goes down every one you clear. Sixty seconds, nothing to install, and nothing you type leaves your browser. | Un gioco di Natale gratis con il tuo nome. Corri sui tetti, salta i camini e un regalo scende in ognuno che superi. Sessanta secondi, niente da installare e niente di ciò che scrivi esce dal tuo browser. |
+| Sleigh Dash: run the rooftops and jump the chimneys | Corsa della slitta: corri sui tetti e salta i camini |
+| JUMP | SALTA |
+| One button: space, the up arrow, or a tap on the screen. | Un solo pulsante: spazio, la freccia su o un tocco sullo schermo. |
 
 ## What the game says: names, instructions and scores
 
@@ -766,4 +782,35 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Tan | Beige |
 | Play  | Gioca al gioco di  |
 | 's game |  |
+| AND FELL OFF  | E SEI CADUTO DA  |
+|  ROOF. |  TETTO. |
+|  ROOFS. |  TETTI. |
+| CATCH THE SWEETS IN YOUR BUCKET. | PRENDI LE CARAMELLE NEL SECCHIELLO. |
+| LEAVE THE SPROUTS ALONE. | LASCIA STARE I CAVOLINI. |
+| SIXTY SECONDS. | SESSANTA SECONDI. |
+| HAPPY HALLOWEEN | BUON HALLOWEEN |
+| CAUGHT  | PRESE  |
+|  SWEET |  CARAMELLA |
+|  SWEETS |  CARAMELLE |
+|  SPROUTS. UNLUCKY. |  CAVOLINI. CHE SFORTUNA. |
+|  caught  |  ha preso  |
+|  sweets at happyherogames.com |  caramelle su happyherogames.com |
+| SLEIGH DASH | CORSA DELLA SLITTA |
+| RUN THE ROOFTOPS AND JUMP. | CORRI SUI TETTI E SALTA. |
+| CLEAR A CHIMNEY, POST A PRESENT. | SALTA UN CAMINO, CADE UN REGALO. |
+| MIND THE GAPS. | ATTENTO AI BUCHI. |
+| POSTED  | CONSEGNATI  |
+|  PRESENT |  REGALO |
+|  PRESENTS |  REGALI |
+|  posted  |  ha consegnato  |
+|  presents at happyherogames.com |  regali su happyherogames.com |
+| PRESENTS:  | REGALI:  |
+| TAP TO JUMP | TOCCA PER SALTARE |
+| PRESS FIRE TO JUMP | PREMI FUOCO PER SALTARE |
+| TAP START | TOCCA PER INIZIARE |
+| PRESS START | PREMI START |
+| TAP TO PLAY AGAIN | TOCCA PER RIGIOCARE |
+| PRESS START TO PLAY AGAIN | PREMI START PER RIGIOCARE |
+| Saved. | Salvato. |
+| Not shared. | Non condiviso. |
 

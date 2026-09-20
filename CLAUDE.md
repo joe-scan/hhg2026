@@ -10,7 +10,7 @@ HappyHeroGames puts someone special in their own arcade game. Usually that's a c
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
 - **Occasions:** birthdays all year, Christmas, Father's Day, Mother's Day, "just because".
-- **Status (20 Sep 2026):** live at happyherogames.com in six languages: landing page, hero builder, a free one-game demo, party mode, two free games (`/name/`, `/halloween/`), privacy policy and draft terms. **Orders for the first ten games are open**, taken by email and built by hand. No automatic payments, no questionnaire form, no database, and no solicitor has read the terms yet.
+- **Status (20 Sep 2026):** live at happyherogames.com in six languages: landing page, hero builder, a free one-game demo, party mode, three free games (`/themes/christmas/`, `/themes/halloween/`, `/name/`), privacy policy and draft terms. **Orders for the first ten games are open**, taken by email and built by hand. No automatic payments, no questionnaire form, no database, and no solicitor has read the terms yet.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
@@ -26,7 +26,8 @@ What we learnt from it, and why the product looks like this:
 
 - **One hero per game.** The hero is player slot 1. Each game is against a different family member or friend in slot 0, played by the computer, or by a real grown-up in 2-player mode.
 - **The hero is meant to win more often than not.** The games came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
-- **Free games are the share engine.** `/name/` and `/halloween/` ask for nothing, store nothing and end on a picture with somebody's name on it. They exist to be sent to people, and every one of them points at the builder. `docs/viral.md` has the rest of the list.
+- **Free games are the share engine.** They live at `/themes/<season>/`, ask for nothing, store nothing, and end on a picture with somebody's name on it. They exist to be sent to people, and every one points at the builder. Christmas is Sleigh Dash, Halloween is Trick or Treat Dash, and `/name/` is the name-in-lights tool. `docs/viral.md` has the rest of the list.
+- **A new theme is a game file and a page.** `arcade/free.js` is the harness: the start screen, the minute, and the end card with the name in lights. The game object carries its own screen text (`name`, `howto`, `endTitle`, `result()`, `note()`, `bg()`, `prop()`, `cols`, `shareLine()`), so a season is translated with the rest of the game code rather than stranded in a page. One rule learnt from Sleigh Dash: **never end a free game early.** Falling costs three seconds, not the run. Sixty seconds, one picture, every time.
 - **Party mode.** A third option on the title screen: pick two to six challengers, each takes a turn against the hero on the same screen, and it ends on a results board with a champion. Built for birthday parties, where one gift is seen by six families. No typing: challengers are PLAYER 1 to PLAYER 6, because a name box on a canvas is a misery.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence.
@@ -87,7 +88,8 @@ Written by hand
   docs/viral.md           fifty ways this could spread, ranked by effort
   docs/todo.md            Joe's list: everything outside the code, and what is done
   docs/research/          raw captures behind the research, kept so claims can be checked
-  site-src/pages/*.html     the source pages, one per page
+  site-src/pages/*.html     the source pages, one per page. The free games are under
+                            pages/themes/<season>/, listed at pages/themes/index.html
   site-src/partials/        header.html and footer.html, dropped into every page by the build
                             at the <!--header--> and <!--footer--> marks. {{root}} becomes / or
                             /es/ and so on, so every link is absolute and the wordmark always
@@ -99,7 +101,9 @@ Written by hand
     arcade/scenes.js        the occasion decorations: cake, balloons, tree, presents, flowers,
                             trophy, medal, snow and confetti. scene(occasion, t, front) dresses
                             a whole screen; the finale and the name page both use it
-    arcade/games/*.js       one file per game, plus bosses.js and the free trick-or-treat.js
+    arcade/games/*.js       one file per game, plus bosses.js and the free seasonal ones
+                            (trick-or-treat.js, sleigh-dash.js)
+    arcade/free.js          the harness every free theme page runs on
     builder.js              the builder: form to config, live preview, Play link
     css/site.css            shared page styles, the two looks, design tokens
     img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif

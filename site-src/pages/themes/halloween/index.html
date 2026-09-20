@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trick or Treat Dash | HappyHeroGames</title>
+<meta name="description" content="A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install.">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#12062b">
+<meta property="og:title" content="Trick or Treat Dash">
+<meta property="og:description" content="A free Halloween game with your name on it. Sixty seconds, catch the sweets, leave the sprouts.">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<!--hreflang-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Bowlby+One&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+</head>
+<body>
+<div class="wrap">
+<!--header-->
+
+<main class="free">
+  <h1>Trick or Treat Dash</h1>
+  <p class="sub">A free Halloween game with your name on it. Catch the sweets, leave the sprouts alone, sixty seconds. Nothing to install and nothing you type leaves your browser.</p>
+
+  <div class="start">
+    <label class="sr" for="who">Your name</label>
+    <input id="who" maxlength="12" autocomplete="off" spellcheck="false" placeholder="Your name">
+    <button class="btn go" type="button" id="play">Start</button>
+  </div>
+
+  <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Trick or Treat Dash: catch the falling sweets in your bucket"></canvas></div>
+
+  <div class="pads" aria-hidden="true">
+    <button type="button" data-p="1" data-k="l">&#9664;</button>
+    <button type="button" data-p="1" data-k="r">&#9654;</button>
+  </div>
+
+  <p class="keys">Left and right arrow keys, or the buttons under the screen on a phone.</p>
+
+  <div class="acts">
+    <button class="btn" type="button" id="save" hidden>Save the picture</button>
+    <button class="btn" type="button" id="share" hidden>Share it</button>
+    <small id="msg" role="status"></small>
+  </div>
+
+  <div class="after">
+    <p>This one is free and the same for everybody. The games we make are the other way round: five of them, your own family and friends as the ones to beat, and their jokes written into every screen.</p>
+    <p><a class="btn go" href="../../index.html#make">Build one, free</a></p>
+  </div>
+</main>
+
+<!--footer-->
+</div>
+
+<script src="../../arcade/engine.js"></script>
+<script src="../../arcade/scenes.js"></script>
+<script src="../../arcade/games/trick-or-treat.js"></script>
+<script src="../../arcade/free.js"></script>
+<script>freePage(gTrickOrTreat, { file: 'trick-or-treat', occasion: 'star' });</script>
+</body>
+</html>

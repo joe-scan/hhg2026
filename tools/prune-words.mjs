@@ -7,8 +7,12 @@ import { JS_FILES, stringsIn } from './strings.mjs';
 
 const ROOT = path.join(import.meta.dirname, '..');
 const live = new Set();
-for (const page of PAGES) {
-  const html = fs.readFileSync(path.join(ROOT, 'site-src/pages', page), 'utf8');
+// The header and footer are dropped into every page by the build, so their words are live even
+// though they appear in no page file. Forgetting them once deleted a working translation.
+const SOURCES = PAGES.map(p => path.join('site-src/pages', p))
+  .concat(fs.readdirSync(path.join(ROOT, 'site-src/partials')).map(f => path.join('site-src/partials', f)));
+for (const page of SOURCES) {
+  const html = fs.readFileSync(path.join(ROOT, page), 'utf8');
   for (const m of html.matchAll(/>([^<>]+)</g)) live.add(m[1].trim());
   for (const m of html.matchAll(/\s(?:title|alt|placeholder|aria-label|content|data-int|data-dark|data-light)="([^"]*)"/g)) live.add(m[1].trim());
 }

@@ -21,7 +21,7 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'name/index.html', 'halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html'];
+export const PAGES = ['index.html', 'name/index.html', 'themes/index.html', 'themes/christmas/index.html', 'themes/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html'];
 // Pages that stay in English for now. The terms are a legal document and a bad translation of one
 // is worse than none; every language links to the English copy until a lawyer has seen it.
 export const ENGLISH_ONLY = ['terms/index.html'];
@@ -95,11 +95,14 @@ function translateJs(src, dict, missing) {
 // --- paths -------------------------------------------------------------------------------
 // A translated page sits one folder deeper than its English original, so every relative link
 // needs one more step up. Absolute, anchor, mail and external links are left alone.
+// Only the shared static files live at the site root. Every page, and a translated copy of the
+// game code, lives inside the language folder, so those links must stay exactly as written:
+// rerooting them is how a Spanish page ended up sending people to the English demo.
+const SHARED = /(^|\/)(css|img)\//;
 function reroot(html, up) {
   return html.replace(/\s(href|src)="([^"]+)"/g, (m, attr, url) => {
     if (/^([a-z]+:|\/|#)/i.test(url)) return m;
-    // the game code has a translated copy inside the language folder, so those paths stay put
-    if (/(^|\/)(arcade\/|builder\.js)/.test(url)) return m;
+    if (!SHARED.test(url)) return m;
     return ` ${attr}="${up}${url}"`;
   });
 }

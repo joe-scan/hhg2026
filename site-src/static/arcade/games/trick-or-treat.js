@@ -1,6 +1,6 @@
 'use strict';
 // ---------- TRICK OR TREAT DASH: the free Halloween game
-// Not part of a paid game, so it never calls addGame(). It runs on its own from /halloween/,
+// Not part of a paid game, so it never calls addGame(). It runs on its own from /themes/halloween/,
 // using the engine's drawing, input and sound. One player, sixty seconds, and one number at the
 // end that is worth sending to somebody.
 
@@ -34,7 +34,19 @@ function hwPumpkin(px, py, sc) {
 }
 
 function gTrickOrTreat(seconds) {
-  const s = { name: 'TRICK OR TREAT DASH', score: 0, missed: 0, over: false };
+  // the text the free page puts around the game, here rather than in the page, so it is
+  // translated with the rest of the game code
+  const s = {
+    name: 'TRICK OR TREAT DASH', score: 0, missed: 0, over: false,
+    howto: ['CATCH THE SWEETS IN YOUR BUCKET.', 'LEAVE THE SPROUTS ALONE.', 'SIXTY SECONDS.'],
+    endTitle: 'HAPPY HALLOWEEN',
+    result: () => 'CAUGHT ' + s.score + (s.score === 1 ? ' SWEET' : ' SWEETS'),
+    note: () => s.missed ? 'AND ' + s.missed + ' SPROUTS. UNLUCKY.' : '',
+    bg: t2 => hwNight(t2),
+    prop: () => hwPumpkin(64, 240, 1.4),
+    cols: ['#ff6b1a', '#ffd23f', '#ff2bd6', '#fff'],
+    shareLine: who => who + ' caught ' + s.score + ' sweets at happyherogames.com'
+  };
   const FLOOR = 238, LEFT = 40, RIGHT = 440;
   const SWEET = ['#ff2bd6', '#ffd23f', '#22e6ff', '#3dff8b', '#ff6b1a'];
   let x = W / 2, t = 0, time = (seconds || 60) * 60, drops = [], spawn = 30, pops = [];
