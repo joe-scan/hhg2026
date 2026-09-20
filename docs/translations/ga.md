@@ -49,7 +49,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A live preview of the hero, their family and friends, in pixels | Réamhamharc picteilíní ar an laoch, a muintir agus a gcairde |
 | Answer a few questions | Freagair cúpla ceist |
 | We build the game | Tógaimid an cluiche |
-| Two days, and a person plays it through before it goes anywhere. | Dhá lá, agus imríonn duine tríd é sula dtéann sé áit ar bith. |
 | They play it | Imríonn siad é |
 | How every game ends. | Mar sin a chríochnaíonn gach cluiche. |
 | Price | Praghas |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | First names, or what people are called at home: Mom, Grandma, Coach. | Céadainmneacha, nó an rud a thugtar orthu sa bhaile: Mamaí, Mamó, Traenálaí. |
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Na rudaí is breá leis an laoch a dhéanamh, nathanna cainte agus scéalta grinn an teaghlaigh, na bianna is fearr leo. |
 | The pet's name, kind and color. | Ainm, cineál agus dath an pheata. |
+| The occasion, and the date you need it by. | An ócáid, agus an dáta a bhfuil sé uait. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Gaeilge |
 |---|---|
-| The occasion, and the date you need it by. | An ócáid, agus an dáta a bhfuil sé uait. |
 | Your own email address and payment details, so we can send the game and take the money. | Do sheoladh ríomhphoist féin agus sonraí íocaíochta, chun an cluiche a sheoladh agus an t-airgead a ghlacadh. |
 | What we never collect | Cad nach mbailímid riamh |
 | Photographs. The hero is drawn in pixels from choices you make. | Grianghraif. Tarraingítear an laoch i bpicteilíní as na roghanna a dhéanann tú. |
@@ -202,7 +201,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | What device do I need? | Cén gléas atá uaim? |
 | Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin. Níl aon rud le híoslódáil ná le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a roinnt agus é casta ar a thaobh. |
 | How do I give it to them? | Conas a thugaim dóibh é? |
-| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. The gift box also has a printed poster, which arrives in the post so there is something to wrap. | Seolaimid seoladh gréasáin chugat ar ríomhphost nach leo ach iadsan. Seol ar an lá é le teachtaireacht nó ríomhphost, nó scríobh isteach i gcárta é. Tá póstaer clóite sa bhosca bronntanais freisin, a thagann sa phost, ionas go mbeidh rud éigin ann le filleadh. |
 | Do I need to be good with computers? | An gá dom a bheith go maith le ríomhairí? |
 | No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | Ní gá. Freagraíonn tú cúpla ceist ar fhoirm, mar a líonfá isteach seoladh. Déanaimid an cluiche agus seolaimid an nasc chugat. |
 | Who can be in the game? | Cé atá in ann a bheith sa chluiche? |
@@ -269,6 +267,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Five games. Up to eight people in it. Ready within five working days. | Cúig chluiche. Suas le hochtar istigh ann. Réidh i gceann cúig lá oibre. |
 | A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen. | Nóiméad an ceann, i mbrabhsálaí ar bith. Cluiche Nollag agus cluiche Oíche Shamhna, le d'ainm ar an scáileán deiridh. |
 | One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Cluiche amháin, tógtha i do bhrabhsálaí as an méid a chlóscríobh tú. Tá cúig chluiche sa chluiche iomlán, roghnaithe de réir na rudaí is breá leo, suas le hochtar, agus an deireadh lena n-ainm i soilse. |
+| Five working days, and a person plays it through before it goes anywhere. | Cúig lá oibre, agus imríonn duine tríd é sula dtéann sé áit ar bith. |
+| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Seolaimid seoladh gréasáin chugat ar ríomhphost nach leo ach iadsan. Seol ar an lá é le teachtaireacht nó ríomhphost, nó scríobh isteach i gcárta é. Cuir an póstaer clóite leis agus tagann sé sa phost, ionas go mbeidh rud éigin ann le filleadh. |
 
 ## What the game says: names, instructions and scores
 

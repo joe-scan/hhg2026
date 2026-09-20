@@ -49,7 +49,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A live preview of the hero, their family and friends, in pixels | Vista previa en píxeles del héroe, su familia y sus amigos |
 | Answer a few questions | Responde unas preguntas |
 | We build the game | Creamos el juego |
-| Two days, and a person plays it through before it goes anywhere. | Dos días, y una persona lo juega entero antes de que salga. |
 | They play it | Lo juegan |
 | How every game ends. | Así termina cada juego. |
 | Price | Precio |
@@ -67,12 +66,12 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | First names, or what people are called at home: Mom, Grandma, Coach. | Nombres de pila, o cómo se llama cada uno en casa: mamá, abuela, entrenador. |
 | What the hero loves doing, the family's catchphrases and running jokes, favorite foods. | Qué le encanta hacer al héroe, las frases y los chistes de la familia, sus comidas favoritas. |
 | The pet's name, kind and color. | El nombre, el tipo y el color de la mascota. |
+| The occasion, and the date you need it by. | La ocasión y la fecha para la que lo necesitas. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Español |
 |---|---|
-| The occasion, and the date you need it by. | La ocasión y la fecha para la que lo necesitas. |
 | Your own email address and payment details, so we can send the game and take the money. | Tu correo electrónico y los datos de pago, para enviarte el juego y cobrar. |
 | What we never collect | Qué no recopilamos nunca |
 | Photographs. The hero is drawn in pixels from choices you make. | Fotografías. El héroe se dibuja en píxeles a partir de lo que eliges. |
@@ -202,7 +201,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | What device do I need? | ¿Qué aparato necesito? |
 | Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Cualquier teléfono, tablet, portátil u ordenador con navegador. No hay nada que descargar ni instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal. |
 | How do I give it to them? | ¿Cómo se lo regalo? |
-| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. The gift box also has a printed poster, which arrives in the post so there is something to wrap. | Te enviamos por correo una dirección web que es solo suya. Mándasela ese día por mensaje o por correo, o escríbela dentro de una tarjeta. La caja regalo lleva además un póster impreso, que llega por correo para que haya algo que envolver. |
 | Do I need to be good with computers? | ¿Hace falta saber de ordenadores? |
 | No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | No. Respondes unas preguntas en un formulario, como quien rellena una dirección. Nosotros creamos el juego y te enviamos el enlace. |
 | Who can be in the game? | ¿Quién puede salir en el juego? |
@@ -269,6 +267,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Five games. Up to eight people in it. Ready within five working days. | Cinco juegos. Hasta ocho personas dentro. Listo en cinco días laborables. |
 | A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen. | Un minuto cada uno, en cualquier navegador. Un juego de Navidad y uno de Halloween, con tu nombre en la pantalla final. |
 | One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Un juego, creado en tu navegador con lo que has escrito. El juego completo tiene cinco juegos elegidos según lo que le encanta, hasta ocho personas y el final con su nombre en luces. |
+| Five working days, and a person plays it through before it goes anywhere. | Cinco días laborables, y una persona lo juega entero antes de que salga. |
+| We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Te enviamos por correo una dirección web que es solo suya. Mándasela ese día por mensaje o por correo, o escríbela dentro de una tarjeta. Añade el póster impreso y llega por correo, así hay algo que envolver. |
 
 ## What the game says: names, instructions and scores
 
