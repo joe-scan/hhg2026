@@ -3,7 +3,7 @@
 function gPaddle() {
   const s = { name: 'PADDLE BATTLE', how: ['ONE BALL, TWO PADDLES.', 'BLOCK IT, THEN AIM WITH THE EDGE.', 'FIRST TO 3 WINS.'], ctl: 'MOVE: UP AND DOWN', pts: [0, 0], done: -1 };
   const ph = [36, 44], py = [150, 150];
-  let b, serveT = 0, err = 0, trail = [];
+  let b, serveT = 0, err = 0, trail = [], t = 0;
   function serve(dir) { b = { x: 240, y: 150, vx: dir * 2.4, vy: rnd(-1.3, 1.3) }; serveT = 60; trail = []; }
   s.init = () => serve(R() < .5 ? -1 : 1);
   s.sub = () => s.pts[0] + ' - ' + s.pts[1];
@@ -22,6 +22,7 @@ function gPaddle() {
     if (s.pts[i] >= 3) s.done = i; else serve(i === 0 ? 1 : -1);
   }
   s.update = () => {
+    t++;
     for (let i = 0; i < 2; i++) { const I = inp(i); py[i] = clamp(py[i] + ((I.d ? 1 : 0) - (I.u ? 1 : 0)) * 3.2, AY + ph[i] / 2, H - ph[i] / 2); }
     if (serveT > 0) { serveT--; return; }
     b.x += b.vx; b.y += b.vy; trail.push([b.x, b.y]); if (trail.length > 8) trail.shift();
@@ -32,10 +33,7 @@ function gPaddle() {
     if (b.x < -8) point(1); else if (b.x > W + 8) point(0);
   };
   s.draw = () => {
-    for (let k = 0; k < 12; k++) rect(k * 40, AY, 40, H - AY, k % 2 ? '#0e5a2a' : '#0b4d24');
-    rect(239, AY, 2, H - AY, 'rgba(255,255,255,.5)'); rect(60, AY, 1, H - AY, 'rgba(255,255,255,.3)'); rect(419, AY, 1, H - AY, 'rgba(255,255,255,.3)');
-    // goalposts
-    for (const x of [6, 470]) { rect(x, 100, 3, 100, '#fff'); rect(x - 2, 100, 7, 3, '#fff'); rect(x - 2, 197, 7, 3, '#fff'); }
+    court(t);
     for (let i = 0; i < 2; i++) {
       const x = i === 0 ? 33 : 442;
       boy(i, i === 0 ? 17 : 463, py[i] + 18, 2, i === 1, Math.floor(py[i] / 6));

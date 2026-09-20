@@ -96,9 +96,9 @@
     scene(CFG.occasion, t, false);
     // The same sizes as the game's title screen, because this is the picture people judge the
     // whole thing on, and on a phone this canvas is about 350 pixels wide.
-    txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+    txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
-    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, PLATE());
+    namePlate(n, W / 2, 28 + 4, size);
     nameLogo(n, W / 2, 32, size);
     const occ = OCCASIONS[CFG.occasion] === 'YOU\'RE A STAR' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion];
     const ow = occ.length * 16;

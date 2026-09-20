@@ -121,9 +121,18 @@ function gQuiz() {
     if ((out[0] && out[1]) || T <= 0) { floatText(T <= 0 ? 'TIME UP!' : 'NOBODY GOT IT!', W / 2, 186, '#fff', 16); phase = 'show'; T = 110; sfx.blip(); }
   };
   s.draw = () => {
-    rect(0, AY, W, H - AY, '#1d0f3a');
-    for (let x = 0; x < W; x += 40) rect(x, 212, 20, 58, '#2a1650');
-    rect(0, 212, W, 2, COL.hot);
+    // a quiz night: a lit stage, a curtain, and the backs of everyone's heads
+    rect(0, AY, W, H - AY, '#13233d');
+    for (let k = 0; k < 24; k++) rect(k * 21, AY, 19, 70, k % 2 ? '#7c1d2e' : '#8f2334');
+    rect(0, AY + 66, W, 4, '#5a1220');
+    g.fillStyle = 'rgba(255,214,102,.13)';
+    g.beginPath(); g.moveTo(210, AY); g.lineTo(270, AY); g.lineTo(400, 214); g.lineTo(80, 214); g.closePath(); g.fill();
+    rect(0, 212, W, 58, '#0e1a2e'); rect(0, 212, W, 3, COL.gold);
+    for (let k = 0; k < 13; k++) {
+      const x = 10 + k * 38, bob = (Math.floor(t / 16) + k) % 5 === 0 ? -2 : 0;
+      rect(x, 232 + bob, 22, 38, '#0a1424');
+      rect(x + 3, 220 + bob, 16, 14, ['#3a2a1a', '#1f2a3a', '#2a1a2a'][k % 3]);
+    }
     // the question card
     rect(24, 34, 432, 42, '#fff'); rect(24, 72, 432, 4, '#cfc8e6');
     const lines = wrap(q[0], 50);
@@ -131,7 +140,7 @@ function gQuiz() {
     if (phase === 'read') { txt('GET READY...', W / 2, 124, 16, t % 20 < 12 ? '#fff' : COL.dim, 'center'); }
     else for (const d of DIRS) {
       const [cx, cy] = BOX[d], isRight = d === right, reveal = phase === 'show';
-      let bg = '#2a1a4a', fg = '#fff';
+      let bg = ['#2a6fb0', '#c0392b', '#d19a1a', '#1f8b57'][DIRS.indexOf(d)], fg = '#fff';
       if (reveal && isRight) { bg = winner >= 0 ? PL[winner].col : COL.green; fg = '#0a0416'; }
       else if (!isRight && (picked[0] === d || picked[1] === d)) { bg = '#5a1a2a'; fg = COL.dim; }
       rect(cx - 72, cy - 12, 144, 24, bg);

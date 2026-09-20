@@ -28,7 +28,7 @@ function go(name, data) {
   if (ST[name].enter) ST[name].enter();
 }
 function hud(title, sub) {
-  rect(0, 0, W, AY - 2, '#0a0416'); rect(0, AY - 2, W, 2, COL.hot);
+  rect(0, 0, W, AY - 2, COL.ink); rect(0, AY - 2, W, 2, COL.hot);
   txt(PL[0].name, 6, 3, 10, PL[0].col); txt(PL[1].name, W - 6, 3, 10, PL[1].col, 'right');
   txt(title, W / 2, 3, 10, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 16, 8, '#fff', 'center');
   for (let k = 0; k < GAMES.length; k++) rect(W - 6 - (GAMES.length - k) * 10, 15, 7, 7, k < round - 1 ? COL.green : k === round - 1 ? '#fff' : COL.off);
@@ -57,10 +57,10 @@ const ST = {
       const t = S.t; bgSynth(t);
       // Sized to be read on a phone, where this canvas is about 350 pixels wide. Everything here
       // is at least 16px in the game's own 480-wide space, which is 12 on the glass.
-      txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+      txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
       const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
       // a dark plate behind the name, so it reads against the sun rather than sitting in it
-      rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, PLATE());
+      namePlate(n, W / 2, 28 + 4, size);
       nameLogo(n, W / 2, 32, size);
       const occ = CFG.occasion === 'star' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion];
       const ow = occ.length * 16;
@@ -70,16 +70,16 @@ const ST = {
       // the whole cast lined up along the horizon
       // small enough that eight of them still fit, and low enough to clear the occasion band
       const cast = [HERO].concat(FAM), gap = Math.min(48, (W - 60) / Math.max(1, cast.length)), x0 = W / 2 - (cast.length - 1) * gap / 2;
-      cast.forEach((sp, k) => { shadow(x0 + k * gap, 152, 9); drawSpec(sp, x0 + k * gap, 152, 2, false, Math.floor(t / 20 + k)); });
+      cast.forEach((sp, k) => { shadow(x0 + k * gap, 160, 9); drawSpec(sp, x0 + k * gap, 160, 2, false, Math.floor(t / 20 + k)); });
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
       MENU.forEach(([o], k) => {
         const on = S.sel === k, y = 166 + k * 22;
         if (on) arrow('r', W / 2 - o.length * 8 - 16, y + 4, 6, COL.hot);
-        txt(o, W / 2, y, 16, on ? COL.white : COL.dim, 'center', on);
+        txt(o, W / 2, y, 16, on ? COL.white : COL.ink, 'center', on);
       });
-      txt(MENU[S.sel][1], W / 2, 234, 8, COL.cyan, 'center');
+      txt(MENU[S.sel][1], W / 2, 234, 8, COL.ink, 'center');
       pressFire(250, touchMode ? 'TAP TO START' : 'PRESS FIRE', 12);
     }
   },

@@ -88,9 +88,9 @@
     t++;
     bgSynth(t);
     scene(occ, t, false);
-    txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
+    txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
-    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, PLATE());
+    namePlate(n, W / 2, 28 + 4, size);
     nameLogo(n, W / 2, 32, size);
     const line = OCCASIONS[occ] === "YOU'RE A STAR" ? 'AN ARCADE ADVENTURE' : OCCASIONS[occ];
     const ow = line.length * 16;

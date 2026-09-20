@@ -97,3 +97,45 @@ function scene(occ, t, front) {
     trophy(410, 252);
   }
 }
+
+// ===================== THE PLACES THE GAMES HAPPEN =====================
+// Flat colour, hard edges, one ink line where things meet: the same rules as the title screen.
+
+// A stand of people, packed in rows, bobbing. Used behind anything played in front of a crowd.
+function crowd(y, rows, t) {
+  rect(0, y, W, rows * 9 + 6, '#0d3f63');
+  // a few muted colours, not a rainbow: at this size a bright crowd is just noise
+  const COLS = ['#d8402f', '#e0a91f', '#dfe6ee', '#2a6fb0', '#c76a8a', '#5b4f8a'];
+  for (let r = 0; r < rows; r++) {
+    for (let k = 0; k < 40; k++) {
+      const x = k * 12 + (r % 2) * 6, seed = r * 40 + k;
+      const hop = (Math.floor(t / 14) + seed) % 7 === 0 ? -2 : 0;
+      rect(x + 1, y + 4 + r * 9 + hop, 8, 7, COLS[seed % COLS.length]);
+      rect(x + 2, y + 1 + r * 9 + hop, 6, 4, ['#f3c6a0', '#c98f63', '#8a5a3a'][seed % 3]);
+    }
+  }
+  rect(0, y + rows * 9 + 4, W, 3, COL.ink);
+}
+
+// The pitch every one-on-one game is played on: mown stripes, markings, goals and a crowd.
+function court(t) {
+  crowd(AY, 2, t);
+  const top = AY + 24;
+  for (let k = 0; k < 10; k++) rect(k * 48, top, 48, H - top, k % 2 ? '#12b76a' : '#0fa860');
+  rect(0, top, W, 3, '#0b8f51');
+  // markings
+  rect(238, top + 6, 3, H - top - 12, '#ffffff');
+  g.strokeStyle = '#ffffff'; g.lineWidth = 3; g.beginPath(); g.arc(240, (top + H) / 2, 34, 0, Math.PI * 2); g.stroke();
+  for (const [x, w] of [[0, 52], [W - 52, 52]]) {
+    rect(x, top + 26, w, 3, '#ffffff'); rect(x, H - 32, w, 3, '#ffffff');
+    rect(x === 0 ? w : W - w - 3, top + 26, 3, H - top - 58, '#ffffff');
+  }
+  // goals, with a net you can see through
+  for (const x of [0, W - 14]) {
+    rect(x, 104, 14, 96, 'rgba(255,255,255,.18)');
+    for (let k = 0; k < 8; k++) rect(x + k * 2, 104, 1, 96, 'rgba(255,255,255,.45)');
+    for (let k = 0; k < 13; k++) rect(x, 104 + k * 8, 14, 1, 'rgba(255,255,255,.45)');
+    rect(x === 0 ? 13 : W - 14, 104, 3, 96, '#ffffff');
+    rect(x, 101, 14, 3, '#ffffff'); rect(x, 200, 14, 3, '#ffffff');
+  }
+}

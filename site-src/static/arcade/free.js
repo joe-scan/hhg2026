@@ -40,7 +40,7 @@ function freePage(make, opt) {
     rect(0, 0, W, H, opt.veil || 'rgba(10,4,22,.7)');
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
     txt(game.endTitle, W / 2, 14, 16, COL.gold, 'center', true);
-    rect(W / 2 - (n.length * size) / 2 - 10, 40, n.length * size + 20, size + 8, PLATE());
+    namePlate(n, W / 2, 40 + 4, size);
     nameLogo(n, W / 2, 44, size);
     txt(game.result(), W / 2, 110, 20, COL.cyan, 'center', true);
     const note = game.note();

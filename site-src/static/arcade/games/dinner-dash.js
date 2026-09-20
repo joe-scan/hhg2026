@@ -71,10 +71,15 @@ function gDinner() {
   }
   s.draw = () => {
     // kitchen: tiles, the counter and the window
-    rect(0, AY, W, H - AY, '#f0e6d2');
-    for (let y = AY; y < FLOOR - 40; y += 16) for (let x = (y / 16) % 2 ? 0 : 8; x < W; x += 16) rect(x, y, 15, 15, '#e6d8bd');
-    rect(180, 40, 120, 60, '#9fd3ff'); rect(180, 40, 120, 60, 'rgba(255,255,255,.2)'); rect(238, 40, 4, 60, '#fff'); rect(180, 68, 120, 4, '#fff');
-    rect(0, FLOOR - 40, W, 8, '#8a5a2b'); rect(0, FLOOR - 32, W, H - FLOOR + 32, '#c7b08a'); for (let x = 0; x < W; x += 40) rect(x, FLOOR - 32, 1, H, '#b09a74');
+    // kitchen: tiled wall, a window on the garden, a wooden worktop and a dark floor
+    rect(0, AY, W, H - AY, '#d9e8f5');
+    for (let y = AY; y < FLOOR - 40; y += 16) for (let x = (y / 16) % 2 ? 0 : 8; x < W; x += 16) rect(x, y, 15, 15, '#bcd6ea');
+    rect(178, 38, 124, 64, '#1b1b1b'); rect(182, 42, 116, 56, COL.sky);
+    rect(182, 74, 116, 24, '#12b76a'); rect(238, 42, 4, 56, '#ffffff'); rect(182, 66, 116, 4, '#ffffff');
+    g.fillStyle = '#ffcc00'; g.beginPath(); g.arc(210, 58, 9, 0, Math.PI * 2); g.fill();
+    rect(0, FLOOR - 44, W, 10, '#a9713c'); rect(0, FLOOR - 36, W, 4, '#7a4d26');
+    rect(0, FLOOR - 32, W, H - FLOOR + 32, '#3f6ea8');
+    for (let x = 0; x < W; x += 34) rect(x, FLOOR - 32, 17, H, '#39649a');
     if (cook) { person(cook, 240, 142, 2, false, 0); if (nu.T > 0) bubble(nu.line, 336, 70, 16); }
     for (const f of food) dish(f);
     for (let i = 0; i < 2; i++) {

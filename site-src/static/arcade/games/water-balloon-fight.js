@@ -59,10 +59,14 @@ function gBalloons() {
     balls = balls.filter(b => !b.gone);
   };
   s.draw = () => {
-    rect(0, AY, W, H - AY, '#1e7a34');
-    for (let k = 0; k < 10; k++) rect(0, Y0 - 4 + k * 22, W, 11, '#23883b');
-    // back fence and the washing line
-    rect(0, AY, W, 26, '#8a5a2b'); for (let x = 0; x < W; x += 16) rect(x, AY, 2, 26, '#6b4220');
+    // the garden: mown stripes, daisies, and a proper picket fence with sky over it
+    rect(0, AY, W, H - AY, '#12b76a');
+    for (let k = 0; k < 10; k++) rect(0, Y0 - 4 + k * 22, W, 11, '#0fa860');
+    for (let k = 0; k < 22; k++) { const x = (k * 61 + 12) % W, y = Y0 + (k * 37) % 150;
+      rect(x, y, 3, 3, '#ffffff'); rect(x + 1, y + 1, 1, 1, '#ffcc00'); }
+    rect(0, AY, W, 8, COL.sky);
+    for (let x = 0; x < W; x += 15) { rect(x, AY + 4, 12, 28, '#c98f4f'); rect(x + 3, AY + 2, 6, 4, '#c98f4f'); }
+    rect(0, AY + 12, W, 3, '#8a5a2b'); rect(0, AY + 26, W, 3, '#8a5a2b'); rect(0, AY + 32, W, 3, '#6b4220');
     g.strokeStyle = '#ddd'; g.lineWidth = 1; g.beginPath(); g.moveTo(20, 40); g.quadraticCurveTo(240, 52, 460, 40); g.stroke();
     [['#e0102a', 90], ['#fff', 130], ['#ffd23f', 330], ['#22e6ff', 380]].forEach(([c, x]) => rect(x, 43 + Math.sin(x) * 2, 18, 14, c));
     rect(236, Y0, 8, Y1 - Y0, 'rgba(255,255,255,.12)');

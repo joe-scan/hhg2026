@@ -11,8 +11,8 @@ g.imageSmoothingEnabled = false;
 // The look is swappable from outside, so different palettes and lettering can be tried on the
 // real game rather than in a mock-up: tools/game-skins.mjs sets these before the engine loads.
 const FONT = window.HHG_FONT || '"Press Start 2P","Courier New",monospace';
-const FONT_BIG = window.HHG_FONT_BIG || FONT;
-try { if (document.fonts && document.fonts.load) document.fonts.load('8px "Press Start 2P"'); } catch (e) {}
+const FONT_BIG = window.HHG_FONT_BIG || '"Bowlby One","Arial Black",Impact,sans-serif';
+try { if (document.fonts && document.fonts.load) { document.fonts.load('8px "Press Start 2P"'); document.fonts.load('32px "Bowlby One"'); } } catch (e) {}
 
 const R = Math.random;
 const rnd = (a, b) => a + R() * (b - a);
@@ -21,7 +21,12 @@ const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 const pick = a => a[Math.floor(R() * a.length)];
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(R() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
-const COL = { bg: '#12062b', ink: '#0a0416', hot: '#ff2bd6', cyan: '#22e6ff', gold: '#ffd23f', red: '#ff2e4d', white: '#ffffff', green: '#3dff8b', purple: '#7a3cff', dim: '#8f7fc0', off: '#2a1a4a' };
+// Poster Bold, picked on 20 Sep 2026 from ten looks rendered on the real game
+// (tools/game-skins.mjs): sky blue, pitch green, black ink, one red and one yellow. Flat colour
+// and hard edges, like a children's poster, because that reads on a phone at arm's length.
+const COL = { bg: '#0b7fd4', ink: '#1b1b1b', hot: '#ff3b30', cyan: '#ffffff', gold: '#ffcc00',
+  red: '#ff3b30', white: '#ffffff', green: '#12b76a', purple: '#7a3cff', dim: '#bfe3ff', off: '#154b74',
+  plate: '#1b1b1b', band: '#1b1b1b', name: '#ffcc00', nameTop: '#ffffff', sky: '#00a3ff', grass: '#12b76a' };
 if (window.HHG_COL) Object.assign(COL, window.HHG_COL);
 // ===================== THE FAMILY =====================
 // Everything personal comes from one config object. The builder writes it into the link (#g=...),
@@ -455,6 +460,12 @@ function logo(s, x, y, size, c1, c2, c3) {
 // the name itself. They read their colours from COL, so one look changes all of them at once.
 const PLATE = () => COL.plate || 'rgba(10,4,22,.6)';
 const BAND = () => COL.band || 'rgba(10,4,22,.92)';
+function textW(s, size, font) { g.font = size + 'px ' + (font || FONT); return g.measureText(s).width; }
+// the dark plate behind a name, sized to the lettering that actually goes on it
+function namePlate(s, x, y, size) {
+  const w = textW(s, size, FONT_BIG) + 20;
+  rect(x - w / 2, y - 4, w, size + 8, PLATE());
+}
 function nameLogo(s, x, y, size) {
   const c2 = COL.name || PL[1].col;
   logo(s, x, y, size, COL.nameTop || '#ffffff', c2, mix(c2, '#000000', .35));
@@ -495,20 +506,19 @@ try { CALM = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e)
 const STARS = []; for (let i = 0; i < 70; i++) STARS.push({ x: rint(0, W), y: rint(0, H), p: R() * 3 });
 function stars(t, maxY) { for (const s of STARS) if (s.y < maxY) rect(s.x, s.y, 1, 1, CALM ? '#b9aee0' : ((t / 25 + s.p) % 3 < 2 ? '#e8e4f6' : '#6b5aa8')); }
 function bgSynth(t) {
-  const gr = g.createLinearGradient(0, 0, 0, 170);
-  gr.addColorStop(0, '#0a0420'); gr.addColorStop(.55, '#26093f'); gr.addColorStop(1, '#8e2472');
-  g.fillStyle = gr; g.fillRect(0, 0, W, 170);
-  stars(t, 110);
-  const sg = g.createLinearGradient(0, 70, 0, 170); sg.addColorStop(0, '#f2cf62'); sg.addColorStop(1, '#d9476f');
-  g.fillStyle = sg; g.beginPath(); g.arc(240, 122, 52, 0, Math.PI * 2); g.fill();
-  for (let k = 0; k < 5; k++) rect(186, 128 + k * 9, 108, 1 + k, '#5a1070');
-  rect(0, 170, W, 100, '#0d0221'); rect(0, 170, W, 1, '#1d9fb4');
-  g.strokeStyle = 'rgba(255,43,214,.34)'; g.lineWidth = 1; g.beginPath();
-  for (let k = -14; k <= 14; k++) { g.moveTo(240 + k * 8, 170); g.lineTo(240 + k * 70, 270); }
-  const ph = (t % 30) / 30;
-  for (let i = 0; i < 9; i++) { const z = (i + ph) / 9, y = 170 + 100 * z * z; g.moveTo(0, y); g.lineTo(W, y); }
-  g.stroke();
+  rect(0, 0, W, H, COL.sky);
+  // clouds drifting, then the ink line and the pitch: three flat bands, nothing clever
+  for (let k = 0; k < 6; k++) {
+    const x = (k * 96 + t * .18) % (W + 110) - 60, y = 30 + (k % 3) * 24;
+    rect(x, y, 46, 12, '#ffffff'); rect(x + 9, y - 7, 30, 10, '#ffffff'); rect(x + 18, y - 12, 14, 8, '#ffffff');
+    rect(x + 4, y + 12, 38, 3, '#cdeaff');
+  }
+  rect(0, 150, W, 5, COL.ink);
+  rect(0, 155, W, H - 155, COL.grass);
+  for (let k = 0; k < 16; k++) rect((k * 31 + 6) % W, 168 + (k % 4) * 26, 14, 4, '#0f9257');
+  for (let k = 0; k < 12; k++) rect((k * 41 + 22) % W, 180 + (k % 5) * 20, 6, 3, '#38d68c');
 }
+
 function shadow(x, y, w) { g.fillStyle = 'rgba(0,0,0,.3)'; g.beginPath(); g.ellipse(x, y, w, w * .35, 0, 0, Math.PI * 2); g.fill(); }
 
 // particles + floating text
