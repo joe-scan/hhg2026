@@ -1,5 +1,7 @@
 /* Happy Hero Games: shared page styles.
-   Direction (proposed 19 Sep 2026, Joe to confirm): the pixel screen is the only loud thing on the page.
+   Direction: the pixel screen is the only loud thing on the page. Calmed down on 20 Sep 2026:
+   Bungee is now the headline and the wordmark only, small labels are letterspaced caps in the
+   reading face rather than Press Start 2P, and the magenta accent appears once per screen.
    Around it: a cool paper ground, ink type, thin rules, square corners. No cards, pills, gradients,
    glow or emoji in the page. Bungee (arcade marquee lettering) for the few big headlines only,
    Atkinson Hyperlegible for reading, Press Start 2P for tiny labels. */
@@ -33,5 +35,5 @@ button,input,select{font:inherit;color:inherit}
 .btn.small:hover{border-color:var(--ink);background:none;color:var(--ink)}
 
 /* the screen */
-.screen{background:#000;padding:8px;border-radius:3px}
+.screen{background:#1a1430;padding:10px;border-radius:3px;border:1px solid var(--rule)}
 canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated;image-rendering:crisp-edges;background:var(--screen);cursor:pointer;touch-action:manipulation}

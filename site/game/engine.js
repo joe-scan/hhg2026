@@ -25,26 +25,34 @@ const COL = { bg: '#12062b', ink: '#0a0416', hot: '#ff2bd6', cyan: '#22e6ff', go
 // Player slot 1 is always the hero (the birthday child) and slot 0 is whichever family member they're facing.
 // The duels were written with small hidden advantages for slot 1, so the hero gets them.
 const DEMO = {
-  hero: { name: 'AOIFE', hair: 'ponytail', hairCol: '#6b3f1d', skin: '#f3c6a0', kit: '#1f7ae0' },
+  hero: { name: 'AVA', hair: 'ponytail', hairCol: '#6b3f1d', skin: '#f3c6a0', kit: '#1f7ae0' },
   occasion: 'birthday', catchphrase: 'NO WAY!', food: 'PIZZA',
-  family: [{ role: 'dad', name: 'DAD', hairCol: '#141018' }, { role: 'mum', name: 'MUM', hairCol: '#8a3a1a' }, { role: 'brother', name: 'CONOR', hairCol: '#6b3f1d' }],
+  family: [{ role: 'dad', name: '' }, { role: 'mum', name: '', hairCol: '#8a3a1a' }, { role: 'brother', name: 'JACK', hairCol: '#6b3f1d' }],
   pet: { name: 'BISCUIT', col: '#e8c9a0' }
 };
+// A role's label changes with the reader: Mom and Grandma in North America, Mum and Granny elsewhere.
+// `us` is the North American word; everything else in the game is written to work either way.
 const ROLES = {
-  dad: { label: 'Dad', adult: 'm', kit: '#2b4a8a', lose: 'I LET YOU WIN, YOU KNOW.', food: 'CURRY', say: 'Dad' },
-  mum: { label: 'Mum', adult: 'f', kit: '#d81b8c', lose: 'BEST OF THREE?', food: 'SALAD', say: 'Mum' },
-  granny: { label: 'Granny', adult: 'f', kit: '#2e7d4f', lose: 'AREN\'T YOU GREAT!', food: 'SOUP', grey: true, say: 'Granny' },
-  grandad: { label: 'Grandad', adult: 'm', kit: '#7a5a3a', lose: 'IN MY DAY...', food: 'STEW', grey: true, say: 'Grandad' },
-  auntie: { label: 'Auntie', adult: 'f', kit: '#7a3cff', lose: 'OH, YOU\'RE GOOD!', food: 'PASTA', say: 'Auntie' },
-  uncle: { label: 'Uncle', adult: 'm', kit: '#1e7a34', lose: 'BEGINNER\'S LUCK!', food: 'BURGER', say: 'Uncle' },
-  brother: { label: 'Brother', kid: 'straight', kit: '#ff6b1a', lose: 'THAT DOESN\'T COUNT!', food: 'CHIPS' },
+  dad: { label: 'Dad', adult: 'm', kit: '#2b4a8a', lose: 'I LET YOU WIN, YOU KNOW.', food: 'CURRY' },
+  mum: { label: 'Mum', us: 'Mom', adult: 'f', kit: '#d81b8c', lose: 'BEST OF THREE?', food: 'SALAD' },
+  granny: { label: 'Granny', us: 'Grandma', adult: 'f', kit: '#2e7d4f', lose: 'AREN\'T YOU GREAT!', food: 'SOUP', grey: true },
+  grandad: { label: 'Grandad', us: 'Grandpa', adult: 'm', kit: '#7a5a3a', lose: 'IN MY DAY...', food: 'STEW', grey: true },
+  auntie: { label: 'Auntie', us: 'Aunt', adult: 'f', kit: '#7a3cff', lose: 'OH, YOU\'RE GOOD!', food: 'PASTA' },
+  uncle: { label: 'Uncle', adult: 'm', kit: '#1e7a34', lose: 'BEGINNER\'S LUCK!', food: 'BURGER' },
+  brother: { label: 'Brother', kid: 'straight', kit: '#ff6b1a', lose: 'THAT DOESN\'T COUNT!', food: 'FRIES' },
   sister: { label: 'Sister', kid: 'ponytail', kit: '#22b573', lose: 'I WASN\'T READY!', food: 'NOODLES' }
 };
+// North American English unless the browser says otherwise. A game can pin it with CFG.dialect.
+let DIALECT = 'us';
+try { if (/^en-(GB|IE|AU|NZ|ZA|IN)/i.test(navigator.language || '')) DIALECT = 'int'; } catch (e) {}
+function roleLabel(role) { const r = ROLES[role]; return !r ? '' : (DIALECT === 'us' && r.us) || r.label; }
 const HAIRCOLS = ['#141018', '#3b2412', '#6b3f1d', '#93602f', '#8a3a1a', '#c8641e', '#e0b64a', '#9a96a6'];
 const SKINS = ['#f6d1b4', '#f3c6a0', '#d9a577', '#b87a4b', '#8a5634', '#5e3a22'];
 const KITCOLS = ['#1f7ae0', '#e0102a', '#1e9e4a', '#ffd23f', '#7a3cff', '#ff6b1a', '#ff2bd6', '#ffffff', '#141018'];
 const PETCOLS = ['#ffffff', '#e8c9a0', '#c98a4b', '#6b3f1d', '#2a2230', '#9a96a6'];
-const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', star: 'YOU\'RE A STAR' };
+const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', fathers: 'HAPPY FATHER\'S DAY', mothers: 'HAPPY MOTHER\'S DAY', star: 'YOU\'RE A STAR' };
+// Optional question and joke packs for a family who want them (see the quiz duel). Off by default.
+const PACKS = ['ie', 'uk'];
 
 // names: capitals, no accents (the pixel font has none), letters, spaces, hyphens and apostrophes only
 const cleanName = (s, n) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z '\-!?.,]/g, '').replace(/\s+/g, ' ').trim().slice(0, n);
@@ -54,8 +62,9 @@ function sanitise(c) {
   const out = {
     hero: { name: cleanName(h.name, 10).replace(/[!?.,]/g, '') || 'HERO', hair: oneOf(h.hair, HAIRS, 'short'), hairCol: oneOf(h.hairCol, HAIRCOLS, HAIRCOLS[2]), skin: oneOf(h.skin, SKINS, SKINS[1]), kit: oneOf(h.kit, KITCOLS, KITCOLS[0]) },
     occasion: oneOf(c.occasion, Object.keys(OCCASIONS), 'birthday'),
+    packs: (Array.isArray(c.packs) ? c.packs : []).filter(k => PACKS.includes(k)).slice(0, 3),
     catchphrase: cleanName(c.catchphrase, 22), food: cleanName(c.food, 10).replace(/[!?.,']/g, '') || 'PIZZA',
-    family: (Array.isArray(c.family) ? c.family : []).slice(0, 3).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || ROLES[m.role].label.toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
+    family: (Array.isArray(c.family) ? c.family : []).slice(0, 3).filter(m => m && ROLES[m.role]).map(m => ({ role: m.role, name: cleanName(m.name, 10).replace(/[!?.,]/g, '') || roleLabel(m.role).toUpperCase(), hairCol: oneOf(m.hairCol, HAIRCOLS, HAIRCOLS[1]) })),
     pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
   };
   if (!out.family.length) out.family.push({ role: 'dad', name: 'DAD', hairCol: HAIRCOLS[0] });
@@ -178,7 +187,7 @@ function setOpponent(k) {
   CHAR[0] = sp; PL[0].name = sp.name;
   // keep the two players' colours apart on screen
   PL[0].col = Math.abs(lum(sp.col) - lum(PL[1].col)) < .08 && sp.col !== PL[1].col ? COL.cyan : (sp.col === PL[1].col ? COL.cyan : sp.col);
-  SAYNAME[0] = ROLES[sp.role].say || titleCase(sp.name); CATCH[0] = sp.lose; SAYCATCH[0] = titleCase(sp.lose);
+  SAYNAME[0] = roleLabel(sp.role) || titleCase(sp.name); CATCH[0] = sp.lose; SAYCATCH[0] = titleCase(sp.lose);
 }
 // a grown-up who isn't the current opponent, for cameo jobs like calling people in for lunch
 function helper() { return FAM.find((m, k) => k !== OPP && m.kind === 'adult') || FAM.find(m => m.kind === 'adult') || null; }
@@ -419,18 +428,22 @@ function flag(type, x, y) {
   else { rect(x, y, 5, 10, '#009246'); rect(x + 5, y, 6, 10, '#ffffff'); rect(x + 11, y, 5, 10, '#ce2b37'); }
 }
 const FLAGNAMES = ['PORTUGAL', 'SPAIN', 'FRANCE', 'IRELAND', 'ITALY'];
+// Calm mode: the reader asked their browser for less motion, so the stars stop twinkling, the
+// screen never shakes and there is half as much confetti. Nothing about the game changes.
+let CALM = false;
+try { CALM = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
 const STARS = []; for (let i = 0; i < 70; i++) STARS.push({ x: rint(0, W), y: rint(0, H), p: R() * 3 });
-function stars(t, maxY) { for (const s of STARS) if (s.y < maxY) rect(s.x, s.y, 1, 1, (t / 25 + s.p) % 3 < 2 ? '#ffffff' : '#6b5aa8'); }
+function stars(t, maxY) { for (const s of STARS) if (s.y < maxY) rect(s.x, s.y, 1, 1, CALM ? '#b9aee0' : ((t / 25 + s.p) % 3 < 2 ? '#e8e4f6' : '#6b5aa8')); }
 function bgSynth(t) {
   const gr = g.createLinearGradient(0, 0, 0, 170);
-  gr.addColorStop(0, '#0a0420'); gr.addColorStop(.55, '#2a0a4a'); gr.addColorStop(1, '#c2189b');
+  gr.addColorStop(0, '#0a0420'); gr.addColorStop(.55, '#26093f'); gr.addColorStop(1, '#8e2472');
   g.fillStyle = gr; g.fillRect(0, 0, W, 170);
   stars(t, 110);
-  const sg = g.createLinearGradient(0, 70, 0, 170); sg.addColorStop(0, '#ffe14d'); sg.addColorStop(1, '#ff2e7a');
+  const sg = g.createLinearGradient(0, 70, 0, 170); sg.addColorStop(0, '#f2cf62'); sg.addColorStop(1, '#d9476f');
   g.fillStyle = sg; g.beginPath(); g.arc(240, 122, 52, 0, Math.PI * 2); g.fill();
   for (let k = 0; k < 5; k++) rect(186, 128 + k * 9, 108, 1 + k, '#5a1070');
-  rect(0, 170, W, 100, '#0d0221'); rect(0, 170, W, 1, COL.cyan);
-  g.strokeStyle = 'rgba(255,43,214,.75)'; g.lineWidth = 1; g.beginPath();
+  rect(0, 170, W, 100, '#0d0221'); rect(0, 170, W, 1, '#1d9fb4');
+  g.strokeStyle = 'rgba(255,43,214,.34)'; g.lineWidth = 1; g.beginPath();
   for (let k = -14; k <= 14; k++) { g.moveTo(240 + k * 8, 170); g.lineTo(240 + k * 70, 270); }
   const ph = (t % 30) / 30;
   for (let i = 0; i < 9; i++) { const z = (i + ph) / 9, y = 170 + 100 * z * z; g.moveTo(0, y); g.lineTo(W, y); }
@@ -440,15 +453,15 @@ function shadow(x, y, w) { g.fillStyle = 'rgba(0,0,0,.3)'; g.beginPath(); g.elli
 
 // particles + floating text
 let parts = [], floats = [], shake = 0;
-function burst(x, y, n, cols, sp) { for (let i = 0; i < n; i++) { const a = R() * 6.283, v = rnd(.5, sp || 3); parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 1, life: rint(25, 60), col: pick(cols), s: rint(1, 3), gr: .06 }); } }
-function confetti(n, cols) { for (let i = 0; i < n; i++) parts.push({ x: rnd(0, W), y: rnd(-H, 0), vx: rnd(-.4, .4), vy: rnd(.8, 2), life: 400, col: pick(cols), s: rint(2, 3), gr: 0 }); }
+function burst(x, y, n, cols, sp) { if (CALM) n = Math.ceil(n / 2); for (let i = 0; i < n; i++) { const a = R() * 6.283, v = rnd(.5, sp || 3); parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 1, life: rint(25, 60), col: pick(cols), s: rint(1, 3), gr: .06 }); } }
+function confetti(n, cols) { if (CALM) n = Math.ceil(n / 2); for (let i = 0; i < n; i++) parts.push({ x: rnd(0, W), y: rnd(-H, 0), vx: rnd(-.4, .4), vy: rnd(.8, 2), life: 400, col: pick(cols), s: rint(2, 3), gr: 0 }); }
 function floatText(s, x, y, col, size) { floats.push({ s, x, y, col, size: size || 8, life: 70 }); }
 function fxTick() {
   for (const p of parts) { p.x += p.vx; p.y += p.vy; p.vy += p.gr; p.life--; }
   parts = parts.filter(p => p.life > 0 && p.y < H + 10);
   for (const f of floats) { f.y -= .4; f.life--; }
   floats = floats.filter(f => f.life > 0);
-  if (shake > 0) shake *= .85; if (shake < .3) shake = 0;
+  if (CALM) shake = 0; else { if (shake > 0) shake *= .85; if (shake < .3) shake = 0; }
 }
 function fxDraw() {
   for (const p of parts) rect(p.x, p.y, p.s, p.s, p.col);
@@ -458,14 +471,14 @@ function fxDraw() {
 // ===================== CHEERS =====================
 // encouraging call-outs when someone scores. Streaks reset at the start of each duel.
 const CHEER = {
-  nice: ['NICE ONE!', 'CLASS!', 'LOVELY STUFF!', 'GREAT SHOT!', 'SAVAGE!', 'DEADLY!'],
+  nice: ['NICE ONE!', 'AWESOME!', 'GREAT SHOT!', 'SWEET!', 'NAILED IT!', 'WAY TO GO!'],
   hot: ['YOU\'RE ON FIRE!', 'UNSTOPPABLE!', 'ON A ROLL!', 'RED HOT!'],
   back: ['ALL SQUARE!', 'COMEBACK ON!', 'BACK IN IT!', 'GAME ON!']
 };
 let streak = [0, 0];
 // a score freezes the action for a few ticks and flashes the scorer's colour
 let freeze = 0, flashT = 0, flashC = '#fff';
-function punch(col) { freeze = 5; flashT = 9; flashC = col; }
+function punch(col) { freeze = 5; flashT = CALM ? 3 : 9; flashC = col; }
 function cheerReset() { streak = [0, 0]; }
 // call after pts[i] has gone up. words: the duel's own lines for an ordinary score
 function cheer(i, x, y, pts, words) {

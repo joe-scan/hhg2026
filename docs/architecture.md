@@ -77,15 +77,22 @@ A flat page on paper-coloured ground, one accent colour, square corners, no drop
 
 ## 8. Pricing
 
-Two paid choices, because three made people stop and compute the difference:
+Prices are in US dollars, because the US is the main market. The page shows pounds, euro, Canadian and Australian dollars to readers in those places, from a hand-set table in `site/builder.js`. Never convert at the day's rate: nobody should see $74.31.
 
 | | Price | What |
 |---|---|---|
 | The demo | Free | Four duels and a boss, built in the browser in a minute |
-| The game | €69 | Ten duels, two bosses, up to six family members, custom lines, ready in 48 hours |
-| The gift box | €129 | The game, plus recorded family voices, a printed box and card to wrap, tracked worldwide delivery, one change after it arrives |
-| Sibling add-on | +€20 | A second hero |
+| The game | $79 | Ten duels, two bosses, up to six family members, custom lines, ready in 48 hours, theirs forever |
+| The club | $8 a month or $69 a year | On top of a game they own: a new duel every month, seasonal games at Halloween and Christmas. First month free with every game |
+| The gift box | $149 | The game, plus recorded family voices, a printed box and card to wrap, tracked delivery, one change after it arrives |
+| Sibling add-on | +$25 | A second hero |
 
-The €49 Starter was dropped on 20 September 2026. It made the page a comparison exercise, and it undercut the main product for the sake of an order worth €26 less. The gift box justifies its price with a physical thing rather than a feature list, which is easier to sell and harder to compare. Tracked delivery from Ireland runs €15 to €25, so the box needs that room.
+Two rules hold this together.
 
-The business model in `docs/business-plan.md` already assumed €69 average, so the numbers there stand.
+**The club never includes the game.** An earlier draft bundled it, which meant $8 bought the $79 product and nobody who read carefully would pay full price. The club only ever adds to something already bought.
+
+**Nothing anybody bought ever stops working.** Cancel the club and every game and duel already delivered keeps playing, forever. That is easy to honour because the games are static files sitting in their own folder, and it is the only honest way to sell a subscription attached to a present.
+
+The €49 Starter was dropped on 20 September 2026: three tiers turned the page into a comparison exercise. The gift box earns its price with a physical thing rather than a feature list, which is easier to sell and harder to compare. Tracked delivery from Ireland runs $20 to $30, and the buyer can be charged customs on arrival, so the box is UK, Ireland and EU only until there is a US fulfilment partner.
+
+`docs/business-plan.md` has the model behind these numbers.

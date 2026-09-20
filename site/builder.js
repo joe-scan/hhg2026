@@ -40,8 +40,10 @@
   swatches($('kit'), KITCOLS, KITNAMES, () => cfg.hero.kit, v => { cfg.hero.kit = v; });
   choice('occasion', () => cfg.occasion, v => { cfg.occasion = v; });
 
-  // up to three family members: a role, a name, a hair colour
-  const roleOpts = '<option value="">Nobody</option>' + Object.keys(ROLES).map(r => `<option value="${r}">${ROLES[r].label}</option>`).join('');
+  // up to three family members: a role, a name, a hair color
+  // words that change outside North America: Mum for Mom, Granny for Grandma (see DIALECT in engine.js)
+  if (DIALECT !== 'us') document.querySelectorAll('[data-int]').forEach(el => { el.textContent = el.dataset.int; });
+  const roleOpts = '<option value="">Nobody</option>' + Object.keys(ROLES).map(r => `<option value="${r}">${roleLabel(r)}</option>`).join('');
   const hairOpts = HAIRCOLS.map((c, k) => `<option value="${c}">${HAIRNAMES[k]} hair</option>`).join('');
   const famRows = [];
   for (let k = 0; k < 3; k++) {
@@ -52,7 +54,7 @@
       `<label class="sr" for="fam-hair-${k}">Their hair</label><select id="fam-hair-${k}">${hairOpts}</select>`;
     $('family').appendChild(row);
     const [role, name, hair] = row.querySelectorAll('select, input');
-    role.value = m.role || ''; name.value = m.name && ROLES[m.role] && m.name !== ROLES[m.role].label.toUpperCase() ? titleCase(m.name) : ''; hair.value = m.hairCol;
+    role.value = m.role || ''; name.value = m.name && ROLES[m.role] && m.name !== roleLabel(m.role).toUpperCase() ? titleCase(m.name) : ''; hair.value = m.hairCol;
     [role, name, hair].forEach(el => el.addEventListener('input', changed));
     famRows.push({ role, name, hair });
   }
@@ -74,6 +76,30 @@
     try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }
   changed();
+
+  // Prices are set by hand per currency, never converted, so nobody sees $74.31. The tag on the page
+  // holds the dollar price; this swaps it for the reader's own currency where we sell in one.
+  const PRICES = {
+    game:     { USD: '$79', GBP: '\u00a369', EUR: '\u20ac79', CAD: 'C$109', AUD: 'A$119' },
+    club:     { USD: '$8 a month', GBP: '\u00a37 a month', EUR: '\u20ac8 a month', CAD: 'C$11 a month', AUD: 'A$12 a month' },
+    clubYear: { USD: '$69 a year', GBP: '\u00a359 a year', EUR: '\u20ac69 a year', CAD: 'C$95 a year', AUD: 'A$105 a year' },
+    box:      { USD: '$149', GBP: '\u00a3129', EUR: '\u20ac145', CAD: 'C$199', AUD: 'A$225' },
+    sibling:  { USD: '$25', GBP: '\u00a320', EUR: '\u20ac25', CAD: 'C$35', AUD: 'A$39' }
+  };
+  const EURO = ['IE', 'DE', 'FR', 'ES', 'IT', 'NL', 'BE', 'AT', 'PT', 'FI', 'GR', 'LU', 'SK', 'SI', 'EE', 'LV', 'LT', 'CY', 'MT', 'HR'];
+  function currency() {
+    let r = '';
+    try { r = (new Intl.Locale(navigator.language || 'en-US').region || '').toUpperCase(); } catch (e) {}
+    if (r === 'GB') return 'GBP';
+    if (r === 'CA') return 'CAD';
+    if (r === 'AU' || r === 'NZ') return 'AUD';
+    return EURO.includes(r) ? 'EUR' : 'USD';
+  }
+  const cur = currency();
+  document.querySelectorAll('[data-price]').forEach(el => {
+    const row = PRICES[el.dataset.price];
+    if (row && row[cur]) el.textContent = row[cur];
+  });
 
   // the live preview: the hero's name in lights with the whole cast on the horizon
   let t = 0;

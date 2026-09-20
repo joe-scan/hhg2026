@@ -1,26 +1,20 @@
 'use strict';
-// ---------- 10. THE TABLE QUIZ: buzzer quiz, one arrow per answer
+// ---------- 10. THE FAMILY QUIZ: buzzer quiz, one arrow per answer
 // [question, right answer, three wrong ones]. Questions up to 88 characters, answers up to 14.
-const QUIZ = [
-  ['HOW MANY PLAYERS ARE ON A HURLING TEAM?', '15', '11', '13', '18'],
-  ['WHAT IS THE BALL IN HURLING CALLED?', 'SLIOTAR', 'PUCK', 'HURLEY', 'HELMET'],
-  ['WHERE IS THE ALL-IRELAND FINAL PLAYED?', 'CROKE PARK', 'ANFIELD', 'WEMBLEY', 'THE AVIVA'],
-  ['IN GAA, HOW MANY POINTS IS A GOAL WORTH?', '3', '1', '2', '5'],
-  ['HOW MANY PLAYERS ARE ON A RUGBY UNION TEAM?', '15', '11', '13', '12'],
+const QUIZ_GENERAL = [
+  ['HOW MANY PLAYERS ARE ON A BASEBALL TEAM?', '9', '7', '10', '11'],
+  ['HOW MANY PLAYERS ARE ON A BASKETBALL TEAM?', '5', '6', '7', '4'],
+  ['HOW MANY PLAYERS ARE ON A SOCCER TEAM?', '11', '15', '9', '12'],
   ['HOW LONG IS A NORMAL SOCCER MATCH?', '90 MINUTES', '60 MINUTES', '80 MINUTES', '100 MINUTES'],
-  ['WHICH CLUB PLAYS ITS HOME GAMES AT ANFIELD?', 'LIVERPOOL', 'EVERTON', 'CHELSEA', 'ARSENAL'],
-  ['WHICH CITY ARE REAL MADRID FROM?', 'MADRID', 'BARCELONA', 'SEVILLE', 'LISBON'],
   ['HOW MANY GOALS MAKE A HAT-TRICK?', '3', '2', '4', '5'],
-  ['WHICH COUNTRY MAKES LAMBORGHINI CARS?', 'ITALY', 'SWEDEN', 'GERMANY', 'JAPAN'],
-  ['WHICH COUNTRY MAKES KOENIGSEGG CARS?', 'SWEDEN', 'ITALY', 'NORWAY', 'GERMANY'],
-  ['WHAT IS THE BIGGEST COUNTY IN IRELAND?', 'CORK', 'KERRY', 'GALWAY', 'MAYO'],
-  ['WHAT IS THE LONGEST RIVER IN IRELAND?', 'THE SHANNON', 'THE LEE', 'THE BOYNE', 'THE LIFFEY'],
-  ['WHAT IS THE CAPITAL OF ITALY?', 'ROME', 'MILAN', 'VENICE', 'NAPLES'],
-  ['WHAT IS THE CAPITAL OF PORTUGAL?', 'LISBON', 'PORTO', 'FARO', 'MADRID'],
+  ['HOW MANY POINTS IS A TOUCHDOWN WORTH?', '6', '3', '7', '5'],
+  ['WHAT IS THE CAPITAL OF THE UNITED STATES?', 'WASHINGTON', 'NEW YORK', 'BOSTON', 'CHICAGO'],
   ['WHAT IS THE CAPITAL OF FRANCE?', 'PARIS', 'NICE', 'LYON', 'BRUSSELS'],
+  ['WHAT IS THE CAPITAL OF ITALY?', 'ROME', 'MILAN', 'VENICE', 'NAPLES'],
   ['WHAT IS THE CAPITAL OF SPAIN?', 'MADRID', 'BARCELONA', 'VALENCIA', 'LISBON'],
-  ['WHAT DOES FAILTE MEAN IN ENGLISH?', 'WELCOME', 'GOODBYE', 'THANK YOU', 'GOODNIGHT'],
-  ['WHAT IS THE IRISH WORD FOR DOG?', 'MADRA', 'CAPALL', 'CAT', 'BO'],
+  ['WHICH IS THE BIGGEST STATE IN THE USA?', 'ALASKA', 'TEXAS', 'CALIFORNIA', 'MONTANA'],
+  ['WHICH COUNTRY MAKES LAMBORGHINI CARS?', 'ITALY', 'SWEDEN', 'GERMANY', 'JAPAN'],
+  ['WHICH COUNTRY IS THE EIFFEL TOWER IN?', 'FRANCE', 'ITALY', 'SPAIN', 'BELGIUM'],
   ['HOW MANY LEGS DOES A SPIDER HAVE?', '8', '6', '10', '12'],
   ['WHAT IS 7 X 8?', '56', '54', '48', '63'],
   ['WHAT IS 12 X 12?', '144', '124', '132', '142'],
@@ -30,15 +24,15 @@ const QUIZ = [
   ['WHAT IS THE BIGGEST PLANET?', 'JUPITER', 'SATURN', 'NEPTUNE', 'EARTH'],
   ['WHICH OF THESE IS THE BIGGEST?', 'THE SUN', 'THE MOON', 'EARTH', 'JUPITER'],
   ['WHAT IS THE BIGGEST OCEAN?', 'PACIFIC', 'ATLANTIC', 'INDIAN', 'ARCTIC'],
+  ['WHAT IS THE LONGEST RIVER IN THE WORLD?', 'THE NILE', 'THE AMAZON', 'THE DANUBE', 'THE THAMES'],
   ['WHAT IS THE FASTEST LAND ANIMAL?', 'CHEETAH', 'LION', 'HORSE', 'GREYHOUND'],
   ['WHAT IS THE TALLEST ANIMAL?', 'GIRAFFE', 'ELEPHANT', 'CAMEL', 'OSTRICH'],
   ['WHICH OF THESE IS A MAMMAL?', 'DOLPHIN', 'SHARK', 'SALMON', 'OCTOPUS'],
   ['WHAT DO BEES MAKE?', 'HONEY', 'JAM', 'MILK', 'BUTTER'],
-  ['MIX BLUE AND YELLOW PAINT. WHAT COLOUR DO YOU GET?', 'GREEN', 'PURPLE', 'ORANGE', 'BROWN'],
+  ['MIX BLUE AND YELLOW PAINT. WHAT COLOR DO YOU GET?', 'GREEN', 'PURPLE', 'ORANGE', 'BROWN'],
   ['HOW MANY DAYS ARE IN A LEAP YEAR?', '366', '365', '364', '360'],
   ['HOW MANY MINUTES ARE IN AN HOUR?', '60', '100', '30', '90'],
   ['HOW MANY KEYS ARE ON A STANDARD PIANO?', '88', '76', '64', '100'],
-  ['A CONCERTINA IS A KIND OF WHAT?', 'SQUEEZEBOX', 'DRUM', 'FLUTE', 'FIDDLE'],
   ['HOW MANY STRINGS ARE ON A NORMAL GUITAR?', '6', '4', '5', '8'],
   ['WHAT IS H2O BETTER KNOWN AS?', 'WATER', 'SALT', 'AIR', 'SUGAR'],
   ['WHAT GAS DO WE NEED TO BREATHE IN?', 'OXYGEN', 'HELIUM', 'STEAM', 'SMOKE'],
@@ -46,30 +40,55 @@ const QUIZ = [
   ['HOW MANY CONTINENTS ARE THERE?', '7', '5', '6', '8'],
   ['WHICH OF THESE IS NOT A FRUIT?', 'CARROT', 'APPLE', 'BANANA', 'MANGO'],
   ['WHAT IS A BABY DOG CALLED?', 'PUPPY', 'KITTEN', 'CUB', 'FOAL'],
-  ['HOW MANY PLAYERS ARE ON A GAELIC FOOTBALL TEAM?', '15', '11', '13', '12'],
-  ['HOW MANY PLAYERS ARE ON A SOCCER TEAM?', '11', '15', '9', '12']
+  ['HOW MANY WHEELS DOES A TRICYCLE HAVE?', '3', '2', '4', '5']
 ];
+// Optional packs, switched on per game with CFG.packs (see docs/product.md). Nothing here is in the
+// default deck, because a family in Ohio should never be asked what a sliotar is.
+const QUIZ_PACKS = {
+  ie: [
+    ['HOW MANY PLAYERS ARE ON A HURLING TEAM?', '15', '11', '13', '18'],
+    ['WHAT IS THE BALL IN HURLING CALLED?', 'SLIOTAR', 'PUCK', 'HURLEY', 'HELMET'],
+    ['WHERE IS THE ALL-IRELAND FINAL PLAYED?', 'CROKE PARK', 'ANFIELD', 'WEMBLEY', 'THE AVIVA'],
+    ['IN GAA, HOW MANY POINTS IS A GOAL WORTH?', '3', '1', '2', '5'],
+    ['HOW MANY PLAYERS ARE ON A GAELIC FOOTBALL TEAM?', '15', '11', '13', '12'],
+    ['WHAT IS THE BIGGEST COUNTY IN IRELAND?', 'CORK', 'KERRY', 'GALWAY', 'MAYO'],
+    ['WHAT IS THE LONGEST RIVER IN IRELAND?', 'THE SHANNON', 'THE LEE', 'THE BOYNE', 'THE LIFFEY'],
+    ['WHAT DOES FAILTE MEAN IN ENGLISH?', 'WELCOME', 'GOODBYE', 'THANK YOU', 'GOODNIGHT'],
+    ['WHAT IS THE IRISH WORD FOR DOG?', 'MADRA', 'CAPALL', 'CAT', 'BO'],
+    ['A CONCERTINA IS A KIND OF WHAT?', 'SQUEEZEBOX', 'DRUM', 'FLUTE', 'FIDDLE']
+  ],
+  uk: [
+    ['WHICH CLUB PLAYS ITS HOME GAMES AT ANFIELD?', 'LIVERPOOL', 'EVERTON', 'CHELSEA', 'ARSENAL'],
+    ['HOW MANY PLAYERS ARE ON A RUGBY UNION TEAM?', '15', '11', '13', '12'],
+    ['WHAT IS THE LONGEST RIVER IN THE UK?', 'THE SEVERN', 'THE THAMES', 'THE TRENT', 'THE TYNE'],
+    ['WHICH CITY ARE REAL MADRID FROM?', 'MADRID', 'BARCELONA', 'SEVILLE', 'LISBON']
+  ]
+};
+// The deck is built when a quiz starts, not when the file loads, so a game's packs are read from
+// its config no matter what order the scripts run in.
+function quizPool() { return QUIZ_GENERAL.concat(((CFG && CFG.packs) || []).flatMap(k => QUIZ_PACKS[k] || [])); }
+
 // questions about this family, built from the config and asked first
 const KITNAMES = { '#1f7ae0': 'BLUE', '#e0102a': 'RED', '#1e9e4a': 'GREEN', '#ffd23f': 'YELLOW', '#7a3cff': 'PURPLE', '#ff6b1a': 'ORANGE', '#ff2bd6': 'PINK', '#ffffff': 'WHITE', '#141018': 'BLACK' };
 function wrongs(right, pool) { return shuffle(pool.filter(x => x !== right)).slice(0, 3); }
 function familyQuestions() {
   const q = [], h = HERO.name;
-  q.push(['WHAT IS ' + h + '\'S FAVOURITE FOOD?', CFG.food].concat(wrongs(CFG.food, ['PIZZA', 'CHIPS', 'CURRY', 'PASTA', 'SUSHI', 'SOUP', 'BURGERS', 'TACOS', 'NOODLES'])));
+  q.push(['WHAT IS ' + h + '\'S FAVORITE FOOD?', CFG.food].concat(wrongs(CFG.food, ['PIZZA', 'FRIES', 'CURRY', 'PASTA', 'SUSHI', 'SOUP', 'BURGERS', 'TACOS', 'NOODLES'])));
   if (PET) q.push(['WHAT IS THE DOG CALLED?', PET.name].concat(wrongs(PET.name, ['REX', 'BELLA', 'MAX', 'LUNA', 'BUSTER', 'DAISY', 'MILO'])));
-  if (CFG.catchphrase) q.push(['WHO SAYS "' + CFG.catchphrase + '"?', h].concat(wrongs(h, FAM.map(m => m.name).concat(['THE POSTMAN', 'THE TEACHER', 'SANTA']))));
-  q.push(['WHAT COLOUR IS ' + h + '\'S JERSEY IN THIS GAME?', KITNAMES[CFG.hero.kit]].concat(wrongs(KITNAMES[CFG.hero.kit], Object.values(KITNAMES))));
+  if (CFG.catchphrase) q.push(['WHO SAYS "' + CFG.catchphrase + '"?', h].concat(wrongs(h, FAM.map(m => m.name).concat(['THE MAILMAN', 'THE TEACHER', 'SANTA']))));
+  q.push(['WHAT COLOR IS ' + h + '\'S SHIRT IN THIS GAME?', KITNAMES[CFG.hero.kit]].concat(wrongs(KITNAMES[CFG.hero.kit], Object.values(KITNAMES))));
   return shuffle(q);
 }
 // general questions are dealt without repeats until the whole deck has been used
 let quizDeck = [];
 function gQuiz() {
-  const s = { name: 'THE TABLE QUIZ', how: ['FOUR ANSWERS, EACH ON ITS OWN ARROW.', 'FIRST RIGHT ANSWER WINS THE POINT.', 'WRONG ANSWER? YOU\'RE OUT FOR THAT QUESTION.', 'FIRST TO 3.'], ctl: 'ANSWER: UP DOWN LEFT RIGHT', pts: [0, 0], done: -1 };
+  const s = { name: 'THE FAMILY QUIZ', how: ['FOUR ANSWERS, EACH ON ITS OWN ARROW.', 'FIRST RIGHT ANSWER WINS THE POINT.', 'WRONG ANSWER? YOU\'RE OUT FOR THAT QUESTION.', 'FIRST TO 3.'], ctl: 'ANSWER: UP DOWN LEFT RIGHT', pts: [0, 0], done: -1 };
   const DIRS = ['u', 'l', 'r', 'd'], BOX = { u: [240, 98], l: [130, 128], r: [350, 128], d: [240, 158] };
   const fam = familyQuestions();
   let q = null, ans = {}, right = 'u', phase = 'read', T = 0, t = 0, out = [false, false], picked = [null, null], winner = -1, pend = -1, ai = [null, null];
   function next() {
     if (fam.length) q = fam.pop();
-    else { if (!quizDeck.length) quizDeck = shuffle(QUIZ.map((_, k) => k)); q = QUIZ[quizDeck.pop()]; }
+    else { if (!quizDeck.length) quizDeck = shuffle(quizPool()); q = quizDeck.pop(); }
     const order = shuffle(DIRS.slice()); ans = {};
     order.forEach((d, k) => { ans[d] = q[1 + k]; }); right = order[0];
     phase = 'read'; T = 70; out = [false, false]; picked = [null, null]; winner = -1; pend = -1;
@@ -129,4 +148,4 @@ function gQuiz() {
   };
   return s;
 }
-addDuel('THE TABLE QUIZ', gQuiz);
+addDuel('THE FAMILY QUIZ', gQuiz);

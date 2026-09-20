@@ -6,6 +6,7 @@ Read this first, every session. It says what we're building, the rules that don'
 
 Happy Hero Games puts someone special in their own arcade game. Usually that's a child, sometimes a grown-up (a dad for Father's Day, a granny for her 80th). Whoever's buying answers ten minutes of questions and gets back a private web game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and "HAPPY BIRTHDAY, AOIFE!" in lights. It plays in any browser on a phone, tablet or laptop, with nothing to install.
 
+- **Market:** the US first, then the UK, Ireland, Canada and Australia. The site is written in US English, prices are in dollars, and the game's roles read Mom and Grandma in North America, Mum and Granny elsewhere (`DIALECT` in `site/game/engine.js`). Anything specific to one country, like hurling questions, goes in an optional pack (`CFG.packs`), never the default.
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people duelling.** The hero faces a different family member in each duel.
 - **Occasions:** birthdays all year, Christmas, "just because".
@@ -24,7 +25,7 @@ What we learnt from it, and why the product looks like this:
 ## The product
 
 - **One hero per game.** The child is player slot 1. Each duel is against a different family member in slot 0, played by the computer, or by a real grown-up in 2-player mode.
-- **The hero is meant to win more often than not.** The duels came with small hidden advantages for slot 1 (bigger hurley, wider plate, wins ties). Keep them; never show them on screen.
+- **The hero is meant to win more often than not.** The duels came with small hidden advantages for slot 1 (bigger paddle, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each duel: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is 4 duels and 1 boss, built in the browser from the builder and played at `/g/demo/`. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
 - **Add-ons:** a sibling as a second hero (turns it into a Fionn vs Sean-style rivalry), the family's recorded voices, a printed gift box, gift cards.
@@ -102,5 +103,5 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
 3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-4. Prices on the site are two tiers (€69 and €129, +€20 sibling), per `docs/architecture.md`. Confirm before taking money.
+4. Prices on the site are in US dollars ($79 game, $8 a month or $69 a year club, $149 gift box, +$25 sibling), per `docs/architecture.md`. Confirm before taking money.
 5. A logo beyond the pixel H in `site/img/icon.svg`, and a pixel artist for the sprites.

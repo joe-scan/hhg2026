@@ -1,7 +1,7 @@
 'use strict';
-// ---------- 1. PUCK-OUT: hurling pong
-function gPuck() {
-  const s = { name: 'PUCK-OUT', how: ['HURLING PONG!', 'BLOCK THE SLIOTAR WITH YOUR HURLEY.', 'FIRST TO 3 SCORES WINS.'], ctl: 'MOVE: UP AND DOWN', pts: [0, 0], done: -1 };
+// ---------- 1. PADDLE BATTLE: two paddles, one ball, no mercy
+function gPaddle() {
+  const s = { name: 'PADDLE BATTLE', how: ['ONE BALL, TWO PADDLES.', 'BLOCK IT, THEN AIM WITH THE EDGE.', 'FIRST TO 3 WINS.'], ctl: 'MOVE: UP AND DOWN', pts: [0, 0], done: -1 };
   const ph = [36, 44], py = [150, 150];
   let b, serveT = 0, err = 0, trail = [];
   function serve(dir) { b = { x: 240, y: 150, vx: dir * 2.4, vy: rnd(-1.3, 1.3) }; serveT = 60; trail = []; }
@@ -47,4 +47,4 @@ function gPuck() {
   };
   return s;
 }
-addDuel('PUCK-OUT', gPuck);
+addDuel('PADDLE BATTLE', gPaddle);

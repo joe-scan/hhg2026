@@ -4,16 +4,16 @@
 // The hero is player slot 1. Slot 0 is the family member they're facing, played by the computer,
 // or by a real grown-up on WASD / Space / the left touch pad in 2-player mode.
 const TAUNT = {
-  dad: ['I TAUGHT YOU EVERYTHING YOU KNOW.', 'GO EASY ON ME, MY KNEES.', 'I WAS COUNTY STANDARD, YOU KNOW.'],
-  mum: ['I DON\'T LOSE. ASK YOUR DAD.', 'LOSER DOES THE DISHES.', 'I\'VE BEEN PRACTISING.'],
-  granny: ['I\'VE BEEN PLAYING THIS FOR YEARS.', 'DON\'T LET THE CARDIGAN FOOL YOU.', 'WINNER GETS A BISCUIT.'],
+  dad: ['I TAUGHT YOU EVERYTHING YOU KNOW.', 'GO EASY ON ME, MY KNEES.', 'I WAS A BIG DEAL BACK IN THE DAY.'],
+  mum: ['I DON\'T LOSE. ASK YOUR DAD.', 'LOSER DOES THE DISHES.', 'I\'VE BEEN PRACTICING.'],
+  granny: ['I\'VE BEEN PLAYING THIS FOR YEARS.', 'DON\'T LET THE CARDIGAN FOOL YOU.', 'WINNER GETS A COOKIE.'],
   grandad: ['IN MY DAY WE HAD ONE BUTTON.', 'I\'M ONLY WARMING UP.', 'NOBODY BEATS GRANDAD.'],
-  auntie: ['YOUR FAVOURITE AUNTIE IS BACK!', 'NO MERCY TODAY.', 'I\'M BETTER THAN YOUR UNCLE.'],
+  auntie: ['YOUR FAVORITE AUNT IS BACK!', 'NO MERCY TODAY.', 'I\'M BETTER THAN YOUR UNCLE.'],
   uncle: ['I\'LL LET YOU HAVE A HEAD START.', 'WATCH AND LEARN.', 'TELL YOUR DAD I SAID HELLO.'],
-  brother: ['YOU\'RE GOING DOWN!', 'NOT EVEN YOUR BIRTHDAY WILL SAVE YOU.', 'I\'M TELLING MUM IF YOU CHEAT.'],
+  brother: ['YOU\'RE GOING DOWN!', 'NOT EVEN YOUR BIRTHDAY WILL SAVE YOU.', 'I\'M TELLING ON YOU IF YOU CHEAT.'],
   sister: ['READY TO LOSE?', 'I\'M THE CHAMPION IN THIS HOUSE.', 'NO CRYING WHEN YOU LOSE.']
 };
-const CHEERS_END = { birthday: 'HAPPY BIRTHDAY!', christmas: 'HAPPY CHRISTMAS!', star: 'WELL DONE!' };
+const CHEERS_END = { birthday: 'HAPPY BIRTHDAY!', christmas: 'HAPPY CHRISTMAS!', fathers: 'HAPPY FATHER\'S DAY!', mothers: 'HAPPY MOTHER\'S DAY!', star: 'WELL DONE!' };
 let S = { name: 'title', t: 0 }, game = null, round = 0, won = [0, 0], two = false, bossTime = 0;
 function go(name, data) {
   S = Object.assign({ name, t: 0 }, data || {}); parts = []; floats = [];
@@ -136,7 +136,7 @@ const ST = {
   },
   bossIntro: {
     enter() {
-      setOpponent(0); S.bed = CFG.occasion !== 'star'; game = gBoss(S.bed ? 1 : 0); mus.mode = 'boss'; mus.step = 0; mus.fast = false;
+      setOpponent(0); S.bed = CFG.occasion === 'birthday' || CFG.occasion === 'christmas'; game = gBoss(S.bed ? 1 : 0); mus.mode = 'boss'; mus.step = 0; mus.fast = false;
       say(S.bed ? 'Oh no. It is bedtime. ' + SAYNAME[1] + ' and ' + SAYNAME[0] + ', team up!' : 'The homework monster! ' + SAYNAME[1] + ' and ' + SAYNAME[0] + ', team up!');
     },
     update() { if ((S.t > 120 && (anyIn().aP || clicked)) || S.t > 480) go('boss', { bed: S.bed }); },
