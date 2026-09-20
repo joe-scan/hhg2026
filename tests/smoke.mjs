@@ -89,7 +89,7 @@ for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['de/privacy/', '
   const t = await browser.newPage(); watch(t);
   await t.goto(BASE + from); await t.waitForTimeout(500);
   await t.click('.langs summary');                       // the picker opens on click
-  await t.click(`.langs a:text-is("${click}")`); await t.waitForTimeout(600);
+  await t.click(`.langs a:has-text("${click}")`); await t.waitForTimeout(600);
   const path = new URL(t.url()).pathname;
   if (!path.endsWith(wantEnd)) errors.push(`${click} from /${from} landed on ${path}, wanted ${wantEnd}`);
   await t.close();
@@ -144,6 +144,22 @@ for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'S
   if (!shown) errors.push(theme + ' never offered the picture');
   await fp.close();
 }
+
+// the dark/light button: it is in the shared header, so it has to work on every page, not
+// only the one whose script it used to live in
+for (const page of ['', 'free/christmas/', 'name/', 'es/free/halloween/', '404.html']) {
+  const sk = await browser.newPage(); watch(sk);
+  await sk.goto(BASE + page); await sk.waitForTimeout(300);
+  const before = await sk.evaluate(() => document.documentElement.dataset.skin || '(device)');
+  await sk.click('#skin-toggle'); await sk.waitForTimeout(150);
+  const after = await sk.evaluate(() => document.documentElement.dataset.skin);
+  await sk.reload(); await sk.waitForTimeout(300);
+  const kept = await sk.evaluate(() => document.documentElement.dataset.skin);
+  if (before === after) errors.push('the skin button did nothing on /' + page);
+  if (kept !== after) errors.push('the skin choice was forgotten on /' + page);
+  await sk.close();
+}
+console.log('skin button: works and is remembered on every page');
 
 // the language offer: a Spanish browser is offered Spanish, an English one is left alone, and
 // nobody is redirected anywhere

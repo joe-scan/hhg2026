@@ -122,28 +122,33 @@ function siblings(pagePath, lang) {
   return l => (l === 'en' ? `${up}${pagePath}` : `${up}${l}/${pagePath}`).replace(/index\.html$/, '');
 }
 
+// Canonical, hreflang and og:url all need the real address, not a relative one: Google's
+// hreflang spec requires fully-qualified URLs, and a preview card needs somewhere to point.
+const SITE_URL = 'https://happyherogames.com';
+const absolute = (pagePath, lang) =>
+  SITE_URL + '/' + (lang === 'en' ? '' : lang + '/') + pagePath.replace(/index\.html$/, '');
+
 function hreflangs(pagePath, lang) {
-  const href = siblings(pagePath, lang);
+  const here = absolute(pagePath, lang);
   // An English-only page has no translated versions, so it must not advertise any: a browser
   // that follows one gets a 404.
   const langs = ENGLISH_ONLY.includes(pagePath) ? ['en'] : ['en', ...LANGS];
-  const tags = langs.map(l => `<link rel="alternate" hreflang="${l}" href="${href(l)}">`);
-  tags.push(`<link rel="alternate" hreflang="x-default" href="${href('en')}">`);
+  const tags = [`<link rel="canonical" href="${here}">`, `<meta property="og:url" content="${here}">`];
+  for (const l of langs) tags.push(`<link rel="alternate" hreflang="${l}" href="${absolute(pagePath, l)}">`);
+  tags.push(`<link rel="alternate" hreflang="x-default" href="${absolute(pagePath, 'en')}">`);
   return tags.join('\n');
 }
 
 // The picker: one small control showing the language you are in, in its own words, which opens
-// the short list. No flags (a language is not a country) and no JavaScript.
+// the short list. No flags: a flag is a country, and Spanish is not Spain's alone. What it has
+// instead is a pixel chip with the language's code in it, which is ours and is not boring.
 function picker(pagePath, lang) {
   if (ENGLISH_ONLY.includes(pagePath)) return '';   // nothing to pick between
   const href = siblings(pagePath, lang);
+  const chip = l => `<b class="lang-chip">${l.toUpperCase()}</b>`;
   const others = ['en', ...LANGS].filter(l => l !== lang)
-    .map(l => `<a href="${href(l)}" hreflang="${l}" lang="${l}">${LANGNAMES[l]}</a>`).join('');
-  const globe = '<svg class="globe" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">'
-    + '<circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
-    + '<ellipse cx="8" cy="8" rx="3" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
-    + '<path d="M1.8 6h12.4M1.8 10h12.4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
-  return `<details class="langs"><summary title="Language" lang="${lang}">${globe}<span>${LANGNAMES[lang]}</span></summary><div>${others}</div></details>`;
+    .map(l => `<a href="${href(l)}" hreflang="${l}" lang="${l}">${chip(l)}<span>${LANGNAMES[l]}</span></a>`).join('');
+  return `<details class="langs"><summary title="Language" lang="${lang}">${chip(lang)}<span>${LANGNAMES[lang]}</span></summary><div>${others}</div></details>`;
 }
 
 // A visitor whose browser is set to Spanish is offered Spanish, once, and can say no. Nobody is
@@ -165,8 +170,7 @@ el.append(a,b);el.hidden=false;})();<\/script>`;
 // Search engines get one list of every public page, with the languages pointing at each other,
 // and one robots file that keeps them out of /g/, where a family's details live in the address.
 function searchFiles() {
-  const SITE_URL = 'https://happyherogames.com';
-  const url = (l, page) => SITE_URL + '/' + (l === 'en' ? '' : l + '/') + page.replace(/index\.html$/, '');
+  const url = (l, page) => absolute(page, l);
   const today = new Date().toISOString().slice(0, 10);
   const out = ['<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml">'.replace('xmlns="http://www.w3.org/1999/xhtml"', 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')];

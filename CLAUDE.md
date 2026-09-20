@@ -114,6 +114,9 @@ Written by hand
                             pages use it, the choice is kept in the visitor's own browser, and
                             a hero built on the front page carries over
     builder.js              the builder: form to config, live preview, Play link
+    skin.js                 the dark/light button. It is in the shared header, so it must be a
+                            shared file: it lived in the front page's script until 20 Sep 2026
+                            and the button did nothing on every other page
     css/site.css            shared page styles, the two looks, design tokens
     img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
     .htaccess               https and www redirects, HSTS, caching
@@ -152,6 +155,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 - **Run it:** `node tools/build.mjs`, then `cd site && python3 -m http.server 8766` and open http://localhost:8766.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. What it covers is written once, in README under Test. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **The 404 is one file for the whole site.** `site-src/pages/404.html`, served by `ErrorDocument 404 /404.html` for a missing page at any depth, in any folder. Every link and script in it is absolute, because a relative one breaks the moment somebody mistypes a URL two folders down. It is English only and out of the sitemap.
+- **Every page gets a canonical, an og:url and absolute hreflangs** from `hreflangs()` in the build. Relative hreflangs are invalid, and six language folders with no canonical is how duplicate-content trouble starts.
 - **Search engines:** `tools/build.mjs` writes `site/sitemap.xml` (every public page in every language, with hreflang pointing both ways) and `site/robots.txt` (everything allowed except `/g/`). The demo and the terms are deliberately left out: the demo lives under `/g/` and the terms are noindex until a solicitor has read them. Submitting the sitemap to Google is a one-off job in `docs/todo.md`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
 - **Deploy every time,** without asking (Joe, 20 Sep 2026). Build, run the smoke test and `node tools/links.mjs`, then `./deploy.sh`, then run the smoke test again against `https://happyherogames.com/`. A failing test is the one reason not to: fix it or say what's broken. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.

@@ -24,14 +24,20 @@
 
 /* the language picker: one control showing the language you are in, opening a short list */
 .langs{position:relative;font-size:14px}
-.langs summary{list-style:none;cursor:pointer;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 10px;display:flex;align-items:center;gap:7px}
-.langs .globe{flex:none;opacity:.85}
+/* the code in a pixel chip, in place of a flag: a flag is a country, and a language is not */
+.lang-chip{display:inline-flex;align-items:center;justify-content:center;width:26px;height:18px;
+  flex:none;background:var(--ink);color:var(--paper);font-size:11px;font-weight:700;letter-spacing:.06em;
+  border-radius:2px;font-family:var(--body)}
+.langs summary .lang-chip{background:var(--brand);color:#fff}
+.langs a .lang-chip{background:var(--rule);color:var(--ink)}
+.langs a:hover .lang-chip{background:var(--paper);color:var(--ink)}
+.langs summary{list-style:none;cursor:pointer;color:var(--ink);border:1px solid var(--rule);border-radius:2px;padding:4px 10px 4px 5px;display:flex;align-items:center;gap:8px}
 .langs summary::-webkit-details-marker{display:none}
 .langs summary::after{content:" \25be"}
 .langs summary:hover,.langs[open] summary{color:var(--ink);border-color:var(--ink)}
 .langs div{position:absolute;right:0;top:calc(100% + 4px);z-index:5;display:grid;min-width:150px;
   background:var(--paper);border:1px solid var(--ink);border-radius:2px;padding:4px}
-.langs a{display:block;padding:6px 10px;color:var(--ink);text-decoration:none}
+.langs a{display:flex;align-items:center;gap:8px;padding:6px 10px;color:var(--ink);text-decoration:none}
 .langs a:hover{background:var(--ink);color:var(--paper)}
 footer .langs div{right:auto;left:0;top:auto;bottom:calc(100% + 4px)}
 
@@ -50,6 +56,8 @@ button,input,select{font:inherit;color:inherit}
 #lang-offer a{color:var(--ink)}
 #lang-offer button{border:0;background:none;padding:0;color:var(--muted);font-size:14px;cursor:pointer;font-family:inherit}
 #lang-offer button:hover{color:var(--ink);text-decoration:underline}
+/* visually hidden, still read aloud */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
 .mark{font-family:var(--mark);font-weight:400;font-size:21px;letter-spacing:-.005em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
 .logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
@@ -58,7 +66,7 @@ button,input,select{font:inherit;color:inherit}
 .top nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 /* the Free games menu: the same no-JavaScript <details> as the language picker */
 .drop{position:relative}
-.drop summary{list-style:none;cursor:pointer;font-weight:700;font-size:15px}
+.drop summary{list-style:none;cursor:pointer;font-weight:700;font-size:15px;padding:3px 0}
 .drop summary::-webkit-details-marker{display:none}
 .drop summary::after{content:" \25be"}
 .drop summary:hover,.drop[open] summary{text-decoration:underline}
@@ -66,14 +74,14 @@ button,input,select{font:inherit;color:inherit}
   background:var(--paper);border:1px solid var(--rule);border-radius:2px;box-shadow:0 2px 0 var(--rule)}
 .drop a{display:block;padding:8px 12px;font-size:15px;font-weight:400;text-decoration:none;color:var(--ink)}
 .drop a:hover{background:var(--ink);color:var(--paper)}
-.top nav a{text-decoration:none;font-weight:700;font-size:15px}
+.top nav a{text-decoration:none;font-weight:700;font-size:15px;padding:3px 0;display:inline-block}
 .top nav a:hover{text-decoration:underline}
 
 /* the footer, the same on every page */
 footer{border-top:1px solid var(--rule);margin-top:10px;padding-block:18px 26px;color:var(--muted);font-size:14px;
   display:flex;align-items:center;justify-content:space-between;gap:10px 26px;flex-wrap:wrap}
-footer a{color:var(--muted)}
-.foot-mark{font-family:var(--mark);font-size:15px;color:var(--ink)!important;text-decoration:none}
+footer a{color:var(--muted);padding:3px 0;display:inline-block}
+.foot-mark{font-family:var(--mark);font-size:15px;color:var(--ink)!important;text-decoration:none;padding:3px 0;display:inline-block}
 .foot-mark:hover{text-decoration:underline}
 footer a:hover{color:var(--ink)}
 footer .langs{margin-left:auto}
@@ -124,7 +132,9 @@ canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated
 .opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
 .sws{display:flex;flex-wrap:wrap;gap:6px}
 .sw{width:30px;height:30px;border-radius:2px;border:1px solid var(--rule);background:var(--c);cursor:pointer;padding:0}
+/* the selected swatch is marked with a ring, so its focus ring has to be told apart from it */
 .sw[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.sw:focus-visible{outline:3px solid var(--focus);outline-offset:4px;box-shadow:0 0 0 2px var(--paper)}
 /* the pick-your-look strip on the free pages */
 .look-pick{display:grid;gap:12px;margin:0 0 18px;max-width:640px}
 .look-pick .row-l{display:grid;gap:6px}

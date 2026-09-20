@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Play | HappyHeroGames</title>
+<meta name="description" content="The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
@@ -72,14 +73,15 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </div>
 
 <main class="stage wide">
+  <h1 class="sr">Your game</h1>
   <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads."></canvas></div>
-  <div class="tpad p0" aria-label="Family player's controls">
+  <div class="tpad p0" role="group" aria-label="Family player's controls">
     <button type="button" id="btn-home-pad" class="home">Title</button>
     <span class="who" id="family-pad">FAMILY</span>
     <div class="dpad"><button data-p="0" data-k="u" aria-label="Up">▲</button><button data-p="0" data-k="l" aria-label="Left">◀</button><button data-p="0" data-k="r" aria-label="Right">▶</button><button data-p="0" data-k="d" aria-label="Down">▼</button></div>
     <button class="fire" data-p="0" data-k="a">FIRE</button>
   </div>
-  <div class="tpad p1" aria-label="Hero's controls">
+  <div class="tpad p1" role="group" aria-label="Hero's controls">
     <span class="who" id="hero-pad">HERO</span>
     <div class="dpad"><button data-p="1" data-k="u" aria-label="Up">▲</button><button data-p="1" data-k="l" aria-label="Left">◀</button><button data-p="1" data-k="r" aria-label="Right">▶</button><button data-p="1" data-k="d" aria-label="Down">▼</button></div>
     <button class="fire" data-p="1" data-k="a">FIRE</button>
