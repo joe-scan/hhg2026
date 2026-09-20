@@ -168,6 +168,24 @@ for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
 }
 console.log('language offer: shown in Spanish, quiet in English, no redirects');
 
+// the structured data: a search engine has to be told the price, and it has to be the price
+{
+  const sd = await browser.newPage(); watch(sd);
+  await sd.goto(BASE); await sd.waitForTimeout(300);
+  const json = await sd.evaluate(() => { const el = document.querySelector('script[type="application/ld+json"]'); return el ? el.textContent : null; });
+  if (!json) errors.push('the front page carries no structured data');
+  else {
+    const g = JSON.parse(json)['@graph'] || [];
+    const product = g.find(n => n['@type'] === 'Product');
+    const faq = g.find(n => n['@type'] === 'FAQPage');
+    const onPage = await sd.evaluate(() => document.querySelectorAll('#faq details').length);
+    if (!product || product.offers.price !== '99.00') errors.push('structured data does not say $99');
+    if (!faq || faq.mainEntity.length !== onPage) errors.push('structured data lists ' + (faq ? faq.mainEntity.length : 0) + ' questions, the page shows ' + onPage);
+  }
+  await sd.close();
+}
+console.log('structured data: one price, and every question on the page');
+
 // the order form: the fields that matter are required, the honeypot is out of sight, and the
 // form carries the language so the thank-you comes back in it
 for (const [page, want] of [['order/', 'en'], ['de/order/', 'de']]) {

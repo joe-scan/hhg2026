@@ -151,6 +151,42 @@ function picker(pagePath, lang) {
   return `<details class="langs"><summary title="Language" lang="${lang}">${chip(lang)}<span>${LANGNAMES[lang]}</span></summary><div>${others}</div></details>`;
 }
 
+// What the page is, in the form a search engine reads. Everything in it is lifted out of the
+// rendered page, so it cannot drift: the description is the page's own meta description, the
+// questions are the page's own questions, in whatever language the page is in. Only the front
+// page carries it; the others have nothing to declare.
+const strip = h => h.replace(/<[^>]+>/g, '').replace(/&middot;/g, '·').replace(/&amp;/g, '&')
+  .replace(/&mdash;/g, '—').replace(/&#\d+;/g, '').replace(/\s+/g, ' ').trim();
+
+function structured(pagePath, lang, html) {
+  if (pagePath !== 'index.html') return '';
+  const site = SITE_URL, here = absolute(pagePath, lang);
+  const desc = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
+  const faq = [...html.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)]
+    .map(m => ({ '@type': 'Question', name: strip(m[1]), acceptedAnswer: { '@type': 'Answer', text: strip(m[2]) } }));
+  const data = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'Organization', '@id': site + '/#org', name: 'HappyHeroGames', url: site,
+        logo: site + '/img/logo.svg', email: 'hello@happyherogames.com',
+        address: { '@type': 'PostalAddress', addressCountry: 'IE' } },
+      { '@type': 'WebSite', '@id': site + '/#site', url: site, name: 'HappyHeroGames',
+        publisher: { '@id': site + '/#org' }, inLanguage: lang },
+      { '@type': 'Product', '@id': here + '#product',
+        name: 'A personalized video game, made for one person', description: desc,
+        image: [site + '/img/og.png', site + '/img/finale.png', site + '/img/poster.png'],
+        brand: { '@id': site + '/#org' }, category: 'Personalized gifts',
+        offers: { '@type': 'Offer', price: '99.00', priceCurrency: 'USD',
+          url: absolute('order/index.html', lang), availability: 'https://schema.org/InStock',
+          priceValidUntil: '2027-12-31',
+          shippingDetails: { '@type': 'OfferShippingDetails', deliveryTime: { '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' } } } } },
+      ...(faq.length ? [{ '@type': 'FAQPage', '@id': here + '#faq', mainEntity: faq }] : [])
+    ]
+  };
+  return '<script type="application/ld+json">' + JSON.stringify(data) + '<\/script>';
+}
+
 // A visitor whose browser is set to Spanish is offered Spanish, once, and can say no. Nobody is
 // redirected: an English speaker in Madrid has a Spanish browser and wants the page they asked for.
 function offer(pagePath, lang) {
@@ -218,6 +254,7 @@ function build(lang) {
     html = html.replaceAll('<!--langs-->', picker(page, lang));
     html = html.replace('<!--offer-->', offer(page, lang));
     html = html.replaceAll('<!--lang-->', lang);
+    html = html.replace('<!--schema-->', structured(page, lang, html));
     const out = lang === 'en' ? path.join(SITE, page) : path.join(SITE, lang, page);
     write(out, html);
   }
