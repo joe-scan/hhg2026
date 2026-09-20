@@ -10,9 +10,14 @@
 
   // start from the link (coming back from the game), then a saved draft, then the demo family
   let cfg = null;
-  if (location.hash.includes('g=')) cfg = cfgFromLink();
+  const fromLink = location.hash.includes('g=');
+  if (fromLink) cfg = cfgFromLink();
   if (!cfg) { try { const d = localStorage.getItem('hhg-draft'); if (d) cfg = JSON.parse(d); } catch (e) {} }
   cfg = sanitise(cfg || DEMO);
+  // The hero's name and family travel in the hash. Once they are read, take them out of the address
+  // bar: this page carries an analytics script, and a family's details have no business in anyone
+  // else's logs. The draft in localStorage keeps them on this device.
+  if (fromLink) { try { history.replaceState(null, '', location.pathname + '#make'); } catch (e) {} }
 
   function swatches(el, list, names, get, set) {
     el.innerHTML = '';
@@ -97,6 +102,6 @@
     else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
   }
   requestAnimationFrame(frame);
-  if (location.hash.includes('g=')) setTimeout(() => $('make').scrollIntoView(), 50);
+  if (fromLink) setTimeout(() => $('make').scrollIntoView(), 50);
 
 })();
