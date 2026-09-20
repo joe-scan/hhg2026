@@ -20,6 +20,7 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/todo.md`: everything outside the code that Joe has to do, and what's done.
+- `docs/competitors.md`: the seven companies selling something like this, and what to take from each.
 - `docs/product.md`: the product and how it's built. The questionnaire, the privacy rule for each field, the config format, the game format, and why it's all on one domain.
 - `CLAUDE.md`: the brief for AI assistants working on this. Read it before changing anything.
 

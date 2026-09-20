@@ -91,16 +91,23 @@ What the US costs us: a merchant of record for sales tax in about 45 states, US 
 
 ### What makes us different
 
-| | Muksun Games | Happy Hero Games |
-|---|---|---|
-| Price | $99 | $99 or $179 |
-| Plays on | Android, Windows PC | Any browser: iPhone, Android, iPad, laptop. Nothing to install. |
-| Try before you buy | No | A free demo built in a minute, in the browser |
-| Built from | Photos and locations | A questionnaire about the family. No photos. |
-| The family | Appear in the story | Are the opponents, the referee, the cook, the teammate |
-| Ending | Game ends | The occasion: cake and "HAPPY BIRTHDAY" with the whole family |
+Seven competitors were read in detail on 20 September 2026. The full analysis is in `docs/competitors.md`; the short version is that the market splits into cheap templates, made-for-you games and commissions, and nobody has won it.
+
+| | Ready Player U | Muksun Games | Bday Game | Happy Hero Games |
+|---|---|---|---|---|
+| Price | $30.89 | $99, or $399 from scratch | $250 to $450 | $99 or $179 |
+| Plays on | Browser | Android and Windows PC | Windows | Any browser |
+| Try before you buy | A generic demo | No | No | Their own hero, playing, in a minute |
+| Built from | Photos and three quiz answers | Photos and locations | Weeks of conversation | A questionnaire. No photos. |
+| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | 48 hours |
+| Who is in it | Two | Up to five | Whoever you discuss | Up to eight, plus the pet |
+| Proof | 1,873 reviews at 4.8 | 61 reviews at 4.77 | A handful of references | None yet |
 
 The pitch: **"Put someone special in their own arcade game."**
+
+Three things follow from that table and are costed nowhere else in this plan. Muksun cannot run on an iPhone, which is the line our advertising should hit. Rush delivery at $49 and a free printable gift certificate are both proven sellers we do not have. And Ready Player U sells prints of the game art with a QR code on them at a third of our price, with thirty times our proof, which is either a warning about our price or a validation of the poster, and only real orders will say which.
+
+The nearest business to copy is not a game company at all. Songfinch sells a custom song written by a real musician for $199, went from $150,000 of revenue in 2019 to $1.45M in 2020 and past $5M in 2021, has delivered more than 400,000 songs, and pays its writers about 55% of each order. A network of human makers paid per piece, with the company owning the form, the marketing and the quality bar, is the shape this business takes if the checking bottleneck in section 7 has to be solved with people rather than software.
 
 ## 6. The $1M target
 

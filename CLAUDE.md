@@ -68,6 +68,8 @@ deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
 docs/pitch.md             the one page for grant applications and anyone who needs it in two minutes
 docs/todo.md              Joe's list: trademark, company setup, grants, what's needed before taking money
+docs/competitors.md       who else sells this, what to take from them, where we win
+docs/research/            raw captures behind the research, kept so claims can be checked
 docs/product.md           the product and how it's built: questionnaire, config, game format, one domain, /g/ URLs, scores, backups
 site/index.html           landing page with the live hero builder
 site/.htaccess            https and www redirects, HSTS, caching

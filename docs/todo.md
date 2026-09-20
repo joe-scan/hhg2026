@@ -73,6 +73,18 @@ Last updated 20 September 2026.
 - [ ] Measure the share rate: how many families press Share at the end.
 - [ ] Ask every buyer for a ten-second clip of the moment the child sees their name. Those clips are the advertising.
 
+## From the competitor research
+
+See `docs/competitors.md`. These are the cheap, proven moves.
+
+- [ ] Rush delivery as a paid upgrade, offered when the buyer's date is too close. Muksun charges $49 for it.
+- [ ] A printable gift card the moment someone pays, free, so there is something to hand over on the day.
+- [ ] Move the questionnaire to after payment, the way Muksun does it.
+- [ ] Put "works on any phone, nothing to install" in the first screenful. Muksun's $99 game does not run on an iPhone.
+- [ ] Sell the poster framed as well as rolled. Ready Player U's 1,873 reviews say people frame this.
+- [ ] Decide whether to list on Etsy for discovery, at a price that suits Etsy, without dropping the price here.
+- [ ] Collect the first fifty reviews and ten reaction clips. We have no proof and they have thousands.
+
 ## Marketing, when the above is done
 
 - [ ] First paid social budget, to find the real cost of winning a customer. The plan assumes $38.
