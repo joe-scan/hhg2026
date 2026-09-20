@@ -201,7 +201,6 @@
  "Tell us who the game is for. We email you back with a payment link and the date it will be ready. No account, and nothing is taken from you here.": "Dicci per chi è il gioco. Ti rispondiamo via email con un link di pagamento e la data in cui sarà pronto. Nessun account e qui non paghi niente.",
  "Order a game": "Ordina un gioco",
  "Tell us who it's for. We email you back with a payment link and a date.": "Dicci per chi è. Ti rispondiamo via email con un link di pagamento e una data.",
- "Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make.": "Dicci per chi è. Leggiamo ogni richiesta di persona e rispondiamo, di solito lo stesso giorno, con un link di pagamento e la data in cui sarà pronto. Qui non paghi niente e non c'è nessun account da creare.",
  "That did not send. Please email": "Non è partito. Scrivi a",
  "instead and we will sort it out.": "e sistemiamo tutto.",
  "Who is the game for?": "Per chi è il gioco?",
@@ -209,10 +208,6 @@
  "What is the occasion?": "Qual è l'occasione?",
  "When do you need it?": "Per quando ti serve?",
  "Leave this empty if there is no particular day.": "Lascia vuoto se non c'è un giorno preciso.",
- "Which one would you like?": "Quale preferisci?",
- "The game, $99": "Il gioco, $99",
- "The gift box, $179": "La confezione regalo, $179",
- "Not sure yet": "Non lo so ancora",
  "Your email": "La tua email",
  "This is where we send the game.": "È qui che ti mandiamo il gioco.",
  "Leave this empty": "Lascia vuoto",
@@ -238,7 +233,6 @@
  "Ready in 48 hours instead of five days.": "Pronto in 48 ore invece che in cinque giorni.",
  "A second game for a brother or sister, instead of $99.": "Un secondo gioco per un fratello o una sorella, invece di 99 $.",
  "A preview of the title screen, with the name and the look you have chosen": "Un'anteprima della schermata del titolo, con il nome e l'aspetto che hai scelto",
- "Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos.": "Poi: ti mandiamo via email un link di pagamento e qualche domanda su cosa ama, chi altro c'è dentro e le battute di famiglia. Chiediamo solo quello che serve al gioco. Niente cognomi, niente età, niente scuole, niente foto.",
  "Nothing you type is sent to us.": "Niente di ciò che scrivi arriva a noi.",
  "Five games. Up to eight people in it. Ready within five working days.": "Cinque giochi. Fino a otto persone dentro. Pronto in cinque giorni lavorativi.",
  "A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen.": "Un minuto ciascuno, in qualsiasi browser. Un gioco di Natale e uno di Halloween, con il tuo nome sulla schermata finale.",
@@ -249,5 +243,8 @@
  "Any phone, tablet, laptop or computer with a web browser.": "Qualsiasi telefono, tablet, portatile o computer con un browser.",
  "About twenty minutes the first time through.": "Una ventina di minuti la prima volta.",
  "Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion.": "Sì. La modalità festa è nella prima schermata. Scegli quanti giocano e ognuno fa il suo turno contro l'eroe. Finisce con un tabellone dei risultati e un campione.",
- "Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner.": "Cinque giorni lavorativi come standard, da quando abbiamo le tue risposte. C'è un'opzione più veloce nel modulo d'ordine, se ti serve."
+ "Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner.": "Cinque giorni lavorativi come standard, da quando abbiamo le tue risposte. C'è un'opzione più veloce nel modulo d'ordine, se ti serve.",
+ "Anything to add?": "Vuoi aggiungere qualcosa?",
+ "Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make.": "Dicci per chi è. Leggiamo ogni richiesta di persona e rispondiamo lo stesso giorno, con un link di pagamento e una data. Qui non si paga niente e non c'è nessun account da creare.",
+ "Next: a payment link, and a few questions about what they love and who else is in it. We only ask for what the game needs. No surnames, no ages, no schools, no photos.": "Poi: un link di pagamento e qualche domanda su cosa ama e chi altro c'è dentro. Chiediamo solo quello che serve al gioco. Niente cognomi, niente età, niente scuole, niente foto."
 }

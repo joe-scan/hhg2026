@@ -189,6 +189,10 @@ for (const [page, want] of [['order/', 'en'], ['de/order/', 'de']]) {
   if (form.required !== 'email,hero') errors.push('/' + page + ' asks for the wrong required fields: ' + form.required);
   if (form.trapShown) errors.push('/' + page + ' shows the honeypot field to people');
   if (form.method !== 'post') errors.push('/' + page + ' form is not a POST');
+  const adds = await of.evaluate(() => [...document.querySelectorAll('form [name="box"], form [name="sibling"], form [name="speed"]')].map(e => e.name));
+  for (const want of ['box', 'sibling', 'speed']) if (!adds.includes(want)) errors.push('/' + page + ' lost the ' + want + ' option');
+  const stale = await of.evaluate(() => document.body.textContent.includes('$179'));
+  if (stale) errors.push('/' + page + ' still offers the retired $179 price');
   await of.close();
 }
 console.log('order form: present, required fields right, honeypot hidden, language carried');

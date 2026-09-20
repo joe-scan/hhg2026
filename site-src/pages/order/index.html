@@ -46,7 +46,7 @@ label.one > span{display:block;font-weight:400;margin:0}
 
 <main class="order-page">
   <h1>Order a game</h1>
-  <p class="sub">Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make.</p>
+  <p class="sub">Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make.</p>
 
   <div class="screen"><canvas id="game" width="480" height="270" aria-label="A preview of the title screen, with the name and the look you have chosen"></canvas></div>
   <div class="look-pick" id="look"></div>
@@ -86,14 +86,11 @@ label.one > span{display:block;font-weight:400;margin:0}
       <label class="one"><input type="radio" name="speed" value="Rush, 48 hours, $39"><span>In 48 hours. $39 more.</span></label>
     </fieldset>
 
-    <label>
-      <span>Which one would you like?</span>
-      <select name="pick">
-        <option>The game, $99</option>
-        <option>The gift box, $179</option>
-        <option>Not sure yet</option>
-      </select>
-    </label>
+    <fieldset class="speed">
+      <legend>Anything to add?</legend>
+      <label class="one"><input type="checkbox" name="box" value="yes"><span><b>+$80</b> The printed poster and a short video of their game, because a link is hard to wrap.</span></label>
+      <label class="one"><input type="checkbox" name="sibling" value="yes"><span><b>+$69</b> A second game for a brother or sister, instead of $99.</span></label>
+    </fieldset>
 
     <label>
       <span>Your name</span>
@@ -111,7 +108,7 @@ label.one > span{display:block;font-weight:400;margin:0}
     <p><button class="btn go" type="submit">Send this to us</button></p>
   </form>
 
-  <p class="after-form">Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos. <a href="../privacy/">What we do with it</a> &middot; <a href="/terms/" hreflang="en">Terms and refunds</a></p>
+  <p class="after-form">Next: a payment link, and a few questions about what they love and who else is in it. We only ask for what the game needs. No surnames, no ages, no schools, no photos. <a href="../privacy/">What we do with it</a> &middot; <a href="/terms/" hreflang="en">Terms and refunds</a></p>
   <p class="after-form">Would rather just write to us? <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</p>
 </main>
 

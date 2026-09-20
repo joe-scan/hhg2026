@@ -201,7 +201,6 @@
  "Tell us who the game is for. We email you back with a payment link and the date it will be ready. No account, and nothing is taken from you here.": "Inis dúinn cé dó an cluiche. Seolaimid ríomhphost ar ais chugat le nasc íocaíochta agus an dáta a mbeidh sé réidh. Gan chuntas, agus ní thógtar aon rud uait anseo.",
  "Order a game": "Ordaigh cluiche",
  "Tell us who it's for. We email you back with a payment link and a date.": "Inis dúinn cé dó é. Seolaimid ríomhphost ar ais chugat le nasc íocaíochta agus dáta.",
- "Tell us who it is for. We read every one ourselves and email you back, usually the same day, with a payment link and the date it will be ready. You are not paying anything here, and there is no account to make.": "Inis dúinn cé dó é. Léimid gach ceann acu sinn féin agus seolaimid ríomhphost ar ais chugat, an lá céanna de ghnáth, le nasc íocaíochta agus an dáta a mbeidh sé réidh. Níl tú ag íoc faic anseo agus níl aon chuntas le déanamh.",
  "That did not send. Please email": "Níor seoladh é sin. Seol ríomhphost chuig",
  "instead and we will sort it out.": "agus réiteoimid é.",
  "Who is the game for?": "Cé dó an cluiche?",
@@ -209,10 +208,6 @@
  "What is the occasion?": "Cén ócáid atá ann?",
  "When do you need it?": "Cathain atá sé uait?",
  "Leave this empty if there is no particular day.": "Fág folamh é mura bhfuil lá ar leith i gceist.",
- "Which one would you like?": "Cé acu ba mhaith leat?",
- "The game, $99": "An cluiche, $99",
- "The gift box, $179": "An bosca bronntanais, $179",
- "Not sure yet": "Níl mé cinnte fós",
  "Your email": "Do sheoladh ríomhphoist",
  "This is where we send the game.": "Is chuige sin a sheolaimid an cluiche.",
  "Leave this empty": "Fág seo folamh",
@@ -238,7 +233,6 @@
  "Ready in 48 hours instead of five days.": "Réidh i gceann 48 uair an chloig in ionad cúig lá.",
  "A second game for a brother or sister, instead of $99.": "An dara cluiche do dheartháir nó do dheirfiúr, in ionad $99.",
  "A preview of the title screen, with the name and the look you have chosen": "Réamhamharc ar an scáileán teidil, leis an ainm agus an chuma atá roghnaithe agat",
- "Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos.": "Ina dhiaidh sin: seolaimid nasc íocaíochta chugat ar ríomhphost, agus cúpla ceist faoi na rudaí is breá leo, cé eile atá istigh ann agus jócanna an teaghlaigh. Ní iarraimid ach an méid a theastaíonn ón gcluiche. Gan sloinnte, gan aois, gan scoileanna, gan grianghraif.",
  "Nothing you type is sent to us.": "Ní sheoltar chugainn aon rud a chlóscríobhann tú.",
  "Five games. Up to eight people in it. Ready within five working days.": "Cúig chluiche. Suas le hochtar istigh ann. Réidh i gceann cúig lá oibre.",
  "A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen.": "Nóiméad an ceann, i mbrabhsálaí ar bith. Cluiche Nollag agus cluiche Oíche Shamhna, le d'ainm ar an scáileán deiridh.",
@@ -249,5 +243,8 @@
  "Any phone, tablet, laptop or computer with a web browser.": "Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin.",
  "About twenty minutes the first time through.": "Timpeall fiche nóiméad an chéad uair.",
  "Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion.": "Tá. Tá an mód cóisire ar an gcéad scáileán. Roghnaigh cé mhéad atá ag imirt, agus faigheann gach duine seal in aghaidh an laoich. Críochnaíonn sé le clár torthaí agus curadh.",
- "Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner.": "Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Tá rogha níos tapúla ar an bhfoirm ordaithe má theastaíonn sé uait."
+ "Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner.": "Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Tá rogha níos tapúla ar an bhfoirm ordaithe má theastaíonn sé uait.",
+ "Anything to add?": "Ar mhaith leat rud éigin a chur leis?",
+ "Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make.": "Inis dúinn cé dó é. Léimid gach ceann acu sinn féin agus seolaimid ríomhphost ar ais chugat an lá céanna, le nasc íocaíochta agus dáta. Ní íoctar faic anseo agus níl aon chuntas le déanamh.",
+ "Next: a payment link, and a few questions about what they love and who else is in it. We only ask for what the game needs. No surnames, no ages, no schools, no photos.": "Ina dhiaidh sin: nasc íocaíochta, agus cúpla ceist faoi na rudaí is breá leo agus cé eile atá istigh ann. Ní iarraimid ach an méid a theastaíonn ón gcluiche. Gan sloinnte, gan aois, gan scoileanna, gan grianghraif."
 }

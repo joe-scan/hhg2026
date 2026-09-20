@@ -10,7 +10,7 @@ HappyHeroGames puts someone special in their own arcade game. Usually that's a c
 - **Buyers:** parents, grandparents, godparents, partners. **Heroes:** mostly children aged 5 to 12, which is the main market in the plan; grown-ups are a second market.
 - **One hero per game, not two people playing each other.** The hero faces a different family member in each game.
 - **Occasions:** birthdays all year, Christmas, Father's Day, Mother's Day, "just because".
-- **Status (20 Sep 2026):** live at happyherogames.com in six languages: landing page, hero builder, a free one-game demo, party mode, two free games (`/free/christmas/`, `/free/halloween/`), privacy policy and draft terms. **Orders for the first ten games are open**, taken by email and built by hand. No automatic payments, no questionnaire form, no database, and no solicitor has read the terms yet.
+- **Status (20 Sep 2026):** live at happyherogames.com in six languages: landing page, hero builder, a free one-game demo, party mode, two free games (`/free/christmas/`, `/free/halloween/`), privacy policy and draft terms. **Orders for the first ten games are open**, through the form at `/order/`, which posts to `order.php` on our own host and emails us. No automatic payments, no database, and no solicitor has read the terms yet.
 - **Owner:** Joe Scanlon (joe-scan on GitHub).
 
 ## Where it came from
@@ -34,11 +34,11 @@ What we learnt from it, and why the product looks like this:
 - **Party mode.** A third option on the title screen: pick two to six challengers, each takes a turn against the hero on the same screen, and it ends on a results board with a champion. Built for birthday parties, where one gift is seen by six families. No typing: challengers are PLAYER 1 to PLAYER 6, because a name box on a canvas is a misery.
 - **Structure:** title (STARRING [NAME]), then for each game: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
 - **Demo vs full game:** the free demo is one game, then a locked card, played at `/g/demo/`. The paid game is 5 games and a boss, never ten: more than that is more than a family plays and more than we can check. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence.
-- **The poster and video (+$80):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland) and a twenty-second trailer of their own game. The premiere countdown was built on 20 Sep 2026 and removed the same day: too much work for what it returned. Link previews do the sharing job instead. Plus gift cards. No sibling add-on and no subscription: **two prices, and only one variable between them.** Everything about the game is the same at $99 and $179; the money buys something printed. Defend that when the next tier gets suggested.
+- **The poster and video (+$80):** a printed arcade poster of their title screen (print-on-demand, printed in the buyer's own country, so nothing ships from Ireland) and a twenty-second video of their own game. The premiere countdown was built on 20 Sep 2026 and removed the same day: too much work for what it returned. Link previews do the sharing job instead.
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
 - **One price on the page: $99.** Changed 20 Sep 2026. The poster and video ($80), rush ($39) and a second game for a sibling ($69) are add-ons on the order form. A $49 tier has been proposed twice and refused twice: it leaves $2.15 after advertising, and one game against one person is what the free demo already gives away.
-- **Add-ons after the decision, never on the pricing page.** Rush delivery ($39, ready in 48 hours) and a second game for a sibling ($69) are asked for on the order form, never as a third column on the pricing page. The rule that does not bend is that the pricing *page* has one variable on it. What somebody adds once they have decided is a different question, and it is where the margin is: `docs/business-plan.md` has the numbers.
+- **Add-ons are a list, never a column.** The Price section names one number, $99, and lists the three add-ons underneath with the line "nothing is decided here". They are chosen on the order form. What is banned is a second product to compare against the first, which is what made people call the packaging confusing. Rush delivery ($39, ready in 48 hours) and a second game for a sibling ($69) are asked for on the order form, never as a third column on the pricing page. The rule that does not bend is that the pricing *page* has one variable on it. What somebody adds once they have decided is a different question, and it is where the margin is: `docs/business-plan.md` has the numbers.
 - **$99, and the poster and video add $80.** Decided 20 Sep 2026, on the site, and in the plan. Model and numbers: `docs/business-plan.md`. Questionnaire, config, game format and how the site is served: `docs/product.md`.
 - **No cheap tier and no monthly club.** Both were tried on paper and dropped: every extra option on the pricing page is another decision between someone and their credit card. Add-ons on the order form are the opposite case, and are welcome.
 
@@ -76,7 +76,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 - **The game's own look is Poster Bold**, picked on 20 Sep 2026 from ten rendered on the real game: sky blue, pitch green, black ink, one red and one yellow, flat colour and hard edges, because that reads on a phone at arm's length. `COL` in `engine.js` is the whole palette and `bgSynth()` is the sky and the grass. `CHROME=... node tools/game-skins.mjs` re-renders the ten if the choice is ever reopened; a look is a font, a few colours and one background function.
 - **Each game draws its own scenery, and that is what people actually look at.** Ten palettes changed nothing below the top bar until the games themselves were redrawn. A new game needs a place, not just a mechanic: a crowd, a fence, a window, something with depth.
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. The game screen is the exception to nothing: it is flat colour too, just brighter.
-- Type: **Bowlby One** for headlines, the wordmark and the big lettering inside the game; **Atkinson Hyperlegible** for everything else on the page; **Press Start 2P** for the game's own small text, never in page copy. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came out as one wall of capitals.
+- Type: **Bowlby One** for headlines, the wordmark and the big lettering inside the game; **Atkinson Hyperlegible** for everything else on the page; **Press Start 2P** for the game's own small text, never in page copy. Bungee was dropped on 20 Sep 2026; the reason is in the comment at the top of `site.css`.
 - One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode. The game has its own palette (see Poster Bold above) and does not use either.
 - **One lockup, used twice.** The header and the footer show the same thing at two sizes: the pixel HHG block, then Happy**Hero**Games. In both, the middle element is the brand orange and the rest is ink or paper, so the mark and the wordmark tell one story. The favicon is the same block, cropped to the orange H.
 - **The mark never changes colour.** `--brand` (`#f2711c`) is the orange in HappyHero**Games**, in `logo.svg` and in `icon.svg`, in both skins and on every page. A wordmark that changes colour with the theme is not a wordmark. The letters around it flip with the skin so they stay legible; the brand colour does not.
@@ -100,7 +100,9 @@ Written by hand
   docs/todo.md            Joe's list: everything outside the code, and what is done
   docs/research/          raw captures behind the research, kept so claims can be checked
   site-src/pages/*.html     the source pages, one per page. The free games are under
-                            pages/free/<season>/, listed at pages/free/index.html
+                            pages/free/<season>/, listed at pages/free/index.html.
+                            pages/order/ is the order form and pages/order/thanks/ its reply.
+                            pages/404.html is served for a missing page at any depth
   site-src/partials/        header.html and footer.html, dropped into every page by the build
                             at the <!--header--> and <!--footer--> marks. {{root}} becomes / or
                             /es/ and so on, so every link is absolute and the wordmark always
@@ -120,8 +122,10 @@ Written by hand
                             a hero built on the front page carries over
     builder.js              the builder: form to config, live preview, Play link
     css/site.css            shared page styles, the two looks, design tokens
-    img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
-    .htaccess               https and www redirects, HSTS, caching
+    img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif,
+                            finale.png (the ending, shown on the landing page)
+    order.php               the order form's handler, and the only server code on the site
+    .htaccess               https and www redirects, HSTS, caching, the 404, the old addresses
     g/.htaccess             keeps every game out of search engines
   tests/smoke.mjs         the headless test. What it covers is under How to work here
   tests/look.mjs          screenshots of the pages that break quietly: nothing asserted, look
@@ -173,7 +177,7 @@ None of them are deployed. `deploy.sh` only copies `site/`.
 - `node tools/review-files.mjs` writes `docs/translations/<lang>.md` for a native speaker. **Run it whenever copy changes**, or the file you send someone is stale. `node tools/review-load.mjs docs/translations/ga.md` reads their corrections back.
 - `node tools/prune-words.mjs` drops translations of English text that no longer exists.
 - `tools/skins.js` holds the ten looks tried on 20 Sep 2026. `CHROME=/path/to/chrome node tools/preview-skins.mjs http://127.0.0.1:8766/ /tmp/skins` re-renders them if the decision is ever reopened.
-- `tools/assets/poster.html` is the gift box poster. `node tools/assets/render.mjs` screenshots it, along with everything else: it plays a whole game headless and writes `finale.png`, `og.png`, `trailer.gif` and `poster.png`. On 20 Sep 2026 the landing page was still showing "Won 2 of 4 duels" after the word had been taken out of the code, because the picture was made by hand once and never remade. **Run it whenever the game's look or wording changes.**
+- `tools/assets/poster.html` is the printed poster. `node tools/assets/render.mjs` screenshots it, along with everything else: it plays a whole game headless and writes `finale.png`, `og.png`, `trailer.gif` and `poster.png`. On 20 Sep 2026 the landing page was still showing "Won 2 of 4 duels" after the word had been taken out of the code, because the picture was made by hand once and never remade. **Run it whenever the game's look or wording changes.**
 - `node tools/links.mjs` checks every local link on every built page. The English-only terms page is the usual casualty: a `{{root}}terms/` in a partial gives five 404s.
 
 ## Hosting, domain and email (set up 19 Sep 2026)

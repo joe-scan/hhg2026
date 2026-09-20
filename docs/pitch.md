@@ -6,19 +6,19 @@ Written 20 September 2026. For grant applications, investors and anyone who need
 
 HappyHeroGames puts someone you love into their own arcade game. They are the hero, and their own family and friends are the opponents: Dad at the dinner table, Granny in the quiz, the dog as referee. It ends with their name up in lights for a birthday or Christmas. It plays in any web browser on any phone, tablet or laptop, with nothing to install.
 
-A parent, grandparent or godparent answers a few short questions. Two days later they get a private link to a game made for that one child, checked by a person before it goes out.
+A parent, grandparent or godparent answers a few short questions. Five working days later they get a link of their own to a game made for that one child, checked by a person before it goes out.
 
 ## The offer
 
-One product, two prices, in US dollars.
+One product, one price, in US dollars, with three add-ons chosen when ordering.
 
 | | Price | What they get |
 |---|---|---|
 | Free demo | $0 | One game, built in the browser in about a minute, from a name and a few choices |
-| The game | $99 | Five games and a boss, up to eight people in it, their own catchphrases and jokes, ready in two working days, theirs to keep |
-| The gift box | $179 | The same game, plus a printed poster of their title screen and a short trailer of their own game for the family chat |
+| The game | $99 | Five games, up to eight people in it, their own catchphrases and jokes, ready within five working days, theirs to keep |
+| Add-ons | +$80 / +$39 / +$69 | The printed poster and a video of their game; ready in 48 hours instead of five days; a second game for a brother or sister |
 
-Everything about the game itself is identical between the two prices. The only choice is whether the buyer wants something printed. There is no subscription and no list of add-ons, because every extra option is another decision standing between someone and their credit card.
+The pricing page carries one number. The add-ons are asked for on the order form, after somebody has decided, which is where they earn their money and where they cost nobody a comparison. There is no subscription and no second product to weigh against the first.
 
 ## Why people buy it
 
@@ -36,11 +36,11 @@ Birthdays happen all year, which matters: this is less seasonal than a pure Chri
 
 ## The numbers
 
-At an average order of about $115, with a fifth of buyers taking the gift box:
+At an average order of about $115, with a fifth of buyers taking the poster and video:
 
 - Card and merchant-of-record fees: about 5% plus $0.50.
-- Human checking: 18 minutes for a game and 25 for a gift box, at $28 an hour.
-- Printing, on gift box orders only: $15 to $20, printed on demand in the buyer's own country.
+- Human checking: 18 minutes for a game and 25 with a poster, at $28 an hour. The full model is in `docs/business-plan.md`.
+- Printing, on poster orders only: $15 to $20, printed on demand in the buyer's own country.
 - Customer acquisition: $38 blended, mostly paid social.
 
 That leaves $54.48 an order after advertising.

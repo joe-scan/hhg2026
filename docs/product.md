@@ -72,7 +72,7 @@ The builder and the game share one config object. In the demo it travels in the 
 
 1. The questionnaire saves a config (plus the extra fields) against an order.
 2. A generator builds the game: the config drives sprites, games and text, and an AI model drafts taunts, forfeits and quiz questions from the answers.
-3. A person plays it through and reads every line. The budget is 18 minutes for a game and 25 for a gift box, which is what the model in `docs/business-plan.md` is built on. If a real order takes 30, the margin goes with it.
+3. A person plays it through and reads every line. The budget is 18 minutes for a game and 25 with a poster, which is what the model in `docs/business-plan.md` is built on. If a real order takes 30, the margin goes with it.
 4. The family gets a private link and a printable card. Delivered within five working days, or in 48 hours for $39, or on the chosen date.
 
 ## 5. One domain
@@ -152,10 +152,10 @@ A flat page on paper-coloured ground, one accent colour, square corners, no drop
 
 The pixel art is hand-placed, pixel by pixel, in code: every sprite is a grid of letters in `engine.js` that somebody chose. That is why it reads as made rather than generated, and it is the thing to protect. No stock art, no generated art, no filters over photographs.
 
-## 12. Why there are only two prices
+## 12. Why there is one price
 
 The prices themselves live in `docs/business-plan.md`, so they are written down once. What belongs here is the shape:
 
-**One variable, and only one.** The two prices differ by one thing: whether something gets printed and posted. Everything about the game is the same at both. That is what makes it sayable in one breath, and it is the rule to defend when someone suggests another tier. Why the $49 Starter was dropped, with the numbers, is in `docs/business-plan.md`.
+**One number on the page.** $99, and a short list of add-ons chosen when ordering: the printed poster and video, a 48-hour turnaround, a second game for a sibling. Nothing on the pricing page has to be compared against anything else. That is what makes it sayable in one breath, and it is the rule to defend when someone suggests another tier. Why the $49 Starter was dropped, with the numbers, is in `docs/business-plan.md`.
 
 Voice recordings were dropped the same day. The rule and the reason are in `CLAUDE.md`.

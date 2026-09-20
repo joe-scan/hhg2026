@@ -11,7 +11,7 @@ for (const skin of SKINS) {
   const p = await b.newPage({ viewport: { width: 1200, height: 860 }, colorScheme: 'light' });
   await p.goto(BASE); await p.waitForTimeout(900);
   await p.addStyleTag({ content: ':root{' + Object.entries(skin.vars).map(([k, v]) => `--${k}:${v}`).join(';') + '}' });
-  await p.evaluate(() => { document.documentElement.dataset.theme = 'light'; });
+  await p.evaluate(() => { document.documentElement.dataset.skin = 'light'; });
   await p.waitForTimeout(300);
   await p.screenshot({ path: `${OUT}/${skin.id}-top.png` });
   await p.evaluate(() => document.getElementById('prices').scrollIntoView());

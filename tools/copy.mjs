@@ -5,7 +5,8 @@
 // Pull the visible English copy out of the built pages, sentence by sentence, with readability.
 import fs from 'node:fs'; import path from 'node:path';
 const SITE = path.resolve(import.meta.dirname, '..', 'site');
-const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html'];
+const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html',
+  'order/index.html', 'order/thanks/index.html', '404.html', 'privacy/index.html', 'terms/index.html'];
 const syll = w => { w = w.toLowerCase().replace(/[^a-z]/g,''); if (!w) return 0;
   const m = w.replace(/e$/,'').match(/[aeiouy]+/g); return Math.max(1, m ? m.length : 1); };
 const rows = [];

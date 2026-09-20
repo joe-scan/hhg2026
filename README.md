@@ -4,7 +4,7 @@ Put someone special in their own arcade game. They're the hero, and their own fa
 
 Site: https://happyherogames.com. Email: hello@happyherogames.com (forwards to Joe's Gmail).
 
-The first ten games are open, taken by email. No automatic payments and no database yet: an order is an email, a payment link and a person checking the game before it goes out.
+The first ten games are open. An order is the form at `/order/`, a payment link sent by hand, and a person checking the game before it goes out. No automatic payments and no database yet.
 
 ## Languages
 
@@ -50,6 +50,6 @@ cd site && python3 -m http.server 8766 &
 CHROME=/path/to/chrome node tests/smoke.mjs
 ```
 
-It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, plays a four-challenger party through to the results board, plays both seasonal free games to the end and checks each one offers the picture and asks about the next game, opens the name-in-lights page, plays the demo in all five translated languages, clicks the language picker in both directions, checks that a Spanish browser is offered Spanish and an English one is not and that neither is redirected, and checks the landing page at phone width. Against the live site it also checks the old `/halloween/` address still redirects. It exits with an error code if anything fails.
+It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, plays a four-challenger party through to the results board, plays both seasonal free games to the end and checks each one offers the picture and asks about the next game, clicks the dark/light button on five pages and reloads to check it is remembered, checks the order form in two languages for its required fields, its add-ons, its hidden honeypot and that it no longer offers a retired price, plays the demo in all five translated languages, clicks the language picker in both directions, checks that a Spanish browser is offered Spanish and an English one is not and that neither is redirected, and checks the landing page at phone width. Against the live site it also checks the old `/halloween/` address still redirects and that a missing page at three different depths serves the 404. It exits with an error code if anything fails.
 
 The game engine started life as [Fionn vs Sean](https://joescanlon.com/fs/), a game one dad made for his two sons.

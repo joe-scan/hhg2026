@@ -40,9 +40,9 @@ $from     = field('from', 80);
 $hero     = field('hero', 60);
 $occasion = field('occasion', 40);
 $date     = field('date', 40);
-$pick     = field('pick', 40);
 $speed    = field('speed', 60);
 $sibling  = field('sibling', 10) === 'yes' ? 'YES, a second game at $69' : 'no';
+// the game itself is $99; everything else is what they ticked
 $box      = field('box', 10) === 'yes' ? 'YES, poster and video at $80' : 'no';
 $look     = field('look', 120);
 $cast     = block('cast');
@@ -55,7 +55,6 @@ $lines = [
     'Hero:      ' . $hero,
     'Occasion:  ' . ($occasion ?: '(not said)'),
     'Needed by: ' . ($date ?: '(not said)'),
-    'Wants:     ' . ($pick ?: '(not said)'),
     'Speed:     ' . ($speed ?: '(not said)'),
     'Sibling:   ' . $sibling,
     'Gift box:  ' . $box,

@@ -6,9 +6,9 @@ The doc keeps British spelling. The site uses US spelling, because the buyers ar
 
 ## 1. The business in two paragraphs
 
-HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Two days later they get a private link to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
+HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Five working days later they get a link of their own to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
 
-There are two prices. The game is $99: five games and a boss, up to eight people, their own lines, ready in two working days and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
+There is one price. The game is $99: five games, up to eight people, their own lines, ready within five working days and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
 
 ## 2. The honest summary
 
@@ -50,7 +50,7 @@ The free demo is one game, then a locked card. It is not a price tier and it is 
 
 It was in the plan until 20 September 2026 and it is now dropped. Its own numbers killed it. At $49, after fees, checking, drafting and hosting it left $35.45, and at a blended $38 to win a customer that is a loss of $2.55 an order. It only ever worked as a decoy: a cheap option whose job was to make $99 look sensible. Selling something at a loss so that a different thing looks better is a bad trade when the cost is a third column on the pricing page and a buyer who has to work out what "three games" means against "five games". It made the page hard to understand, and that is what it was removed for.
 
-### What the gift box actually is
+### What the poster and video add-on actually is
 
 - **The poster.** Their own title screen, their name in lights, printed and ready to frame. Made by a print-on-demand partner, Prodigi or Printful, that prints in the buyer's own country. A US order prints in the US and arrives in about three days. No customs, nothing posted from Ireland, nobody here touching it. About $15 to $20 delivered.
 - **The trailer.** Twenty seconds of their own game, rendered from the same pixels, for the family chat. No new data collected, and every share carries the site.
@@ -92,7 +92,7 @@ Prices on the site and prices in this plan have to be the same figures. If one m
 
 Fees are 5% plus $0.50 on every order, through a merchant of record. Human checking is $28 an hour: 18 minutes on the game, 25 minutes on the gift box, the extra seven minutes being the poster artwork check. AI drafting is $3. Hosting is about $0.20 an order. The poster is $15 to $20 delivered; the table takes the worse end, $20. The trailer render rounds to $0.10.
 
-| Per order | The game $99 | The gift box $179 |
+| Per order | The game $99 | With the poster and video, $179 |
 |---|---|---|
 | Price | $99.00 | $179.00 |
 | Fees (5% + $0.50) | $5.45 | $9.45 |
@@ -104,11 +104,11 @@ Fees are 5% plus $0.50 on every order, through a merchant of record. Human check
 | **Left before advertising** | **$81.95** | **$134.58** |
 | **Left after $38 of advertising** | **$43.95** | **$96.58** |
 
-At the good end of the print quote, $15 rather than $20, the gift box leaves $139.58 before advertising. Budget for reprints on top: a 5% reprint rate on a $20 poster is about $1 an order, and that is the number to watch once real prints are going out.
+At the good end of the print quote, $15 rather than $20, a poster order leaves $139.58 before advertising. Budget for reprints on top: a 5% reprint rate on a $20 poster is about $1 an order, and that is the number to watch once real prints are going out.
 
-**The mix.** Assume 80% take the game and 20% the gift box. That gives an average order of **$115** and **$92.48 left before advertising**, which is 80% of revenue. After $38 of advertising, **$54.48 an order survives**. That $54.48 is the number the rest of the plan runs on.
+**The mix.** Assume 80% take the game alone and 20% add the poster and video. That gives an average order of **$115** and **$92.48 left before advertising**, which is 80% of revenue. After $38 of advertising, **$54.48 an order survives**. That $54.48 is the number the rest of the plan runs on.
 
-The gift box is the better margin, $134.58 against $81.95, for seven more minutes of human time and one thing in the post that we never touch. If the split comes in at 30% boxes rather than 20%, the average order rises to $123 and contribution to about $59. If it comes in at 10%, they fall to $107 and $49. Measure the split from the first hundred orders before trusting any month in section 7.
+A poster order is the better margin, $134.58 against $81.95, for seven more minutes of human time and one thing in the post that we never touch. If the split comes in at 30% posters rather than 20%, the average order rises to $123 and contribution to about $59. If it comes in at 10%, they fall to $107 and $49. Measure the split from the first hundred orders before trusting any month in section 7.
 
 ## 5. Customers
 
@@ -195,7 +195,7 @@ Assumptions, all to test:
 
 - Hand-built orders from October 2026, mostly to Joe's own network in Ireland, then a generator from spring 2027.
 - Both prices fully live from February 2027. Before that the average order is $99 to $105, because the first families get hand-built games while the poster and the trailer are still being proven.
-- Mix of 80% game and 20% gift box from February 2027, giving an average order of $115.
+- Mix of 80% game alone and 20% with the poster from February 2027, giving an average order of $115.
 - Blended acquisition $38 an order. Spend is lower in the first three months, because those orders come from Joe's own network.
 - Contribution is revenue minus fees, checking, drafting, hosting, poster and advertising: $54.48 an order at the full mix.
 - Christmas is about 2.5 times a normal month, less than a pure gift product because birthdays fill the year.
@@ -245,7 +245,7 @@ Money columns are in thousands of dollars.
 
 ## 9. Operations
 
-The paid game follows `docs/product.md`: questionnaire, generator, a person checks it, delivery in two working days or on the chosen date. The demo already proves the generator's first half, config to sprites and games. What is missing: the questionnaire, payments, order storage with consent and deletion, the AI drafting step, a checking tool, and the rest of the game library.
+The paid game follows `docs/product.md`: questionnaire, generator, a person checks it, delivery within five working days, or in 48 hours for $39, or on the chosen date. The demo already proves the generator's first half, config to sprites and games. What is missing: the questionnaire, payments, order storage with consent and deletion, the AI drafting step, a checking tool, and the rest of the game library.
 
 Five games per order rather than ten is the decision that makes the checking time work, and it also means a smaller library to build before launch.
 
@@ -253,7 +253,7 @@ Five games per order rather than ten is the decision that makes the checking tim
 
 Support runs from Ireland, five hours ahead of New York. Answer US email by early afternoon Irish time so a parent who writes in the evening has a reply when they wake up.
 
-The gift box needs no warehouse and no packing table. The poster file goes to the print partner by API, they print and post it in the buyer's own country, and the only Irish work is checking the artwork before it goes.
+The poster needs no warehouse and no packing table. The poster file goes to the print partner by API, they print and post it in the buyer's own country, and the only Irish work is checking the artwork before it goes.
 
 ## 10. Growth
 
@@ -261,7 +261,7 @@ The gift box needs no warehouse and no packing table. The poster file goes to th
 2. **US paid social first.** Instagram and TikTok, creative that opens on a child seeing their own name in pixels. Whether blended acquisition lands nearer $30 than $45 decides the business.
 3. **Reaction videos.** A child seeing themselves in lights for the first time is the best advert we can buy. Pay US families, with consent, to film it.
 4. **Kids share it.** Share on the finale sends a picture plus the game's link. Every paid game carries a "make one for your family" link with a referral code: $10 off for the friend, a credit for the family. Target 15% of orders from referrals by month six.
-5. **The trailer is an advert we do not pay for.** Every gift box produces a twenty-second video of that family's own game with the site on the end card, and it lands in a group chat where every other adult has a child with a birthday coming. Measure trailer shares, clicks back to the builder and orders per trailer. If a trailer beats a share picture, put it in the $99 game too.
+5. **The video is an advert we do not pay for.** Every poster order produces a twenty-second video of that family's own game with the site on the end card, and it lands in a group chat where every other adult has a child with a birthday coming. Measure trailer shares, clicks back to the builder and orders per trailer. If a trailer beats a share picture, put it in the $99 game too.
 6. **Gift cards** for grandparents and faraway relatives, pushed hardest in November and December.
 7. **Then the rest of the English-speaking market:** the UK and Ireland from the third quarter of 2027, Canada and Australia in 2028. Same copy, a currency switch, a different tax registration. Australia is worth doing for the reversed seasons: their summer birthdays land in our quiet months.
 8. **Later:** a club or school version, the whole team as heroes, sold as a fundraiser. Parked until the family product works.
@@ -272,7 +272,7 @@ The gift box needs no warehouse and no packing table. The poster file goes to th
 |---|---|---|---|
 | 0. Prove it | Now to Dec 2026 | Landing page and demo live. Launch list. Hand-build 50 to 100 paid orders for Christmas, mostly through Joe's network in Ireland. | 50 paid orders, time per order written down, share rate measured |
 | 1. Generator and US launch | Jan to Mar 2027 | Questionnaire, merchant of record, private links, two-price checkout, enough games in the library for a five-game order, AI drafting, checking tool, US copy and support hours, first paid US ads | Under 25 minutes of human time per order, blended acquisition under $45 |
-| 2. The gift box and referrals | Apr to Jun 2027 | Print-on-demand poster through Prodigi or Printful, trailer render, link previews, referral codes, gift cards | Gift box at 20% of orders, under 25 minutes of handling each, reprint rate under 5% |
+| 2. The poster and referrals | Apr to Jun 2027 | Print-on-demand poster through Prodigi or Printful, trailer render, link previews, referral codes, gift cards | Gift box at 20% of orders, under 25 minutes of handling each, reprint rate under 5% |
 | 3. Scale | Jul to Dec 2027 | Reaction-video ads at volume, UK and Ireland launch, seasonal checking team, first permanent checker and paid social hire | Profitable after ads through Christmas |
 | 4. To $1M | 2028 | Canada and Australia, second print partner, operations lead, checking time down before the second Christmas | Trailing twelve months past $1M |
 
@@ -308,7 +308,7 @@ Decide these now, and change course if they happen.
 - Blended acquisition cost above $60 after $10K of US ad spend, with no creative that beats it.
 - Fewer than 5% of demo players joining the launch list, or fewer than 50 paid orders from the first 1,000 demo plays.
 - Human time per order still over 40 minutes after 200 orders.
-- The gift box under 10% of orders, which pulls the average order to $107 and contribution to about $49.
+- Poster orders under 10%, which pulls the average order to $107 and contribution to about $49.
 - Under 30% of families pressing Share. Without sharing and referrals every order has to be bought, and there is no repeat revenue underneath.
 
 ## 14. Risks
@@ -327,7 +327,7 @@ Decide these now, and change course if they happen.
 
 ## 15. The next five steps
 
-1. Done on 20 Sep 2026: $99 and $179 are on the site, with no Starter, club, sibling add-on or voice recordings anywhere. Next: keep the two sets of figures in step, and keep the site and section 3 on the same figures. If one moves, both move in the same commit.
+1. Done on 20 Sep 2026: one price, $99, is on the site, with the poster and video, rush and a sibling's game as add-ons on the order form. No Starter, no club, no voice recordings. Next: keep the two sets of figures in step, and keep the site and section 3 on the same figures. If one moves, both move in the same commit.
 2. Time a real $99 order end to end, start to delivered, and see whether 18 minutes of checking is honest. Sections 4, 6 and 7 all rest on it.
 3. Show the demo to ten parents outside the family, at least three of them American. Watch, do not pitch. Ask whether they would pay $99, and whether the poster is worth $80 to them.
 4. Open a Paddle or Lemon Squeezy account and read what they require from an Irish business before building anything around it.
