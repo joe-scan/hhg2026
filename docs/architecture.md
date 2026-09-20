@@ -84,7 +84,7 @@ Three prices, in US dollars everywhere. No currency switching: a card handles th
 | The demo | Free | Two games and a boss, built in the browser in a minute |
 | Starter | $49 | Three games and a boss, the hero plus three people, and the pet |
 | Family and Friends | $99 | Five games and a boss, up to eight people, everyone's own lines written in, checked by a person, ready in 48 hours |
-| Gift Box | $179 | Everything above, plus recorded voices, a printed box and card, tracked delivery, one change after it arrives |
+| Gift Box | $179 | Everything above, plus a printed box and card, tracked delivery, one change after it arrives. What else goes in it is being decided (20 Sep 2026) |
 
 The shape is deliberate. Starter is thin on purpose so the middle one is the obvious buy, and the top one is a physical present rather than a longer list of features, which is easier to want and harder to compare. Nothing else is sold: no subscription, no sibling add-on, no per-item extras. Every option on the page is one more decision standing between someone and their credit card.
 

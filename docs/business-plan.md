@@ -54,7 +54,7 @@ Three prices, in US dollars, shown in dollars to everyone.
 |---|---|---|
 | Starter | $49 | Three games and one boss. The hero and up to three other people. |
 | Family and Friends | $99 | Five games and one boss. Up to eight people, their own catchphrases and lines written in. Ready in 48 hours. **The main product.** |
-| Gift Box | $179 | Everything in Family and Friends, plus the family's recorded voices, a printed box and card to wrap, tracked delivery, and one change after it arrives. UK, Ireland and the EU only for now. |
+| Gift Box | $179 | Everything in Family and Friends, plus a printed box and card to wrap, tracked delivery, and one change after it arrives. UK, Ireland and the EU only for now. |
 | Gift cards | $49, $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is two games and one boss, built in the browser. It is not a price tier and it is never sold; it is the advert.
@@ -69,7 +69,7 @@ Prices on the site and prices in this plan have to be the same figures. If one m
 
 ### Unit economics
 
-Merchant-of-record and card fees are 5% plus $0.50 on every order. Human checking is $28 an hour: 18 minutes on Starter and Family and Friends, 35 minutes on the Gift Box because of the voices and the packing. AI drafting is $2 on Starter and $3 on the other two, since there are more people and more lines to write. Hosting is about $0.20 an order.
+Merchant-of-record and card fees are 5% plus $0.50 on every order. Human checking is $28 an hour: 18 minutes on Starter and Family and Friends, 35 minutes on the Gift Box because of the printing and the packing. AI drafting is $2 on Starter and $3 on the other two, since there are more people and more lines to write. Hosting is about $0.20 an order.
 
 | Per order | Starter $49 | Family and Friends $99 | Gift Box $179 |
 |---|---|---|---|
@@ -166,7 +166,7 @@ What it says:
 |---|---|---|---|
 | 0. Prove it | Now to Dec 2026 | Landing page and demo live. Launch list. Hand-build 50 to 100 paid orders for Christmas, mostly through Joe's network in Ireland, using the demo engine plus AI help. | 50 paid orders, time per order written down, share rate measured |
 | 1. Generator and US launch | Jan to Mar 2027 | Questionnaire, merchant of record, private links, the three-price checkout, enough games in the library for a five-game order, AI drafting, checking tool. US spelling and copy, US support hours, first paid US ads. | Under 25 minutes of human time per order, blended acquisition under $45 |
-| 2. The Gift Box and referrals | Apr to Jun 2027 | Voice recording and editing, printed box and card, tracked delivery, referral codes, gift cards | Gift Box at 15% of orders in the UK, Ireland and the EU, and under 35 minutes of handling each |
+| 2. The Gift Box and referrals | Apr to Jun 2027 | Printed box and card, tracked delivery, referral codes, gift cards | Gift Box at 15% of orders in the UK, Ireland and the EU, and under 35 minutes of handling each |
 | 3. Scale | Jul to Dec 2027 | Reaction-video ads at volume, UK and Ireland launch, seasonal checking team | Profitable after ads through Christmas |
 | 4. Next | 2028 | Canada and Australia, US fulfilment partner for the box, decide whether a monthly product comes back | Decided by the data |
 
@@ -205,4 +205,4 @@ Decide these before starting, and change course if they happen:
 2. Time a real Family and Friends order end to end, start to delivered, and see whether 18 minutes of checking is honest. Everything in section 5 rests on it.
 3. Show the demo to ten parents outside the family, including at least three American ones. Watch; don't pitch. Ask which of the three prices they would pick and why.
 4. Open a Paddle or Lemon Squeezy account and read what they actually require from an Irish sole trader before building anything around it.
-5. Take 10 Christmas pre-orders and build them by hand, at least three of them Gift Boxes so the box and the voices get tested before anyone pays $179 for one.
+5. Take 10 Christmas pre-orders and build them by hand, at least three of them Gift Boxes so the box and the printing get tested before anyone pays $179 for one.

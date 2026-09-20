@@ -21,7 +21,7 @@ Some short questions on a phone. Every field has a privacy rule, because the her
 | Who's in charge of lunch / homework / bedtime | Grandma | Cameo roles (the door in Water Balloon Fight, the cook in Dinner Dash) | |
 | Family jokes and lines, optional | "Are you sure now boy?" | Trash talk, forfeits, cheers | A person reads every line before it ships. |
 | Places they've been, optional | Portugal, Spain | A World Tour game | Past trips only. Never upcoming travel. |
-| Voices, Deluxe only | Phone recordings | Replaces the robot announcer for catchphrases | Stored only inside that family's private game, deleted on request. |
+| ~~Voices~~ | Dropped 20 Sep 2026 | Was: phone recordings replacing the announcer | Never again: audio of a child is the worst thing we could hold, for a feature nobody asked for. |
 
 Consent: a parent or guardian ticks that they may share these details about the child and the family members named. When the hero is an adult, the person buying confirms the same thing.
 
@@ -60,7 +60,7 @@ The builder and the game share one config object. In the demo it travels in the 
 | Opponents | Family members in turn | Same, with the family's own taunts |
 | Referee | The pet, or a spare grown-up | Same |
 | Boss | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate | One boss from the family's real battles |
-| Finale | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, family walks in, share prompt | Same, plus recorded voices on Deluxe |
+| Finale | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, family walks in, share prompt | Same, with the family's own lines |
 | Sharing | Share button: a picture of the screen plus the game's link | Same, plus a "make one for your family" referral link |
 
 **Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Neon Racers, Garden Five-a-Side, Back Seat Battle, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz, Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Each needs its Fionn and Sean text swapped for the config (as the four demo duels were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano / instrument duel that isn't tied to concertina.
