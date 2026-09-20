@@ -533,7 +533,6 @@
  "Cream": "Crema",
  "Tan": "Beige",
  "Play ": "Gioca al gioco di ",
- "'s game": "",
  "AND FELL OFF ": "E SEI CADUTO DA ",
  " ROOF.": " TETTO.",
  " ROOFS.": " TETTI.",
@@ -565,5 +564,14 @@
  "PRESS START TO PLAY AGAIN": "PREMI START PER RIGIOCARE",
  "Saved.": "Salvato.",
  "Not shared.": "Non condiviso.",
- "'s first game, free": ", gratis: il primo livello"
+ "'s first game, free": ", gratis: il primo livello",
+ "Short": "Corti",
+ "Straight": "Lisci",
+ "Curly": "Ricci",
+ "Long": "Lunghi",
+ "Ponytail": "Coda",
+ "Hair": "Capelli",
+ "Hair color": "Colore dei capelli",
+ "Skin": "Pelle",
+ "Shirt": "Maglia"
 }

@@ -20,10 +20,11 @@ function freePage(make, opt) {
   const $ = id => document.getElementById(id);
   const cv = $('game'), input = $('who'), msg = $('msg');
   let game = make(opt.seconds || 60), live = false, t = 0, ending = 0;
+  const look = heroLook();
 
   const hero = () => applyConfig(Object.assign({}, DEMO, {
     // the placeholder is translated with the page, so the empty state is too
-    hero: Object.assign({}, DEMO.hero, { name: input.value || input.placeholder }),
+    hero: Object.assign({}, DEMO.hero, look, { name: input.value || input.placeholder }),
     occasion: opt.occasion || 'star'
   }));
 
@@ -103,6 +104,7 @@ function freePage(make, opt) {
   }
 
   input.addEventListener('input', hero);
+  heroPick($('look'), look, hero);
   hero();
   frame();
   // the smoke test drives the page through this

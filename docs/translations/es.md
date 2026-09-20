@@ -20,7 +20,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Put someone special in their | Pon a alguien especial en su |
 | own arcade game. | propio juego arcade. |
 | They're the hero. Mum, Dad, Granny, their best friend and the dog are the ones they have to beat. Build them here and play it now. | Ellos son el héroe. Mamá, papá, la abuela, su mejor amigo y el perro son a quienes tienen que ganar. Créalo aquí y juega ahora. |
-| They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Build them here and play it now. | Ellos son el héroe. Mamá, papá, la abuela, su mejor amigo y el perro son a quienes tienen que ganar. Créalo aquí y juega ahora. |
 | Make your hero | Crea tu héroe |
 | THE HERO | EL HÉROE |
 | Their name | Su nombre |
@@ -50,7 +49,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Leave blank if no pet | Déjalo en blanco si no hay mascota |
 | Its color | Su color |
 | A live preview of the hero, their family and friends, in pixels | Vista previa en píxeles del héroe, su familia y sus amigos |
-| Play the free demo | Juega la demo gratis |
 | Answer a few questions | Responde unas preguntas |
 | Their name, who's in it, what they love, what they always say. No photos. | Su nombre, quién sale, qué le encanta, qué dice siempre. Sin fotos. |
 | We build the game | Creamos el juego |
@@ -58,7 +56,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They play it | Lo juegan |
 | A private link that works on any phone, tablet or laptop. | Un enlace privado que funciona en cualquier teléfono, tablet o portátil. |
 | It started with two brothers | Empezó con dos hermanos |
-| One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Every family has those details. We put them in a game. | Un padre creó un juego arcade para sus dos hijos, lleno de sus frases, su perro y sus peleas por el asiento delantero. Todas las familias tienen esos detalles. Nosotros los ponemos en un juego. |
 | How every game ends. | Así termina cada juego. |
 | Price | Precio |
 | The game | El juego |
@@ -67,15 +64,14 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The trailer: Ava's title screen, the versus card against Dad, a burst of play, and the birthday ending | El tráiler: la pantalla de título de Ava, la tarjeta de versus contra papá, un poco de juego y el final de cumpleaños |
 | hello@happyherogames.com | hello@happyherogames.com |
 | Private by design | Privado por diseño |
+| No surnames, ages, schools or addresses on screen, ever. | Nunca aparecen apellidos, edades, colegios ni direcciones en pantalla. |
+| Every game has its own private link. | Cada juego tiene su propio enlace privado. |
+| We delete your answers when you ask. | Borramos tus respuestas cuando lo pidas. |
 
 ## The rest of the site, including the privacy policy
 
 | English | Español |
 |---|---|
-| No photos, no recordings. The hero is drawn in pixels. | Sin fotos, sin grabaciones. El héroe se dibuja en píxeles. |
-| No surnames, ages, schools or addresses on screen, ever. | Nunca aparecen apellidos, edades, colegios ni direcciones en pantalla. |
-| Every game has its own private link. | Cada juego tiene su propio enlace privado. |
-| We delete your answers when you ask. | Borramos tus respuestas cuando lo pidas. |
 | The whole policy | La política completa |
 | What does it play on? | ¿Dónde se juega? |
 | Any phone, tablet or laptop with a browser. Nothing to install. Two people can play on one keyboard, or share a phone turned sideways. | En cualquier teléfono, tablet o portátil con navegador. Nada que instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal. |
@@ -146,7 +142,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | The Family Quiz | El Concurso Familiar |
 | The boss fight | La pelea contra el jefe |
 | The ending | El final |
-| Get the full game | Consigue el juego completo |
 | Dark mode | Modo oscuro |
 | Light mode | Modo claro |
 | HappyHeroGames | HappyHeroGames |
@@ -164,14 +159,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | A HappyHeroGames game: I am the hero and my family are the ones I have to beat. | Un juego de HappyHeroGames: yo soy el héroe y mi familia son a quienes tengo que ganar. |
 | A pixel arcade title screen with the hero's name in lights | Una pantalla de título arcade en píxeles con el nombre del héroe en luces |
 | Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads. | Tu juego de HappyHeroGames. Juega con el teclado, un mando o los botones en pantalla. |
-| Gift cards too. | También hay tarjetas regalo. |
-| Start an order | Empezar un pedido |
 | Or email | O escribe a |
 | Terms and refunds | Condiciones y reembolsos |
 | &middot; | &middot; |
 | Terms | Condiciones |
 | Can a whole party play? | ¿Puede jugar toda una fiesta? |
-| One game, free. Nothing you type is sent to us. Or just | Un juego, gratis. Nada de lo que escribes se nos envía. O simplemente |
 | put a name in lights | pon un nombre en luces |
 | Your name in lights \| HappyHeroGames | Tu nombre en luces \| HappyHeroGames |
 | Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Escribe un nombre y míralo en luces en una pantalla arcade. Gratis, nada que instalar, nada se nos envía. |
@@ -225,9 +217,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One button: space, the up arrow, or a tap on the screen. | Un solo botón: espacio, la flecha arriba o un toque en la pantalla. |
 | Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Dinos para quién es y para cuándo lo necesitas. Te enviaremos un enlace de pago y te diremos cuándo estará listo. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Un rival en la demo. El juego completo admite ocho personas, así que aparecen todos. |
-| Everyone gets the same thing: five games and a boss fight, up to eight people in it, ready in two days. You can add a poster of their game, printed and posted, for the wall. | Todo el mundo recibe lo mismo: cinco juegos y un jefe final, hasta ocho personas dentro, listo en dos días. Puedes añadir un póster de su juego, impreso y enviado por correo, para la pared. |
-| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz. Each one is against a different person. Then the boss fight, with someone on their side. Then their name in lights. | A qué juegan: Paddle Battle, Guerra de Globos, Pelea en el Asiento de Atrás, Carrera a la Mesa y el Concurso Familiar. Cada uno es contra una persona distinta. Después, el jefe final, con alguien de su lado. Y al final, su nombre en luces. |
-| The game, a poster of their name in lights in the post, and a short trailer for the family chat. | El juego, un póster con su nombre en luces por correo y un tráiler corto para el chat familiar. |
 | This poster and trailer are for a made-up family. Yours has your own names in it. | Este póster y este tráiler son de una familia inventada. El tuyo llevará vuestros nombres. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Hasta ocho personas: familia, amigos, un profesor, un entrenador. La mascota también: perro, gato, conejo, hámster o pez. |
 | Yes. Party mode is on the title screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Sí. El modo fiesta está en la pantalla de título. Elige cuántos juegan. Cada uno hace su turno contra el héroe mientras los demás miran. Termina con una tabla de resultados y un campeón. |
@@ -244,13 +233,17 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing you type is sent to us. Or just | Nada de lo que escribes se nos envía. O simplemente |
 | One dad made an arcade game for his two sons, full of their catchphrases, their dog and their fights over the front seat. Sean still won't talk about the quiz. Every family has those details. We put them in a game. | Un padre creó un juego arcade para sus dos hijos, lleno de sus frases, su perro y sus peleas por el asiento delantero. Sean todavía no quiere hablar del concurso. Todas las familias tienen esos detalles. Nosotros los ponemos en un juego. |
 | Because a link is hard to wrap. The game, a poster of their name in lights in the post, and a short trailer for the family chat. | Porque un enlace es difícil de envolver. El juego, un póster con su nombre en luces por correo y un tráiler corto para el chat familiar. |
-| Tell us the date. If we can't make it, we'll say so before taking any money. | Dinos la fecha. Si no llegamos, te lo diremos antes de cobrarte nada. |
 | Date not fixed yet? A gift card works. | ¿Aún no tienes fecha? Una tarjeta regalo también vale. |
 | Tell us about them | Cuéntanos cómo es |
 | Everyone else wants a photo of your child. We don't. The hero is drawn in pixels. | Todos los demás quieren una foto de tu hijo. Nosotros no. El héroe se dibuja en píxeles. |
 | How long does it last? | ¿Cuánto dura? |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Unos veinte minutos la primera vez. Luego lo vuelven a jugar y se lo pasan a quien esté en la habitación. |
 | Build the real one | Crea el de verdad |
+| You get five games and a boss fight, up to eight people in it, ready in two working days. You can add a poster of the game, printed and posted, for the wall. | Recibes cinco juegos y un jefe final, hasta ocho personas dentro, listo en dos días laborables. Puedes añadir un póster del juego, impreso y enviado por correo, para la pared. |
+| What they play, each against a different person: | A qué juegan, cada uno contra una persona distinta: |
+| Water Balloon Fight | Guerra de Globos |
+| The boss fight, with someone on their side | El jefe final, con alguien de su lado |
+| The ending, with their name in lights | El final, con su nombre en luces |
 
 ## What the game says: names, instructions and scores
 
@@ -796,7 +789,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Cream | Crema |
 | Tan | Beige |
 | Play  | Juega al juego de  |
-| 's game |  |
 | AND FELL OFF  | Y TE CAISTE DE  |
 |  ROOF. |  TEJADO. |
 |  ROOFS. |  TEJADOS. |

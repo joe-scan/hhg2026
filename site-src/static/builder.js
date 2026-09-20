@@ -3,10 +3,6 @@
 // and the Play button opens the game page (g/demo/) with the config in the link. Nothing is sent to a server.
 (() => {
   const $ = id => document.getElementById(id);
-  const HAIRNAMES = ['Black', 'Dark brown', 'Brown', 'Light brown', 'Auburn', 'Ginger', 'Blonde', 'Grey'];
-  const SKINNAMES = ['Lightest', 'Light', 'Light medium', 'Medium', 'Medium dark', 'Dark'];
-  const KITNAMES = ['Blue', 'Red', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'White', 'Black'];
-  const PETNAMES = ['White', 'Cream', 'Tan', 'Brown', 'Black', 'Grey'];
 
   // start from the link (coming back from the game), then a saved draft, then the demo family
   let cfg = null;
@@ -40,9 +36,9 @@
   // the hero
   text('hero-name', () => titleCase(cfg.hero.name), v => { cfg.hero.name = v; });
   choice('hair', () => cfg.hero.hair, v => { cfg.hero.hair = v; });
-  swatches($('hair-col'), HAIRCOLS, HAIRNAMES, () => cfg.hero.hairCol, v => { cfg.hero.hairCol = v; });
-  swatches($('skin'), SKINS, SKINNAMES, () => cfg.hero.skin, v => { cfg.hero.skin = v; });
-  swatches($('kit'), KITCOLS, KITNAMES, () => cfg.hero.kit, v => { cfg.hero.kit = v; });
+  swatches($('hair-col'), HAIRCOLS, HAIR_LABELS, () => cfg.hero.hairCol, v => { cfg.hero.hairCol = v; });
+  swatches($('skin'), SKINS, SKIN_LABELS, () => cfg.hero.skin, v => { cfg.hero.skin = v; });
+  swatches($('kit'), KITCOLS, KIT_LABELS, () => cfg.hero.kit, v => { cfg.hero.kit = v; });
   choice('occasion', () => cfg.occasion, v => { cfg.occasion = v; });
 
   // up to three family members: a role, a name, a hair color
@@ -51,7 +47,7 @@
   // so a translated page can hold a translated version of both.
   if (DIALECT !== 'us') document.querySelectorAll('[data-int]').forEach(el => { el.textContent = el.dataset.int; });
   const roleOpts = '<option value="">Nobody</option>' + Object.keys(ROLES).map(r => `<option value="${r}">${roleLabel(r)}</option>`).join('');
-  const hairOpts = HAIRCOLS.map((c, k) => `<option value="${c}">${HAIRNAMES[k]} hair</option>`).join('');
+  const hairOpts = HAIRCOLS.map((c, k) => `<option value="${c}">${HAIR_LABELS[k]} hair</option>`).join('');
   const famRows = [];
   // the demo builds one opponent. The full game takes up to eight people.
   for (let k = 0; k < 1; k++) {
@@ -72,7 +68,7 @@
   $('pet-kind').value = cfg.pet.kind || 'dog';
   $('pet-kind').addEventListener('change', () => { cfg.pet.kind = $('pet-kind').value; changed(); });
   text('pet-name', () => cfg.pet.name ? titleCase(cfg.pet.name) : '', v => { cfg.pet.name = v; });
-  swatches($('pet-col'), PETCOLS, PETNAMES, () => cfg.pet.col, v => { cfg.pet.col = v; });
+  swatches($('pet-col'), PETCOLS, PET_LABELS, () => cfg.pet.col, v => { cfg.pet.col = v; });
   text('food', () => cfg.food ? titleCase(cfg.food) : '', v => { cfg.food = v; });
   text('catch', () => cfg.catchphrase ? titleCase(cfg.catchphrase) : '', v => { cfg.catchphrase = v; });
 

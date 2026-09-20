@@ -8,7 +8,9 @@
    canvas only. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came
    out as one wall of capitals. */
 :root{--paper:#fdf5ec;--ink:#2a1a12;--muted:#6b5546;--rule:#e6d6c3;--hot:#c2410c;--hotfill:#f2711c;--gold:#ffd23f;--screen:#12062b;--focus:#c2410c;--field:#fffaf4;--on-hot:#ffffff;
-  --display:"Bowlby One","Arial Black",Impact,sans-serif;--mark:var(--display);--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;--mark:var(--display);
+  /* the one colour that never changes, in the wordmark, the logo and the favicon */
+  --brand:#f2711c;--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
 
 /* Two looks, warm by default and dark for a dark room or a phone set that way. A visitor's choice
    is kept in their own browser and written to <html data-skin>; with no choice made the device
@@ -52,7 +54,7 @@ button,input,select{font:inherit;color:inherit}
 .mark{font-family:var(--mark);font-weight:400;font-size:21px;letter-spacing:-.005em;text-decoration:none;line-height:1;display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
 .logomark{display:block;width:40px;height:20px;image-rendering:pixelated;border-radius:2px}
 .mark .word{white-space:nowrap}
-.mark .word i{font-style:normal;color:var(--hot)}
+.mark .word i{font-style:normal;color:var(--brand)}
 .top nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 /* the Free games menu: the same no-JavaScript <details> as the language picker */
 .drop{position:relative}
@@ -112,3 +114,18 @@ canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated
 .themes h2{font-size:20px;margin:0 0 6px}
 .themes p{margin:0 0 8px;color:var(--muted)}
 .themes .soon{color:var(--muted);font-size:14px}
+
+/* Chips and colour swatches: the builder, the name page and the free games all use these. */
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts label{position:relative;cursor:pointer}
+.opts input{position:absolute;opacity:0;inset:0}
+.opts span{display:inline-block;border:1px solid var(--rule);border-radius:2px;padding:6px 11px;font-size:15px}
+.opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.sws{display:flex;flex-wrap:wrap;gap:6px}
+.sw{width:30px;height:30px;border-radius:2px;border:1px solid var(--rule);background:var(--c);cursor:pointer;padding:0}
+.sw[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+/* the pick-your-look strip on the free pages */
+.look-pick{display:grid;gap:12px;margin:0 0 18px;max-width:640px}
+.look-pick .row-l{display:grid;gap:6px}
+.look-pick .row-l > span{font-weight:700;font-size:14px}

@@ -25,12 +25,6 @@
 .row{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
 .row input{flex:1 1 240px;background:var(--field);border:1px solid var(--rule);border-radius:2px;padding:12px 12px;font-size:19px;min-width:0}
 .row input:focus{border-color:var(--ink)}
-.opts{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
-.opts label{cursor:pointer}
-.opts input{position:absolute;opacity:0;width:0}
-.opts span{display:inline-block;border:1px solid var(--rule);border-radius:2px;padding:7px 12px;font-size:15px}
-.opts input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.opts input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
 .acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 0}
 .acts small{color:var(--muted);font-size:14px}
 .after{border-top:1px solid var(--rule);margin-top:34px;padding-top:22px}
@@ -49,13 +43,15 @@
     <label class="sr" for="who">A name</label>
     <input id="who" maxlength="12" autocomplete="off" spellcheck="false" placeholder="A name">
   </div>
-  <div class="opts" role="radiogroup" aria-label="What it's for">
+  <div class="opts" role="radiogroup" aria-label="What it's for" style="margin:0 0 18px">
     <label><input type="radio" name="occ" value="birthday" checked><span>Birthday</span></label>
     <label><input type="radio" name="occ" value="christmas"><span>Christmas</span></label>
     <label><input type="radio" name="occ" value="fathers"><span>Father's Day</span></label>
     <label><input type="radio" name="occ" value="mothers"><span>Mother's Day</span></label>
     <label><input type="radio" name="occ" value="star"><span>Just because</span></label>
   </div>
+
+  <div class="look-pick" id="look"></div>
 
   <div class="screen"><canvas id="game" width="480" height="270" aria-label="An arcade title screen with the name you typed in lights"></canvas></div>
 
@@ -76,6 +72,7 @@
 
 <script src="../arcade/engine.js"></script>
 <script src="../arcade/scenes.js"></script>
+<script src="../arcade/hero-pick.js"></script>
 <script>
 // The whole page: type a name, watch it go up in lights, save the picture. No game files, no
 // server, nothing stored. It draws the same title screen the game opens with.
@@ -83,6 +80,7 @@
   const $ = id => document.getElementById(id);
   const input = $('who'), msg = $('msg');
   let occ = 'birthday', t = 0;
+  const look = heroLook();
 
   const draw = () => {
     t++;
@@ -106,7 +104,7 @@
   const apply = () => {
     applyConfig(Object.assign({}, DEMO, {
       // the placeholder is translated with the page, so the empty state is too
-      hero: Object.assign({}, DEMO.hero, { name: input.value || input.placeholder }),
+      hero: Object.assign({}, DEMO.hero, look, { name: input.value || input.placeholder }),
       occasion: occ
     }));
   };
@@ -137,6 +135,7 @@
     });
   }
 
+  heroPick($('look'), look, apply);
   apply();
   draw();
 })();

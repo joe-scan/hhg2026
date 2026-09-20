@@ -533,7 +533,6 @@
  "Cream": "Creme",
  "Tan": "Beige",
  "Play ": "Spiele ",
- "'s game": "s Spiel",
  "AND FELL OFF ": "UND RUNTERGEFALLEN: ",
  " ROOF.": " DACH.",
  " ROOFS.": " DAECHER.",
@@ -565,5 +564,14 @@
  "PRESS START TO PLAY AGAIN": "START DRUECKEN FUER NOCHMAL",
  "Saved.": "Gespeichert.",
  "Not shared.": "Nicht geteilt.",
- "'s first game, free": ": erstes Spiel, gratis"
+ "'s first game, free": ": erstes Spiel, gratis",
+ "Short": "Kurz",
+ "Straight": "Glatt",
+ "Curly": "Lockig",
+ "Long": "Lang",
+ "Ponytail": "Zopf",
+ "Hair": "Haare",
+ "Hair color": "Haarfarbe",
+ "Skin": "Haut",
+ "Shirt": "Shirt"
 }

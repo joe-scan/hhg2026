@@ -533,7 +533,6 @@
  "Cream": "Uachtar",
  "Tan": "Donnbhuí",
  "Play ": "Imir cluiche ",
- "'s game": "",
  "AND FELL OFF ": "AGUS THIT TU DE ",
  " ROOF.": " DHION.",
  " ROOFS.": " DHION.",
@@ -565,5 +564,14 @@
  "PRESS START TO PLAY AGAIN": "BRUIGH START CHUN IMIRT ARIS",
  "Saved.": "Sábháilte.",
  "Not shared.": "Níor roinneadh é.",
- "'s first game, free": ": an chéad cheann, saor in aisce"
+ "'s first game, free": ": an chéad cheann, saor in aisce",
+ "Short": "Gearr",
+ "Straight": "Díreach",
+ "Curly": "Catach",
+ "Long": "Fada",
+ "Ponytail": "Eireaball capaill",
+ "Hair": "Gruaig",
+ "Hair color": "Dath na gruaige",
+ "Skin": "Craiceann",
+ "Shirt": "Geansaí"
 }

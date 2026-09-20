@@ -74,6 +74,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 - **No** cards, pills, drop shadows, gradients, glow or emoji in the page. The game screen is the exception to nothing: it is flat colour too, just brighter.
 - Type: **Bowlby One** for headlines, the wordmark and the big lettering inside the game; **Atkinson Hyperlegible** for everything else on the page; **Press Start 2P** for the game's own small text, never in page copy. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came out as one wall of capitals.
 - One accent: burnt orange `#f2711c` on the warm site, arcade magenta `#ff2bd6` in dark mode. The game has its own palette (see Poster Bold above) and does not use either.
+- **The mark never changes colour.** `--brand` (`#f2711c`) is the orange in HappyHero**Games**, in `logo.svg` and in `icon.svg`, in both skins and on every page. A wordmark that changes colour with the theme is not a wordmark. The letters around it flip with the skin so they stay legible; the brand colour does not.
 - **Two looks, decided 20 Sep 2026:** Sunset, warm cream and burnt orange, is the site. Dark is for a dark room or a phone set that way. One small button in the header switches them and the choice is kept in the visitor's own browser; with no choice made the device decides. They are colour only: same type, same layout, same pixel screen. No third option, and no row of choices eating the header. The eight other skins tried are in `tools/skins.js`.
 - The landing page opens with the builder itself, so the first thing a parent does is see their child in pixels.
 
@@ -109,6 +110,9 @@ Written by hand
     arcade/games/*.js       one file per game, plus bosses.js and the free seasonal ones
                             (trick-or-treat.js, sleigh-dash.js)
     arcade/free.js          the harness every free theme page runs on
+    arcade/hero-pick.js     the pick-your-look strip: hair, hair colour, skin, shirt. The free
+                            pages use it, the choice is kept in the visitor's own browser, and
+                            a hero built on the front page carries over
     builder.js              the builder: form to config, live preview, Play link
     css/site.css            shared page styles, the two looks, design tokens
     img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
@@ -147,6 +151,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 - **Everything you edit lives in `site-src/`.** Pages in `site-src/pages/`, words in `site-src/words/`, the game code and assets in `site-src/static/`. `site/` is generated in full by `node tools/build.mjs` and is not in git: anything typed into it is gone on the next build. `deploy.sh` builds before it uploads.
 - **Run it:** `node tools/build.mjs`, then `cd site && python3 -m http.server 8766` and open http://localhost:8766.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. What it covers is written once, in README under Test. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
+- **Search engines:** `tools/build.mjs` writes `site/sitemap.xml` (every public page in every language, with hreflang pointing both ways) and `site/robots.txt` (everything allowed except `/g/`). The demo and the terms are deliberately left out: the demo lives under `/g/` and the terms are noindex until a solicitor has read them. Submitting the sitemap to Google is a one-off job in `docs/todo.md`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
 - **Deploy every time,** without asking (Joe, 20 Sep 2026). Build, run the smoke test and `node tools/links.mjs`, then `./deploy.sh`, then run the smoke test again against `https://happyherogames.com/`. A failing test is the one reason not to: fix it or say what's broken. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
 - **Look at what you build.** Screenshot the game and the pages at desktop and phone width before saying something works.

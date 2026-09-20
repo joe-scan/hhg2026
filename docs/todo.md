@@ -11,7 +11,8 @@ Last updated 20 September 2026.
 - [ ] Search the trademark (see Trademark below). Two hours, and it decides whether the name is safe to spend on.
 - [ ] Book the Local Enterprise Office meeting at County Hall, Cork. Bring `docs/pitch.md`.
 - [ ] Show the demo to ten parents outside the family, at least three American. Watch, don't pitch. Write down what they do, not what they say.
-- [ ] Set up a Tally form so the site can collect emails instead of asking people to write one.
+- [ ] Set up a Tally form so the site can collect emails instead of asking people to write one. The free games already ask; today the link opens an email.
+- [ ] Google Search Console: add happyherogames.com, verify with a DNS TXT record at Namecheap, submit https://happyherogames.com/sitemap.xml, then check Coverage a week later. Do the same at Bing Webmaster Tools, which takes the Google verification.
 
 ## Trademark
 

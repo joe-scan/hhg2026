@@ -33,6 +33,8 @@
     <button class="btn go" type="button" id="play">Start</button>
   </div>
 
+  <div class="look-pick" id="look"></div>
+
   <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Trick or Treat Dash: catch the falling sweets in your bucket"></canvas></div>
 
   <div class="pads" aria-hidden="true">
@@ -61,6 +63,7 @@
 
 <script src="../../arcade/engine.js"></script>
 <script src="../../arcade/scenes.js"></script>
+<script src="../../arcade/hero-pick.js"></script>
 <script src="../../arcade/games/trick-or-treat.js"></script>
 <script src="../../arcade/free.js"></script>
 <script>freePage(gTrickOrTreat, { file: 'trick-or-treat', occasion: 'star' });</script>

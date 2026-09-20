@@ -160,6 +160,34 @@ b.onclick=function(){el.hidden=true;try{localStorage.setItem('hhg-lang-offer','n
 el.append(a,b);el.hidden=false;})();<\/script>`;
 }
 
+// Search engines get one list of every public page, with the languages pointing at each other,
+// and one robots file that keeps them out of /g/, where a family's details live in the address.
+function searchFiles() {
+  const SITE_URL = 'https://happyherogames.com';
+  const url = (l, page) => SITE_URL + '/' + (l === 'en' ? '' : l + '/') + page.replace(/index\.html$/, '');
+  const today = new Date().toISOString().slice(0, 10);
+  const out = ['<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml">'.replace('xmlns="http://www.w3.org/1999/xhtml"', 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')];
+  // Two pages stay out of it: the demo lives under /g/, which robots.txt disallows, and the
+  // terms are marked noindex until a solicitor has read them.
+  const OUT = ['g/demo/index.html', 'terms/index.html'];
+  for (const page of PAGES.filter(p2 => !OUT.includes(p2))) {
+    const langs = ENGLISH_ONLY.includes(page) ? ['en'] : ['en', ...LANGS];
+    for (const l of langs) {
+      out.push('  <url>', `    <loc>${url(l, page)}</loc>`, `    <lastmod>${today}</lastmod>`);
+      for (const other of langs) out.push(`    <xhtml:link rel="alternate" hreflang="${other}" href="${url(other, page)}"/>`);
+      if (langs.length > 1) out.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${url('en', page)}"/>`);
+      out.push(`    <priority>${page === 'index.html' ? '1.0' : '0.7'}</priority>`, '  </url>');
+    }
+  }
+  out.push('</urlset>');
+  write(path.join(SITE, 'sitemap.xml'), out.join('\n') + '\n');
+  write(path.join(SITE, 'robots.txt'),
+    ['# Every game at /g/ carries a family\'s details in its address, so none of them are for search engines.',
+     'User-agent: *', 'Disallow: /g/', '', `Sitemap: ${SITE_URL}/sitemap.xml`, ''].join('\n'));
+  console.log(`search: sitemap.xml (${out.filter(l => l.includes('<loc>')).length} addresses) and robots.txt`);
+}
+
 function build(lang) {
   const dict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, lang + '.json')));
   const gameDict = lang === 'en' ? {} : JSON.parse(read(path.join(WORDS, `game-${lang}.json`)));
@@ -210,3 +238,4 @@ function copyStatic() {
 const only = process.argv[2];
 copyStatic();
 for (const lang of ['en', ...LANGS]) if (!only || only === lang) build(lang);
+if (!only) searchFiles();

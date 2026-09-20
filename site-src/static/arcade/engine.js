@@ -61,6 +61,11 @@ let DIALECT = 'us';
 try { if (/^en-(GB|IE|AU|NZ|ZA|IN)/i.test(navigator.language || '')) DIALECT = 'int'; } catch (e) {}
 function roleLabel(role) { const r = ROLES[role]; return !r ? '' : (DIALECT === 'us' && r.us) || r.label; }
 const HAIRCOLS = ['#141018', '#3b2412', '#6b3f1d', '#93602f', '#8a3a1a', '#c8641e', '#e0b64a', '#9a96a6'];
+// what those colours are called, for the label on each swatch
+const HAIR_LABELS = ['Black', 'Dark brown', 'Brown', 'Light brown', 'Auburn', 'Ginger', 'Blonde', 'Grey'];
+const SKIN_LABELS = ['Lightest', 'Light', 'Light medium', 'Medium', 'Medium dark', 'Dark'];
+const KIT_LABELS = ['Blue', 'Red', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'White', 'Black'];
+const PET_LABELS = ['White', 'Cream', 'Tan', 'Brown', 'Black', 'Grey'];
 const SKINS = ['#f6d1b4', '#f3c6a0', '#d9a577', '#b87a4b', '#8a5634', '#5e3a22'];
 const KITCOLS = ['#1f7ae0', '#e0102a', '#1e9e4a', '#ffd23f', '#7a3cff', '#ff6b1a', '#ff2bd6', '#ffffff', '#141018'];
 const PETCOLS = ['#ffffff', '#e8c9a0', '#c98a4b', '#6b3f1d', '#2a2230', '#9a96a6'];

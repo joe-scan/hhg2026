@@ -308,14 +308,21 @@ const ST = {
     draw() {
       const t = S.t; bgSynth(t);
       const head = OCCASIONS[CFG.occasion] + ',', name = HERO.name + '!';
-      if (t > 40) { logo(head, W / 2, 10, 16, '#fff', COL.gold, '#ff6b1a'); logo(name, W / 2, 32, name.length > 8 ? 24 : 32, '#fff', PL[1].col, mix(PL[1].col, '#000', .35)); }
+      // a dark strip across the sky: this screen is the picture people send, and gold lettering
+      // on clouds is unreadable at the size a phone shows it
+      if (t > 40) {
+        rect(0, 4, W, 84, BAND());
+        rect(0, 4, W, 3, COL.gold); rect(0, 85, W, 3, COL.gold);
+        logo(head, W / 2, 12, 16, '#fff', COL.gold, '#ff6b1a');
+        logo(name, W / 2, 34, name.length > 8 ? 24 : 32, '#fff', COL.name || PL[1].col, mix(COL.name || PL[1].col, '#000', .35));
+      }
       if (CFG.occasion === 'birthday') cake(W / 2, 230, t); else if (CFG.occasion === 'christmas') tree(W / 2, 236, t); else trophy(W / 2, 236);
       const k = clamp(t / 60, 0, 1), hop = t > 60 ? Math.abs(Math.sin(t / 9)) * 14 : 0;
       drawSpec(HERO, W / 2 - 90 + (1 - k) * -120, 252 - hop, 4, false, t < 60 ? Math.floor(t / 6) : 0);
       FAM.forEach((m, i) => { const f = clamp((t - 90 - i * 30) / 50, 0, 1), x = W + 40 - f * (170 - i * 52); if (f > 0) drawSpec(m, x, 252, 4, true, Math.floor(t / 16)); if (t > 170 + i * 50 && i < 2) bubble(S.lines[i], x, 88 + i * 30, 14); });
       if (PET && t > 60) pet(W / 2 + 70, 262 - (petRuns() ? Math.abs(Math.sin(t / 7)) * 14 : 0), 3, false, Math.floor(t / (petRuns() ? 6 : 22)));
       if (t > 150) bubble(CATCH[1], W / 2 - 90, 96, 14);
-      if (t > 240) txt('WON ' + won[1] + ' OF ' + GAMES.length + ' GAMES. BEAT THE BOSS IN ' + bossTime + 'S.', W / 2, 74, 10, '#fff', 'center', '#0a0416');
+      if (t > 240) txt('WON ' + won[1] + ' OF ' + GAMES.length + ' GAMES. BEAT THE BOSS IN ' + bossTime + 'S.', W / 2, 72, 10, '#fff', 'center');
       if (t > 360) pressFire(258, 'PRESS SHARE TO SEND IT TO THE FAMILY');
     }
   }

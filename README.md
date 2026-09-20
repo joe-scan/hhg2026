@@ -30,6 +30,7 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 - `docs/research/`: the raw material behind the analysis: the competitor captures and a catalogue of seasonal game ideas.
 - `docs/translations/`: one file per language, English beside the translation, for a native speaker to correct.
 - `docs/copy-check.md`: every sentence on the site scored for how hard it is to read, what was cut and why.
+- `site/sitemap.xml` and `site/robots.txt`: written by the build, for search engines. Everything except `/g/` is allowed.
 - `docs/product.md`: the product and how it's built. The questionnaire, the privacy rule for each field, the config format, the game format, and why it's all on one domain.
 - `CLAUDE.md`: the brief for AI assistants working on this. Read it before changing anything.
 
