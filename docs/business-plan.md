@@ -27,7 +27,7 @@ People buy a personalised arcade game for someone special, usually a child, for 
 
 | | Muksun Games | Happy Hero Games |
 |---|---|---|
-| Price | $99 | €49 to €129 |
+| Price | $99 | €69 to €129 |
 | Plays on | Android, Windows PC | Any browser: iPhone, Android, iPad, laptop. Nothing to install. |
 | Try before you buy | No | A free demo built in a minute, in the browser |
 | Built from | Photos and locations | A questionnaire about the family. No photos. |
@@ -42,14 +42,17 @@ The pitch: **"Put someone special in their own arcade game."** The site keeps me
 | Product | Price | What's in it |
 |---|---|---|
 | Free demo | €0 | 4 duels and a boss, built in the browser |
-| Starter | €49 | 6 duels, 1 boss, the hero, one family member and the dog |
-| Family | €69 | 10 duels, 2 bosses, up to 6 family members, custom lines. The main product. |
-| Deluxe | €129 | Family, plus recorded family voices, a printed gift box with the card, one change after delivery |
+| The game | €69 | 10 duels, 2 bosses, up to 6 family members, custom lines. The main product. |
+| The gift box | €129 | The game, plus recorded family voices, a printed box and card, tracked worldwide delivery, one change after delivery |
 | Sibling add-on | +€20 | A brother or sister as a second hero: turns it into a two-player rivalry |
 | Gift card | any tier | The giver pays, the parent fills in the questionnaire |
 | Season Pass | €9 a month or €79 a year | A new personalised duel every month, seasonal bosses (Halloween, Christmas), a scoreboard that lasts |
 
+**Cost of one €129 gift box:** the €69 costs below, plus the printed box and card about €10, voice editing about 15 minutes, and tracked delivery from Ireland €15 to €25. It earns more than the game, but not twice as much; price it for the gift, not the margin.
+
 **Cost of one €69 order:** card fees about €2, AI drafting €2 to €5, hosting under €0.50, human check 30 minutes at €25 an hour (€12.50). About **€48 before advertising**, and about **€26 after** a blended €22 to win each customer.
+
+Two paid choices only. The €49 Starter was dropped on 20 Sep 2026: it turned the page into a comparison exercise and undercut the main product. See `docs/architecture.md`.
 
 ## 6. Growth
 

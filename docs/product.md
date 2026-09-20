@@ -63,7 +63,7 @@ The builder and the game share one config object. In the demo it travels in the 
 
 **Duel library.** Fourteen duels already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out, Neon Racers, Garden Five-a-Side, Back Seat Battle, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz, Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Each needs its Fionn and Sean text swapped for the config (as the four demo duels were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano / instrument duel that isn't tied to concertina.
 
-**Porting a duel from Fionn vs Sean:** copy it into `site/game/duels/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `play.html` and run the smoke test.
+**Porting a duel from Fionn vs Sean:** copy it into `site/game/duels/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site/g/demo/index.html` and run the smoke test.
 
 ## 4. Making a paid order (the plan)
 

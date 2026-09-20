@@ -59,10 +59,7 @@ section.band h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,
 .price b{font-size:19px}
 .price .amt{font-family:var(--display);font-size:22px}
 .price p{margin:0;color:var(--muted)}
-.extras{color:var(--muted);margin:16px 0 26px}
-.list{display:flex;gap:8px;flex-wrap:wrap;max-width:560px}
-.list input{flex:1 1 240px}
-#list-msg{margin:10px 0 0;font-weight:700}
+.extras{color:var(--muted);margin:16px 0 0;max-width:60ch}
 .promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;max-width:900px}
 .promises li{padding-left:18px;position:relative}
 .promises li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;background:var(--hot)}
@@ -130,7 +127,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
   <div class="view">
     <div class="screen"><canvas id="game" width="480" height="270" aria-label="A live preview of your hero and their family, in pixels"></canvas></div>
     <div class="row">
-      <a class="btn go" id="play" href="play.html"><span id="play-label">Play the free demo</span></a>
+      <a class="btn go" id="play" href="g/demo/"><span id="play-label">Play the free demo</span></a>
       <small>Four duels and a boss, free. Nothing you type is sent to us.</small>
     </div>
   </div>
@@ -160,17 +157,12 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Prices</h2>
   <div class="prices">
-    <div class="price"><b>Starter</b><span class="amt">€49</span><p>Six duels, one boss, the hero and one family member, plus the dog.</p></div>
-    <div class="price"><b>Family</b><span class="amt">€69</span><p>Ten duels, two bosses, up to six family members, and your own lines written in everywhere.</p></div>
-    <div class="price"><b>Deluxe</b><span class="amt">€129</span><p>The Family game plus your own voices (record the catchphrases on a phone), a printed gift box with the card inside, and one change after it arrives.</p></div>
+    <div class="price"><b>The demo</b><span class="amt">Free</span><p>Four duels and a boss, built here in a minute. Nothing to install, nothing sent to us.</p></div>
+    <div class="price"><b>The game</b><span class="amt">&euro;69</span><p>Ten duels, two bosses, up to six family members, and your own lines written in everywhere. Yours in 48 hours, or on the day you choose.</p></div>
+    <div class="price"><b>The gift box</b><span class="amt">&euro;129</span><p>The game, plus your own voices recorded on a phone, a printed box and card to wrap, tracked delivery anywhere in the world, and one change after it arrives.</p></div>
   </div>
-  <p class="extras">Add a brother or sister as a second hero for €20. Gift cards for any of these, so a grandparent can give it and a parent fills in the details.</p>
-  <form class="list" id="list-form" aria-label="Join the launch list">
-    <label class="sr" for="list-email">Your email</label>
-    <input id="list-email" type="email" required placeholder="Your email" autocomplete="email">
-    <button class="btn go" type="submit">Tell me when it opens</button>
-  </form>
-  <p id="list-msg" role="status"></p>
+  <p class="extras">Add a brother or sister as a second hero for &euro;20. Gift cards too, so a grandparent can give it and a parent fills in the details.</p>
+  <p class="extras">Orders aren't open yet. Email <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a> and we'll tell you the day they are.</p>
 </section>
 
 <section class="band" id="privacy" aria-labelledby="privacy-h">
@@ -193,7 +185,7 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--muted);font
 </section>
 </main>
 
-<footer><span>Happy Hero Games. Made in Ireland.</span><span>A preview site: orders aren't open yet.</span></footer>
+<footer><span>Happy Hero Games. Made in Ireland.</span><span><a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a></span><span>A preview site: orders aren't open yet.</span></footer>
 </div>
 
 <script src="game/engine.js"></script>

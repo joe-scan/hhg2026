@@ -26,7 +26,7 @@ What we learnt from it, and why the product looks like this:
 - **One hero per game.** The child is player slot 1. Each duel is against a different family member in slot 0, played by the computer, or by a real grown-up in 2-player mode.
 - **The hero is meant to win more often than not.** The duels came with small hidden advantages for slot 1 (bigger hurley, wider plate, wins ties). Keep them; never show them on screen.
 - **Structure:** title (STARRING [NAME]), then for each duel: versus card, how-to, countdown, play, result. Then a co-op boss with a family member alongside, then the finale for the occasion (cake, tree or trophy), then Share.
-- **Demo vs full game:** the free demo is 4 duels and 1 boss, built in the browser from the builder. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
+- **Demo vs full game:** the free demo is 4 duels and 1 boss, built in the browser from the builder and played at `/g/demo/`. Every paid game gets its own `/g/<id>/` folder with a random, unguessable id. Never number them in sequence. The paid game is 10 duels picked by interest, 2 bosses, up to 6 family members, custom lines written from the questionnaire, and checked by a person.
 - **Add-ons:** a sibling as a second hero (turns it into a Fionn vs Sean-style rivalry), the family's recorded voices, a printed gift box, gift cards.
 - Prices, model and plan: `docs/business-plan.md`. Questionnaire, config and game format: `docs/product.md`.
 
@@ -62,12 +62,14 @@ CLAUDE.md                 this brief
 README.md                 short human intro and how to run it
 deploy.sh                 publishes site/ to happyherogames.com
 docs/business-plan.md     the business: market, competitors, pricing, model, plan, risks
+docs/architecture.md      one domain, /g/ URLs, scores, backups, why not ten domains
 docs/product.md           questionnaire with privacy rules per field, config format, game format
 docs/ai-website-organised.md   the guide the page design follows
 site/index.html           landing page with the live hero builder
-site/.htaccess            https and www redirects, HSTS, caching, noindex on play.html
+site/.htaccess            https and www redirects, HSTS, caching
+site/g/.htaccess          keeps every game out of search engines
 site/builder.js           the builder: form to config, live preview, Play link
-site/play.html            the game page (reads the config from #g=)
+site/g/demo/index.html    the free demo's game page (reads the config from #g=)
 site/css/site.css         shared page styles and design tokens
 site/img/finale.png       the demo's last screen, used on the landing page
 site/game/engine.js       engine: family config, sprites, audio, input, drawing, cheers
@@ -100,4 +102,5 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 1. Run an EU (EUIPO) and US (USPTO) trademark search for HAPPY HERO GAMES. Known neighbours: Hero Games (Beijing publisher), Hero Games (US tabletop), a mobile game called Happy Hero.
 2. Confirm or change the design direction above.
 3. Pick a form service for the launch list (Tally, Buttondown or similar). The form in `site/index.html` is a placeholder that saves nothing.
-4. Prices on the site are the plan's proposals (€49 / €69 / €129, +€20 sibling). Confirm before anything goes public.
+4. Prices on the site are two tiers (€69 and €129, +€20 sibling), per `docs/architecture.md`. Confirm before taking money.
+5. A logo beyond the pixel H in `site/img/icon.svg`, and a pixel artist for the sprites.

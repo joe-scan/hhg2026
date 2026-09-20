@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Play | Happy Hero Games</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#12062b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bungee&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="../../css/site.css">
 <style>
 body{display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:10px}
 .wide{width:min(100%,calc((100vh - 150px) * 16 / 9),1180px);min-width:min(100%,300px)}
@@ -52,7 +52,7 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </head>
 <body data-game="on">
 <div class="bar wide">
-  <div class="left"><button type="button" class="btn small" id="btn-home">Home</button> <button type="button" class="btn small" id="btn-share">Share</button> <a class="btn small" id="edit" href="index.html#make">Edit your hero</a></div>
+  <div class="left"><button type="button" class="btn small" id="btn-home">Home</button> <button type="button" class="btn small" id="btn-share">Share</button> <a class="btn small" id="edit" href="../../index.html#make">Edit your hero</a></div>
   <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Sound: on</button>
 </div>
 
@@ -75,21 +75,21 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 
 <section class="demo wide" aria-label="About this demo">
   <p><strong>This is the free demo.</strong> Four duels and one boss, built in your browser from what you typed. The full game has ten duels chosen for your family's interests, your own jokes and catchphrases written in, and a real person checking every line before it arrives.</p>
-  <a class="btn go" href="index.html#prices">Get the full game</a>
+  <a class="btn go" href="../../index.html#prices">Get the full game</a>
 </section>
 
-<script src="game/engine.js"></script>
-<script src="game/duels/puck-out.js"></script>
-<script src="game/duels/water-balloon-fight.js"></script>
-<script src="game/duels/dinner-dash.js"></script>
-<script src="game/duels/table-quiz.js"></script>
-<script src="game/duels/bosses.js"></script>
-<script src="game/flow.js"></script>
+<script src="../../game/engine.js"></script>
+<script src="../../game/duels/puck-out.js"></script>
+<script src="../../game/duels/water-balloon-fight.js"></script>
+<script src="../../game/duels/dinner-dash.js"></script>
+<script src="../../game/duels/table-quiz.js"></script>
+<script src="../../game/duels/bosses.js"></script>
+<script src="../../game/flow.js"></script>
 <script>
 startGame(cfgFromLink());
 document.getElementById('hero-pad').textContent = HERO.name;
 // the builder reads the same #g= link, so the family's choices come back filled in
-document.getElementById('edit').href = 'index.html' + (location.hash.includes('g=') ? location.hash : '#make');
+document.getElementById('edit').href = '../../index.html' + (location.hash.includes('g=') ? location.hash : '#make');
 for (const id of ['btn-share']) { const b = document.getElementById(id); b.addEventListener('click', () => shareGame(b)); }
 </script>
 </body>

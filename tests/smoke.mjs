@@ -33,7 +33,7 @@ if (seen[seen.length - 1] !== 'finale') errors.push('demo did not reach the fina
 await page.evaluate(() => { for (let i = 0; i < 400; i++) __hhg.tick(); __hhg.render(); });
 
 // 3. the default demo family with no link, and a phone-width landing page
-const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'play.html'); await p2.waitForTimeout(500);
+const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);
 console.log('default hero:', await p2.evaluate(() => HERO.name));
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
 const m = await ctx.newPage(); watch(m); await m.goto(BASE + 'index.html'); await m.waitForTimeout(500);

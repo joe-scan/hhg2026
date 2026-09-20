@@ -15,13 +15,6 @@ RewriteRule ^ https://happyherogames.com%{REQUEST_URI} [L,R=301]
   </FilesMatch>
 </IfModule>
 
-# The game page carries the family's details in its link, so keep it out of search engines.
-<Files "play.html">
-  <IfModule mod_headers.c>
-    Header set X-Robots-Tag "noindex"
-  </IfModule>
-</Files>
-
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript
 </IfModule>

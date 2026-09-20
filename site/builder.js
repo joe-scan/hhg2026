@@ -1,6 +1,6 @@
 'use strict';
 // The hero builder on the landing page. The form writes one config object, the canvas redraws it live,
-// and the Play button opens play.html with the config in the link. Nothing is sent to a server.
+// and the Play button opens the game page (g/demo/) with the config in the link. Nothing is sent to a server.
 (() => {
   const $ = id => document.getElementById(id);
   const HAIRNAMES = ['Black', 'Dark brown', 'Brown', 'Light brown', 'Auburn', 'Ginger', 'Blonde', 'Grey'];
@@ -69,7 +69,7 @@
   }
   function changed() {
     const c = current(); applyConfig(c);
-    $('play').href = 'play.html#g=' + encodeCfg(c);
+    $('play').href = 'g/demo/#g=' + encodeCfg(c);
     $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s game';
     try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }
@@ -92,7 +92,4 @@
   requestAnimationFrame(frame);
   if (location.hash.includes('g=')) setTimeout(() => $('make').scrollIntoView(), 50);
 
-  // launch list: a placeholder until a form service is connected (see CLAUDE.md, open decisions)
-  const f = $('list-form');
-  if (f) f.addEventListener('submit', e => { e.preventDefault(); $('list-msg').textContent = 'Thanks. This is a preview site, so the launch list isn\'t live yet.'; });
 })();
