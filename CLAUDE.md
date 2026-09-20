@@ -66,7 +66,7 @@ English is the source. Spanish, German, French, Italian and Irish are live at `/
 
 **Tone.** Kid-safe teasing only: snacks, bedtime, sports teams, who does the dishes. Nothing about looks, weight, ability or anything that would sting. Grown-ups are allowed to be a bit silly ("I LET YOU WIN, YOU KNOW.").
 
-**Copy.** Write for the person buying, who is often a grandparent. Ask the questions they would ask ("What device do I need?", not "What does it play on?"), and use their words, not ours: a web address, not a private link; a short video, not a trailer. Never take a swipe at a competitor; say what we do instead. One idea per sentence, and read it aloud before shipping it: if you run out of breath, split it. `node tools/copy.mjs` prints every visible sentence with its length, and `docs/copy-check.md` has the scale, what was cut and why. Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
+**Copy.** Every price lives in the Price section and on the order form, nowhere else: an answer in the questions says what happens, not what it costs. Write for the person buying, who is often a grandparent. Ask the questions they would ask ("What device do I need?", not "What does it play on?"), and use their words, not ours: a web address, not a private link; a short video, not a trailer. Never take a swipe at a competitor; say what we do instead. One idea per sentence, and read it aloud before shipping it: if you run out of breath, split it. `node tools/copy.mjs` prints every visible sentence with its length, and `docs/copy-check.md` has the scale, what was cut and why. Joe's writing rules apply to the site, the game and docs: British and Irish English, no em or en dashes, no hype or AI-register words, no reflexive three-item lists, no emoji in page copy or headings. In-game cheers can be enthusiastic because that's the product. Write for parents and grandparents: plain, warm, specific. "Put someone special in their own arcade game", not "Unlock magical personalised experiences". Don't keep saying child or kid: the hero could be a grown-up, so say "they", "the hero" or their name. The children's privacy rules below still apply to every game.
 
 **Claims.** Don't write anything on the site that isn't true yet: no invented reviews, customer counts, "most popular" badges, press logos or discounts Joe hasn't decided.
 
@@ -119,9 +119,6 @@ Written by hand
                             pages use it, the choice is kept in the visitor's own browser, and
                             a hero built on the front page carries over
     builder.js              the builder: form to config, live preview, Play link
-    skin.js                 the dark/light button. It is in the shared header, so it must be a
-                            shared file: it lived in the front page's script until 20 Sep 2026
-                            and the button did nothing on every other page
     css/site.css            shared page styles, the two looks, design tokens
     img/                    logo.svg, icon.svg, og.png (link previews), poster.png, trailer.gif
     .htaccess               https and www redirects, HSTS, caching

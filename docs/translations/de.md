@@ -265,9 +265,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Wir schicken dir per E-Mail eine Webadresse, die nur ihnen gehört. Schick sie am Tag selbst per Nachricht oder E-Mail, oder schreib sie in eine Karte. Nimm das gedruckte Poster dazu, dann kommt es mit der Post, und es gibt etwas zum Einpacken. |
 | Yours has your own names in it. | Deins bekommt eure eigenen Namen. |
 | Any phone, tablet, laptop or computer with a web browser. | Jedes Handy, Tablet, Notebook oder jeder Computer mit einem Webbrowser. |
-| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. | Fünf Werktage als Standard, gerechnet ab dem Moment, in dem wir deine Antworten haben. Wenn es schneller gehen muss, schaffen wir es in 48 Stunden, für 39 $. |
 | About twenty minutes the first time through. | Beim ersten Mal etwa zwanzig Minuten. |
 | Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Ja. Der Partymodus steht auf dem ersten Bildschirm. Wähl aus, wie viele mitspielen, und jede und jeder tritt der Reihe nach gegen den Helden an. Am Ende steht eine Ergebnistafel mit einem Sieger. |
+| Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner. | Fünf Werktage als Standard, gerechnet ab dem Moment, in dem wir deine Antworten haben. Im Bestellformular gibt es eine schnellere Option, wenn du sie brauchst. |
 
 ## What the game says: names, instructions and scores
 

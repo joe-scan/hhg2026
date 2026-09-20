@@ -10,4 +10,22 @@
   <div class="look"><button type="button" id="skin-toggle" data-dark="Dark mode" data-light="Light mode">Dark mode</button></div>
   <!--langs-->
 </header>
-<script src="/skin.js" defer></script>
+<script>
+// The dark/light button. It is in this header, so it lives in this header: as a separate file
+// it depended on a second request arriving, and it was reported broken twice.
+(function () {
+  var root = document.documentElement, btn = document.getElementById('skin-toggle');
+  if (!btn) return;
+  function dark() {
+    return root.dataset.skin ? root.dataset.skin === 'dark'
+      : matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label() { btn.textContent = dark() ? btn.dataset.light : btn.dataset.dark; }
+  btn.addEventListener('click', function () {
+    root.dataset.skin = dark() ? 'light' : 'dark';
+    try { localStorage.setItem('hhg-skin', root.dataset.skin); } catch (e) {}
+    label();
+  });
+  label();
+})();
+</script>

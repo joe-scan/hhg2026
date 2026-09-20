@@ -265,9 +265,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Seolaimid seoladh gréasáin chugat ar ríomhphost nach leo ach iadsan. Seol ar an lá é le teachtaireacht nó ríomhphost, nó scríobh isteach i gcárta é. Cuir an póstaer clóite leis agus tagann sé sa phost, ionas go mbeidh rud éigin ann le filleadh. |
 | Yours has your own names in it. | Beidh bhur n-ainmneacha féin ar do cheannsa. |
 | Any phone, tablet, laptop or computer with a web browser. | Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin. |
-| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. | Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Má theastaíonn sé níos luaithe, is féidir linn é a bheith réidh i gceann 48 uair an chloig ar $39. |
 | About twenty minutes the first time through. | Timpeall fiche nóiméad an chéad uair. |
 | Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Tá. Tá an mód cóisire ar an gcéad scáileán. Roghnaigh cé mhéad atá ag imirt, agus faigheann gach duine seal in aghaidh an laoich. Críochnaíonn sé le clár torthaí agus curadh. |
+| Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner. | Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Tá rogha níos tapúla ar an bhfoirm ordaithe má theastaíonn sé uait. |
 
 ## What the game says: names, instructions and scores
 
