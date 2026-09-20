@@ -137,7 +137,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 - **Run it:** `node tools/build.mjs`, then `cd site && python3 -m http.server 8766` and open http://localhost:8766.
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. It covers the builder, every pet kind, the demo stopping at the locked card and never showing the boss or the ending, a full five-game assembly played to the ending, a four-challenger party to the results board, both free pages, all five translated languages, the language picker in both directions, and the landing page at phone width. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).
-- **Don't deploy** without Joe saying so. When he does, run `./deploy.sh`. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
+- **Deploy every time,** without asking (Joe, 20 Sep 2026). Build, run the smoke test and `node tools/links.mjs`, then `./deploy.sh`, then run the smoke test again against `https://happyherogames.com/`. A failing test is the one reason not to: fix it or say what's broken. Never touch `public_html/test` on Joe's joescanlon.com server; it belongs to another project.
 - **Look at what you build.** Screenshot the game and the pages at desktop and phone width before saying something works.
 
 ## The tools
