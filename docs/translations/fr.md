@@ -165,7 +165,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Trick or Treat Dash: catch the falling sweets in your bucket | Course aux Bonbons : attrapez les bonbons qui tombent dans votre seau |
 | Left and right arrow keys, or the buttons under the screen on a phone. | Flèches gauche et droite, ou les boutons sous l'écran sur un téléphone. |
 | Build one, free | Créez-en un, gratuitement |
-| For an order we ask for what the game needs and nothing else: | Pour une commande, nous demandons ce dont le jeu a besoin, et rien d'autre : |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | L'affiche imprimée : l'écran-titre avec AVA en lettres lumineuses, JOYEUX ANNIVERSAIRE, AVA en dessous, trois de ses jeux en bas, et au générique papa, maman, Jack et Biscuit le chien |
 | Order one | Commander |
 | Free games | Jeux gratuits |
@@ -188,7 +187,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Course du traîneau : courez sur les toits et sautez les cheminées |
 | JUMP | SAUTER |
 | One button: space, the up arrow, or a tap on the screen. | Un seul bouton : espace, la flèche du haut, ou une touche sur l'écran. |
-| Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Dites-nous pour qui c'est et pour quand. On vous renvoie un lien de paiement et on vous dit quand ce sera prêt. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Un adversaire dans la démo. Le jeu complet accueille huit personnes, donc tout le monde est là. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Jusqu'à huit personnes : la famille, les amis, un professeur, un entraîneur. L'animal aussi : chien, chat, lapin, hamster ou poisson. |
 | This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | C'est l'écran d'ouverture d'un vrai jeu. Dans la suite, c'est eux le héros. Leur famille et leurs amis sont ceux à battre, et les blagues sont les leurs. |
@@ -205,7 +203,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Tell us about them | Parlez-nous d'eux |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Une vingtaine de minutes la première fois. Ensuite ils y rejouent, et le passent à qui se trouve dans la pièce. |
 | Build the real one | Créez le vrai |
-| You get five games and a boss fight, up to eight people in it, ready in two working days. You can add a poster of the game, printed and posted, for the wall. | Vous recevez cinq jeux et un boss, jusqu'à huit personnes dedans, prêt en deux jours ouvrés. Vous pouvez ajouter une affiche du jeu, imprimée et envoyée par la poste, pour le mur. |
 | What they play, each against a different person: | Ce qu'ils jouent, chaque jeu contre une personne différente : |
 | Water Balloon Fight | Bataille de ballons d'eau |
 | The boss fight, with someone on their side | Le boss, avec quelqu'un à leurs côtés |
@@ -224,7 +221,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Their name, who's in it, what they love, what they always say. You pick how they look. | Son prénom, qui est dedans, ce qu'il aime, ce qu'il répète tout le temps. C'est vous qui choisissez son allure. |
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Pas besoin de photo. Vous choisissez les cheveux, la peau et le maillot, et le héros est dessiné en pixels. |
 | We email you a web address. Tap it and the game opens. Nothing to install. | On vous envoie une adresse web par e-mail. Touchez-la et le jeu s'ouvre. Rien à installer. |
-| This opens an email. Or write to | Ceci ouvre un e-mail. Ou écrivez vous-même à |
 | What device do I need? | De quel appareil ai-je besoin ? |
 | Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | N'importe quel téléphone, tablette, portable ou ordinateur avec un navigateur. Il n'y a rien à télécharger ni à installer. Deux personnes peuvent jouer sur un clavier, ou se partager un téléphone tenu à l'horizontale. |
 | How do I give it to them? | Comment est-ce que je l'offre ? |
@@ -285,6 +281,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing else happens until you reply. If you do not hear from us within a day, write to | Rien d'autre ne se passe tant que vous n'avez pas répondu. Si vous n'avez pas de nouvelles sous un jour, écrivez à |
 | , because something went wrong at our end. | , car quelque chose s'est mal passé de notre côté. |
 | Back to the front page | Retour à la page d'accueil |
+| You get five games and a boss fight, up to eight people in it, ready within five working days. You can add a poster of the game, printed and posted, for the wall. | Vous recevez cinq jeux et un boss, jusqu'à huit personnes dedans, prêt en cinq jours ouvrés. Vous pouvez ajouter une affiche du jeu, imprimée et envoyée par la poste, pour le mur. |
+| In a hurry? We can have it ready in 48 hours for $39. You choose that on the order form. | Pressé ? On peut l'avoir prêt en 48 heures pour 39 $. Vous choisissez ça sur le formulaire de commande. |
+| How quickly can I get it? | En combien de temps puis-je l'avoir ? |
+| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Cinq jours ouvrés en standard, à compter du moment où nous avons vos réponses. Si vous le voulez plus vite, nous pouvons l'avoir prêt en 48 heures pour 39 $. Donnez-nous la date sur le formulaire et nous dirons oui ou non avant que vous payiez quoi que ce soit. |
+| How soon do you need it? | Pour quand le voulez-vous ? |
+| That date is close. Five working days may not make it. | Cette date est proche. Cinq jours ouvrés risquent de ne pas suffire. |
+| Within five working days. Included. | En cinq jours ouvrés. Compris. |
+| In 48 hours. $39 more. | En 48 heures. 39 $ de plus. |
+| There's a brother or sister who would want one too. A second game is $69 instead of $99, because we already know the family. | Il y a un frère ou une sœur qui en voudrait un aussi. Un deuxième jeu coûte 69 $ au lieu de 99 $, parce que nous connaissons déjà la famille. |
+| One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Une chose à savoir : s'il y a un frère ou une sœur qui en voudrait un aussi, le deuxième jeu est à 69 $ plutôt que 99 $. Dites-le dans votre réponse et nous le mettrons sur le même lien de paiement. |
 
 ## What the game says: names, instructions and scores
 

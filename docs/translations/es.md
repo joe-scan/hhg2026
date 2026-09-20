@@ -165,7 +165,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Trick or Treat Dash: catch the falling sweets in your bucket | Truco o Trato: atrapa los caramelos que caen en tu cubo |
 | Left and right arrow keys, or the buttons under the screen on a phone. | Flechas izquierda y derecha, o los botones debajo de la pantalla en el teléfono. |
 | Build one, free | Crea uno, gratis |
-| For an order we ask for what the game needs and nothing else: | Para un pedido pedimos lo que el juego necesita y nada más: |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | El póster impreso: la pantalla de título con AVA en luces, FELIZ CUMPLEAÑOS, AVA debajo, tres de sus juegos en la parte de abajo y el reparto acreditado como papá, mamá, Jack y Biscuit el perro |
 | Order one | Haz un pedido |
 | Free games | Juegos gratis |
@@ -188,7 +187,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Carrera en trineo: corre por los tejados y salta las chimeneas |
 | JUMP | SALTA |
 | One button: space, the up arrow, or a tap on the screen. | Un solo botón: espacio, la flecha arriba o un toque en la pantalla. |
-| Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Dinos para quién es y para cuándo lo necesitas. Te enviaremos un enlace de pago y te diremos cuándo estará listo. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Un rival en la demo. El juego completo admite ocho personas, así que aparecen todos. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Hasta ocho personas: familia, amigos, un profesor, un entrenador. La mascota también: perro, gato, conejo, hámster o pez. |
 | This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Esta es la pantalla inicial de un juego de verdad. En el resto, esa persona es el héroe. Su familia y sus amigos son a quienes hay que ganar, y los chistes son suyos. |
@@ -205,7 +203,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Tell us about them | Cuéntanos cómo es |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Unos veinte minutos la primera vez. Luego lo vuelven a jugar y se lo pasan a quien esté en la habitación. |
 | Build the real one | Crea el de verdad |
-| You get five games and a boss fight, up to eight people in it, ready in two working days. You can add a poster of the game, printed and posted, for the wall. | Recibes cinco juegos y un jefe final, hasta ocho personas dentro, listo en dos días laborables. Puedes añadir un póster del juego, impreso y enviado por correo, para la pared. |
 | What they play, each against a different person: | A qué juegan, cada uno contra una persona distinta: |
 | Water Balloon Fight | Guerra de Globos |
 | The boss fight, with someone on their side | El jefe final, con alguien de su lado |
@@ -224,7 +221,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Their name, who's in it, what they love, what they always say. You pick how they look. | Su nombre, quién sale, qué le encanta, qué dice siempre. Tú eliges su aspecto. |
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | No hacen falta fotos. Tú eliges el pelo, la piel y la camiseta, y el héroe se dibuja en píxeles. |
 | We email you a web address. Tap it and the game opens. Nothing to install. | Te enviamos por correo una dirección web. Tócala y el juego se abre. Nada que instalar. |
-| This opens an email. Or write to | Esto abre un correo. O escribe tú mismo a |
 | What device do I need? | ¿Qué aparato necesito? |
 | Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Cualquier teléfono, tablet, portátil u ordenador con navegador. No hay nada que descargar ni instalar. Dos personas pueden jugar en un teclado, o compartir un teléfono en horizontal. |
 | How do I give it to them? | ¿Cómo se lo regalo? |
@@ -285,6 +281,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Nothing else happens until you reply. If you do not hear from us within a day, write to | No pasa nada más hasta que respondas. Si no sabes de nosotros en un día, escribe a |
 | , because something went wrong at our end. | , porque algo ha fallado por nuestra parte. |
 | Back to the front page | Volver a la portada |
+| You get five games and a boss fight, up to eight people in it, ready within five working days. You can add a poster of the game, printed and posted, for the wall. | Recibes cinco juegos y un jefe final, hasta ocho personas dentro, listo en cinco días laborables. Puedes añadir un póster del juego, impreso y enviado por correo, para la pared. |
+| In a hurry? We can have it ready in 48 hours for $39. You choose that on the order form. | ¿Con prisa? Podemos tenerlo listo en 48 horas por 39 $. Lo eliges en el formulario de pedido. |
+| How quickly can I get it? | ¿Cuánto tarda en llegar? |
+| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Cinco días laborables de forma estándar, contados desde que tenemos tus respuestas. Si lo necesitas antes, podemos tenerlo listo en 48 horas por 39 $. Dinos la fecha en el formulario y te diremos si llegamos antes de que pagues nada. |
+| How soon do you need it? | ¿Para cuándo lo necesitas? |
+| That date is close. Five working days may not make it. | Esa fecha está cerca. Puede que cinco días laborables no lleguen. |
+| Within five working days. Included. | En cinco días laborables. Incluido. |
+| In 48 hours. $39 more. | En 48 horas. 39 $ más. |
+| There's a brother or sister who would want one too. A second game is $69 instead of $99, because we already know the family. | Hay un hermano o una hermana que también querría uno. Un segundo juego cuesta 69 $ en vez de 99 $, porque ya conocemos a la familia. |
+| One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Algo que conviene saber: si hay un hermano o una hermana que también querría uno, el segundo juego cuesta 69 $ en vez de 99 $. Dínoslo al responder y lo ponemos en el mismo enlace de pago. |
 
 ## What the game says: names, instructions and scores
 

@@ -41,6 +41,8 @@ $hero     = field('hero', 60);
 $occasion = field('occasion', 40);
 $date     = field('date', 40);
 $pick     = field('pick', 40);
+$speed    = field('speed', 60);
+$sibling  = field('sibling', 10) === 'yes' ? 'YES, a second game at $69' : 'no';
 $cast     = block('cast');
 $about    = block('about');
 
@@ -52,6 +54,8 @@ $lines = [
     'Occasion:  ' . ($occasion ?: '(not said)'),
     'Needed by: ' . ($date ?: '(not said)'),
     'Wants:     ' . ($pick ?: '(not said)'),
+    'Speed:     ' . ($speed ?: '(not said)'),
+    'Sibling:   ' . $sibling,
     'From:      ' . ($from ?: '(no name given)') . ' <' . $email . '>',
     '',
     'Who else is in it:',

@@ -26,13 +26,13 @@ Two prices, in US dollars, shown in dollars to everyone.
 
 | Product | Price | What's in it |
 |---|---|---|
-| The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready in two working days, checked by a person. |
+| The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready within five working days, checked by a person. |
 | The gift box | $179 | The same game, plus a printed arcade poster of their title screen and a twenty-second trailer of their own game. |
 | Gift cards | $99 or $179 | The giver pays, the parent fills in the questionnaire. |
 
 The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
 
-**Everything except the physical extras is identical between the two.** Same five games, same boss, same eight people, same lines, same two working days. The only choice a buyer makes is whether they want something printed. That is the whole point: one variable. A pricing page with one variable on it can be understood in five seconds, and a gift buyer decides in about that long.
+**Everything except the physical extras is identical between the two.** Same five games, same boss, same eight people, same lines, same five working days. The only choice a buyer makes is whether they want something printed. That is the whole point: one variable. A pricing page with one variable on it can be understood in five seconds, and a gift buyer decides in about that long.
 
 ### Why the $49 Starter is gone
 
@@ -45,9 +45,32 @@ It was in the plan until 20 September 2026 and it is now dropped. Its own number
 
 Link previews, which make a shared game link show that family's own title screen, were built the same day but are not a gift box extra: every game gets them, free one included. The premiere countdown was built and removed on 20 September 2026, because it cost more work than it returned.
 
+### Add-ons, chosen after the price, never on the pricing page
+
+Two prices decide what the product is. Add-ons are asked for on the order form, once somebody
+has already decided, and they never appear as a third column beside $99 and $179. Added 20 Sep
+2026, with the maths from section 4:
+
+| Add-on | Price | What it costs us | Left | Why it is there |
+|---|---|---|---|---|
+| Rush, ready in 48 hours | $39 | fees only, $1.95 | **$37.05** | No extra work, only scheduling. It is asked for at the one moment a buyer feels urgency, which is when they type a date that is close. |
+| A second game for a brother or sister | $69 | $11.60 (check, drafting, hosting) | **$53.95** | The family is already written down, so the second game is the cheapest one we will ever make. Most of this market has two children. |
+
+At a 25% attach rate on rush and 12% on the second game, contribution per average order goes
+from **$54.48 to $70.21**, a 29% lift, for one radio button and one checkbox. That is the case
+for add-ons in one line.
+
+**Extra printed posters are not sold yet, and not at $25.** A $25 poster leaves $3.75 at the bad
+print quote. It only works at $35 or framed at $59, and neither is honest to offer until a print
+partner is chosen and a sample is in Joe's hands.
+
+Standard delivery moved from two working days to five on the same day. Two days for everyone was
+a promise one person could not keep on a bad week, and giving it away free left nothing to sell
+to the buyer who genuinely needs Saturday. The 48-hour promise still exists; it is now worth $39.
+
 ### What is not sold
 
-No subscription. No sibling add-on: eight people is enough room for a brother or sister without a separate line at checkout. **No voice recordings**, dropped on 20 September 2026 for privacy and not coming back, because audio of a child is the most sensitive thing this company could hold and nobody asked for it.
+No subscription. **No voice recordings**, dropped on 20 September 2026 for privacy and not coming back, because audio of a child is the most sensitive thing this company could hold and nobody asked for it.
 
 **A gift never expires.** Every game is static files in a folder at a private link, and it keeps working at that link. Nothing is taken back and there is nothing to cancel.
 
@@ -100,7 +123,7 @@ Seven competitors were read in detail on 20 September 2026. The full analysis is
 | Plays on | Browser | Android and Windows PC | Windows | Any browser |
 | Try before you buy | A generic demo | No | No | Their own hero, playing, in a minute |
 | Built from | Photos and three quiz answers | Photos and locations | Weeks of conversation | A questionnaire. No photos. |
-| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | Two working days |
+| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | Five working days, or 48 hours for $39 |
 | Who is in it | Two | Up to five | Whoever you discuss | Up to eight, plus the pet |
 | Proof | 1,873 reviews at 4.8 | 61 reviews at 4.77 | A handful of references | None yet |
 

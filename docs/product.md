@@ -73,7 +73,7 @@ The builder and the game share one config object. In the demo it travels in the 
 1. The questionnaire saves a config (plus the extra fields) against an order.
 2. A generator builds the game: the config drives sprites, games and text, and an AI model drafts taunts, forfeits and quiz questions from the answers.
 3. A person plays it through and reads every line. The budget is 18 minutes for a game and 25 for a gift box, which is what the model in `docs/business-plan.md` is built on. If a real order takes 30, the margin goes with it.
-4. The family gets a private link and a printable card. Delivered in two working days, or on the chosen date.
+4. The family gets a private link and a printable card. Delivered within five working days, or in 48 hours for $39, or on the chosen date.
 
 ## 5. One domain
 
