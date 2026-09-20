@@ -21,7 +21,7 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'name/index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'order/index.html', 'order/thanks/index.html', '404.html'];
+export const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'order/index.html', 'order/thanks/index.html', '404.html'];
 // Pages that stay in English for now. The terms are a legal document and a bad translation of one
 // is worse than none; every language links to the English copy until a lawyer has seen it.
 // Apache serves one file for a missing page anywhere on the site, so the 404 is English only,

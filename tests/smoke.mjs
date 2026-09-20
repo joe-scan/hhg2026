@@ -121,13 +121,6 @@ if (turns !== 4) errors.push('party mode played ' + turns + ' turns, wanted 4');
 if (pmSeen[pmSeen.length - 1] !== 'partyEnd') errors.push('party mode did not reach the results board');
 await pm.close();
 
-// 2f. the two free pages: a name in lights, and the Halloween game
-const lights = await browser.newPage(); watch(lights);
-await lights.goto(BASE + 'name/'); await lights.waitForTimeout(700);
-await lights.fill('#who', 'Saoirse'); await lights.waitForTimeout(400);
-if (await lights.evaluate(() => HERO.name) !== 'SAOIRSE') errors.push('the name in lights page did not take the name');
-await lights.close();
-
 // every free theme game: it starts, it runs a full minute, it ends, and the end card is drawn
 for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'Sean']]) {
   const fp = await browser.newPage(); watch(fp);
@@ -147,7 +140,7 @@ for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'S
 
 // the dark/light button: it is in the shared header, so it has to work on every page, not
 // only the one whose script it used to live in
-for (const page of ['', 'free/christmas/', 'name/', 'es/free/halloween/', '404.html']) {
+for (const page of ['', 'free/christmas/', 'free/', 'es/free/halloween/', '404.html']) {
   const sk = await browser.newPage(); watch(sk);
   await sk.goto(BASE + page); await sk.waitForTimeout(300);
   const before = await sk.evaluate(() => document.documentElement.dataset.skin || '(device)');

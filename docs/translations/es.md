@@ -115,12 +115,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | goes back to the start. | vuelve al inicio. |
 | About this demo | Sobre esta demo |
 | This is the free demo. | Esta es la demo gratuita. |
-| One game, built in your browser from what you typed. The full game has five games picked for what they love, the boss fight, up to eight people, and the ending with their name up in lights. | Un juego, creado en tu navegador con lo que escribiste. El juego completo tiene cinco juegos elegidos según lo que le encanta, la pelea contra el jefe, hasta ocho personas y el final con su nombre en luces. |
 | Paddle Battle | Batalla de Palas |
 | Dinner Dash | Carrera de la Cena |
 | Back Seat Battle | Guerra en el Asiento Trasero |
 | The Family Quiz | El Concurso Familiar |
-| The boss fight | La pelea contra el jefe |
 | The ending | El final |
 | Dark mode | Modo oscuro |
 | Light mode | Modo claro |
@@ -139,20 +137,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms and refunds | Condiciones y reembolsos |
 | &middot; | &middot; |
 | Terms | Condiciones |
-| put a name in lights | pon un nombre en luces |
-| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Escribe un nombre y míralo en luces en una pantalla arcade. Gratis, nada que instalar, nada se nos envía. |
-| Put your name in lights | Pon tu nombre en luces |
-| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Escribe un nombre y obtén una pantalla de título arcade con él. Gratis, y nada de lo que escribes se envía a ninguna parte. |
 | Build a game | Crear un juego |
-| Put a name in lights | Pon un nombre en luces |
-| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Escribe un nombre y aparece en una pantalla arcade. Gratis, nada que instalar, y nada de lo que escribes sale de tu navegador. |
-| A name | Un nombre |
-| What it's for | Para qué es |
-| Birthday | Cumpleaños |
-| An arcade title screen with the name you typed in lights | Una pantalla de título arcade con el nombre que escribiste en luces |
 | Save the picture | Guardar la imagen |
 | Share it | Compartir |
-| Build the whole game, free | Crea el juego entero, gratis |
 | Trick or Treat Dash \| HappyHeroGames | Truco o Trato \| HappyHeroGames |
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Un juego de Halloween gratis con tu nombre. Atrapa los caramelos, deja las coles, sesenta segundos. Nada que instalar. |
 | Trick or Treat Dash | Truco o Trato |
@@ -168,14 +155,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Free games | Juegos gratis |
 | Sleigh Dash: Christmas | Carrera en trineo: Navidad |
 | Trick or Treat Dash: Halloween | Truco o trato: Halloween |
-| Your name in lights | Tu nombre en luces |
 | All of them | Todos |
-| A minute each, in any browser. Christmas, Halloween, or just your name in lights. | Un minuto cada uno, en cualquier navegador. Navidad, Halloween o simplemente tu nombre en luces. |
 | A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Un minuto cada uno, en cualquier navegador, con tu nombre en la pantalla final. Nada que instalar, sin registro y nada de lo que escribes se nos envía. Hechos para compartir. |
 | Sleigh Dash | Carrera en trineo |
 | Christmas. Run the rooftops and jump: a present goes down every chimney you clear. One button. | Navidad. Corre por los tejados y salta: cae un regalo por cada chimenea que superas. Un solo botón. |
 | Halloween. Catch the sweets in your bucket and leave the sprouts alone. Left and right. | Halloween. Atrapa los caramelos en tu cubo y deja las coles en paz. Izquierda y derecha. |
-| Any day. Type a name and it goes up on an arcade screen, dressed for the occasion. Save the picture. | Cualquier día. Escribe un nombre y aparece en una pantalla arcade, decorada para la ocasión. Guarda la imagen. |
 | Next | Lo próximo |
 | Easter, the first day back at school, and a penalty shoot-out for whatever final is on. One a season. | Pascua, la vuelta al cole y una tanda de penaltis para la final que toque. Uno por temporada. |
 | Sleigh Dash \| HappyHeroGames | Carrera en trineo \| HappyHeroGames |
@@ -187,7 +171,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One button: space, the up arrow, or a tap on the screen. | Un solo botón: espacio, la flecha arriba o un toque en la pantalla. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Un rival en la demo. El juego completo admite ocho personas, así que aparecen todos. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Hasta ocho personas: familia, amigos, un profesor, un entrenador. La mascota también: perro, gato, conejo, hámster o pez. |
-| This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Esta es la pantalla inicial de un juego de verdad. En el resto, esa persona es el héroe. Su familia y sus amigos son a quienes hay que ganar, y los chistes son suyos. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Estos son iguales para todo el mundo. Los juegos que hacemos son distintos. Cinco juegos, con tu propia familia y tus amigos como rivales, y sus bromas en cada pantalla. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Este es gratis e igual para todo el mundo. Los juegos que hacemos son distintos. Cinco juegos, con tu propia familia y tus amigos como rivales, y sus bromas en cada pantalla. |
 | Last changed 20 September 2026. Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | Última modificación: 20 de septiembre de 2026. Por ahora los pedidos se hacen por correo electrónico. Esto cubre la demo gratuita, que no nos envía nada, y lo que implica un pedido. |
@@ -197,19 +180,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | and we'll tell you. Nothing else, ever. | y te avisamos. Nada más, nunca. |
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Ellos son el héroe. Mamá, papá, la abuela, su mejor amigo y el perro son a quienes tienen que ganar. Funciona en cualquier teléfono. Nada que instalar. |
 | Play the first game, free | Juega el primer juego, gratis |
-| Nothing you type is sent to us. Or just | Nada de lo que escribes se nos envía. O simplemente |
 | Tell us about them | Cuéntanos cómo es |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Unos veinte minutos la primera vez. Luego lo vuelven a jugar y se lo pasan a quien esté en la habitación. |
 | Build the real one | Crea el de verdad |
 | What they play, each against a different person: | A qué juegan, cada uno contra una persona distinta: |
 | Water Balloon Fight | Guerra de Globos |
-| The boss fight, with someone on their side | El jefe final, con alguien de su lado |
 | The ending, with their name in lights | El final, con su nombre en luces |
 | Personalized video games, made for one person \| HappyHeroGames | Videojuegos personalizados, hechos para una persona \| HappyHeroGames |
 | A personalized video game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Un videojuego personalizado protagonizado por alguien especial, con su familia y sus amigos como rivales. Prueba la demo gratis en un minuto, en cualquier teléfono o portátil. |
 | Put someone special in their own video game | Pon a alguien especial en su propio videojuego |
 | own video game. | su propio videojuego. |
-| Put a name in lights, free \| HappyHeroGames | Pon un nombre en luces, gratis \| HappyHeroGames |
 | Free video games with your name on them \| HappyHeroGames | Videojuegos gratis con tu nombre \| HappyHeroGames |
 | Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Videojuegos gratis para Navidad, Halloween y cualquier día del año. Tu nombre en la pantalla final, nada que instalar y nada que se nos envíe. |
 | Free video games with your name on them | Videojuegos gratis con tu nombre |
@@ -279,13 +259,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Within five working days. Included. | En cinco días laborables. Incluido. |
 | In 48 hours. $39 more. | En 48 horas. 39 $ más. |
 | One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Algo que conviene saber: si hay un hermano o una hermana que también querría uno, el segundo juego cuesta 69 $ en vez de 99 $. Dínoslo al responder y lo ponemos en el mismo enlace de pago. |
-| Five games and a boss fight. Up to eight people in it. Ready within five working days. | Cinco juegos y un jefe final. Hasta ocho personas dentro. Listo en cinco días laborables. |
 | Add anything you like when you order. Nothing is decided here: | Añade lo que quieras al hacer el pedido. Aquí no se decide nada: |
 | The printed poster and a short video of their game, because a link is hard to wrap. | El póster impreso y un vídeo corto del juego, porque un enlace es difícil de envolver. |
 | Ready in 48 hours instead of five days. | Listo en 48 horas en vez de cinco días. |
 | A second game for a brother or sister, instead of $99. | Un segundo juego para un hermano o una hermana, en vez de 99 $. |
 | A preview of the title screen, with the name and the look you have chosen | Una vista previa de la pantalla de título, con el nombre y el aspecto que has elegido |
 | Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Después: te enviamos por correo un enlace de pago y unas preguntas sobre qué le encanta, quién más sale y las bromas de la familia. Solo pedimos lo que el juego necesita. Sin apellidos, sin edades, sin colegios, sin fotos. |
+| Nothing you type is sent to us. | Nada de lo que escribes se nos envía. |
+| Five games. Up to eight people in it. Ready within five working days. | Cinco juegos. Hasta ocho personas dentro. Listo en cinco días laborables. |
+| A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen. | Un minuto cada uno, en cualquier navegador. Un juego de Navidad y uno de Halloween, con tu nombre en la pantalla final. |
+| One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Un juego, creado en tu navegador con lo que has escrito. El juego completo tiene cinco juegos elegidos según lo que le encanta, hasta ocho personas y el final con su nombre en luces. |
 
 ## What the game says: names, instructions and scores
 

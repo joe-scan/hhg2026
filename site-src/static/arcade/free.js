@@ -48,7 +48,7 @@ function freePage(make, opt) {
     if (note) txt(note, W / 2, 140, 10, COL.dim, 'center');
     drawSpec(HERO, 402, 240, 4, false, Math.floor(t / 10));
     if (game.prop) game.prop();
-    txt('HAPPYHEROGAMES.COM', W / 2, 252, 8, COL.dim, 'center');
+    txt('HappyHeroGames.com', W / 2, 252, 8, COL.dim, 'center');
     if (t % 50 < 34) txt(touchMode ? 'TAP TO PLAY AGAIN' : 'PRESS START TO PLAY AGAIN', W / 2, 182, 10, '#fff', 'center');
   };
 

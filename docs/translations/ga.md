@@ -115,12 +115,10 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | goes back to the start. | ar ais go dtí an tús. |
 | About this demo | Faoin taispeántas seo |
 | This is the free demo. | Seo an taispeántas saor in aisce. |
-| One game, built in your browser from what you typed. The full game has five games picked for what they love, the boss fight, up to eight people, and the ending with their name up in lights. | Cluiche amháin, tógtha i do bhrabhsálaí as an rud a chlóscríobh tú. Tá cúig chluiche sa chluiche iomlán, roghnaithe de réir na rudaí is breá leo, an ceannasaí, suas le hochtar agus an deireadh lena n-ainm i soilse. |
 | Paddle Battle | Cath na Maidí |
 | Dinner Dash | Rás an Dinnéir |
 | Back Seat Battle | Cath an tSuíocháin Chúil |
 | The Family Quiz | Tráth na gCeist Teaghlaigh |
-| The boss fight | An cath ceannasaí |
 | The ending | An deireadh |
 | Dark mode | Mód dorcha |
 | Light mode | Mód geal |
@@ -139,20 +137,9 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Terms and refunds | Téarmaí agus aisíocaíochtaí |
 | &middot; | &middot; |
 | Terms | Téarmaí |
-| put a name in lights | cuir ainm i soilse |
-| Type a name and see it in lights on an arcade screen. Free, nothing to install, nothing sent to us. | Clóscríobh ainm agus feic i soilse é ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, gan aon rud á sheoladh chugainn. |
-| Put your name in lights | Cuir d'ainm i soilse |
-| Type a name, get an arcade title screen with it on. Free, and nothing you type is sent anywhere. | Clóscríobh ainm agus faigh scáileán teidil arcade leis. Saor in aisce, agus ní sheoltar aon rud a chlóscríobhann tú áit ar bith. |
 | Build a game | Tóg cluiche |
-| Put a name in lights | Cuir ainm i soilse |
-| Type a name and it goes up on an arcade screen. Free, nothing to install, and nothing you type leaves your browser. | Clóscríobh ainm agus téann sé suas ar scáileán arcade. Saor in aisce, gan aon rud le suiteáil, agus ní fhágann aon rud do bhrabhsálaí. |
-| A name | Ainm |
-| What it's for | Cad chuige é |
-| Birthday | Lá breithe |
-| An arcade title screen with the name you typed in lights | Scáileán teidil arcade leis an ainm a chlóscríobh tú i soilse |
 | Save the picture | Sábháil an pictiúr |
 | Share it | Roinn é |
-| Build the whole game, free | Tóg an cluiche iomlán, saor in aisce |
 | Trick or Treat Dash \| HappyHeroGames | Rás na Milseán \| HappyHeroGames |
 | A free Halloween game with your name on it. Catch the sweets, leave the sprouts, sixty seconds. Nothing to install. | Cluiche Oíche Shamhna saor in aisce le d'ainm air. Beir ar na milseáin, fág na bachlóga, seasca soicind. Gan aon rud le suiteáil. |
 | Trick or Treat Dash | Rás na Milseán |
@@ -168,14 +155,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Free games | Cluichí saor in aisce |
 | Sleigh Dash: Christmas | Rás na Nollag: an Nollaig |
 | Trick or Treat Dash: Halloween | Rás na milseán: Oíche Shamhna |
-| Your name in lights | D'ainm i soilse |
 | All of them | Iad ar fad |
-| A minute each, in any browser. Christmas, Halloween, or just your name in lights. | Nóiméad an ceann, i mbrabhsálaí ar bith. An Nollaig, Oíche Shamhna, nó d'ainm i soilse. |
 | A minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Nóiméad an ceann, i mbrabhsálaí ar bith, le d'ainm ar an scáileán deiridh. Faic le suiteáil, gan chlárú, agus ní sheoltar chugainn aon rud a chlóscríobhann tú. Déanta le roinnt. |
 | Sleigh Dash | Rás na Nollag |
 | Christmas. Run the rooftops and jump: a present goes down every chimney you clear. One button. | An Nollaig. Rith na díonta agus léim: titeann bronntanas síos gach simléar a ghlanann tú. Cnaipe amháin. |
 | Halloween. Catch the sweets in your bucket and leave the sprouts alone. Left and right. | Oíche Shamhna. Beir ar na milseáin sa bhuicéad agus fág na bachlóga. Clé agus deas. |
-| Any day. Type a name and it goes up on an arcade screen, dressed for the occasion. Save the picture. | Lá ar bith. Clóscríobh ainm agus téann sé suas ar scáileán arcade, maisithe don ócáid. Sábháil an pictiúr. |
 | Next | Ar aghaidh |
 | Easter, the first day back at school, and a penalty shoot-out for whatever final is on. One a season. | An Cháisc, an chéad lá ar scoil, agus comórtas cicanna éirice don chluiche ceannais atá ann. Ceann in aghaidh an tséasúir. |
 | Sleigh Dash \| HappyHeroGames | Rás na Nollag \| HappyHeroGames |
@@ -187,7 +171,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One button: space, the up arrow, or a tap on the screen. | Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán. |
 | One opponent in the demo. The full game fits eight people, so everyone turns up. | Céile comhraic amháin sa taispeántas. Tá spás san iomlán d'ochtar, mar sin bíonn gach duine ann. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Suas le hochtar: an teaghlach, cairde, múinteoir, traenálaí. An peata freisin: madra, cat, coinín, hamstar nó iasc. |
-| This is the opening screen of a real game. In the rest of it, they're the hero. Their family and friends are the ones to beat, and the jokes are their own. | Seo an chéad scáileán de chluiche ceart. Sa chuid eile, is iadsan an laoch. Is iad a muintir agus a gcairde na daoine le sárú, agus is leo féin na jócanna. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá na cinn seo mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
 | Last changed 20 September 2026. Orders are taken by email for now. This covers the free demo, which sends us nothing, and what an order involves. | Athraithe go deireanach: 20 Meán Fómhair 2026. Glactar orduithe trí ríomhphost faoi láthair. Clúdaíonn sé seo an taispeántas saor in aisce, nach seolann faic chugainn, agus a bhfuil i gceist le hordú. |
@@ -197,19 +180,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | and we'll tell you. Nothing else, ever. | agus inseoidh muid duit. Faic eile, riamh. |
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Is iadsan an laoch. Mam, Daid, Mamó, a gcara is fearr agus an madra na daoine le sárú. Oibríonn sé ar aon fhón. Faic le suiteáil. |
 | Play the first game, free | Imir an chéad chluiche, saor in aisce |
-| Nothing you type is sent to us. Or just | Ní sheoltar chugainn aon rud a chlóscríobhann tú. Nó díreach |
 | Tell us about them | Inis dúinn fúthu |
 | About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Timpeall fiche nóiméad an chéad uair. Ansin imríonn siad arís é agus tugann siad do dhuine ar bith sa seomra é. |
 | Build the real one | Tóg an ceann ceart |
 | What they play, each against a different person: | Na cluichí féin, gach ceann in aghaidh duine difriúil: |
 | Water Balloon Fight | Cath na mBalún Uisce |
-| The boss fight, with someone on their side | An troid boss, le duine ar a dtaobh |
 | The ending, with their name in lights | An deireadh, lena n-ainm i soilse |
 | Personalized video games, made for one person \| HappyHeroGames | Físchluichí pearsantaithe, déanta do dhuine amháin \| HappyHeroGames |
 | A personalized video game starring someone special, with their family and friends as the opponents. Try the free demo in a minute, on any phone or laptop. | Físchluiche pearsantaithe le duine speisialta sa phríomhról, agus a mhuintir agus a chairde mar chéilí comhraic. Bain triail as an taispeántas saor in aisce i nóiméad, ar aon fhón nó ríomhaire glúine. |
 | Put someone special in their own video game | Cuir duine speisialta ina fhíschluiche féin |
 | own video game. | a fhíschluiche féin. |
-| Put a name in lights, free \| HappyHeroGames | Cuir ainm i soilse, saor in aisce \| HappyHeroGames |
 | Free video games with your name on them \| HappyHeroGames | Físchluichí saor in aisce le d'ainm orthu \| HappyHeroGames |
 | Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Físchluichí saor in aisce don Nollaig, d'Oíche Shamhna agus do lá ar bith eile. D'ainm ar an scáileán deiridh, faic le suiteáil, faic á sheoladh chugainn. |
 | Free video games with your name on them | Físchluichí saor in aisce le d'ainm orthu |
@@ -279,13 +259,16 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Within five working days. Included. | I gceann cúig lá oibre. San áireamh. |
 | In 48 hours. $39 more. | I gceann 48 uair an chloig. $39 sa bhreis. |
 | One thing worth knowing: if there is a brother or sister who would want one too, a second game is $69 rather than $99. Say so in your reply and we will put it on the same payment link. | Rud amháin is fiú a rá: má tá deartháir nó deirfiúr ann a bheadh ceann uathu freisin, cosnaíonn an dara cluiche $69 seachas $99. Abair é sin i do fhreagra agus cuirfimid ar an nasc íocaíochta céanna é. |
-| Five games and a boss fight. Up to eight people in it. Ready within five working days. | Cúig chluiche agus troid boss. Suas le hochtar istigh ann. Réidh i gceann cúig lá oibre. |
 | Add anything you like when you order. Nothing is decided here: | Cuir leis cibé rud is mian leat agus tú ag ordú. Ní shocraítear faic anseo: |
 | The printed poster and a short video of their game, because a link is hard to wrap. | An póstaer clóite agus físeán gairid den chluiche, mar tá nasc deacair a fhilleadh. |
 | Ready in 48 hours instead of five days. | Réidh i gceann 48 uair an chloig in ionad cúig lá. |
 | A second game for a brother or sister, instead of $99. | An dara cluiche do dheartháir nó do dheirfiúr, in ionad $99. |
 | A preview of the title screen, with the name and the look you have chosen | Réamhamharc ar an scáileán teidil, leis an ainm agus an chuma atá roghnaithe agat |
 | Next: we email you a payment link, and a few questions about what they love, who else is in it and the family jokes. We only ask for what the game needs. No surnames, no ages, no schools, no photos. | Ina dhiaidh sin: seolaimid nasc íocaíochta chugat ar ríomhphost, agus cúpla ceist faoi na rudaí is breá leo, cé eile atá istigh ann agus jócanna an teaghlaigh. Ní iarraimid ach an méid a theastaíonn ón gcluiche. Gan sloinnte, gan aois, gan scoileanna, gan grianghraif. |
+| Nothing you type is sent to us. | Ní sheoltar chugainn aon rud a chlóscríobhann tú. |
+| Five games. Up to eight people in it. Ready within five working days. | Cúig chluiche. Suas le hochtar istigh ann. Réidh i gceann cúig lá oibre. |
+| A minute each, in any browser. A Christmas game and a Halloween game, with your name on the end screen. | Nóiméad an ceann, i mbrabhsálaí ar bith. Cluiche Nollag agus cluiche Oíche Shamhna, le d'ainm ar an scáileán deiridh. |
+| One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Cluiche amháin, tógtha i do bhrabhsálaí as an méid a chlóscríobh tú. Tá cúig chluiche sa chluiche iomlán, roghnaithe de réir na rudaí is breá leo, suas le hochtar, agus an deireadh lena n-ainm i soilse. |
 
 ## What the game says: names, instructions and scores
 

@@ -64,12 +64,35 @@ await grab('t-end.png');
 fs.copyFileSync(finale, path.join(TMP, 'f080.png'));   // the poster strip uses two stills
 fs.copyFileSync(path.join(TMP, 't-play1.png'), path.join(TMP, 'f045.png'));
 
-// The title card for the poster and the link preview comes from the name-in-lights page, which
-// draws the same screen without the menu over it.
-const card = await browser.newPage({ viewport: { width: 900, height: 900 }, deviceScaleFactor: 4 });
-await card.goto(BASE + 'name/index.html', { waitUntil: 'load' });
-await card.fill('#who', 'AVA');
-await card.waitForTimeout(800);
+// The title card for the poster and the link preview: the same screen the order form draws,
+// rendered on its own here since the name-in-lights page was retired.
+const card = await browser.newPage({ viewport: { width: 700, height: 500 }, deviceScaleFactor: 4 });
+card.on('pageerror', e => console.error('card error:', e.message));
+await card.setContent(
+  '<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bowlby+One&display=swap" rel="stylesheet">' +
+  '<style>body{margin:0;background:#111}canvas{image-rendering:pixelated;width:480px}</style>' +
+  '<canvas id="game" width="480" height="270"></canvas>' +
+  tag('engine.js') + tag('scenes.js') +
+  `<script>
+    applyConfig(Object.assign({}, DEMO, { hero: Object.assign({}, DEMO.hero, { name: 'AVA' }), occasion: 'birthday' }));
+    let t = 0;
+    (function draw() {
+      t++;
+      bgSynth(t); scene('birthday', t, false);
+      txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
+      const n = HERO.name, size = 40;
+      namePlate(n, W / 2, 32, size); nameLogo(n, W / 2, 28, size);
+      const line = OCCASIONS.birthday, ow = line.length * 16;
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+      txt(line, W / 2, 87, 16, COL.gold, 'center');
+      shadow(W / 2, 236, 16); drawSpec(HERO, W / 2, 236, 4, false, Math.floor(t / 22));
+      if (PET) pet(70, 258, 2, true, Math.floor(t / 6));
+      scene('birthday', t, true);
+      requestAnimationFrame(draw);
+    })();
+  <\/script>`, { waitUntil: 'load' });
+await card.waitForTimeout(1200);
 await card.locator('#game').screenshot({ path: path.join(ASSETS, 'title.png') });
 
 // The trailer. It must not rush and it must not smear. Each card is held for three seconds or

@@ -11,6 +11,10 @@ RewriteRule ^halloween/?$ /free/halloween/ [L,R=301]
 RewriteRule ^(es|de|fr|it|ga)/themes/(.*)$ /$1/free/$2 [L,R=301]
 RewriteRule ^themes/(.*)$ /free/$1 [L,R=301]
 
+# The name-in-lights page was retired on 20 Sep 2026. Its address goes to the free games.
+RewriteRule ^(es|de|fr|it|ga)/name/?$ /$1/free/ [L,R=301]
+RewriteRule ^name/?$ /free/ [L,R=301]
+
 # A missing page anywhere, at any depth, gets the same file. It links back with absolute paths.
 ErrorDocument 404 /404.html
 
