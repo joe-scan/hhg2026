@@ -245,6 +245,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Físchluichí saor in aisce don Nollaig, d'Oíche Shamhna agus do lá ar bith eile. D'ainm ar an scáileán deiridh, faic le suiteáil, faic á sheoladh chugainn. |
 | Free video games with your name on them | Físchluichí saor in aisce le d'ainm orthu |
 | Come and play my video game | Tar agus imir mo fhíschluiche |
+| The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us. | An taispeántas saor in aisce: cluiche amháin in aghaidh duine de do mhuintir, tógtha i do bhrabhsálaí as an méid a chlóscríobh tú. Ní sheoltar faic chugainn. |
+| Your game | Do chluiche |
 
 ## What the game says: names, instructions and scores
 

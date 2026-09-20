@@ -223,14 +223,19 @@ function build(lang) {
   if (lang !== 'en') for (const f of JS_FILES) {
     write(path.join(SITE, lang, f), translateJs(read(path.join(STATIC, f)), gameDict, missingGame));
   }
-  if (missingGame.size) {
-    console.log(`${lang}: ${missingGame.size} game strings with no translation`);
-    write(path.join(WORDS, `game-${lang}.missing.json`), JSON.stringify(Object.fromEntries([...missingGame].map(k => [k, ''])), null, 1) + '\n');
-  }
-  if (missing.size) {
-    console.log(`${lang}: ${missing.size} strings with no translation`);
-    write(path.join(WORDS, `${lang}.missing.json`), JSON.stringify(Object.fromEntries([...missing].map(k => [k, ''])), null, 2) + '\n');
-  } else console.log(`${lang}: complete`);
+  // A .missing.json lists what still needs translating. It has to be deleted when the gap
+  // closes, or it sits there telling the next person a lie: ten of them were left behind on
+  // 20 Sep 2026, all of them already translated.
+  const gap = (file, set, indent) => {
+    const at = path.join(WORDS, file);
+    if (set.size) write(at, JSON.stringify(Object.fromEntries([...set].map(k => [k, ''])), null, indent) + '\n');
+    else if (fs.existsSync(at)) { fs.unlinkSync(at); console.log(`${lang}: ${file} is no longer needed, deleted`); }
+  };
+  gap(`game-${lang}.missing.json`, missingGame, 1);
+  gap(`${lang}.missing.json`, missing, 2);
+  if (missingGame.size) console.log(`${lang}: ${missingGame.size} game strings with no translation`);
+  if (missing.size) console.log(`${lang}: ${missing.size} strings with no translation`);
+  if (!missing.size && !missingGame.size) console.log(`${lang}: complete`);
 }
 
 // Everything in site/ is generated, so the hand-written files (the game code, the builder, the

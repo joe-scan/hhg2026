@@ -245,6 +245,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Free video games for Christmas, Halloween and any day at all. Your name on the end screen, nothing to install, nothing sent to us. | Videogiochi gratis per Natale, Halloween e qualsiasi altro giorno. Il tuo nome sulla schermata finale, niente da installare, niente che arrivi a noi. |
 | Free video games with your name on them | Videogiochi gratis con il tuo nome |
 | Come and play my video game | Vieni a giocare al mio videogioco |
+| The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us. | La demo gratuita: un gioco contro qualcuno della tua famiglia, creato nel tuo browser da quello che hai scritto. A noi non arriva niente. |
+| Your game | Il tuo gioco |
 
 ## What the game says: names, instructions and scores
 
