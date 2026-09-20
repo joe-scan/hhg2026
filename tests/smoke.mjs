@@ -129,7 +129,7 @@ if (await lights.evaluate(() => HERO.name) !== 'SAOIRSE') errors.push('the name 
 await lights.close();
 
 // every free theme game: it starts, it runs a full minute, it ends, and the end card is drawn
-for (const [theme, who] of [['themes/halloween/', 'Fionn'], ['themes/christmas/', 'Sean']]) {
+for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'Sean']]) {
   const fp = await browser.newPage(); watch(fp);
   await fp.goto(BASE + theme); await fp.waitForTimeout(700);
   await fp.fill('#who', who); await fp.click('#play'); await fp.waitForTimeout(900);
@@ -143,7 +143,7 @@ for (const [theme, who] of [['themes/halloween/', 'Fionn'], ['themes/christmas/'
   await fp.close();
 }
 
-// the old Halloween address was shared before the games moved under /themes/
+// the old Halloween address was shared before the games moved under /free/
 if (BASE.startsWith('https://')) {
   const moved = await fetch(BASE + 'halloween/', { redirect: 'manual' });
   if (moved.status !== 301) errors.push('/halloween/ no longer redirects (' + moved.status + ')');

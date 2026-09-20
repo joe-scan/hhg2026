@@ -33,7 +33,7 @@ function hud(title, sub) {
   txt(title, W / 2, 3, 10, COL.cyan, 'center'); if (sub) txt(sub, W / 2, 16, 8, '#fff', 'center');
   for (let k = 0; k < GAMES.length; k++) rect(W - 6 - (GAMES.length - k) * 10, 15, 7, 7, k < round - 1 ? COL.green : k === round - 1 ? '#fff' : COL.off);
 }
-function pressFire(y, label, size) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TAP OR PRESS FIRE' : 'PRESS FIRE'), W / 2, y, size || 8, '#fff', 'center', COL.hot); }
+function pressFire(y, label, size) { if (S.t % 50 < 34) txt(label || (touchMode ? 'TAP OR PRESS FIRE' : 'PRESS FIRE'), W / 2, y, size || 8, COL.white, 'center', COL.hot); }
 function whistle() { tone(2100, .35, 'square', .12); tone(2250, .35, 'square', .08, 0, .02); }
 // the referee: the dog if there is one, otherwise a spare grown-up
 function referee(cx, fy, sc) { if (petRuns()) pet(cx, fy, sc + 1, true, 0); else if (helper()) person(helper(), cx, fy, sc, false, 0); }
@@ -60,11 +60,11 @@ const ST = {
       txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
       const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
       // a dark plate behind the name, so it reads against the sun rather than sitting in it
-      rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
-      logo(n, W / 2, 32, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+      rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, PLATE());
+      nameLogo(n, W / 2, 32, size);
       const occ = CFG.occasion === 'star' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion];
       const ow = occ.length * 16;
-      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, 'rgba(10,4,22,.92)');
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
       rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
       txt(occ, W / 2, 87, 16, COL.gold, 'center');
       // the whole cast lined up along the horizon
@@ -77,7 +77,7 @@ const ST = {
       MENU.forEach(([o], k) => {
         const on = S.sel === k, y = 166 + k * 22;
         if (on) arrow('r', W / 2 - o.length * 8 - 16, y + 4, 6, COL.hot);
-        txt(o, W / 2, y, 16, on ? '#fff' : COL.dim, 'center', on);
+        txt(o, W / 2, y, 16, on ? COL.white : COL.dim, 'center', on);
       });
       txt(MENU[S.sel][1], W / 2, 234, 8, COL.cyan, 'center');
       pressFire(250, touchMode ? 'TAP TO START' : 'PRESS FIRE', 12);

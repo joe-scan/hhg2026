@@ -174,7 +174,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Or email | Oppure scrivi a |
 | Terms and refunds | Condizioni e rimborsi |
 | &middot; | &middot; |
-| The first ten games are being built by hand. | I primi dieci giochi sono fatti a mano. |
 | Terms | Condizioni |
 | Can a whole party play? | Può giocare tutta la festa? |
 | Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Sì. Modalità festa nella schermata del titolo: scegli quanti sfidanti e ognuno gioca il suo turno contro l'eroe mentre gli altri guardano. Finisce con una tabella dei risultati e un campione. |
@@ -211,7 +210,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Ogni gioco è uguale: cinque giochi e un boss, tutte le persone a cui vogliono bene dentro, fino a otto persone, pronto in 48 ore. E se vuoi: un poster del loro gioco, stampato e spedito, da appendere al muro. |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | Il poster stampato: la schermata del titolo con AVA a luci, sotto BUON COMPLEANNO, AVA, in basso tre dei suoi giochi e nei titoli papà, mamma, Jack e il cane Biscuit |
 | Order one | Ordina |
-| Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money. | Dicci per chi è e per quando ti serve. Ti mandiamo un link di pagamento e una data, oppure ti diciamo che non ce la facciamo invece di prenderti i soldi. |
 | Free games | Giochi gratis |
 | Sleigh Dash: Christmas | Corsa della slitta: Natale |
 | Trick or Treat Dash: Halloween | Dolcetto o scherzetto: Halloween |
@@ -236,6 +234,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Corsa della slitta: corri sui tetti e salta i camini |
 | JUMP | SALTA |
 | One button: space, the up arrow, or a tap on the screen. | Un solo pulsante: spazio, la freccia su o un tocco sullo schermo. |
+| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz, each against a different person. Then a boss fight with someone on their side, and the ending with their name in lights. | Cosa si gioca: Paddle Battle, Guerra di Gavettoni, Battaglia sul Sedile Posteriore, Dinner Dash e il Quiz di Famiglia, ognuno contro una persona diversa. Poi un boss con qualcuno dalla loro parte e il finale con il loro nome a luci. |
+| Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Dicci per chi è e per quando ti serve. Ti mandiamo un link di pagamento e ti diciamo quando sarà pronto. |
 
 ## What the game says: names, instructions and scores
 

@@ -8,7 +8,10 @@ const W = 480, H = 270, AY = 28;
 const cv = document.getElementById('game');
 const g = cv.getContext('2d');
 g.imageSmoothingEnabled = false;
-const FONT = '"Press Start 2P","Courier New",monospace';
+// The look is swappable from outside, so different palettes and lettering can be tried on the
+// real game rather than in a mock-up: tools/game-skins.mjs sets these before the engine loads.
+const FONT = window.HHG_FONT || '"Press Start 2P","Courier New",monospace';
+const FONT_BIG = window.HHG_FONT_BIG || FONT;
 try { if (document.fonts && document.fonts.load) document.fonts.load('8px "Press Start 2P"'); } catch (e) {}
 
 const R = Math.random;
@@ -19,6 +22,7 @@ const pick = a => a[Math.floor(R() * a.length)];
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(R() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
 const COL = { bg: '#12062b', ink: '#0a0416', hot: '#ff2bd6', cyan: '#22e6ff', gold: '#ffd23f', red: '#ff2e4d', white: '#ffffff', green: '#3dff8b', purple: '#7a3cff', dim: '#8f7fc0', off: '#2a1a4a' };
+if (window.HHG_COL) Object.assign(COL, window.HHG_COL);
 // ===================== THE FAMILY =====================
 // Everything personal comes from one config object. The builder writes it into the link (#g=...),
 // so nothing is sent to a server. With no link, the game plays the demo family below.
@@ -441,12 +445,21 @@ function txt(s, x, y, size, col, al, glow) {
   g.fillStyle = col; g.fillText(s, Math.round(x), Math.round(y)); g.shadowBlur = 0;
 }
 function logo(s, x, y, size, c1, c2, c3) {
-  g.font = size + 'px ' + FONT; g.textAlign = 'center'; g.textBaseline = 'top';
+  g.font = size + 'px ' + FONT_BIG; g.textAlign = 'center'; g.textBaseline = 'top';
   g.fillStyle = '#1a0533'; g.fillText(s, x + 3, y + 3);
   const gr = g.createLinearGradient(0, y, 0, y + size);
   gr.addColorStop(0, c1); gr.addColorStop(.5, c2); gr.addColorStop(.52, c3); gr.addColorStop(1, c2);
   g.shadowColor = c2; g.shadowBlur = 10; g.fillStyle = gr; g.fillText(s, x, y); g.shadowBlur = 0;
 }
+// The three pieces every title screen draws: the plate behind the name, the band under it, and
+// the name itself. They read their colours from COL, so one look changes all of them at once.
+const PLATE = () => COL.plate || 'rgba(10,4,22,.6)';
+const BAND = () => COL.band || 'rgba(10,4,22,.92)';
+function nameLogo(s, x, y, size) {
+  const c2 = COL.name || PL[1].col;
+  logo(s, x, y, size, COL.nameTop || '#ffffff', c2, mix(c2, '#000000', .35));
+}
+
 function wrap(s, n) {
   const out = []; let line = '';
   for (const w of s.split(' ')) { const t = (line + ' ' + w).trim(); if (t.length > n && line) { out.push(line); line = w; } else line = t; }

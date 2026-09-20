@@ -156,7 +156,6 @@
  "Or email": "Nó seol ríomhphost chuig",
  "Terms and refunds": "Téarmaí agus aisíocaíochtaí",
  "&middot;": "&middot;",
- "The first ten games are being built by hand.": "Tá an chéad deich gcluiche á dtógáil de láimh.",
  "Terms": "Téarmaí",
  "Can a whole party play?": "An féidir le cóisir iomlán imirt?",
  "Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion.": "Is féidir. Mód cóirme ar an scáileán teidil: roghnaíonn tú cé mhéad dúshlánóir, agus faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag féachaint. Críochnaíonn sé le clár torthaí agus curadh.",
@@ -193,7 +192,6 @@
  "Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall.": "Tá gach cluiche mar a chéile: cúig chluiche agus boss, gach duine a bhfuil grá acu dóibh istigh ann, suas le hochtar, réidh laistigh de 48 uair an chloig. Agus más mian leat: póstaer dá gcluiche, clóite agus seolta sa phost, le crochadh ar an mballa.",
  "The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog": "An póstaer clóite: an scáileán teidil le AVA i soilse, LÁ BREITHE SONA, AVA faoi, trí cinn dá cuid cluichí feadh an bhun, agus an fhoireann luaite mar Dhaid, Mam, Jack agus Biscuit an madra",
  "Order one": "Cuir ordú isteach",
- "Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money.": "Inis dúinn cé dó é agus cathain atá sé uait. Seolfaimid nasc íocaíochta agus dáta ar ais chugat, nó déarfaimid leat nach féidir linn é a dhéanamh in ionad do chuid airgid a thógáil.",
  "Free games": "Cluichí saor in aisce",
  "Sleigh Dash: Christmas": "Rás na Nollag: an Nollaig",
  "Trick or Treat Dash: Halloween": "Rás na milseán: Oíche Shamhna",
@@ -217,5 +215,7 @@
  "A free Christmas game with your name on it. Run the rooftops, jump the chimneys, and a present goes down every one you clear. Sixty seconds, nothing to install, and nothing you type leaves your browser.": "Cluiche Nollag saor in aisce le d'ainm air. Rith na díonta, léim na simléir, agus titeann bronntanas síos gach ceann a ghlanann tú. Seasca soicind, faic le suiteáil, agus ní fhágann aon rud a chlóscríobhann tú do bhrabhsálaí.",
  "Sleigh Dash: run the rooftops and jump the chimneys": "Rás na Nollag: rith na díonta agus léim na simléir",
  "JUMP": "LÉIM",
- "One button: space, the up arrow, or a tap on the screen.": "Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán."
+ "One button: space, the up arrow, or a tap on the screen.": "Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán.",
+ "What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz, each against a different person. Then a boss fight with someone on their side, and the ending with their name in lights.": "Na cluichí féin: Paddle Battle, Cath na mBalún Uisce, Cath an tSuíocháin Chúil, Dinner Dash agus Tráth na gCeist Teaghlaigh, gach ceann acu in aghaidh duine difriúil. Ansin troid boss le duine ar a dtaobh, agus an deireadh lena n-ainm i soilse.",
+ "Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready.": "Inis dúinn cé dó é agus cathain atá sé uait. Seolfaimid nasc íocaíochta ar ais chugat agus inseoidh muid duit cathain a bheidh sé réidh."
 }

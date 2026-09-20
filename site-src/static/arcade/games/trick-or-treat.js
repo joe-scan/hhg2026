@@ -1,6 +1,6 @@
 'use strict';
 // ---------- TRICK OR TREAT DASH: the free Halloween game
-// Not part of a paid game, so it never calls addGame(). It runs on its own from /themes/halloween/,
+// Not part of a paid game, so it never calls addGame(). It runs on its own from /free/halloween/,
 // using the engine's drawing, input and sound. One player, sixty seconds, and one number at the
 // end that is worth sending to somebody.
 

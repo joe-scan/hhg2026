@@ -1,13 +1,14 @@
 /* Happy Hero Games: shared page styles.
    Direction: the pixel screen is the only loud thing on the page. Calmed down on 20 Sep 2026:
-   Bungee is now the headline and the wordmark only, small labels are letterspaced caps in the
+   one display face for headlines and the wordmark, small labels are letterspaced caps in the
    reading face rather than Press Start 2P, and the magenta accent appears once per screen.
    Around it: a cool paper ground, ink type, thin rules, square corners. No cards, pills, gradients,
-   glow or emoji in the page. Bungee (arcade marquee lettering) for the few big headlines only,
-   Atkinson Hyperlegible for reading, Press Start 2P for tiny labels. The wordmark is Bowlby One,
-   because Bungee has no lowercase at all and HappyHeroGames has to read as three words. */
+   glow or emoji in the page. Bowlby One (chunky marquee lettering with a real lowercase) for the
+   headlines and the wordmark, Atkinson Hyperlegible for reading, Press Start 2P inside the game
+   canvas only. Bungee was dropped on 20 Sep 2026: it has no lowercase, so HappyHeroGames came
+   out as one wall of capitals. */
 :root{--paper:#fdf5ec;--ink:#2a1a12;--muted:#6b5546;--rule:#e6d6c3;--hot:#c2410c;--hotfill:#f2711c;--gold:#ffd23f;--screen:#12062b;--focus:#c2410c;--field:#fffaf4;--on-hot:#ffffff;
-  --display:"Bungee","Arial Black",Impact,sans-serif;--mark:"Bowlby One","Arial Black",Impact,sans-serif;--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;--mark:var(--display);--body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;--pixel:"Press Start 2P","Courier New",monospace}
 
 /* Two looks, warm by default and dark for a dark room or a phone set that way. A visitor's choice
    is kept in their own browser and written to <html data-skin>; with no choice made the device
@@ -82,7 +83,7 @@ footer .langs{margin-left:auto}
 .screen{background:#1a1430;padding:10px;border-radius:3px;border:1px solid var(--rule)}
 canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated;image-rendering:crisp-edges;background:var(--screen);cursor:pointer;touch-action:manipulation}
 
-/* The free theme games at /themes/: one layout, used by every season. */
+/* The free seasonal games at /free/: one layout, used by every season. */
 .free{max-width:820px;margin-inline:auto;padding-block:24px 50px}
 .free h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0 0 10px}
 .free .sub{color:var(--muted);margin:0 0 20px;font-size:17px;max-width:54ch}
@@ -98,7 +99,7 @@ canvas#game{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated
 .pads button{font-size:22px;border:0;border-radius:6px;background:#2a1a4a;color:#fff;width:84px;height:64px;touch-action:none}
 .pads button.on{background:#ff2bd6}
 .pads button.wide{width:200px}
-/* the list of themes */
+/* the list of free games */
 .themes{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px 30px;max-width:900px}
 .themes h2{font-size:20px;margin:0 0 6px}
 .themes p{margin:0 0 8px;color:var(--muted)}

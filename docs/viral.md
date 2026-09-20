@@ -16,8 +16,8 @@ The topical idea still works, though. Take the *situation*, not the person: an e
 
 The five to build first. Each is a small free game on the site, playable in a minute, ending on one image with the player's name on it and a "make one for your family" link.
 
-1. **Trick or Treat Dash** (built 20 Sep 2026, at `/themes/halloween/`). Catch the sweets, leave the sprouts, sixty seconds. It ends on their name in lights with their score, ready to send.
-2. **Sleigh Dash** (built 20 Sep 2026, at `/themes/christmas/`). One button: run the rooftops, and a present goes down every chimney you clear. A fall costs three seconds, never the run.
+1. **Trick or Treat Dash** (built 20 Sep 2026, at `/free/halloween/`). Catch the sweets, leave the sprouts, sixty seconds. It ends on their name in lights with their score, ready to send.
+2. **Sleigh Dash** (built 20 Sep 2026, at `/free/christmas/`). One button: run the rooftops, and a present goes down every chimney you clear. A fall costs three seconds, never the run.
 3. **Egg Hunt** (Easter, S). Twenty eggs, sixty seconds, a family scoreboard.
 4. **Sports Final Free-Taker** (whenever a big final is on, S). Penalties against a goalkeeper with your own name on the jersey. No club, no crest, no player.
 5. **Back to School Sprint** (late August, S). Grab the books, dodge the socks. Parents share this one because it is exactly how the morning feels.

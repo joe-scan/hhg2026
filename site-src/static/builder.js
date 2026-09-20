@@ -98,11 +98,11 @@
     // whole thing on, and on a phone this canvas is about 350 pixels wide.
     txt('STARRING', W / 2, 10, 16, COL.cyan, 'center', true);
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
-    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
-    logo(n, W / 2, 32, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+    rect(W / 2 - (n.length * size) / 2 - 10, 28, n.length * size + 20, size + 8, PLATE());
+    nameLogo(n, W / 2, 32, size);
     const occ = OCCASIONS[CFG.occasion] === 'YOU\'RE A STAR' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion];
     const ow = occ.length * 16;
-    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, 'rgba(10,4,22,.92)');
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
     rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
     txt(occ, W / 2, 87, 16, COL.gold, 'center');
     const cast = [HERO].concat(FAM), gap = 70, x0 = W / 2 - (cast.length - 1) * gap / 2;

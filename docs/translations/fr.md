@@ -174,7 +174,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Or email | Ou écrivez à |
 | Terms and refunds | Conditions et remboursements |
 | &middot; | &middot; |
-| The first ten games are being built by hand. | Les dix premiers jeux sont fabriqués à la main. |
 | Terms | Conditions |
 | Can a whole party play? | Est-ce qu'une fête entière peut jouer ? |
 | Yes. Party mode on the title screen: pick how many challengers, and each one takes a turn against the hero while everyone else watches. It ends on a results board with a champion. | Oui. Le mode fête sur l'écran-titre : vous choisissez le nombre de challengers, et chacun affronte le héros à son tour pendant que les autres regardent. Cela se termine par un tableau des résultats et un champion. |
@@ -211,7 +210,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Every game is the same: five games and a boss, everyone they love in it, up to eight people, ready in 48 hours. And optionally: a poster of their game, printed and posted, to keep on the wall. | Chaque jeu est identique : cinq jeux et un boss, tous ceux qu'ils aiment dedans, jusqu'à huit personnes, prêt en 48 heures. Et si vous voulez : une affiche de leur jeu, imprimée et envoyée par la poste, à accrocher au mur. |
 | The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog | L'affiche imprimée : l'écran-titre avec AVA en lettres lumineuses, JOYEUX ANNIVERSAIRE, AVA en dessous, trois de ses jeux en bas, et au générique papa, maman, Jack et Biscuit le chien |
 | Order one | Commander |
-| Tell us who it's for and when you need it. We'll send back a payment link and a date, or tell you we can't make it instead of taking the money. | Dites-nous pour qui c'est et pour quand. On vous renvoie un lien de paiement et une date, ou on vous dit qu'on ne peut pas tenir la date au lieu de prendre votre argent. |
 | Free games | Jeux gratuits |
 | Sleigh Dash: Christmas | Course du traîneau : Noël |
 | Trick or Treat Dash: Halloween | Course aux bonbons : Halloween |
@@ -236,6 +234,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Course du traîneau : courez sur les toits et sautez les cheminées |
 | JUMP | SAUTER |
 | One button: space, the up arrow, or a tap on the screen. | Un seul bouton : espace, la flèche du haut, ou une touche sur l'écran. |
+| What they play: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and the Family Quiz, each against a different person. Then a boss fight with someone on their side, and the ending with their name in lights. | Ce qu'ils jouent : Paddle Battle, la bataille de ballons d'eau, la bataille de la banquette arrière, Dinner Dash et le quiz de famille, chacun contre une personne différente. Puis un boss avec quelqu'un à leurs côtés, et la fin avec leur nom en lettres lumineuses. |
+| Tell us who it's for and when you need it. We'll send back a payment link and let you know when it will be ready. | Dites-nous pour qui c'est et pour quand. On vous renvoie un lien de paiement et on vous dit quand ce sera prêt. |
 
 ## What the game says: names, instructions and scores
 

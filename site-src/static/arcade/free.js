@@ -1,6 +1,6 @@
 'use strict';
 // ---------- THE FREE GAMES PAGE
-// One harness for every theme at /themes/: the start screen, the minute of play, and the end
+// One harness for every theme at /free/: the start screen, the minute of play, and the end
 // card with the player's name in lights and a picture worth sending. A theme page is a name,
 // a game file and one call to freePage(), so the next season costs an afternoon.
 //
@@ -40,8 +40,8 @@ function freePage(make, opt) {
     rect(0, 0, W, H, opt.veil || 'rgba(10,4,22,.7)');
     const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
     txt(game.endTitle, W / 2, 14, 16, COL.gold, 'center', true);
-    rect(W / 2 - (n.length * size) / 2 - 10, 40, n.length * size + 20, size + 8, 'rgba(10,4,22,.6)');
-    logo(n, W / 2, 44, size, '#ffffff', PL[1].col, mix(PL[1].col, '#000000', .35));
+    rect(W / 2 - (n.length * size) / 2 - 10, 40, n.length * size + 20, size + 8, PLATE());
+    nameLogo(n, W / 2, 44, size);
     txt(game.result(), W / 2, 110, 20, COL.cyan, 'center', true);
     const note = game.note();
     if (note) txt(note, W / 2, 140, 10, COL.dim, 'center');
