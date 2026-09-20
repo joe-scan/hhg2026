@@ -115,3 +115,4 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Premiere removed: too much work for the return (20 Sep 2026).
 - [x] Terms and refunds drafted, orders open for the first ten by email (20 Sep 2026).
 - [x] docs/viral.md: fifty ways to spread it (20 Sep 2026).
+- [x] Party mode: two to six challengers take turns against the hero, results board, champion (20 Sep 2026).

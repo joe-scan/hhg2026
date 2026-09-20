@@ -27,7 +27,7 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 ## 2. Things the paid game does that make people share it
 
 6. **Link previews** (S, done today). A shared game link shows that family's own title screen.
-7. **Party mode** (M). A birthday party is six kids in a room. Each takes a turn against the hero, the screen keeps a bracket, the winner gets a certificate with their name on it.
+7. **Party mode** (built 20 Sep 2026). A birthday party is six kids in a room. Each takes a turn against the hero, the screen keeps the score, and it ends on a results board with a champion.
 8. **Reaction clip prompt** (S). After the finale, "film their face next time, we would love to see it" with an upload link. Those clips are the advertising.
 9. **The trailer** (S, built). Twenty seconds of their own game for the family chat.
 10. **A printable certificate** (S). Ends with something to stick on the fridge.
@@ -89,4 +89,4 @@ The point of all five is the same: free to play, no data, thirty seconds to a pi
 
 ## What I would actually do first
 
-Three things, in this order: the name in lights generator (a day, no data, endlessly shareable), Halloween's Trick or Treat Dash before the end of October, and party mode before any money goes on advertising. Everything else on this list waits until one of those works.
+Party mode is built. Next, in this order: the name in lights generator (a day, no data, endlessly shareable) and Halloween's Trick or Treat Dash before the end of October. Everything else on this list waits until one of those works.

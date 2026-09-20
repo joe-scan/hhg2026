@@ -20,6 +20,9 @@ const TAUNT = {
 };
 const CHEERS_END = { birthday: 'ALLES GUTE!', christmas: 'FROHE WEIHNACHTEN!', fathers: 'SCHOENEN VATERTAG!', mothers: 'SCHOENEN MUTTERTAG!', star: 'GUT GEMACHT!' };
 let S = { name: 'title', t: 0 }, game = null, round = 0, won = [0, 0], two = false, bossTime = 0;
+// Party mode: a birthday party is six children in a room, so they take turns as the challenger
+// against the hero. No typing (a name box on a canvas is a misery), just PLAYER 1 to PLAYER 6.
+let party = null;
 function go(name, data) {
   S = Object.assign({ name, t: 0 }, data || {}); parts = []; floats = [];
   if (ST[name].enter) ST[name].enter();
@@ -50,11 +53,16 @@ function trophy(cx, by) { rect(cx - 20, by - 50, 40, 26, '#ffd23f'); rect(cx - 2
 
 const ST = {
   title: {
-    enter() { mus.mode = 'title'; mus.fast = false; round = 0; won = [0, 0]; bossTime = 0; cpu = 0; S.sel = 0; setOpponent(0); },
+    enter() { mus.mode = 'title'; mus.fast = false; round = 0; won = [0, 0]; bossTime = 0; cpu = 0; party = null; S.sel = 0; setOpponent(0); },
     update() {
       const I = anyIn();
-      if (I.uP || I.dP) { S.sel = 1 - S.sel; sfx.tick(); }
-      if ((I.aP || clicked) && S.t > 20) { audioInit(); sfx.coin(); two = S.sel === 1; cpu = two ? -1 : 0; go('vs'); }
+      if (I.uP) { S.sel = (S.sel + MENU.length - 1) % MENU.length; sfx.tick(); }
+      if (I.dP) { S.sel = (S.sel + 1) % MENU.length; sfx.tick(); }
+      if ((I.aP || clicked) && S.t > 20) {
+        audioInit(); sfx.coin(); party = null;
+        two = S.sel > 0; cpu = two ? -1 : 0;
+        go(S.sel === 2 ? 'partySetup' : 'vs');
+      }
     },
     draw() {
       const t = S.t; bgSynth(t);
@@ -75,12 +83,12 @@ const ST = {
       // the pet crosses the screen, or sits on the left in its bowl
       if (petRuns()) { const c = t % 900; pet((c * 1.1) % (W + 120) - 60, 262, 2, true, Math.floor(t / 6)); }
       else if (PET) pet(40, 262, 2, true, Math.floor(t / 22));
-      ['1 SPIELER', '2 SPIELER: EIN ERWACHSENER SPIELT DIE FAMILIE'].forEach((o, k) => {
-        const on = S.sel === k, y = 196 + k * 16;
+      MENU.forEach((o, k) => {
+        const on = S.sel === k, y = 190 + k * 15;
         if (on) arrow('r', W / 2 - o.length * 4 - 14, y + 4, 5, COL.hot);
         txt(o, W / 2, y, 8, on ? '#fff' : COL.dim, 'center');
       });
-      pressFire(234, touchMode ? 'TIPPEN ZUM START' : 'FEUER DRUECKEN ODER KLICKEN');
+      pressFire(240, touchMode ? 'TIPPEN ZUM START' : 'FEUER DRUECKEN ODER KLICKEN');
     }
   },
   vs: {
@@ -136,7 +144,7 @@ const ST = {
   },
   result: {
     enter() { sfx.score(); whistle(); burst(W / 2, 120, 50, [PL[S.w].col, '#fff'], 5); if (S.w === 1) say(SAYNAME[1] + ' gewinnt!'); },
-    update() { if ((S.t > 90 && (anyIn().aP || clicked)) || S.t > 330) go(round < GAMES.length ? 'vs' : TEASER ? 'locked' : 'bossIntro'); },
+    update() { if ((S.t > 90 && (anyIn().aP || clicked)) || S.t > 330) go(party ? 'partyNext' : round < GAMES.length ? 'vs' : TEASER ? 'locked' : 'bossIntro', party ? { w: S.w } : null); },
     draw() {
       rect(0, 0, W, H, '#12062b'); stars(S.t, H); hud('RUNDE ' + round, PL[1].name + ' ' + won[1] + ' - ' + won[0] + ' FAMILIE');
       const hop = Math.abs(Math.sin(S.t / 8)) * 16, L = 1 - S.w;
@@ -147,6 +155,92 @@ const ST = {
       if (S.t > 90) pressFire(246);
     }
   },
+  // ---- party mode: pick how many are playing, then each one takes a turn
+  partySetup: {
+    enter() { S.n = 3; mus.mode = 'title'; mus.fast = false; },
+    update() {
+      const I = anyIn();
+      if (I.uP || I.rP) { S.n = Math.min(6, S.n + 1); sfx.tick(); }
+      if (I.dP || I.lP) { S.n = Math.max(2, S.n - 1); sfx.tick(); }
+      if ((I.aP || clicked) && S.t > 20) {
+        sfx.coin();
+        party = { n: S.n, i: 1, wins: new Array(S.n).fill(0) };
+        round = 0; won = [0, 0]; two = true; cpu = -1;
+        go('partyVs');
+      }
+    },
+    draw() {
+      bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.82)');
+      txt('PARTY-MODUS', W / 2, 26, 16, COL.gold, 'center', true);
+      txt('JEDER SPIELT EINE RUNDE GEGEN ' + HERO.name + '.', W / 2, 56, 8, '#fff', 'center');
+      txt('WIE VIELE HERAUSFORDERER?', W / 2, 92, 8, COL.cyan, 'center');
+      for (let k = 2; k <= 6; k++) {
+        const on = S.n === k, x = W / 2 + (k - 4) * 56;
+        rect(x - 22, 112, 44, 44, on ? COL.hot : 'rgba(255,255,255,.08)');
+        txt(String(k), x, 124, 24, on ? '#fff' : COL.dim, 'center');
+      }
+      txt('HOCH UND RUNTER ZUM AENDERN', W / 2, 174, 8, COL.dim, 'center');
+      txt('JEDER SPIELT EIN SPIEL. DER HELD SPIELT ALLE.', W / 2, 196, 8, '#fff', 'center');
+      if (S.t > 20) pressFire(228);
+    }
+  },
+  partyVs: {
+    enter() {
+      round++; setOpponent(round - 1);
+      PL[0].name = 'SPIELER ' + party.i;
+      game = GAMES[(party.i - 1) % GAMES.length].make();
+      mus.mode = 'match'; mus.fast = false;
+      say('Spieler ' + party.i + ', gegen, ' + SAYNAME[1] + '!');
+    },
+    update() { if ((S.t > 60 && (anyIn().aP || clicked)) || S.t > 400) go('howto'); },
+    draw() {
+      rect(0, 0, W, H, '#12062b'); stars(S.t, H);
+      txt('PARTY-MODUS', W / 2, 12, 8, COL.dim, 'center');
+      logo('SPIELER ' + party.i, W / 2, 28, 24, '#ffffff', PL[0].col, mix(PL[0].col, '#000000', .35));
+      txt('DU SPIELST GEGEN ' + HERO.name + '.', W / 2, 64, 8, '#fff', 'center');
+      boy(0, 120, 190, 6, false, 0); boy(1, 360, 190, 6, true, 0);
+      txt(game.name, W / 2, 96, 16, COL.gold, 'center', true);
+      txt('TASTEN FUER ERWACHSENE: WASD UND LEERTASTE', W / 2, 206, 8, COL.dim, 'center');
+      if (S.t > 60) pressFire(232);
+    }
+  },
+  partyNext: {
+    enter() {
+      if (S.w === 0) party.wins[party.i - 1]++;
+      party.i++;
+      if (party.i > party.n) { go('partyEnd'); return; }
+      go('partyVs');
+    },
+    update() {}, draw() {}
+  },
+  partyEnd: {
+    enter() {
+      mus.mode = 'title'; mus.fast = true; sfx.clap();
+      confetti(60, [COL.gold, COL.hot, COL.cyan, '#fff']);
+      const best = Math.max(...party.wins);
+      S.champs = party.wins.map((w, k) => w === best && best > 0 ? k + 1 : 0).filter(Boolean);
+      say(S.champs.length ? 'Wir haben einen Champion!' : SAYNAME[1] + ' hat alle geschlagen!');
+    },
+    update() { if (S.t > 90 && (anyIn().aP || clicked)) go('title'); },
+    draw() {
+      bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.86)');
+      txt('PARTY-ERGEBNISSE', W / 2, 18, 16, COL.gold, 'center', true);
+      const rows = party.n, gap = Math.min(24, Math.floor(120 / rows)), top = 54;
+      party.wins.forEach((w, k) => {
+        const y = top + k * gap, champ = S.champs.includes(k + 1);
+        rect(110, y, 260, gap - 4, champ ? 'rgba(255,210,63,.18)' : 'rgba(255,255,255,.06)');
+        txt('SPIELER ' + (k + 1), 122, y + 4, 8, champ ? COL.gold : '#fff');
+        txt(w ? 'SCHLUG ' + HERO.name : 'VERLOR GEGEN ' + HERO.name, 360, y + 4, 8, w ? COL.green : COL.dim, 'right');
+      });
+      const line = S.champs.length === 0 ? HERO.name + ' HAT ALLE GESCHLAGEN!'
+        : S.champs.length === 1 ? 'CHAMPION: SPIELER ' + S.champs[0]
+        : 'CHAMPIONS: SPIELER ' + S.champs.join(' UND ');
+      txt(line, W / 2, top + rows * gap + 12, 12, COL.cyan, 'center', true);
+      boy(1, W / 2, 250, 4, false, Math.floor(S.t / 10));
+      if (S.t > 90) pressFire(top + rows * gap + 38, 'FEUER DRUECKEN FUER DAS MENUE');
+    }
+  },
+
   // the end of the teaser: what they just played, against what the full game has
   locked: {
     enter() { mus.mode = 'title'; mus.fast = false; say('Das war die Demo.'); },

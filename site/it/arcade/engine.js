@@ -94,6 +94,9 @@ const lum = h => { const [r, g2, b] = hexRgb(h); return (0.299 * r + 0.587 * g2 
 // a version of a kit colour that reads as text on the dark game screen
 const uiCol = h => lum(h) < .35 ? mix(h, '#ffffff', .55) : h;
 
+// the title screen menu
+const MENU = ['1 GIOCATORE', '2 GIOCATORI: UN ADULTO GIOCA LA FAMIGLIA', 'MODALITA FESTA: TUTTI A TURNO'];
+
 // every file in games/ registers itself here, in the order the page loads them
 const GAMES = [];
 function addGame(name, make) { GAMES.push({ name, make }); }

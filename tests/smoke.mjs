@@ -95,6 +95,32 @@ for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['de/privacy/', '
   await t.close();
 }
 
+// 2e. party mode: pick four challengers, play the lot, end on the results board
+const pm = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(pm);
+await pm.goto(BASE + 'g/demo/'); await pm.waitForTimeout(700);
+const step = k => pm.evaluate(n => { for (let i = 0; i < n; i++) __hhg.tick(); __hhg.render(); }, k);
+await step(60);
+await pm.keyboard.press('ArrowDown'); await step(3);
+await pm.keyboard.press('ArrowDown'); await step(3);
+await pm.keyboard.press('Space'); await step(30);
+if (await pm.evaluate(() => __hhg.state().name) !== 'partySetup') errors.push('party mode did not open from the menu');
+await pm.keyboard.press('ArrowUp'); await step(5);
+await pm.keyboard.press('Space'); await step(30);
+await pm.evaluate(() => __hhg.setDemo(true));
+const pmSeen = [];
+for (let n = 0; n < 6000; n++) {
+  const st2 = await pm.evaluate(() => __hhg.state().name);
+  if (pmSeen[pmSeen.length - 1] !== st2) pmSeen.push(st2);
+  if (st2 === 'partyEnd') break;
+  if (['partyVs', 'howto', 'result'].includes(st2) && n % 3 === 0) await pm.keyboard.press('Space');
+  await step(20);
+}
+const turns = pmSeen.filter(x => x === 'partyVs').length;
+console.log('party mode:', turns, 'turns >', pmSeen[pmSeen.length - 1]);
+if (turns !== 4) errors.push('party mode played ' + turns + ' turns, wanted 4');
+if (pmSeen[pmSeen.length - 1] !== 'partyEnd') errors.push('party mode did not reach the results board');
+await pm.close();
+
 // 3. the default demo family with no link, and a phone-width landing page
 const p2 = await browser.newPage(); watch(p2); await p2.goto(BASE + 'g/demo/'); await p2.waitForTimeout(500);
 console.log('default hero:', await p2.evaluate(() => HERO.name));

@@ -62,6 +62,7 @@ The builder and the game share one config object. In the demo it travels in the 
 | Boss | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate | One boss from the family's real battles |
 | Finale | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, family walks in, share prompt | Same, with the family's own lines |
 | Sharing | Share button: a picture of the screen plus the game's link | Same, plus a "make one for your family" referral link |
+| Party mode | Two to six challengers take turns against the hero, then a results board | Same |
 
 **Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Back Seat Battle (ported), Neon Racers, Garden Five-a-Side, Back Seat Battle, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz (ported as The Family Quiz), Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Five are ported and live: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and The Family Quiz. Each of the rest needs its Fionn and Sean text swapped for the config (as the five built ones were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano or instrument game that isn't tied to the concertina.
 
