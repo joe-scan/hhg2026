@@ -1,0 +1,179 @@
+{
+  "_comment": "Landing pages for search. Each one is written, not generated: if a page is only a find-and-replace of another it does not belong here, and Google's scaled-content rules would bin it anyway. English only, because these are aimed at how people search in the US and the UK. They are not in the menu; the hub at /gifts/ and the sitemap are how they are found. Add one by adding an entry: the build does the rest.",
+  "pages": [
+    {
+      "slug": "birthday-gift-for-a-7-year-old",
+      "title": "A birthday gift for a 7 year old who has everything",
+      "description": "A video game with the 7 year old as the hero and their own family as the opponents. Try it free in a minute, no photos, ready within five working days.",
+      "h1": "A birthday present for a seven year old who has everything",
+      "lede": "Seven is the age where the toys stop landing. They have the bricks, they have the scooter, and the thing they actually want is to be the main character.",
+      "body": [
+        "This is a video game where they are. Their name goes up in lights on the title screen, and the people they know turn up as the ones to beat: Dad in the water balloon fight, Nana in the quiz, their sister in the back seat battle, the dog refereeing.",
+        "Seven year olds can read the screen and beat the games without help, which matters. Nothing to install, nothing to download, and it plays on the phone or tablet that is already in the house."
+      ],
+      "hero": "OWEN",
+      "occasion": "birthday",
+      "cast": [
+        [
+          "dad",
+          "DAD"
+        ],
+        [
+          "granny",
+          "NANA"
+        ],
+        [
+          "sister",
+          "ELLA"
+        ]
+      ],
+      "pet": "SCOUT",
+      "angle": "Make them the main character, not the audience."
+    },
+    {
+      "slug": "christmas-gift-for-a-10-year-old",
+      "title": "A Christmas gift for a 10 year old who is hard to buy for",
+      "description": "A Christmas video game starring the 10 year old, with their family as the opponents. Free to try, nothing to install, and there is a printed poster to put under the tree.",
+      "h1": "A Christmas present for a ten year old who is hard to buy for",
+      "lede": "Ten is old enough to know what everything costs and young enough to still want a surprise. That is a narrow gap to buy into.",
+      "body": [
+        "A game with them in it lands in that gap, because there is nothing to compare it against. The title screen says their name. Their brother is in the back seat battle, their best friend is in the quiz, and the ending is them winning in front of everybody.",
+        "For Christmas morning the problem is usually that a link is hard to wrap. The printed poster of their title screen solves that: it arrives in the post, it goes under the tree, and the game itself is waiting when they open it."
+      ],
+      "hero": "SOPHIE",
+      "occasion": "christmas",
+      "cast": [
+        [
+          "brother",
+          "JACK"
+        ],
+        [
+          "mum",
+          "MUM"
+        ],
+        [
+          "bestfriend",
+          "AMY"
+        ]
+      ],
+      "pet": "MILO",
+      "angle": "Something to unwrap, and something to play."
+    },
+    {
+      "slug": "gift-for-a-child-who-loves-football",
+      "title": "A gift for a child who loves football and already has a ball",
+      "description": "A video game where the football-mad child is the hero and their family are the opponents, with a paddle game on a pitch and a penalty-style finish. Try it free.",
+      "h1": "A gift for a child who loves football and already has a ball",
+      "lede": "There is a limit to how many footballs one child needs, and most families passed it years ago.",
+      "body": [
+        "The games in here are played on a pitch, in front of a crowd, against the people they actually argue with about football. Paddle Battle is a goal-line duel with their dad in the other net. The quiz asks questions written from what their family knows about them.",
+        "We do not use club names, crests or real players, on purpose: nothing here belongs to anyone else, and nothing dates. The shirt colour is theirs to pick, which is usually enough."
+      ],
+      "hero": "RORY",
+      "occasion": "birthday",
+      "cast": [
+        [
+          "dad",
+          "DAD"
+        ],
+        [
+          "coach",
+          "COACH"
+        ],
+        [
+          "cousin",
+          "SEAN"
+        ]
+      ],
+      "pet": "BENNY",
+      "angle": "A pitch, a crowd, and the people they argue with about football."
+    },
+    {
+      "slug": "birthday-gift-for-a-niece-or-nephew",
+      "title": "A birthday gift for a niece or nephew, from the fun aunt or uncle",
+      "description": "A personalized video game starring your niece or nephew, with their family in it. You need first names and nothing else. No photos, and it plays in any browser.",
+      "h1": "A birthday present for a niece or nephew",
+      "lede": "The job of an aunt or an uncle is to turn up with the thing the parents would not have thought of, and then leave.",
+      "body": [
+        "This is that. A game where they are the hero, their own family are the ones to beat, and you are in it too if you want to be. It takes first names and a couple of details, which is all anybody outside the house usually knows.",
+        "We never ask for photos, surnames, ages or schools, so you are not passing on anything that is not yours to give. And it arrives as a link, which means you can send it on the day from wherever you are."
+      ],
+      "hero": "MAEVE",
+      "occasion": "birthday",
+      "cast": [
+        [
+          "auntie",
+          "AUNTIE KATE"
+        ],
+        [
+          "mum",
+          "MUM"
+        ],
+        [
+          "brother",
+          "TOM"
+        ]
+      ],
+      "pet": "POPPY",
+      "angle": "First names are enough, and you can send it from anywhere."
+    },
+    {
+      "slug": "gift-from-grandparents-to-grandchildren",
+      "title": "A gift from grandparents that is not another toy",
+      "description": "A video game with your grandchild as the hero and you in it as an opponent. No app to install, nothing to learn, and a person checks every game before it is sent.",
+      "h1": "A present from grandparents that is not another toy",
+      "lede": "The house is full of toys and the grandchild is full of opinions. What they have not got is a game with their granny in it.",
+      "body": [
+        "That is what this is. They are the hero, and you turn up as one of the people they have to beat, cardigan and all. You choose whether you are easy to beat.",
+        "There is nothing to install and nothing to learn. You answer a few questions in a form, the way you would fill in an address, and we email you a web address. Tap it and the game opens on whatever they already have. A person here plays every game through before it is sent."
+      ],
+      "hero": "DAISY",
+      "occasion": "star",
+      "cast": [
+        [
+          "granny",
+          "GRANNY"
+        ],
+        [
+          "grandad",
+          "GRANDAD"
+        ],
+        [
+          "mum",
+          "MUM"
+        ]
+      ],
+      "pet": "TEDDY",
+      "angle": "You are in it, and there is nothing to install."
+    },
+    {
+      "slug": "fathers-day-gift-from-the-kids",
+      "title": "A Father's Day gift from the kids that is not socks",
+      "description": "A video game where Dad is the hero and the children are the ones to beat. Their jokes, their catchphrases, and a poster for the wall if you want one.",
+      "h1": "A Father's Day present from the kids that is not socks",
+      "lede": "He does not want socks, he does not want a mug, and he definitely does not want a lie-in he will not be allowed to have.",
+      "body": [
+        "Turn it round: this time Dad is the hero and the children are the ones he has to beat. His name goes up in lights, his catchphrase goes in the game, and the quiz is written from the things only that house knows.",
+        "It works on the phone in his pocket, and it is the kind of present that gets played at the table rather than put in a drawer. The children can be in it whatever age they are, up to eight people."
+      ],
+      "hero": "DAD",
+      "occasion": "fathers",
+      "cast": [
+        [
+          "brother",
+          "LIAM"
+        ],
+        [
+          "sister",
+          "ROSIE"
+        ],
+        [
+          "mum",
+          "MUM"
+        ]
+      ],
+      "pet": "BRUNO",
+      "angle": "This time he is the hero and they are the ones to beat."
+    }
+  ]
+}

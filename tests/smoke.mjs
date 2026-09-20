@@ -168,6 +168,27 @@ for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
 }
 console.log('language offer: shown in Spanish, quiet in English, no redirects');
 
+// the landing pages at /gifts/: each one draws its own example, and none is a copy of another
+{
+  const hub = await browser.newPage(); watch(hub);
+  await hub.goto(BASE + 'gifts/'); await hub.waitForTimeout(300);
+  const links = await hub.evaluate(() => [...document.querySelectorAll('.themes a')].map(a => a.getAttribute('href')));
+  if (links.length < 3) errors.push('the gift hub lists only ' + links.length + ' pages');
+  const seen = new Set();
+  for (const href of links.slice(0, 3)) {
+    const g = await browser.newPage(); watch(g);
+    await g.goto(BASE + 'gifts/' + href); await g.waitForTimeout(700);
+    const who = await g.evaluate(() => HERO.name + '/' + FAM.map(f => f.name).join(','));
+    const h1 = await g.evaluate(() => document.querySelector('h1').textContent.trim());
+    if (seen.has(who)) errors.push('two gift pages draw the same family: ' + who);
+    if (seen.has(h1)) errors.push('two gift pages share a heading');
+    seen.add(who); seen.add(h1);
+    await g.close();
+  }
+  console.log('gift pages:', links.length, 'listed,', seen.size / 2, 'checked, each with its own family');
+  await hub.close();
+}
+
 // the structured data: a search engine has to be told the price, and it has to be the price
 {
   const sd = await browser.newPage(); watch(sd);

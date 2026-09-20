@@ -21,12 +21,12 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'order/index.html', 'order/thanks/index.html', '404.html'];
+export const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'order/index.html', 'order/thanks/index.html', 'gifts/index.html', '404.html'];
 // Pages that stay in English for now. The terms are a legal document and a bad translation of one
 // is worse than none; every language links to the English copy until a lawyer has seen it.
 // Apache serves one file for a missing page anywhere on the site, so the 404 is English only,
 // like the terms. Both are left out of the language picker and the sitemap.
-export const ENGLISH_ONLY = ['terms/index.html', '404.html'];
+export const ENGLISH_ONLY = ['terms/index.html', '404.html', 'gifts/index.html'];
 // Only languages that are actually translated. Adding one: write site-src/words/<lang>.json and
 // game-<lang>.json (start from game-en.json), add it here, run the build. A half-translated
 // language must never ship: a Spanish page leading to an English game is worse than no page.
@@ -222,12 +222,54 @@ function searchFiles() {
       out.push(`    <priority>${page === 'index.html' ? '1.0' : '0.7'}</priority>`, '  </url>');
     }
   }
+  for (const g of LANDINGS) {
+    out.push('  <url>', `    <loc>${SITE_URL}/gifts/${g.slug}/</loc>`, `    <lastmod>${today}</lastmod>`,
+      '    <priority>0.6</priority>', '  </url>');
+  }
   out.push('</urlset>');
   write(path.join(SITE, 'sitemap.xml'), out.join('\n') + '\n');
   write(path.join(SITE, 'robots.txt'),
     ['# Every game at /g/ carries a family\'s details in its address, so none of them are for search engines.',
      'User-agent: *', 'Disallow: /g/', '', `Sitemap: ${SITE_URL}/sitemap.xml`, ''].join('\n'));
   console.log(`search: sitemap.xml (${out.filter(l => l.includes('<loc>')).length} addresses) and robots.txt`);
+}
+
+// The landing pages at /gifts/. Written entries in site-src/landings.json, one shared template,
+// and a picture drawn from each page's own example family so no two are the same page with a
+// different noun in it. English only: they are written for how people search in the US and the
+// UK, and a machine-translated landing page is worse than none. Not in the menu; the hub at
+// /gifts/ and the sitemap are how they are found.
+const LANDINGS = JSON.parse(read(path.join(ROOT, 'site-src', 'landings.json'))).pages;
+
+function landings(header, footer) {
+  const tpl = read(path.join(PARTS, 'landing.html'));
+  for (const g of LANDINGS) {
+    const cfg = {
+      hero: { name: g.hero, hair: 'short', hairCol: '#6b3f1d', skin: '#f3c6a0', kit: '#1f7ae0' },
+      occasion: g.occasion, catchphrase: 'NO WAY!', food: 'PIZZA',
+      family: g.cast.map(([role, name]) => ({ role, name })),
+      pet: { name: g.pet, kind: 'dog', col: '#e8c9a0' }
+    };
+    const others = LANDINGS.filter(o => o.slug !== g.slug).slice(0, 3)
+      .map(o => `<a href="/gifts/${o.slug}/">${o.title.replace(/^A /, '')}</a>`).join(', ');
+    let html = tpl
+      .replace(/\{\{title\}\}/g, g.title)
+      .replace(/\{\{description\}\}/g, g.description)
+      .replace(/\{\{slug\}\}/g, g.slug)
+      .replace(/\{\{h1\}\}/g, g.h1)
+      .replace(/\{\{lede\}\}/g, g.lede)
+      .replace(/\{\{angle\}\}/g, g.angle)
+      .replace(/\{\{alt\}\}/g, `The title screen for this example: ${g.hero} in lights, with their family lined up`)
+      .replace(/\{\{body\}\}/g, g.body.map(t2 => `<p>${t2}</p>`).join('\n  '))
+      .replace(/\{\{config\}\}/g, JSON.stringify(cfg))
+      .replace(/\{\{occasionJson\}\}/g, JSON.stringify(g.occasion))
+      .replace('<!--siblings-->', others)
+      .replace('<!--header-->', header.replace(/\{\{root\}\}/g, '/'))
+      .replace('<!--footer-->', footer.replace(/\{\{root\}\}/g, '/'))
+      .replaceAll('<!--langs-->', '');
+    write(path.join(SITE, 'gifts', g.slug, 'index.html'), html);
+  }
+  console.log(`gifts: ${LANDINGS.length} landing pages`);
 }
 
 function build(lang) {
@@ -255,6 +297,8 @@ function build(lang) {
     html = html.replace('<!--offer-->', offer(page, lang));
     html = html.replaceAll('<!--lang-->', lang);
     html = html.replace('<!--schema-->', structured(page, lang, html));
+    if (page === 'gifts/index.html') html = html.replace('<!--gift-list-->', LANDINGS.map(g =>
+      `\n    <li><h2><a href="${g.slug}/">${g.h1}</a></h2><p>${g.angle}</p></li>`).join('') + '\n  ');
     const out = lang === 'en' ? path.join(SITE, page) : path.join(SITE, lang, page);
     write(out, html);
   }
@@ -271,6 +315,7 @@ function build(lang) {
   };
   gap(`game-${lang}.missing.json`, missingGame, 1);
   gap(`${lang}.missing.json`, missing, 2);
+  if (lang === 'en') landings(header, footer);
   if (missingGame.size) console.log(`${lang}: ${missingGame.size} game strings with no translation`);
   if (missing.size) console.log(`${lang}: ${missing.size} strings with no translation`);
   if (!missing.size && !missingGame.size) console.log(`${lang}: complete`);

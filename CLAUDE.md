@@ -109,6 +109,7 @@ Written by hand
                             at the <!--header--> and <!--footer--> marks. {{root}} becomes / or
                             /es/ and so on, so every link is absolute and the wordmark always
                             lands on the clean front page
+  site-src/landings.json    the written landing pages at /gifts/, one entry each
   site-src/words/*.json     one file per language: English text -> translated text
   site-src/static/          everything copied into site/ untouched:
     arcade/engine.js        engine: family config, sprites, audio, input, drawing, cheers
@@ -165,6 +166,7 @@ Plain `<script>` files share one global scope (no build step, works from `file:/
 - **Test it:** `npm install --no-save playwright-core`, serve `site/` on 8766, then `CHROME=/path/to/chrome node tests/smoke.mjs`. It must pass with no console errors before any commit that touches the site. What it covers is written once, in README under Test. Add the live site as an argument to run it against production: `node tests/smoke.mjs https://happyherogames.com/`.
 - **The 404 is one file for the whole site.** `site-src/pages/404.html`, served by `ErrorDocument 404 /404.html` for a missing page at any depth, in any folder. Every link and script in it is absolute, because a relative one breaks the moment somebody mistypes a URL two folders down. It is English only and out of the sitemap.
 - **Every page gets a canonical, an og:url and absolute hreflangs** from `hreflangs()` in the build. Relative hreflangs are invalid, and six language folders with no canonical is how duplicate-content trouble starts.
+- **Landing pages live in `site-src/landings.json`, one entry each, and are written, not generated.** The build renders them into `/gifts/<slug>/` with `partials/landing.html`, and each draws its own example family on its own title screen, so no two are the same page with a different noun in it. The rule, and it is Google's rule too: **if a page would only be a find-and-replace of another, it does not go in.** They are English only, because a machine-translated landing page is worse than none, and they are not in the menu: the hub at `/gifts/` and the sitemap are how they are found.
 - **Structured data is lifted from the page, never written twice.** `structured()` in the build reads the front page's own meta description and its own questions, in whatever language it just rendered, and declares one Product at $99. If the price or a question changes on the page, the machine-readable copy changes with it, and the smoke test fails if the two ever disagree.
 - **Search engines:** `tools/build.mjs` writes `site/sitemap.xml` (every public page in every language, with hreflang pointing both ways) and `site/robots.txt` (everything allowed except `/g/`). The demo and the terms are deliberately left out: the demo lives under `/g/` and the terms are noindex until a solicitor has read them. Submitting the sitemap to Google is a one-off job in `docs/todo.md`.
 - **Commit and push everything, every time,** docs included, without asking. The repo is private at github.com/joe-scan/hhg2026 (remote `origin`, over SSH).

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}} | HappyHeroGames</title>
+<meta name="description" content="{{description}}">
+<link rel="icon" href="/img/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fdf5ec">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="https://happyherogames.com/img/og.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://happyherogames.com/gifts/{{slug}}/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bowlby+One&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
+<style>
+.gift{max-width:760px;margin-inline:auto;padding-block:26px 56px}
+.gift h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,42px);line-height:1.06;margin:0 0 14px;text-wrap:balance}
+.gift .lede{font-size:19px;margin:0 0 22px;max-width:52ch}
+.gift p{max-width:56ch;margin:0 0 16px;color:var(--muted)}
+.gift .shot{margin:26px 0}
+.gift .angle{font-weight:700;color:var(--ink);font-size:18px;margin:0 0 6px}
+.gift .cta{margin:26px 0 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.gift .cta small{color:var(--muted);font-size:15px}
+.gift .also{border-top:1px solid var(--rule);margin-top:34px;padding-top:20px;font-size:15px;color:var(--muted)}
+.gift .also a{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!--header-->
+
+<main class="gift">
+  <h1>{{h1}}</h1>
+  <p class="lede">{{lede}}</p>
+
+  <div class="shot"><div class="screen"><canvas id="game" width="480" height="270" aria-label="{{alt}}"></canvas></div></div>
+
+  <p class="angle">{{angle}}</p>
+  {{body}}
+
+  <p class="cta"><a class="btn go" href="/#make">Build one, free</a> <small>Type a name and play it in about a minute. $99 when you order one for real.</small></p>
+
+  <p class="also">More ideas: <!--siblings--> &middot; <a href="/#prices">what it costs</a> &middot; <a href="/#faq">questions</a></p>
+</main>
+
+<!--footer-->
+</div>
+
+<script src="/arcade/engine.js"></script>
+<script src="/arcade/scenes.js"></script>
+<script>
+// The title screen this page is talking about, drawn for the example family in the page, so the
+// picture is different on every one of these and belongs to the words around it.
+(() => {
+  applyConfig({{config}});
+  let t = 0;
+  const occ = {{occasionJson}};
+  const draw = () => {
+    t++;
+    bgSynth(t); scene(occ, t, false);
+    txt('STARRING', W / 2, 10, 16, COL.ink, 'center');
+    const n = HERO.name, size = n.length > 10 ? 24 : n.length > 8 ? 32 : 40;
+    namePlate(n, W / 2, 32, size); nameLogo(n, W / 2, 28, size);
+    const line = OCCASIONS[occ] === "YOU'RE A STAR" ? 'AN ARCADE ADVENTURE' : OCCASIONS[occ];
+    const ow = line.length * 16;
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
+    rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
+    txt(line, W / 2, 87, 16, COL.gold, 'center');
+    const cast = [HERO].concat(FAM), gap = Math.min(52, (W - 80) / Math.max(1, cast.length)), x0 = W / 2 - (cast.length - 1) * gap / 2;
+    cast.forEach((sp, k) => { shadow(x0 + k * gap, 236, 11); drawSpec(sp, x0 + k * gap, 236, 3, false, Math.floor(t / 20 + k)); });
+    if (PET) pet(52, 256, 2, true, Math.floor(t / 6));
+    scene(occ, t, true);
+    requestAnimationFrame(draw);
+  };
+  draw();
+})();
+</script>
+</body>
+</html>

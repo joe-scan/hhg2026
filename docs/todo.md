@@ -11,6 +11,8 @@ Last updated 20 September 2026.
 - [ ] Search the trademark (see Trademark below). Two hours, and it decides whether the name is safe to spend on.
 - [ ] Book the Local Enterprise Office meeting at County Hall, Cork. Bring `docs/pitch.md`.
 - [ ] Show the demo to ten parents outside the family, at least three American. Watch, don't pitch. Write down what they do, not what they say.
+- [ ] Etsy listing. "Custom video game gift" is a search term with its own landing page there, and Etsy has the buyers that SEO on a two-day-old domain will not reach before Christmas. 20 cents a listing.
+- [ ] Pitch Christmas gift guides, this week. Most close in mid-October. Send the poster picture and a link to the demo.
 - [ ] Set up a Tally form so the site can collect emails instead of asking people to write one. The free games already ask; today the link opens an email.
 - [ ] Google Search Console: the TXT record is live in DNS since 20 Sep 2026 and answers on both Namecheap nameservers and on Google, Cloudflare and Quad9, so press Verify. The HTML tag is on the front page too, for a URL-prefix property. Then submit https://happyherogames.com/sitemap.xml and check Coverage in a week. Bing Webmaster Tools takes the Google verification.
 
