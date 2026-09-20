@@ -168,7 +168,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Course du traîneau : courez sur les toits et sautez les cheminées |
 | JUMP | SAUTER |
 | One button: space, the up arrow, or a tap on the screen. | Un seul bouton : espace, la flèche du haut, ou une touche sur l'écran. |
-| One opponent in the demo. The full game fits eight people, so everyone turns up. | Un adversaire dans la démo. Le jeu complet accueille huit personnes, donc tout le monde est là. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Jusqu'à huit personnes : la famille, les amis, un professeur, un entraîneur. L'animal aussi : chien, chat, lapin, hamster ou poisson. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Ceux-ci sont les mêmes pour tout le monde. Les jeux que nous fabriquons sont différents. Cinq jeux, avec votre propre famille et vos amis à battre, et leurs blagues sur chaque écran. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Celui-ci est gratuit et le même pour tout le monde. Les jeux que nous fabriquons sont différents. Cinq jeux, avec votre propre famille et vos amis à battre, et leurs blagues sur chaque écran. |
@@ -180,7 +179,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | C'est eux le héros. Maman, papa, mamie, leur meilleur ami et le chien sont ceux à battre. Ça marche sur n'importe quel téléphone. Rien à installer. |
 | Play the first game, free | Jouez au premier jeu, gratuitement |
 | Tell us about them | Parlez-nous d'eux |
-| About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Une vingtaine de minutes la première fois. Ensuite ils y rejouent, et le passent à qui se trouve dans la pièce. |
 | Build the real one | Créez le vrai |
 | What they play, each against a different person: | Ce qu'ils jouent, chaque jeu contre une personne différente : |
 | Water Balloon Fight | Bataille de ballons d'eau |
@@ -199,17 +197,14 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Pas besoin de photo. Vous choisissez les cheveux, la peau et le maillot, et le héros est dessiné en pixels. |
 | We email you a web address. Tap it and the game opens. Nothing to install. | On vous envoie une adresse web par e-mail. Touchez-la et le jeu s'ouvre. Rien à installer. |
 | What device do I need? | De quel appareil ai-je besoin ? |
-| Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | N'importe quel téléphone, tablette, portable ou ordinateur avec un navigateur. Il n'y a rien à télécharger ni à installer. Deux personnes peuvent jouer sur un clavier, ou se partager un téléphone tenu à l'horizontale. |
 | How do I give it to them? | Comment est-ce que je l'offre ? |
 | Do I need to be good with computers? | Faut-il s'y connaître en informatique ? |
 | No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | Non. Vous répondez à quelques questions dans un formulaire, comme on remplit une adresse. Nous fabriquons le jeu et vous envoyons le lien. |
 | Who can be in the game? | Qui peut être dans le jeu ? |
 | How long does it take to play? | Combien de temps dure une partie ? |
 | Can a few children play together? | Est-ce que plusieurs enfants peuvent jouer ensemble ? |
-| Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Oui. Le mode fête est sur le premier écran. Choisissez combien jouent. Chacun passe son tour contre le héros pendant que les autres regardent. Ça se termine par un tableau des résultats et un champion. |
 | What if something is wrong when it arrives? | Et si quelque chose ne va pas à l'arrivée ? |
 | Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Dites-nous ce qui ne va pas, on le corrige et on vous envoie un nouveau lien. C'est sans frais. |
-| This poster and video are for a made-up family. Yours has your own names in it. | Cette affiche et cette vidéo sont celles d'une famille inventée. Le vôtre portera vos noms. |
 | Every game has its own web address, which cannot be guessed. | Chaque jeu a sa propre adresse web, impossible à deviner. |
 | Click the screen to start. Move with the arrow keys, and press | Cliquez sur l'écran pour commencer. Déplacez-vous avec les flèches et appuyez sur |
 | to fire. If two of you play on one keyboard, the second player uses | pour tirer. Si vous jouez à deux sur un clavier, le deuxième joueur utilise |
@@ -251,7 +246,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | , because something went wrong at our end. | , car quelque chose s'est mal passé de notre côté. |
 | Back to the front page | Retour à la page d'accueil |
 | How quickly can I get it? | En combien de temps puis-je l'avoir ? |
-| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Cinq jours ouvrés en standard, à compter du moment où nous avons vos réponses. Si vous le voulez plus vite, nous pouvons l'avoir prêt en 48 heures pour 39 $. Donnez-nous la date sur le formulaire et nous dirons oui ou non avant que vous payiez quoi que ce soit. |
 | How soon do you need it? | Pour quand le voulez-vous ? |
 | That date is close. Five working days may not make it. | Cette date est proche. Cinq jours ouvrés risquent de ne pas suffire. |
 | Within five working days. Included. | En cinq jours ouvrés. Compris. |
@@ -269,6 +263,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Un jeu, créé dans votre navigateur à partir de ce que vous avez tapé. Le jeu complet compte cinq jeux choisis selon ce qu'il aime, jusqu'à huit personnes, et la fin avec son nom en lettres lumineuses. |
 | Five working days, and a person plays it through before it goes anywhere. | Cinq jours ouvrés, et une personne y joue en entier avant que ça parte. |
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | On vous envoie par e-mail une adresse web qui n'appartient qu'à eux. Envoyez-la le jour même par message ou par e-mail, ou écrivez-la dans une carte. Ajoutez l'affiche imprimée et elle arrive par la poste, comme ça il y a quelque chose à emballer. |
+| Yours has your own names in it. | Le vôtre portera vos noms. |
+| Any phone, tablet, laptop or computer with a web browser. | N'importe quel téléphone, tablette, portable ou ordinateur avec un navigateur. |
+| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. | Cinq jours ouvrés en standard, à compter du moment où nous avons vos réponses. Si vous le voulez plus vite, nous pouvons l'avoir prêt en 48 heures pour 39 $. |
+| About twenty minutes the first time through. | Une vingtaine de minutes la première fois. |
+| Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Oui. Le mode fête est sur le premier écran. Choisissez combien jouent, et chacun passe son tour contre le héros. Ça se termine par un tableau des résultats et un champion. |
 
 ## What the game says: names, instructions and scores
 

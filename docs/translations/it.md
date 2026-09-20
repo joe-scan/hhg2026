@@ -168,7 +168,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Corsa della slitta: corri sui tetti e salta i camini |
 | JUMP | SALTA |
 | One button: space, the up arrow, or a tap on the screen. | Un solo pulsante: spazio, la freccia su o un tocco sullo schermo. |
-| One opponent in the demo. The full game fits eight people, so everyone turns up. | Un avversario nella demo. Nel gioco completo ci stanno otto persone, quindi ci sono tutti. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Fino a otto persone: famiglia, amici, un insegnante, un allenatore. Anche l'animale: cane, gatto, coniglio, criceto o pesce. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Questi sono uguali per tutti. I giochi che facciamo sono diversi. Cinque giochi, con la tua famiglia e i tuoi amici da battere e le loro battute in ogni schermata. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Questo è gratis e uguale per tutti. I giochi che facciamo sono diversi. Cinque giochi, con la tua famiglia e i tuoi amici da battere e le loro battute in ogni schermata. |
@@ -180,7 +179,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Sono loro l'eroe. Mamma, papà, la nonna, il migliore amico e il cane sono quelli da battere. Funziona su qualsiasi telefono. Niente da installare. |
 | Play the first game, free | Gioca il primo gioco, gratis |
 | Tell us about them | Raccontaci di loro |
-| About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Una ventina di minuti la prima volta. Poi ci rigiocano e lo passano a chi si trova in casa. |
 | Build the real one | Crea quello vero |
 | What they play, each against a different person: | Cosa si gioca, ognuno contro una persona diversa: |
 | Water Balloon Fight | Guerra di Gavettoni |
@@ -199,17 +197,14 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Le foto non servono. Scegli i capelli, la pelle e la maglietta, e l'eroe è disegnato a pixel. |
 | We email you a web address. Tap it and the game opens. Nothing to install. | Ti mandiamo per email un indirizzo web. Lo tocchi e il gioco si apre. Niente da installare. |
 | What device do I need? | Che dispositivo mi serve? |
-| Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Qualsiasi telefono, tablet, portatile o computer con un browser. Non c'è niente da scaricare né da installare. Due persone possono giocare sulla stessa tastiera, o condividere un telefono tenuto in orizzontale. |
 | How do I give it to them? | Come glielo regalo? |
 | Do I need to be good with computers? | Devo essere pratico di computer? |
 | No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | No. Rispondi a qualche domanda in un modulo, come quando scrivi un indirizzo. Noi facciamo il gioco e ti mandiamo il link. |
 | Who can be in the game? | Chi può essere nel gioco? |
 | How long does it take to play? | Quanto tempo ci vuole per giocarlo? |
 | Can a few children play together? | Possono giocare più bambini insieme? |
-| Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Sì. La modalità festa è nella prima schermata. Scegli quanti giocano. Ognuno fa il suo turno contro l'eroe mentre gli altri guardano. Finisce con un tabellone dei risultati e un campione. |
 | What if something is wrong when it arrives? | E se all'arrivo c'è qualcosa che non va? |
 | Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Dicci cosa non va: lo sistemiamo e ti mandiamo un link nuovo. Non costa niente. |
-| This poster and video are for a made-up family. Yours has your own names in it. | Questo poster e questo video sono di una famiglia inventata. Il tuo avrà i vostri nomi. |
 | Every game has its own web address, which cannot be guessed. | Ogni gioco ha il suo indirizzo web, impossibile da indovinare. |
 | Click the screen to start. Move with the arrow keys, and press | Clicca sullo schermo per iniziare. Muoviti con le frecce e premi |
 | to fire. If two of you play on one keyboard, the second player uses | per sparare. Se giocate in due sulla stessa tastiera, il secondo giocatore usa |
@@ -251,7 +246,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | , because something went wrong at our end. | , perché qualcosa è andato storto da parte nostra. |
 | Back to the front page | Torna alla prima pagina |
 | How quickly can I get it? | Quanto ci vuole ad averlo? |
-| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Cinque giorni lavorativi come standard, da quando abbiamo le tue risposte. Se ti serve prima, possiamo averlo pronto in 48 ore per 39 $. Dicci la data nel modulo e ti diciamo sì o no prima che tu paghi qualcosa. |
 | How soon do you need it? | Per quando ti serve? |
 | That date is close. Five working days may not make it. | Quella data è vicina. Cinque giorni lavorativi potrebbero non bastare. |
 | Within five working days. Included. | In cinque giorni lavorativi. Incluso. |
@@ -269,6 +263,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Un gioco, creato nel tuo browser da quello che hai scritto. Il gioco completo ha cinque giochi scelti in base a quello che ama, fino a otto persone e il finale con il loro nome a luci. |
 | Five working days, and a person plays it through before it goes anywhere. | Cinque giorni lavorativi, e una persona ci gioca tutto prima che parta. |
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Ti mandiamo per email un indirizzo web che è solo loro. Mandaglielo il giorno stesso con un messaggio o per email, oppure scrivilo dentro un biglietto. Aggiungi il poster stampato e arriva per posta, così c'è qualcosa da incartare. |
+| Yours has your own names in it. | Il tuo avrà i vostri nomi. |
+| Any phone, tablet, laptop or computer with a web browser. | Qualsiasi telefono, tablet, portatile o computer con un browser. |
+| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. | Cinque giorni lavorativi come standard, da quando abbiamo le tue risposte. Se ti serve prima, possiamo averlo pronto in 48 ore per 39 $. |
+| About twenty minutes the first time through. | Una ventina di minuti la prima volta. |
+| Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Sì. La modalità festa è nella prima schermata. Scegli quanti giocano e ognuno fa il suo turno contro l'eroe. Finisce con un tabellone dei risultati e un campione. |
 
 ## What the game says: names, instructions and scores
 

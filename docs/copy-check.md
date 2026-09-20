@@ -40,6 +40,32 @@ The landing page averages **7.4 words a sentence** across 72 sentences, and noth
 - **The consumer law sentence** in terms, and the data protection complaint sentence in privacy. Both are 8s. They are quoting the shape of the law and need to.
 - **The Ted joke** in terms about a granny being beaten at a quiz by an eight-year-old. 29 words, scores 7, earns its place.
 
+## The second pass, 20 September 2026
+
+Seven sentences cut, after reading every one on the site and asking what each was for:
+
+| Cut | Why |
+|---|---|
+| "Two people can play on one keyboard, or share a phone held sideways." | A second idea inside the answer to "what device do I need", which wants one. |
+| "One opponent in the demo. The full game fits eight people, so everyone turns up." | It explained a limitation before anybody had played anything. |
+| "There is nothing to download and nothing to install." | "Nothing to install" appears three times on the page already. |
+| "Then they play it again, and hand it to whoever is in the room." | The sentence before it already answered the question. |
+| "It ends on a results board with a champion" as its own sentence | Merged into the one before it: one idea, one sentence. |
+| "This poster and video are for a made-up family." | Scaffolding for "Yours has your own names in it", which says it all. |
+| "Tell us the date on the order form and we will say yes or no before you pay anything." | Nineteen words repeating what the order form says on itself. |
+
+Three were kept that looked cuttable. "A short form, and no payment on it" is the sentence that
+gets the click, because "no payment" is the fear being answered. "Every game has its own web
+address, which cannot be guessed" and "No surnames, ages, schools or addresses on screen, ever"
+are both in the privacy list, where the detail *is* the point: that is the section a cautious
+parent reads closely.
+
+Two more were not judgement calls but errors, fixed the same day: "Two days, and a person plays
+it through" survived the move to five working days, and the FAQ still pointed at a gift box that
+had become an $80 add-on.
+
+The landing page is now **73 sentences at 7.3 words each**.
+
 ## The rule going forward
 
 One idea per sentence. If a sentence has a colon and three commas, it is two sentences wearing a coat. If a word appears twice in one line meaning two different things (*game*), rename one of them. Read it aloud: if you run out of breath, it is too long.

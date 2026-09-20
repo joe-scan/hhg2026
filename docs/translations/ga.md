@@ -168,7 +168,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Sleigh Dash: run the rooftops and jump the chimneys | Rás na Nollag: rith na díonta agus léim na simléir |
 | JUMP | LÉIM |
 | One button: space, the up arrow, or a tap on the screen. | Cnaipe amháin: spás, an tsaighead suas, nó tapáil ar an scáileán. |
-| One opponent in the demo. The full game fits eight people, so everyone turns up. | Céile comhraic amháin sa taispeántas. Tá spás san iomlán d'ochtar, mar sin bíonn gach duine ann. |
 | Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish. | Suas le hochtar: an teaghlach, cairde, múinteoir, traenálaí. An peata freisin: madra, cat, coinín, hamstar nó iasc. |
 | These are the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá na cinn seo mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
 | This one is free and the same for everybody. The games we make are different. Five games, with your own family and friends to beat, and their jokes in every screen. | Tá an ceann seo saor in aisce agus mar an gcéanna do chách. Tá na cluichí a dhéanaimid difriúil. Cúig chluiche, le do mhuintir féin agus do chairde le sárú, agus a gcuid jócanna i ngach scáileán. |
@@ -180,7 +179,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | They're the hero. Mom, Dad, Grandma, their best friend and the dog are the ones they have to beat. Works on any phone. Nothing to install. | Is iadsan an laoch. Mam, Daid, Mamó, a gcara is fearr agus an madra na daoine le sárú. Oibríonn sé ar aon fhón. Faic le suiteáil. |
 | Play the first game, free | Imir an chéad chluiche, saor in aisce |
 | Tell us about them | Inis dúinn fúthu |
-| About twenty minutes the first time through. Then they play it again, and hand it to whoever is in the room. | Timpeall fiche nóiméad an chéad uair. Ansin imríonn siad arís é agus tugann siad do dhuine ar bith sa seomra é. |
 | Build the real one | Tóg an ceann ceart |
 | What they play, each against a different person: | Na cluichí féin, gach ceann in aghaidh duine difriúil: |
 | Water Balloon Fight | Cath na mBalún Uisce |
@@ -199,17 +197,14 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | No photos needed. You pick the hair, the skin and the shirt, and the hero is drawn in pixels. | Níl grianghraif ag teastáil. Roghnaíonn tú an ghruaig, an craiceann agus an léine, agus tarraingítear an laoch i bpicteilíní. |
 | We email you a web address. Tap it and the game opens. Nothing to install. | Seolaimid seoladh gréasáin chugat ar ríomhphost. Tapáil é agus osclaíonn an cluiche. Faic le suiteáil. |
 | What device do I need? | Cén gléas atá uaim? |
-| Any phone, tablet, laptop or computer with a web browser. There is nothing to download and nothing to install. Two people can play on one keyboard, or share a phone held sideways. | Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin. Níl aon rud le híoslódáil ná le suiteáil. Is féidir le beirt imirt ar mhéarchlár amháin, nó fón a roinnt agus é casta ar a thaobh. |
 | How do I give it to them? | Conas a thugaim dóibh é? |
 | Do I need to be good with computers? | An gá dom a bheith go maith le ríomhairí? |
 | No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link. | Ní gá. Freagraíonn tú cúpla ceist ar fhoirm, mar a líonfá isteach seoladh. Déanaimid an cluiche agus seolaimid an nasc chugat. |
 | Who can be in the game? | Cé atá in ann a bheith sa chluiche? |
 | How long does it take to play? | Cá fhad a thógann sé le himirt? |
 | Can a few children play together? | An féidir le roinnt páistí imirt le chéile? |
-| Yes. Party mode is on the first screen. Pick how many are playing. Each one takes a turn against the hero while the rest watch. It ends on a results board with a champion. | Is féidir. Tá an mód cóisire ar an gcéad scáileán. Roghnaigh cé mhéad atá ag imirt. Faigheann gach duine seal in aghaidh an laoich agus an chuid eile ag breathnú. Críochnaíonn sé le clár torthaí agus curadh. |
 | What if something is wrong when it arrives? | Cad a tharlaíonn má tá rud éigin mícheart nuair a thagann sé? |
 | Tell us what is wrong and we will fix it and send a new link. There is no charge for that. | Inis dúinn cad atá mícheart agus deisímid é agus seolaimid nasc nua. Níl aon táille air sin. |
-| This poster and video are for a made-up family. Yours has your own names in it. | Teaghlach cumtha atá sa phóstaer agus san fhíseán seo. Beidh bhur n-ainmneacha féin ar do cheannsa. |
 | Every game has its own web address, which cannot be guessed. | Tá a sheoladh gréasáin féin ag gach cluiche, nach féidir a thomhas. |
 | Click the screen to start. Move with the arrow keys, and press | Cliceáil ar an scáileán chun tosú. Bog leis na saigheada, agus brúigh |
 | to fire. If two of you play on one keyboard, the second player uses | chun lámhach. Má imríonn beirt agaibh ar mhéarchlár amháin, úsáideann an dara himreoir |
@@ -251,7 +246,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | , because something went wrong at our end. | , mar chuaigh rud éigin mícheart ar ár dtaobhna. |
 | Back to the front page | Ar ais go dtí an chéad leathanach |
 | How quickly can I get it? | Cé chomh tapa is a gheobhaidh mé é? |
-| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. Tell us the date on the order form and we will say yes or no before you pay anything. | Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Má theastaíonn sé níos luaithe, is féidir linn é a bheith réidh i gceann 48 uair an chloig ar $39. Inis dúinn an dáta ar an bhfoirm agus déarfaimid sea nó ní hea sula n-íocfaidh tú aon rud. |
 | How soon do you need it? | Cathain atá sé uait? |
 | That date is close. Five working days may not make it. | Tá an dáta sin gar. B'fhéidir nach mbainfidh cúig lá oibre amach é. |
 | Within five working days. Included. | I gceann cúig lá oibre. San áireamh. |
@@ -269,6 +263,11 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | One game, built in your browser from what you typed. The full game has five games picked for what they love, up to eight people, and the ending with their name up in lights. | Cluiche amháin, tógtha i do bhrabhsálaí as an méid a chlóscríobh tú. Tá cúig chluiche sa chluiche iomlán, roghnaithe de réir na rudaí is breá leo, suas le hochtar, agus an deireadh lena n-ainm i soilse. |
 | Five working days, and a person plays it through before it goes anywhere. | Cúig lá oibre, agus imríonn duine tríd é sula dtéann sé áit ar bith. |
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Seolaimid seoladh gréasáin chugat ar ríomhphost nach leo ach iadsan. Seol ar an lá é le teachtaireacht nó ríomhphost, nó scríobh isteach i gcárta é. Cuir an póstaer clóite leis agus tagann sé sa phost, ionas go mbeidh rud éigin ann le filleadh. |
+| Yours has your own names in it. | Beidh bhur n-ainmneacha féin ar do cheannsa. |
+| Any phone, tablet, laptop or computer with a web browser. | Aon fhón, táibléad, ríomhaire glúine nó ríomhaire le brabhsálaí gréasáin. |
+| Five working days as standard, counted from the moment we have your answers. If you need it sooner, we can have it ready in 48 hours for $39. | Cúig lá oibre mar chaighdeán, ón nóiméad a bhíonn do chuid freagraí againn. Má theastaíonn sé níos luaithe, is féidir linn é a bheith réidh i gceann 48 uair an chloig ar $39. |
+| About twenty minutes the first time through. | Timpeall fiche nóiméad an chéad uair. |
+| Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Tá. Tá an mód cóisire ar an gcéad scáileán. Roghnaigh cé mhéad atá ag imirt, agus faigheann gach duine seal in aghaidh an laoich. Críochnaíonn sé le clár torthaí agus curadh. |
 
 ## What the game says: names, instructions and scores
 
