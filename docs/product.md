@@ -11,16 +11,18 @@ Some short questions on a phone. Every field has a privacy rule, because the her
 | Hero's first name **(demo)** | Ava | Title, shirt initial, speech, finale | First name only. Accents are stripped for the pixel font but kept for speech. |
 | How to say it | "AY-va" | The announcer's voice | Never shown on screen. |
 | Hair style and colour, skin tone, shirt colour **(demo)** | Ponytail, brown, light, blue | The hero's pixel sprite | No photos, ever. The avatar is built from choices. |
-| Occasion **(demo)** | Birthday | Title and finale | Never ask for the date of birth or the age. Ask "when do you need it by?" instead. |
+| Occasion **(demo)** | Birthday | Title and finale | Never ask for the date of birth or the age. |
 | Family and friends, up to 8 (demo: 1) **(demo)** | Dad, Mom, Grandma "Nana Kay", best friend Jack | Opponents, referee, cameos, finale | First names or roles only. No surnames. |
 | The pet **(demo)** | Biscuit, a cream cat | Referee, blocks balloons, brings hearts, name tag | Kind, name and colour only. Never the breed. Dog, cat, rabbit, hamster or fish; a fish stays in its bowl and does none of the jobs. |
-| Favourite food **(demo)** | Pizza | Dinner Dash, the quiz | |
-| Catchphrase **(demo)** | "No way!" | Losing lines, finale bubble, the quiz | 22 characters. Checked for anything unkind. |
+| Favourite food **(demo)** | Pizza | Dinner Dash | |
+| Catchphrase **(demo)** | "No way!" | Losing lines, finale bubble | 22 characters. Checked for anything unkind. |
 | What they love doing | Soccer, dancing, Minecraft | Picks the 5 games from the library | Interests only, never the club or team they play for. |
 | The family's running arguments | The remote, the front seat, bedtime | Game themes and boss choice | |
 | Who's in charge of lunch / homework / bedtime | Grandma | Cameo roles (the door in Water Balloon Fight, the cook in Dinner Dash) | |
 | Family jokes and lines, optional | "Are you sure now boy?" | Trash talk, forfeits, cheers | A person reads every line before it ships. |
 | Places they've been, optional | Portugal, Spain | A World Tour game | Past trips only. Never upcoming travel. |
+| Who it is from | "Mom and Dad" | MADE BY on the title screen, and the top of the game's page | 40 characters. A name or a role, never a surname. |
+| A few words for them, optional | "We love you to the moon, superstar." | The top of the game's page, under who it is from | 140 characters. No surnames or ages. A person reads it before the link goes out. |
 | ~~Voices~~ | Dropped 20 Sep 2026 | Was: phone recordings replacing the announcer | Never again: audio of a child is the worst thing we could hold, for a feature nobody asked for. |
 
 Consent: a parent or guardian ticks that they may share these details about the child and the family members named. When the hero is an adult, the person buying confirms the same thing.
@@ -46,7 +48,8 @@ The builder and the game share one config object. In the demo it travels in the 
 ```
 
 - `hair`: short, straight, curly, long, ponytail. `occasion`: birthday, christmas, fathers, mothers, star.
-- `packs`: optional question and joke packs for one country, `ie` or `uk`. Empty by default, because the default game has to work for a family in Ohio. The quiz reads them in `site-src/static/arcade/games/table-quiz.js`.
+- `from` and `note`: who made the game and a line for the person getting it, cut to 40 and 140 characters with `<` and `>` removed by `sanitise()`. Both are optional and only the paid page shows the note.
+- `packs`: optional joke packs for one country, `ie` or `uk`. Empty by default, because the default game has to work for a family in Ohio. Nothing reads them since the quiz was removed on 21 Sep 2026; the field is kept so older links still load.
 - `role`: dad, mum, granny, grandad, auntie, uncle, brother, sister, friend, bestfriend, cousin, teacher, coach. The key never changes, but the label shown does: Mom, Grandma, Grandpa and Aunt in North America, Mum, Granny, Grandad and Auntie elsewhere (`DIALECT` and `roleLabel()` in `engine.js`). Each role has a shirt colour, a losing line, a favourite food and a set of taunts (`ROLES` in `engine.js`, `TAUNT` in `flow.js`).
 - `pet` is optional, and `pet.kind` is dog, cat, rabbit, hamster or fish (`PETKINDS` and `PETART` in `engine.js`). Without a pet, or with a fish, a spare grown-up referees and nothing blocks the balloons (`petRuns()`).
 - The paid game will extend this with interests, arguments, custom lines and a game list. Keep the demo able to read older configs.
@@ -56,24 +59,28 @@ The builder and the game share one config object. In the demo it travels in the 
 | Part | Demo | Full game |
 |---|---|---|
 | Title | STARRING [NAME], occasion line, cast on the horizon, 1 or 2 players | Same, plus the family's own tagline |
-| Games | Water Balloon Fight (the demo is one game, then the locked card) | 5 from the library, picked by interests |
+| Games | Water Balloon Fight (the demo and the $39 game are one game, then the locked card) | Water Balloon Fight, Paddle Battle, Back Seat Battle, Dinner Dash, then the final battle |
 | Opponents | Family members in turn | Same, with the family's own taunts |
 | Referee | The pet, or a spare grown-up | Same |
 | Boss | Locked. The demo stops at the locked card, and the test fails if it ever appears | Bedtime Clock (birthday, Christmas) or Homework Monster, with a family member as teammate |
 | Finale | Locked, same as the boss | HAPPY BIRTHDAY / HAPPY CHRISTMAS / YOU'RE A STAR, cake, tree or trophy, everyone walks in, share prompt, with the family's own lines |
-| Sharing | Share button: a picture of the screen plus the game's link | Same, plus a "make one for your family" referral link |
+| Sharing | None in the free preview: it is not theirs yet | "Send it to someone" on the game page, and Share on the finale |
 | Party mode | Two to six challengers take turns against the hero, then a results board | Same |
 
 **Game library.** Fourteen games already exist in the Fionn vs Sean engine (`~/Documents/fs/games/`): Puck-Out (ported as Paddle Battle), Back Seat Battle (ported), Neon Racers, Garden Five-a-Side, World Tour, Session Showdown, Remote Control Grab, Front Seat Showdown, Who Walks Ted?, The Table Quiz (ported as The Family Quiz), Free-Taker, Rugby Rush, Water Balloon Fight, Dinner Dash. Five are ported and live: Paddle Battle, Water Balloon Fight, Back Seat Battle, Dinner Dash and The Family Quiz. Each of the rest needs its Fionn and Sean text swapped for the config (as the five built ones were) before it can join. Missing and worth building first: dancing, swimming, a racing game for gamers, gymnastics, and a piano or instrument game that isn't tied to the concertina.
 
 **Porting a game from Fionn vs Sean:** copy it into `site-src/static/arcade/games/`, replace names and pronouns with `PL[i].name`, replace `person('nuala')` and similar with `helper()`, replace Ted text with `PET` (and handle no dog), make hit boxes use `specH()`, check the how-to lines stay under 60 characters with 10-letter names, then add its `<script>` to `site-src/pages/g/demo/index.html` (never the generated copy in `site/`), run `node tools/build.mjs` and run the smoke test.
 
-## 4. Making a paid order (the plan)
+## 4. Making a paid order
 
-1. The questionnaire saves a config (plus the extra fields) against an order.
-2. A generator builds the game: the config drives sprites, games and text, and an AI model drafts taunts, forfeits and quiz questions from the answers.
-3. A person plays it through and reads every line. The budget is 18 minutes for a game and 25 with a poster, which is what the model in `docs/business-plan.md` is built on. If a real order takes 30, the margin goes with it.
-4. The family gets a private link and a printable card. Delivered within five working days, or in 48 hours for $39, or on the chosen date.
+Decided 21 Sep 2026: make it, play it, keep it.
+
+1. The buyer makes the game on the front page and plays the first one at `/g/demo/`. When it ends, the locked card fires `hhg:locked` and the page shows the offer: $39 for this game, $99 for all five.
+2. The order form at `/order/` carries the tier, the hero's look, the occasion, who it is from and a line for them, and optionally a t-shirt, poster or mug. `order.php` emails Joe with a ready play link: `/g/play/#g=<config>`, with `&n=1` added for a $39 game.
+3. Joe reads the names and the message, sends a payment link, and once it is paid sends the play link on. The same day.
+4. `/g/play/` is the page they open. The top says "A game made for Ava, by Mom and Dad" with the message under it, and the title screen says MADE BY. A $39 game ends on the locked card with the other four offered for $60 (`/order/?tier=upgrade&game=<config>`).
+
+Until signed links exist, `n=1` is the only thing between a $39 game and a $99 one. Anybody who reads the address can remove it. That is acceptable for the first orders and not for paid advertising.
 
 ## 5. One domain
 

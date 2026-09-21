@@ -4,12 +4,13 @@ Everything outside the code that has to happen, in the order it matters. Tick th
 
 Rules for this file: one line per job, the point of it, and what "done" actually looks like. If a job needs a decision from Joe before anyone can act, it says so. Amounts and rules for Irish schemes change; check each one at source before quoting it anywhere.
 
-Last updated 20 September 2026.
+Last updated 21 September 2026.
 
 ## This week
 
 - [ ] Search the trademark (see Trademark below). Two hours, and it decides whether the name is safe to spend on.
 - [ ] Book the Local Enterprise Office meeting at County Hall, Cork. Bring `docs/pitch.md`.
+- [ ] **Find out what a customer costs.** A few hundred dollars of US ads pointed at the builder, counting buyers. Since $39 went on the page, this number decides whether the business works (`docs/business-plan.md`, section 4).
 - [ ] Show the demo to ten parents outside the family, at least three American. Watch, don't pitch. Write down what they do, not what they say.
 - [ ] Etsy listing. "Custom video game gift" is a search term with its own landing page there, and Etsy has the buyers that SEO on a two-day-old domain will not reach before Christmas. 20 cents a listing.
 - [ ] Pitch Christmas gift guides, this week. Most close in mid-October. Send the poster picture and a link to the demo.
@@ -54,28 +55,32 @@ Last updated 20 September 2026.
 
 - [ ] **A solicitor reads `site/terms/`.** It is written and live, marked as a draft, and no money should change hands until someone qualified has read it.
 
-- [ ] Payments: open a Paddle account (merchant of record, so US sales tax, EU VAT and UK VAT are theirs, not yours). Lemon Squeezy is the alternative.
+- [ ] Payments: open a Paddle account, so a paid link goes out without you reading your email first (merchant of record, so US sales tax, EU VAT and UK VAT are theirs, not yours). Lemon Squeezy is the alternative.
 - [ ] Terms of sale: what people are buying, delivery time, what happens if they're not happy. Needs a look from a solicitor, not just a template.
 - [ ] Refund policy: decide it before the first complaint, not during it. Digital goods have their own consumer-rights rules in the EU and UK.
 - [ ] Privacy review: the policy at `/privacy/` is written and true, but it needs a legal read before any child's details are stored. GDPR, and the UK Children's Code.
 - [ ] Cookie notice for EU and UK visitors, because Statcounter sets a cookie on the front page.
-- [ ] The questionnaire, payments and the ordering system have to exist. That's the contract developer job in the plan.
+- [ ] Signed links, so a $39 game can't be turned into a $99 one by editing the address. Fine for the first orders, not for paid ads.
+- [ ] Decide on a money-back guarantee. Proposed 21 Sep 2026, not decided.
 
 ## Product decisions waiting on Joe
 
-- [ ] Print partner: order one A2 poster from Prodigi and one from Printful, to your own address, and compare them in your hands. Left aside on 20 Sep 2026.
+- [ ] Printful samples: a t-shirt, a poster and a mug with a real pixel hero on them, to your own address. Their prices on the order form wait on this.
+- [ ] An adult hero sprite. The hero is always drawn as a child today, so the Father's Day gift page promises more than the game draws.
+- [ ] Lock the English, then turn the languages back on (`LANGS` in `tools/build.mjs`) and send them to native speakers.
 - [ ] Confirm the design direction in `CLAUDE.md`, or change it.
 
 ## Proving it works
 
 - [ ] Ten parents see the demo. Count how many reach for their phone without being asked.
-- [ ] Take ten hand-built orders at $99 and build them yourself. Time every one, start to delivered.
-- [ ] Check whether 18 minutes of checking is honest. The whole margin rests on it.
+- [ ] Take the first ten orders and time every one, start to sent. The plan guesses 8 minutes for $39 and 15 for $99.
+- [ ] Record the $39/$99 split and how many $39 buyers upgrade.
 - [ ] Measure the share rate: how many families press Share at the end.
 - [ ] Ask every buyer for a ten-second clip of the moment the child sees their name. Those clips are the advertising.
 
 ## Languages
 
+- [ ] **Paused 21 Sep 2026 until the English is settled.** The language folders redirect to English for now.
 - [ ] Get each language read by a native speaker. All five are Claude's work: good enough to ship, not good enough to be proud of. The jokes and the taunts are what matter, not the privacy policy.
 - [ ] Irish: Joe's wife teaches Irish and is checking that one.
 - [ ] Note for whoever checks: in-game text is written without É, Í, Ó and Ç because the pixel font cannot draw them as capitals. Á, Ñ and Ü are fine. If a phrase needs one of the missing ones, reword it rather than dropping the accent silently.
@@ -84,17 +89,14 @@ Last updated 20 September 2026.
 
 See `docs/competitors.md`. These are the cheap, proven moves.
 
-- [ ] Rush delivery as a paid upgrade, offered when the buyer's date is too close. Muksun charges $49 for it.
 - [ ] A printable gift card the moment someone pays, free, so there is something to hand over on the day.
-- [ ] Move the questionnaire to after payment, the way Muksun does it.
 - [ ] Put "works on any phone, nothing to install" in the first screenful. Muksun's $99 game does not run on an iPhone.
-- [ ] Sell the poster framed as well as rolled. Ready Player U's 1,873 reviews say people frame this.
+- [ ] Sell the poster framed as well as rolled, once the Printful sample is in. Ready Player U's 1,873 reviews say people frame this.
 - [ ] Decide whether to list on Etsy for discovery, at a price that suits Etsy, without dropping the price here.
 - [ ] Collect the first fifty reviews and ten reaction clips. We have no proof and they have thousands.
 
 ## Marketing, when the above is done
 
-- [ ] First paid social budget, to find the real cost of winning a customer. The plan assumes $38.
 - [ ] Referral: a code on every finished game, so a family can pass it on.
 - [ ] Easter Egg Hunt, in February, but only if Halloween or Christmas actually gets passed around.
 
@@ -102,7 +104,7 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 
 - [x] Register happyherogames.com, set up hosting, HTTPS and hello@ (19 Sep 2026).
 - [x] Landing page, hero builder and free demo live (20 Sep 2026).
-- [x] Prices decided: $99 and $179, no cheap tier, no subscription (20 Sep 2026).
+- [x] Prices decided: $99 and $179, no cheap tier, no subscription (20 Sep 2026). Replaced the next day.
 - [x] Privacy policy written and published (20 Sep 2026).
 - [x] Business plan, one-page pitch and product spec written (20 Sep 2026).
 - [x] Competitor research done and written up (20 Sep 2026).
@@ -129,3 +131,8 @@ See `docs/competitors.md`. These are the cheap, proven moves.
 - [x] Ten copy changes for the sale itself: the phone promise, the photo line, a reason for the box, how long it lasts (20 Sep 2026).
 - [x] A language is offered, never forced: one dismissible line for a Spanish browser (20 Sep 2026).
 - [x] The free games ask for an email at the end, at the one moment somebody is pleased (20 Sep 2026).
+- [x] Make, play, keep: the demo ends on $39 for this game or $99 for all five, same day (21 Sep 2026).
+- [x] The quiz removed. The five are four games and the final battle (21 Sep 2026).
+- [x] "Made by": who the game is from and a line for them, on the game's page and its title screen (21 Sep 2026).
+- [x] Order form: rush and sibling add-ons replaced by a t-shirt, poster or mug (21 Sep 2026).
+- [x] Translations paused, language folders redirect to English (21 Sep 2026).

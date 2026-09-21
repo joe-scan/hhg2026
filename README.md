@@ -21,7 +21,7 @@ Open http://localhost:8766, change the name, hair, the person they're up against
 
 ## What's in here
 
-- `site/`: the landing page with the live hero builder, the teaser demo at `/g/demo/` (one game, then a locked card), two free games (`/free/christmas/` and `/free/halloween/`), the privacy policy and the terms. Generated into six languages.
+- `site/`: the landing page with the live hero builder, the first game free at `/g/demo/` (one game, then a locked card and the $39/$99 offer), the paid game page at `/g/play/`, the order form, two free games (`/free/christmas/` and `/free/halloween/`), the privacy policy and the terms. English only while the other five languages are paused.
 - `docs/business-plan.md`: the business, the numbers and the plan.
 - `docs/pitch.md`: the whole business on one page, for grant applications.
 - `docs/todo.md`: everything outside the code that Joe has to do, and what's done.
@@ -50,6 +50,6 @@ cd site && python3 -m http.server 8766 &
 CHROME=/path/to/chrome node tests/smoke.mjs
 ```
 
-It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full five-game version and plays that to the ending, plays a four-challenger party through to the results board, plays both seasonal free games to the end and checks each one offers the picture and asks about the next game, clicks the dark/light button on five pages and reloads to check it is remembered, checks the order form in two languages for its required fields, its add-ons, its hidden honeypot and that it no longer offers a retired price, plays the demo in all five translated languages, clicks the language picker in both directions, checks that a Spanish browser is offered Spanish and an English one is not and that neither is redirected, and checks the landing page at phone width. Against the live site it also checks the old `/halloween/` address still redirects and that a missing page at three different depths serves the 404. It exits with an error code if anything fails.
+It drives the builder into the game, checks every pet, plays the demo to the locked card and fails if the demo ever shows the boss or the ending, assembles the full version (four games and the final battle) and plays that to the ending, plays a four-challenger party through to the results board, plays both seasonal free games to the end and checks each one offers the picture and asks about the next game, clicks the dark/light button on six pages, the paid game page among them, and reloads to check it is remembered, checks the order form for its required fields, its prices and extras, its hidden honeypot and that it no longer offers a retired price, checks there is no language picker or offer while translations are paused (and, when they are back, plays the demo in each language and clicks the picker both ways), and checks the landing page at phone width. Against the live site it also checks the old `/halloween/` address still redirects and that a missing page at three different depths serves the 404. It exits with an error code if anything fails.
 
 The game engine started life as [Fionn vs Sean](https://joescanlon.com/fs/), a game one dad made for his two sons.

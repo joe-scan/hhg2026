@@ -1,32 +1,34 @@
 # HappyHeroGames: one page
 
-Written 20 September 2026. For grant applications, investors and anyone who needs the business in two minutes. The detail behind every number is in `docs/business-plan.md`, which is where the figures are maintained. If the two ever disagree, the plan is right and this page is stale.
+Written 20 September 2026, updated 21 September 2026 for $39 and $99. For grant applications, investors and anyone who needs the business in two minutes. The detail behind every number is in `docs/business-plan.md`, which is where the figures are maintained. If the two ever disagree, the plan is right and this page is stale.
 
 ## What it is
 
-HappyHeroGames puts someone you love into their own arcade game. They are the hero, and their own family and friends are the opponents: Dad at the dinner table, Granny in the quiz, the dog as referee. It ends with their name up in lights for a birthday or Christmas. It plays in any web browser on any phone, tablet or laptop, with nothing to install.
+HappyHeroGames puts someone you love into their own arcade game. They are the hero, and their own family and friends are the opponents: Dad in the back seat, Granny at the dinner table, the dog as referee. It ends with their name up in lights for a birthday or Christmas. It plays in any web browser on any phone, tablet or laptop, with nothing to install.
 
-A parent, grandparent or godparent answers a few short questions. Five working days later they get a link of their own to a game made for that one child, checked by a person before it goes out.
+A parent, grandparent or godparent types a name, picks how the hero looks and who is in the family, and is playing the first game within a minute. When it ends they can keep it and send it, the same day, with their own name on it: "A game made for Ava, by Mom and Dad."
 
 ## The offer
 
-One product, one price, in US dollars, with three add-ons chosen when ordering.
+Two prices, in US dollars.
 
 | | Price | What they get |
 |---|---|---|
-| Free demo | $0 | One game, built in the browser in about a minute, from a name and a few choices |
-| The game | $99 | Five games, up to eight people in it, their own catchphrases and jokes, ready within five working days, theirs to keep |
-| Add-ons | +$80 / +$39 / +$69 | The printed poster and a video of their game; ready in 48 hours instead of five days; a second game for a brother or sister |
+| Free | $0 | The first game, made and played in about a minute, before paying anything |
+| One game | $39 | That game, at a web address of its own they can send to anyone |
+| All five | $99 | Five games, each against a different person, and the ending with their name in lights |
+| Upgrade | +$60 | A $39 game becomes all five, offered when the first one ends |
+| Extras | to be priced | Their pixel hero on a t-shirt, poster or mug, printed on demand in their own country |
 
-The pricing page carries one number. The add-ons are asked for on the order form, after somebody has decided, which is where they earn their money and where they cost nobody a comparison. There is no subscription and no second product to weigh against the first.
+Every link is permanent. There is no subscription.
 
 ## Why people buy it
 
 Personalised gifts for children are a proven market. Wonderbly sold millions of personalised children's books and was bought by Penguin Random House in 2025. Muksun Games sells a custom family game for $99, but only as an Android or Windows download, with no way to try it first.
 
-The difference here is the demo. In under a minute, before paying anything, a parent sees their own child in pixels with their own family lined up beside them, and plays. That moment of recognition is the sales pitch, and no competitor offers it.
+The difference here is that the buyer plays the thing before they pay for it. In under a minute they see their own child in pixels with their own family beside them, and play. That moment is the sales pitch.
 
-Three more differences: it runs in a browser, so a grandparent can send it anywhere and it works; it is built from a questionnaire rather than photographs, so there is nothing sensitive to store; and a person reads and checks every game before it ships.
+Three more differences: it runs in a browser, so a grandparent can send it anywhere and it works; it is built from a few choices rather than photographs, so there is nothing sensitive to store; and it arrives the same day.
 
 ## Market and customers
 
@@ -36,18 +38,16 @@ Birthdays happen all year, which matters: this is less seasonal than a pure Chri
 
 ## The numbers
 
-At an average order of about $115, with a fifth of buyers taking the poster and video:
+Every figure is an assumption to be tested against real orders, not a forecast. The model is in `docs/business-plan.md`.
 
-- Card and merchant-of-record fees: about 5% plus $0.50.
-- Human checking: 18 minutes for a game and 25 with a poster, at $28 an hour. The full model is in `docs/business-plan.md`.
-- Printing, on poster orders only: $15 to $20, printed on demand in the buyer's own country.
-- Customer acquisition: $38 blended, mostly paid social.
+- Guessed mix: 60% of buyers take $39, 40% take $99, 15% of the $39 buyers upgrade, one in five adds a printed item. That is **$75.40 a customer**.
+- Card and merchant-of-record fees: 5% plus $0.50.
+- Human checking of the names and the message: 8 minutes for a $39 game, 15 for $99, at $28 an hour.
+- **$59.98 a customer is left before advertising.**
 
-That leaves $54.48 an order after advertising.
+What a customer costs to win decides everything. At $38 each, $21.98 is left. At $25, $34.98.
 
-**The target is $1M of annual sales.** At $115 an order that is about 8,700 games a year: 725 a month, or 24 a day. At that volume the business earns about $473,500 a year to cover salaries and everything else, and the checking work alone is about 2,810 hours, which is 1.65 full-time people.
-
-Every figure here is an assumption to be tested against real orders, not a forecast. The month-by-month model, and what would break it, are in `docs/business-plan.md`.
+**The target is $1M of annual sales:** about 13,300 customers a year, 36 a day. At $38 a customer that leaves about $291,500 a year after advertising; at $25 about $464,000. Checking at that volume is about 2,530 hours, 1.5 full-time people.
 
 ## Jobs
 
@@ -55,27 +55,27 @@ Hiring is driven by order volume, not by dates, and nobody is hired before the o
 
 | Orders a month | Who |
 |---|---|
-| 150 | First part-time game checker |
-| 400 | Second checker, plus someone running paid social properly |
-| 800 | Operations lead, so the founder is not the bottleneck |
+| 250 | First part-time game checker |
+| 700 | Second checker, plus someone running paid social properly |
+| 1,300 | Operations lead, so the founder is not the bottleneck |
 | Throughout | Contract developer, paid per piece |
 
 At the $1M run rate that is four to six people, most of them in Ireland, selling almost entirely into export markets.
 
 ## Status
 
-- Live at happyherogames.com: the landing page, the hero builder, a free playable demo, party mode for a room full of children, and two free games that ask for nothing (`/free/christmas/`, `/free/halloween/`).
-- The game engine works, with five games, the boss and the ending all built, in English, Spanish, German, French, Italian and Irish.
-- Privacy rules are written and enforced in the product: no photos, no voice recordings, no surnames, ages, schools or addresses, and every game on its own unguessable link.
-- Orders for the first ten games are open, through a form on the site that posts to our own server, so the real build time can be measured.
-- Not yet: automatic payments, the questionnaire that follows the payment link, the generator that turns answers into a finished game, and the print partner.
+- Live at happyherogames.com: the hero builder, the first game free, the $39 and $99 offer at the end of it, the paid game page with who made it, party mode, two free seasonal games and six gift pages.
+- The game engine works: four games, the final battle and the ending are built. The site is in English; five other languages are built and paused until the English is settled.
+- Privacy rules are written and enforced in the product: no photos, no voice recordings, no surnames, ages, schools or addresses.
+- Orders are open through a form on the site. Payment is a link sent by hand, so the first orders can be timed.
+- Not yet: automatic payments, signed links, the print partner, and the short questionnaire that fills in a family's own lines for a five-game order.
 
 ## What funding would be spent on
 
-1. A contract developer to build the questionnaire, payments and the generator that turns answers into a finished game.
-2. Art: more games, more characters and the printed poster artwork.
+1. A first paid advertising budget, spent to find the real cost of winning a customer. The model rests on it.
+2. A contract developer for payments, automatic delivery and signed links.
 3. Legal and privacy review before any child's details are stored, covering GDPR and the UK Children's Code.
-4. A first paid advertising budget, spent to find the real cost of winning a customer.
+4. Art: more games, more characters, and print-ready artwork for the merchandise.
 5. Trademark searches and filing for the name.
 
 ## Irish supports being applied for

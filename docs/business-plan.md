@@ -1,114 +1,81 @@
 # HappyHeroGames: business plan
 
-Written 19 September 2026. Rewritten 20 September 2026 for a US-first launch in US dollars, then again the same day around two prices and a single target: $1M of annual sales. Every number here is an assumption to test, not a forecast. Where something does not add up, it is said out loud rather than smoothed over.
+Written 19 September 2026. Rewritten 20 September 2026 for a US-first launch in US dollars and a single target of $1M of annual sales, and again on 21 September 2026 for make, play, keep: $39 for one game, $99 for five. Every number here is an assumption to test, not a forecast. Where something does not add up, it is said out loud rather than smoothed over.
 
 The doc keeps British spelling. The site uses US spelling, because the buyers are American.
 
 ## 1. The business in two paragraphs
 
-HappyHeroGames sells a personalised web arcade game as a gift. Someone buys it for a child, or sometimes for a grown-up, for a birthday or Christmas. They answer a questionnaire about the family. Five working days later they get a link of their own to a game where that person is the hero and their own family are the opponents: Dad at penalties, Granny in the quiz, the dog as referee. It ends with the family cheering and the child's name in lights. It plays in any browser, with nothing to install. A free demo on the landing page builds the hero in pixels in under a minute, and that demo is what sells the product.
+HappyHeroGames sells a personalised web arcade game as a gift. Someone types a name on the front page, picks how the hero looks and who is in the family, and is playing the first game within a minute: their own person as the hero, their own family as the opponent. When that game ends it asks them to keep it. It plays in any browser, with nothing to install, and it goes to the person it is for as a web address, the same day.
 
-There is one price. The game is $99: five games, up to eight people, their own lines, ready within five working days and checked by a person. The gift box is $179: exactly the same game, plus a printed arcade poster of the hero's own title screen and a short trailer of their game for the family chat. The company is Irish, based in Ireland, selling into the United States from day one. The target this plan is built around is $1M of annual sales, which at an average order of $115 is about 8,700 games a year.
+There are two prices. **$39** keeps the game they just played, at a link of its own they can send to anyone. **$99** is all five games and the ending with their name up in lights. A $39 game can be upgraded to all five later for $60. Every game can carry who it is from ("made by Mom and Dad") and a line for the person getting it. On top of that, the hero can go on a t-shirt, a poster or a mug, printed on demand in the buyer's own country. The company is Irish, selling in US dollars into the US first. The target is $1M of annual sales, which at an average of about $75 a customer is roughly 13,300 customers a year.
 
 ## 2. The honest summary
 
-- **This is a one-off gift business.** No subscription, no recurring revenue. Every month starts at zero and has to be sold again. That is the central risk and nothing in this plan hides it.
-- **The target is $1M of annual sales.** Section 6 does the arithmetic. It is roughly 8,700 orders a year, 725 a month, about 24 a day.
+- **Decided 21 September 2026: make it, play it, keep it.** The old model sold one product at $99, delivered in five working days after a questionnaire. The new one sells the game somebody has already made and played, at $39 or $99, the same day. Section 3 has the reasons.
+- **This roughly halves what each customer leaves after advertising.** At the plan's $38 to win a customer, the old model left $54.48 an order and this one leaves **$21.98**. The new model is only better if the $39 price, and the minute of play before it, make buying so much easier that a customer costs well under $38. At $25 it leaves $34.98. At $45 it leaves $14.98, and the business does not work. **The cost of a customer is now the whole bet**, and it has to be measured before any real ad money is spent.
+- **This is a one-off gift business.** No subscription. The upgrade and the merchandise are the only repeat purchases, and every month still starts near zero.
 - **The demand is proven.** [Muksun Games](https://muksungames.com/) sells custom games starring your family for $99 (Android and Windows only). [Wonderbly](https://en.wikipedia.org/wiki/Wonderbly) sold millions of personalised children's books and was bought by Penguin Random House in 2025. We need to be better, not first.
-- **The US is the market.** Roughly 73 million under-18s, a culture of spending on birthday presents, and ad platforms that will sell as much reach as we can pay for. Ireland is where the work happens and where the first hand-built games get made. It is not the launch market.
-- **The make-or-break number is human time per order.** Five games rather than ten roughly halves it. At 18 minutes of checking, a $99 order clears about $82 before advertising.
-- **The second make-or-break number is what a customer costs.** The plan assumes $38 blended in the US, inside a range of $30 to $45. If it settles at $60 the business does not work at these prices.
-- **The free demo is the sales engine.** Someone types a name, sees the hero in pixels, plays a game, then hits a locked card. That is the moment that sells it.
+- **The US is the market.** Ireland is where the work happens, not the launch market.
+- **Human time per order falls.** The buyer builds the game, so the checking is a read of the names and the message, not a build. Eight minutes for a $39 game and fifteen for a $99 one are guesses to be timed on real orders.
 
 ## 3. Pricing
 
-Two prices, in US dollars, shown in dollars to everyone.
-
-**One price on the page, since 20 September 2026: $99.** Everything else is an add-on chosen on
-the order form, after somebody has decided, which is the same money in a simpler shape.
+Two prices on the page, in US dollars, decided 21 September 2026.
 
 | What | Price | What's in it |
 |---|---|---|
-| The game | $99 | Five games and a boss. Everyone in it, up to eight people. Their own lines. Ready within five working days, checked by a person. |
-| + The poster and video | $80 | A printed arcade poster of their title screen and a twenty-second video of their own game. This was the $179 gift box, and it is the same $179 when both are bought. |
-| + Rush | $39 | Ready in 48 hours instead of five working days. |
-| + A second game | $69 | For a brother or sister, instead of $99. |
+| One game | $39 | The game they just made and played, at a link of its own they can send to anyone. |
+| All five | $99 | Five games, each against a different person, and the ending with their name up in lights. |
+| Upgrade | +$60 | A $39 game becomes all five. Offered on the game itself, when the first one ends. |
+| The hero on something | from Printful | A t-shirt, a poster or a mug with their pixel hero on it. Prices wait for samples. |
 
-### Why there is no $49 tier
+Every link is permanent. A gift never expires, and the game is static files in a folder, so keeping it costs about twenty cents a year.
 
-Asked again on 20 September 2026: one game and one character for $49. The answer is still no, and
-now there are two reasons. The maths: $49 leaves $40.15 before advertising, and at the plan's $38
-to win a customer that is **$2.15**. It takes twenty of them to equal one $99 sale after
-advertising. The product reason is worse: one game against one person is exactly what the free
-demo already gives away, so a $49 tier would charge for the advert.
+### Why $39 now, when a $49 tier was refused twice
 
-The free demo is one game, then a locked card. It is not a price tier and it is never sold. It is the advert.
+The $49 tier was refused on 20 September 2026 for two reasons. It left $2.15 after advertising, and one game against one person was exactly what the free demo gave away. Both have changed, and one of them has not changed enough to stop worrying about.
 
-**The pricing page now has no variable on it at all.** One number, one product, and a list of things that can be added when ordering. A gift buyer understands one price in the time it takes to read it, and every add-on is asked for at the moment it makes sense: the poster when they are thinking about wrapping it, the rush when they type a date that is close, the second game when they are already thinking about the family.
-
-### Why the $49 Starter is gone
-
-It was in the plan until 20 September 2026 and it is now dropped. Its own numbers killed it. At $49, after fees, checking, drafting and hosting it left $35.45, and at a blended $38 to win a customer that is a loss of $2.55 an order. It only ever worked as a decoy: a cheap option whose job was to make $99 look sensible. Selling something at a loss so that a different thing looks better is a bad trade when the cost is a third column on the pricing page and a buyer who has to work out what "three games" means against "five games". It made the page hard to understand, and that is what it was removed for.
-
-### What the poster and video add-on actually is
-
-- **The poster.** Their own title screen, their name in lights, printed and ready to frame. Made by a print-on-demand partner, Prodigi or Printful, that prints in the buyer's own country. A US order prints in the US and arrives in about three days. No customs, nothing posted from Ireland, nobody here touching it. About $15 to $20 delivered.
-- **The trailer.** Twenty seconds of their own game, rendered from the same pixels, for the family chat. No new data collected, and every share carries the site.
-
-Link previews, which make a shared game link show that family's own title screen, were built the same day but are not a gift box extra: every game gets them, free one included. The premiere countdown was built and removed on 20 September 2026, because it cost more work than it returned.
-
-### Add-ons, chosen after the price, never on the pricing page
-
-Two prices decide what the product is. Add-ons are asked for on the order form, once somebody
-has already decided, and they never appear as a third column beside $99 and $179. Added 20 Sep
-2026, with the maths from section 4:
-
-| Add-on | Price | What it costs us | Left | Why it is there |
-|---|---|---|---|---|
-| Rush, ready in 48 hours | $39 | fees only, $1.95 | **$37.05** | No extra work, only scheduling. It is asked for at the one moment a buyer feels urgency, which is when they type a date that is close. |
-| A second game for a brother or sister | $69 | $11.60 (check, drafting, hosting) | **$53.95** | The family is already written down, so the second game is the cheapest one we will ever make. Most of this market has two children. |
-
-At a 25% attach rate on rush and 12% on the second game, contribution per average order goes
-from **$54.48 to $70.21**, a 29% lift, for one radio button and one checkbox. That is the case
-for add-ons in one line.
-
-**Extra printed posters are not sold yet, and not at $25.** A $25 poster leaves $3.75 at the bad
-print quote. It only works at $35 or framed at $59, and neither is honest to offer until a print
-partner is chosen and a sample is in Joe's hands.
-
-Standard delivery moved from two working days to five on the same day. Two days for everyone was
-a promise one person could not keep on a bad week, and giving it away free left nothing to sell
-to the buyer who genuinely needs Saturday. The 48-hour promise still exists; it is now worth $39.
+- **What is free has changed.** The demo is now the game they will be buying: the same hero, the same family, played. Paying $39 keeps it and makes it sendable. Nothing is being charged for twice.
+- **What it costs to make has changed.** There is no questionnaire to turn into a game and no five-day build. The buyer did the work in the builder. That takes the human check from 18 minutes to about 8, and $39 leaves $32.62 before advertising, not $2.15 after it.
+- **What has not changed:** $32.62 is still less than $38. A buyer who takes only the $39 game and nothing else loses money at today's assumed cost of a customer. The price earns its place only if it lowers that cost, or if enough $39 buyers upgrade or add a t-shirt. Section 4 has the arithmetic.
 
 ### What is not sold
 
-No subscription. **No voice recordings**, dropped on 20 September 2026 for privacy and not coming back, because audio of a child is the most sensitive thing this company could hold and nobody asked for it.
-
-**A gift never expires.** Every game is static files in a folder at a private link, and it keeps working at that link. Nothing is taken back and there is nothing to cancel.
+No subscription and no monthly club. **No voice recordings**, dropped on 20 September 2026 for privacy and not coming back. **No photographs on anything printed**: the merchandise carries the pixel hero, never a picture of a real child. Rush delivery and a second game for a sibling were add-ons on the old model; with the same-day delivery there is nothing to rush, and a second game is simply a second order.
 
 Prices on the site and prices in this plan have to be the same figures. If one moves, the other moves in the same commit.
 
 ## 4. Unit economics
 
-Fees are 5% plus $0.50 on every order, through a merchant of record. Human checking is $28 an hour: 18 minutes on the game, 25 minutes on the gift box, the extra seven minutes being the poster artwork check. AI drafting is $3. Hosting is about $0.20 an order. The poster is $15 to $20 delivered; the table takes the worse end, $20. The trailer render rounds to $0.10.
+Fees are 5% plus $0.50 on every payment, through a merchant of record. Human checking is $28 an hour. AI drafting of the family lines is $3, on five-game orders only. Hosting is about $0.20. Every one of these is an assumption.
 
-| Per order | The game $99 | With the poster and video, $179 |
-|---|---|---|
-| Price | $99.00 | $179.00 |
-| Fees (5% + $0.50) | $5.45 | $9.45 |
-| Human check | $8.40 (18 min) | $11.67 (25 min) |
-| AI drafting | $3.00 | $3.00 |
-| Printed poster, delivered | none | $20.00 |
-| Trailer render | none | $0.10 |
-| Hosting | $0.20 | $0.20 |
-| **Left before advertising** | **$81.95** | **$134.58** |
-| **Left after $38 of advertising** | **$43.95** | **$96.58** |
+| Per sale | One game $39 | All five $99 | Upgrade +$60 | Merch, one item |
+|---|---|---|---|---|
+| Price | $39.00 | $99.00 | $60.00 | $35.00 (guess) |
+| Fees (5% + $0.50) | $2.45 | $5.45 | $3.50 | $2.25 |
+| Human check | $3.73 (8 min) | $7.00 (15 min) | $3.27 (7 min) | none |
+| AI drafting | none | $3.00 | $3.00 | none |
+| Printing and postage | none | none | none | $20.00 (guess) |
+| Hosting | $0.20 | $0.20 | none | none |
+| **Left before advertising** | **$32.62** | **$83.35** | **$50.23** | **$12.75** |
 
-At the good end of the print quote, $15 rather than $20, a poster order leaves $139.58 before advertising. Budget for reprints on top: a 5% reprint rate on a $20 poster is about $1 an order, and that is the number to watch once real prints are going out.
+**The mix, and all of it is guessed.** 60% of buyers take $39 and 40% take $99. 15% of the $39 buyers upgrade later, which is 9% of all customers. One customer in five adds one printed item. That gives:
 
-**The mix.** Assume 80% take the game alone and 20% add the poster and video. That gives an average order of **$115** and **$92.48 left before advertising**, which is 80% of revenue. After $38 of advertising, **$54.48 an order survives**. That $54.48 is the number the rest of the plan runs on.
+- average spend per customer: **$75.40** ($63 before the upgrade and the merchandise)
+- left before advertising: **$59.98** a customer
+- left after $38 of advertising: **$21.98** a customer
 
-A poster order is the better margin, $134.58 against $81.95, for seven more minutes of human time and one thing in the post that we never touch. If the split comes in at 30% posters rather than 20%, the average order rises to $123 and contribution to about $59. If it comes in at 10%, they fall to $107 and $49. Measure the split from the first hundred orders before trusting any month in section 7.
+| Cost to win a customer | Left per customer |
+|---|---|
+| $25 | $34.98 |
+| $30 | $29.98 |
+| $38 | $21.98 |
+| $45 | $14.98 |
+
+The upgrade is the best sale in the business: $50.23 left from somebody who is already a customer, so it costs no advertising at all. If 30% of $39 buyers upgrade rather than 15%, a customer leaves about $4.50 more. Measure the upgrade rate from the first hundred $39 orders before trusting any month in section 8.
+
+**Merchandise prices are not set.** Printful's price for a shirt, a poster or a mug, delivered in the US, has to be read off their calendar and checked against a sample in Joe's hands. The $35 price and $20 cost above are placeholders.
 
 ## 5. Customers
 
@@ -131,137 +98,129 @@ Seven competitors were read in detail on 20 September 2026. The full analysis is
 
 | | Ready Player U | Muksun Games | Bday Game | HappyHeroGames |
 |---|---|---|---|---|
-| Price | $30.89 | $99, or $399 from scratch | $250 to $450 | $99 or $179 |
+| Price | $30.89 | $99, or $399 from scratch | $250 to $450 | $39 or $99 |
 | Plays on | Browser | Android and Windows PC | Windows | Any browser |
 | Try before you buy | A generic demo | No | No | Their own hero, playing, in a minute |
-| Built from | Photos and three quiz answers | Photos and locations | Weeks of conversation | A questionnaire. No photos. |
-| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | Five working days, or 48 hours for $39 |
+| Built from | Photos and three quiz answers | Photos and locations | Weeks of conversation | A name and a few choices. No photos. |
+| Ready in | Days | 3 to 7 days, or 3 with a $49 rush | Weeks | The same day |
 | Who is in it | Two | Up to five | Whoever you discuss | Up to eight, plus the pet |
 | Proof | 1,873 reviews at 4.8 | 61 reviews at 4.77 | A handful of references | None yet |
 
 The pitch: **"Put someone special in their own arcade game."**
 
-Three things follow from that table and are costed nowhere else in this plan. Muksun cannot run on an iPhone, which is the line our advertising should hit. Rush delivery at $49 and a free printable gift certificate are both proven sellers we do not have. And Ready Player U sells prints of the game art with a QR code on them at a third of our price, with thirty times our proof, which is either a warning about our price or a validation of the poster, and only real orders will say which.
+Three things follow from that table. Muksun cannot run on an iPhone, which is the line our advertising should hit. A free printable gift certificate is a proven seller we do not have. And Ready Player U sells at $30.89 with thirty times our proof, which is the price the $39 game sits next to.
 
 The nearest business to copy is not a game company at all. Songfinch sells a custom song written by a real musician for $199, went from $150,000 of revenue in 2019 to $1.45M in 2020 and past $5M in 2021, has delivered more than 400,000 songs, and pays its writers about 55% of each order. A network of human makers paid per piece, with the company owning the form, the marketing and the quality bar, is the shape this business takes if the checking bottleneck in section 7 has to be solved with people rather than software.
 
 ## 6. The $1M target
 
-The whole plan is built around one number: $1M of sales in a year.
-
-**How many orders that is.** At an average order of $115, $1M is 8,696 orders. Call it 8,700 a year. That is 725 a month and about 24 a day, every day. On the 80/20 mix that is roughly 6,960 games at $99 and 1,740 gift boxes at $179.
-
-**What each of those orders leaves.** $115 in, minus $6.25 of blended fees, minus $9.05 of blended checking, minus $3 of drafting, minus $4 of blended poster cost, minus $0.20 of hosting, leaves $92.48. Minus $38 of advertising, **$54.48 of contribution an order**.
+**How many customers that is.** At $75.40 a customer, $1M is about 13,300 customers a year: 1,105 a month, 36 a day. On the guessed mix that is roughly 8,000 games at $39, 5,300 at $99, 1,200 upgrades and 2,650 printed items.
 
 **What the year looks like at that volume.**
 
-| At 8,700 orders a year | |
+| At 13,300 customers a year | |
 |---|---|
 | Sales | $1,000,000 |
-| Fees | $54,400 |
-| Human checking | $78,700 |
-| AI drafting | $26,100 |
-| Posters (1,740 at $20) | $34,800 |
-| Hosting and trailer renders | $1,900 |
-| **Contribution before advertising** | **$804,100** |
-| Advertising (8,700 at $38) | $330,600 |
-| **Contribution after advertising** | **$473,500** |
+| Fees | $58,600 |
+| Human checking | $70,700 |
+| AI drafting | $19,500 |
+| Printing and postage | $53,100 |
+| Hosting | $2,700 |
+| **Contribution before advertising** | **$795,500** |
+| Advertising (13,300 at $38) | $504,000 |
+| **Contribution after advertising** | **$291,500** |
 
-**What that $473K has to cover.** Everything that is not per-order: Joe's own pay, an operations lead, someone running paid social, a contract developer, art work, tools and hosting overhead, accounting, legal and privacy review, insurance, refunds and reprints beyond the budgeted $1 an order, and tax. A rough sketch of that is $280K to $320K, which would leave somewhere around $150K to $190K before tax. It is a sketch, not a budget. Get real quotes before quoting it anywhere, and in particular before quoting it in a grant application.
+Under the old $99 model the same $1M left $473,500 after advertising, from 8,700 orders. The new model needs half as many customers again to reach the same sales, and every one of them has to be paid for. **It wins only if a customer costs less.** At $25 to win a customer it leaves $463,900, about where the old model was. At $45 it leaves $198,700, and the fixed costs below eat all of it.
 
-**Where it breaks.** At $45 blended acquisition instead of $38, contribution falls to $47.48 an order and $413K a year, and the fixed costs above eat most of it. At $30 it rises to $62.48 and $543K. Nothing else in the model moves the answer as much.
+**What the contribution has to cover.** Joe's pay, an operations lead, someone running paid social, a contract developer, art, tools, accounting, legal and privacy review, insurance, refunds, and tax. A rough sketch is $280K to $320K. At $38 a customer that is more than the business makes. That is the number to fix, and the fix is the cost of a customer, not the price.
 
 ## 7. Hiring, driven by orders
 
-Nobody gets hired before the orders exist. Every trigger below is a number of orders a month, not a date.
+Nobody gets hired before the orders exist. Every trigger is a number of customers a month, not a date.
 
-**The arithmetic.** Checking is 18 minutes for a game and 25 for a box, so 19.4 minutes blended at the 80/20 mix. At the $1M run rate of 725 orders a month that is 234 hours a month, or about 2,810 hours a year. Counting a full-time checker at about 1,700 productive hours a year, that is **1.65 full-time checkers**. If checking comes down to a flat 18 minutes across both products, it is 2,610 hours and about 1.5 people. Either way, running $1M of sales needs under two people doing the checking. That is the whole reason the product is five games and not ten.
+**The arithmetic.** Checking is 8 minutes for a $39 game, 15 for a $99 one and 7 for an upgrade, so about 11.4 minutes a customer on the guessed mix. At the $1M run rate of 1,105 customers a month that is 210 hours a month, about 2,530 hours a year, or **1.5 full-time checkers** at 1,700 productive hours each.
 
 | Trigger | Hire | Why |
 |---|---|---|
-| Under 150 orders a month | Nobody | Joe checks every order. At 150 orders that is 48 hours a month, which is the ceiling for one person who is also selling. |
-| 150 orders a month | A part-time checker | Takes the checking off Joe so he can sell. A half-time checker covers about 220 orders a month. |
-| 400 orders a month | A second checker, and someone running paid social | 400 orders is 129 hours, roughly one full-time checker. Ad spend is about $15K a month by then, which is more than a founder should be running between other jobs. |
-| 800 orders a month | An operations lead | 800 orders is 259 hours, about 1.8 checkers, plus print partners, refunds, reprints and the delivery promise. That needs an owner who is not Joe. |
-| Every further 300 orders a month | Another checker | One full-time checker covers about 450 orders a month at 19.4 minutes. Above 800 the ladder above runs out, so add capacity by this rule. |
+| Under 250 customers a month | Nobody | Joe checks every order. 250 is about 48 hours a month, the ceiling for one person who is also selling. |
+| 250 a month | A part-time checker | Takes the checking off Joe so he can sell. |
+| 700 a month | A second checker, and someone running paid social | 700 is 133 hours of checking. Ad spend is about $27K a month by then. |
+| 1,300 a month | An operations lead | Print partners, refunds, reprints, the same-day promise. That needs an owner who is not Joe. |
+| Every further 700 a month | Another checker | One full-time checker covers about 745 customers a month. |
 
-**The developer is a contractor throughout, not an employee.** The backend, payments, the generator and the checking tool are project work with a beginning and an end. A full-time developer at this volume would be the largest fixed cost in the business and would spend most of the year without a project. Revisit only if the product needs continuous engineering, which on current evidence it does not.
+**The developer is a contractor throughout.** Payments, signed links, the questionnaire for the five-game version and the checking tool are project work with a beginning and an end.
 
-**Seasonal checkers.** Christmas is roughly 2.5 times a normal month, so December needs two or three extra checkers hired and trained from October. Train them on real orders in November, not on Christmas Eve.
+**Seasonal checkers.** December is two to three times a normal month. Train extra checkers on real orders in November.
 
 ## 8. The revenue model
 
 Assumptions, all to test:
 
-- Hand-built orders from October 2026, mostly to Joe's own network in Ireland, then a generator from spring 2027.
-- Both prices fully live from February 2027. Before that the average order is $99 to $105, because the first families get hand-built games while the poster and the trailer are still being proven.
-- Mix of 80% game alone and 20% with the poster from February 2027, giving an average order of $115.
-- Blended acquisition $38 an order. Spend is lower in the first three months, because those orders come from Joe's own network.
-- Contribution is revenue minus fees, checking, drafting, hosting, poster and advertising: $54.48 an order at the full mix.
-- Christmas is about 2.5 times a normal month, less than a pure gift product because birthdays fill the year.
-- No recurring revenue anywhere. Every dollar is a one-off sale.
+- Orders from October 2026, mostly Joe's own network at first.
+- No upgrades or merchandise until February 2027, while payments and the print partner are set up. Until then a customer is worth $63 and leaves $52.91 before advertising; from February, $75.40 and $59.98.
+- Advertising per customer is low in the first three months, because those orders come from Joe's network, then $38.
+- Customer numbers are the old model's order numbers times one and a half: a cheaper first price should sell to more people, and this is the guess that says how many more.
 
 Money columns are in thousands of dollars.
 
-| Month | Orders | Average order | Revenue | Ad spend | Contribution after ads |
+| Month | Customers | Spend each | Revenue | Ad spend | Contribution after ads |
 |---|---|---|---|---|---|
-| Oct 26 | 15 | $99 | $1.5K | $0.2K | $1.0K |
-| Nov 26 | 40 | $99 | $4.0K | $0.8K | $2.5K |
-| Dec 26 | 90 | $99 | $8.9K | $2.2K | $5.2K |
-| Jan 27 | 50 | $105 | $5.3K | $1.9K | $2.3K |
-| Feb 27 | 70 | $115 | $8.1K | $2.7K | $3.8K |
-| Mar 27 | 100 | $115 | $11.5K | $3.8K | $5.4K |
-| Apr 27 | 160 | $115 | $18.4K | $6.1K | $8.7K |
-| May 27 | 200 | $115 | $23.0K | $7.6K | $10.9K |
-| Jun 27 | 260 | $115 | $29.9K | $9.9K | $14.2K |
-| Jul 27 | 300 | $115 | $34.5K | $11.4K | $16.3K |
-| Aug 27 | 340 | $115 | $39.1K | $12.9K | $18.5K |
-| **Sep 27** | 450 | $115 | **$51.8K** | $17.1K | $24.5K |
-| Oct 27 | 560 | $115 | $64.4K | $21.3K | $30.5K |
-| Nov 27 | 900 | $115 | $103.5K | $34.2K | $49.0K |
-| Dec 27 | 1,500 | $115 | $172.5K | $57.0K | $81.7K |
-| Jan 28 | 600 | $115 | $69.0K | $22.8K | $32.7K |
-| Feb 28 | 700 | $115 | $80.5K | $26.6K | $38.1K |
-| Mar 28 | 820 | $115 | $94.3K | $31.2K | $44.7K |
-| Apr 28 | 900 | $115 | $103.5K | $34.2K | $49.0K |
-| May 28 | 1,000 | $115 | $115.0K | $38.0K | $54.5K |
-| **Jun 28** | 1,200 | $115 | $138.0K | $45.6K | $65.4K |
-| Jul 28 | 1,250 | $115 | $143.8K | $47.5K | $68.1K |
-| Aug 28 | 1,350 | $115 | $155.3K | $51.3K | $73.6K |
-| Sep 28 | 1,600 | $115 | $184.0K | $60.8K | $87.2K |
-| Oct 28 | 1,800 | $115 | $207.0K | $68.4K | $98.1K |
-| Nov 28 | 2,600 | $115 | $299.0K | $98.8K | $141.6K |
-| Dec 28 | 4,000 | $115 | $460.0K | $152.0K | $217.9K |
+| Oct 26 | 22 | $63 | $1.4K | $0.3K | $0.9K |
+| Nov 26 | 60 | $63 | $3.8K | $1.2K | $2.0K |
+| Dec 26 | 140 | $63 | $8.8K | $3.4K | $4.0K |
+| Jan 27 | 75 | $63 | $4.7K | $2.9K | $1.1K |
+| Feb 27 | 100 | $75 | $7.5K | $3.8K | $2.2K |
+| Mar 27 | 150 | $75 | $11.3K | $5.7K | $3.3K |
+| Apr 27 | 240 | $75 | $18.1K | $9.1K | $5.3K |
+| May 27 | 300 | $75 | $22.6K | $11.4K | $6.6K |
+| Jun 27 | 390 | $75 | $29.4K | $14.8K | $8.6K |
+| Jul 27 | 450 | $75 | $33.9K | $17.1K | $9.9K |
+| Aug 27 | 510 | $75 | $38.5K | $19.4K | $11.2K |
+| **Sep 27** | 680 | $75 | **$51.3K** | $25.8K | $14.9K |
+| Oct 27 | 840 | $75 | $63.3K | $31.9K | $18.5K |
+| Nov 27 | 1,350 | $75 | $101.8K | $51.3K | $29.7K |
+| Dec 27 | 2,250 | $75 | $169.7K | $85.5K | $49.5K |
+| Jan 28 | 900 | $75 | $67.9K | $34.2K | $19.8K |
+| Feb 28 | 1,050 | $75 | $79.2K | $39.9K | $23.1K |
+| Mar 28 | 1,230 | $75 | $92.7K | $46.7K | $27.0K |
+| Apr 28 | 1,350 | $75 | $101.8K | $51.3K | $29.7K |
+| May 28 | 1,500 | $75 | $113.1K | $57.0K | $33.0K |
+| **Jun 28** | 1,800 | $75 | $135.7K | $68.4K | $39.6K |
+| Jul 28 | 1,880 | $75 | $141.8K | $71.4K | $41.3K |
+| Aug 28 | 2,020 | $75 | $152.3K | $76.8K | $44.4K |
+| Sep 28 | 2,400 | $75 | $181.0K | $91.2K | $52.8K |
+| Oct 28 | 2,700 | $75 | $203.6K | $102.6K | $59.3K |
+| Nov 28 | 3,900 | $75 | $294.1K | $148.2K | $85.7K |
+| Dec 28 | 6,000 | $75 | $452.4K | $228.0K | $131.9K |
 
 ### What the table says
 
-- **Total revenue first passes $50K in September 2027**, at $51.8K on 450 orders. August is $39.1K, so the month it lands depends on about ninety orders. It does not fall below $50K again after October 2027.
-- **The run rate first passes $1M a year in June 2028.** Measured properly, as trailing twelve months, the twelve months to June 2028 total $1.07M. The twelve months to May 2028 total $958K. Two earlier months annualise above $1M on their own, November and December 2027, but those are Christmas and annualising a Christmas month is dishonest. The first ordinary month whose rate would hold at $1M a year is March 2028, at $94.3K.
-- **At the $1M crossing the business has about five people.** June 2028 runs 1,200 orders a month, which is 388 hours of checking, so roughly 2.7 full-time checkers. Call it three checkers, an operations lead, someone on paid social, Joe, and a developer on contract. Calendar year 2028 in this table totals about $2.05M, well past the target, so $1M is a waypoint and not the end of the plan.
-- **Christmas is a staffing problem before it is a revenue one.** December 2027 is 1,500 orders, about 485 hours of checking and $13.6K of wages in one month. December 2028 is 4,000 orders, 1,293 hours, roughly nine full-time checkers for a single month. That is not plausible with hiring alone. Either close Christmas orders early, cap December volume, or get the checking time down before the second Christmas. Say which, in writing, by September 2028.
-- **Ad spend is the whole risk.** December 2027 spends $57K to earn $172.5K, and it goes out before the revenue comes in. At $45 blended that month's ad bill is $67.5K.
-- **Posters are a cash cost too.** December 2027 is about 300 posters at $20, so $6K to the printer before delivery. December 2028 is about 800.
-- **Nothing underneath.** Every month starts at zero. That is the cost of having no subscription, and it is why the acquisition number matters more here than it would in a recurring business.
+- **Revenue first passes $50K in September 2027**, at $51.3K on 680 customers.
+- **Trailing twelve months first passes $1M in June 2028**, at $1.05M. The twelve months to May 2028 total $943K. Calendar 2028 totals about $2.0M.
+- **It keeps far less of that than the old model did.** December 2027 spends $85.5K on advertising to earn $169.7K, and keeps $49.5K. The old model kept $81.7K from the same month.
+- **Christmas is a staffing problem.** December 2027 is 2,250 customers and about 430 hours of checking. December 2028 is 6,000 customers and about 1,140 hours, roughly eight full-time checkers for one month. Cut the checking time before the second Christmas, or cap December.
+- **Printing is a cash cost.** December 2027 is about 450 printed items at around $20, so $9K to the printer before it comes back.
+- **Nothing underneath.** Every month starts at zero, which is why the cost of a customer matters more here than anything else in the table.
 
 ## 9. Operations
 
-The paid game follows `docs/product.md`: questionnaire, generator, a person checks it, delivery within five working days, or in 48 hours for $39, or on the chosen date. The demo already proves the generator's first half, config to sprites and games. What is missing: the questionnaire, payments, order storage with consent and deletion, the AI drafting step, a checking tool, and the rest of the game library.
+**The order today.** The buyer makes the game in the builder and plays the first one. The order form carries the hero's look, who it is from and a line for them, and `order.php` emails Joe a finished play link. Joe sends a payment link, and once it is paid he sends the play link on. That is the whole fulfilment for a $39 game, and it happens the same day.
 
-Five games per order rather than ten is the decision that makes the checking time work, and it also means a smaller library to build before launch.
+**What is missing.** Automatic payments, so the play link goes out when the payment lands rather than when Joe reads his email. Signed links, so a $39 link cannot be turned into a $99 one by editing the address; today that is protected only by nobody knowing how. The short questionnaire that fills in the family's own lines for a five-game order. A checking tool.
 
-**Payments go through a merchant of record, Paddle or Lemon Squeezy.** They take about 5% plus $0.50, more than Stripe, and in exchange they become the seller of record and handle US state sales tax, EU VAT and UK VAT, including registration and filing. For a small Irish business selling digital goods into 45 US states, that is the reason to use them. Revisit when the gap between 5% and 3% pays for an accountant.
+**Payments go through a merchant of record, Paddle or Lemon Squeezy.** About 5% plus $0.50, and in exchange they handle US sales tax, EU VAT and UK VAT. For a small Irish business selling digital goods into 45 US states, that is the reason to use them.
 
-Support runs from Ireland, five hours ahead of New York. Answer US email by early afternoon Irish time so a parent who writes in the evening has a reply when they wake up.
+**Merchandise goes through Printful.** The artwork is the pixel hero, rendered at print size, never a photograph. Printful prints and posts in the buyer's own country. Only the hero's first name and the delivery address leave our systems, under a data processing agreement signed before the first order.
 
-The poster needs no warehouse and no packing table. The poster file goes to the print partner by API, they print and post it in the buyer's own country, and the only Irish work is checking the artwork before it goes.
+Support runs from Ireland, five hours ahead of New York. Answer US email by early afternoon Irish time.
 
 ## 10. Growth
 
 1. **The demo is the ad.** Every ad and post links straight to the builder, not a sales page. Measure builder starts, demo plays, then purchases.
-2. **US paid social first.** Instagram and TikTok, creative that opens on a child seeing their own name in pixels. Whether blended acquisition lands nearer $30 than $45 decides the business.
+2. **US paid social first.** Instagram and TikTok, creative that opens on a child seeing their own name in pixels. Whether a customer costs nearer $25 than $38 decides the business; section 4 has why.
 3. **Reaction videos.** A child seeing themselves in lights for the first time is the best advert we can buy. Pay US families, with consent, to film it.
 4. **Kids share it.** Share on the finale sends a picture plus the game's link. Every paid game carries a "make one for your family" link with a referral code: $10 off for the friend, a credit for the family. Target 15% of orders from referrals by month six.
-5. **The video is an advert we do not pay for.** Every poster order produces a twenty-second video of that family's own game with the site on the end card, and it lands in a group chat where every other adult has a child with a birthday coming. Measure trailer shares, clicks back to the builder and orders per trailer. If a trailer beats a share picture, put it in the $99 game too.
+5. **Every game sold is an advert.** The link goes to a group chat where every other adult has somebody with a birthday coming, and the page it opens says who made it. Measure clicks from a sold game back to the builder.
 6. **Gift cards** for grandparents and faraway relatives, pushed hardest in November and December.
 7. **Then the rest of the English-speaking market:** the UK and Ireland from the third quarter of 2027, Canada and Australia in 2028. Same copy, a currency switch, a different tax registration. Australia is worth doing for the reversed seasons: their summer birthdays land in our quiet months.
 8. **Later:** a club or school version, the whole team as heroes, sold as a fundraiser. Parked until the family product works.
@@ -270,9 +229,9 @@ The poster needs no warehouse and no packing table. The poster file goes to the 
 
 | Phase | When | What | Done when |
 |---|---|---|---|
-| 0. Prove it | Now to Dec 2026 | Landing page and demo live. Launch list. Hand-build 50 to 100 paid orders for Christmas, mostly through Joe's network in Ireland. | 50 paid orders, time per order written down, share rate measured |
-| 1. Generator and US launch | Jan to Mar 2027 | Questionnaire, merchant of record, private links, two-price checkout, enough games in the library for a five-game order, AI drafting, checking tool, US copy and support hours, first paid US ads | Under 25 minutes of human time per order, blended acquisition under $45 |
-| 2. The poster and referrals | Apr to Jun 2027 | Print-on-demand poster through Prodigi or Printful, trailer render, link previews, referral codes, gift cards | Gift box at 20% of orders, under 25 minutes of handling each, reprint rate under 5% |
+| 0. Prove it | Now to Dec 2026 | Make, play, keep is live. Payment links by hand. 50 to 100 paid orders for Christmas, mostly through Joe's network. | 50 paid orders, the $39/$99 split and the time per order written down |
+| 1. Payments and US launch | Jan to Mar 2027 | Merchant of record, automatic delivery, signed links, the upgrade paid in one click, the five-game questionnaire, checking tool, first paid US ads | A customer costs under $30, checking under 12 minutes a customer |
+| 2. Merchandise and referrals | Apr to Jun 2027 | T-shirt, poster and mug through Printful, referral codes, gift cards | One customer in five adds an item, reprint rate under 5% |
 | 3. Scale | Jul to Dec 2027 | Reaction-video ads at volume, UK and Ireland launch, seasonal checking team, first permanent checker and paid social hire | Profitable after ads through Christmas |
 | 4. To $1M | 2028 | Canada and Australia, second print partner, operations lead, checking time down before the second Christmas | Trailing twelve months past $1M |
 
@@ -305,30 +264,30 @@ The company is Irish, trading from Ireland, selling almost entirely into export 
 
 Decide these now, and change course if they happen.
 
-- Blended acquisition cost above $60 after $10K of US ad spend, with no creative that beats it.
-- Fewer than 5% of demo players joining the launch list, or fewer than 50 paid orders from the first 1,000 demo plays.
-- Human time per order still over 40 minutes after 200 orders.
-- Poster orders under 10%, which pulls the average order to $107 and contribution to about $49.
+- Fewer than 30 paid orders from the first 1,000 people who finish the first game.
+- Human time still over 20 minutes a customer after 200 orders.
+- A customer costing more than $38 after $10K of ad spend. At that price $39 loses money on its own, and the plan above is built on the blend.
+- Fewer than 10% of $39 buyers upgrading within a month.
 - Under 30% of families pressing Share. Without sharing and referrals every order has to be bought, and there is no repeat revenue underneath.
 
 ## 14. Risks
 
-- **Children's data.** One leak would end it. Collect little, show less, private by default, reviewed by a lawyer before launch. US children's privacy law (COPPA) sits on top of GDPR and the UK Children's Code, and the FTC has been fining on it. Get US advice, not just Irish advice, before the first US order. Voice recordings were dropped on 20 September 2026 and stay dropped. The print partner is the one place a child's first name leaves our systems: send the artwork and a delivery address, nothing else, and put a data processing agreement in place before the first order.
+- **Children's data.** One leak would end it. Collect little, show less, private by default, reviewed by a lawyer before launch. US children's privacy law (COPPA) sits on top of GDPR and the UK Children's Code, and the FTC has been fining on it. Get US advice, not just Irish advice, before the first US order. Voice recordings were dropped on 20 September 2026 and stay dropped. Printful is the one place a child's first name leaves our systems: send the artwork and a delivery address, nothing else, never a photograph, and put a data processing agreement in place before the first order.
 - **No repeat revenue.** A bad ad month is a bad revenue month with nothing underneath it. Keep enough cash to carry two slow months, and do not let the December ad budget eat the reserve.
 - **Five games might be too little for $99.** Ten was generous and slow; five is fast and could feel thin next to Muksun's $99. Watch refund requests and the "is that it?" question in support mail from the first fifty orders. If it reads as thin, add a sixth game before cutting the price.
-- **Losing the $49 option could cost volume.** Removing the cheap tier makes the page clearer, but it also removes the only entry point under $99, and some buyers who would have spent $49 will now spend nothing. The decoy effect it provided is gone too. Watch the conversion rate from demo play to purchase before and after, and if it falls hard, the answer is a clearer $99 page, not a third price back.
-- **The print could be bad.** The poster is the only thing a customer can physically be disappointed by, and we never see it before they do. A dull print, wrong colours, a crease, or a poster arriving after the birthday, and the whole $179 feels like a con. Order test prints from both partners before committing, check every artwork file by hand inside the 25 minutes, reprint free and without argument, and keep a second partner ready for Christmas.
-- **The poster could look cheap in a frame.** Pixel art at poster size can read as a low-resolution screenshot rather than an arcade marquee. Render at print resolution from the start, compose the title screen as a poster rather than cropping the game, choose a heavy matte stock, and photograph a real one before selling it.
-- **Depending on one print partner.** Prodigi and Printful are other people's factories and other people's Christmas queues. Set up both, test both, be able to switch in a day.
+- **$39 could pull buyers down from $99.** Some who would have paid $99 will take $39 instead. The guessed split is 60/40; if it comes in at 80/20, a customer is worth about $63 and leaves about $12 after $38 of advertising. Measure the split from the first hundred orders. If $39 eats $99, the fix is showing the other four games better on the locked card, not a third price.
+- **The print could be bad.** A printed item is the only thing a customer can physically be disappointed by, and we never see it before they do. Order samples of all three before selling any, check every artwork file by hand, reprint free and without argument.
+- **Pixel art can look cheap in print.** At poster or shirt size it can read as a low-resolution screenshot. Render at print resolution from the start and photograph a real one before selling it.
+- **Depending on one print partner.** Printful is somebody else's factory and somebody else's Christmas queue. Keep Prodigi set up as the second.
 - **Currency and the Irish base.** Revenue is in dollars, costs are largely in euro and sterling. A 10% move moves the margin on a $99 order by about $8. Printing in dollars in the US takes some of that out.
 - **The name.** "Hero Games" is used by a Beijing publisher and a US tabletop publisher, and there is a mobile game called Happy Hero. Search USPTO before spending on the brand in the US, and EUIPO before spending in Europe.
-- **Quality slipping.** It only works while the jokes feel made for that family. Eighteen minutes is the budget, not the target. Do not cut the human check to save money.
-- **Copycats.** Anyone with AI tools can make one game. The edge is the demo, the speed, the family depth, the privacy and the share loop.
+- **Quality slipping.** It only works while the jokes feel made for that family. Do not cut the human check to save money: the names and the message are read by a person before a link goes out.
+- **Copycats.** Anyone with AI tools can make one game. The edge is playing your own game before paying, same-day delivery, the family depth and the privacy.
 
 ## 15. The next five steps
 
-1. Done on 20 Sep 2026: one price, $99, is on the site, with the poster and video, rush and a sibling's game as add-ons on the order form. No Starter, no club, no voice recordings. Next: keep the two sets of figures in step, and keep the site and section 3 on the same figures. If one moves, both move in the same commit.
-2. Time a real $99 order end to end, start to delivered, and see whether 18 minutes of checking is honest. Sections 4, 6 and 7 all rest on it.
-3. Show the demo to ten parents outside the family, at least three of them American. Watch, do not pitch. Ask whether they would pay $99, and whether the poster is worth $80 to them.
-4. Open a Paddle or Lemon Squeezy account and read what they require from an Irish business before building anything around it.
-5. Book the LEO meeting, and order test posters from both Prodigi and Printful to an Irish address and a US one. Then take ten Christmas pre-orders and build them by hand, at least three of them gift boxes, so the poster and the trailer are both tested before anyone pays $179.
+1. Done on 21 Sep 2026: make, play, keep is live. The demo ends on $39 or $99, the order form asks who it is from, and a paid game opens on a page that says who made it. Keep the site and section 3 on the same figures.
+2. **Find out what a customer costs.** Spend a few hundred dollars on US ads pointed at the builder and count buyers, not clicks. Every other number in this plan waits on that one.
+3. Record the $39/$99 split and the upgrade rate from the first hundred orders, and redo section 4 with them.
+4. Open a Paddle or Lemon Squeezy account, so a paid link goes out without Joe reading his email.
+5. Order a Printful t-shirt, poster and mug with a real pixel hero on them, to an Irish address and a US one, and set the merchandise prices from what arrives.
