@@ -30,7 +30,7 @@ Two prices on the page, in US dollars, decided 21 September 2026.
 | Upgrade | +$60 | A $39 game becomes all five. Offered on the game itself, when the first one ends. |
 | The hero on something | from Printful | A t-shirt, a poster or a mug with their pixel hero on it. Prices wait for samples. |
 
-Every link is permanent. A gift never expires, and the game is static files in a folder, so keeping it costs about twenty cents a year.
+A game is static files in a folder, so keeping one online costs about twenty cents a year. The site never promises it forever ("hosted for life" was ruled out on 21 Sep 2026). Refunds are seven days, no questions.
 
 ### Why $39 now, when a $49 tier was refused twice
 

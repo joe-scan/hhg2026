@@ -20,7 +20,7 @@ Two prices, in US dollars.
 | Upgrade | +$60 | A $39 game becomes all five, offered when the first one ends |
 | Extras | to be priced | Their pixel hero on a t-shirt, poster or mug, printed on demand in their own country |
 
-Every link is permanent. There is no subscription.
+There is no subscription. Refunds are seven days, no questions.
 
 ## Why people buy it
 
