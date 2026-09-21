@@ -17,6 +17,24 @@ Last updated 21 September 2026.
 - [ ] Set up a Tally form so the site can collect emails instead of asking people to write one. The free games already ask; today the link opens an email.
 - [ ] Google Search Console: the TXT record is live in DNS since 20 Sep 2026 and answers on both Namecheap nameservers and on Google, Cloudflare and Quad9, so press Verify. The HTML tag is on the front page too, for a URL-prefix property. Then submit https://happyherogames.com/sitemap.xml and check Coverage in a week. Bing Webmaster Tools takes the Google verification.
 
+## Joe's answers, 21 Sep 2026
+
+Given in one list. Done means on the site.
+
+- [x] Refunds: seven days, no questions. In the terms and the questions.
+- [x] "Hosted for life": left out. Every "keep it forever" line is gone from the site.
+- [x] Photo upload: never. The look is picked, not uploaded.
+- [x] Books: not now.
+- [x] Print: postcard with a code that opens the game, t-shirt, poster, mug. All four on the order form.
+- [ ] Launch target: live by 15 Nov 2026 for Christmas. Built by Joe with AI, full-time.
+- [ ] Games at launch: five simple engines (platformer, runner, catch, maze, memory). Waiting on whether they replace today's four games or join them.
+- [ ] Skins at launch: Pixel Arcade, Storybook, Neon.
+- [ ] Age bands: under 5, 5 to 12, teen and adult. Picked by the buyer, never shown.
+- [ ] $99 extras: all three skins plus one free seasonal pack.
+- [ ] Packs for past customers: $29 for one, $99 for all. Year one: Christmas, Valentine's, Mother's Day, Father's Day, Halloween, Easter, St Patrick's, Thanksgiving.
+- [ ] Famous characters: banned in the terms. The buyer can still set the hair and shirt to look a bit like one; we never offer a preset named after one.
+- [ ] Delivery: the buyer gets the link at once and can schedule an email to the person it's for. That means storing the recipient's email until it sends, which is the first personal data the site would hold.
+
 ## Trademark
 
 - [ ] Search EUIPO at euipo.europa.eu ("eSearch plus") for **happy hero** and for **hero games**, in class 9 (software, games) and class 41 (entertainment).

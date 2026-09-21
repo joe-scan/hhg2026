@@ -43,7 +43,7 @@ $tier     = field('tier', 60);
 $game     = field('game', 900);
 // merch arrives as several ticked boxes with one name, so it is read as a list
 $merchIn  = isset($_POST['merch']) ? (array)$_POST['merch'] : [];
-$merch    = implode(', ', array_filter(array_map(fn($m) => in_array($m, ['t-shirt', 'poster', 'mug'], true) ? $m : '', $merchIn)));
+$merch    = implode(', ', array_filter(array_map(fn($m) => in_array($m, ['postcard', 't-shirt', 'poster', 'mug'], true) ? $m : '', $merchIn)));
 $look     = field('look', 120);
 $giver    = field('giver', 40);
 $note     = field('note', 140);

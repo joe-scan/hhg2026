@@ -39,9 +39,11 @@ What we learnt from it, and why the product looks like this:
 - **The hero on something they can hold:** a t-shirt, a poster or a mug through Printful, printed in the buyer's own country. Always the pixel hero, never a photograph. Ticked on the order form; prices wait for samples, so the form says "we will send a picture and a price".
 - **No voice recordings.** Dropped on 20 Sep 2026: families uploading recordings of their children is the worst privacy exposure in the whole product, for a feature nobody asked for. Don't reintroduce it.
 - **Words.** They are games, never duels. The cast is family and friends, so a best friend, a cousin, a teacher or a coach can be an opponent. The pet is a dog, cat, rabbit, hamster or fish, not always a dog.
-- **Two prices: $39 and $99.** Decided 21 Sep 2026, replacing one price of $99 with add-ons. A $39 game upgrades to all five for $60, offered on the game itself when the first one ends. Every link is permanent. The $49 tier refused on 20 Sep was refused because it charged for what the demo gave away; $39 keeps the game they already made and played, which is different, but it still loses money on its own at the plan's $38 to win a customer. `docs/business-plan.md` section 4 has the numbers, and the cost of a customer is now the number the business rests on.
+- **Two prices: $39 and $99.** Decided 21 Sep 2026, replacing one price of $99 with add-ons. A $39 game upgrades to all five for $60, offered on the game itself when the first one ends. The $49 tier refused on 20 Sep was refused because it charged for what the demo gave away; $39 keeps the game they already made and played, which is different, but it still loses money on its own at the plan's $38 to win a customer. `docs/business-plan.md` section 4 has the numbers, and the cost of a customer is now the number the business rests on.
 - **Rush and a sibling's game are gone.** Delivery is the same day, so there is nothing to rush, and a second game is a second order.
 - **No subscription and no monthly club.**
+- **Refunds: seven days, no questions** (Joe, 21 Sep 2026). **Never promise forever:** no "hosted for life", "theirs to keep" or "keeps working" on the site.
+- **Print: postcard, t-shirt, poster, mug.** The postcard carries a code that opens the game.
 
 ## Languages
 
