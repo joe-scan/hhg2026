@@ -128,7 +128,7 @@ const LOOKS = [
 const browser = await chromium.launch(process.env.CHROME ? { executablePath: process.env.CHROME } : {});
 const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
 const GAMES = ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js',
-  'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js'];
+  'games/dinner-dash.js', 'games/bosses.js'];
 
 for (const look of LOOKS) {
   const page = await browser.newPage({ viewport: { width: 700, height: 500 }, deviceScaleFactor: 2 });

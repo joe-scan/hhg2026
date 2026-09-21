@@ -21,7 +21,7 @@ const WORDS = path.join(ROOT, 'site-src', 'words');
 // The pages, as paths inside site-src/pages/. These are the source: never edit site/*.html by
 // hand, it is generated. The English build writes straight to site/. Game pages under /g/ are generated per
 // order later; only the demo has a hand-written one.
-export const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'order/index.html', 'order/thanks/index.html', 'gifts/index.html', '404.html'];
+export const PAGES = ['index.html', 'free/index.html', 'free/christmas/index.html', 'free/halloween/index.html', 'privacy/index.html', 'terms/index.html', 'g/demo/index.html', 'g/play/index.html', 'order/index.html', 'order/thanks/index.html', 'gifts/index.html', '404.html'];
 // Pages that stay in English for now. The terms are a legal document and a bad translation of one
 // is worse than none; every language links to the English copy until a lawyer has seen it.
 // Apache serves one file for a missing page anywhere on the site, so the 404 is English only,
@@ -30,7 +30,11 @@ export const ENGLISH_ONLY = ['terms/index.html', '404.html', 'gifts/index.html']
 // Only languages that are actually translated. Adding one: write site-src/words/<lang>.json and
 // game-<lang>.json (start from game-en.json), add it here, run the build. A half-translated
 // language must never ship: a Spanish page leading to an English game is worse than no page.
-export const LANGS = ['es', 'de', 'fr', 'it', 'ga'];
+// Paused on 21 Sep 2026 while the English is reworked, on Joe's instruction: a page that is half
+// translated is worse than no page. The word files are kept; put a code back here once its
+// translations are up to date, and remove its line from the temporary redirect in .htaccess.
+export const LANGS = [];
+export const LANGS_PAUSED = ['es', 'de', 'fr', 'it', 'ga'];
 export const LANGNAMES = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', ga: 'Gaeilge' };
 // What the offer says, in the language being offered. Never in English: the person it is for
 // may not read English, and the person who does read English should be able to ignore it.
@@ -143,7 +147,7 @@ function hreflangs(pagePath, lang) {
 // the short list. No flags: a flag is a country, and Spanish is not Spain's alone. What it has
 // instead is a pixel chip with the language's code in it, which is ours and is not boring.
 function picker(pagePath, lang) {
-  if (ENGLISH_ONLY.includes(pagePath)) return '';   // nothing to pick between
+  if (ENGLISH_ONLY.includes(pagePath) || !LANGS.length) return '';   // nothing to pick between
   const href = siblings(pagePath, lang);
   const chip = l => `<b class="lang-chip">${l.toUpperCase()}</b>`;
   const others = ['en', ...LANGS].filter(l => l !== lang)
@@ -176,11 +180,9 @@ function structured(pagePath, lang, html) {
         name: 'A personalized video game, made for one person', description: desc,
         image: [site + '/img/og.png', site + '/img/finale.png', site + '/img/poster.png'],
         brand: { '@id': site + '/#org' }, category: 'Personalized gifts',
-        offers: { '@type': 'Offer', price: '99.00', priceCurrency: 'USD',
-          url: absolute('order/index.html', lang), availability: 'https://schema.org/InStock',
-          priceValidUntil: '2027-12-31',
-          shippingDetails: { '@type': 'OfferShippingDetails', deliveryTime: { '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 5, unitCode: 'DAY' } } } } },
+        offers: { '@type': 'AggregateOffer', lowPrice: '39.00', highPrice: '99.00', offerCount: 2,
+          priceCurrency: 'USD', url: absolute('order/index.html', lang),
+          availability: 'https://schema.org/InStock' } },
       ...(faq.length ? [{ '@type': 'FAQPage', '@id': here + '#faq', mainEntity: faq }] : [])
     ]
   };
@@ -190,7 +192,7 @@ function structured(pagePath, lang, html) {
 // A visitor whose browser is set to Spanish is offered Spanish, once, and can say no. Nobody is
 // redirected: an English speaker in Madrid has a Spanish browser and wants the page they asked for.
 function offer(pagePath, lang) {
-  if (lang !== 'en' || ENGLISH_ONLY.includes(pagePath)) return '';
+  if (lang !== 'en' || ENGLISH_ONLY.includes(pagePath) || !LANGS.length) return '';
   const href = siblings(pagePath, lang);
   const alts = Object.fromEntries(LANGS.map(l => [l, { u: href(l), t: OFFERS[l], n: DISMISS[l] }]));
   return `<div id="lang-offer" hidden data-alt='${JSON.stringify(alts)}'></div>
@@ -212,7 +214,7 @@ function searchFiles() {
     '<urlset xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml">'.replace('xmlns="http://www.w3.org/1999/xhtml"', 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')];
   // Two pages stay out of it: the demo lives under /g/, which robots.txt disallows, and the
   // terms are marked noindex until a solicitor has read them.
-  const OUT = ['g/demo/index.html', 'terms/index.html', '404.html', 'order/thanks/index.html'];
+  const OUT = ['g/demo/index.html', 'g/play/index.html', 'terms/index.html', '404.html', 'order/thanks/index.html'];
   for (const page of PAGES.filter(p2 => !OUT.includes(p2))) {
     const langs = ENGLISH_ONLY.includes(page) ? ['en'] : ['en', ...LANGS];
     for (const l of langs) {

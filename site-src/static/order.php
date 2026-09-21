@@ -39,24 +39,47 @@ $email    = field('email', 120);
 $from     = field('from', 80);
 $hero     = field('hero', 60);
 $occasion = field('occasion', 40);
-$speed    = field('speed', 60);
-$sibling  = field('sibling', 10) === 'yes' ? 'YES, a second game at $69' : 'no';
-// the game itself is $99; everything else is what they ticked
-$box      = field('box', 10) === 'yes' ? 'YES, poster and video at $80' : 'no';
+$tier     = field('tier', 60);
+$game     = field('game', 900);
+// merch arrives as several ticked boxes with one name, so it is read as a list
+$merchIn  = isset($_POST['merch']) ? (array)$_POST['merch'] : [];
+$merch    = implode(', ', array_filter(array_map(fn($m) => in_array($m, ['t-shirt', 'poster', 'mug'], true) ? $m : '', $merchIn)));
 $look     = field('look', 120);
+$giver    = field('giver', 40);
+$note     = field('note', 140);
 $cast     = block('cast');
 $about    = block('about');
 
 $valid = filter_var($email, FILTER_VALIDATE_EMAIL) && $hero !== '';
+
+// The link to send, built from what the form knows, so fulfilling a basic order is one paste.
+// The family and the jokes come later, from the reply; add them and the link changes with them.
+$lookParts = preg_split('/\s+/', $look);
+$occMap = ['A birthday' => 'birthday', 'Christmas' => 'christmas', "Father's Day" => 'fathers', "Mother's Day" => 'mothers', 'Just because' => 'star'];
+$cfg = [
+    'hero' => array_filter(['name' => $hero, 'hair' => $lookParts[0] ?? null, 'hairCol' => $lookParts[1] ?? null,
+                            'skin' => $lookParts[2] ?? null, 'kit' => $lookParts[3] ?? null]),
+    'occasion' => $occMap[$occasion] ?? 'birthday',
+];
+if ($giver !== '') $cfg['from'] = $giver;
+if ($note !== '') $cfg['note'] = $note;
+$b64 = rtrim(strtr(base64_encode(json_encode($cfg, JSON_UNESCAPED_UNICODE)), '+/', '-_'), '=');
+$one = strpos($tier, '$39') === 0 ? '&n=1' : '';
+$playLink = $SITE . '/g/play/#g=' . $b64 . $one;
 if (!$valid) { header('Location: ' . $here . 'order/?sorry=1'); exit; }
 
 $lines = [
     'Hero:      ' . $hero,
     'Occasion:  ' . ($occasion ?: '(not said)'),
-    'Speed:     ' . ($speed ?: '(not said)'),
-    'Sibling:   ' . $sibling,
-    'Gift box:  ' . $box,
+    'Wants:     ' . ($tier ?: '(not said)'),
+    'Merch:     ' . ($merch ?: 'none') . ($merch ? '   (send a proof and a price)' : ''),
+    'Upgrading: ' . ($game !== '' ? 'https://happyherogames.com/g/play/#' . $game : 'no'),
     'Look:      ' . ($look ?: '(not set)') . '   [hair, hair colour, skin, shirt]',
+    'From:      ' . ($giver ?: '(not said)') . '   (shown as "made by" on their game)',
+    'Message:   ' . ($note !== '' ? '"' . $note . '"' : '(none)'),
+    '',
+    'Link to send once paid:',
+    '  ' . $playLink,
     'From:      ' . ($from ?: '(no name given)') . ' <' . $email . '>',
     '',
     'Who else is in it:',

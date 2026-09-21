@@ -9,7 +9,7 @@ const errs = [];
 for (const [name, url, w, h, full] of [
   ['front', '/', 1280, 900, false],
   ['front-phone', '/', 390, 844, false],
-  ['free-es', '/es/free/', 1280, 900, true],
+  ['play', '/g/play/', 1280, 900, true],
   ['free', '/free/', 1280, 900, true],
   ['christmas', '/free/christmas/', 1280, 900, true],
   ['halloween', '/free/halloween/', 1280, 900, true],

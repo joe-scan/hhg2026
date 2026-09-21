@@ -42,6 +42,10 @@ input[type=text],input:not([type]),select{background:var(--field);border:1px sol
 input:focus,select:focus{border-color:var(--ink)}
 .fam{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:6px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+/* the fold: name and occasion first, everything else one click away */
+details.more{border-top:1px solid var(--rule);padding:12px 0 0}
+details.more > summary{cursor:pointer;font-weight:700;font-size:16px;padding:4px 0 12px}
+details.more > summary small{font-weight:400;color:var(--muted)}
 @media (max-width:860px){.make{grid-template-columns:1fr}.view{position:static;order:-1}}
 @media (max-width:480px){.fam{grid-template-columns:1fr 1fr}.fam select:last-child{grid-column:1/-1}.two{grid-template-columns:1fr}}
 
@@ -55,6 +59,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 .steps p{margin:0;color:var(--muted)}
 .ending{margin:30px 0 0;max-width:760px}
 .ending figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 30px;max-width:760px;margin:0 0 8px}
 .one-price{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin:0 0 6px;max-width:640px}
 .one-price b{font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,56px);line-height:1}
 .one-price span{font-size:18px;max-width:34ch}
@@ -113,6 +118,11 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
               <option value="star">Just because</option>
             </select></div>
         </div>
+      </fieldset>
+      <details class="more">
+      <summary>Change how they look, and add their family <small>(optional)</small></summary>
+      <fieldset>
+        <legend>How they look</legend>
         <div class="field"><span id="hair-l">Hair</span>
           <div class="opts" role="radiogroup" aria-labelledby="hair-l">
             <label><input type="radio" name="hair" value="short"><span>Short</span></label>
@@ -144,6 +154,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
           <div class="field"><span>Its color</span><div class="sws" id="pet-col"></div></div>
         </div>
       </fieldset>
+      </details>
     </form>
   </div>
   <div class="view">
@@ -159,7 +170,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
   <h2 id="how-h">How it works</h2>
   <ol class="steps">
     <li><h3>Answer a few questions</h3><p>Their name, who's in it, what they love, what they always say. You pick how they look.</p></li>
-    <li><h3>We build the game</h3><p>Five working days, and a person plays it through before it goes anywhere.</p></li>
+    <li><h3>Play it straight away</h3><p>One of their games, free, before you decide anything.</p></li>
     <li><h3>They play it</h3><p>We email you a web address. Tap it and the game opens. Nothing to install.</p></li>
   </ol>
   <figure class="ending">
@@ -171,23 +182,19 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 
 <section class="band" id="prices" aria-labelledby="prices-h">
   <h2 id="prices-h">Price</h2>
-  <p class="one-price"><b>$99</b><span>Five games. Up to eight people in it. Ready within five working days.</span></p>
-  <p class="plays-h">What they play, each against a different person:</p>
+  <div class="ladder">
+    <p class="one-price"><b>$39</b><span>Their game, at a link of its own you can send to anyone.</span></p>
+    <p class="one-price"><b>$99</b><span>All five games, and the ending with their name up in lights.</span></p>
+  </div>
+  <p class="plays-h">The five, each against a different person:</p>
   <ul class="plays">
-    <li>Paddle Battle</li>
     <li>Water Balloon Fight</li>
+    <li>Paddle Battle</li>
     <li>Back Seat Battle</li>
     <li>Dinner Dash</li>
-    <li>The Family Quiz</li>
-    <li>The ending, with their name in lights</li>
+    <li>The final battle, with someone on their side</li>
   </ul>
-
-  <p class="plays-h">Add anything you like when you order. Nothing is decided here:</p>
-  <ul class="plays adds">
-    <li><b>+$80</b> The printed poster and a short video of their game, because a link is hard to wrap.</li>
-    <li><b>+$39</b> Ready in 48 hours instead of five days.</li>
-    <li><b>+$69</b> A second game for a brother or sister, instead of $99.</li>
-  </ul>
+  <p class="extras">Their hero on a t-shirt, a poster or a mug: tick it when you order and we will send a picture and a price.</p>
 
   <figure class="box-look">
     <img src="img/poster.png" alt="The printed poster: the title screen with AVA in lights, HAPPY BIRTHDAY, AVA underneath, three of her games along the bottom, and the cast credited as Dad, Mum, Jack and Biscuit the dog" loading="lazy" width="900" height="1350">
@@ -196,7 +203,7 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
   </figure>
   <div class="order" id="order">
     <h3>Order one</h3>
-    <p>Fill in a short form about the person it's for. We'll email you back with a payment link and the date it will be ready.</p>
+    <p>Fill in a short form about the person it's for. We'll email you back with a payment link, and their game the same day you pay.</p>
     <p><a class="btn go" id="order-btn" href="order/">Tell us about them</a> <small>A short form, and no payment on it. Or write to <a href="mailto:hello@happyherogames.com">hello@happyherogames.com</a>.</small></p>
     <p class="fine"><a href="/terms/" hreflang="en">Terms and refunds</a> &middot; <a href="privacy/">Privacy</a></p>
   </div>
@@ -215,9 +222,9 @@ section.band h2{font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;
 <section class="band" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Questions</h2>
   <details><summary>What device do I need?</summary><p>Any phone, tablet, laptop or computer with a web browser.</p></details>
-  <details><summary>How quickly can I get it?</summary><p>Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner.</p></details>
-  <details><summary>How do I give it to them?</summary><p>We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap.</p></details>
-  <details><summary>Do I need to be good with computers?</summary><p>No. You answer a few questions in a form, the way you would fill in an address. We build the game and send you the link.</p></details>
+  <details><summary>How quickly can I get it?</summary><p>The same day you pay. We email you their link, and it works straight away.</p></details>
+  <details><summary>How do I give it to them?</summary><p>We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add a poster or a t-shirt with their hero on it and it arrives in the post, so there is something to wrap.</p></details>
+  <details><summary>Do I need to be good with computers?</summary><p>No. Type their name and the game is already on the screen. Everything else is optional.</p></details>
   <details><summary>Who can be in the game?</summary><p>Up to eight people: family, friends, a teacher, a coach. The pet too: a dog, cat, rabbit, hamster or fish.</p></details>
   <details><summary>How long does it take to play?</summary><p>Ten to twenty minutes the first time through, depending on how much they replay the ones they lose.</p></details>
   <details><summary>Can a few children play together?</summary><p>Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion.</p></details>

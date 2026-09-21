@@ -63,10 +63,14 @@ const ST = {
       namePlate(n, W / 2, 28 + 4, size);
       nameLogo(n, W / 2, 32, size);
       const occ = CFG.occasion === 'star' ? 'AN ARCADE ADVENTURE' : OCCASIONS[CFG.occasion];
-      const ow = occ.length * 16;
-      rect(W / 2 - ow / 2 - 10, 80, ow + 20, 30, BAND());
+      // who made it, when a paid game carries a dedication: inside the band, under the occasion,
+      // because below the band is where the grown-ups' heads are
+      const by = CFG.from ? 'MADE BY ' + cleanName(CFG.from, 24) : '';
+      const ow = Math.max(occ.length * 16, by.length * 8);
+      rect(W / 2 - ow / 2 - 10, 80, ow + 20, by ? 33 : 30, BAND());
       rect(W / 2 - ow / 2 - 10, 80, ow + 20, 3, COL.gold);
-      txt(occ, W / 2, 87, 16, COL.gold, 'center');
+      txt(occ, W / 2, by ? 84 : 87, 16, COL.gold, 'center');
+      if (by) txt(by, W / 2, 102, 8, COL.white, 'center');
       // the whole cast lined up along the horizon
       // small enough that eight of them still fit, and low enough to clear the occasion band
       const cast = [HERO].concat(FAM), gap = Math.min(48, (W - 60) / Math.max(1, cast.length)), x0 = W / 2 - (cast.length - 1) * gap / 2;
@@ -242,12 +246,12 @@ const ST = {
 
   // the end of the teaser: what they just played, against what the full game has
   locked: {
-    enter() { mus.mode = 'title'; mus.fast = false; say('That is the demo.'); },
+    enter() { mus.mode = 'title'; mus.fast = false; say('That is one of five.'); try { window.dispatchEvent(new CustomEvent('hhg:locked')); } catch (e) {} },
     update() { if (S.t > 60 && (anyIn().aP || clicked)) go('title'); },
     draw() {
       bgSynth(S.t); rect(0, 0, W, H, 'rgba(10,4,22,.82)');
-      txt('THAT\'S THE DEMO', W / 2, 26, 16, COL.gold, 'center', true);
-      txt('THE FULL GAME KEEPS GOING:', W / 2, 50, 12, '#fff', 'center');
+      txt('THAT\'S ONE OF FIVE', W / 2, 26, 16, COL.gold, 'center', true);
+      txt('THE WHOLE GAME ALSO HAS:', W / 2, 50, 12, '#fff', 'center');
       // the list sizes itself, so adding a game to LOCKED never pushes the last line off screen
       const rows = LOCKED.length, gap = Math.min(24, Math.floor(120 / rows)), h = gap - 4, top = 70;
       LOCKED.forEach((name, k) => {
@@ -258,7 +262,7 @@ const ST = {
         const lx = 352, ly = y + Math.round((h - 12) / 2); rect(lx, ly + 4, 10, 8, COL.dim); rect(lx + 2, ly, 6, 2, COL.dim); rect(lx + 2, ly + 2, 2, 3, COL.dim); rect(lx + 6, ly + 2, 2, 3, COL.dim);
       });
       txt('AND ' + HERO.name + '\'S NAME UP IN LIGHTS AT THE END.', W / 2, top + rows * gap + 8, 10, COL.cyan, 'center');
-      if (S.t > 60) pressFire(top + rows * gap + 32, 'PRESS FIRE TO PLAY THE DEMO AGAIN', 10);
+      if (S.t > 60) pressFire(top + rows * gap + 32, 'KEEP IT OR GET ALL FIVE: SEE BELOW', 10);
     }
   },
   bossIntro: {

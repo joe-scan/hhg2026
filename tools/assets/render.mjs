@@ -27,7 +27,7 @@ const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
 await page.setContent('<style>body{margin:0}canvas{image-rendering:pixelated;width:480px}</style>' +
   '<canvas id="game" width="480" height="270"></canvas>' +
   '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') + tag('scenes.js') +
-  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js']
+  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/bosses.js', 'flow.js']
     .map(tag).join('') + '<script>startGame(Object.assign({}, DEMO, { family: [{ role: "dad", name: "" }, { role: "mum", name: "" }, { role: "brother", name: "JACK" }] }));<\/script>', { waitUntil: 'load' });
 await page.waitForTimeout(600);
 

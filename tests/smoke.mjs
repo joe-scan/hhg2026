@@ -10,6 +10,7 @@ const watch = p => { p.on('pageerror', e => errors.push('pageerror: ' + e.messag
 const page = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(page);
 await page.goto(BASE + 'index.html'); await page.waitForTimeout(600);
 await page.fill('#hero-name', 'Siobhán');
+await page.click("details.more summary"); await page.waitForTimeout(150);
 await page.click('label:has(input[value="curly"])'); await page.click('#kit .sw:nth-child(2)');
 await page.selectOption('#fam-role-0', 'granny'); await page.fill('#fam-name-0', 'Nana Kay');
 await page.fill('#pet-name', ''); await page.fill('#food', 'Tacos'); await page.fill('#catch', 'Ah here!');
@@ -50,25 +51,26 @@ const full = await browser.newPage({ viewport: { width: 1360, height: 900 } }); 
 const tag = f => `<script src="${BASE}arcade/${f}"><\/script>`;
 await full.setContent('<canvas id="game" width="480" height="270"></canvas>' +
   '<script>window.HHG_TEASER = false;<\/script>' + tag('engine.js') + tag('scenes.js') +
-  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/table-quiz.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
+  ['games/paddle-battle.js', 'games/water-balloon-fight.js', 'games/back-seat-battle.js', 'games/dinner-dash.js', 'games/bosses.js', 'flow.js'].map(tag).join('') +
   '<script>startGame(DEMO);<\/script>',
   { waitUntil: 'load' });
 await full.waitForTimeout(600);
 const seenFull = await run(full, 'finale');
 const nGames = await full.evaluate(() => __hhg.games().length);
 console.log('full game:', nGames + ' games >', seenFull.join(' > '));
-if (nGames !== 5) errors.push('the full game has ' + nGames + ' games, and everything we sell says five');
+if (nGames !== 4) errors.push('the full game has ' + nGames + ' games before the final battle; everything we sell says five in all');
 if (seenFull[seenFull.length - 1] !== 'finale') errors.push('the full game did not reach the ending');
 
 // 2d. every translated language: the page is translated, the game is translated, the demo still
 // stops at the locked card, and the picker gets you back to English and out again.
-const LANGS = [
+// paused with the translations on 21 Sep 2026; put the entries back when tools/build.mjs LANGS is
+const LANGS = [].concat([
   { code: 'es', name: 'Español', game: 'GUERRA DE GLOBOS', dad: 'Papá' },
   { code: 'de', name: 'Deutsch', game: 'WASSERBOMBEN-SCHLACHT', dad: 'Papa' },
   { code: 'fr', name: 'Français', game: "BATAILLE DE BALLONS D'EAU", dad: 'Papa' },
   { code: 'it', name: 'Italiano', game: 'GUERRA DI GAVETTONI', dad: 'Papà' },
   { code: 'ga', name: 'Gaeilge', game: 'CATH NA mBALUN UISCE', dad: 'Daidí' }
-];
+]).filter(() => false);
 for (const L of LANGS) {
   const pg = await browser.newPage({ viewport: { width: 1360, height: 900 } }); watch(pg);
   await pg.goto(`${BASE}${L.code}/`); await pg.waitForTimeout(500);
@@ -82,8 +84,8 @@ for (const L of LANGS) {
   await pg.close();
 }
 
-// the picker, both directions, on every page
-for (const [from, click, wantEnd] of [['es/', 'English', '/'], ['de/privacy/', 'English', '/privacy/'],
+// the picker, both directions, on every page (paused with the translations)
+for (const [from, click, wantEnd] of LANGS.length === 0 ? [] : [['es/', 'English', '/'], ['de/privacy/', 'English', '/privacy/'],
                                       ['ga/g/demo/', 'English', '/g/demo/'], ['', 'Italiano', '/it/'],
                                       ['', 'Gaeilge', '/ga/']]) {
   const t = await browser.newPage(); watch(t);
@@ -140,7 +142,7 @@ for (const [theme, who] of [['free/halloween/', 'Fionn'], ['free/christmas/', 'S
 
 // the dark/light button: it is in the shared header, so it has to work on every page, not
 // only the one whose script it used to live in
-for (const page of ['', 'free/christmas/', 'free/', 'es/free/halloween/', '404.html']) {
+for (const page of ['', 'free/christmas/', 'free/', 'free/halloween/', 'g/play/', '404.html']) {
   const sk = await browser.newPage(); watch(sk);
   await sk.goto(BASE + page); await sk.waitForTimeout(300);
   const before = await sk.evaluate(() => document.documentElement.dataset.skin || '(device)');
@@ -156,7 +158,7 @@ console.log('skin button: works and is remembered on every page');
 
 // the language offer: a Spanish browser is offered Spanish, an English one is left alone, and
 // nobody is redirected anywhere
-for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
+for (const [locale, want] of LANGS.length === 0 ? [['es-ES', false], ['en-US', false]] : [['es-ES', true], ['en-US', false]]) {
   const ctx2 = await browser.newContext({ locale });
   const pg = await ctx2.newPage(); watch(pg);
   await pg.goto(BASE); await pg.waitForTimeout(400);
@@ -166,7 +168,7 @@ for (const [locale, want] of [['es-ES', true], ['en-US', false]]) {
   if (!url.endsWith('/') || /\/(es|de|fr|it|ga)\//.test(url)) errors.push('a browser language redirected the page to ' + url);
   await ctx2.close();
 }
-console.log('language offer: shown in Spanish, quiet in English, no redirects');
+console.log(LANGS.length ? 'language offer: shown in Spanish, quiet in English, no redirects' : 'translations paused: no picker, no offer, English only');
 
 // the landing pages at /gifts/: each one draws its own example, and none is a copy of another
 {
@@ -202,16 +204,16 @@ console.log('language offer: shown in Spanish, quiet in English, no redirects');
     const product = g.find(n => n['@type'] === 'Product');
     const faq = g.find(n => n['@type'] === 'FAQPage');
     const onPage = await sd.evaluate(() => document.querySelectorAll('#faq details').length);
-    if (!product || product.offers.price !== '99.00') errors.push('structured data does not say $99');
+    if (!product || product.offers.lowPrice !== '39.00' || product.offers.highPrice !== '99.00') errors.push('structured data does not say $39 to $99');
     if (!faq || faq.mainEntity.length !== onPage) errors.push('structured data lists ' + (faq ? faq.mainEntity.length : 0) + ' questions, the page shows ' + onPage);
   }
   await sd.close();
 }
-console.log('structured data: one price, and every question on the page');
+console.log('structured data: $39 to $99, and every question on the page');
 
 // the order form: the fields that matter are required, the honeypot is out of sight, and the
 // form carries the language so the thank-you comes back in it
-for (const [page, want] of [['order/', 'en'], ['de/order/', 'de']]) {
+for (const [page, want] of [['order/', 'en']].concat(LANGS.includes('de') ? [['de/order/', 'de']] : [])) {
   const of = await browser.newPage(); watch(of);
   await of.goto(BASE + page); await of.waitForTimeout(300);
   const form = await of.evaluate(() => {
@@ -230,8 +232,8 @@ for (const [page, want] of [['order/', 'en'], ['de/order/', 'de']]) {
   if (form.required !== 'email,hero') errors.push('/' + page + ' asks for the wrong required fields: ' + form.required);
   if (form.trapShown) errors.push('/' + page + ' shows the honeypot field to people');
   if (form.method !== 'post') errors.push('/' + page + ' form is not a POST');
-  const adds = await of.evaluate(() => [...document.querySelectorAll('form [name="box"], form [name="sibling"], form [name="speed"]')].map(e => e.name));
-  for (const want of ['box', 'sibling', 'speed']) if (!adds.includes(want)) errors.push('/' + page + ' lost the ' + want + ' option');
+  const adds = await of.evaluate(() => [...document.querySelectorAll('form [name="tier"], form [name="merch[]"]')].map(e => e.name));
+  for (const want of ['tier', 'merch[]']) if (!adds.includes(want)) errors.push('/' + page + ' lost the ' + want + ' option');
   const stale = await of.evaluate(() => document.body.textContent.includes('$179'));
   if (stale) errors.push('/' + page + ' still offers the retired $179 price');
   await of.close();

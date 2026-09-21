@@ -4,6 +4,10 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://happyherogames.com%{REQUEST_URI} [L,R=301]
 
+# The five translations are paused while the English is reworked (21 Sep 2026). Temporary (302), so
+# search engines keep the addresses; remove this line when a language is switched back on.
+RewriteRule ^(es|de|fr|it|ga)(/(.*))?$ /$3 [L,R=302]
+
 # The free games moved under /free/ on 20 Sep 2026. Both older addresses were out in the world
 # for a while, so both still work.
 RewriteRule ^(es|de|fr|it|ga)/halloween/?$ /$1/free/halloween/ [L,R=301]

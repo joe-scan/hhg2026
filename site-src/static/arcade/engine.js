@@ -73,8 +73,10 @@ const OCCASIONS = { birthday: 'HAPPY BIRTHDAY', christmas: 'HAPPY CHRISTMAS', fa
 // The teaser demo: one game, then a locked card instead of the boss and the ending. The demo page
 // sets window.HHG_TEASER; a paid game never does.
 const TEASER = (() => { try { return !!window.HHG_TEASER; } catch (e) { return false; } })();
-// The other games and the ending, named on the locked card so people see what they are not getting.
-const LOCKED = ['PADDLE BATTLE', 'DINNER DASH', 'BACK SEAT BATTLE', 'THE FAMILY QUIZ', 'THE BOSS FIGHT', 'THE ENDING'];
+// What the full game adds after the first one, named on the locked card so people see what the
+// upgrade is. The quiz was dropped on 21 Sep 2026: it was the only game that needed somebody to
+// write questions for each order, and nothing about a paid game needs a person now.
+const LOCKED = ['PADDLE BATTLE', 'BACK SEAT BATTLE', 'DINNER DASH', 'THE FINAL BATTLE', 'THE ENDING']; 
 // Optional question and joke packs for a family who want them (see the quiz). Off by default.
 const PACKS = ['ie', 'uk'];
 
@@ -93,6 +95,10 @@ function sanitise(c) {
     pet: c.pet && cleanName(c.pet.name, 10) ? { name: cleanName(c.pet.name, 10).replace(/[!?.,]/g, ''), kind: oneOf(c.pet && c.pet.kind, Object.keys(PETKINDS), 'dog'), col: oneOf(c.pet.col, PETCOLS, PETCOLS[0]) } : null
   };
   if (!out.family.length) out.family.push({ role: 'dad', name: 'DAD', hairCol: HAIRCOLS[0] });
+  // the dedication on a paid game: "made by Mum and Dad", and an optional line from them
+  const plain = (v, n) => String(v || '').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim().slice(0, n);
+  if (plain(c.from, 40)) out.from = plain(c.from, 40);
+  if (plain(c.note, 140)) out.note = plain(c.note, 140);
   return out;
 }
 // the config travels in the link as base64url JSON

@@ -8,7 +8,7 @@
 <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fdf5ec">
 <meta property="og:title" content="Order a game">
-<meta property="og:description" content="Tell us who it's for. We email you back with a payment link and a date.">
+<meta property="og:description" content="Tell us who it's for. We email you back the same day with a payment link.">
 <meta property="og:image" content="https://happyherogames.com/img/og.png">
 <meta property="og:type" content="website">
 <!--hreflang-->
@@ -46,7 +46,7 @@ label.one > span{display:block;font-weight:400;margin:0}
 
 <main class="order-page">
   <h1>Order a game</h1>
-  <p class="sub">Tell us who it is for. We read every one ourselves and email you back the same day, with a payment link and a date. Nothing is paid here, and there is no account to make.</p>
+  <p class="sub">Tell us who it is for. We read every one ourselves and email you back the same day with a payment link. Nothing is paid here, and there is no account to make.</p>
 
   <div class="screen"><canvas id="game" width="480" height="270" aria-label="A preview of the title screen, with the name and the look you have chosen"></canvas></div>
   <div class="look-pick" id="look"></div>
@@ -62,6 +62,14 @@ label.one > span{display:block;font-weight:400;margin:0}
       <input type="text" name="hero" maxlength="40" required autocomplete="off">
     </label>
 
+    <fieldset class="speed">
+      <legend>Which one?</legend>
+      <label class="one"><input type="radio" name="tier" value="$39, one game and a link to send"><span><b>$39</b> Their game, at a link of its own you can send to anyone.</span></label>
+      <label class="one"><input type="radio" name="tier" value="$99, all five games" checked><span><b>$99</b> All five games, and the ending with their name up in lights.</span></label>
+      <label class="one" id="up-row" hidden><input type="radio" name="tier" value="+$60, upgrade to all five"><span><b>+$60</b> The other four games for a game you already have.</span></label>
+    </fieldset>
+    <input type="hidden" name="game" id="game-field" value="">
+
     <label>
       <span>What is the occasion?</span>
       <select name="occasion">
@@ -74,16 +82,24 @@ label.one > span{display:block;font-weight:400;margin:0}
     </label>
 
     <fieldset class="speed">
-      <legend>How soon do you need it?</legend>
-      <label class="one"><input type="radio" name="speed" value="Standard, within five working days" checked><span>Within five working days. Included.</span></label>
-      <label class="one"><input type="radio" name="speed" value="Rush, 48 hours, $39"><span>In 48 hours. $39 more.</span></label>
+      <legend>Their hero on something they can hold?</legend>
+      <p class="hint">Tick any and we will send a picture of it and a price with your link. Nothing is added unless you say yes.</p>
+      <label class="one"><input type="checkbox" name="merch[]" value="t-shirt"><span>A t-shirt</span></label>
+      <label class="one"><input type="checkbox" name="merch[]" value="poster"><span>A poster for the wall</span></label>
+      <label class="one"><input type="checkbox" name="merch[]" value="mug"><span>A mug</span></label>
     </fieldset>
 
-    <fieldset class="speed">
-      <legend>Anything to add?</legend>
-      <label class="one"><input type="checkbox" name="box" value="yes"><span><b>+$80</b> The printed poster and a short video of their game, because a link is hard to wrap.</span></label>
-      <label class="one"><input type="checkbox" name="sibling" value="yes"><span><b>+$69</b> A second game for a brother or sister, instead of $99.</span></label>
-    </fieldset>
+    <label>
+      <span>Who is it from?</span>
+      <span class="hint">What they call you: Mum and Dad, Granny, Auntie Kate. It goes on their game, under their name.</span>
+      <input type="text" name="giver" maxlength="40" autocomplete="off">
+    </label>
+
+    <label>
+      <span>A few words for them <small>(optional)</small></span>
+      <span class="hint">It is the first thing they read when they open it. A line or two.</span>
+      <textarea name="note" maxlength="140" rows="2"></textarea>
+    </label>
 
     <label>
       <span>Your name</span>
@@ -159,6 +175,15 @@ label.one > span{display:block;font-weight:400;margin:0}
 })();
 </script>
 <script>
+// Which button brought them here decides what is already ticked: $39, $99, or an upgrade to a game
+// they already own, in which case that game's address comes with it.
+(function () {
+  var q = new URLSearchParams(location.search), tier = q.get('tier');
+  var pick = function (v) { var r = document.querySelector('input[name="tier"][value^="' + v + '"]'); if (r) r.checked = true; };
+  if (tier === '39') pick('$39');
+  if (tier === '99') pick('$99');
+  if (tier === 'upgrade') { document.getElementById('up-row').hidden = false; pick('+$60'); document.getElementById('game-field').value = q.get('game') || ''; }
+})();
 // The handler sends people back here with ?sorry=1 if the mail did not go out.
 if (location.search.indexOf('sorry=1') > -1) {
   var s = document.getElementById('sorry');

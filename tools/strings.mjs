@@ -6,7 +6,7 @@ import path from 'path';
 const ROOT = path.join(import.meta.dirname, '..');
 export const JS_FILES = ['arcade/engine.js', 'arcade/scenes.js', 'arcade/flow.js', 'arcade/games/bosses.js',
   'arcade/games/back-seat-battle.js', 'arcade/games/dinner-dash.js', 'arcade/games/paddle-battle.js',
-  'arcade/games/table-quiz.js', 'arcade/games/water-balloon-fight.js',
+  'arcade/games/water-balloon-fight.js',
   'arcade/games/trick-or-treat.js', 'arcade/games/sleigh-dash.js', 'arcade/free.js', 'arcade/hero-pick.js', 'builder.js'];
 
 export const stripComments = src => src
@@ -27,6 +27,7 @@ export function isText(s) {
   if (/^(source-over|destination-out|center|right|left|NFD|use strict)$/.test(s)) return false;
   if (/^[a-z-]+\.(png|js|json)$/.test(s)) return false;
   if (/^[a-z0-9-]+\/[a-z0-9\/-]*$/.test(s)) return false;   // paths like g/demo/
+  if (/^[a-z]+:[a-z-]+$/.test(s)) return false;               // event names like hhg:locked
   if (/^rgba?\(|^\(|^\.|[<>{}\[\];=]|\)\.|\/g,/.test(s)) return false;   // css, selectors, code fragments
   if (/^(image\/png|text\/|utf-8)/.test(s)) return false;
   if (s.includes('"')) return false;

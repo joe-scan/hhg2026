@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Play | HappyHeroGames</title>
-<meta name="description" content="The free demo: one game against one of your family, built in your browser from what you typed. Nothing is sent to us.">
+<title>Their game | HappyHeroGames</title>
+<meta name="description" content="A HappyHeroGames game, made for one person.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fdf5ec">
@@ -24,6 +24,17 @@
 <script>try{var s=localStorage.getItem('hhg-skin');if(s)document.documentElement.dataset.skin=s;}catch(e){}</script>
 
 <style>
+/* the dedication: the moment it stops being a website and becomes a present */
+.dedication{text-align:center;padding:26px 0 8px}
+.dedication .for{margin:0;color:var(--muted);font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.dedication .name{font-family:var(--display);font-size:clamp(40px,9vw,72px);line-height:1;margin:6px 0 10px;color:var(--ink)}
+.dedication .by{margin:0;font-size:19px}
+.dedication .by b{color:var(--brand)}
+.dedication .note{max-width:40ch;margin:16px auto 0;font-size:19px;line-height:1.45;font-style:italic;color:var(--ink);
+  border-top:2px solid var(--brand);padding-top:14px}
+.dedication.opening{animation:rise .9s ease-out 1}
+@keyframes rise{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.dedication.opening{animation:none}}
 body{display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:10px}
 .wide{width:min(100%,calc((100vh - 150px) * 16 / 9),1180px);min-width:min(100%,300px)}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
@@ -75,13 +86,19 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 </head>
 <body data-game="on">
 <div class="wrap"><!--header--></div>
+<section class="dedication wide" id="dedication" aria-label="Who made this game">
+  <p class="for">A game made for</p>
+  <p class="name" id="d-for">you</p>
+  <p class="by" id="d-by" hidden>by <b id="d-from"></b></p>
+  <p class="note" id="d-note" hidden></p>
+</section>
 <div class="bar wide">
-  <div class="left"><a class="btn small" href="../../index.html">Home</a> <a class="btn small" id="edit" href="../../index.html#make">Edit your hero</a></div>
+  <div class="left"><a class="btn small" href="../../index.html">Home</a> <button type="button" class="btn small" id="btn-share">Send it to someone</button></div>
   <button type="button" class="btn small" id="btn-mute" aria-pressed="false">Sound: on</button>
 </div>
 
 <main class="stage wide">
-  <h1 class="sr">Your game</h1>
+  <h1 class="sr">Their game</h1>
   <div class="screen"><canvas id="game" width="480" height="270" tabindex="0" aria-label="Your HappyHeroGames game. Play with the keyboard, a gamepad or the on-screen pads."></canvas></div>
   <div class="tpad p0" role="group" aria-label="Family player's controls">
     <button type="button" id="btn-home-pad" class="home">Title</button>
@@ -98,45 +115,54 @@ kbd{font-family:var(--body);font-weight:700;font-size:13px;background:var(--ink)
 <p class="tip">Turn your phone sideways for a bigger screen.</p>
 <p class="keys wide">Click the screen to start. Move with the arrow keys, and press <kbd>Space</kbd> to fire. If two of you play on one keyboard, the second player uses <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> to move and <kbd>Space</kbd> to fire. <kbd>Esc</kbd> goes back to the start.</p>
 
-<section class="offer wide" id="offer" aria-labelledby="offer-h">
-  <h2 id="offer-h">Keep their game</h2>
+<section class="offer wide" id="offer" aria-labelledby="offer-h" hidden>
+  <h2 id="offer-h">Get the other four games</h2>
   <div class="tiers">
-    <a class="tier" href="../../order/?tier=39">
-      <b>$39</b>
-      <span>This game, at a link of its own you can send to anyone.</span>
-    </a>
-    <a class="tier big" href="../../order/?tier=99">
-      <b>$99</b>
-      <span>All five games, and the ending with their name up in lights.</span>
+    <a class="tier big" id="upgrade" href="../../order/?tier=upgrade">
+      <b>+$60</b>
+      <span>Four more games, and the ending with their name up in lights. Same address, nothing to resend.</span>
     </a>
   </div>
-  <p class="small">Every link is theirs to keep. Change anything first by going back to <a id="edit2" href="../../index.html#make">their hero</a>.</p>
 </section>
 
 <div class="wrap"><!--footer--></div>
 
 <!-- The teaser loads one game and nothing else, so there is nothing in the page to unlock by
      poking at it. The flag has to be set before the engine reads it. -->
-<script>window.HHG_TEASER = true;</script>
+<script>
+// #...&n=1 is the $39 game: one game, then the card offering the other four. Without it, all five.
+window.HHG_TEASER = /[#&]n=1(&|$)/.test(location.hash);
+</script>
 <script src="../../arcade/engine.js"></script>
 <script src="../../arcade/scenes.js"></script>
 <script src="../../arcade/games/water-balloon-fight.js"></script>
+<script src="../../arcade/games/paddle-battle.js"></script>
+<script src="../../arcade/games/back-seat-battle.js"></script>
+<script src="../../arcade/games/dinner-dash.js"></script>
+<script src="../../arcade/games/bosses.js"></script>
 <script src="../../arcade/flow.js"></script>
 <script>
-// A link with #g= wins (that is a game somebody was sent). Otherwise this is the visitor's own
-// draft from the builder, kept in their browser, so the address stays short enough to read out.
-startGame(cfgFromLink() || (function () {
-  try { return JSON.parse(localStorage.getItem('hhg-draft') || 'null'); } catch (e) { return null; }
-})() || DEMO);
+// A paid game is only ever opened from the address it was sent, so the family is in the link.
+if (TEASER) GAMES.splice(1);               // the $39 game: the first game, then the offer
+startGame(cfgFromLink() || DEMO);
 document.getElementById('hero-pad').textContent = HERO.name;
 // the builder reads the same #g= link, so the family's choices come back filled in
-document.getElementById('edit').href = '../../index.html' + (location.hash.includes('g=') ? location.hash : '#make');
-// the offer names the hero, and comes into view the moment the locked card does
+// the dedication reads the same family the game does, so what the page says and what the game
+// says can never disagree. Set with textContent: a message is words, never markup.
+(function () {
+  var d = document.getElementById('dedication');
+  document.getElementById('d-for').textContent = titleCase(HERO.name);
+  if (CFG.from) { document.getElementById('d-from').textContent = CFG.from; document.getElementById('d-by').hidden = false; }
+  if (CFG.note) { var n = document.getElementById('d-note'); n.textContent = '\u201c' + CFG.note + '\u201d'; n.hidden = false; }
+  d.classList.add('opening');
+})();
+// share this address, which is the game; the upgrade keeps the same family
+for (const id of ['btn-share']) { const b = document.getElementById(id); b.addEventListener('click', () => shareGame(b)); }
 (function () {
   var who = titleCase(HERO.name), el = document.getElementById('offer');
-  document.getElementById('edit2').href = document.getElementById('edit').href;
+  document.getElementById('upgrade').href += '&game=' + encodeURIComponent(location.hash.replace(/^#/, ''));
   window.addEventListener('hhg:locked', function () {
-    el.classList.add('show');
+    el.hidden = false; el.classList.add('show');
     try { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) { el.scrollIntoView(); }
   });
 })();
