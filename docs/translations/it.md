@@ -251,7 +251,6 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | We email you a web address that is theirs alone. Send it on the day by message or email, or write it inside a card. Add the printed poster and it arrives in the post, so there is something to wrap. | Ti mandiamo per email un indirizzo web che è solo loro. Mandaglielo il giorno stesso con un messaggio o per email, oppure scrivilo dentro un biglietto. Aggiungi il poster stampato e arriva per posta, così c'è qualcosa da incartare. |
 | Yours has your own names in it. | Il tuo avrà i vostri nomi. |
 | Any phone, tablet, laptop or computer with a web browser. | Qualsiasi telefono, tablet, portatile o computer con un browser. |
-| About twenty minutes the first time through. | Una ventina di minuti la prima volta. |
 | Yes. Party mode is on the first screen. Pick how many are playing, and each one takes a turn against the hero. It ends on a results board with a champion. | Sì. La modalità festa è nella prima schermata. Scegli quanti giocano e ognuno fa il suo turno contro l'eroe. Finisce con un tabellone dei risultati e un campione. |
 | Five working days as standard, counted from the moment we have your answers. There is a faster option on the order form if you need it sooner. | Cinque giorni lavorativi come standard, da quando abbiamo le tue risposte. C'è un'opzione più veloce nel modulo d'ordine, se ti serve. |
 | Anything to add? | Vuoi aggiungere qualcosa? |
@@ -260,6 +259,8 @@ The jokes matter more than the legal text. If the taunts do not sound like somet
 | Christmas game | Gioco di Natale |
 | Halloween game | Gioco di Halloween |
 | Two games, a minute each, in any browser, with your name on the end screen. Nothing to install, no sign-up, and nothing you type is sent to us. Made to be sent on. | Due giochi, un minuto ciascuno, in qualsiasi browser, con il tuo nome sulla schermata finale. Niente da installare, nessuna registrazione e niente di ciò che scrivi arriva a noi. Fatti per essere mandati in giro. |
+| Ten to twenty minutes the first time through, depending on how much they replay the ones they lose. | Dai dieci ai venti minuti la prima volta, a seconda di quante partite perse rigiocano. |
+| Gift ideas | Idee regalo |
 
 ## What the game says: names, instructions and scores
 

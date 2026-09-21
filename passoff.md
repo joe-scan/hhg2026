@@ -70,16 +70,33 @@ because somebody may spend real money on it.
 
 ---
 
-## Questions to put to Joe before you start
+## What Joe has already decided
 
-Do not guess at these.
+These are answers, not suggestions. Everything not on this list is still open.
 
-- What is he trying to build: a business he runs full time, something that pays for itself, or
-  an experiment he will stop if it does not work?
-- How much money and time is there, and when does it have to earn something?
-- Who does he imagine this is for? If he does not know yet, say so in your answer rather than
-  picking for him quietly.
-- Is the name fixed, and has anybody checked whether it can be used?
-- Is he willing to sell something that is not a website: a physical product, a service, a
-  licence, or something sold through somebody else's shop?
+- **The ambition is a million dollars of revenue a year, at a high margin, as soon as it can be
+  done.** A team of up to about ten people eventually, and being bought would be a good outcome
+  rather than a failure. This is a real constraint on your options: anything that cannot grow
+  past one person's hands, or that needs craft work on every single order that cannot be
+  systematised, is the wrong answer here however charming it is.
+- **The money and the time are small.** A few hundred euro and a founder's evenings, for now.
+  Something has to take real money in December.
+- **The name stays for now.** Nobody has checked whether it can be legally used, so if your best
+  idea needs a different one, say so.
+- **It does not have to be a website.** A physical product, a service, a licence or something
+  sold inside somebody else's shop are all allowed.
+
+## The one question he has deliberately not answered
+
+**Who is it for.** He wants your thinking on this rather than his, so treat it as a fourth
+question in the brief: **five different people this could be aimed at**, then **five more from
+further out**. For each one, say what the product becomes when it is aimed at them, what they
+already spend money on instead, and how you would find fifty of them this month.
+
+Who the buyer is changes everything else in your answer, so do this one first and let the
+presentation, the pricing and the funding follow from it.
+
+## Questions still worth putting to Joe
+
 - Who else is involved, and who has to approve what?
+- What would make him stop: a number, a date, or a feeling?
