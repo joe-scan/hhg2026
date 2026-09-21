@@ -264,6 +264,12 @@ console.log('default hero:', await p2.evaluate(() => HERO.name));
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
 const m = await ctx.newPage(); watch(m); await m.goto(BASE + 'index.html'); await m.waitForTimeout(500);
 if (await m.evaluate(() => document.documentElement.scrollWidth > innerWidth)) errors.push('landing page scrolls sideways on a phone');
+// a first visit: nobody else's child in the name box, and Play with no name asks for one
+const fresh = await m.evaluate(() => ({ name: document.getElementById('hero-name').value, shown: HERO.name }));
+if (fresh.name !== '' || fresh.shown !== 'YOUR HERO') errors.push('first visit is not blank: ' + JSON.stringify(fresh));
+await m.click('#play'); await m.waitForTimeout(400);
+if (!m.url().includes('index.html') || await m.evaluate(() => document.activeElement.id) !== 'hero-name') errors.push('Play with no name left the page or did not ask for the name');
+console.log('first visit: blank name, YOUR HERO on screen, Play asks for the name');
 
 console.log(errors.length ? 'ERRORS:\n' + [...new Set(errors)].join('\n') : 'no errors');
 await browser.close();

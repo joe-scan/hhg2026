@@ -9,7 +9,11 @@
   const fromLink = location.hash.includes('g=');
   if (fromLink) cfg = cfgFromLink() || DEMO;
   if (!cfg) { try { const d = localStorage.getItem('hhg-draft'); if (d) cfg = JSON.parse(d); } catch (e) {} }
+  // A first visit starts with an empty name: the screen says YOUR HERO until they type one, so
+  // nobody is shown somebody else's child and asked to play as them.
+  const fresh = !cfg;
   cfg = sanitise(cfg || DEMO);
+  if (fresh) cfg.hero.name = '';
   // The hero's name and family travel in the hash. Once they are read, take them out of the address
   // bar: this page carries an analytics script, and a family's details have no business in anyone
   // else's logs. The draft in localStorage keeps them on this device.
@@ -39,7 +43,7 @@
   function text(id, get, set) { const el = $(id); el.value = get() || ''; el.addEventListener('input', () => { set(el.value); changed(); }); }
 
   // the hero
-  text('hero-name', () => titleCase(cfg.hero.name), v => { cfg.hero.name = v; });
+  text('hero-name', () => cfg.hero.name ? titleCase(cfg.hero.name) : '', v => { cfg.hero.name = v; });
   choice('hair', () => cfg.hero.hair, v => { cfg.hero.hair = v; });
   swatches($('hair-col'), HAIRCOLS, HAIR_LABELS, () => cfg.hero.hairCol, v => { cfg.hero.hairCol = v; });
   swatches($('skin'), SKINS, SKIN_LABELS, () => cfg.hero.skin, v => { cfg.hero.skin = v; });
@@ -82,12 +86,18 @@
     return sanitise(cfg);
   }
   function changed() {
-    const c = current(); applyConfig(c);
+    const named = $('hero-name').value.trim() !== '';
+    const c = current(); applyConfig(named ? c : sanitise(Object.assign({}, c, { hero: Object.assign({}, c.hero, { name: 'YOUR HERO' }) })));
     $('play').href = 'g/demo/';
-    $('play-label').textContent = 'Play ' + titleCase(c.hero.name) + '\'s first game, free';
-    try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
+    $('play-label').textContent = named ? 'Play ' + titleCase(c.hero.name) + '\'s game' : 'Play it now';
+    if (named) try { localStorage.setItem('hhg-draft', JSON.stringify(c)); } catch (e) {}
   }
   changed();
+  // Play with no name asks for one rather than starting a game for nobody
+  $('play').addEventListener('click', e => {
+    if ($('hero-name').value.trim()) return;
+    e.preventDefault(); const n = $('hero-name'); n.focus(); n.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  });
 
   // the live preview: the hero's name in lights with the whole cast on the horizon
   let t = 0;
